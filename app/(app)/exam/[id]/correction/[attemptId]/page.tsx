@@ -19,6 +19,25 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
   if (attempt.status === "IN_PROGRESS") redirect(`/exam/${attempt.id}`);
 
   const room = attempt.room;
+  
+  const isTraining = room.visibility === "PRIVATE" && room.createdById === attempt.userId;
+  const isClosed = room.status === "CLOSED";
+  const isTimeUp = room.endsAt ? room.endsAt.getTime() <= Date.now() : false;
+  
+  if (!isTraining && !isClosed && !isTimeUp) {
+    return (
+      <main className="page" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "60vh", textAlign: "center" }}>
+        <div style={{ background: "var(--bg-muted)", padding: 40, borderRadius: "var(--radius-lg)", maxWidth: 500 }}>
+          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 16 }}>Correction indisponible</h1>
+          <p style={{ color: "var(--text-secondary)", marginBottom: 24 }}>
+            Votre copie a bien été soumise. La correction et votre score seront disponibles dès que l'épreuve sera clôturée pour l'ensemble des candidats ou à la fin du temps réglementaire.
+          </p>
+          <a href="/dashboard" className="btn btn-primary">Retour à l'accueil</a>
+        </div>
+      </main>
+    );
+  }
+
   const questions = getQuestionsByIds(room.questionIds as string[]);
   const answersMap = new Map(attempt.answers.map(a => [a.questionId, a.selectedIndex]));
 

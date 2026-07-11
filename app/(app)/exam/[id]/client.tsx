@@ -86,8 +86,8 @@ export function ExamClient({
     const h = Math.floor(secs / 3600);
     const m = Math.floor((secs % 3600) / 60);
     const s = secs % 60;
-    if (h > 0) return `${h}h ${m.toString().padStart(2, '0')}m`;
-    return `${m}:${s.toString().padStart(2, '0')}`;
+    if (h > 0) return `${h}h ${m.toString().padStart(2, '0')}m ${s.toString().padStart(2, '0')}s`;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
   const answeredCount = Object.values(answers).filter((a: any) => a.selectedIndex !== null && a.selectedIndex !== undefined).length;
