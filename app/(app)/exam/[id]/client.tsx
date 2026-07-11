@@ -78,7 +78,7 @@ export function ExamClient({
     startTransition(async () => {
       const res = await submitAttemptAction(attemptId);
       if (res?.error) alert(res.error);
-      else window.location.href = window.location.pathname.replace(attemptId, `correction/${attemptId}`);
+      else window.location.href = `/exam/${roomId}/correction/${attemptId}`;
     });
   };
 

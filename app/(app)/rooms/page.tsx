@@ -15,13 +15,18 @@ export default async function RoomsPage() {
 
   const rooms = await prisma.room.findMany({
     orderBy: { createdAt: "desc" },
+    include: { createdBy: { select: { role: true } } }
   });
 
-  const availableRooms = rooms.filter(
+  const visibleRooms = rooms.filter(
+    (r) => r.visibility === "PUBLIC" || r.createdById === session.id || r.createdBy.role === "ADMIN"
+  );
+
+  const availableRooms = visibleRooms.filter(
     (r) => r.status === "RUNNING" || r.status === "SCHEDULED" || r.status === "WAITING"
   );
   
-  const pastRooms = rooms.filter((r) => r.status === "CLOSED");
+  const pastRooms = visibleRooms.filter((r) => r.status === "CLOSED");
 
   return (
     <RoomsClient 
