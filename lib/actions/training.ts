@@ -53,7 +53,7 @@ export async function startTrainingAction(formData: FormData) {
 
   const room = await prisma.room.create({
     data: {
-      title: "Entraînement - " + new Date().toLocaleDateString(),
+      title: "Entraînement - " + new Date().toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' à'),
       status: "RUNNING",
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
