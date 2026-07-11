@@ -49,7 +49,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
     passageId: q.passageId
   }));
 
-  const initialAnswers = attempt.answers.reduce((acc, ans) => {
+  const initialAnswers = attempt.answers.reduce((acc: Record<string, { selectedIndex: number | null, flagged: boolean }>, ans: any) => {
     acc[ans.questionId] = { selectedIndex: ans.selectedIndex, flagged: ans.flagged };
     return acc;
   }, {} as Record<string, { selectedIndex: number | null, flagged: boolean }>);
