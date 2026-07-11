@@ -20,11 +20,11 @@ export default async function DashboardPage() {
   });
 
   // Stats globales
-  const submitted = attempts.filter((a) => a.score !== null);
+  const submitted = attempts.filter((a: typeof attempts[number]) => a.score !== null);
   const avgPct = submitted.length
-    ? Math.round(submitted.reduce((s, a) => s + (a.percentage ?? 0), 0) / submitted.length)
+    ? Math.round(submitted.reduce((s: number, a: typeof attempts[number]) => s + (a.percentage ?? 0), 0) / submitted.length)
     : null;
-  const bestPct = submitted.length ? Math.max(...submitted.map((a) => a.percentage ?? 0)) : null;
+  const bestPct = submitted.length ? Math.max(...submitted.map((a: typeof attempts[number]) => a.percentage ?? 0)) : null;
 
   // Moyennes par rubrique
   const subjectTotals: Record<string, { sum: number; count: number }> = {
