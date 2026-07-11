@@ -58,8 +58,8 @@ export async function startTrainingAction(formData: FormData) {
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
       durationMin,
-      questionIds: JSON.stringify(gen.questionIds),
-      config: JSON.stringify(config),
+      questionIds: gen.questionIds,
+      config: config as any,
       createdById: session.id, // Créé par le candidat lui-même
       startsAt: new Date()
     },

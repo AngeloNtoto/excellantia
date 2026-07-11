@@ -62,10 +62,20 @@ export function getQuestionById(id: string): Question | null {
   return getAllQuestions().find((q) => q.id === id) ?? null;
 }
 
-export function getQuestionsByIds(ids: string[]): Question[] {
+export function getQuestionsByIds(ids: string[] | string | unknown): Question[] {
+  let parsedIds: string[] = [];
+  if (typeof ids === 'string') {
+    try {
+      parsedIds = JSON.parse(ids);
+    } catch {
+      parsedIds = [];
+    }
+  } else if (Array.isArray(ids)) {
+    parsedIds = ids;
+  }
   const all = getAllQuestions();
   const map = new Map(all.map((q) => [q.id, q]));
-  return ids.map((id) => map.get(id)).filter(Boolean) as Question[];
+  return parsedIds.map((id) => map.get(id)).filter(Boolean) as Question[];
 }
 
 export function getAllPassages(): Passage[] {
