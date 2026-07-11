@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import type { Answer } from "@prisma/client";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { getQuestionsByIds } from "@/lib/questions";
@@ -42,7 +41,7 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
 
   const questions = getQuestionsByIds(room.questionIds as string[]);
   const answersMap = new Map<string, number | null>(
-    attempt.answers.map((answer: Answer) => [answer.questionId, answer.selectedIndex])
+    attempt.answers.map((answer: any) => [answer.questionId, answer.selectedIndex])
   );
 
   const scoreBySubject = attempt.scoreBySubject as Record<string, number> | null;
