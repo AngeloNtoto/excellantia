@@ -1,0 +1,90 @@
+[
+  {
+    "id": "cg-001",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle est la capitale de la République Démocratique du Congo ?",
+    "options": ["Lubumbashi", "Kinshasa", "Goma", "Kisangani"],
+    "answerIndex": 1,
+    "explanation": "Kinshasa est la capitale et la plus grande ville de la RDC. Elle est située sur le fleuve Congo, en face de Brazzaville (Congo-Brazzaville)."
+  },
+  {
+    "id": "cg-002",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "En quelle année la RDC a-t-elle obtenu son indépendance de la Belgique ?",
+    "options": ["1958", "1960", "1962", "1965"],
+    "answerIndex": 1,
+    "explanation": "La RDC a obtenu son indépendance le 30 juin 1960. Patrice Lumumba fut le premier Premier ministre du pays indépendant."
+  },
+  {
+    "id": "cg-003",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel est le plus grand fleuve de la RDC ?",
+    "options": ["Le Nil", "Le Congo", "Le Zambèze", "Le Niger"],
+    "answerIndex": 1,
+    "explanation": "Le fleuve Congo est le fleuve principal de la RDC. C'est le deuxième fleuve du monde par son débit (après l'Amazone) et le plus profond du monde."
+  },
+  {
+    "id": "cg-004",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle est la monnaie officielle de la RDC ?",
+    "options": ["Le franc CFA", "Le franc congolais", "Le kwacha", "Le rand"],
+    "answerIndex": 1,
+    "explanation": "La monnaie officielle de la RDC est le franc congolais (CDF). Elle a remplacé le zaïre en 1998 après la chute du régime Mobutu."
+  },
+  {
+    "id": "cg-005",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Sciences",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Combien de planètes compte notre système solaire ?",
+    "options": ["7", "8", "9", "10"],
+    "answerIndex": 1,
+    "explanation": "Notre système solaire compte 8 planètes depuis 2006, année où Pluton a été reclassée en planète naine. Les 8 planètes sont : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune."
+  },
+  {
+    "id": "cg-006",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle organisation internationale a été fondée en 1945 à San Francisco ?",
+    "options": ["L'Union africaine", "L'ONU", "L'OTAN", "L'UNESCO"],
+    "answerIndex": 1,
+    "explanation": "L'Organisation des Nations Unies (ONU) a été fondée le 24 octobre 1945, à San Francisco, après la Seconde Guerre mondiale, pour maintenir la paix internationale."
+  },
+  {
+    "id": "cg-007",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus grand continent du monde ?",
+    "options": ["L'Afrique", "L'Amérique", "L'Asie", "L'Europe"],
+    "answerIndex": 2,
+    "explanation": "L'Asie est le plus grand continent du monde, couvrant environ 44 millions de km². Elle représente 30% de la surface terrestre et contient 60% de la population mondiale."
+  },
+  {
+    "id": "cg-008",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Sciences",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle est la formule chimique de l'eau ?",
+    "options": ["H₂O₂", "H₂O", "HO", "H₃O"],
+    "answerIndex": 1,
+    "explanation": "L'eau est composée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O) : H₂O. H₂O₂ est le peroxyde d'hydrogène (eau oxygénée)."
+  }
+]

@@ -1,0 +1,119 @@
+// Excellantia - Schéma Prisma
+// Questions stockées en JSON, Prisma gère les données dynamiques
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  fullname  String
+  code      String   @unique
+  role      Role     @default(CANDIDATE)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  attempts    Attempt[]
+  roomAccess  RoomAccess[]
+  createdRooms Room[]
+}
+
+enum Role {
+  ADMIN
+  CANDIDATE
+}
+
+model Room {
+  id          String         @id @default(cuid())
+  title       String
+  status      RoomStatus     @default(WAITING)
+  visibility  RoomVisibility @default(PUBLIC)
+  accessCode  String?
+  timeMode    TimeMode       @default(ABSOLUTE)
+  durationMin Int            @default(100)
+  startsAt    DateTime?
+  endsAt      DateTime?
+  questionIds Json           // JSON array of question IDs
+  config      Json           // JSON config object
+  createdById String
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  createdBy  User        @relation(fields: [createdById], references: [id])
+  attempts   Attempt[]
+  roomAccess RoomAccess[]
+}
+
+enum RoomStatus {
+  WAITING
+  SCHEDULED
+  RUNNING
+  CLOSED
+  CANCELLED
+}
+
+enum RoomVisibility {
+  PUBLIC
+  PRIVATE
+}
+
+enum TimeMode {
+  ABSOLUTE
+  RELATIVE
+}
+
+model Attempt {
+  id          String        @id @default(cuid())
+  userId      String
+  roomId      String
+  startedAt   DateTime      @default(now())
+  submittedAt DateTime?
+  status      AttemptStatus @default(IN_PROGRESS)
+  score       Int?
+  percentage  Float?
+  scoreBySubject Json?     // {MATH: 20, FRENCH: 18, ...}
+  timeUsedSec Int?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id])
+  room    Room     @relation(fields: [roomId], references: [id])
+  answers Answer[]
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  SUBMITTED
+  AUTO_SUBMITTED_TIME_EXPIRED
+  AUTO_SUBMITTED_DISCONNECTED
+}
+
+model Answer {
+  id            String   @id @default(cuid())
+  attemptId     String
+  questionId    String
+  selectedIndex Int?
+  flagged       Boolean  @default(false)
+  updatedAt     DateTime @updatedAt
+
+  attempt Attempt @relation(fields: [attemptId], references: [id])
+
+  @@unique([attemptId, questionId])
+}
+
+model RoomAccess {
+  id        String   @id @default(cuid())
+  roomId    String
+  userId    String
+  grantedAt DateTime @default(now())
+
+  room Room @relation(fields: [roomId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([roomId, userId])
+}

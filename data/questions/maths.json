@@ -1,0 +1,138 @@
+[
+  {
+    "id": "math-001",
+    "subject": "MATH",
+    "topic": "Équations",
+    "subtopic": "Premier degré",
+    "difficulty": "EASY",
+    "statement": "Résoudre l'équation : 2x + 5 = 17",
+    "options": ["x = 4", "x = 5", "x = 6", "x = 7"],
+    "answerIndex": 2,
+    "explanation": "On soustrait 5 des deux membres : 2x = 12. En divisant par 2 : x = 6.",
+    "optionExplanations": [
+      "Faux : 2(4) + 5 = 13 ≠ 17.",
+      "Faux : 2(5) + 5 = 15 ≠ 17.",
+      "Correct : 2(6) + 5 = 17. ✓",
+      "Faux : 2(7) + 5 = 19 ≠ 17."
+    ]
+  },
+  {
+    "id": "math-002",
+    "subject": "MATH",
+    "topic": "Équations",
+    "subtopic": "Second degré",
+    "difficulty": "MEDIUM",
+    "statement": "Quelles sont les solutions de x² - 5x + 6 = 0 ?",
+    "options": ["x = 1 et x = 6", "x = 2 et x = 3", "x = -2 et x = -3", "x = 0 et x = 5"],
+    "answerIndex": 1,
+    "explanation": "On factorise : (x - 2)(x - 3) = 0, donc x = 2 ou x = 3. Vérification : 4 - 10 + 6 = 0 ✓ et 9 - 15 + 6 = 0 ✓.",
+    "optionExplanations": [
+      "Faux : 1 - 5 + 6 = 2 ≠ 0.",
+      "Correct : (x-2)(x-3) = x² - 5x + 6 = 0. ✓",
+      "Faux : (-2)² - 5(-2) + 6 = 20 ≠ 0.",
+      "Faux : 0 - 0 + 6 = 6 ≠ 0."
+    ]
+  },
+  {
+    "id": "math-003",
+    "subject": "MATH",
+    "topic": "Fonctions",
+    "subtopic": "Dérivées",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la dérivée de f(x) = 3x² - 4x + 1 ?",
+    "options": ["f'(x) = 3x - 4", "f'(x) = 6x - 4", "f'(x) = 6x + 4", "f'(x) = 3x² - 4"],
+    "answerIndex": 1,
+    "explanation": "En appliquant les règles de dérivation : (3x²)' = 6x, (-4x)' = -4, (1)' = 0. Donc f'(x) = 6x - 4.",
+    "optionExplanations": [
+      "Faux : la dérivée de 3x² est 6x, pas 3x.",
+      "Correct : f'(x) = 6x - 4. ✓",
+      "Faux : le signe de -4x est positif, sa dérivée est -4.",
+      "Faux : on dérive, on ne conserve pas x²."
+    ]
+  },
+  {
+    "id": "math-004",
+    "subject": "MATH",
+    "topic": "Inégalités",
+    "subtopic": "Premier degré",
+    "difficulty": "EASY",
+    "statement": "Résoudre : 3x - 6 > 0",
+    "options": ["x > -2", "x < 2", "x > 2", "x ≥ 2"],
+    "answerIndex": 2,
+    "explanation": "3x - 6 > 0 ⟹ 3x > 6 ⟹ x > 2. Le signe ne change pas (on divise par 3, positif).",
+    "optionExplanations": [
+      "Faux : ce serait 3x + 6 > 0.",
+      "Faux : l'inégalité est inversée.",
+      "Correct : x > 2. ✓",
+      "Faux : l'inégalité est stricte (pas ≥)."
+    ]
+  },
+  {
+    "id": "math-005",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "subtopic": "Dénombrement",
+    "difficulty": "HARD",
+    "statement": "Une urne contient 4 boules rouges et 6 bleues. On tire 2 boules sans remise. Quelle est la probabilité que les deux soient rouges ?",
+    "options": ["4/25", "2/15", "3/15", "4/15"],
+    "answerIndex": 1,
+    "explanation": "P = C(4,2)/C(10,2) = 6/45 = 2/15. On choisit 2 rouges parmi 4 : C(4,2) = 6. Total combinaisons : C(10,2) = 45.",
+    "optionExplanations": [
+      "Faux : ce serait (4/10)² = 16/100 si avec remise.",
+      "Correct : C(4,2)/C(10,2) = 6/45 = 2/15. ✓",
+      "Faux : 3/15 = 1/5 n'est pas correct ici.",
+      "Faux : 4/15 confond le numérateur."
+    ]
+  },
+  {
+    "id": "math-006",
+    "subject": "MATH",
+    "topic": "Géométrie",
+    "subtopic": "Trigonométrie",
+    "difficulty": "MEDIUM",
+    "statement": "Dans un triangle rectangle, si sin(A) = 3/5, quelle est la valeur de cos(A) ?",
+    "options": ["4/5", "3/4", "5/3", "2/5"],
+    "answerIndex": 0,
+    "explanation": "On utilise sin²(A) + cos²(A) = 1 : cos²(A) = 1 - 9/25 = 16/25, donc cos(A) = 4/5 (A est un angle aigu).",
+    "optionExplanations": [
+      "Correct : cos(A) = 4/5. ✓",
+      "Faux : 3/4 n'est pas obtenu par l'identité fondamentale.",
+      "Faux : 5/3 > 1, impossible pour un cosinus.",
+      "Faux : 2/5 ne vérifie pas l'identité."
+    ]
+  },
+  {
+    "id": "math-007",
+    "subject": "MATH",
+    "topic": "Suites",
+    "subtopic": "Suites arithmétiques",
+    "difficulty": "EASY",
+    "statement": "La suite arithmétique a pour premier terme a₁ = 3 et raison r = 4. Quel est le terme a₅ ?",
+    "options": ["15", "17", "19", "21"],
+    "answerIndex": 2,
+    "explanation": "aₙ = a₁ + (n-1)×r. Donc a₅ = 3 + 4×4 = 3 + 16 = 19.",
+    "optionExplanations": [
+      "Faux : 15 = 3 + 3×4, c'est a₄.",
+      "Faux : 17 n'est pas un terme de cette suite.",
+      "Correct : a₅ = 3 + 4×4 = 19. ✓",
+      "Faux : 21 = 3 + 18 ne suit pas la formule."
+    ]
+  },
+  {
+    "id": "math-008",
+    "subject": "MATH",
+    "topic": "Logarithmes",
+    "subtopic": "Propriétés",
+    "difficulty": "HARD",
+    "statement": "Simplifier : log(100) + log(0,01)",
+    "options": ["0", "2", "-2", "4"],
+    "answerIndex": 0,
+    "explanation": "log(100) = log(10²) = 2 et log(0,01) = log(10⁻²) = -2. Donc 2 + (-2) = 0.",
+    "optionExplanations": [
+      "Correct : log(100) + log(0,01) = 2 + (-2) = 0. ✓",
+      "Faux : on ne prend pas seulement log(100).",
+      "Faux : on ne prend pas seulement log(0,01).",
+      "Faux : il n'y a pas de multiplication ici."
+    ]
+  }
+]

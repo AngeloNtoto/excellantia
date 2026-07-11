@@ -1,0 +1,77 @@
+[
+  {
+    "id": "fr-001",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-001",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Selon le texte, pourquoi M. Seguin a-t-il pris une septième chèvre toute jeune ?",
+    "options": [
+      "Parce qu'elle coûtait moins cher.",
+      "Pour qu'elle s'habitue mieux à demeurer chez lui.",
+      "Pour qu'elle puisse se battre contre le loup.",
+      "Parce qu'il trouvait les jeunes chèvres plus jolies."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le texte indique : « il eut soin de la prendre toute jeune, pour qu'elle s'habituât mieux à demeurer chez lui. »",
+    "optionExplanations": [
+      "Faux : le prix n'est pas mentionné dans ce passage.",
+      "Correct : c'est exactement la raison donnée par le narrateur. ✓",
+      "Faux : M. Seguin veut la garder chez lui, pas qu'elle affronte le loup.",
+      "Faux : bien qu'il la trouve jolie ensuite, ce n'est pas la raison de son choix initial."
+    ]
+  },
+  {
+    "id": "fr-002",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-001",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est l'attitude de M. Seguin face à la nature de ses chèvres ?",
+    "options": [
+      "Il les comprend parfaitement mais ne peut rien faire.",
+      "Il est consterné et ne comprend pas leur besoin de liberté.",
+      "Il est indifférent à leur sort une fois qu'elles partent.",
+      "Il les encourage secrètement à partir dans la montagne."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le texte dit : « Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. » Il ne saisit pas leur désir de liberté.",
+    "optionExplanations": [
+      "Faux : le texte dit explicitement qu'il « ne comprenait rien ».",
+      "Correct : il est consterné face à des « chèvres indépendantes, voulant à tout prix le grand air ». ✓",
+      "Faux : il est affecté par leur perte (« C'est fini... je n'en garderai pas une »).",
+      "Faux : il essaie au contraire de les retenir."
+    ]
+  },
+  {
+    "id": "fr-003",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Conjugaison",
+    "difficulty": "EASY",
+    "statement": "Laquelle de ces phrases est correctement conjuguée au subjonctif présent ?",
+    "options": [
+      "Il faut que tu vas à l'école.",
+      "Il faut que tu ailles à l'école.",
+      "Il faut que tu iras à l'école.",
+      "Il faut que tu allais à l'école."
+    ],
+    "answerIndex": 1,
+    "explanation": "Après 'il faut que', on utilise le subjonctif présent. Le subjonctif de 'aller' à la 2ème personne du singulier est 'ailles'."
+  },
+  {
+    "id": "fr-004",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Synonymes",
+    "difficulty": "EASY",
+    "statement": "Quel est le synonyme le plus précis du mot 'altruiste' ?",
+    "options": ["égoïste", "généreux", "indifférent", "cupide"],
+    "answerIndex": 1,
+    "explanation": "Altruiste signifie qui se préoccupe du bien des autres, qui agit pour autrui sans intérêt personnel. Le synonyme le plus proche est 'généreux'."
+  }
+]

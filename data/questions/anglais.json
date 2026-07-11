@@ -1,0 +1,206 @@
+[
+  {
+    "id": "en-passage-001-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-001",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "MEDIUM",
+    "statement": "What does the narrator mean by 'it was the best of times, it was the worst of times'?",
+    "options": [
+      "The period was full of contradictions and extremes.",
+      "The weather was constantly changing from good to bad.",
+      "Some people were very rich while others were very poor.",
+      "The authorities could not decide what to do."
+    ],
+    "answerIndex": 0,
+    "explanation": "The series of paradoxes (best/worst, wisdom/foolishness, light/darkness) highlights that the era was defined by extreme contradictions.",
+    "optionExplanations": [
+      "Correct: the opening lines emphasize the paradoxical and extreme nature of the era. ✓",
+      "Wrong: this refers to societal conditions, not weather.",
+      "Wrong: while true, the quote refers to the general spirit of the age, not just wealth.",
+      "Wrong: this is not what the opening paradoxes describe."
+    ]
+  },
+  {
+    "id": "en-passage-002-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-002",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "EASY",
+    "statement": "What made Alice suddenly jump to her feet?",
+    "options": [
+      "She felt too hot and wanted to move.",
+      "Her sister told her to stand up.",
+      "She saw a rabbit take a watch out of its pocket.",
+      "She wanted to pick daisies."
+    ],
+    "answerIndex": 2,
+    "explanation": "The text states: '...but when the Rabbit actually took a watch out of its waistcoat-pocket... Alice started to her feet...'",
+    "optionExplanations": [
+      "Wrong: the heat made her sleepy, it didn't make her jump up.",
+      "Wrong: her sister was just reading.",
+      "Correct: seeing a rabbit with a watch and pocket made her jump up in curiosity. ✓",
+      "Wrong: she was considering making a daisy-chain, but hadn't gotten up for it."
+    ]
+  },
+  {
+    "id": "en-001",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Tenses",
+    "difficulty": "EASY",
+    "statement": "Choose the correct sentence in the present perfect:",
+    "options": ["She has went to the market.", "She has gone to the market.", "She have gone to the market.", "She gone to the market."],
+    "answerIndex": 1,
+    "explanation": "Present perfect: have/has + past participle. 'Go' → past participle 'gone'. Subject 'She' requires 'has'.",
+    "optionExplanations": [
+      "Wrong: 'went' is the simple past, not the past participle.",
+      "Correct: has + gone (past participle of 'go'). ✓",
+      "Wrong: 'She' is singular; use 'has', not 'have'.",
+      "Wrong: auxiliary verb 'has' is missing."
+    ]
+  },
+  {
+    "id": "en-002",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms",
+    "difficulty": "EASY",
+    "statement": "What is the closest synonym of 'diligent'?",
+    "options": ["lazy", "hardworking", "careless", "reckless"],
+    "answerIndex": 1,
+    "explanation": "'Diligent' means showing careful and persistent work or effort. 'Hardworking' is the closest synonym.",
+    "optionExplanations": [
+      "Wrong: 'lazy' is the antonym of diligent.",
+      "Correct: 'hardworking' means putting in consistent effort. ✓",
+      "Wrong: 'careless' means lacking attention.",
+      "Wrong: 'reckless' means without thinking of consequences."
+    ]
+  },
+  {
+    "id": "en-003",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Conditional",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct conditional sentence (second conditional):",
+    "options": [
+      "If I have money, I will buy a car.",
+      "If I had money, I would buy a car.",
+      "If I had money, I will buy a car.",
+      "If I have money, I would buy a car."
+    ],
+    "answerIndex": 1,
+    "explanation": "Second conditional (hypothetical present/future): If + past simple, would + base verb. Here: 'If I had money, I would buy a car.'",
+    "optionExplanations": [
+      "Wrong: this is the first conditional (real future).",
+      "Correct: If + past simple + would + infinitive = second conditional. ✓",
+      "Wrong: mixing past simple with 'will' is incorrect.",
+      "Wrong: mixing present simple with 'would' is incorrect."
+    ]
+  },
+  {
+    "id": "en-004",
+    "subject": "ENGLISH",
+    "topic": "Comprehension",
+    "subtopic": "Reading",
+    "difficulty": "MEDIUM",
+    "statement": "The word 'benevolent' most closely means:",
+    "options": ["harmful", "well-meaning", "truthful", "aggressive"],
+    "answerIndex": 1,
+    "explanation": "'Benevolent' comes from Latin 'bene' (good) + 'volens' (wishing). It means well-meaning and kind, intending or showing goodwill.",
+    "optionExplanations": [
+      "Wrong: 'harmful' is the opposite.",
+      "Correct: benevolent = well-meaning, kind. ✓",
+      "Wrong: 'truthful' relates to honesty, not kindness.",
+      "Wrong: 'aggressive' is opposite to benevolent."
+    ]
+  },
+  {
+    "id": "en-005",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Passive voice",
+    "difficulty": "HARD",
+    "statement": "Convert to passive: 'The teacher corrects the homework every day.'",
+    "options": [
+      "The homework is corrected by the teacher every day.",
+      "The homework was corrected by the teacher every day.",
+      "The homework corrects by the teacher every day.",
+      "The homework has been corrected by the teacher every day."
+    ],
+    "answerIndex": 0,
+    "explanation": "Active present simple → Passive: Object + is/are + past participle + by + subject. 'The homework is corrected by the teacher every day.'",
+    "optionExplanations": [
+      "Correct: is + corrected (past participle) + by the teacher. ✓",
+      "Wrong: 'was' is past tense, but the original is present.",
+      "Wrong: missing the auxiliary 'is'.",
+      "Wrong: present perfect passive is not appropriate here."
+    ]
+  },
+  {
+    "id": "en-006",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms",
+    "difficulty": "HARD",
+    "statement": "What does the idiom 'to bite the bullet' mean?",
+    "options": [
+      "To eat something hard",
+      "To endure a painful situation with courage",
+      "To shoot quickly",
+      "To avoid a difficult task"
+    ],
+    "answerIndex": 1,
+    "explanation": "'To bite the bullet' means to endure a painful or difficult situation stoically. Origin: soldiers bit on bullets during surgery without anesthesia.",
+    "optionExplanations": [
+      "Wrong: this is a literal (incorrect) interpretation.",
+      "Correct: to face something difficult with courage. ✓",
+      "Wrong: unrelated to the actual meaning.",
+      "Wrong: this describes procrastination, not biting the bullet."
+    ]
+  },
+  {
+    "id": "en-007",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Articles",
+    "difficulty": "EASY",
+    "statement": "Choose the correct sentence:",
+    "options": [
+      "She is an honest woman.",
+      "She is a honest woman.",
+      "She is honest woman.",
+      "She is the honest woman."
+    ],
+    "answerIndex": 0,
+    "explanation": "Before words starting with a vowel sound (including 'h' when silent or lightly pronounced), use 'an'. 'Honest' starts with a silent 'h' → vowel sound /ɒ/ → 'an honest'.",
+    "optionExplanations": [
+      "Correct: 'an' before vowel sound /ɒ/ in 'honest'. ✓",
+      "Wrong: 'a' is used before consonant sounds.",
+      "Wrong: an article is required here.",
+      "Wrong: 'the' implies a specific person already known."
+    ]
+  },
+  {
+    "id": "en-008",
+    "subject": "ENGLISH",
+    "topic": "Writing",
+    "subtopic": "Linking words",
+    "difficulty": "MEDIUM",
+    "statement": "Which linking word best expresses contrast?",
+    "options": ["furthermore", "therefore", "however", "consequently"],
+    "answerIndex": 2,
+    "explanation": "'However' introduces a contrast or contradiction. 'Furthermore' adds information, 'therefore' and 'consequently' express result/consequence.",
+    "optionExplanations": [
+      "Wrong: 'furthermore' adds information (addition).",
+      "Wrong: 'therefore' expresses consequence.",
+      "Correct: 'however' introduces a contrast or opposing idea. ✓",
+      "Wrong: 'consequently' expresses result."
+    ]
+  }
+]
