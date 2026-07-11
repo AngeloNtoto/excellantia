@@ -107,7 +107,7 @@ export async function createRoomAction(formData: FormData) {
       durationMin: d.durationMin,
       startsAt,
       endsAt,
-      questionIds: gen.questionIds,
+      questionIds: gen.questionIds as any,
       config: config as any,
       createdById: admin.id,
     },

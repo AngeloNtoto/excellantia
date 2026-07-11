@@ -58,7 +58,7 @@ export async function startTrainingAction(formData: FormData) {
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
       durationMin,
-      questionIds: gen.questionIds,
+      questionIds: gen.questionIds as any,
       config: config as any,
       createdById: session.id, // Créé par le candidat lui-même
       startsAt: new Date()
