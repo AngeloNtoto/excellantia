@@ -160,7 +160,7 @@ export default function TrainingPage() {
                       {diff.desc}
                     </p>
                     {isSelected && (
-                      <motion.div layoutId="diff-outline" className="absolute inset-0 rounded-2xl border-2 border-indigo-500" transition={{ type: "spring", bounce: 0.2, duration: 0.6 }} />
+                      <motion.div layoutId="diff-outline" className="absolute inset-0 rounded-2xl border-2 border-indigo-500" transition={{ type: "spring", stiffness: 300, damping: 25 }} />
                     )}
                   </button>
                 );
