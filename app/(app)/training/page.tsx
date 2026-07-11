@@ -22,7 +22,7 @@ const DIFFICULTIES = [
   { value: "HARD", label: "Difficile", desc: "50% moyennes, 50% difficiles", icon: TrendingUp, color: "text-red-500", bg: "bg-red-50 dark:bg-red-500/10", border: "border-red-200 dark:border-red-500/30" },
 ];
 
-const containerVariants = {
+const containerVariants: any = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -30,7 +30,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: any = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
 };
