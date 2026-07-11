@@ -6,8 +6,8 @@ import { useTransition, useEffect, useState } from "react";
 import { logoutAction } from "@/lib/actions/auth";
 import type { SessionUser } from "@/lib/types";
 import { useTheme } from "next-themes";
-import { LogOut, Sun, Moon, LayoutDashboard, Building2, BookOpen, GraduationCap, Users } from "lucide-react";
-import { motion } from "framer-motion";
+import { LogOut, Sun, Moon, LayoutDashboard, Building2, BookOpen, GraduationCap, Users, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
   user: SessionUser;
@@ -30,59 +30,71 @@ export function Navbar({ user }: NavbarProps) {
   const [isPending, startTransition] = useTransition();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const links = user.role === "ADMIN" ? ADMIN_LINKS : CANDIDATE_LINKS;
 
   useEffect(() => setMounted(true), []);
+  
+  // Close mobile menu on route change
+  useEffect(() => setIsMobileMenuOpen(false), [pathname]);
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-white/10 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-xl">
-      <div className="flex h-16 items-center justify-between px-6 max-w-7xl mx-auto">
-        {/* Logo */}
-        <div className="flex items-center gap-8">
+      <div className="flex h-16 items-center justify-between px-4 sm:px-6 max-w-7xl mx-auto">
+        {/* Logo and Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          <button 
+            className="md:hidden p-2 rounded-xl text-gray-500 dark:text-white/70 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+          
           <Link
             href={user.role === "ADMIN" ? "/admin" : "/dashboard"}
-            className="flex items-center gap-3 text-lg font-bold text-gray-900 dark:text-white tracking-tight group"
+            className="flex items-center gap-2 sm:gap-3 text-lg font-bold text-gray-900 dark:text-white tracking-tight group"
           >
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-all duration-300">
+            <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-all duration-300">
               <GraduationCap className="w-5 h-5" />
             </div>
-            Excellantia
+            <span className="hidden sm:block">Excellantia</span>
           </Link>
+        </div>
 
-          {/* Nav links */}
-          <div className="hidden md:flex items-center gap-2 bg-gray-100/50 dark:bg-white/5 p-1 rounded-2xl border border-gray-200/50 dark:border-white/5">
-            {links.map((link) => {
-              const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
-              const Icon = link.icon;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 ${
-                    isActive 
-                      ? "text-indigo-600 dark:text-white" 
-                      : "text-gray-500 dark:text-white/50 hover:text-gray-900 dark:hover:text-white"
-                  }`}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-pill"
-                      className="absolute inset-0 bg-white dark:bg-white/10 rounded-xl shadow-sm border border-gray-200/50 dark:border-white/5"
-                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10 flex items-center gap-2">
-                    <Icon className="w-4 h-4" />
-                    {link.label}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
+        {/* Desktop Nav links */}
+        <div className="hidden md:flex items-center gap-2 bg-gray-100/50 dark:bg-white/5 p-1 rounded-2xl border border-gray-200/50 dark:border-white/5 absolute left-1/2 -translate-x-1/2">
+          {links.map((link) => {
+            const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 ${
+                  isActive 
+                    ? "text-indigo-600 dark:text-white" 
+                    : "text-gray-500 dark:text-white/50 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="nav-pill"
+                    className="absolute inset-0 bg-white dark:bg-white/10 rounded-xl shadow-sm border border-gray-200/50 dark:border-white/5"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10 flex items-center gap-2">
+                  <Icon className="w-4 h-4" />
+                  {link.label}
+                </span>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -93,10 +105,10 @@ export function Navbar({ user }: NavbarProps) {
             </button>
           )}
           
-          <div className="w-[1px] h-6 bg-gray-200 dark:bg-white/10 mx-1" />
+          <div className="w-[1px] h-6 bg-gray-200 dark:bg-white/10 mx-1 hidden sm:block" />
 
-          <div className="flex items-center gap-3">
-            <div className="flex flex-col items-end hidden sm:flex">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex flex-col items-end hidden md:flex">
               <span className="text-sm font-semibold text-gray-900 dark:text-white truncate max-w-[150px]">
                 {user.fullname}
               </span>
@@ -106,7 +118,7 @@ export function Navbar({ user }: NavbarProps) {
                 </span>
               )}
             </div>
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-500/20 dark:to-purple-500/20 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold text-sm border border-indigo-200/50 dark:border-indigo-500/30">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-500/20 dark:to-purple-500/20 flex items-center justify-center text-indigo-700 dark:text-indigo-300 font-bold text-sm border border-indigo-200/50 dark:border-indigo-500/30">
               {user.fullname.charAt(0)}
             </div>
             
@@ -121,6 +133,39 @@ export function Navbar({ user }: NavbarProps) {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden overflow-hidden border-t border-gray-100 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-xl"
+          >
+            <div className="px-4 py-4 flex flex-col gap-2">
+              {links.map((link) => {
+                const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+                      isActive
+                        ? "bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
+                        : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5"
+                    }`}
+                  >
+                    <Icon className="w-5 h-5" />
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
