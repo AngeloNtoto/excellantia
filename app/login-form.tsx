@@ -1,32 +1,61 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { loginAction } from "@/lib/actions/auth";
+
+const CODE_LENGTH = 14;
+
+function normalizeCandidateCode(value: string) {
+  return value.replace(/\D/g, "").slice(0, CODE_LENGTH);
+}
 
 export function LoginForm() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [isPending, startTransition] = useTransition();
-  const isCodeComplete = code.length === 14;
+  const inputRef = useRef<HTMLInputElement>(null);
+  const isCodeComplete = code.length === CODE_LENGTH;
 
-  function normalizeCode(value: string) {
-    return value.replace(/\D/g, "").slice(0, 14);
-  }
+  const syncCode = useCallback((value: string) => {
+    const normalized = normalizeCandidateCode(value);
+    setCode(normalized);
+    setError((current) => (current ? "" : current));
+    if (inputRef.current && inputRef.current.value !== normalized) {
+      inputRef.current.value = normalized;
+    }
+  }, []);
 
-  function handleCodeInput(value: string) {
-    setCode(normalizeCode(value));
-    if (error) setError("");
-  }
+  useEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+
+    const syncFromInput = () => syncCode(input.value);
+    input.addEventListener("input", syncFromInput);
+    input.addEventListener("change", syncFromInput);
+    input.addEventListener("keyup", syncFromInput);
+    input.addEventListener("paste", syncFromInput);
+
+    return () => {
+      input.removeEventListener("input", syncFromInput);
+      input.removeEventListener("change", syncFromInput);
+      input.removeEventListener("keyup", syncFromInput);
+      input.removeEventListener("paste", syncFromInput);
+    };
+  }, [syncCode]);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!isCodeComplete) {
+    const submittedCode = normalizeCandidateCode(inputRef.current?.value ?? code);
+    syncCode(submittedCode);
+
+    if (submittedCode.length !== CODE_LENGTH) {
       setError("Le code doit contenir exactement 14 chiffres.");
       return;
     }
+
     startTransition(async () => {
       const fd = new FormData();
-      fd.set("code", code);
+      fd.set("code", submittedCode);
       const result = await loginAction(fd);
       if (result?.error) setError(result.error);
     });
@@ -49,14 +78,16 @@ export function LoginForm() {
         </label>
         <input
           id="code-input"
+          name="code"
+          ref={inputRef}
           className={`input${error ? " error" : ""}`}
-          type="tel"
+          type="text"
           inputMode="numeric"
           pattern="[0-9]{14}"
-          maxLength={14}
+          maxLength={32}
           value={code}
-          onChange={(e) => handleCodeInput(e.target.value)}
-          onInput={(e) => handleCodeInput(e.currentTarget.value)}
+          onChange={(e) => syncCode(e.target.value)}
+          onInput={(e) => syncCode(e.currentTarget.value)}
           autoComplete="off"
           autoFocus
           style={{
@@ -69,11 +100,11 @@ export function LoginForm() {
         <div className="progress-bar" style={{ marginTop: 8 }}>
           <div
             className="progress-fill"
-            style={{ width: `${Math.min(100, (code.length / 14) * 100)}%` }}
+            style={{ width: `${Math.min(100, (code.length / CODE_LENGTH) * 100)}%` }}
           />
         </div>
         <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 4 }}>
-          {code.length}/14 chiffres
+          {code.length}/{CODE_LENGTH} chiffres
         </p>
       </div>
 
@@ -95,7 +126,8 @@ export function LoginForm() {
       <button
         type="submit"
         className="btn btn-primary"
-        disabled={isPending || !isCodeComplete}
+        disabled={isPending}
+        aria-disabled={isPending || !isCodeComplete}
         style={{ height: 44, fontSize: "0.9375rem" }}
       >
         {isPending ? (
