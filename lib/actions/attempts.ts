@@ -2,10 +2,11 @@
 
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/session";
-import { getQuestionsByIds, getQuestionById } from "@/lib/questions";
+import { getQuestionsByIds } from "@/lib/questions";
 import { computeScore, toPercentage } from "@/lib/scoring";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import type { Answer } from "@prisma/client";
 import type { Subject } from "@/lib/types";
 
 async function requireAuth() {
@@ -113,7 +114,9 @@ export async function submitAttemptAction(attemptId: string) {
 
   const questionIds = attempt.room.questionIds as string[];
   const questions = getQuestionsByIds(questionIds);
-  const answersMap = new Map<string, number | null>(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
+  const answersMap = new Map<string, number | null>(
+    attempt.answers.map((answer: Answer) => [answer.questionId, answer.selectedIndex])
+  );
 
   const { score, total, bySubject } = computeScore(questions, answersMap);
   const percentage = toPercentage(score, total);
@@ -162,7 +165,9 @@ export async function autoSubmitExpiredAttempts(roomId: string) {
   const questions = getQuestionsByIds(questionIds);
 
   for (const attempt of expiredAttempts) {
-    const answersMap = new Map<string, number | null>(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
+    const answersMap = new Map<string, number | null>(
+      attempt.answers.map((answer: Answer) => [answer.questionId, answer.selectedIndex])
+    );
     const { score, total, bySubject } = computeScore(questions, answersMap);
     const percentage = toPercentage(score, total);
     const scoreBySubject: Record<Subject, number> = {

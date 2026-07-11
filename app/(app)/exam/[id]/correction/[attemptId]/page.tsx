@@ -1,8 +1,9 @@
 import { redirect } from "next/navigation";
+import type { Answer } from "@prisma/client";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { getQuestionsByIds } from "@/lib/questions";
-import { SUBJECT_LABELS, SUBJECT_COLORS } from "@/lib/types";
+import { SUBJECT_LABELS } from "@/lib/types";
 
 export default async function CorrectionPage({ params }: { params: Promise<{ id: string, attemptId: string }> }) {
   const { attemptId } = await params;
@@ -22,7 +23,8 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
   
   const isTraining = room.visibility === "PRIVATE" && room.createdById === attempt.userId;
   const isClosed = room.status === "CLOSED";
-  const isTimeUp = room.endsAt ? room.endsAt.getTime() <= Date.now() : false;
+  const now = new Date();
+  const isTimeUp = room.endsAt ? room.endsAt <= now : false;
   
   if (!isTraining && !isClosed && !isTimeUp) {
     return (
@@ -30,16 +32,18 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
         <div style={{ background: "var(--bg-muted)", padding: 40, borderRadius: "var(--radius-lg)", maxWidth: 500 }}>
           <h1 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 16 }}>Correction indisponible</h1>
           <p style={{ color: "var(--text-secondary)", marginBottom: 24 }}>
-            Votre copie a bien été soumise. La correction et votre score seront disponibles dès que l'épreuve sera clôturée pour l'ensemble des candidats ou à la fin du temps réglementaire.
+            Votre copie a bien été soumise. La correction et votre score seront disponibles dès que l&apos;épreuve sera clôturée pour l&apos;ensemble des candidats ou à la fin du temps réglementaire.
           </p>
-          <a href="/dashboard" className="btn btn-primary">Retour à l'accueil</a>
+          <a href="/dashboard" className="btn btn-primary">Retour à l&apos;accueil</a>
         </div>
       </main>
     );
   }
 
   const questions = getQuestionsByIds(room.questionIds as string[]);
-  const answersMap = new Map(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
+  const answersMap = new Map<string, number | null>(
+    attempt.answers.map((answer: Answer) => [answer.questionId, answer.selectedIndex])
+  );
 
   const scoreBySubject = attempt.scoreBySubject as Record<string, number> | null;
 

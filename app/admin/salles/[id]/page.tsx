@@ -64,7 +64,7 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
           )}
           {isClosed && room.attempts.length > 0 && (
             <a 
-              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map((a: any) => ({ ...a, fullname: a.user.fullname, scoreBySubject: typeof a.scoreBySubject === 'string' ? a.scoreBySubject : JSON.stringify(a.scoreBySubject) })))))}`} 
+              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map((attempt) => ({ ...attempt, fullname: attempt.user.fullname, scoreBySubject: typeof attempt.scoreBySubject === 'string' ? attempt.scoreBySubject : JSON.stringify(attempt.scoreBySubject) })))))}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-success"
@@ -92,7 +92,7 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
               </div>
               {room.accessCode && (
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 12px", background: "var(--warning-light)", borderRadius: "var(--radius-sm)", marginTop: 8 }}>
-                  <span style={{ color: "var(--warning)", fontWeight: 500 }}>Code d'accès :</span>
+                  <span style={{ color: "var(--warning)", fontWeight: 500 }}>Code d&apos;accès :</span>
                   <span style={{ fontFamily: "var(--font-mono)", fontWeight: 700, color: "var(--warning)", letterSpacing: "0.1em" }}>{room.accessCode}</span>
                 </div>
               )}
