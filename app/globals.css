@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 /* ─── Design tokens ──────────────────────────────────────────────────────── */
 :root {
@@ -48,7 +49,7 @@
 
 /* ─── Mode sombre ────────────────────────────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     --bg: #0c0d12;
     --bg-card: #14161e;
     --bg-muted: #1a1d28;
@@ -73,6 +74,32 @@
     --shadow: 0 4px 20px rgba(0,0,0,0.4);
     --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
   }
+}
+
+.dark {
+  --bg: #0c0d12;
+  --bg-card: #14161e;
+  --bg-muted: #1a1d28;
+  --border: #252836;
+  --border-subtle: #1e2130;
+
+  --text-primary: #edf0f7;
+  --text-secondary: #8b93a9;
+  --text-muted: #4a5166;
+
+  --accent-light: #1e1d3f;
+  --success-light: #052e1a;
+  --error-light: #2a0a0a;
+  --warning-light: #1f1300;
+
+  --math-light: #1a1835;
+  --french-light: #2a0d1e;
+  --english-light: #1f1200;
+  --culture-light: #042014;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
 }
 
 /* ─── Base ───────────────────────────────────────────────────────────────── */
