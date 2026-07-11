@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { loginAction } from "@/lib/actions/auth";
+import { motion, AnimatePresence } from "framer-motion";
+import { KeyRound, ArrowRight, Loader2, AlertCircle } from "lucide-react";
 
 const CODE_LENGTH = 14;
 
@@ -12,6 +14,7 @@ function normalizeCandidateCode(value: string) {
 export function LoginForm() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
   const [isPending, startTransition] = useTransition();
   const inputRef = useRef<HTMLInputElement>(null);
   const isCodeComplete = code.length === CODE_LENGTH;
@@ -61,82 +64,102 @@ export function LoginForm() {
     });
   }
 
+  const progress = (code.length / CODE_LENGTH) * 100;
+
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <div>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+      <div className="relative">
         <label
           htmlFor="code-input"
-          style={{
-            display: "block",
-            fontSize: "0.8125rem",
-            fontWeight: 500,
-            color: "var(--text-secondary)",
-            marginBottom: 6,
-          }}
+          className="flex items-center gap-2 text-sm font-medium text-indigo-100/80 mb-3"
         >
+          <KeyRound className="w-4 h-4 text-indigo-400" />
           Code candidat
         </label>
-        <input
-          id="code-input"
-          name="code"
-          ref={inputRef}
-          className={`input${error ? " error" : ""}`}
-          type="text"
-          inputMode="numeric"
-          pattern="[0-9]{14}"
-          maxLength={32}
-          value={code}
-          onChange={(e) => syncCode(e.target.value)}
-          onInput={(e) => syncCode(e.currentTarget.value)}
-          autoComplete="off"
-          autoFocus
-          style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: "1.125rem",
-            letterSpacing: "0.12em",
-          }}
-        />
-        {/* Barre de progression (14 chiffres) */}
-        <div className="progress-bar" style={{ marginTop: 8 }}>
-          <div
-            className="progress-fill"
-            style={{ width: `${Math.min(100, (code.length / CODE_LENGTH) * 100)}%` }}
+        
+        <div className={`relative flex items-center transition-all duration-300 rounded-xl bg-black/20 border ${isFocused ? 'border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.2)]' : error ? 'border-red-500/50' : 'border-white/10'} backdrop-blur-sm overflow-hidden group`}>
+          <input
+            id="code-input"
+            name="code"
+            ref={inputRef}
+            type="text"
+            inputMode="numeric"
+            pattern="[0-9]{14}"
+            maxLength={32}
+            value={code}
+            onChange={(e) => syncCode(e.target.value)}
+            onInput={(e) => syncCode(e.currentTarget.value)}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            autoComplete="off"
+            autoFocus
+            placeholder="00000000000000"
+            className="w-full bg-transparent px-4 py-4 text-[1.3rem] tracking-[0.25em] font-mono text-white placeholder-white/20 outline-none transition-all text-center"
           />
         </div>
-        <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 4 }}>
-          {code.length}/{CODE_LENGTH} chiffres
-        </p>
+        
+        {/* Animated Progress Bar */}
+        <div className="absolute -bottom-4 left-0 right-0">
+          <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+            <motion.div 
+              className={`h-full rounded-full ${isCodeComplete ? 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]' : 'bg-indigo-500'}`}
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            />
+          </div>
+          <div className="flex justify-between items-center mt-2 px-1">
+            <span className="text-[10px] font-medium text-white/40 tracking-widest uppercase">
+              Progression
+            </span>
+            <span className={`text-[11px] font-mono font-medium ${isCodeComplete ? 'text-emerald-400' : 'text-indigo-300'}`}>
+              {code.length} / {CODE_LENGTH}
+            </span>
+          </div>
+        </div>
       </div>
 
-      {error && (
-        <div
-          style={{
-            padding: "10px 14px",
-            borderRadius: "var(--radius-sm)",
-            background: "var(--error-light)",
-            color: "var(--error)",
-            fontSize: "0.875rem",
-            border: "1px solid rgba(220,38,38,0.2)",
-          }}
-        >
-          {error}
-        </div>
-      )}
+      <div className="min-h-[44px] mt-6">
+        <AnimatePresence mode="wait">
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="flex items-center gap-3 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium"
+            >
+              <AlertCircle className="w-5 h-5 shrink-0" />
+              {error}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       <button
         type="submit"
-        className="btn btn-primary"
         disabled={isPending}
         aria-disabled={isPending || !isCodeComplete}
-        style={{ height: 44, fontSize: "0.9375rem" }}
+        className={`group relative flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl text-[15px] font-semibold transition-all duration-300 overflow-hidden ${
+          isCodeComplete && !isPending
+            ? 'bg-white text-indigo-950 hover:bg-indigo-50 hover:scale-[1.02] shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]'
+            : 'bg-white/5 text-white/30 border border-white/5 cursor-not-allowed'
+        }`}
       >
         {isPending ? (
-          <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <span className="loader" style={{ width: 16, height: 16 }} />
-            Connexion…
-          </span>
+          <>
+            <Loader2 className="w-5 h-5 animate-spin" />
+            <span>Authentification...</span>
+          </>
         ) : (
-          "Se connecter"
+          <>
+            <span>Accéder à l'examen</span>
+            <ArrowRight className={`w-5 h-5 transition-transform duration-300 ${isCodeComplete ? 'group-hover:translate-x-1' : ''}`} />
+          </>
+        )}
+        
+        {/* Button Hover Glow Effect */}
+        {isCodeComplete && !isPending && (
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-indigo-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-in-out" />
         )}
       </button>
     </form>
