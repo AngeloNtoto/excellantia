@@ -61,7 +61,7 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
                   </tr>
                 </thead>
                 <tbody>
-                  {candidates.map(c => (
+                  {candidates.map((c: any) => (
                     <tr key={c.id}>
                       <td style={{ fontWeight: 500 }}>{c.fullname}</td>
                       <td style={{ fontFamily: "var(--font-mono)", fontSize: "0.875rem", color: "var(--text-secondary)", letterSpacing: "0.05em" }}>{c.code}</td>

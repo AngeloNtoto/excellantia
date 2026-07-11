@@ -19,14 +19,14 @@ export default async function RoomsPage() {
   });
 
   const visibleRooms = rooms.filter(
-    (r) => r.visibility === "PUBLIC" || r.createdById === session.id || r.createdBy.role === "ADMIN"
+    (r: any) => r.visibility === "PUBLIC" || r.createdById === session.id || r.createdBy.role === "ADMIN"
   );
 
   const availableRooms = visibleRooms.filter(
-    (r) => r.status === "RUNNING" || r.status === "SCHEDULED" || r.status === "WAITING"
+    (r: any) => r.status === "RUNNING" || r.status === "SCHEDULED" || r.status === "WAITING"
   );
   
-  const pastRooms = visibleRooms.filter((r) => r.status === "CLOSED");
+  const pastRooms = visibleRooms.filter((r: any) => r.status === "CLOSED");
 
   return (
     <RoomsClient 
