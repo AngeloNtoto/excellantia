@@ -4,13 +4,14 @@ import { prisma } from "@/lib/prisma";
 import { getQuestionsByIds, getPassageById } from "@/lib/questions";
 import { ExamClient } from "./client";
 
-export default async function ExamPage({ params }: { params: { id: string } }) {
+export default async function ExamPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const session = await getSession();
   if (!session) redirect("/");
 
   // L'ID ici est celui de la tentative (attemptId)
   const attempt = await prisma.attempt.findUnique({
-    where: { id: params.id },
+    where: { id },
     include: { room: true, answers: true }
   });
 

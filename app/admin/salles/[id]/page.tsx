@@ -5,11 +5,12 @@ import { startRoomNowAction, closeRoomAction, cancelRoomAction } from "@/lib/act
 import { buildWhatsAppMessage, buildRanking } from "@/lib/scoring";
 import { redirect } from "next/navigation";
 
-export default async function AdminRoomDetailsPage({ params }: { params: { id: string } }) {
+export default async function AdminRoomDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   await getSession(); // Guarded by layout
 
   const room = await prisma.room.findUnique({
-    where: { id: params.id },
+    where: { id },
     include: {
       createdBy: { select: { fullname: true } },
       attempts: {

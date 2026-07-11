@@ -5,10 +5,11 @@ import { ImportCandidatesForm } from "./import-form";
 
 export const metadata = { title: "Gestion des candidats" };
 
-export default async function AdminCandidatesPage({ searchParams }: { searchParams: { q?: string } }) {
+export default async function AdminCandidatesPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   await getSession(); // Guarded by layout
 
-  const query = searchParams.q ?? "";
+  const { q } = await searchParams;
+  const query = q ?? "";
   
   const candidates = await prisma.user.findMany({
     where: {

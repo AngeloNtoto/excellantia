@@ -33,7 +33,7 @@ export const createRoomSchema = z.object({
   accessCode: z.string().optional(),
   timeMode: z.enum(["ABSOLUTE", "RELATIVE"]).default("ABSOLUTE"),
   durationMin: z.coerce.number().int().min(1).max(600).default(100),
-  scheduledAt: z.string().datetime().optional(),
+  scheduledAt: z.string().optional().refine(val => !val || !isNaN(Date.parse(val)), "Date invalide"),
   startNow: z.boolean().default(false),
   // Répartition par rubrique
   mathCount: z.coerce.number().int().min(0).default(25),

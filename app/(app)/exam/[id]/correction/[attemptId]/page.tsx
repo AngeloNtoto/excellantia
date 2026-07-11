@@ -4,12 +4,13 @@ import { prisma } from "@/lib/prisma";
 import { getQuestionsByIds } from "@/lib/questions";
 import { SUBJECT_LABELS, SUBJECT_COLORS } from "@/lib/types";
 
-export default async function CorrectionPage({ params }: { params: { id: string, attemptId: string } }) {
+export default async function CorrectionPage({ params }: { params: Promise<{ id: string, attemptId: string }> }) {
+  const { attemptId } = await params;
   const session = await getSession();
   if (!session) redirect("/");
 
   const attempt = await prisma.attempt.findUnique({
-    where: { id: params.attemptId },
+    where: { id: attemptId },
     include: { room: true, answers: true }
   });
 

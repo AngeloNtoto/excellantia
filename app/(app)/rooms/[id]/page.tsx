@@ -5,11 +5,12 @@ import { ROOM_STATUS_LABELS } from "@/lib/types";
 import { startAttemptAction } from "@/lib/actions/attempts";
 import { AccessCodeForm } from "./access-form";
 
-export default async function RoomDetailsPage({ params }: { params: { id: string } }) {
+export default async function RoomDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const session = await getSession();
   if (!session) redirect("/");
 
-  const room = await prisma.room.findUnique({ where: { id: params.id } });
+  const room = await prisma.room.findUnique({ where: { id } });
   if (!room) redirect("/rooms");
 
   // Si c'est une salle privée, vérifier l'accès
