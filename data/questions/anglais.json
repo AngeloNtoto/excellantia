@@ -54,7 +54,12 @@
     "subtopic": "Tenses",
     "difficulty": "EASY",
     "statement": "Choose the correct sentence in the present perfect:",
-    "options": ["She has went to the market.", "She has gone to the market.", "She have gone to the market.", "She gone to the market."],
+    "options": [
+      "She has went to the market.",
+      "She has gone to the market.",
+      "She have gone to the market.",
+      "She gone to the market."
+    ],
     "answerIndex": 1,
     "explanation": "Present perfect: have/has + past participle. 'Go' → past participle 'gone'. Subject 'She' requires 'has'.",
     "optionExplanations": [
@@ -71,7 +76,12 @@
     "subtopic": "Synonyms",
     "difficulty": "EASY",
     "statement": "What is the closest synonym of 'diligent'?",
-    "options": ["lazy", "hardworking", "careless", "reckless"],
+    "options": [
+      "lazy",
+      "hardworking",
+      "careless",
+      "reckless"
+    ],
     "answerIndex": 1,
     "explanation": "'Diligent' means showing careful and persistent work or effort. 'Hardworking' is the closest synonym.",
     "optionExplanations": [
@@ -110,7 +120,12 @@
     "subtopic": "Reading",
     "difficulty": "MEDIUM",
     "statement": "The word 'benevolent' most closely means:",
-    "options": ["harmful", "well-meaning", "truthful", "aggressive"],
+    "options": [
+      "harmful",
+      "well-meaning",
+      "truthful",
+      "aggressive"
+    ],
     "answerIndex": 1,
     "explanation": "'Benevolent' comes from Latin 'bene' (good) + 'volens' (wishing). It means well-meaning and kind, intending or showing goodwill.",
     "optionExplanations": [
@@ -193,7 +208,12 @@
     "subtopic": "Linking words",
     "difficulty": "MEDIUM",
     "statement": "Which linking word best expresses contrast?",
-    "options": ["furthermore", "therefore", "however", "consequently"],
+    "options": [
+      "furthermore",
+      "therefore",
+      "however",
+      "consequently"
+    ],
     "answerIndex": 2,
     "explanation": "'However' introduces a contrast or contradiction. 'Furthermore' adds information, 'therefore' and 'consequently' express result/consequence.",
     "optionExplanations": [
@@ -202,5 +222,155 @@
       "Correct: 'however' introduces a contrast or opposing idea. ✓",
       "Wrong: 'consequently' expresses result."
     ]
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-0",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct form: 'If I ___ you, I would study harder.'",
+    "options": [
+      "was",
+      "were",
+      "am",
+      "have been"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-1",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Which of the following is a synonym for 'abundant'?",
+    "options": [
+      "Scarce",
+      "Plentiful",
+      "Rare",
+      "Empty"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-2",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the past participle of the verb 'to write'?",
+    "options": [
+      "Wrote",
+      "Writing",
+      "Written",
+      "Writed"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-3",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Choose the correct sentence:",
+    "options": [
+      "He don't like apples.",
+      "He doesn't likes apples.",
+      "He doesn't like apples.",
+      "He not like apples."
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-4",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "HARD",
+    "statement": "Complete the sentence: 'She is looking forward ___ her friends.'",
+    "options": [
+      "to seeing",
+      "to see",
+      "seeing",
+      "see"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-5",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Which modal verb expresses obligation?",
+    "options": [
+      "Might",
+      "Can",
+      "Must",
+      "Could"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-6",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the antonym of 'brave'?",
+    "options": [
+      "Fearless",
+      "Cowardly",
+      "Bold",
+      "Courageous"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-7",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct preposition: 'She is good ___ math.'",
+    "options": [
+      "in",
+      "at",
+      "on",
+      "with"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-8",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "What does the idiom 'break the ice' mean?",
+    "options": [
+      "To shatter something",
+      "To start a conversation in a social setting",
+      "To freeze water",
+      "To be cold"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-1783812112219-9",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "HARD",
+    "statement": "Identify the tense: 'I have been working here for two years.'",
+    "options": [
+      "Present Continuous",
+      "Present Perfect Simple",
+      "Present Perfect Continuous",
+      "Past Perfect"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

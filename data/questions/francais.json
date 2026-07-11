@@ -70,8 +70,163 @@
     "subtopic": "Synonymes",
     "difficulty": "EASY",
     "statement": "Quel est le synonyme le plus précis du mot 'altruiste' ?",
-    "options": ["égoïste", "généreux", "indifférent", "cupide"],
+    "options": [
+      "égoïste",
+      "généreux",
+      "indifférent",
+      "cupide"
+    ],
     "answerIndex": 1,
     "explanation": "Altruiste signifie qui se préoccupe du bien des autres, qui agit pour autrui sans intérêt personnel. Le synonyme le plus proche est 'généreux'."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-0",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots est correctement orthographié ?",
+    "options": [
+      "Éxigence",
+      "Exigeance",
+      "Exigence",
+      "Éxigeance"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-1",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Dans la phrase 'Les pommes que j'ai mangées étaient bonnes', pourquoi le participe passé 'mangées' est-il au féminin pluriel ?",
+    "options": [
+      "Parce qu'il s'accorde avec le sujet 'je'",
+      "Parce qu'il s'accorde avec le COD 'que' placé avant le verbe",
+      "Parce que c'est une exception",
+      "Parce qu'il s'accorde avec 'bonnes'"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-2",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le participe passé du verbe 'résoudre' ?",
+    "options": [
+      "Résolvu",
+      "Résolu",
+      "Résous",
+      "Résolué"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-3",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Quelle figure de style consiste à rapprocher deux mots de sens opposé ?",
+    "options": [
+      "L'hyperbole",
+      "L'oxymore",
+      "La métaphore",
+      "La litote"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-4",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est l'antonyme du mot 'altruiste' ?",
+    "options": [
+      "Généreux",
+      "Égoïste",
+      "Philanthrope",
+      "Hypocrite"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-5",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Identifiez le temps du verbe dans 'Il chantait' :",
+    "options": [
+      "Passé simple",
+      "Imparfait",
+      "Conditionnel",
+      "Plus-que-parfait"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-6",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Comment s'appelle le mouvement littéraire de Victor Hugo ?",
+    "options": [
+      "Le Classicisme",
+      "Le Romantisme",
+      "Le Surréalisme",
+      "Le Réalisme"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-7",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Lequel de ces noms est féminin ?",
+    "options": [
+      "Hémisphère",
+      "Pétale",
+      "Tentacule",
+      "Épithète"
+    ],
+    "correctIndex": 3,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-8",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Conjuguez 'aller' à la première personne du pluriel au futur simple :",
+    "options": [
+      "Nous allons",
+      "Nous allions",
+      "Nous irons",
+      "Nous irions"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-1783812112218-9",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie l'expression 'avoir le bras long' ?",
+    "options": [
+      "Être très grand",
+      "Être paresseux",
+      "Avoir de l'influence",
+      "Être maladroit"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

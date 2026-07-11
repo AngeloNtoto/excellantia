@@ -6,7 +6,12 @@
     "difficulty": "EASY",
     "scope": "DRC",
     "statement": "Quelle est la capitale de la République Démocratique du Congo ?",
-    "options": ["Lubumbashi", "Kinshasa", "Goma", "Kisangani"],
+    "options": [
+      "Lubumbashi",
+      "Kinshasa",
+      "Goma",
+      "Kisangani"
+    ],
     "answerIndex": 1,
     "explanation": "Kinshasa est la capitale et la plus grande ville de la RDC. Elle est située sur le fleuve Congo, en face de Brazzaville (Congo-Brazzaville)."
   },
@@ -17,7 +22,12 @@
     "difficulty": "EASY",
     "scope": "DRC",
     "statement": "En quelle année la RDC a-t-elle obtenu son indépendance de la Belgique ?",
-    "options": ["1958", "1960", "1962", "1965"],
+    "options": [
+      "1958",
+      "1960",
+      "1962",
+      "1965"
+    ],
     "answerIndex": 1,
     "explanation": "La RDC a obtenu son indépendance le 30 juin 1960. Patrice Lumumba fut le premier Premier ministre du pays indépendant."
   },
@@ -28,7 +38,12 @@
     "difficulty": "MEDIUM",
     "scope": "DRC",
     "statement": "Quel est le plus grand fleuve de la RDC ?",
-    "options": ["Le Nil", "Le Congo", "Le Zambèze", "Le Niger"],
+    "options": [
+      "Le Nil",
+      "Le Congo",
+      "Le Zambèze",
+      "Le Niger"
+    ],
     "answerIndex": 1,
     "explanation": "Le fleuve Congo est le fleuve principal de la RDC. C'est le deuxième fleuve du monde par son débit (après l'Amazone) et le plus profond du monde."
   },
@@ -39,7 +54,12 @@
     "difficulty": "MEDIUM",
     "scope": "DRC",
     "statement": "Quelle est la monnaie officielle de la RDC ?",
-    "options": ["Le franc CFA", "Le franc congolais", "Le kwacha", "Le rand"],
+    "options": [
+      "Le franc CFA",
+      "Le franc congolais",
+      "Le kwacha",
+      "Le rand"
+    ],
     "answerIndex": 1,
     "explanation": "La monnaie officielle de la RDC est le franc congolais (CDF). Elle a remplacé le zaïre en 1998 après la chute du régime Mobutu."
   },
@@ -50,7 +70,12 @@
     "difficulty": "MEDIUM",
     "scope": "INTERNATIONAL",
     "statement": "Combien de planètes compte notre système solaire ?",
-    "options": ["7", "8", "9", "10"],
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
     "answerIndex": 1,
     "explanation": "Notre système solaire compte 8 planètes depuis 2006, année où Pluton a été reclassée en planète naine. Les 8 planètes sont : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune."
   },
@@ -61,7 +86,12 @@
     "difficulty": "HARD",
     "scope": "INTERNATIONAL",
     "statement": "Quelle organisation internationale a été fondée en 1945 à San Francisco ?",
-    "options": ["L'Union africaine", "L'ONU", "L'OTAN", "L'UNESCO"],
+    "options": [
+      "L'Union africaine",
+      "L'ONU",
+      "L'OTAN",
+      "L'UNESCO"
+    ],
     "answerIndex": 1,
     "explanation": "L'Organisation des Nations Unies (ONU) a été fondée le 24 octobre 1945, à San Francisco, après la Seconde Guerre mondiale, pour maintenir la paix internationale."
   },
@@ -72,7 +102,12 @@
     "difficulty": "EASY",
     "scope": "INTERNATIONAL",
     "statement": "Quel est le plus grand continent du monde ?",
-    "options": ["L'Afrique", "L'Amérique", "L'Asie", "L'Europe"],
+    "options": [
+      "L'Afrique",
+      "L'Amérique",
+      "L'Asie",
+      "L'Europe"
+    ],
     "answerIndex": 2,
     "explanation": "L'Asie est le plus grand continent du monde, couvrant environ 44 millions de km². Elle représente 30% de la surface terrestre et contient 60% de la population mondiale."
   },
@@ -83,8 +118,163 @@
     "difficulty": "HARD",
     "scope": "INTERNATIONAL",
     "statement": "Quelle est la formule chimique de l'eau ?",
-    "options": ["H₂O₂", "H₂O", "HO", "H₃O"],
+    "options": [
+      "H₂O₂",
+      "H₂O",
+      "HO",
+      "H₃O"
+    ],
     "answerIndex": 1,
     "explanation": "L'eau est composée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O) : H₂O. H₂O₂ est le peroxyde d'hydrogène (eau oxygénée)."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-0",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le plus grand lac situé entièrement en République Démocratique du Congo ?",
+    "options": [
+      "Lac Tanganyika",
+      "Lac Kivu",
+      "Lac Mai-Ndombe",
+      "Lac Albert"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-1",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "En quelle année la République Démocratique du Congo a-t-elle obtenu son indépendance ?",
+    "options": [
+      "1958",
+      "1960",
+      "1965",
+      "1971"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-2",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la capitale économique de la RDC ?",
+    "options": [
+      "Kinshasa",
+      "Goma",
+      "Lubumbashi",
+      "Matadi"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-3",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel fleuve traverse la RDC de bout en bout ?",
+    "options": [
+      "Le Nil",
+      "Le Zambèze",
+      "Le Congo",
+      "Le Niger"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-4",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Combien de provinces compte actuellement la RDC ?",
+    "options": [
+      "11",
+      "21",
+      "26",
+      "32"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-5",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quel pays n'a PAS de frontière commune avec la RDC ?",
+    "options": [
+      "Angola",
+      "Tanzanie",
+      "Cameroun",
+      "Rwanda"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-6",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quel célèbre parc national de la RDC est connu pour ses gorilles de montagne ?",
+    "options": [
+      "Parc national des Virunga",
+      "Parc national de la Salonga",
+      "Parc national de Garamba",
+      "Parc national d'Upemba"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-7",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est la langue nationale de la RDC la plus parlée dans l'est du pays ?",
+    "options": [
+      "Lingala",
+      "Swahili",
+      "Tshiluba",
+      "Kikongo"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-8",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Qui a été le premier Premier ministre de la RDC ?",
+    "options": [
+      "Joseph Kasa-Vubu",
+      "Patrice Lumumba",
+      "Mobutu Sese Seko",
+      "Moïse Tshombe"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-1783812112217-9",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le nom de la monnaie officielle de la RDC ?",
+    "options": [
+      "Le Franc CFA",
+      "Le Franc Congolais",
+      "Le Zaïre",
+      "Le Shilling"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

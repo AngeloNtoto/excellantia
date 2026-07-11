@@ -6,7 +6,12 @@
     "subtopic": "Premier degré",
     "difficulty": "EASY",
     "statement": "Résoudre l'équation : 2x + 5 = 17",
-    "options": ["x = 4", "x = 5", "x = 6", "x = 7"],
+    "options": [
+      "x = 4",
+      "x = 5",
+      "x = 6",
+      "x = 7"
+    ],
     "answerIndex": 2,
     "explanation": "On soustrait 5 des deux membres : 2x = 12. En divisant par 2 : x = 6.",
     "optionExplanations": [
@@ -23,7 +28,12 @@
     "subtopic": "Second degré",
     "difficulty": "MEDIUM",
     "statement": "Quelles sont les solutions de x² - 5x + 6 = 0 ?",
-    "options": ["x = 1 et x = 6", "x = 2 et x = 3", "x = -2 et x = -3", "x = 0 et x = 5"],
+    "options": [
+      "x = 1 et x = 6",
+      "x = 2 et x = 3",
+      "x = -2 et x = -3",
+      "x = 0 et x = 5"
+    ],
     "answerIndex": 1,
     "explanation": "On factorise : (x - 2)(x - 3) = 0, donc x = 2 ou x = 3. Vérification : 4 - 10 + 6 = 0 ✓ et 9 - 15 + 6 = 0 ✓.",
     "optionExplanations": [
@@ -40,7 +50,12 @@
     "subtopic": "Dérivées",
     "difficulty": "MEDIUM",
     "statement": "Quelle est la dérivée de f(x) = 3x² - 4x + 1 ?",
-    "options": ["f'(x) = 3x - 4", "f'(x) = 6x - 4", "f'(x) = 6x + 4", "f'(x) = 3x² - 4"],
+    "options": [
+      "f'(x) = 3x - 4",
+      "f'(x) = 6x - 4",
+      "f'(x) = 6x + 4",
+      "f'(x) = 3x² - 4"
+    ],
     "answerIndex": 1,
     "explanation": "En appliquant les règles de dérivation : (3x²)' = 6x, (-4x)' = -4, (1)' = 0. Donc f'(x) = 6x - 4.",
     "optionExplanations": [
@@ -57,7 +72,12 @@
     "subtopic": "Premier degré",
     "difficulty": "EASY",
     "statement": "Résoudre : 3x - 6 > 0",
-    "options": ["x > -2", "x < 2", "x > 2", "x ≥ 2"],
+    "options": [
+      "x > -2",
+      "x < 2",
+      "x > 2",
+      "x ≥ 2"
+    ],
     "answerIndex": 2,
     "explanation": "3x - 6 > 0 ⟹ 3x > 6 ⟹ x > 2. Le signe ne change pas (on divise par 3, positif).",
     "optionExplanations": [
@@ -74,7 +94,12 @@
     "subtopic": "Dénombrement",
     "difficulty": "HARD",
     "statement": "Une urne contient 4 boules rouges et 6 bleues. On tire 2 boules sans remise. Quelle est la probabilité que les deux soient rouges ?",
-    "options": ["4/25", "2/15", "3/15", "4/15"],
+    "options": [
+      "4/25",
+      "2/15",
+      "3/15",
+      "4/15"
+    ],
     "answerIndex": 1,
     "explanation": "P = C(4,2)/C(10,2) = 6/45 = 2/15. On choisit 2 rouges parmi 4 : C(4,2) = 6. Total combinaisons : C(10,2) = 45.",
     "optionExplanations": [
@@ -91,7 +116,12 @@
     "subtopic": "Trigonométrie",
     "difficulty": "MEDIUM",
     "statement": "Dans un triangle rectangle, si sin(A) = 3/5, quelle est la valeur de cos(A) ?",
-    "options": ["4/5", "3/4", "5/3", "2/5"],
+    "options": [
+      "4/5",
+      "3/4",
+      "5/3",
+      "2/5"
+    ],
     "answerIndex": 0,
     "explanation": "On utilise sin²(A) + cos²(A) = 1 : cos²(A) = 1 - 9/25 = 16/25, donc cos(A) = 4/5 (A est un angle aigu).",
     "optionExplanations": [
@@ -108,7 +138,12 @@
     "subtopic": "Suites arithmétiques",
     "difficulty": "EASY",
     "statement": "La suite arithmétique a pour premier terme a₁ = 3 et raison r = 4. Quel est le terme a₅ ?",
-    "options": ["15", "17", "19", "21"],
+    "options": [
+      "15",
+      "17",
+      "19",
+      "21"
+    ],
     "answerIndex": 2,
     "explanation": "aₙ = a₁ + (n-1)×r. Donc a₅ = 3 + 4×4 = 3 + 16 = 19.",
     "optionExplanations": [
@@ -125,7 +160,12 @@
     "subtopic": "Propriétés",
     "difficulty": "HARD",
     "statement": "Simplifier : log(100) + log(0,01)",
-    "options": ["0", "2", "-2", "4"],
+    "options": [
+      "0",
+      "2",
+      "-2",
+      "4"
+    ],
     "answerIndex": 0,
     "explanation": "log(100) = log(10²) = 2 et log(0,01) = log(10⁻²) = -2. Donc 2 + (-2) = 0.",
     "optionExplanations": [
@@ -142,7 +182,12 @@
     "subtopic": "Valeur absolue",
     "difficulty": "MEDIUM",
     "statement": "Résoudre : |x - 3| = 5",
-    "options": ["x = 8 ou x = -2", "x = 2 ou x = -8", "x = 8 seulement", "x = -2 seulement"],
+    "options": [
+      "x = 8 ou x = -2",
+      "x = 2 ou x = -8",
+      "x = 8 seulement",
+      "x = -2 seulement"
+    ],
     "answerIndex": 0,
     "explanation": "Une valeur absolue vérifie x - 3 = 5 ou x - 3 = -5. Les solutions sont x = 8 et x = -2.",
     "optionExplanations": [
@@ -159,7 +204,12 @@
     "subtopic": "Deux inconnues",
     "difficulty": "MEDIUM",
     "statement": "Résoudre : x + y = 7 et x - y = 1",
-    "options": ["(3 ; 4)", "(4 ; 3)", "(5 ; 2)", "(2 ; 5)"],
+    "options": [
+      "(3 ; 4)",
+      "(4 ; 3)",
+      "(5 ; 2)",
+      "(2 ; 5)"
+    ],
     "answerIndex": 1,
     "explanation": "En additionnant les deux équations : 2x = 8 donc x = 4 puis y = 3.",
     "optionExplanations": [
@@ -176,7 +226,12 @@
     "subtopic": "Image",
     "difficulty": "EASY",
     "statement": "Si f(x)=2x²+1, quelle est l'image de 3 ?",
-    "options": ["18", "19", "20", "21"],
+    "options": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
     "answerIndex": 1,
     "explanation": "f(3)=2×9+1=19.",
     "optionExplanations": [
@@ -193,7 +248,12 @@
     "subtopic": "Fonctions rationnelles",
     "difficulty": "MEDIUM",
     "statement": "Calculer lim(x→∞) (3x+2)/(x+1).",
-    "options": ["0", "1", "2", "3"],
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
     "answerIndex": 3,
     "explanation": "On divise numérateur et dénominateur par x. La limite vaut le rapport des coefficients dominants : 3/1 = 3.",
     "optionExplanations": [
@@ -210,7 +270,12 @@
     "subtopic": "Équations",
     "difficulty": "MEDIUM",
     "statement": "Résoudre : 2^x = 16",
-    "options": ["2", "3", "4", "5"],
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
     "answerIndex": 2,
     "explanation": "16 = 2⁴ donc x = 4.",
     "optionExplanations": [
@@ -227,7 +292,12 @@
     "subtopic": "Valeurs remarquables",
     "difficulty": "EASY",
     "statement": "Quelle est la valeur de sin(30°) ?",
-    "options": ["1/2", "√2/2", "√3/2", "1"],
+    "options": [
+      "1/2",
+      "√2/2",
+      "√3/2",
+      "1"
+    ],
     "answerIndex": 0,
     "explanation": "Dans le triangle remarquable, sin(30°)=1/2.",
     "optionExplanations": [
@@ -244,7 +314,12 @@
     "subtopic": "Cercle",
     "difficulty": "EASY",
     "statement": "Quel est le périmètre d'un cercle de rayon 7 cm ?",
-    "options": ["7π cm", "14π cm", "28π cm", "49π cm"],
+    "options": [
+      "7π cm",
+      "14π cm",
+      "28π cm",
+      "49π cm"
+    ],
     "answerIndex": 1,
     "explanation": "Le périmètre d'un cercle est P=2πr=2π×7=14π.",
     "optionExplanations": [
@@ -261,7 +336,12 @@
     "subtopic": "Moyenne",
     "difficulty": "EASY",
     "statement": "Quelle est la moyenne des nombres 8, 10, 12 et 14 ?",
-    "options": ["10", "11", "12", "13"],
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
     "answerIndex": 1,
     "explanation": "(8+10+12+14)/4 = 44/4 = 11.",
     "optionExplanations": [
@@ -300,7 +380,12 @@
     "subtopic": "Module",
     "difficulty": "HARD",
     "statement": "Quel est le module de z = 3 + 4i ?",
-    "options": ["4", "5", "6", "7"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
     "answerIndex": 1,
     "explanation": "|z|=√(3²+4²)=√25=5.",
     "optionExplanations": [
@@ -309,5 +394,155 @@
       "Faux : erreur de calcul.",
       "Faux : erreur de calcul."
     ]
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-0",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la dérivée de f(x) = $x^2 \\sin(x)$ ?",
+    "options": [
+      "$2x \\cos(x)$",
+      "$2x \\sin(x) + x^2 \\cos(x)$",
+      "$2x \\sin(x) - x^2 \\cos(x)$",
+      "$x^2 \\cos(x)$"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-1",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est la valeur de $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$ ?",
+    "options": [
+      "0",
+      "1",
+      "$\\infty$",
+      "Non définie"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-2",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est la solution de l'équation $e^x = 5$ ?",
+    "options": [
+      "$x = \\ln(5)$",
+      "$x = 5$",
+      "$x = e^5$",
+      "$x = \\log_{10}(5)$"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-3",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est l'intégrale de $\\int 2x dx$ ?",
+    "options": [
+      "$x^2 + C$",
+      "$2x^2 + C$",
+      "$x + C$",
+      "$\\frac{1}{2}x^2 + C$"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-4",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le module du nombre complexe $z = 3 + 4i$ ?",
+    "options": [
+      "7",
+      "5",
+      "25",
+      "12"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-5",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Si on lance un dé équilibré à 6 faces, quelle est la probabilité d'obtenir un nombre premier ?",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-6",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la forme trigonométrique du nombre complexe $1 + i$ ?",
+    "options": [
+      "$\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$",
+      "$2(\\cos(\\pi/4) + i\\sin(\\pi/4))$",
+      "$\\sqrt{2}(\\cos(\\pi/2) + i\\sin(\\pi/2))$",
+      "$\\cos(\\pi/4) + i\\sin(\\pi/4)$"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-7",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Dans l'espace, quelle est l'équation paramétrique d'une droite passant par le point $A(1, 2, 3)$ et de vecteur directeur $\\vec{u}(4, 5, 6)$ ?",
+    "options": [
+      "$x=1+4t, y=2+5t, z=3+6t$",
+      "$x=4+t, y=5+2t, z=6+3t$",
+      "$x=1-4t, y=2-5t, z=3-6t$",
+      "Aucune des réponses"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-8",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Soit $U_n$ une suite arithmétique de premier terme $U_0 = 3$ et de raison $r = 5$. Quel est le terme $U_{10}$ ?",
+    "options": [
+      "53",
+      "50",
+      "48",
+      "38"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-1783812112212-9",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Combien d'anagrammes distincts peut-on former avec les lettres du mot MATHS ?",
+    "options": [
+      "24",
+      "60",
+      "120",
+      "256"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]
