@@ -113,7 +113,7 @@ export async function submitAttemptAction(attemptId: string) {
 
   const questionIds = attempt.room.questionIds as string[];
   const questions = getQuestionsByIds(questionIds);
-  const answersMap = new Map(attempt.answers.map((a) => [a.questionId, a.selectedIndex]));
+  const answersMap = new Map<string, number | null>(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
 
   const { score, total, bySubject } = computeScore(questions, answersMap);
   const percentage = toPercentage(score, total);
@@ -162,7 +162,7 @@ export async function autoSubmitExpiredAttempts(roomId: string) {
   const questions = getQuestionsByIds(questionIds);
 
   for (const attempt of expiredAttempts) {
-    const answersMap = new Map(attempt.answers.map((a) => [a.questionId, a.selectedIndex]));
+    const answersMap = new Map<string, number | null>(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
     const { score, total, bySubject } = computeScore(questions, answersMap);
     const percentage = toPercentage(score, total);
     const scoreBySubject: Record<Subject, number> = {
