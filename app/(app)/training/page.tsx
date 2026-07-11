@@ -22,6 +22,19 @@ const DIFFICULTIES = [
   { value: "HARD", label: "Difficile", desc: "50% moyennes, 50% difficiles", icon: TrendingUp, color: "text-red-500", bg: "bg-red-50 dark:bg-red-500/10", border: "border-red-200 dark:border-red-500/30" },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
+};
+
 export default function TrainingPage() {
   const [isPending, startTransition] = useTransition();
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(SUBJECTS.map(s => s.id));
@@ -55,8 +68,13 @@ export default function TrainingPage() {
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="mb-10 flex items-center gap-4">
+    <motion.main 
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+      className="max-w-4xl mx-auto px-4 sm:px-6 py-8"
+    >
+      <motion.div variants={itemVariants} className="mb-10 flex items-center gap-4">
         <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
           <Target className="w-7 h-7" />
         </div>
@@ -68,13 +86,13 @@ export default function TrainingPage() {
             Configurez une session sur mesure pour tester vos connaissances.
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-3xl p-6 sm:p-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+      <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-3xl p-6 sm:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none">
         <form onSubmit={handleSubmit} className="flex flex-col gap-10">
           
           {/* MATIÈRES */}
-          <section>
+          <motion.section variants={itemVariants}>
             <div className="flex items-center justify-between mb-4">
               <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-indigo-500" />
@@ -85,16 +103,22 @@ export default function TrainingPage() {
               </span>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <motion.div 
+              variants={containerVariants}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
               {SUBJECTS.map((subj) => {
                 const isSelected = selectedSubjects.includes(subj.id);
                 const Icon = subj.icon;
                 return (
-                  <button
+                  <motion.button
+                    variants={itemVariants}
                     key={subj.id}
                     type="button"
                     onClick={() => toggleSubject(subj.id)}
-                    className={`relative flex items-center gap-4 p-4 rounded-2xl border-2 transition-all duration-200 text-left overflow-hidden group ${
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`relative flex items-center gap-4 p-4 rounded-2xl border-2 transition-all duration-300 text-left overflow-hidden group ${
                       isSelected 
                         ? `${subj.activeBorder} bg-white dark:bg-white/5 shadow-md` 
                         : `border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10`
@@ -120,31 +144,34 @@ export default function TrainingPage() {
                     }`}>
                       {isSelected && <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-2 h-2 bg-white rounded-full" />}
                     </div>
-                  </button>
+                  </motion.button>
                 );
               })}
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
 
-          <hr className="border-gray-200 dark:border-white/10" />
+          <motion.hr variants={itemVariants} className="border-gray-200 dark:border-white/10" />
 
           {/* DIFFICULTÉ */}
-          <section>
+          <motion.section variants={itemVariants}>
             <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
               <Gauge className="w-5 h-5 text-indigo-500" />
               Niveau de difficulté
             </label>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {DIFFICULTIES.map((diff) => {
                 const isSelected = difficulty === diff.value;
                 const Icon = diff.icon;
                 return (
-                  <button
+                  <motion.button
+                    variants={itemVariants}
                     key={diff.value}
                     type="button"
                     onClick={() => setDifficulty(diff.value)}
-                    className={`relative flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 ${
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`relative flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-300 ${
                       isSelected 
                         ? `border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md` 
                         : `border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10`
@@ -162,16 +189,16 @@ export default function TrainingPage() {
                     {isSelected && (
                       <motion.div layoutId="diff-outline" className="absolute inset-0 rounded-2xl border-2 border-indigo-500" transition={{ type: "spring", stiffness: 300, damping: 25 }} />
                     )}
-                  </button>
+                  </motion.button>
                 );
               })}
-            </div>
-          </section>
+            </motion.div>
+          </motion.section>
 
-          <hr className="border-gray-200 dark:border-white/10" />
+          <motion.hr variants={itemVariants} className="border-gray-200 dark:border-white/10" />
 
           {/* DURÉE */}
-          <section>
+          <motion.section variants={itemVariants}>
             <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
               <Clock className="w-5 h-5 text-indigo-500" />
               Durée de l'épreuve
@@ -184,7 +211,7 @@ export default function TrainingPage() {
                   name="duration" 
                   value={duration}
                   onChange={(e) => setDuration(Math.max(10, Math.min(240, parseInt(e.target.value) || 60)))}
-                  className="w-32 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-2xl font-bold text-center text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-32 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-2xl font-bold text-center text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
                   min="10" 
                   max="240"
                   step="10"
@@ -195,7 +222,7 @@ export default function TrainingPage() {
                 Vous pouvez définir une durée entre 10 et 240 minutes.
               </p>
             </div>
-          </section>
+          </motion.section>
 
           {/* ERREUR */}
           <AnimatePresence mode="wait">
@@ -213,7 +240,10 @@ export default function TrainingPage() {
           </AnimatePresence>
 
           {/* SUBMIT */}
-          <button 
+          <motion.button 
+            variants={itemVariants}
+            whileHover={!isPending && selectedSubjects.length > 0 ? { scale: 1.01 } : {}}
+            whileTap={!isPending && selectedSubjects.length > 0 ? { scale: 0.98 } : {}}
             type="submit" 
             disabled={isPending || selectedSubjects.length === 0}
             className="group relative flex items-center justify-center gap-3 w-full py-5 rounded-2xl text-lg font-bold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl shadow-indigo-500/20 overflow-hidden"
@@ -232,9 +262,9 @@ export default function TrainingPage() {
             
             {/* Glossy overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-          </button>
+          </motion.button>
         </form>
-      </div>
-    </main>
+      </motion.div>
+    </motion.main>
   );
 }
