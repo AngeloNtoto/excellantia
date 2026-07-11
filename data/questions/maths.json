@@ -544,5 +544,230 @@
     ],
     "correctIndex": 2,
     "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-0",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Résoudre le système : $x + y = 5$ et $x - y = 1$",
+    "options": [
+      "x=2, y=3",
+      "x=3, y=2",
+      "x=4, y=1",
+      "x=1, y=4"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-1",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le domaine de définition de la fonction $f(x) = \\sqrt{x-3}$ ?",
+    "options": [
+      "$]-\\infty, 3]$",
+      "$[3, +\\infty[$",
+      "$]-3, +\\infty[$",
+      "$\\mathbb{R}$"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-2",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Que vaut $\\cos(\\pi/3)$ ?",
+    "options": [
+      "$1/2$",
+      "$\\sqrt{3}/2$",
+      "$\\sqrt{2}/2$",
+      "1"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-3",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "La fonction $f(x) = x^3$ est-elle paire ou impaire ?",
+    "options": [
+      "Paire",
+      "Impaire",
+      "Ni paire ni impaire",
+      "Les deux"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-4",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Calculer l'intégrale $\\int_0^1 x^2 dx$ :",
+    "options": [
+      "1/3",
+      "1/2",
+      "1",
+      "2/3"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-5",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le discriminant $\\Delta$ de l'équation $2x^2 - 4x + 2 = 0$ ?",
+    "options": [
+      "0",
+      "4",
+      "-4",
+      "16"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-6",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "La somme des angles intérieurs d'un triangle vaut :",
+    "options": [
+      "$\\pi/2$ radians",
+      "$\\pi$ radians",
+      "$2\\pi$ radians",
+      "$3\\pi/2$ radians"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-7",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Une urne contient 3 boules rouges et 2 boules noires. Probabilité de tirer une rouge ?",
+    "options": [
+      "3/5",
+      "2/5",
+      "1/2",
+      "3/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-8",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Que vaut $\\ln(e^2)$ ?",
+    "options": [
+      "e",
+      "1",
+      "2",
+      "0"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-9",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Dérivée de $f(x) = \\ln(x)$ ?",
+    "options": [
+      "$1/x$",
+      "$x$",
+      "$e^x$",
+      "$-1/x^2$"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-10",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est la limite de $1/x$ quand $x \\to +\\infty$ ?",
+    "options": [
+      "0",
+      "$+\\infty$",
+      "$-\\infty$",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-11",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Volume d'un cube d'arête $a$ ?",
+    "options": [
+      "$a^2$",
+      "$a^3$",
+      "$3a^2$",
+      "$4a^3/3$"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-12",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le barycentre des points pondérés $(A,1)$ et $(B,1)$ ?",
+    "options": [
+      "A",
+      "B",
+      "Le milieu de [AB]",
+      "Aucun"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-13",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "L'équation $|x| = -2$ admet combien de solutions dans $\\mathbb{R}$ ?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Une infinité"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "MATHEMATICS-added-more-1783812167959-14",
+    "subject": "MATHEMATICS",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Que vaut $2^3 \\times 2^4$ ?",
+    "options": [
+      "$2^{12}$",
+      "$4^7$",
+      "$2^7$",
+      "$4^{12}$"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

@@ -276,5 +276,230 @@
     ],
     "correctIndex": 1,
     "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-0",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Qui a composé l'hymne national de la RDC, le 'Debout Congolais' ?",
+    "options": [
+      "Simon Kimbangu",
+      "Joseph Lutumba",
+      "Antoine-Roger Bolamba",
+      "Wendo Kolosoy"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-1",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Dans quelle province se trouve la ville de Kolwezi ?",
+    "options": [
+      "Haut-Katanga",
+      "Lualaba",
+      "Tanganyika",
+      "Haut-Lomami"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-2",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est l'ancien nom de la ville de Kinshasa ?",
+    "options": [
+      "Élisabethville",
+      "Léopoldville",
+      "Stanleyville",
+      "Coquilhatville"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-3",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "INTL",
+    "difficulty": "HARD",
+    "statement": "Qui est l'auteur du roman 'Le Pleurer-Rire' ?",
+    "options": [
+      "Zamenga Batukezanga",
+      "Henri Lopes",
+      "Alain Mabanckou",
+      "Sony Labou Tansi"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-4",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel minerai fait la renommée de la province du Lualaba ?",
+    "options": [
+      "L'or",
+      "Le coltan",
+      "Le cobalt et le cuivre",
+      "Le diamant"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-5",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle est la plus grande forêt tropicale d'Afrique ?",
+    "options": [
+      "La forêt du bassin du Congo",
+      "La forêt amazonienne",
+      "La forêt de Taï",
+      "La forêt de Kakamega"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-6",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quelle ville de la RDC est appelée 'La ville volcanique' ?",
+    "options": [
+      "Bukavu",
+      "Goma",
+      "Beni",
+      "Uvira"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-7",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "En quelle année Laurent-Désiré Kabila a-t-il pris le pouvoir ?",
+    "options": [
+      "1990",
+      "1997",
+      "2001",
+      "1965"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-8",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Quel est le point culminant de la RDC ?",
+    "options": [
+      "Mont Hoyo",
+      "Pic Marguerite (Mont Ngaliema)",
+      "Volcan Nyiragongo",
+      "Mont Nyamuragira"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-9",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel parc de la RDC abrite l'Okapi ?",
+    "options": [
+      "Parc des Virunga",
+      "Réserve de faune à okapis",
+      "Parc de la Salonga",
+      "Parc marin des Mangroves"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-10",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le nom de la compagnie aérienne nationale historique de la RDC (fondée en 2015) ?",
+    "options": [
+      "Air Zaïre",
+      "Congo Airways",
+      "Hewa Bora",
+      "CAA"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-11",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Lequel de ces fleuves n'est pas en Afrique ?",
+    "options": [
+      "Zambèze",
+      "Nil",
+      "Mékong",
+      "Niger"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-12",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Qui a peint La Joconde ?",
+    "options": [
+      "Picasso",
+      "Léonard de Vinci",
+      "Michel-Ange",
+      "Van Gogh"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-13",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Combien de continents y a-t-il sur Terre (selon le modèle à 6 continents habités/inhabités) ?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-14",
+    "subject": "GENERAL_KNOWLEDGE",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Quel est l'océan le plus vaste ?",
+    "options": [
+      "Océan Atlantique",
+      "Océan Indien",
+      "Océan Pacifique",
+      "Océan Arctique"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

@@ -228,5 +228,230 @@
     ],
     "correctIndex": 2,
     "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-0",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Conjuguez 'pouvoir' au subjonctif présent (1ère pers. sing.) :",
+    "options": [
+      "Je peux",
+      "Je pourrai",
+      "Je pourrais",
+      "Je pusse"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-1",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le synonyme de 'éphémère' ?",
+    "options": [
+      "Éternel",
+      "Durable",
+      "Passager",
+      "Stable"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-2",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Que signifie le préfixe 'poly-' ?",
+    "options": [
+      "Unique",
+      "Plusieurs",
+      "Loin",
+      "Contre"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-3",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Méditérranée",
+      "Méditerranée",
+      "Mediterannée",
+      "Méditéranée"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-4",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : 'Bien qu'il ___ malade, il est venu.'",
+    "options": [
+      "est",
+      "soit",
+      "sois",
+      "était"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-5",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Qui a écrit 'Les Misérables' ?",
+    "options": [
+      "Molière",
+      "Victor Hugo",
+      "Baudelaire",
+      "Zola"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-6",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Quel est l'antonyme de 'loquace' ?",
+    "options": [
+      "Bavard",
+      "Taciturne",
+      "Joyeux",
+      "Colérique"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-7",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Identifiez le COD : 'Le chat mange la souris.'",
+    "options": [
+      "Le chat",
+      "mange",
+      "la souris",
+      "Il n'y en a pas"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-8",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Le mot 'chouette' peut être :",
+    "options": [
+      "Un nom et un adjectif",
+      "Seulement un nom",
+      "Seulement un adjectif",
+      "Un verbe"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-9",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Pluriel de 'un cheval' :",
+    "options": [
+      "Des chevals",
+      "Des chevaux",
+      "Des cheveaux",
+      "Des chévaux"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-10",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Dans quel siècle a vécu Molière ?",
+    "options": [
+      "16e siècle",
+      "17e siècle",
+      "18e siècle",
+      "19e siècle"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-11",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Complétez : 'C'est l'homme ___ je t'ai parlé.'",
+    "options": [
+      "que",
+      "qui",
+      "dont",
+      "où"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-12",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "EASY",
+    "statement": "Quel est le féminin de 'fou' ?",
+    "options": [
+      "Fouse",
+      "Foue",
+      "Folle",
+      "Follette"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-13",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie 'abroger' une loi ?",
+    "options": [
+      "La voter",
+      "L'annuler",
+      "L'étudier",
+      "La prolonger"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "FRENCH-added-more-1783812167969-14",
+    "subject": "FRENCH",
+    "scope": "DRC",
+    "difficulty": "HARD",
+    "statement": "Quelle est la figure de style : 'Cette faucille d'or dans le champ des étoiles' ?",
+    "options": [
+      "Une comparaison",
+      "Une métaphore",
+      "Une personnification",
+      "Une métonymie"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]

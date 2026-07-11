@@ -372,5 +372,230 @@
     ],
     "correctIndex": 2,
     "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-0",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Choose the correct pronoun: 'The book ___ I read was fascinating.'",
+    "options": [
+      "who",
+      "which",
+      "whose",
+      "whom"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-1",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'to ring a bell' mean?",
+    "options": [
+      "To make a sound",
+      "To remember something vaguely",
+      "To open a door",
+      "To answer a phone"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-2",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Translate 'Il pleut des cordes' into an English idiom:",
+    "options": [
+      "It's raining ropes.",
+      "It's raining cats and dogs.",
+      "It's pouring heavy.",
+      "It's raining hard."
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-3",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the comparative of 'bad'?",
+    "options": [
+      "Badder",
+      "Worse",
+      "Worst",
+      "More bad"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-4",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Complete: 'I have known him ___ 2010.'",
+    "options": [
+      "for",
+      "since",
+      "in",
+      "from"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-5",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Which word is a noun?",
+    "options": [
+      "Quickly",
+      "Beautiful",
+      "Happiness",
+      "Run"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-6",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the plural of 'child'?",
+    "options": [
+      "Childs",
+      "Childrens",
+      "Children",
+      "Childes"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-7",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Find the mistake: 'She don't like playing tennis.'",
+    "options": [
+      "She",
+      "don't",
+      "playing",
+      "tennis"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-8",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Complete: '___ you ever been to London?'",
+    "options": [
+      "Did",
+      "Do",
+      "Have",
+      "Are"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-9",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What does 'DIY' stand for?",
+    "options": [
+      "Do It Yesterday",
+      "Design In Youth",
+      "Do It Yourself",
+      "Don't Ignore You"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-10",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the passive voice: 'They built the house.'",
+    "options": [
+      "The house was built by them.",
+      "The house is built by them.",
+      "They were building the house.",
+      "The house has been built."
+    ],
+    "correctIndex": 0,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-11",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the synonym of 'fast'?",
+    "options": [
+      "Slow",
+      "Quick",
+      "Sluggish",
+      "Heavy"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-12",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Complete: 'If it rains, we ___ stay inside.'",
+    "options": [
+      "would",
+      "will",
+      "are",
+      "do"
+    ],
+    "correctIndex": 1,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-13",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "What is the opposite of 'increase'?",
+    "options": [
+      "Grow",
+      "Expand",
+      "Decrease",
+      "Raise"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
+  },
+  {
+    "id": "ENGLISH-added-more-1783812167970-14",
+    "subject": "ENGLISH",
+    "scope": "INTL",
+    "difficulty": "EASY",
+    "statement": "Identify the adverb: 'She sings beautifully.'",
+    "options": [
+      "She",
+      "sings",
+      "beautifully",
+      "None"
+    ],
+    "correctIndex": 2,
+    "explanation": "L'explication détaillée sera disponible prochainement."
   }
 ]
