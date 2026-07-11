@@ -5,7 +5,7 @@ import { startTrainingAction } from "@/lib/actions/training";
 import { 
   Calculator, BookA, Globe, BookOpen, 
   Target, Rocket, Clock, PlayCircle, Loader2,
-  TrendingUp, TrendingDown, Gauge, AlertCircle
+  TrendingUp, TrendingDown, Gauge, AlertCircle, Plus, Minus
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -38,26 +38,52 @@ const itemVariants = {
 export default function TrainingPage() {
   const [isPending, startTransition] = useTransition();
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(SUBJECTS.map(s => s.id));
+  const [subjectCounts, setSubjectCounts] = useState<Record<string, number>>({
+    "subject_0": 10,
+    "subject_1": 10,
+    "subject_2": 10,
+    "subject_3": 10
+  });
   const [difficulty, setDifficulty] = useState("MIXED");
   const [duration, setDuration] = useState(60);
   const [error, setError] = useState("");
 
+  const totalQuestions = selectedSubjects.reduce((acc, id) => acc + (subjectCounts[id] || 0), 0);
+
   function toggleSubject(id: string) {
     setError("");
-    setSelectedSubjects(prev => 
-      prev.includes(id) ? prev.filter(s => s !== id) : [...prev, id]
-    );
+    setSelectedSubjects(prev => {
+      if (prev.includes(id)) {
+        return prev.filter(s => s !== id);
+      } else {
+        if (!subjectCounts[id]) {
+          setSubjectCounts(c => ({ ...c, [id]: 10 }));
+        }
+        return [...prev, id];
+      }
+    });
+  }
+
+  function updateCount(id: string, delta: number) {
+    setSubjectCounts(prev => {
+      const current = prev[id] || 0;
+      const newCount = Math.max(1, Math.min(50, current + delta)); // min 1, max 50
+      return { ...prev, [id]: newCount };
+    });
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (selectedSubjects.length === 0) {
-      setError("Veuillez sélectionner au moins une matière.");
+    if (selectedSubjects.length === 0 || totalQuestions === 0) {
+      setError("Veuillez sélectionner au moins une matière avec des questions.");
       return;
     }
 
     const fd = new FormData();
-    selectedSubjects.forEach(id => fd.append(id, "true"));
+    selectedSubjects.forEach(id => {
+      const countKey = id.replace("subject_", "subject_count_");
+      fd.append(countKey, subjectCounts[id].toString());
+    });
     fd.append("difficulty", difficulty);
     fd.append("duration", duration.toString());
 
@@ -96,11 +122,13 @@ export default function TrainingPage() {
             <div className="flex items-center justify-between mb-4">
               <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-indigo-500" />
-                Matières à inclure
+                Matières et questions
               </label>
-              <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                {selectedSubjects.length} sélectionnée(s)
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 rounded-lg text-sm font-bold">
+                  {totalQuestions} questions au total
+                </span>
+              </div>
             </div>
             
             <motion.div 
@@ -109,42 +137,80 @@ export default function TrainingPage() {
             >
               {SUBJECTS.map((subj) => {
                 const isSelected = selectedSubjects.includes(subj.id);
+                const count = subjectCounts[subj.id] || 0;
                 const Icon = subj.icon;
+                
                 return (
-                  <motion.button
+                  <motion.div
                     variants={itemVariants}
                     key={subj.id}
-                    type="button"
-                    onClick={() => toggleSubject(subj.id)}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`relative flex items-center gap-4 p-4 rounded-2xl border-2 transition-all duration-300 text-left overflow-hidden group ${
+                    className={`relative flex flex-col gap-4 p-4 rounded-2xl border-2 transition-all duration-300 text-left overflow-hidden group ${
                       isSelected 
                         ? `${subj.activeBorder} bg-white dark:bg-white/5 shadow-md` 
                         : `border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10`
                     }`}
                   >
-                    <div className={`flex items-center justify-center w-12 h-12 rounded-xl transition-colors duration-300 ${
-                      isSelected ? subj.activeBg : subj.bg
-                    } ${isSelected ? 'text-white shadow-inner' : subj.color}`}>
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <p className={`font-semibold text-base transition-colors ${
-                        isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-300'
+                    <div 
+                      className="flex items-center gap-4 cursor-pointer"
+                      onClick={() => toggleSubject(subj.id)}
+                    >
+                      <div className={`flex items-center justify-center w-12 h-12 rounded-xl transition-colors duration-300 ${
+                        isSelected ? subj.activeBg : subj.bg
+                      } ${isSelected ? 'text-white shadow-inner' : subj.color}`}>
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      
+                      <div className="flex-1">
+                        <p className={`font-semibold text-base transition-colors ${
+                          isSelected ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-300'
+                        }`}>
+                          {subj.name}
+                        </p>
+                      </div>
+
+                      {/* Indicator */}
+                      <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+                        isSelected ? 'border-indigo-500 bg-indigo-500' : 'border-gray-300 dark:border-gray-600'
                       }`}>
-                        {subj.name}
-                      </p>
+                        {isSelected && <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-2 h-2 bg-white rounded-full" />}
+                      </div>
                     </div>
 
-                    {/* Indicator */}
-                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
-                      isSelected ? 'border-indigo-500 bg-indigo-500' : 'border-gray-300 dark:border-gray-600'
-                    }`}>
-                      {isSelected && <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-2 h-2 bg-white rounded-full" />}
-                    </div>
-                  </motion.button>
+                    {/* Question count selector */}
+                    <AnimatePresence>
+                      {isSelected && (
+                        <motion.div 
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pt-2 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+                            <span className="text-sm font-medium text-gray-500 dark:text-gray-400">Questions</span>
+                            <div className="flex items-center gap-3">
+                              <button
+                                type="button"
+                                onClick={(e) => { e.stopPropagation(); updateCount(subj.id, -1); }}
+                                className="w-7 h-7 rounded-lg bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+                              >
+                                <Minus className="w-4 h-4" />
+                              </button>
+                              <span className="w-6 text-center font-bold text-gray-900 dark:text-white">
+                                {count}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={(e) => { e.stopPropagation(); updateCount(subj.id, 1); }}
+                                className="w-7 h-7 rounded-lg bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+                              >
+                                <Plus className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
                 );
               })}
             </motion.div>
@@ -210,16 +276,16 @@ export default function TrainingPage() {
                   type="number" 
                   name="duration" 
                   value={duration}
-                  onChange={(e) => setDuration(Math.max(10, Math.min(240, parseInt(e.target.value) || 60)))}
+                  onChange={(e) => setDuration(Math.max(1, Math.min(240, parseInt(e.target.value) || 60)))}
                   className="w-32 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-2xl font-bold text-center text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
-                  min="10" 
+                  min="1" 
                   max="240"
-                  step="10"
+                  step="5"
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">min</span>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                Vous pouvez définir une durée entre 10 et 240 minutes.
+                Vous pouvez définir la durée librement pour votre entraînement.
               </p>
             </div>
           </motion.section>
@@ -256,7 +322,7 @@ export default function TrainingPage() {
             ) : (
               <>
                 <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                <span>Démarrer l'entraînement</span>
+                <span>Démarrer l'entraînement ({totalQuestions} q.)</span>
               </>
             )}
             

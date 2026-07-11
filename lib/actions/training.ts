@@ -11,18 +11,15 @@ export async function startTrainingAction(formData: FormData) {
   const session = await getSession();
   if (!session || session.role !== "CANDIDATE") redirect("/");
 
-  const hasMath = formData.get("subject_0") === "true";
-  const hasFrench = formData.get("subject_1") === "true";
-  const hasEnglish = formData.get("subject_2") === "true";
-  const hasCulture = formData.get("subject_3") === "true";
+  const countMath = parseInt(formData.get("subject_count_0") as string) || 0;
+  const countFrench = parseInt(formData.get("subject_count_1") as string) || 0;
+  const countEnglish = parseInt(formData.get("subject_count_2") as string) || 0;
+  const countCulture = parseInt(formData.get("subject_count_3") as string) || 0;
   
-  const selectedCount = [hasMath, hasFrench, hasEnglish, hasCulture].filter(Boolean).length;
-  if (selectedCount === 0) return { error: "Veuillez sélectionner au moins une matière." };
+  const totalQuestions = countMath + countFrench + countEnglish + countCulture;
+  if (totalQuestions === 0) return { error: "Veuillez sélectionner au moins une matière avec des questions." };
 
   const durationMin = parseInt(formData.get("duration") as string) || 60;
-  const totalQuestions = 50; // Pour un entrainement, on peut réduire à 50
-  const perSubject = Math.floor(totalQuestions / selectedCount);
-
   const diffMode = formData.get("difficulty") as string;
   let easyPct = 40, mediumPct = 40, hardPct = 20;
 
@@ -38,16 +35,16 @@ export async function startTrainingAction(formData: FormData) {
   const config: RoomConfig = {
     totalQuestions,
     bySubject: {
-      MATH: hasMath ? perSubject : 0,
-      FRENCH: hasFrench ? perSubject : 0,
-      ENGLISH: hasEnglish ? perSubject : 0,
-      GENERAL_CULTURE: hasCulture ? perSubject : 0,
+      MATH: countMath,
+      FRENCH: countFrench,
+      ENGLISH: countEnglish,
+      GENERAL_CULTURE: countCulture,
     },
     difficulty: {
-      MATH: hasMath ? makeSubjectDiff(perSubject) : { easy: 0, medium: 0, hard: 0 },
-      FRENCH: hasFrench ? makeSubjectDiff(perSubject) : { easy: 0, medium: 0, hard: 0 },
-      ENGLISH: hasEnglish ? makeSubjectDiff(perSubject) : { easy: 0, medium: 0, hard: 0 },
-      GENERAL_CULTURE: hasCulture ? makeSubjectDiff(perSubject) : { easy: 0, medium: 0, hard: 0 },
+      MATH: countMath > 0 ? makeSubjectDiff(countMath) : { easy: 0, medium: 0, hard: 0 },
+      FRENCH: countFrench > 0 ? makeSubjectDiff(countFrench) : { easy: 0, medium: 0, hard: 0 },
+      ENGLISH: countEnglish > 0 ? makeSubjectDiff(countEnglish) : { easy: 0, medium: 0, hard: 0 },
+      GENERAL_CULTURE: countCulture > 0 ? makeSubjectDiff(countCulture) : { easy: 0, medium: 0, hard: 0 },
     }
   };
 
