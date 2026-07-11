@@ -13,7 +13,8 @@ export function ExamClient({
   endsAt,
   durationMin,
   startedAt,
-  timeMode
+  timeMode,
+  roomId
 }: any) {
   const [answers, setAnswers] = useState(initialAnswers);
   const [isPending, startTransition] = useTransition();
