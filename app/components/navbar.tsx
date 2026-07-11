@@ -39,7 +39,7 @@ export function Navbar({ user }: NavbarProps) {
   useEffect(() => setIsMobileMenuOpen(false), [pathname]);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-white/10 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 dark:border-white/5 bg-white/70 dark:bg-black/50 backdrop-blur-xl">
       <div className="flex h-16 items-center justify-between px-4 sm:px-6 max-w-7xl mx-auto">
         {/* Logo and Mobile Toggle */}
         <div className="flex items-center gap-4">
