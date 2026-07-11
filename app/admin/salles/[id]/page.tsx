@@ -64,7 +64,7 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
           )}
           {isClosed && room.attempts.length > 0 && (
             <a 
-              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map(a => ({ ...a, fullname: a.user.fullname, scoreBySubject: typeof a.scoreBySubject === 'string' ? a.scoreBySubject : JSON.stringify(a.scoreBySubject) })))))}`} 
+              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map((a: any) => ({ ...a, fullname: a.user.fullname, scoreBySubject: typeof a.scoreBySubject === 'string' ? a.scoreBySubject : JSON.stringify(a.scoreBySubject) })))))}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-success"

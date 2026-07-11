@@ -39,7 +39,7 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
   }
 
   const questions = getQuestionsByIds(room.questionIds as string[]);
-  const answersMap = new Map(attempt.answers.map(a => [a.questionId, a.selectedIndex]));
+  const answersMap = new Map(attempt.answers.map((a: any) => [a.questionId, a.selectedIndex]));
 
   const scoreBySubject = attempt.scoreBySubject as Record<string, number> | null;
 
