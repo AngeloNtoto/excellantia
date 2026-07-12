@@ -175,22 +175,35 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
     const diff = config.difficulty[subject];
 
     // Cas spéciaux
-    if (subject === "FRENCH" && config.french?.passageQuestions) {
+    if ((subject === "FRENCH" && config.french?.passageQuestions) || 
+        (subject === "ENGLISH" && config.english?.passageQuestions)) {
+      
+      const needed = subject === "FRENCH" 
+        ? config.french!.passageQuestions 
+        : config.english!.passageQuestions;
+
       const passageQs = allForSubject.filter((q) => q.passageId);
       const nonPassageQs = allForSubject.filter((q) => !q.passageId);
-      const needed = config.french.passageQuestions;
 
       if (passageQs.length < needed) {
-        errors.push(`Français texte : ${needed} questions demandées, ${passageQs.length} disponibles.`);
+        errors.push(`${subject} texte : ${needed} questions demandées, ${passageQs.length} disponibles.`);
       } else {
         const regularNeeded = total - needed;
-        const result = splitByDifficulty(
-          nonPassageQs,
-          Math.round(regularNeeded * diff.easy / 100),
-          Math.round(regularNeeded * diff.medium / 100),
-          Math.round(regularNeeded * diff.hard / 100)
-        );
-        if (!result) errors.push(`Français hors-texte : stock insuffisant.`);
+        
+        // diff.* are absolute numbers for the whole subject, so we need to scale them down for the regular questions
+        let e = Math.round(regularNeeded * (diff.easy / total));
+        let m = Math.round(regularNeeded * (diff.medium / total));
+        let h = regularNeeded - e - m;
+        // ensure h is not negative due to rounding
+        if (h < 0) {
+          if (e >= m) e += h;
+          else m += h;
+          h = 0;
+        }
+
+        const result = splitByDifficulty(nonPassageQs, e, m, h);
+        
+        if (!result) errors.push(`${subject} hors-texte : stock insuffisant.`);
         else selected.push(...pickRandom(passageQs, needed), ...result);
         continue;
       }

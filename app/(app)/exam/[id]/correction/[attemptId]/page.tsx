@@ -3,6 +3,7 @@ import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { getQuestionsByIds } from "@/lib/questions";
 import { SUBJECT_LABELS } from "@/lib/types";
+import { CollapsibleSection } from "./collapsible-section";
 
 export default async function CorrectionPage({ params }: { params: Promise<{ id: string, attemptId: string }> }) {
   const { attemptId } = await params;
@@ -86,65 +87,76 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
 
       <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 24 }}>Correction détaillée</h2>
       
-      <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
-        {questions.map((q, i) => {
-          const selected = answersMap.get(q.id);
-          const isCorrect = selected === q.answerIndex;
-          const isUnanswered = selected === null || selected === undefined;
-          
-          return (
-            <div key={q.id} className="card" style={{ padding: 24, borderLeft: `4px solid ${isCorrect ? "var(--success)" : isUnanswered ? "var(--warning)" : "var(--error)"}` }}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16 }}>
-                <span className={`badge badge-${q.subject.toLowerCase()}`}>{SUBJECT_LABELS[q.subject]}</span>
-                <span className={`badge ${isCorrect ? "badge-success" : isUnanswered ? "badge-warning" : "badge-error"}`}>
-                  {isCorrect ? "Correct" : isUnanswered ? "Non répondu" : "Incorrect"}
-                </span>
-              </div>
+      <div>
+        {Object.entries(
+          questions.reduce((acc, q) => {
+            if (!acc[q.subject]) acc[q.subject] = [];
+            acc[q.subject].push(q);
+            return acc;
+          }, {} as Record<string, typeof questions>)
+        ).map(([subject, subQuestions]) => (
+          <CollapsibleSection key={subject} title={SUBJECT_LABELS[subject as keyof typeof SUBJECT_LABELS]} count={subQuestions.length}>
+            {subQuestions.map((q) => {
+              const i = questions.findIndex(orig => orig.id === q.id);
+              const selected = answersMap.get(q.id);
+              const isCorrect = selected === q.answerIndex;
+              const isUnanswered = selected === null || selected === undefined;
               
-              <p style={{ fontSize: "1.0625rem", fontWeight: 500, marginBottom: 20 }}>
-                {i + 1}. {q.statement}
-              </p>
+              return (
+                <div key={q.id} className="card" style={{ padding: 24, borderLeft: `4px solid ${isCorrect ? "var(--success)" : isUnanswered ? "var(--warning)" : "var(--error)"}` }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16 }}>
+                    <span className={`badge badge-${q.subject.toLowerCase()}`}>{SUBJECT_LABELS[q.subject as keyof typeof SUBJECT_LABELS]}</span>
+                    <span className={`badge ${isCorrect ? "badge-success" : isUnanswered ? "badge-warning" : "badge-error"}`}>
+                      {isCorrect ? "Correct" : isUnanswered ? "Non répondu" : "Incorrect"}
+                    </span>
+                  </div>
+                  
+                  <p style={{ fontSize: "1.0625rem", fontWeight: 500, marginBottom: 20 }}>
+                    {i + 1}. {q.statement}
+                  </p>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
-                {q.options.map((opt, optIdx) => {
-                  const isExpected = optIdx === q.answerIndex;
-                  const isUserSelection = optIdx === selected;
-                  
-                  let bg = "transparent";
-                  let border = "var(--border)";
-                  let color = "var(--text-primary)";
-                  
-                  if (isExpected) {
-                    bg = "var(--success-light)"; border = "var(--success)"; color = "var(--success)";
-                  } else if (isUserSelection && !isCorrect) {
-                    bg = "var(--error-light)"; border = "var(--error)"; color = "var(--error)";
-                  }
-                  
-                  return (
-                    <div key={optIdx} style={{ padding: "10px 16px", borderRadius: "var(--radius-sm)", border: `1px solid ${border}`, background: bg, color: color, fontSize: "0.9375rem", display: "flex", alignItems: "center", gap: 12 }}>
-                      <span style={{ fontWeight: 600 }}>{String.fromCharCode(65 + optIdx)}.</span>
-                      <span>{opt}</span>
-                      {isUserSelection && <span style={{ marginLeft: "auto", fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase" }}>Votre réponse</span>}
-                    </div>
-                  );
-                })}
-              </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
+                    {q.options.map((opt, optIdx) => {
+                      const isExpected = optIdx === q.answerIndex;
+                      const isUserSelection = optIdx === selected;
+                      
+                      let bg = "transparent";
+                      let border = "var(--border)";
+                      let color = "var(--text-primary)";
+                      
+                      if (isExpected) {
+                        bg = "var(--success-light)"; border = "var(--success)"; color = "var(--success)";
+                      } else if (isUserSelection && !isCorrect) {
+                        bg = "var(--error-light)"; border = "var(--error)"; color = "var(--error)";
+                      }
+                      
+                      return (
+                        <div key={optIdx} style={{ padding: "10px 16px", borderRadius: "var(--radius-sm)", border: `1px solid ${border}`, background: bg, color: color, fontSize: "0.9375rem", display: "flex", alignItems: "center", gap: 12 }}>
+                          <span style={{ fontWeight: 600 }}>{String.fromCharCode(65 + optIdx)}.</span>
+                          <span>{opt}</span>
+                          {isUserSelection && <span style={{ marginLeft: "auto", fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase" }}>Votre réponse</span>}
+                        </div>
+                      );
+                    })}
+                  </div>
 
-              <div style={{ background: "var(--bg-muted)", padding: 20, borderRadius: "var(--radius-sm)" }}>
-                <h4 style={{ fontSize: "0.875rem", fontWeight: 700, marginBottom: 8, color: "var(--text-primary)" }}>Explication</h4>
-                <p style={{ fontSize: "0.9375rem", color: "var(--text-secondary)", margin: 0 }}>{q.explanation}</p>
-                
-                {q.optionExplanations && (
-                  <ul style={{ marginTop: 12, paddingLeft: 20, fontSize: "0.875rem", color: "var(--text-secondary)", display: "flex", flexDirection: "column", gap: 4 }}>
-                    {q.optionExplanations.map((exp, idx) => (
-                      <li key={idx}><strong>{String.fromCharCode(65 + idx)}.</strong> {exp}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          );
-        })}
+                  <div style={{ background: "var(--bg-muted)", padding: 20, borderRadius: "var(--radius-sm)" }}>
+                    <h4 style={{ fontSize: "0.875rem", fontWeight: 700, marginBottom: 8, color: "var(--text-primary)" }}>Explication</h4>
+                    <p style={{ fontSize: "0.9375rem", color: "var(--text-secondary)", margin: 0 }}>{q.explanation}</p>
+                    
+                    {q.optionExplanations && (
+                      <ul style={{ marginTop: 12, paddingLeft: 20, fontSize: "0.875rem", color: "var(--text-secondary)", display: "flex", flexDirection: "column", gap: 4 }}>
+                        {q.optionExplanations.map((exp, idx) => (
+                          <li key={idx}><strong>{String.fromCharCode(65 + idx)}.</strong> {exp}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </CollapsibleSection>
+        ))}
       </div>
     </main>
   );

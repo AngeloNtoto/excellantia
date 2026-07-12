@@ -230,3 +230,32 @@ export async function grantRoomAccessAction(formData: FormData) {
   revalidatePath("/rooms");
   return { ok: true };
 }
+
+// ─── Suppression salle ────────────────────────────────────────────────────────
+
+export async function deleteRoomAction(roomId: string) {
+  const session = await requireAuth();
+  if (session.role !== "ADMIN") {
+    return { error: "Non autorisé" };
+  }
+
+  try {
+    // Delete room and cascade delete its attempts due to Prisma relations
+    // Ensure you have onDelete: Cascade in prisma schema for related attempts/accesses or manually delete them
+    // Assuming attempts and roomAccess have onDelete: Cascade. Let's delete manually to be safe if not configured.
+    await prisma.$transaction([
+      prisma.answer.deleteMany({ where: { attempt: { roomId } } }),
+      prisma.attempt.deleteMany({ where: { roomId } }),
+      prisma.roomAccess.deleteMany({ where: { roomId } }),
+      prisma.room.delete({ where: { id: roomId } })
+    ]);
+
+    revalidatePath("/admin/salles");
+    revalidatePath("/rooms");
+    revalidatePath("/dashboard");
+    return { ok: true };
+  } catch (error: any) {
+    console.error("Error deleting room:", error);
+    return { error: "Erreur lors de la suppression de la salle." };
+  }
+}

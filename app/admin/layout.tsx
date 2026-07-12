@@ -7,9 +7,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   if (!session || session.role !== "ADMIN") redirect("/");
 
   return (
-    <div style={{ minHeight: "100dvh", display: "flex", flexDirection: "column" }}>
+    <div className="min-h-[100dvh] flex flex-col">
       <Navbar user={session} />
-      {children}
+      <div className="flex-1 pt-16">
+        {children}
+      </div>
     </div>
   );
 }

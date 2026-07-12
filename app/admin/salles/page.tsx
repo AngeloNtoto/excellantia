@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { ROOM_STATUS_LABELS } from "@/lib/types";
 import Link from "next/link";
 import { checkRoomStatuses } from "@/lib/actions/rooms";
+import { DeleteRoomButton } from "./delete-button";
 
 export const metadata = { title: "Gestion des salles" };
 
@@ -73,6 +74,7 @@ export default async function AdminRoomsPage() {
                     <td>
                       <div style={{ display: "flex", gap: 8 }}>
                         <Link href={`/admin/salles/${room.id}`} className="btn btn-ghost" style={{ padding: "4px 8px", fontSize: "0.75rem" }}>Gérer</Link>
+                        <DeleteRoomButton roomId={room.id} />
                       </div>
                     </td>
                   </tr>
