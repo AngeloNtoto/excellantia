@@ -12,5 +12,82 @@
     "language": "EN",
     "source": "Alice's Adventures in Wonderland, Lewis Carroll, 1865 (Public Domain)",
     "content": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'\n\nSo she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.\n\nThere was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge."
+  },
+  {
+    "id": "en-passage-003",
+    "title": "The Adventures of Tom Sawyer — Mark Twain",
+    "language": "EN",
+    "source": "The Adventures of Tom Sawyer, Mark Twain, 1876 (Public Domain)",
+    "content": "Saturday morning was come, and all the summer world was bright and fresh, and brimming with life. There was a song in every heart; and if the heart was young the music issued at the lips. There was cheer in every face and a spring in every step. The locust-trees were in bloom and the fragrance of the blossoms filled the air. Cardiff Hill, beyond the village and above it, was green with vegetation, and it lay just far enough away to seem a Delectable Land, dreamy, reposeful, and inviting.\n\nTom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high. Life to him seemed hollow, and existence but a burden. Sighing, he dipped his brush and passed it along the topmost plank; repeated the operation; did it again; compared the insignificant whitewashed streak with the far-reaching continent of unwhitewashed fence, and sat down on a tree-box discouraged. He had gotten into a fight the day before and his clothes were torn and dirty, which was the reason Aunt Polly had decided upon this Saturday punishment."
+  },
+  {
+    "id": "en-passage-004",
+    "title": "Frankenstein — Mary Shelley",
+    "language": "EN",
+    "source": "Frankenstein; or, The Modern Prometheus, Mary Shelley, 1818 (Public Domain)",
+    "content": "It was on a dreary night of November that I beheld the accomplishment of my toils. With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that lay at my feet. It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it breathed hard, and a convulsive motion agitated its limbs.\n\nHow can I describe my emotions at this catastrophe, or how delineate the wretch whom with such infinite pains and care I had endeavoured to form? His limbs were in proportion, and I had selected his features as beautiful. Beautiful! Great God! His yellow skin scarcely covered the work of muscles and arteries beneath; his hair was of a lustrous black, and flowing; his teeth of a pearly whiteness; but these luxuriances only formed a more horrid contrast with his watery eyes, that seemed almost of the same colour as the dun-white sockets in which they were set, his shrivelled complexion and straight black lips."
+  },
+  {
+    "id": "en-passage-005",
+    "title": "Jane Eyre — Charlotte Brontë",
+    "language": "EN",
+    "source": "Jane Eyre, Charlotte Brontë, 1847 (Public Domain)",
+    "content": "Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless? You think wrong! I have as much soul as you—and full as much heart! And if God had gifted me with some beauty and much wealth, I should have made it as hard for you to leave me, as it is now for me to leave you. I am not talking to you now through the medium of custom, conventionalities, nor even of mortal flesh: it is my spirit that addresses your spirit; just as if both had passed through the grave, and we stood at God's feet, equal—as we are!\n\nI tell you I must go! Do you think I can stay to become nothing to you? Do you think I am an automaton?—a machine without feelings? and can bear to have my morsel of bread snatched from my lips, and my drop of living water dashed from my cup? Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless? You think wrong!"
+  },
+  {
+    "id": "en-passage-006",
+    "title": "The Internet of Things (IoT)",
+    "language": "EN",
+    "source": "Adapted from a technology article, 2023",
+    "content": "The Internet of Things, or IoT, refers to the growing network of physical objects that are embedded with sensors, software and other technologies to connect and exchange data with other devices and systems over the internet. These devices range from ordinary household items like smart thermostats and refrigerators to sophisticated industrial tools. IoT allows for the remote monitoring and control of devices, leading to greater efficiency and convenience. For example, a smart thermostat can learn a user's schedule and adjust the temperature automatically, saving energy. On a larger scale, cities are using IoT to manage traffic flow and reduce pollution. However, the rapid expansion of IoT also raises serious concerns about data privacy and security. Many devices collect vast amounts of personal information, which could be vulnerable to hacking. As IoT continues to evolve, finding a balance between innovation and user protection will be crucial."
+  },
+  {
+    "id": "en-passage-007",
+    "title": "The Steam Engine: A Turning Point",
+    "language": "EN",
+    "source": "History of Industrialization, various sources",
+    "content": "Few inventions have altered the course of history as profoundly as the steam engine. Its development in the 18th century, notably by James Watt, transformed manufacturing, transportation and society. Before steam power, factories relied on water wheels and wind, limiting where they could operate. The steam engine freed production from these geographical constraints, leading to the rise of industrial cities. In transportation, steamships and steam locomotives drastically reduced travel time, connecting distant regions and accelerating global trade. However, the steam engine also had negative consequences: it fueled the massive use of coal, contributing to air pollution and unhealthy working conditions in factories. The machine itself became a symbol of both human ingenuity and the industrial era’s darker side. Today, while steam engines are largely obsolete, their legacy is felt in the modern power plants and turbines that still spin the wheels of our world."
+  },
+  {
+    "id": "en-passage-008",
+    "title": "Exploring Mars: The Perseverance Rover",
+    "language": "EN",
+    "source": "NASA educational materials, 2021",
+    "content": "NASA's Perseverance rover landed on Mars on February 18, 2021, with a mission to search for signs of ancient microbial life. Equipped with advanced instruments, the rover is collecting rock and soil samples that will hopefully one day be returned to Earth. Perseverance is exploring the Jezero Crater, a site that scientists believe once contained a lake and river delta billions of years ago. One of its most exciting experiments is MOXIE, a device that produces small amounts of oxygen from the Martian atmosphere, which is mostly carbon dioxide. This technology could be crucial for future human missions, providing breathable air and rocket fuel. Perseverance also carried the tiny helicopter Ingenuity, which performed the first powered, controlled flight on another planet. The mission is not only a feat of engineering but also an essential step toward answering the age-old question: Are we alone in the universe?"
+  },
+  {
+    "id": "en-passage-009",
+    "title": "Artificial Intelligence in Everyday Life",
+    "language": "EN",
+    "source": "Compiled from tech reviews, 2024",
+    "content": "Artificial intelligence, or AI, has quietly become part of our daily routines. When you ask a smart speaker for the weather, use a navigation app to avoid traffic or let an email service filter spam, you are interacting with AI. At its core, AI refers to machines designed to mimic human cognitive functions such as learning and problem-solving. Modern AI relies heavily on machine learning, where algorithms analyze vast amounts of data to recognize patterns and make predictions. While AI brings remarkable benefits—faster medical diagnoses, safer autonomous vehicles, personalised education—it also brings challenges. Job displacement, algorithmic bias and the ethical use of AI in surveillance are hotly debated. As these technologies advance, society must grapple with regulations that ensure AI serves the common good without reinforcing inequalities or eroding privacy. The future likely holds even deeper integration of AI into our lives, making digital literacy more important than ever."
+  },
+  {
+    "id": "en-passage-010",
+    "title": "Wind Energy: Power from the Air",
+    "language": "EN",
+    "source": "Renewable Energy Factsheet, 2023",
+    "content": "Wind turbines have become an iconic symbol of clean energy. These towering machines convert the kinetic energy of moving air into electricity without emitting greenhouse gases. Modern wind farms, whether on land or offshore, can generate enough power for thousands of homes. The blades of a wind turbine are designed like aircraft wings; as wind flows past them, the difference in air pressure causes the blades to spin, turning a generator. One of the main advantages of wind power is that it is renewable and abundant, but it is also intermittent—the wind doesn't always blow. Engineers are working on better energy storage solutions, such as large batteries, to smooth out this variability. Additionally, wind farms must be carefully located to minimize impact on birds and local ecosystems. Despite these challenges, wind energy capacity continues to grow worldwide, playing a vital role in the transition away from fossil fuels."
+  },
+  {
+    "id": "en-passage-011",
+    "title": "A Brief History of Computers",
+    "language": "EN",
+    "source": "Computer History Museum, adapted",
+    "content": "The first mechanical computers date back to the 19th century, with Charles Babbage's Difference Engine and Ada Lovelace's pioneering work on algorithms. However, the modern electronic computer began to take shape during World War II. Machines like the British Colossus and the American ENIAC were developed to break codes and calculate artillery trajectories. The invention of the transistor in 1947 then revolutionised computing, making devices smaller, more reliable and more energy-efficient. By the 1970s, microprocessors enabled the creation of personal computers, bringing computing power into homes and schools. The internet age connected these machines, and smartphones have now made powerful computers pocket-sized. Today, quantum computing and artificial intelligence point to a future where computers can solve problems unimaginable just decades ago. The journey from room-sized machines with less power than a modern calculator to today's wearable tech is a testament to human creativity."
+  },
+  {
+    "id": "en-passage-012",
+    "title": "The Promise of 3D Printing",
+    "language": "EN",
+    "source": "Industry analysis, 2024",
+    "content": "Additive manufacturing, commonly known as 3D printing, builds objects layer by layer from materials such as plastic, metal or even biological cells. Unlike traditional manufacturing that often cuts away material, 3D printing produces far less waste. It allows for the creation of complex shapes impossible to achieve with conventional methods, which has opened new possibilities in sectors from aerospace to medicine. For example, doctors can now 3D-print custom prosthetics or even human tissue for transplants. In the automotive industry, lightweight 3D-printed parts improve fuel efficiency. The technology is also fostering a new wave of entrepreneurship, as small businesses can prototype products quickly without large factories. Yet 3D printing is not without hurdles: it can be slow for mass production, and intellectual property concerns arise when blueprints are easily shared. As printers become faster and more affordable, they may fundamentally change how goods are manufactured and distributed."
+  },
+  {
+    "id": "en-passage-013",
+    "title": "Electric Vehicles: Driving into the Future",
+    "language": "EN",
+    "source": "Automotive news, 2025",
+    "content": "Electric vehicles (EVs) are at the forefront of the automotive industry's transformation. Unlike traditional cars with internal combustion engines, EVs use electric motors powered by rechargeable battery packs, producing zero tailpipe emissions. This makes them a key technology in efforts to combat air pollution and climate change. Advances in battery technology have led to longer driving ranges and shorter charging times, addressing two of the biggest concerns that held back early adoption. Governments around the world are encouraging EV sales with subsidies and investments in charging infrastructure. Some countries plan to ban the sale of new petrol and diesel cars within the next two decades. However, challenges remain: the environmental impact of mining lithium and cobalt for batteries is significant, and charging networks are still sparse in many regions. Overall, the shift to electric mobility is accelerating, signalling a cleaner and quieter future on our roads."
   }
 ]
