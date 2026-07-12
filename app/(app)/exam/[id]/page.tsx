@@ -59,6 +59,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
       <ExamClient 
         attemptId={attempt.id}
         roomId={room.id}
+        accessCode={room.accessCode}
         questions={clientQuestions}
         passages={Array.from(passagesMap.values())}
         initialAnswers={initialAnswers}

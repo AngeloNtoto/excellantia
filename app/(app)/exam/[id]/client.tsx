@@ -14,7 +14,8 @@ export function ExamClient({
   durationMin,
   startedAt,
   timeMode,
-  roomId
+  roomId,
+  accessCode
 }: any) {
   const [answers, setAnswers] = useState(initialAnswers);
   const [isPending, startTransition] = useTransition();
@@ -107,6 +108,18 @@ export function ExamClient({
             <span style={{ background: "var(--bg-muted)", padding: "4px 10px", borderRadius: 100 }}>
               {answeredCount} / {questions.length} rep.
             </span>
+            {accessCode && (
+              <span 
+                style={{ background: "var(--accent-light)", color: "var(--accent)", padding: "4px 10px", borderRadius: 100, fontWeight: 700, fontFamily: "var(--font-mono)", cursor: "pointer" }}
+                onClick={() => {
+                  navigator.clipboard.writeText(accessCode);
+                  alert("Code copié ! Envoyez-le à un ami pour un duel.");
+                }}
+                title="Cliquez pour copier"
+              >
+                Duel Code: {accessCode}
+              </span>
+            )}
           </div>
         </div>
         

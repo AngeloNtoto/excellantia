@@ -117,51 +117,119 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
 
             {/* CLASSEMENT & PARTAGE */}
             {room.status === "CLOSED" && ranking.length > 0 && (
-              <div style={{ marginTop: 24, paddingTop: 24, borderTop: "1px solid var(--border-subtle)" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                  <h2 style={{ fontSize: "1.125rem", fontWeight: 600 }}>Classement final</h2>
+              <div style={{ marginTop: 32 }}>
+                <div style={{ 
+                  display: "flex", 
+                  justifyContent: "space-between", 
+                  alignItems: "center", 
+                  marginBottom: 20,
+                  paddingBottom: 16,
+                  borderBottom: "2px solid var(--border-subtle)"
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <div style={{ 
+                      width: 40, height: 40, borderRadius: 12, 
+                      background: "linear-gradient(135deg, #f59e0b, #d97706)", 
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      color: "white", fontSize: "1.25rem", boxShadow: "0 4px 10px rgba(245, 158, 11, 0.3)"
+                    }}>
+                      🏆
+                    </div>
+                    <h2 style={{ fontSize: "1.25rem", fontWeight: 800, margin: 0, color: "var(--text-primary)" }}>Classement final</h2>
+                  </div>
+                  
                   <a 
                     href={buildWhatsAppUrl(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, ranking))}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn btn-success"
-                    style={{ background: "#25D366", color: "white", borderColor: "#25D366", padding: "6px 12px", fontSize: "0.875rem", display: "flex", alignItems: "center", gap: 6 }}
+                    style={{ 
+                      background: "linear-gradient(135deg, #25D366, #1da851)", 
+                      color: "white", 
+                      padding: "10px 20px", 
+                      borderRadius: "100px",
+                      fontSize: "0.9375rem", 
+                      fontWeight: 700,
+                      display: "flex", 
+                      alignItems: "center", 
+                      gap: 8,
+                      textDecoration: "none",
+                      boxShadow: "0 4px 12px rgba(37, 211, 102, 0.3)",
+                      transition: "transform 0.2s, box-shadow 0.2s"
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-2px)"}
+                    onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
                   >
-                    📱 Partager
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Partager les résultats
                   </a>
                 </div>
                 
-                <div style={{ overflowX: "auto", background: "var(--bg-muted)", borderRadius: "var(--radius-sm)", border: "1px solid var(--border-subtle)" }}>
-                  <table style={{ width: "100%", fontSize: "0.875rem", borderCollapse: "collapse" }}>
-                    <thead>
-                      <tr>
-                        <th style={{ padding: "12px", borderBottom: "1px solid var(--border-subtle)", textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>Rang</th>
-                        <th style={{ padding: "12px", borderBottom: "1px solid var(--border-subtle)", textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>Candidat</th>
-                        <th style={{ padding: "12px", borderBottom: "1px solid var(--border-subtle)", textAlign: "right", color: "var(--text-secondary)", fontWeight: 600 }}>Score</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {ranking.slice(0, 50).map((entry) => (
-                        <tr key={entry.userId} style={{ borderBottom: "1px solid var(--border-subtle)", background: entry.userId === session.id ? "var(--accent-light)" : "transparent" }}>
-                          <td style={{ padding: "12px", fontWeight: entry.rank <= 3 ? 700 : 500, color: entry.rank === 1 ? "#f59e0b" : entry.rank === 2 ? "#9ca3af" : entry.rank === 3 ? "#b45309" : "inherit" }}>
-                            #{entry.rank}
-                          </td>
-                          <td style={{ padding: "12px", fontWeight: entry.userId === session.id ? 700 : 500 }}>
-                            {entry.fullname} {entry.userId === session.id && <span style={{ color: "var(--accent)", fontSize: "0.75rem", marginLeft: 4 }}>(Vous)</span>}
-                          </td>
-                          <td style={{ padding: "12px", textAlign: "right", fontWeight: 700, color: entry.percentage >= 50 ? "var(--success)" : "var(--error)" }}>
-                            {entry.percentage}%
-                          </td>
+                <div style={{ background: "var(--bg-card)", borderRadius: "16px", border: "1px solid var(--border-subtle)", boxShadow: "0 4px 20px rgba(0,0,0,0.04)", overflow: "hidden" }}>
+                  <div style={{ overflowX: "auto" }}>
+                    <table style={{ width: "100%", fontSize: "0.9375rem", borderCollapse: "collapse" }}>
+                      <thead>
+                        <tr style={{ background: "var(--bg-muted)" }}>
+                          <th style={{ padding: "16px 20px", borderBottom: "1px solid var(--border-subtle)", textAlign: "center", color: "var(--text-secondary)", fontWeight: 700, textTransform: "uppercase", fontSize: "0.75rem", letterSpacing: "0.05em", width: "80px" }}>Rang</th>
+                          <th style={{ padding: "16px 20px", borderBottom: "1px solid var(--border-subtle)", textAlign: "left", color: "var(--text-secondary)", fontWeight: 700, textTransform: "uppercase", fontSize: "0.75rem", letterSpacing: "0.05em" }}>Candidat</th>
+                          <th style={{ padding: "16px 20px", borderBottom: "1px solid var(--border-subtle)", textAlign: "right", color: "var(--text-secondary)", fontWeight: 700, textTransform: "uppercase", fontSize: "0.75rem", letterSpacing: "0.05em" }}>Performance</th>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {ranking.slice(0, 50).map((entry) => {
+                          const isTop3 = entry.rank <= 3;
+                          const rankColor = entry.rank === 1 ? "#f59e0b" : entry.rank === 2 ? "#9ca3af" : entry.rank === 3 ? "#b45309" : "var(--text-secondary)";
+                          const rankBg = entry.rank === 1 ? "rgba(245, 158, 11, 0.15)" : entry.rank === 2 ? "rgba(156, 163, 175, 0.15)" : entry.rank === 3 ? "rgba(180, 83, 9, 0.15)" : "var(--bg-muted)";
+                          
+                          return (
+                            <tr key={entry.userId} style={{ 
+                              borderBottom: "1px solid var(--border-subtle)", 
+                              background: entry.userId === session.id ? "var(--accent-light)" : "transparent",
+                              transition: "background 0.2s"
+                            }}>
+                              <td style={{ padding: "16px 20px", textAlign: "center" }}>
+                                <div style={{ 
+                                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                                  width: 32, height: 32, borderRadius: "50%",
+                                  background: rankBg, color: rankColor,
+                                  fontWeight: 800, fontSize: "0.875rem"
+                                }}>
+                                  {entry.rank}
+                                </div>
+                              </td>
+                              <td style={{ padding: "16px 20px" }}>
+                                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                                  <div style={{ fontWeight: isTop3 || entry.userId === session.id ? 700 : 500, color: "var(--text-primary)", fontSize: "1rem" }}>
+                                    {entry.fullname}
+                                  </div>
+                                  {entry.userId === session.id && (
+                                    <span style={{ 
+                                      background: "var(--accent)", color: "white", padding: "2px 8px", 
+                                      borderRadius: 100, fontSize: "0.65rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em"
+                                    }}>Vous</span>
+                                  )}
+                                </div>
+                              </td>
+                              <td style={{ padding: "16px 20px", textAlign: "right" }}>
+                                <div style={{ 
+                                  display: "inline-flex", alignItems: "center", gap: 6,
+                                  fontWeight: 800, fontSize: "1.125rem",
+                                  color: entry.percentage >= 50 ? "var(--success)" : "var(--error)" 
+                                }}>
+                                  {entry.percentage}%
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                   {ranking.length === 0 && (
-                    <div style={{ padding: 20, textAlign: "center", color: "var(--text-muted)" }}>Aucun participant.</div>
+                    <div style={{ padding: 40, textAlign: "center", color: "var(--text-muted)", fontSize: "0.9375rem" }}>Aucun participant n'a terminé l'épreuve.</div>
                   )}
                   {ranking.length > 50 && (
-                    <div style={{ padding: "12px", textAlign: "center", color: "var(--text-secondary)", fontSize: "0.8125rem", borderTop: "1px solid var(--border-subtle)" }}>
-                      Seuls les 50 premiers sont affichés.
+                    <div style={{ padding: "16px", textAlign: "center", color: "var(--text-secondary)", fontSize: "0.8125rem", background: "var(--bg-muted)", fontWeight: 500 }}>
+                      Seuls les 50 premiers candidats sont affichés.
                     </div>
                   )}
                 </div>

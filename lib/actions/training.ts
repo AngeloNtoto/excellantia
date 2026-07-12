@@ -51,16 +51,19 @@ export async function startTrainingAction(formData: FormData) {
   const gen = generateRoomQuestions(config);
   if (!gen.ok) return { error: "Pas assez de questions pour cet entraînement. " + gen.errors?.join(" ") };
 
+  const accessCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+
   const room = await prisma.room.create({
     data: {
-      title: "Entraînement - " + new Date().toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' à'),
+      title: "Duel / Entraînement - " + new Date().toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' à'),
       status: "RUNNING",
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
       durationMin,
+      accessCode,
       questionIds: gen.questionIds as any,
       config: config as any,
-      createdById: session.id, // Créé par le candidat lui-même
+      createdById: session.id,
       startsAt: new Date()
     },
   });
