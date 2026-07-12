@@ -97,42 +97,36 @@ export function ExamClient({
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       {/* Sticky Header */}
-      <div style={{
-        position: "sticky", top: 0, zIndex: 100, background: "rgba(var(--bg-card), 0.9)",
-        backdropFilter: "blur(10px)", borderBottom: "1px solid var(--border)",
-        padding: "12px 24px", display: "flex", justifyContent: "space-between", alignItems: "center"
-      }}>
-        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
-          <h2 style={{ margin: 0, fontSize: "1.125rem", fontWeight: 700 }}>PreExcellantia</h2>
-          <div style={{ display: "flex", gap: 8, alignItems: "center", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-            <span style={{ background: "var(--bg-muted)", padding: "4px 10px", borderRadius: 100 }}>
-              {answeredCount} / {questions.length} rep.
+      <div className="sticky top-0 z-[100] bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-white/10 px-4 sm:px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 shadow-sm">
+        <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 w-full sm:w-auto">
+          <h2 className="m-0 text-base sm:text-lg font-bold text-gray-900 dark:text-white hidden sm:block">PreExcellantia</h2>
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+            <span className="bg-gray-100 dark:bg-white/10 px-3 py-1.5 rounded-full font-medium border border-gray-200 dark:border-white/5">
+              {answeredCount} / {questions.length} <span className="hidden sm:inline">répondues</span><span className="sm:hidden">rep.</span>
             </span>
             {accessCode && (
-              <span 
-                style={{ background: "var(--accent-light)", color: "var(--accent)", padding: "4px 10px", borderRadius: 100, fontWeight: 700, fontFamily: "var(--font-mono)", cursor: "pointer" }}
+              <button 
+                type="button"
+                className="bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 px-3 py-1.5 rounded-full font-bold font-mono border border-indigo-100 dark:border-indigo-500/20 hover:bg-indigo-100 dark:hover:bg-indigo-500/30 transition-colors"
                 onClick={() => {
                   navigator.clipboard.writeText(accessCode);
                   alert("Code copié ! Envoyez-le à un ami pour un duel.");
                 }}
                 title="Cliquez pour copier"
               >
-                Duel Code: {accessCode}
-              </span>
+                Code: {accessCode}
+              </button>
             )}
           </div>
         </div>
         
-        <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+        <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
           {timeLeft !== null && (
-            <div style={{ 
-              fontWeight: 700, fontSize: "1.125rem", fontFamily: "var(--font-mono)",
-              color: timeLeft < 300 ? "var(--error)" : "var(--text-primary)" 
-            }}>
+            <div className={`font-bold text-lg font-mono ${timeLeft < 300 ? 'text-red-500 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
               {formatTime(timeLeft)}
             </div>
           )}
-          <button className="btn btn-primary" onClick={() => handleSubmit(false)} disabled={isPending}>
+          <button className="btn btn-primary text-sm px-4 py-2 whitespace-nowrap" onClick={() => handleSubmit(false)} disabled={isPending}>
             {isPending ? "Soumission..." : "Soumettre la copie"}
           </button>
         </div>
