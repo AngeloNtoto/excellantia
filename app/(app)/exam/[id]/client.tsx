@@ -4,6 +4,7 @@ import { useState, useEffect, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { saveAnswerAction, toggleFlagAction, submitAttemptAction } from "@/lib/actions/attempts";
 import { SUBJECT_LABELS, SUBJECT_COLORS } from "@/lib/types";
+import { Clock } from "lucide-react";
 
 export function ExamClient({
   attemptId,
@@ -121,11 +122,7 @@ export function ExamClient({
         </div>
         
         <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
-          {timeLeft !== null && (
-            <div className={`font-bold text-lg font-mono ${timeLeft < 300 ? 'text-red-500 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
-              {formatTime(timeLeft)}
-            </div>
-          )}
+          <div className="flex-1" /> {/* Spacer pour pousser le bouton à droite si besoin */}
           <button className="btn btn-primary text-sm px-4 py-2 whitespace-nowrap" onClick={() => handleSubmit(false)} disabled={isPending}>
             {isPending ? "Soumission..." : "Soumettre la copie"}
           </button>
@@ -236,6 +233,20 @@ export function ExamClient({
           );
         })}
       </div>
+
+      {/* FLOATING TIMER */}
+      {timeLeft !== null && (
+        <div className={`fixed bottom-6 right-6 z-[999] flex items-center gap-3 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border backdrop-blur-md transition-colors ${
+          timeLeft < 300 
+            ? 'bg-red-500/90 border-red-400 text-white animate-pulse shadow-red-500/30' 
+            : 'bg-white/90 dark:bg-gray-800/90 border-gray-200 dark:border-white/10 text-gray-900 dark:text-white'
+        }`}>
+          <Clock className={`w-5 h-5 ${timeLeft < 300 ? 'text-white' : 'text-indigo-500 dark:text-indigo-400'}`} />
+          <span className="font-bold text-xl font-mono tracking-tight">
+            {formatTime(timeLeft)}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
