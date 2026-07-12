@@ -232,5 +232,6 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
     return { ok: false, errors };
   }
 
-  return { ok: true, questionIds: selected.map((q) => q.id) };
+  const shuffledSelected = pickRandom(selected, selected.length);
+  return { ok: true, questionIds: shuffledSelected.map((q) => q.id) };
 }

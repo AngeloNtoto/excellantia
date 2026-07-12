@@ -4,7 +4,7 @@ import { LoginForm } from "./login-form";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Connexion — Excellantia",
+  title: "Connexion — PreExcellantia",
 };
 
 export default async function HomePage() {
@@ -33,7 +33,7 @@ export default async function HomePage() {
             <span className="text-3xl font-bold text-white tracking-tighter">E</span>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-3">
-            Excellantia
+            PreExcellantia
           </h1>
           <p className="text-indigo-200/80 text-base font-medium">
             Plateforme de simulation d'épreuves

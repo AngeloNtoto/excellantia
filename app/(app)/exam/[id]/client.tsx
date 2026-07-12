@@ -102,7 +102,7 @@ export function ExamClient({
         padding: "12px 24px", display: "flex", justifyContent: "space-between", alignItems: "center"
       }}>
         <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
-          <h2 style={{ margin: 0, fontSize: "1.125rem", fontWeight: 700 }}>Excellantia</h2>
+          <h2 style={{ margin: 0, fontSize: "1.125rem", fontWeight: 700 }}>PreExcellantia</h2>
           <div style={{ display: "flex", gap: 8, alignItems: "center", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
             <span style={{ background: "var(--bg-muted)", padding: "4px 10px", borderRadius: 100 }}>
               {answeredCount} / {questions.length} rep.

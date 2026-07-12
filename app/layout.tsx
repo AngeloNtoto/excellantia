@@ -9,9 +9,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: { default: "Excellantia", template: "%s | Excellantia" },
-  description: "Plateforme de simulation d'épreuves Excellantia — RDC",
-  keywords: ["Excellantia", "examen", "simulation", "RDC", "bac", "concours"],
+  title: { default: "PreExcellantia", template: "%s | PreExcellantia" },
+  description: "Plateforme de simulation d'épreuves PreExcellantia — RDC",
+  keywords: ["PreExcellantia", "examen", "simulation", "RDC", "bac", "concours"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

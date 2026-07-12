@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { checkScheduledRooms } from "@/lib/actions/rooms";
+import { checkRoomStatuses } from "@/lib/actions/rooms";
 import { RoomsClient } from "./rooms-client";
 
 export const metadata = { title: "Salles disponibles" };
@@ -10,8 +10,8 @@ export default async function RoomsPage() {
   const session = await getSession();
   if (!session) redirect("/");
 
-  // Vérifier si des salles programmées doivent démarrer
-  await checkScheduledRooms();
+  // Vérifier et mettre à jour le statut des salles (démarrage / fermeture automatique)
+  await checkRoomStatuses();
 
   const rooms = await prisma.room.findMany({
     orderBy: { createdAt: "desc" },

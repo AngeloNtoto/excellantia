@@ -58,7 +58,7 @@ export function Navbar({ user }: NavbarProps) {
             <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-500 text-white shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-all duration-300">
               <GraduationCap className="w-5 h-5" />
             </div>
-            <span className="hidden sm:block">Excellantia</span>
+            <span className="hidden sm:block">PreExcellantia</span>
           </Link>
         </div>
 

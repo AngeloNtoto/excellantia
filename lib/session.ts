@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import type { SessionUser } from "./types";
 
-const SESSION_COOKIE = "excellantia_session";
+const SESSION_COOKIE = "preexcellantia_session";
 const MAX_AGE = 60 * 60 * 24 * 7; // 7 jours
 
 // ─── Encodage simple Base64 (pour SQLite / développement) ──────────────────

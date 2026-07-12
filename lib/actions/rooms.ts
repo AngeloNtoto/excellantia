@@ -6,6 +6,7 @@ import { getSession } from "@/lib/session";
 import { generateRoomQuestions } from "@/lib/questions";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { autoSubmitExpiredAttempts } from "./attempts";
 import type { RoomConfig, Subject } from "@/lib/types";
 
 async function requireAdmin() {
@@ -171,11 +172,14 @@ export async function cancelRoomAction(roomId: string) {
   return { ok: true };
 }
 
-// ─── Vérifier le statut des salles programmées ───────────────────────────────
+// ─── Vérifier le statut des salles ───────────────────────────────
 // À appeler au chargement des pages salles pour auto-démarrer les salles à l'heure
+// et fermer celles dont le temps est écoulé
 
-export async function checkScheduledRooms() {
+export async function checkRoomStatuses() {
   const now = new Date();
+  
+  // 1. Démarrer les salles programmées
   const scheduled = await prisma.room.findMany({
     where: { status: "SCHEDULED", startsAt: { lte: now } },
   });
@@ -189,6 +193,19 @@ export async function checkScheduledRooms() {
       where: { id: room.id },
       data: { status: "RUNNING", endsAt },
     });
+  }
+
+  // 2. Fermer les salles terminées
+  const expired = await prisma.room.findMany({
+    where: { status: "RUNNING", endsAt: { lte: now } },
+  });
+
+  for (const room of expired) {
+    await prisma.room.update({
+      where: { id: room.id },
+      data: { status: "CLOSED" },
+    });
+    await autoSubmitExpiredAttempts(room.id);
   }
 }
 
