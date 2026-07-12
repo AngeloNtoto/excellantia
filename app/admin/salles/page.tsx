@@ -2,13 +2,13 @@ import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { ROOM_STATUS_LABELS } from "@/lib/types";
 import Link from "next/link";
-import { checkScheduledRooms } from "@/lib/actions/rooms";
+import { checkRoomStatuses } from "@/lib/actions/rooms";
 
 export const metadata = { title: "Gestion des salles" };
 
 export default async function AdminRoomsPage() {
   await getSession(); // Guarded by layout
-  await checkScheduledRooms();
+  await checkRoomStatuses();
 
   const rooms = await prisma.room.findMany({
     orderBy: { createdAt: "desc" },
