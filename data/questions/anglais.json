@@ -224,378 +224,4269 @@
     ]
   },
   {
-    "id": "ENGLISH-added-1783812112219-0",
+    "id": "en-009",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Grammar",
+    "subtopic": "Reported speech",
     "difficulty": "MEDIUM",
-    "statement": "Choose the correct form: 'If I ___ you, I would study harder.'",
+    "statement": "Change to reported speech: She said, 'I am leaving now.'",
     "options": [
-      "was",
-      "were",
-      "am",
-      "have been"
+      "She said she was leaving then.",
+      "She said she is leaving now.",
+      "She said she was leaving now.",
+      "She said I was leaving then."
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "In reported speech, present continuous changes to past continuous, and 'now' becomes 'then'. Pronouns adjust: 'I' -> 'she'.",
+    "optionExplanations": [
+      "Correct: 'am leaving' -> 'was leaving', 'now' -> 'then'. ✓",
+      "Wrong: 'is leaving' remains present; 'now' should change.",
+      "Wrong: 'now' should change to 'then'.",
+      "Wrong: pronoun 'I' should become 'she'."
+    ]
   },
   {
-    "id": "ENGLISH-added-1783812112219-1",
+    "id": "en-010",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Which of the following is a synonym for 'abundant'?",
-    "options": [
-      "Scarce",
-      "Plentiful",
-      "Rare",
-      "Empty"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-1783812112219-2",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "What is the past participle of the verb 'to write'?",
-    "options": [
-      "Wrote",
-      "Writing",
-      "Written",
-      "Writed"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-1783812112219-3",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Choose the correct sentence:",
-    "options": [
-      "He don't like apples.",
-      "He doesn't likes apples.",
-      "He doesn't like apples.",
-      "He not like apples."
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-1783812112219-4",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "HARD",
-    "statement": "Complete the sentence: 'She is looking forward ___ her friends.'",
-    "options": [
-      "to seeing",
-      "to see",
-      "seeing",
-      "see"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-1783812112219-5",
-    "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs",
     "difficulty": "MEDIUM",
-    "statement": "Which modal verb expresses obligation?",
+    "statement": "What does the phrasal verb 'call off' mean?",
     "options": [
-      "Might",
-      "Can",
-      "Must",
-      "Could"
+      "to visit someone",
+      "to cancel something",
+      "to start a phone call",
+      "to shout loudly"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "'Call off' means to cancel an event or arrangement. Example: The match was called off due to rain.",
+    "optionExplanations": [
+      "Wrong: 'call on' means to visit.",
+      "Correct: 'call off' = cancel. ✓",
+      "Wrong: that would be 'make a call'.",
+      "Wrong: that is 'call out'."
+    ]
   },
   {
-    "id": "ENGLISH-added-1783812112219-6",
+    "id": "en-011",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Grammar",
+    "subtopic": "Comparatives",
     "difficulty": "EASY",
-    "statement": "What is the antonym of 'brave'?",
+    "statement": "Choose the correct comparative form: 'This book is _____ than that one.'",
     "options": [
-      "Fearless",
-      "Cowardly",
-      "Bold",
-      "Courageous"
+      "more interesting",
+      "most interesting",
+      "interestinger",
+      "more interest"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "Adjectives with 3+ syllables form comparatives with 'more' + adjective: more interesting.",
+    "optionExplanations": [
+      "Correct: 'more interesting' is the correct comparative form. ✓",
+      "Wrong: 'most interesting' is superlative.",
+      "Wrong: 'interestinger' is incorrect; long adjectives don't add -er.",
+      "Wrong: 'more interest' is a noun phrase, not an adjective."
+    ]
   },
   {
-    "id": "ENGLISH-added-1783812112219-7",
+    "id": "en-012",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Vocabulary",
+    "subtopic": "Confusing words",
     "difficulty": "MEDIUM",
-    "statement": "Choose the correct preposition: 'She is good ___ math.'",
+    "statement": "Choose the correct word: 'He was _____ from the competition because he cheated.'",
     "options": [
-      "in",
-      "at",
-      "on",
-      "with"
+      "disqualified",
+      "unqualified",
+      "nonqualified",
+      "misqualified"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "'Disqualified' means officially barred from participating. 'Unqualified' means not having the necessary skills.",
+    "optionExplanations": [
+      "Correct: 'disqualified' fits the context of being removed for cheating. ✓",
+      "Wrong: 'unqualified' means lacking qualifications, not barred.",
+      "Wrong: 'nonqualified' is not a standard word.",
+      "Wrong: 'misqualified' is not a standard word."
+    ]
   },
   {
-    "id": "ENGLISH-added-1783812112219-8",
+    "id": "en-013",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Grammar",
+    "subtopic": "Relative clauses",
     "difficulty": "MEDIUM",
-    "statement": "What does the idiom 'break the ice' mean?",
-    "options": [
-      "To shatter something",
-      "To start a conversation in a social setting",
-      "To freeze water",
-      "To be cold"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-1783812112219-9",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "HARD",
-    "statement": "Identify the tense: 'I have been working here for two years.'",
-    "options": [
-      "Present Continuous",
-      "Present Perfect Simple",
-      "Present Perfect Continuous",
-      "Past Perfect"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-0",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Choose the correct pronoun: 'The book ___ I read was fascinating.'",
+    "statement": "Complete: 'The man _____ car was stolen is talking to the police.'",
     "options": [
       "who",
       "which",
       "whose",
       "whom"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "'Whose' is the possessive relative pronoun, used for people (and things) to show ownership.",
+    "optionExplanations": [
+      "Wrong: 'who' is used as subject or object for people.",
+      "Wrong: 'which' is used for things.",
+      "Correct: 'whose' indicates possession. ✓",
+      "Wrong: 'whom' is object form, not possessive."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-1",
+    "id": "en-014",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Comprehension",
+    "subtopic": "Main idea",
     "difficulty": "MEDIUM",
-    "statement": "What does 'to ring a bell' mean?",
+    "statement": "What is the main idea of a text that describes rising sea levels, melting glaciers, and extreme weather?",
     "options": [
-      "To make a sound",
-      "To remember something vaguely",
-      "To open a door",
-      "To answer a phone"
+      "Climate change impacts",
+      "Ocean pollution",
+      "Wildlife extinction",
+      "Renewable energy"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "The listed phenomena are all consequences of climate change.",
+    "optionExplanations": [
+      "Correct: the examples point to climate change. ✓",
+      "Wrong: ocean pollution is narrower.",
+      "Wrong: wildlife extinction is not directly mentioned.",
+      "Wrong: renewable energy is a solution, not described."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-2",
+    "id": "en-015",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Grammar",
+    "subtopic": "Modals",
     "difficulty": "MEDIUM",
-    "statement": "Translate 'Il pleut des cordes' into an English idiom:",
+    "statement": "Which modal verb expresses a strong obligation?",
     "options": [
-      "It's raining ropes.",
-      "It's raining cats and dogs.",
-      "It's pouring heavy.",
-      "It's raining hard."
+      "can",
+      "may",
+      "must",
+      "could"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "'Must' expresses necessity or strong obligation. 'Have to' is also used, but among options, 'must' is the strongest.",
+    "optionExplanations": [
+      "Wrong: 'can' expresses ability.",
+      "Wrong: 'may' expresses permission or possibility.",
+      "Correct: 'must' = strong obligation. ✓",
+      "Wrong: 'could' expresses possibility or past ability."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-3",
+    "id": "en-016",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms",
     "difficulty": "EASY",
-    "statement": "What is the comparative of 'bad'?",
+    "statement": "Which word is a synonym of 'enormous'?",
     "options": [
-      "Badder",
-      "Worse",
-      "Worst",
-      "More bad"
+      "tiny",
+      "huge",
+      "quick",
+      "shy"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "'Enormous' means very large. 'Huge' is a direct synonym.",
+    "optionExplanations": [
+      "Wrong: 'tiny' is the opposite.",
+      "Correct: 'huge' means very large. ✓",
+      "Wrong: 'quick' relates to speed.",
+      "Wrong: 'shy' describes personality."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-4",
+    "id": "en-017",
     "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Grammar",
+    "subtopic": "Prepositions",
     "difficulty": "EASY",
-    "statement": "Complete: 'I have known him ___ 2010.'",
+    "statement": "Choose the correct preposition: 'She is afraid _____ spiders.'",
     "options": [
-      "for",
-      "since",
+      "from",
+      "of",
+      "by",
+      "for"
+    ],
+    "answerIndex": 1,
+    "explanation": "The adjective 'afraid' is followed by the preposition 'of': afraid of something.",
+    "optionExplanations": [
+      "Wrong: 'afraid from' is incorrect.",
+      "Correct: 'afraid of' is the standard collocation. ✓",
+      "Wrong: 'afraid by' is not used.",
+      "Wrong: 'afraid for' means worried about someone's safety."
+    ]
+  },
+  {
+    "id": "en-018",
+    "subject": "ENGLISH",
+    "topic": "Writing",
+    "subtopic": "Punctuation",
+    "difficulty": "MEDIUM",
+    "statement": "Which sentence uses the apostrophe correctly?",
+    "options": [
+      "Its a beautiful day.",
+      "The cat licked it's paw.",
+      "It's time to go home.",
+      "The book is her's."
+    ],
+    "answerIndex": 2,
+    "explanation": "'It's' is a contraction of 'it is' or 'it has'. 'Its' is possessive. 'Her's' is incorrect (no apostrophe in possessive pronouns: hers).",
+    "optionExplanations": [
+      "Wrong: should be 'It's' (contraction).",
+      "Wrong: should be 'its' (possessive).",
+      "Correct: 'It's' = it is. ✓",
+      "Wrong: correct form is 'hers' without apostrophe."
+    ]
+  },
+  {
+    "id": "en-019",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Word formation",
+    "difficulty": "MEDIUM",
+    "statement": "Add the correct suffix to form a noun: 'happy' → ?",
+    "options": [
+      "happiness",
+      "happily",
+      "happier",
+      "happyness"
+    ],
+    "answerIndex": 0,
+    "explanation": "The noun form of 'happy' is 'happiness'. 'Happily' is an adverb; 'happier' is comparative adjective.",
+    "optionExplanations": [
+      "Correct: 'happiness' is the abstract noun. ✓",
+      "Wrong: 'happily' is the adverb.",
+      "Wrong: 'happier' is the comparative adjective.",
+      "Wrong: misspelling."
+    ]
+  },
+  {
+    "id": "en-020",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Question tags",
+    "difficulty": "MEDIUM",
+    "statement": "Complete the question tag: 'You don't smoke, _____?'",
+    "options": [
+      "don't you",
+      "do you",
+      "are you",
+      "aren't you"
+    ],
+    "answerIndex": 1,
+    "explanation": "The main clause is negative ('don't'), so the tag must be positive: 'do you'.",
+    "optionExplanations": [
+      "Wrong: negative + negative tag is incorrect.",
+      "Correct: positive tag after negative statement. ✓",
+      "Wrong: auxiliary 'be' is not used.",
+      "Wrong: incorrect auxiliary."
+    ]
+  },
+  {
+    "id": "en-021",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms",
+    "difficulty": "HARD",
+    "statement": "What does 'to spill the beans' mean?",
+    "options": [
+      "to cook a meal",
+      "to drop something accidentally",
+      "to reveal a secret",
+      "to make a mess"
+    ],
+    "answerIndex": 2,
+    "explanation": "'To spill the beans' means to disclose confidential information or reveal a secret.",
+    "optionExplanations": [
+      "Wrong: unrelated to cooking.",
+      "Wrong: literal interpretation.",
+      "Correct: idiomatic meaning = reveal a secret. ✓",
+      "Wrong: not about making a mess."
+    ]
+  },
+  {
+    "id": "en-022",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Past perfect",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct past perfect sentence:",
+    "options": [
+      "When I arrived, he had already left.",
+      "When I arrived, he already left.",
+      "When I had arrived, he left.",
+      "When I arrive, he had left."
+    ],
+    "answerIndex": 0,
+    "explanation": "Past perfect describes an action completed before another past action: had left before I arrived.",
+    "optionExplanations": [
+      "Correct: 'had left' shows it happened before 'arrived'. ✓",
+      "Wrong: simple past 'left' doesn't show anteriority.",
+      "Wrong: sequence is illogical.",
+      "Wrong: 'arrive' is present, not matching 'had left'."
+    ]
+  },
+  {
+    "id": "en-023",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Antonyms",
+    "difficulty": "EASY",
+    "statement": "What is the antonym of 'generous'?",
+    "options": [
+      "kind",
+      "selfish",
+      "honest",
+      "brave"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Generous' means willing to give. The opposite is 'selfish'.",
+    "optionExplanations": [
+      "Wrong: 'kind' is a synonym.",
+      "Correct: 'selfish' = stingy, antonym of generous. ✓",
+      "Wrong: 'honest' relates to truthfulness.",
+      "Wrong: 'brave' relates to courage."
+    ]
+  },
+  {
+    "id": "en-024",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Countable/Uncountable nouns",
+    "difficulty": "EASY",
+    "statement": "Which word is uncountable?",
+    "options": [
+      "apple",
+      "furniture",
+      "book",
+      "car"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Furniture' is uncountable; we say 'a piece of furniture'. The others are countable.",
+    "optionExplanations": [
+      "Wrong: 'apple' is countable.",
+      "Correct: 'furniture' is uncountable. ✓",
+      "Wrong: 'book' is countable.",
+      "Wrong: 'car' is countable."
+    ]
+  },
+  {
+    "id": "en-025",
+    "subject": "ENGLISH",
+    "topic": "Comprehension",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "If a character in a story is described as 'counting coins under a flickering candle', you can infer that:",
+    "options": [
+      "they are wealthy",
+      "they are probably poor and careful with money",
+      "they hate electricity",
+      "they are planning a party"
+    ],
+    "answerIndex": 1,
+    "explanation": "Counting coins under a weak light suggests limited resources and close attention to small amounts of money.",
+    "optionExplanations": [
+      "Wrong: counting coins suggests small amounts.",
+      "Correct: implies frugality and limited means. ✓",
+      "Wrong: not necessarily about electricity preferences.",
+      "Wrong: no evidence of celebration."
+    ]
+  },
+  {
+    "id": "en-026",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Collocations",
+    "difficulty": "MEDIUM",
+    "statement": "Which verb collocates with 'a decision'?",
+    "options": [
+      "do",
+      "make",
+      "take",
+      "have"
+    ],
+    "answerIndex": 1,
+    "explanation": "The correct collocation is 'make a decision'. 'Take a decision' is also used in British English, but 'make' is the most widely accepted standard.",
+    "optionExplanations": [
+      "Wrong: 'do a decision' is incorrect.",
+      "Correct: 'make a decision' is standard. ✓",
+      "Wrong: 'take' is possible but 'make' is preferred globally.",
+      "Wrong: 'have a decision' is incorrect."
+    ]
+  },
+  {
+    "id": "en-027",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Subject-Verb Agreement",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct verb: 'Neither the teacher nor the students _____ happy about the schedule.'",
+    "options": [
+      "was",
+      "were",
+      "is",
+      "has been"
+    ],
+    "answerIndex": 1,
+    "explanation": "With 'neither...nor', the verb agrees with the nearest subject. 'Students' is plural, so 'were' is correct.",
+    "optionExplanations": [
+      "Wrong: 'was' is singular, but 'students' is plural.",
+      "Correct: 'were' agrees with plural 'students'. ✓",
+      "Wrong: 'is' is present singular.",
+      "Wrong: 'has been' is singular."
+    ]
+  },
+  {
+    "id": "en-028",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Formal vs informal",
+    "difficulty": "MEDIUM",
+    "statement": "Which is the most formal way to say 'I'm sorry'?",
+    "options": [
+      "My bad",
+      "Sorry",
+      "I apologize",
+      "Oops"
+    ],
+    "answerIndex": 2,
+    "explanation": "'I apologize' is a formal expression of regret. 'Sorry' is informal, 'My bad' is very casual.",
+    "optionExplanations": [
+      "Wrong: very informal.",
+      "Wrong: less formal.",
+      "Correct: formal apology. ✓",
+      "Wrong: not an apology."
+    ]
+  },
+  {
+    "id": "en-029",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Conditionals type 3",
+    "difficulty": "HARD",
+    "statement": "Choose the correct third conditional sentence:",
+    "options": [
+      "If I knew, I would come.",
+      "If I had known, I would have come.",
+      "If I would have known, I had come.",
+      "If I have known, I will come."
+    ],
+    "answerIndex": 1,
+    "explanation": "Third conditional (unreal past): If + past perfect, would have + past participle.",
+    "optionExplanations": [
+      "Wrong: second conditional.",
+      "Correct: past perfect + would have + past participle. ✓",
+      "Wrong: incorrect structure.",
+      "Wrong: first conditional."
+    ]
+  },
+  {
+    "id": "en-030",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Homophones",
+    "difficulty": "EASY",
+    "statement": "Which pair contains homophones?",
+    "options": [
+      "there / their",
+      "cat / cut",
+      "ship / sheep",
+      "sink / think"
+    ],
+    "answerIndex": 0,
+    "explanation": "'There' and 'their' are pronounced identically in many accents. The others differ by vowel or consonant sounds.",
+    "optionExplanations": [
+      "Correct: 'there' and 'their' sound the same. ✓",
+      "Wrong: different vowels.",
+      "Wrong: different vowels.",
+      "Wrong: different initial consonants."
+    ]
+  },
+  {
+    "id": "en-031",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Articles with geographical names",
+    "difficulty": "MEDIUM",
+    "statement": "Which is correct?",
+    "options": [
+      "I went to United Kingdom.",
+      "I went to the United Kingdom.",
+      "I went to an United Kingdom.",
+      "I went to United Kingdom's."
+    ],
+    "answerIndex": 1,
+    "explanation": "Use 'the' with countries whose names include common nouns (kingdom, states, republic): the United Kingdom, the United States.",
+    "optionExplanations": [
+      "Wrong: 'the' is required.",
+      "Correct: 'the United Kingdom' is standard. ✓",
+      "Wrong: 'an' is incorrect.",
+      "Wrong: possessive form is not appropriate."
+    ]
+  },
+  {
+    "id": "en-032",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs",
+    "difficulty": "HARD",
+    "statement": "What does 'come across' mean in 'I came across an old photo'?",
+    "options": [
+      "to find by chance",
+      "to cross a street",
+      "to seem",
+      "to travel"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Come across' means to find or encounter something unexpectedly.",
+    "optionExplanations": [
+      "Correct: discover something by accident. ✓",
+      "Wrong: literal movement.",
+      "Wrong: 'come across as' means to seem.",
+      "Wrong: not about traveling."
+    ]
+  },
+  {
+    "id": "en-033",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Gerunds and infinitives",
+    "difficulty": "MEDIUM",
+    "statement": "Choose the correct form: 'She enjoys _____ to music.'",
+    "options": [
+      "listen",
+      "to listen",
+      "listening",
+      "listened"
+    ],
+    "answerIndex": 2,
+    "explanation": "After 'enjoy', we use a gerund (-ing form): enjoy listening.",
+    "optionExplanations": [
+      "Wrong: base form not allowed after 'enjoy'.",
+      "Wrong: infinitive not used after 'enjoy'.",
+      "Correct: gerund after 'enjoy'. ✓",
+      "Wrong: past form incorrect."
+    ]
+  },
+  {
+    "id": "en-034",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Suffixes",
+    "difficulty": "MEDIUM",
+    "statement": "The suffix '-less' means:",
+    "options": [
+      "full of",
+      "without",
+      "able to",
+      "state of"
+    ],
+    "answerIndex": 1,
+    "explanation": "'-less' denotes lack or absence (e.g., homeless = without a home).",
+    "optionExplanations": [
+      "Wrong: '-ful' means full of.",
+      "Correct: without. ✓",
+      "Wrong: '-able' means able to.",
+      "Wrong: '-ness' means state of."
+    ]
+  },
+  {
+    "id": "en-035",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Word order",
+    "difficulty": "MEDIUM",
+    "statement": "Put the words in correct order: 'often / they / to the cinema / go'.",
+    "options": [
+      "They go often to the cinema.",
+      "They often go to the cinema.",
+      "Often they go to the cinema.",
+      "To the cinema they often go."
+    ],
+    "answerIndex": 1,
+    "explanation": "Adverbs of frequency like 'often' go before the main verb (go), but after the verb 'be'. Normal word order: They often go to the cinema.",
+    "optionExplanations": [
+      "Wrong: 'often' before the main verb, not after.",
+      "Correct: They often go... ✓",
+      "Wrong: possible but less natural.",
+      "Wrong: inverted order, poetic."
+    ]
+  },
+  {
+    "id": "en-036",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Confusing words",
+    "difficulty": "HARD",
+    "statement": "Choose the correct word: 'The medicine had an immediate _____ on the patient.'",
+    "options": [
+      "affect",
+      "effect",
+      "defect",
+      "infect"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Effect' is a noun meaning result. 'Affect' is a verb (to influence). Here we need a noun: effect.",
+    "optionExplanations": [
+      "Wrong: 'affect' is a verb.",
+      "Correct: 'effect' is the noun meaning result. ✓",
+      "Wrong: 'defect' means flaw.",
+      "Wrong: 'infect' means to contaminate."
+    ]
+  },
+  {
+    "id": "en-037",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Conjunctions",
+    "difficulty": "EASY",
+    "statement": "Which conjunction expresses a reason?",
+    "options": [
+      "because",
+      "but",
+      "and",
+      "so"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Because' introduces a cause or reason. 'But' is contrast, 'and' is addition, 'so' is result.",
+    "optionExplanations": [
+      "Correct: 'because' gives the reason. ✓",
+      "Wrong: contrast.",
+      "Wrong: addition.",
+      "Wrong: result."
+    ]
+  },
+  {
+    "id": "en-038",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Proverbs",
+    "difficulty": "MEDIUM",
+    "statement": "Complete the proverb: 'Actions speak louder than _____.'",
+    "options": [
+      "thoughts",
+      "words",
+      "ideas",
+      "plans"
+    ],
+    "answerIndex": 1,
+    "explanation": "The well-known proverb is 'Actions speak louder than words', meaning what you do is more important than what you say.",
+    "optionExplanations": [
+      "Wrong: not the standard proverb.",
+      "Correct: 'words' completes the proverb. ✓",
+      "Wrong: not standard.",
+      "Wrong: not standard."
+    ]
+  },
+  {
+    "id": "en-039",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Passive voice advanced",
+    "difficulty": "HARD",
+    "statement": "Rewrite in passive: 'People believe that the thief escaped through the window.'",
+    "options": [
+      "The thief is believed to have escaped through the window.",
+      "The thief is believed to escape through the window.",
+      "It is believed that the thief escape through the window.",
+      "The thief believed to escape through the window."
+    ],
+    "answerIndex": 0,
+    "explanation": "With reporting verbs like 'believe', we can use passive: It is believed that... or Subject + is believed + to have + past participle (for past actions).",
+    "optionExplanations": [
+      "Correct: 'is believed to have escaped' shows the action is prior. ✓",
+      "Wrong: 'to escape' implies present, but the escape is past.",
+      "Wrong: 'escape' should be 'escaped' in the that-clause.",
+      "Wrong: missing auxiliary 'is'."
+    ]
+  },
+  {
+    "id": "en-040",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Analogies",
+    "difficulty": "HARD",
+    "statement": "Doctor is to hospital as teacher is to _____.",
+    "options": [
+      "student",
+      "school",
+      "book",
+      "classroom"
+    ],
+    "answerIndex": 1,
+    "explanation": "The relationship is professional workplace. A doctor works in a hospital; a teacher works in a school.",
+    "optionExplanations": [
+      "Wrong: student is the recipient, not workplace.",
+      "Correct: school is the workplace. ✓",
+      "Wrong: book is a tool.",
+      "Wrong: classroom is part of a school."
+    ]
+  },
+  {
+    "id": "en-041",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-001",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "MEDIUM",
+    "statement": "What is the main point of the opening sentence from 'Pride and Prejudice'?",
+    "options": [
+      "That all rich men want to get married.",
+      "That society assumes a wealthy bachelor must be looking for a wife.",
+      "That women should seek wealthy husbands.",
+      "That marriage is a financial transaction."
+    ],
+    "answerIndex": 1,
+    "explanation": "The ironic opening line states a universal truth, satirizing the societal expectation that a wealthy single man must be in search of a wife.",
+    "optionExplanations": [
+      "Wrong: it's an assumption, not a fact.",
+      "Correct: it reflects the societal view. ✓",
+      "Wrong: the sentence is about the man, not women directly.",
+      "Wrong: it's satirical, not literal."
+    ]
+  },
+  {
+    "id": "en-042",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-001",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "EASY",
+    "statement": "In the phrase 'in possession of a good fortune', 'fortune' means:",
+    "options": [
+      "luck",
+      "wealth",
+      "future",
+      "destiny"
+    ],
+    "answerIndex": 1,
+    "explanation": "Here 'fortune' refers to a large amount of money, wealth.",
+    "optionExplanations": [
+      "Wrong: not luck.",
+      "Correct: fortune = wealth. ✓",
+      "Wrong: not future.",
+      "Wrong: not destiny."
+    ]
+  },
+  {
+    "id": "en-043",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-001",
+    "topic": "Reading",
+    "subtopic": "Tone",
+    "difficulty": "MEDIUM",
+    "statement": "The tone of the opening line can best be described as:",
+    "options": [
+      "tragic",
+      "ironic",
+      "sentimental",
+      "aggressive"
+    ],
+    "answerIndex": 1,
+    "explanation": "Jane Austen uses irony to mock societal attitudes toward marriage and wealth.",
+    "optionExplanations": [
+      "Wrong: not tragic.",
+      "Correct: ironic tone. ✓",
+      "Wrong: not overly sentimental.",
+      "Wrong: not aggressive."
+    ]
+  },
+  {
+    "id": "en-044",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-002",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "EASY",
+    "statement": "What did Alice see the Rabbit do that made her follow it?",
+    "options": [
+      "It spoke to her.",
+      "It took a watch out of its waistcoat-pocket.",
+      "It ran past her very fast.",
+      "It disappeared into a hole."
+    ],
+    "answerIndex": 1,
+    "explanation": "Alice saw the Rabbit take a watch out of its waistcoat pocket and heard it mutter 'Oh dear! Oh dear! I shall be late!', which sparked her curiosity.",
+    "optionExplanations": [
+      "Wrong: it didn't speak directly to her.",
+      "Correct: the watch and the waistcoat were unusual. ✓",
+      "Wrong: it was running, but the specific action was the watch.",
+      "Wrong: she saw it go down a hole later."
+    ]
+  },
+  {
+    "id": "en-045",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-002",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "Why was Alice 'burning with curiosity'?",
+    "options": [
+      "Because it was a hot day.",
+      "Because she had never seen a rabbit with a waistcoat-pocket or a watch before.",
+      "Because her sister told her an interesting story.",
+      "Because she wanted to pick daisies."
+    ],
+    "answerIndex": 1,
+    "explanation": "The unusual sight of a rabbit dressed and talking to itself was so strange that Alice felt intense curiosity.",
+    "optionExplanations": [
+      "Wrong: the heat made her sleepy.",
+      "Correct: the extraordinary rabbit sparked curiosity. ✓",
+      "Wrong: her sister was silent.",
+      "Wrong: she was thinking about daisies but that didn't cause curiosity."
+    ]
+  },
+  {
+    "id": "en-046",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-003",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "MEDIUM",
+    "statement": "Why was Tom Sawyer punished on Saturday morning?",
+    "options": [
+      "He skipped school.",
+      "He stole jam.",
+      "He was caught fighting.",
+      "He got into a fight and his clothes were dirty."
+    ],
+    "answerIndex": 3,
+    "explanation": "The text says Aunt Polly decided to punish him for 'that whipping Saturday' because he had gotten into a fight and his clothes were torn and dirty.",
+    "optionExplanations": [
+      "Wrong: it was Saturday, not a school day.",
+      "Wrong: the jam was Friday.",
+      "Wrong: he was not caught fighting at that moment.",
+      "Correct: his clothes showed evidence of a fight. ✓"
+    ]
+  },
+  {
+    "id": "en-047",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-003",
+    "topic": "Reading",
+    "subtopic": "Character",
+    "difficulty": "EASY",
+    "statement": "Based on the passage, Tom Sawyer can be described as:",
+    "options": [
+      "hardworking and obedient",
+      "mischievous and clever",
+      "shy and timid",
+      "cruel and mean"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tom is a playful boy who gets into trouble and uses tricks to get out of work, showing he is mischievous but also clever.",
+    "optionExplanations": [
+      "Wrong: he hates work.",
+      "Correct: he is mischievous and clever. ✓",
+      "Wrong: he is not shy.",
+      "Wrong: not cruel."
+    ]
+  },
+  {
+    "id": "en-048",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-004",
+    "topic": "Reading",
+    "subtopic": "Mood",
+    "difficulty": "MEDIUM",
+    "statement": "What is the dominant mood in this extract from 'Frankenstein'?",
+    "options": [
+      "joyful and bright",
+      "gloomy and ominous",
+      "peaceful and calm",
+      "humorous and light"
+    ],
+    "answerIndex": 1,
+    "explanation": "The description emphasizes darkness, rain, and a 'dreary night', creating a gloomy, ominous atmosphere.",
+    "optionExplanations": [
+      "Wrong: the night is dreary.",
+      "Correct: gloomy, dark, and ominous. ✓",
+      "Wrong: not peaceful.",
+      "Wrong: no humor."
+    ]
+  },
+  {
+    "id": "en-049",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-004",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "EASY",
+    "statement": "At what time did the creature come to life?",
+    "options": [
+      "at dawn",
+      "at one in the morning",
+      "at midnight",
+      "in the afternoon"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage states: 'It was already one in the morning; the rain pattered dismally...' when the creature opened its eye.",
+    "optionExplanations": [
+      "Wrong: not dawn.",
+      "Correct: one in the morning. ✓",
+      "Wrong: not midnight.",
+      "Wrong: not afternoon."
+    ]
+  },
+  {
+    "id": "en-050",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-005",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "HARD",
+    "statement": "In the passage from 'Jane Eyre', what can we infer about Jane's feelings toward Rochester?",
+    "options": [
+      "She feels indifferent.",
+      "She feels a deep, passionate connection.",
+      "She is afraid of him.",
+      "She despises him."
+    ],
+    "answerIndex": 1,
+    "explanation": "Jane's impassioned speech about equality and her heart and spirit speaking to his suggests a profound emotional and spiritual bond, despite social differences.",
+    "optionExplanations": [
+      "Wrong: she is passionate.",
+      "Correct: she feels a deep connection. ✓",
+      "Wrong: she is not afraid.",
+      "Wrong: she does not despise him."
+    ]
+  },
+  {
+    "id": "en-051",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-005",
+    "topic": "Reading",
+    "subtopic": "Theme",
+    "difficulty": "MEDIUM",
+    "statement": "What theme is highlighted when Jane says 'I am not talking to you now through the medium of custom, conventionalities, nor even of mortal flesh'?",
+    "options": [
+      "The importance of social status.",
+      "The equality of souls beyond social roles.",
+      "The need for physical beauty.",
+      "The power of money."
+    ],
+    "answerIndex": 1,
+    "explanation": "Jane insists that her spirit and Rochester's are equal, transcending social conventions and physical form.",
+    "optionExplanations": [
+      "Wrong: she rejects social status.",
+      "Correct: equality of the soul. ✓",
+      "Wrong: not about beauty.",
+      "Wrong: not about money."
+    ]
+  },
+  {
+    "id": "en-052",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Future perfect",
+    "difficulty": "HARD",
+    "statement": "Complete: 'By next year, I _____ here for ten years.'",
+    "options": [
+      "will work",
+      "will have worked",
+      "have worked",
+      "am working"
+    ],
+    "answerIndex": 1,
+    "explanation": "Future perfect (will have + past participle) expresses an action that will be completed before a future point in time.",
+    "optionExplanations": [
+      "Wrong: simple future, not emphasizing completion.",
+      "Correct: will have worked = future perfect. ✓",
+      "Wrong: present perfect, not future.",
+      "Wrong: present continuous."
+    ]
+  },
+  {
+    "id": "en-053",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Prefixes",
+    "difficulty": "MEDIUM",
+    "statement": "The prefix 'anti-' means:",
+    "options": [
+      "before",
+      "against",
+      "after",
+      "with"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Anti-' means opposed to, against (e.g., anti-war, antibiotic).",
+    "optionExplanations": [
+      "Wrong: 'pre-' means before.",
+      "Correct: against. ✓",
+      "Wrong: 'post-' means after.",
+      "Wrong: 'co-' means with."
+    ]
+  },
+  {
+    "id": "en-054",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Used to",
+    "difficulty": "MEDIUM",
+    "statement": "Which sentence correctly uses 'used to'?",
+    "options": [
+      "I used to go swimming every Saturday when I was a child.",
+      "I am used to go swimming every Saturday.",
+      "I used to going swimming every Saturday.",
+      "I use to go swimming every Saturday."
+    ],
+    "answerIndex": 0,
+    "explanation": "'Used to' + base verb expresses a past habit that no longer happens. 'Be used to' + -ing form means accustomed to, which doesn't fit here.",
+    "optionExplanations": [
+      "Correct: used to + infinitive for past habit. ✓",
+      "Wrong: 'be used to' requires -ing (going).",
+      "Wrong: 'used to' + -ing is incorrect.",
+      "Wrong: 'use to' is the incorrect spelling."
+    ]
+  },
+  {
+    "id": "en-055",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Compound adjectives",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'a well-known actor' mean?",
+    "options": [
+      "an actor who is healthy",
+      "an actor who is famous",
+      "an actor who is unknown",
+      "an actor who is talented"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Well-known' means widely recognized, famous.",
+    "optionExplanations": [
+      "Wrong: 'well' here is part of the compound, not about health.",
+      "Correct: famous. ✓",
+      "Wrong: opposite meaning.",
+      "Wrong: not necessarily about talent."
+    ]
+  },
+  {
+    "id": "en-056",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Zero conditional",
+    "difficulty": "EASY",
+    "statement": "Choose the zero conditional sentence:",
+    "options": [
+      "If it rains, I will stay home.",
+      "If water reaches 100°C, it boils.",
+      "If I were you, I would go.",
+      "If you had asked, I would have helped."
+    ],
+    "answerIndex": 1,
+    "explanation": "Zero conditional expresses general truths or scientific facts: If + present simple, present simple.",
+    "optionExplanations": [
+      "Wrong: first conditional.",
+      "Correct: general truth, zero conditional. ✓",
+      "Wrong: second conditional.",
+      "Wrong: third conditional."
+    ]
+  },
+  {
+    "id": "en-057",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms advanced",
+    "difficulty": "HARD",
+    "statement": "Which word is a synonym of 'ephemeral'?",
+    "options": [
+      "permanent",
+      "transient",
+      "strong",
+      "eternal"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Ephemeral' means lasting for a very short time. 'Transient' also means temporary, short-lived.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: transient = short-lived. ✓",
+      "Wrong: unrelated to duration.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-058",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Adverbs of manner",
+    "difficulty": "EASY",
+    "statement": "Form the adverb from 'quick'.",
+    "options": [
+      "quickly",
+      "quickier",
+      "quickest",
+      "quickening"
+    ],
+    "answerIndex": 0,
+    "explanation": "Most adjectives add '-ly' to form adverbs. Quick → quickly.",
+    "optionExplanations": [
+      "Correct: quickly is the adverb. ✓",
+      "Wrong: comparative form.",
+      "Wrong: superlative form.",
+      "Wrong: present participle."
+    ]
+  },
+  {
+    "id": "en-059",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Word pairs",
+    "difficulty": "MEDIUM",
+    "statement": "Which pair is a common collocation?",
+    "options": [
+      "make a mistake",
+      "do a mistake",
+      "make a party",
+      "do a decision"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Make a mistake' is the standard collocation. 'Do a mistake' is incorrect; we say 'make a decision', 'have a party'.",
+    "optionExplanations": [
+      "Correct: make a mistake. ✓",
+      "Wrong: incorrect collocation.",
+      "Wrong: 'throw a party' or 'have a party'.",
+      "Wrong: 'make a decision'."
+    ]
+  },
+  {
+    "id": "en-060",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Indirect questions",
+    "difficulty": "MEDIUM",
+    "statement": "Which indirect question is correct?",
+    "options": [
+      "Can you tell me where is the station?",
+      "Can you tell me where the station is?",
+      "Can you tell me where the station is it?",
+      "Can you tell me where does the station?"
+    ],
+    "answerIndex": 1,
+    "explanation": "In indirect questions, word order is subject + verb, not inverted. 'where the station is'.",
+    "optionExplanations": [
+      "Wrong: inverted order.",
+      "Correct: subject + verb order. ✓",
+      "Wrong: redundant 'it'.",
+      "Wrong: incorrect structure."
+    ]
+  },
+  {
+    "id": "en-061",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms with colors",
+    "difficulty": "HARD",
+    "statement": "What does 'once in a blue moon' mean?",
+    "options": [
+      "very frequently",
+      "very rarely",
+      "once a month",
+      "during a full moon"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Once in a blue moon' means very rarely, as a blue moon is an uncommon event.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: very rarely. ✓",
+      "Wrong: not literally a month.",
+      "Wrong: not about moon phase directly."
+    ]
+  },
+  {
+    "id": "en-062",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Uncountable nouns quantifiers",
+    "difficulty": "EASY",
+    "statement": "Choose the correct quantifier: 'I have _____ money.'",
+    "options": [
+      "many",
+      "a few",
+      "a little",
+      "few"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Money' is uncountable, so we use 'a little' (positive, some) or 'little' (negative). 'Many' and 'a few' are for countable nouns.",
+    "optionExplanations": [
+      "Wrong: 'many' is for countable.",
+      "Wrong: 'a few' is for countable.",
+      "Correct: 'a little' for uncountable. ✓",
+      "Wrong: 'few' is countable."
+    ]
+  },
+  {
+    "id": "en-063",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Foreign words in English",
+    "difficulty": "HARD",
+    "statement": "The word 'déjà vu' in English originates from which language?",
+    "options": [
+      "Spanish",
+      "German",
+      "French",
+      "Italian"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Déjà vu' is a French phrase meaning 'already seen', adopted directly into English.",
+    "optionExplanations": [
+      "Wrong: not Spanish.",
+      "Wrong: not German.",
+      "Correct: French. ✓",
+      "Wrong: not Italian."
+    ]
+  },
+  {
+    "id": "en-064",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Causative form",
+    "difficulty": "HARD",
+    "statement": "Choose the correct causative sentence:",
+    "options": [
+      "I cut my hair yesterday.",
+      "I had my hair cut yesterday.",
+      "I had cut my hair yesterday.",
+      "I have my hair cut yesterday."
+    ],
+    "answerIndex": 1,
+    "explanation": "The causative 'have something done' indicates that someone else performs the action. 'I had my hair cut' means someone cut my hair for me.",
+    "optionExplanations": [
+      "Wrong: implies you cut it yourself.",
+      "Correct: have + object + past participle. ✓",
+      "Wrong: past perfect, not causative.",
+      "Wrong: wrong tense (present perfect with 'yesterday' not used)."
+    ]
+  },
+  {
+    "id": "en-065",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms",
+    "difficulty": "MEDIUM",
+    "statement": "A synonym for 'sufficient' is:",
+    "options": [
+      "scarce",
+      "enough",
+      "excessive",
+      "poor"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Sufficient' means adequate, enough.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: enough. ✓",
+      "Wrong: more than enough.",
+      "Wrong: lacking."
+    ]
+  },
+  {
+    "id": "en-066",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Double comparatives",
+    "difficulty": "HARD",
+    "statement": "Choose the correct double comparative: 'The ____ you work, the ____ results you get.'",
+    "options": [
+      "harder / better",
+      "hard / good",
+      "harder / best",
+      "more hard / more good"
+    ],
+    "answerIndex": 0,
+    "explanation": "Double comparatives express parallel increase: the + comparative, the + comparative: harder → better.",
+    "optionExplanations": [
+      "Correct: harder and better. ✓",
+      "Wrong: need comparatives.",
+      "Wrong: 'best' is superlative.",
+      "Wrong: 'more hard' and 'more good' are incorrect forms."
+    ]
+  },
+  {
+    "id": "en-067",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Easily confused words",
+    "difficulty": "MEDIUM",
+    "statement": "He is _____ to win the race.",
+    "options": [
+      "likely",
+      "likable",
+      "alike",
+      "dislike"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Likely' means probable. 'Likable' means pleasant. 'Alike' means similar. 'Dislike' is a verb.",
+    "optionExplanations": [
+      "Correct: likely = probable. ✓",
+      "Wrong: likable = pleasant.",
+      "Wrong: alike = similar.",
+      "Wrong: dislike = not like."
+    ]
+  },
+  {
+    "id": "en-068",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Emphatic 'do'",
+    "difficulty": "EASY",
+    "statement": "Which sentence uses the emphatic 'do' correctly?",
+    "options": [
+      "I do understand your point.",
+      "I understanding your point.",
+      "I does understand your point.",
+      "I am do understand your point."
+    ],
+    "answerIndex": 0,
+    "explanation": "The emphatic 'do' adds emphasis: I do understand (present simple). Subject + do/does + base verb.",
+    "optionExplanations": [
+      "Correct: do + base verb for emphasis. ✓",
+      "Wrong: missing auxiliary.",
+      "Wrong: 'does' is for third person.",
+      "Wrong: mixing 'am' and 'do'."
+    ]
+  },
+  {
+    "id": "en-069",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Word meaning",
+    "difficulty": "EASY",
+    "statement": "What does 'reluctant' mean?",
+    "options": [
+      "eager",
+      "hesitant",
+      "angry",
+      "friendly"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Reluctant' means unwilling or hesitant to do something.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: hesitant. ✓",
+      "Wrong: not angry.",
+      "Wrong: not friendly."
+    ]
+  },
+  {
+    "id": "en-070",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Reflexive pronouns",
+    "difficulty": "EASY",
+    "statement": "Complete: 'She made it _____.'",
+    "options": [
+      "herself",
+      "her",
+      "by her",
+      "she"
+    ],
+    "answerIndex": 0,
+    "explanation": "Reflexive pronoun 'herself' refers back to the subject 'She' when she does something alone.",
+    "optionExplanations": [
+      "Correct: reflexive pronoun. ✓",
+      "Wrong: object pronoun, not reflexive.",
+      "Wrong: incorrect structure.",
+      "Wrong: subject pronoun."
+    ]
+  },
+  {
+    "id": "en-071",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs with 'take'",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'take over' mean?",
+    "options": [
+      "to remove",
+      "to assume control",
+      "to start a flight",
+      "to imitate"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Take over' means to seize control or become dominant. E.g., 'The company was taken over by a larger firm.'",
+    "optionExplanations": [
+      "Wrong: 'take off' means remove.",
+      "Correct: assume control. ✓",
+      "Wrong: 'take off' also means plane departure.",
+      "Wrong: 'take off' can mean imitate."
+    ]
+  },
+  {
+    "id": "en-072",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Mixed conditionals",
+    "difficulty": "HARD",
+    "statement": "If she had taken the medicine, she _____ better now.",
+    "options": [
+      "will feel",
+      "would feel",
+      "would have felt",
+      "feels"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mixed conditional: past condition (if + past perfect) with present result (would + infinitive). She didn't take it, so she doesn't feel better now.",
+    "optionExplanations": [
+      "Wrong: 'will' indicates future, not present result.",
+      "Correct: mixed conditional. ✓",
+      "Wrong: 'would have felt' would refer to past result, not present.",
+      "Wrong: simple present, not hypothetical."
+    ]
+  },
+  {
+    "id": "en-073",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms",
+    "difficulty": "EASY",
+    "statement": "Which word is a synonym of 'courageous'?",
+    "options": [
+      "brave",
+      "cowardly",
+      "timid",
+      "frightened"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Courageous' means brave, willing to face danger.",
+    "optionExplanations": [
+      "Correct: brave. ✓",
+      "Wrong: opposite.",
+      "Wrong: opposite.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-074",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Few vs. Little",
+    "difficulty": "EASY",
+    "statement": "Complete: 'There are _____ apples left.'",
+    "options": [
+      "little",
+      "a little",
+      "few",
+      "much"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Apples' is countable, so we use 'few' (or 'a few'). 'Little' is for uncountable nouns.",
+    "optionExplanations": [
+      "Wrong: 'little' for uncountable.",
+      "Wrong: 'a little' for uncountable.",
+      "Correct: 'few' for countable. ✓",
+      "Wrong: 'much' for uncountable."
+    ]
+  },
+  {
+    "id": "en-075",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Suffixes",
+    "difficulty": "MEDIUM",
+    "statement": "Add the correct suffix to 'act' to form a noun meaning a person.",
+    "options": [
+      "active",
+      "actor",
+      "action",
+      "acting"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Actor' is the noun for a person who acts. '-or' is a common suffix for agent nouns.",
+    "optionExplanations": [
+      "Wrong: adjective.",
+      "Correct: person. ✓",
+      "Wrong: noun (process).",
+      "Wrong: noun (activity)."
+    ]
+  },
+  {
+    "id": "en-076",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Subjunctive mood",
+    "difficulty": "HARD",
+    "statement": "Which sentence uses the subjunctive correctly?",
+    "options": [
+      "I suggest that he goes to the doctor.",
+      "I suggest that he go to the doctor.",
+      "I suggest that he went to the doctor.",
+      "I suggest that he going to the doctor."
+    ],
+    "answerIndex": 1,
+    "explanation": "After verbs like 'suggest', 'recommend', 'insist', the subjunctive uses the base form of the verb (he go).",
+    "optionExplanations": [
+      "Wrong: 'goes' is indicative.",
+      "Correct: subjunctive base form. ✓",
+      "Wrong: past tense.",
+      "Wrong: gerund."
+    ]
+  },
+  {
+    "id": "en-077",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Homonyms",
+    "difficulty": "MEDIUM",
+    "statement": "Which word is a homonym of 'bear' (the animal)?",
+    "options": [
+      "beer",
+      "bare",
+      "bearer",
+      "bard"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Bare' (naked) sounds exactly like 'bear' (animal). They are homophones and homonyms.",
+    "optionExplanations": [
+      "Wrong: different vowel.",
+      "Correct: 'bare' sounds like 'bear'. ✓",
+      "Wrong: pronounced with an extra syllable.",
+      "Wrong: different ending."
+    ]
+  },
+  {
+    "id": "en-078",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Inversion after negative adverbs",
+    "difficulty": "HARD",
+    "statement": "Choose the correct inversion: 'Never _____ such a beautiful sunset.'",
+    "options": [
+      "I have seen",
+      "have I seen",
+      "I saw",
+      "did I saw"
+    ],
+    "answerIndex": 1,
+    "explanation": "After negative adverbs like 'never', 'rarely', 'seldom', we invert subject and auxiliary: 'have I seen'.",
+    "optionExplanations": [
+      "Wrong: no inversion.",
+      "Correct: inversion after 'never'. ✓",
+      "Wrong: simple past without inversion.",
+      "Wrong: 'did I saw' is ungrammatical (should be 'did I see')."
+    ]
+  },
+  {
+    "id": "en-079",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Colloquial expressions",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'hit the sack' mean?",
+    "options": [
+      "to punch a bag",
+      "to go to bed",
+      "to start a fight",
+      "to win a prize"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Hit the sack' (or 'hit the hay') is an informal expression meaning to go to sleep.",
+    "optionExplanations": [
+      "Wrong: literal meaning.",
+      "Correct: go to bed. ✓",
+      "Wrong: not about fighting.",
+      "Wrong: not about winning."
+    ]
+  },
+  {
+    "id": "en-080",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Plural nouns",
+    "difficulty": "MEDIUM",
+    "statement": "What is the plural of 'crisis'?",
+    "options": [
+      "crisises",
+      "crises",
+      "crisis",
+      "crisium"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Crisis' is a word of Greek origin; its plural is 'crises' (pronounced /ˈkraɪsiːz/).",
+    "optionExplanations": [
+      "Wrong: incorrect form.",
+      "Correct: crises. ✓",
+      "Wrong: singular form.",
+      "Wrong: incorrect."
+    ]
+  },
+  {
+    "id": "en-081",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "False friends",
+    "difficulty": "HARD",
+    "statement": "In English, 'library' means:",
+    "options": [
+      "bookstore",
+      "place where books are kept and borrowed",
+      "librarian's office",
+      "reading room"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Library' is a place where books are stored and lent. In some languages, a similar word means 'bookstore' (e.g., French 'librairie'), causing confusion.",
+    "optionExplanations": [
+      "Wrong: false friend in French/Italian.",
+      "Correct: lending/reading place. ✓",
+      "Wrong: specific office.",
+      "Wrong: part of library."
+    ]
+  },
+  {
+    "id": "en-082",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Cleft sentences",
+    "difficulty": "HARD",
+    "statement": "Which is a correct cleft sentence?",
+    "options": [
+      "It was John who broke the window.",
+      "It was John which broke the window.",
+      "What John broke the window.",
+      "It is John that he broke the window."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cleft sentences emphasize a part using 'It is/was ... that/who...'. 'It was John who...' is correct.",
+    "optionExplanations": [
+      "Correct: 'who' for person. ✓",
+      "Wrong: 'which' for things.",
+      "Wrong: incorrect structure.",
+      "Wrong: redundant pronoun."
+    ]
+  },
+  {
+    "id": "en-083",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Prefixes",
+    "difficulty": "EASY",
+    "statement": "The prefix 'mis-' (as in 'misunderstand') means:",
+    "options": [
+      "again",
+      "not",
+      "wrongly",
+      "before"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Mis-' indicates a mistake or incorrectness. 'Misunderstand' = understand wrongly.",
+    "optionExplanations": [
+      "Wrong: 're-' means again.",
+      "Wrong: 'un-' or 'in-' means not.",
+      "Correct: wrongly. ✓",
+      "Wrong: 'pre-' means before."
+    ]
+  },
+  {
+    "id": "en-084",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Defining vs non-defining relative clauses",
+    "difficulty": "MEDIUM",
+    "statement": "Which sentence contains a non-defining relative clause?",
+    "options": [
+      "My brother who lives in London is a doctor.",
+      "My brother, who lives in London, is a doctor.",
+      "The man who you saw is my uncle.",
+      "The car which I bought is red."
+    ],
+    "answerIndex": 1,
+    "explanation": "Non-defining relative clauses add extra information and are set off by commas. 'My brother, who lives in London, ...' implies I have one brother.",
+    "optionExplanations": [
+      "Wrong: defining (no commas).",
+      "Correct: non-defining with commas. ✓",
+      "Wrong: defining.",
+      "Wrong: defining."
+    ]
+  },
+  {
+    "id": "en-085",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Oxymoron",
+    "difficulty": "MEDIUM",
+    "statement": "Which phrase is an oxymoron?",
+    "options": [
+      "bright sun",
+      "deafening silence",
+      "fast runner",
+      "soft pillow"
+    ],
+    "answerIndex": 1,
+    "explanation": "An oxymoron combines contradictory terms. 'Deafening silence' combines loud noise with silence.",
+    "optionExplanations": [
+      "Wrong: no contradiction.",
+      "Correct: contradictory (deafening + silence). ✓",
+      "Wrong: no contradiction.",
+      "Wrong: no contradiction."
+    ]
+  },
+  {
+    "id": "en-086",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Modal verbs deduction",
+    "difficulty": "HARD",
+    "statement": "He looks exhausted; he _____ have been working all night.",
+    "options": [
+      "must",
+      "can",
+      "should",
+      "might"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Must have' + past participle expresses a logical deduction about the past. 'Must have been working' is a continuous form.",
+    "optionExplanations": [
+      "Correct: must have been = deduction. ✓",
+      "Wrong: 'can have' is not used in positive deduction.",
+      "Wrong: 'should have' indicates advice or expectation.",
+      "Wrong: 'might have' is possible but less strong given 'looks exhausted'."
+    ]
+  },
+  {
+    "id": "en-087",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms with animals",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'let the cat out of the bag' mean?",
+    "options": [
+      "to free a pet",
+      "to reveal a secret",
+      "to cause chaos",
+      "to make a mistake"
+    ],
+    "answerIndex": 1,
+    "explanation": "Similar to 'spill the beans', it means to disclose a secret unintentionally.",
+    "optionExplanations": [
+      "Wrong: literal.",
+      "Correct: reveal a secret. ✓",
+      "Wrong: not about chaos.",
+      "Wrong: not about mistakes."
+    ]
+  },
+  {
+    "id": "en-088",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Determiners",
+    "difficulty": "EASY",
+    "statement": "_____ students in my class are hardworking.",
+    "options": [
+      "Most of",
+      "Most",
+      "Most of the",
+      "The most"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Most of the' is used before a specific noun phrase (the students in my class). 'Most' alone could be used generally, but here the context specifies 'in my class', so 'Most of the' is best.",
+    "optionExplanations": [
+      "Wrong: 'Most of' needs 'the' or a determiner after.",
+      "Wrong: 'Most students' would be general, not specific.",
+      "Correct: 'Most of the students' is correct. ✓",
+      "Wrong: 'The most' is superlative."
+    ]
+  },
+  {
+    "id": "en-089",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Euphemisms",
+    "difficulty": "MEDIUM",
+    "statement": "Which phrase is a euphemism for 'fired from a job'?",
+    "options": [
+      "promoted",
+      "let go",
+      "transferred",
+      "employed"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Let go' is a softer, indirect way of saying someone was dismissed from their job.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: euphemism for dismissed. ✓",
+      "Wrong: means moved.",
+      "Wrong: means hired."
+    ]
+  },
+  {
+    "id": "en-090",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Wish clauses",
+    "difficulty": "MEDIUM",
+    "statement": "I wish I _____ more free time.",
+    "options": [
+      "have",
+      "had",
+      "will have",
+      "having"
+    ],
+    "answerIndex": 1,
+    "explanation": "'I wish' + past simple expresses a regret about a present situation that is contrary to fact.",
+    "optionExplanations": [
+      "Wrong: present simple not used.",
+      "Correct: past simple for present wish. ✓",
+      "Wrong: future not used after 'wish' for present.",
+      "Wrong: gerund not used."
+    ]
+  },
+  {
+    "id": "en-091",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Confusing words",
+    "difficulty": "HARD",
+    "statement": "The weather is _____ to change tomorrow.",
+    "options": [
+      "likely",
+      "liable",
+      "prone",
+      "possible"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Likely' is the most common adjective for probability. 'Liable' can mean legally responsible or also probable, but 'likely' is preferred. 'Possible' would need 'It is possible that...'",
+    "optionExplanations": [
+      "Correct: likely. ✓",
+      "Wrong: 'liable' often has negative connotation or legal sense.",
+      "Wrong: 'prone' usually for people or negative traits.",
+      "Wrong: 'possible' can't be used with 'is + adjective' + to-infinitive? Actually 'it is possible for the weather to change', but structure differs."
+    ]
+  },
+  {
+    "id": "en-092",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Tag questions advanced",
+    "difficulty": "HARD",
+    "statement": "Complete the tag: 'I'm right, _____?'",
+    "options": [
+      "amn't I",
+      "aren't I",
+      "am I not",
+      "isn't it"
+    ],
+    "answerIndex": 1,
+    "explanation": "The standard tag for 'I am' is 'aren't I?' It is an irregularity.",
+    "optionExplanations": [
+      "Wrong: 'amn't' is not standard.",
+      "Correct: 'aren't I' is the accepted tag. ✓",
+      "Wrong: possible but very formal and rare.",
+      "Wrong: pronoun mismatch."
+    ]
+  },
+  {
+    "id": "en-093",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Proverbs",
+    "difficulty": "MEDIUM",
+    "statement": "Complete: 'Don't count your chickens before they _____.'",
+    "options": [
+      "hatch",
+      "are born",
+      "grow",
+      "lay eggs"
+    ],
+    "answerIndex": 0,
+    "explanation": "The proverb is 'Don't count your chickens before they hatch', meaning don't assume success before it happens.",
+    "optionExplanations": [
+      "Correct: hatch. ✓",
+      "Wrong: not born.",
+      "Wrong: not grow.",
+      "Wrong: not lay eggs."
+    ]
+  },
+  {
+    "id": "en-094",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Reduced relative clauses",
+    "difficulty": "HARD",
+    "statement": "The man _____ on the stage is a famous singer.",
+    "options": [
+      "singing",
+      "who singing",
+      "sung",
+      "is singing"
+    ],
+    "answerIndex": 0,
+    "explanation": "A reduced relative clause uses a present participle (-ing) to replace 'who is singing': 'The man singing on the stage...'",
+    "optionExplanations": [
+      "Correct: reduced relative (singing). ✓",
+      "Wrong: 'who singing' is missing auxiliary.",
+      "Wrong: 'sung' would be passive.",
+      "Wrong: creates a clause without a relative."
+    ]
+  },
+  {
+    "id": "en-095",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Acronyms",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'UNESCO' stand for?",
+    "options": [
+      "United Nations Educational, Scientific and Cultural Organization",
+      "United Nations Emergency Security Council",
+      "Universal Network of Ecological Scientists and Observers",
+      "United Nations Economic and Social Committee"
+    ],
+    "answerIndex": 0,
+    "explanation": "UNESCO is the United Nations Educational, Scientific and Cultural Organization.",
+    "optionExplanations": [
+      "Correct: full name. ✓",
+      "Wrong: not a security council.",
+      "Wrong: not ecological.",
+      "Wrong: not economic and social committee (ECOSOC)."
+    ]
+  },
+  {
+    "id": "en-096",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Parallelism",
+    "difficulty": "MEDIUM",
+    "statement": "Which sentence is parallel?",
+    "options": [
+      "She likes swimming, running, and to bike.",
+      "She likes swimming, running, and biking.",
+      "She likes to swim, run, and biking.",
+      "She likes to swim, running, and biking."
+    ],
+    "answerIndex": 1,
+    "explanation": "Parallel structure requires consistent grammatical forms: all gerunds (swimming, running, biking) or all infinitives.",
+    "optionExplanations": [
+      "Wrong: mixed gerund and infinitive.",
+      "Correct: all gerunds. ✓",
+      "Wrong: mixed.",
+      "Wrong: mixed."
+    ]
+  },
+  {
+    "id": "en-097",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Formal vocabulary",
+    "difficulty": "HARD",
+    "statement": "Which word is more formal than 'buy'?",
+    "options": [
+      "purchase",
+      "get",
+      "shop",
+      "pay"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Purchase' is a formal synonym for 'buy'.",
+    "optionExplanations": [
+      "Correct: formal synonym. ✓",
+      "Wrong: informal.",
+      "Wrong: verb meaning to look for goods.",
+      "Wrong: part of transaction."
+    ]
+  },
+  {
+    "id": "en-098",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Gerund as subject",
+    "difficulty": "EASY",
+    "statement": "_____ is good for your health.",
+    "options": [
+      "Swim",
+      "Swimming",
+      "Swam",
+      "To swimming"
+    ],
+    "answerIndex": 1,
+    "explanation": "A gerund (-ing form) can function as the subject of a sentence: 'Swimming is good...'",
+    "optionExplanations": [
+      "Wrong: base form.",
+      "Correct: gerund as subject. ✓",
+      "Wrong: past form.",
+      "Wrong: incorrect structure."
+    ]
+  },
+  {
+    "id": "en-099",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Antonyms",
+    "difficulty": "MEDIUM",
+    "statement": "What is the antonym of 'victory'?",
+    "options": [
+      "triumph",
+      "defeat",
+      "win",
+      "success"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Victory' means winning; the opposite is 'defeat'.",
+    "optionExplanations": [
+      "Wrong: synonym.",
+      "Correct: defeat. ✓",
+      "Wrong: synonym.",
+      "Wrong: synonym."
+    ]
+  },
+  {
+    "id": "en-100",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Future continuous",
+    "difficulty": "MEDIUM",
+    "statement": "This time tomorrow, I _____ on the beach.",
+    "options": [
+      "will lie",
+      "will be lying",
+      "am lying",
+      "have lain"
+    ],
+    "answerIndex": 1,
+    "explanation": "Future continuous (will be + -ing) is used for actions in progress at a specific future time.",
+    "optionExplanations": [
+      "Wrong: simple future, not emphasizing continuous action.",
+      "Correct: future continuous. ✓",
+      "Wrong: present continuous.",
+      "Wrong: present perfect."
+    ]
+  },
+  {
+    "id": "en-passage-006-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-006",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "What does IoT allow users to do?",
+    "options": [
+      "Only control household items",
+      "Remotely monitor and control devices",
+      "Replace all human workers",
+      "Eliminate internet usage"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage states that IoT 'allows for the remote monitoring and control of devices'.",
+    "optionExplanations": [
+      "Wrong: IoT goes beyond household items to industrial tools.",
+      "Correct: directly from the text. ✓",
+      "Wrong: not mentioned.",
+      "Wrong: IoT relies on the internet."
+    ]
+  },
+  {
+    "id": "en-passage-006-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-006",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What is one major concern regarding the IoT mentioned in the passage?",
+    "options": [
+      "High cost of smart devices",
+      "Lack of internet access",
+      "Data privacy and security",
+      "Unreliable weather prediction"
+    ],
+    "answerIndex": 2,
+    "explanation": "The passage raises 'serious concerns about data privacy and security'.",
+    "optionExplanations": [
+      "Wrong: not mentioned.",
+      "Wrong: not the focus.",
+      "Correct: privacy and security. ✓",
+      "Wrong: weather prediction is an example of use, not a concern."
+    ]
+  },
+  {
+    "id": "en-passage-006-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-006",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "In the text, the word 'embedded' is closest in meaning to:",
+    "options": [
+      "removed",
+      "inserted",
+      "displayed",
+      "hidden"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Embedded' means fixed firmly and deeply in a surrounding mass; in this context, sensors are inserted into objects.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: inserted, built in. ✓",
+      "Wrong: not displayed.",
+      "Wrong: not necessarily hidden, but integrated."
+    ]
+  },
+  {
+    "id": "en-passage-006-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-006",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "HARD",
+    "statement": "What can be inferred about the future of IoT from the passage?",
+    "options": [
+      "It will only be used in industry.",
+      "It will disappear soon.",
+      "A balance between innovation and protection will be important.",
+      "Governments will ban IoT devices."
+    ],
+    "answerIndex": 2,
+    "explanation": "The passage concludes that 'finding a balance between innovation and user protection will be crucial'.",
+    "optionExplanations": [
+      "Wrong: it's already in homes.",
+      "Wrong: it's expanding.",
+      "Correct: balance needed. ✓",
+      "Wrong: not suggested."
+    ]
+  },
+  {
+    "id": "en-passage-007-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-007",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "Who is mentioned as a key figure in the development of the steam engine?",
+    "options": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "James Watt",
+      "Isaac Newton"
+    ],
+    "answerIndex": 2,
+    "explanation": "The text states 'its development in the 18th century, notably by James Watt'.",
+    "optionExplanations": [
+      "Wrong: Edison was later, electricity.",
+      "Wrong: Tesla was later, electricity.",
+      "Correct: James Watt. ✓",
+      "Wrong: Newton was physics, not steam engines."
+    ]
+  },
+  {
+    "id": "en-passage-007-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-007",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "Before steam power, factories primarily relied on:",
+    "options": [
+      "coal and oil",
+      "water wheels and wind",
+      "electricity",
+      "manual labour only"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage says 'factories relied on water wheels and wind'.",
+    "optionExplanations": [
+      "Wrong: coal became prominent with steam.",
+      "Correct: water wheels and wind. ✓",
+      "Wrong: electricity came later.",
+      "Wrong: manual labour wasn't the only source; water and wind were used."
+    ]
+  },
+  {
+    "id": "en-passage-007-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-007",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "The word 'profoundly' in 'Few inventions have altered the course of history as profoundly as the steam engine' means:",
+    "options": [
+      "superficially",
+      "deeply",
+      "slightly",
+      "quickly"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Profoundly' means to a great depth or intensity; deeply.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: deeply. ✓",
+      "Wrong: not slightly.",
+      "Wrong: not about speed."
+    ]
+  },
+  {
+    "id": "en-passage-007-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-007",
+    "topic": "Reading",
+    "subtopic": "Author's tone",
+    "difficulty": "MEDIUM",
+    "statement": "The author's tone towards the steam engine can best be described as:",
+    "options": [
+      "completely negative",
+      "balanced, acknowledging both benefits and drawbacks",
+      "enthusiastically positive",
+      "indifferent"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage highlights both transformative benefits and negative consequences like pollution.",
+    "optionExplanations": [
+      "Wrong: not entirely negative.",
+      "Correct: balanced view. ✓",
+      "Wrong: not entirely positive.",
+      "Wrong: the author is clearly engaged."
+    ]
+  },
+  {
+    "id": "en-passage-008-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-008",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "What is the primary mission of the Perseverance rover?",
+    "options": [
+      "To test new rocket technology",
+      "To search for signs of ancient microbial life",
+      "To build a human colony",
+      "To map the entire planet of Mars"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage states it has 'a mission to search for signs of ancient microbial life'.",
+    "optionExplanations": [
+      "Wrong: not the primary mission.",
+      "Correct: search for ancient life. ✓",
+      "Wrong: not yet.",
+      "Wrong: not the goal."
+    ]
+  },
+  {
+    "id": "en-passage-008-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-008",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What is MOXIE designed to do?",
+    "options": [
+      "Take photographs of the Martian surface",
+      "Collect soil samples",
+      "Produce oxygen from the Martian atmosphere",
+      "Communicate directly with Earth"
+    ],
+    "answerIndex": 2,
+    "explanation": "The text says MOXIE 'produces small amounts of oxygen from the Martian atmosphere'.",
+    "optionExplanations": [
+      "Wrong: cameras do that.",
+      "Wrong: the rover collects samples.",
+      "Correct: oxygen production. ✓",
+      "Wrong: not its function."
+    ]
+  },
+  {
+    "id": "en-passage-008-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-008",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "HARD",
+    "statement": "Why is the MOXIE experiment considered 'crucial for future human missions'?",
+    "options": [
+      "Because it provides entertainment for astronauts.",
+      "Because it could supply breathable air and rocket fuel.",
+      "Because it sends signals back to Earth faster.",
+      "Because it maps the safest landing sites."
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage says it 'could be crucial for future human missions, providing breathable air and rocket fuel'.",
+    "optionExplanations": [
+      "Wrong: not entertainment.",
+      "Correct: air and fuel. ✓",
+      "Wrong: unrelated to communication.",
+      "Wrong: unrelated to mapping."
+    ]
+  },
+  {
+    "id": "en-passage-008-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-008",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "The word 'atmosphere' in the passage refers to:",
+    "options": [
+      "the mood of a place",
+      "the layer of gases surrounding a planet",
+      "the pressure inside a machine",
+      "the sky's colour"
+    ],
+    "answerIndex": 1,
+    "explanation": "In this context, atmosphere means the gases around Mars.",
+    "optionExplanations": [
+      "Wrong: that's a different meaning.",
+      "Correct: planetary gases. ✓",
+      "Wrong: not mechanical.",
+      "Wrong: not colour."
+    ]
+  },
+  {
+    "id": "en-passage-009-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-009",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "Which of the following is an example of AI in daily life mentioned in the passage?",
+    "options": [
+      "Using a smart speaker to get the weather",
+      "Writing a letter by hand",
+      "Riding a bicycle",
+      "Cooking on a gas stove"
+    ],
+    "answerIndex": 0,
+    "explanation": "The passage mentions 'When you ask a smart speaker for the weather... you are interacting with AI.'",
+    "optionExplanations": [
+      "Correct: smart speaker. ✓",
+      "Wrong: not AI.",
+      "Wrong: not mentioned.",
+      "Wrong: not mentioned."
+    ]
+  },
+  {
+    "id": "en-passage-009-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-009",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What is modern AI mainly based on, according to the passage?",
+    "options": [
+      "Manual programming of rules",
+      "Machine learning and data analysis",
+      "Electric motors",
+      "Solar energy"
+    ],
+    "answerIndex": 1,
+    "explanation": "The text says 'Modern AI relies heavily on machine learning, where algorithms analyze vast amounts of data'.",
+    "optionExplanations": [
+      "Wrong: old approach.",
+      "Correct: machine learning. ✓",
+      "Wrong: not about motors.",
+      "Wrong: not about energy."
+    ]
+  },
+  {
+    "id": "en-passage-009-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-009",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "What can be inferred about the author's view on AI regulation?",
+    "options": [
+      "Regulation is unnecessary.",
+      "Regulation should ensure AI benefits everyone and doesn't increase inequality.",
+      "All AI should be banned.",
+      "Only large companies should control AI."
+    ],
+    "answerIndex": 1,
+    "explanation": "The author states that 'society must grapple with regulations that ensure AI serves the common good without reinforcing inequalities'.",
+    "optionExplanations": [
+      "Wrong: they see need for regulation.",
+      "Correct: fair regulation. ✓",
+      "Wrong: too extreme.",
+      "Wrong: not suggested."
+    ]
+  },
+  {
+    "id": "en-passage-009-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-009",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "The word 'displacement' in 'job displacement' most likely means:",
+    "options": [
+      "creation of new jobs",
+      "movement of workers to different locations",
+      "loss of jobs due to replacement",
+      "improvement of working conditions"
+    ],
+    "answerIndex": 2,
+    "explanation": "In this context, displacement refers to workers losing their jobs because machines take over those tasks.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Wrong: relocation is different.",
+      "Correct: job loss. ✓",
+      "Wrong: not about improvement."
+    ]
+  },
+  {
+    "id": "en-passage-010-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-010",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "How do wind turbines generate electricity?",
+    "options": [
+      "By burning natural gas",
+      "By converting kinetic energy of wind into electricity",
+      "By using solar panels",
+      "By extracting energy from water"
+    ],
+    "answerIndex": 1,
+    "explanation": "The text says 'convert the kinetic energy of moving air into electricity'.",
+    "optionExplanations": [
+      "Wrong: no burning.",
+      "Correct: kinetic energy. ✓",
+      "Wrong: not solar.",
+      "Wrong: not water."
+    ]
+  },
+  {
+    "id": "en-passage-010-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-010",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What is one disadvantage of wind power mentioned in the passage?",
+    "options": [
+      "It produces greenhouse gases.",
+      "It is too expensive to build.",
+      "It is intermittent because the wind doesn't always blow.",
+      "It cannot generate enough power for homes."
+    ],
+    "answerIndex": 2,
+    "explanation": "The passage states 'it is also intermittent—the wind doesn't always blow'.",
+    "optionExplanations": [
+      "Wrong: it's clean.",
+      "Wrong: cost not mentioned.",
+      "Correct: intermittency. ✓",
+      "Wrong: it can power thousands of homes."
+    ]
+  },
+  {
+    "id": "en-passage-010-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-010",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "Why are engineers working on better energy storage for wind power?",
+    "options": [
+      "To make turbines spin faster",
+      "To store excess energy when the wind is strong and release it when wind is weak",
+      "To reduce the weight of the blades",
+      "To make wind turbines quieter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Because wind is variable, storage smooths out supply.",
+    "optionExplanations": [
+      "Wrong: not about speed.",
+      "Correct: supply management. ✓",
+      "Wrong: not about blade weight.",
+      "Wrong: noise not mentioned."
+    ]
+  },
+  {
+    "id": "en-passage-010-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-010",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "EASY",
+    "statement": "The word 'abundant' means:",
+    "options": [
+      "rare",
+      "plentiful",
+      "expensive",
+      "polluting"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Abundant' means existing in large quantities; plentiful.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: plentiful. ✓",
+      "Wrong: not about cost.",
+      "Wrong: not about pollution."
+    ]
+  },
+  {
+    "id": "en-passage-011-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-011",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "What was Ada Lovelace known for?",
+    "options": [
+      "Building the first computer",
+      "Pioneering work on algorithms",
+      "Inventing the transistor",
+      "Creating the internet"
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage mentions 'Ada Lovelace's pioneering work on algorithms'.",
+    "optionExplanations": [
+      "Wrong: Babbage designed the machine.",
+      "Correct: algorithms. ✓",
+      "Wrong: transistor came later.",
+      "Wrong: internet came later."
+    ]
+  },
+  {
+    "id": "en-passage-011-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-011",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What impact did the transistor have on computers?",
+    "options": [
+      "Made them larger and slower",
+      "Made them smaller, more reliable and more energy-efficient",
+      "Increased their use of vacuum tubes",
+      "Made them only useful for military purposes"
+    ],
+    "answerIndex": 1,
+    "explanation": "The text states the transistor made devices 'smaller, more reliable and more energy-efficient'.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: miniaturization and efficiency. ✓",
+      "Wrong: replaced vacuum tubes.",
+      "Wrong: broadened use."
+    ]
+  },
+  {
+    "id": "en-passage-011-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-011",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "What can be inferred about early computers like ENIAC?",
+    "options": [
+      "They were small and portable.",
+      "They were less powerful than a modern calculator.",
+      "They were used for entertainment.",
+      "They were invented in the 1970s."
+    ],
+    "answerIndex": 1,
+    "explanation": "The last sentence says 'room-sized machines with less power than a modern calculator'.",
+    "optionExplanations": [
+      "Wrong: they were huge.",
+      "Correct: less powerful than calculators. ✓",
+      "Wrong: used for calculations and code-breaking.",
+      "Wrong: 1940s."
+    ]
+  },
+  {
+    "id": "en-passage-011-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-011",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "The phrase 'a testament to human creativity' means:",
+    "options": [
+      "a proof of human imagination",
+      "a test of human patience",
+      "a question about human intelligence",
+      "a criticism of technology"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Testament' here means something that serves as proof or evidence.",
+    "optionExplanations": [
+      "Correct: proof. ✓",
+      "Wrong: not about patience.",
+      "Wrong: not a question.",
+      "Wrong: not criticism."
+    ]
+  },
+  {
+    "id": "en-passage-012-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-012",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "How does 3D printing differ from traditional manufacturing?",
+    "options": [
+      "It uses more material.",
+      "It builds objects layer by layer, producing less waste.",
+      "It can only create flat shapes.",
+      "It is always faster for mass production."
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage says it 'builds objects layer by layer... produces far less waste'.",
+    "optionExplanations": [
+      "Wrong: less waste.",
+      "Correct: additive process, less waste. ✓",
+      "Wrong: can create complex shapes.",
+      "Wrong: slow for mass production."
+    ]
+  },
+  {
+    "id": "en-passage-012-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-012",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "Which sector is NOT mentioned as benefiting from 3D printing?",
+    "options": [
+      "Medicine",
+      "Automotive",
+      "Aerospace",
+      "Textile"
+    ],
+    "answerIndex": 3,
+    "explanation": "The text mentions aerospace, medicine, automotive. Textile is not mentioned.",
+    "optionExplanations": [
+      "Wrong: mentioned (custom prosthetics).",
+      "Wrong: mentioned (lightweight parts).",
+      "Wrong: mentioned.",
+      "Correct: not mentioned. ✓"
+    ]
+  },
+  {
+    "id": "en-passage-012-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-012",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "MEDIUM",
+    "statement": "Why is 3D printing considered beneficial for small businesses?",
+    "options": [
+      "It allows them to hire more workers.",
+      "They can quickly prototype products without large factories.",
+      "It eliminates the need for any design software.",
+      "It reduces the cost of raw materials to zero."
+    ],
+    "answerIndex": 1,
+    "explanation": "The text says 'small businesses can prototype products quickly without large factories'.",
+    "optionExplanations": [
+      "Wrong: not mentioned.",
+      "Correct: rapid prototyping. ✓",
+      "Wrong: design still needed.",
+      "Wrong: materials still cost."
+    ]
+  },
+  {
+    "id": "en-passage-012-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-012",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "MEDIUM",
+    "statement": "The word 'hurdles' in '3D printing is not without hurdles' means:",
+    "options": [
+      "advantages",
+      "obstacles",
+      "goals",
+      "materials"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Hurdles' means difficulties or obstacles.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: obstacles. ✓",
+      "Wrong: not goals.",
+      "Wrong: not materials."
+    ]
+  },
+  {
+    "id": "en-passage-013-q1",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-013",
+    "topic": "Reading",
+    "subtopic": "Comprehension",
+    "difficulty": "EASY",
+    "statement": "What is a major advantage of electric vehicles mentioned in the passage?",
+    "options": [
+      "They are cheaper to buy than traditional cars.",
+      "They produce zero tailpipe emissions.",
+      "They have unlimited driving range.",
+      "They do not require any maintenance."
+    ],
+    "answerIndex": 1,
+    "explanation": "The text says 'producing zero tailpipe emissions'.",
+    "optionExplanations": [
+      "Wrong: cost not stated as advantage.",
+      "Correct: zero tailpipe emissions. ✓",
+      "Wrong: range is improving but not unlimited.",
+      "Wrong: not mentioned."
+    ]
+  },
+  {
+    "id": "en-passage-013-q2",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-013",
+    "topic": "Reading",
+    "subtopic": "Detail",
+    "difficulty": "MEDIUM",
+    "statement": "What are two concerns about electric vehicles according to the passage?",
+    "options": [
+      "High speed and noise",
+      "Battery range and charging time",
+      "Mining of lithium and cobalt, and sparse charging networks",
+      "Lack of colours and high insurance"
+    ],
+    "answerIndex": 2,
+    "explanation": "The passage mentions 'environmental impact of mining lithium and cobalt' and 'charging networks are still sparse'.",
+    "optionExplanations": [
+      "Wrong: not mentioned.",
+      "Wrong: battery range and charging time were earlier concerns now addressed.",
+      "Correct: mining impact and sparse network. ✓",
+      "Wrong: not mentioned."
+    ]
+  },
+  {
+    "id": "en-passage-013-q3",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-013",
+    "topic": "Reading",
+    "subtopic": "Inference",
+    "difficulty": "HARD",
+    "statement": "What can be inferred about the future of petrol and diesel cars from the passage?",
+    "options": [
+      "They will always dominate the market.",
+      "They are likely to be phased out in many places.",
+      "They will become electric automatically.",
+      "They will only be sold in developing countries."
+    ],
+    "answerIndex": 1,
+    "explanation": "The passage states some countries plan to ban sale of new petrol/diesel cars within two decades.",
+    "optionExplanations": [
+      "Wrong: not according to bans.",
+      "Correct: phasing out. ✓",
+      "Wrong: not automatic conversion.",
+      "Wrong: not suggested."
+    ]
+  },
+  {
+    "id": "en-passage-013-q4",
+    "subject": "ENGLISH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "en-passage-013",
+    "topic": "Reading",
+    "subtopic": "Vocabulary",
+    "difficulty": "EASY",
+    "statement": "The phrase 'accelerating' in 'the shift to electric mobility is accelerating' means:",
+    "options": [
+      "slowing down",
+      "speeding up",
+      "remaining stable",
+      "reversing"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Accelerating' means increasing speed, becoming faster.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: speeding up. ✓",
+      "Wrong: not stable.",
+      "Wrong: not reversing."
+    ]
+  },
+  {
+    "id": "en-101",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Tenses",
+    "difficulty": "EASY",
+    "statement": "Choose the correct past simple form: 'She _____ a new book last week.'",
+    "options": [
+      "buys",
+      "bought",
+      "has bought",
+      "buyed"
+    ],
+    "answerIndex": 1,
+    "explanation": "Irregular verb 'buy' past tense is 'bought'.",
+    "optionExplanations": [
+      "Wrong: present.",
+      "Correct: past simple. ✓",
+      "Wrong: present perfect.",
+      "Wrong: incorrect form."
+    ]
+  },
+  {
+    "id": "en-102",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Collocations",
+    "difficulty": "MEDIUM",
+    "statement": "Which verb goes with 'progress'?",
+    "options": [
+      "do",
+      "make",
+      "have",
+      "take"
+    ],
+    "answerIndex": 1,
+    "explanation": "The correct collocation is 'make progress'.",
+    "optionExplanations": [
+      "Wrong: not used.",
+      "Correct: make progress. ✓",
+      "Wrong: not used.",
+      "Wrong: not used."
+    ]
+  },
+  {
+    "id": "en-103",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Conditionals",
+    "difficulty": "MEDIUM",
+    "statement": "If you _____ water, it freezes.",
+    "options": [
+      "cool",
+      "cooled",
+      "will cool",
+      "have cooled"
+    ],
+    "answerIndex": 0,
+    "explanation": "Zero conditional: if + present simple, present simple for facts.",
+    "optionExplanations": [
+      "Correct: present simple. ✓",
+      "Wrong: past simple used in second conditional.",
+      "Wrong: future not used in zero conditional.",
+      "Wrong: present perfect not typical."
+    ]
+  },
+  {
+    "id": "en-104",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms",
+    "difficulty": "MEDIUM",
+    "statement": "Which word is a synonym of 'elaborate' (adjective)?",
+    "options": [
+      "simple",
+      "detailed",
+      "quick",
+      "boring"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Elaborate' means involving many carefully arranged parts; detailed.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: detailed. ✓",
+      "Wrong: not about speed.",
+      "Wrong: not about boredom."
+    ]
+  },
+  {
+    "id": "en-105",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Articles",
+    "difficulty": "EASY",
+    "statement": "_____ Nile is the longest river in Africa.",
+    "options": [
+      "A",
+      "An",
+      "The",
+      "No article"
+    ],
+    "answerIndex": 2,
+    "explanation": "We use 'the' with rivers: the Nile.",
+    "optionExplanations": [
+      "Wrong: indefinite.",
+      "Wrong: 'an' before vowel sounds.",
+      "Correct: definite article. ✓",
+      "Wrong: article needed."
+    ]
+  },
+  {
+    "id": "en-106",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs",
+    "difficulty": "HARD",
+    "statement": "What does 'break down' mean when referring to a car?",
+    "options": [
+      "to stop working",
+      "to speed up",
+      "to be repaired",
+      "to become emotional"
+    ],
+    "answerIndex": 0,
+    "explanation": "For a vehicle, 'break down' means to cease to function.",
+    "optionExplanations": [
+      "Correct: stop working. ✓",
+      "Wrong: accelerate.",
+      "Wrong: opposite.",
+      "Wrong: that meaning applies to people."
+    ]
+  },
+  {
+    "id": "en-107",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Passive voice",
+    "difficulty": "MEDIUM",
+    "statement": "Convert to active: 'The cake was eaten by the children.'",
+    "options": [
+      "The children ate the cake.",
+      "The children have eaten the cake.",
+      "The children were eating the cake.",
+      "The cake ate the children."
+    ],
+    "answerIndex": 0,
+    "explanation": "Active voice puts the doer (children) as subject: 'The children ate the cake.'",
+    "optionExplanations": [
+      "Correct: simple past active. ✓",
+      "Wrong: present perfect not matching.",
+      "Wrong: past continuous.",
+      "Wrong: nonsense."
+    ]
+  },
+  {
+    "id": "en-108",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'break a leg' mean in English?",
+    "options": [
+      "to have an accident",
+      "good luck (especially before a performance)",
+      "to start a fight",
+      "to run very fast"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Break a leg' is an idiomatic way to wish someone good luck, particularly in theatre.",
+    "optionExplanations": [
+      "Wrong: literal.",
+      "Correct: good luck. ✓",
+      "Wrong: not about fighting.",
+      "Wrong: not about speed."
+    ]
+  },
+  {
+    "id": "en-109",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Prepositions of time",
+    "difficulty": "EASY",
+    "statement": "I usually go to the gym _____ the evening.",
+    "options": [
+      "on",
       "in",
-      "from"
+      "at",
+      "by"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "We use 'in' with parts of the day: in the morning, in the evening.",
+    "optionExplanations": [
+      "Wrong: 'on' for days.",
+      "Correct: 'in' for parts of day. ✓",
+      "Wrong: 'at' for specific times.",
+      "Wrong: 'by' means deadline."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-5",
+    "id": "en-110",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Which word is a noun?",
-    "options": [
-      "Quickly",
-      "Beautiful",
-      "Happiness",
-      "Run"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-6",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "What is the plural of 'child'?",
-    "options": [
-      "Childs",
-      "Childrens",
-      "Children",
-      "Childes"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-7",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Find the mistake: 'She don't like playing tennis.'",
-    "options": [
-      "She",
-      "don't",
-      "playing",
-      "tennis"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-8",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Complete: '___ you ever been to London?'",
-    "options": [
-      "Did",
-      "Do",
-      "Have",
-      "Are"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-9",
-    "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "What does 'DIY' stand for?",
-    "options": [
-      "Do It Yesterday",
-      "Design In Youth",
-      "Do It Yourself",
-      "Don't Ignore You"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "ENGLISH-added-more-1783812167970-10",
-    "subject": "ENGLISH",
-    "scope": "INTL",
+    "topic": "Vocabulary",
+    "subtopic": "Word formation",
     "difficulty": "MEDIUM",
-    "statement": "Choose the passive voice: 'They built the house.'",
+    "statement": "Add the correct prefix to make the opposite of 'possible':",
     "options": [
-      "The house was built by them.",
-      "The house is built by them.",
-      "They were building the house.",
-      "The house has been built."
+      "unpossible",
+      "impossible",
+      "inpossible",
+      "dispossible"
     ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "The opposite of 'possible' is 'impossible' (prefix im-).",
+    "optionExplanations": [
+      "Wrong: not a standard word.",
+      "Correct: impossible. ✓",
+      "Wrong: 'inpossible' not correct.",
+      "Wrong: not used."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-11",
+    "id": "en-111",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "What is the synonym of 'fast'?",
+    "topic": "Grammar",
+    "subtopic": "Reported speech",
+    "difficulty": "MEDIUM",
+    "statement": "She said, 'I will call you tomorrow.' Change to reported speech.",
     "options": [
-      "Slow",
-      "Quick",
-      "Sluggish",
-      "Heavy"
+      "She said she will call me the next day.",
+      "She said she would call me the next day.",
+      "She said she would call me tomorrow.",
+      "She said she called me the next day."
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Future 'will' becomes 'would', 'tomorrow' becomes 'the next day'.",
+    "optionExplanations": [
+      "Wrong: 'will' not changed.",
+      "Correct: would + time change. ✓",
+      "Wrong: 'tomorrow' should change.",
+      "Wrong: past simple incorrect."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-12",
+    "id": "en-112",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Complete: 'If it rains, we ___ stay inside.'",
+    "topic": "Vocabulary",
+    "subtopic": "Confusing words",
+    "difficulty": "HARD",
+    "statement": "Choose the correct word: 'The scientist conducted a series of _____ experiments.'",
     "options": [
-      "would",
-      "will",
+      "sensitive",
+      "sensible",
+      "sensitively",
+      "sensibility"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Sensible' means practical and reasonable, which fits a scientist's approach.",
+    "optionExplanations": [
+      "Wrong: easily affected.",
+      "Correct: practical. ✓",
+      "Wrong: adverb.",
+      "Wrong: noun."
+    ]
+  },
+  {
+    "id": "en-113",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Comparatives and superlatives",
+    "difficulty": "MEDIUM",
+    "statement": "Of the three brothers, Tom is _____.",
+    "options": [
+      "taller",
+      "the tallest",
+      "more tall",
+      "tallest"
+    ],
+    "answerIndex": 1,
+    "explanation": "Superlative with 'the' for a group of three or more: the tallest.",
+    "optionExplanations": [
+      "Wrong: comparative for two.",
+      "Correct: superlative. ✓",
+      "Wrong: 'more tall' is incorrect form.",
+      "Wrong: missing 'the'."
+    ]
+  },
+  {
+    "id": "en-114",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms with parts of the body",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'cost an arm and a leg' mean?",
+    "options": [
+      "to be very cheap",
+      "to require physical effort",
+      "to be very expensive",
+      "to be dangerous"
+    ],
+    "answerIndex": 2,
+    "explanation": "The idiom means something costs a lot of money.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Wrong: not about effort.",
+      "Correct: very expensive. ✓",
+      "Wrong: not about danger."
+    ]
+  },
+  {
+    "id": "en-115",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Modals of ability",
+    "difficulty": "EASY",
+    "statement": "_____ you swim when you were five?",
+    "options": [
+      "Can",
+      "Could",
+      "Will",
+      "May"
+    ],
+    "answerIndex": 1,
+    "explanation": "Past ability: 'could' (or 'was/were able to').",
+    "optionExplanations": [
+      "Wrong: present ability.",
+      "Correct: past ability. ✓",
+      "Wrong: future.",
+      "Wrong: permission."
+    ]
+  },
+  {
+    "id": "en-116",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Compound nouns",
+    "difficulty": "MEDIUM",
+    "statement": "Which compound noun is formed correctly?",
+    "options": [
+      "bus stop",
+      "stopbus",
+      "bus's stop",
+      "busing stop"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Bus stop' is a correct compound noun (noun + noun).",
+    "optionExplanations": [
+      "Correct: standard compound. ✓",
+      "Wrong: reversed.",
+      "Wrong: possessive unnecessary.",
+      "Wrong: incorrect."
+    ]
+  },
+  {
+    "id": "en-117",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Quantifiers",
+    "difficulty": "MEDIUM",
+    "statement": "We need _____ information before we can decide.",
+    "options": [
+      "an",
+      "a few",
+      "some",
+      "many"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Information' is uncountable; we use 'some' (or 'a piece of'). 'Many' is for countable, 'a few' countable, 'an' singular countable.",
+    "optionExplanations": [
+      "Wrong: uncountable can't use 'an'.",
+      "Wrong: 'a few' for countable.",
+      "Correct: 'some' for uncountable. ✓",
+      "Wrong: 'many' for countable."
+    ]
+  },
+  {
+    "id": "en-118",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Antonyms",
+    "difficulty": "EASY",
+    "statement": "What is the antonym of 'increase'?",
+    "options": [
+      "decrease",
+      "expand",
+      "raise",
+      "grow"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Decrease' means to become smaller or fewer, the opposite of increase.",
+    "optionExplanations": [
+      "Correct: opposite. ✓",
+      "Wrong: synonym.",
+      "Wrong: synonym.",
+      "Wrong: synonym."
+    ]
+  },
+  {
+    "id": "en-119",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Gerunds vs infinitives",
+    "difficulty": "HARD",
+    "statement": "He stopped _____ when he saw the police.",
+    "options": [
+      "run",
+      "running",
+      "to running",
+      "ran"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Stop' + gerund means cease an action: he stopped running. 'Stop' + infinitive would mean stop in order to do something.",
+    "optionExplanations": [
+      "Wrong: bare infinitive.",
+      "Correct: gerund, ceased the action. ✓",
+      "Wrong: preposition not needed.",
+      "Wrong: past form."
+    ]
+  },
+  {
+    "id": "en-120",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Formal vs informal",
+    "difficulty": "MEDIUM",
+    "statement": "Which is the most formal expression?",
+    "options": [
+      "Can you help me?",
+      "Give me a hand.",
+      "I would appreciate your assistance.",
+      "Help me out."
+    ],
+    "answerIndex": 2,
+    "explanation": "'I would appreciate your assistance' is very formal and polite.",
+    "optionExplanations": [
+      "Wrong: neutral.",
+      "Wrong: informal.",
+      "Correct: formal. ✓",
+      "Wrong: informal."
+    ]
+  },
+  {
+    "id": "en-121",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Relative clauses",
+    "difficulty": "MEDIUM",
+    "statement": "The woman _____ lives next door is a doctor.",
+    "options": [
+      "which",
+      "who",
+      "whose",
+      "whom"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Who' is used for people as the subject of the relative clause.",
+    "optionExplanations": [
+      "Wrong: 'which' for things.",
+      "Correct: 'who' for people subject. ✓",
+      "Wrong: possessive.",
+      "Wrong: object form."
+    ]
+  },
+  {
+    "id": "en-122",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Suffixes for professions",
+    "difficulty": "EASY",
+    "statement": "A person who writes novels is a:",
+    "options": [
+      "novelist",
+      "noveler",
+      "novelician",
+      "novel writerer"
+    ],
+    "answerIndex": 0,
+    "explanation": "The suffix '-ist' often indicates a person practicing an art: novelist.",
+    "optionExplanations": [
+      "Correct: novelist. ✓",
+      "Wrong: not standard.",
+      "Wrong: not standard.",
+      "Wrong: not a word."
+    ]
+  },
+  {
+    "id": "en-123",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Tag questions",
+    "difficulty": "EASY",
+    "statement": "It's raining, _____?",
+    "options": [
+      "isn't it",
+      "doesn't it",
+      "wasn't it",
+      "hasn't it"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tag question for 'It is' is 'isn't it?'",
+    "optionExplanations": [
+      "Correct: isn't it. ✓",
+      "Wrong: auxiliary doesn't match.",
+      "Wrong: past tense.",
+      "Wrong: auxiliary doesn't match."
+    ]
+  },
+  {
+    "id": "en-124",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Collocations with take",
+    "difficulty": "MEDIUM",
+    "statement": "Complete the collocation: 'take ... of' (meaning to care for)",
+    "options": [
+      "part",
+      "care",
+      "advantage",
+      "place"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Take care of' means to look after someone or something.",
+    "optionExplanations": [
+      "Wrong: 'take part in'.",
+      "Correct: take care of. ✓",
+      "Wrong: 'take advantage of'.",
+      "Wrong: 'take place'."
+    ]
+  },
+  {
+    "id": "en-125",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Subject-verb agreement",
+    "difficulty": "MEDIUM",
+    "statement": "Mathematics _____ my favourite subject.",
+    "options": [
       "are",
-      "do"
+      "is",
+      "were",
+      "have been"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "'Mathematics' is singular despite ending in -s; we use singular verb 'is'.",
+    "optionExplanations": [
+      "Wrong: plural verb.",
+      "Correct: singular verb. ✓",
+      "Wrong: past plural.",
+      "Wrong: plural."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-13",
+    "id": "en-126",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "What is the opposite of 'increase'?",
+    "topic": "Vocabulary",
+    "subtopic": "Homophones",
+    "difficulty": "MEDIUM",
+    "statement": "Which pair are homophones?",
     "options": [
-      "Grow",
-      "Expand",
-      "Decrease",
-      "Raise"
+      "write / right",
+      "cat / cut",
+      "book / look",
+      "sheep / ship"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "'Write' and 'right' sound the same.",
+    "optionExplanations": [
+      "Correct: same sound. ✓",
+      "Wrong: different vowels.",
+      "Wrong: different vowels.",
+      "Wrong: different vowels."
+    ]
   },
   {
-    "id": "ENGLISH-added-more-1783812167970-14",
+    "id": "en-127",
     "subject": "ENGLISH",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Identify the adverb: 'She sings beautifully.'",
+    "topic": "Grammar",
+    "subtopic": "Future time clauses",
+    "difficulty": "MEDIUM",
+    "statement": "I will call you when I _____ home.",
     "options": [
-      "She",
-      "sings",
-      "beautifully",
-      "None"
+      "will get",
+      "get",
+      "got",
+      "am getting"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "In time clauses (when, as soon as, etc.), we use present simple for future, not 'will'.",
+    "optionExplanations": [
+      "Wrong: no 'will'.",
+      "Correct: present simple. ✓",
+      "Wrong: past.",
+      "Wrong: present continuous possible but less common for simple arrival."
+    ]
+  },
+  {
+    "id": "en-128",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Proverbs",
+    "difficulty": "MEDIUM",
+    "statement": "Complete: 'Better late than _____.'",
+    "options": [
+      "early",
+      "never",
+      "always",
+      "soon"
+    ],
+    "answerIndex": 1,
+    "explanation": "The proverb is 'Better late than never'.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: never. ✓",
+      "Wrong: not the saying.",
+      "Wrong: not the saying."
+    ]
+  },
+  {
+    "id": "en-129",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Wish / If only",
+    "difficulty": "HARD",
+    "statement": "If only I _____ more time to travel.",
+    "options": [
+      "have",
+      "had",
+      "will have",
+      "having"
+    ],
+    "answerIndex": 1,
+    "explanation": "'If only' + past simple expresses a wish for a present situation to be different.",
+    "optionExplanations": [
+      "Wrong: present simple.",
+      "Correct: past simple for unreal. ✓",
+      "Wrong: future.",
+      "Wrong: gerund."
+    ]
+  },
+  {
+    "id": "en-130",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs with 'get'",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'get along with' mean?",
+    "options": [
+      "to argue constantly",
+      "to have a friendly relationship",
+      "to travel together",
+      "to work separately"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Get along with' means to have a good relationship.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: friendly. ✓",
+      "Wrong: not about travelling.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-131",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Adverbs of frequency",
+    "difficulty": "EASY",
+    "statement": "Place the adverb correctly: 'I have _____ seen that movie.' (never)",
+    "options": [
+      "I have seen never that movie.",
+      "I never have seen that movie.",
+      "I have never seen that movie.",
+      "Never I have seen that movie."
+    ],
+    "answerIndex": 2,
+    "explanation": "Adverbs like 'never' go between the auxiliary and main verb: 'have never seen'.",
+    "optionExplanations": [
+      "Wrong: order.",
+      "Wrong: 'never' before auxiliary? possible but less common, standard is after auxiliary.",
+      "Correct: standard position. ✓",
+      "Wrong: inversion not needed."
+    ]
+  },
+  {
+    "id": "en-132",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms for 'big'",
+    "difficulty": "EASY",
+    "statement": "Which word is a synonym for 'large'?",
+    "options": [
+      "tiny",
+      "massive",
+      "little",
+      "small"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Massive' means very large.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: very large. ✓",
+      "Wrong: opposite.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-133",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Mixed tenses",
+    "difficulty": "MEDIUM",
+    "statement": "By the time we arrived, the film _____.",
+    "options": [
+      "already started",
+      "has already started",
+      "had already started",
+      "is already starting"
+    ],
+    "answerIndex": 2,
+    "explanation": "Past perfect for action completed before another past action.",
+    "optionExplanations": [
+      "Wrong: simple past doesn't show anteriority.",
+      "Wrong: present perfect doesn't match past time.",
+      "Correct: had started. ✓",
+      "Wrong: present continuous."
+    ]
+  },
+  {
+    "id": "en-134",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms with food",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'a piece of cake' mean?",
+    "options": [
+      "something delicious",
+      "something very easy",
+      "a dessert",
+      "a difficult task"
+    ],
+    "answerIndex": 1,
+    "explanation": "Idiom meaning very easy.",
+    "optionExplanations": [
+      "Wrong: not about taste.",
+      "Correct: easy. ✓",
+      "Wrong: literal.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-135",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Passive with modals",
+    "difficulty": "HARD",
+    "statement": "The windows _____ cleaned tomorrow.",
+    "options": [
+      "must be",
+      "must to be",
+      "must been",
+      "must being"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passive with modal: modal + be + past participle.",
+    "optionExplanations": [
+      "Correct: must be cleaned. ✓",
+      "Wrong: no 'to'.",
+      "Wrong: missing 'be'.",
+      "Wrong: incorrect form."
+    ]
+  },
+  {
+    "id": "en-136",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Prefixes",
+    "difficulty": "MEDIUM",
+    "statement": "The prefix 'post-' (as in postwar) means:",
+    "options": [
+      "before",
+      "during",
+      "after",
+      "against"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Post-' means after (postgraduate, postwar).",
+    "optionExplanations": [
+      "Wrong: 'pre-' means before.",
+      "Wrong: 'peri-' or 'during'.",
+      "Correct: after. ✓",
+      "Wrong: 'anti-' means against."
+    ]
+  },
+  {
+    "id": "en-137",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Indirect objects",
+    "difficulty": "EASY",
+    "statement": "Give me the book. The indirect object is:",
+    "options": [
+      "Give",
+      "me",
+      "the book",
+      "Give me"
+    ],
+    "answerIndex": 1,
+    "explanation": "'me' is the indirect object (to me), 'the book' is direct object.",
+    "optionExplanations": [
+      "Wrong: verb.",
+      "Correct: indirect object. ✓",
+      "Wrong: direct object.",
+      "Wrong: verb+IO."
+    ]
+  },
+  {
+    "id": "en-138",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "False friends",
+    "difficulty": "HARD",
+    "statement": "In English, 'sensible' means:",
+    "options": [
+      "easily hurt",
+      "practical and reasonable",
+      "very emotional",
+      "sensitive"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Sensible' = having good sense, practical. 'Sensitive' is different.",
+    "optionExplanations": [
+      "Wrong: that's 'sensitive'.",
+      "Correct: practical. ✓",
+      "Wrong: no.",
+      "Wrong: different word."
+    ]
+  },
+  {
+    "id": "en-139",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Neither/Either",
+    "difficulty": "MEDIUM",
+    "statement": "I don't like coffee. '_____ do I.'",
+    "options": [
+      "So",
+      "Neither",
+      "Also",
+      "Either"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Neither' is used for agreeing with a negative statement.",
+    "optionExplanations": [
+      "Wrong: 'so' for positive.",
+      "Correct: neither. ✓",
+      "Wrong: not used this way.",
+      "Wrong: 'me either' informal, but 'neither' is standard inverted."
+    ]
+  },
+  {
+    "id": "en-140",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms for 'important'",
+    "difficulty": "EASY",
+    "statement": "Which word is a synonym for 'crucial'?",
+    "options": [
+      "trivial",
+      "essential",
+      "optional",
+      "unimportant"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Crucial' means extremely important; 'essential' is a synonym.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: essential. ✓",
+      "Wrong: opposite.",
+      "Wrong: opposite."
+    ]
+  },
+  {
+    "id": "en-141",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Omission of 'if'",
+    "difficulty": "HARD",
+    "statement": "_____ I known about the meeting, I would have attended.",
+    "options": [
+      "If",
+      "Had",
+      "Have",
+      "Would"
+    ],
+    "answerIndex": 1,
+    "explanation": "In formal English, we can omit 'if' and invert subject and auxiliary: 'Had I known'.",
+    "optionExplanations": [
+      "Wrong: 'If I known' missing 'had'.",
+      "Correct: Had I known = If I had known. ✓",
+      "Wrong: incorrect.",
+      "Wrong: incorrect."
+    ]
+  },
+  {
+    "id": "en-142",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Acronyms",
+    "difficulty": "EASY",
+    "statement": "What does 'Wi-Fi' stand for?",
+    "options": [
+      "Wireless Fidelity",
+      "Wireless Frequency",
+      "Wide Fidelity",
+      "Wired Fiber"
+    ],
+    "answerIndex": 0,
+    "explanation": "Wi-Fi is commonly understood to stand for Wireless Fidelity (though officially it's just a trademark).",
+    "optionExplanations": [
+      "Correct: Wireless Fidelity. ✓",
+      "Wrong: not frequency.",
+      "Wrong: not wide.",
+      "Wrong: not wired."
+    ]
+  },
+  {
+    "id": "en-143",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "So / Such",
+    "difficulty": "MEDIUM",
+    "statement": "It was _____ a boring film that I fell asleep.",
+    "options": [
+      "so",
+      "such",
+      "very",
+      "too"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Such a' + adjective + noun. 'So' would be used with adjective alone: 'so boring'.",
+    "optionExplanations": [
+      "Wrong: 'so boring a film' is possible but rare; 'such a boring film' is standard.",
+      "Correct: such a. ✓",
+      "Wrong: 'very a' incorrect.",
+      "Wrong: 'too a' incorrect."
+    ]
+  },
+  {
+    "id": "en-144",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Idioms with time",
+    "difficulty": "MEDIUM",
+    "statement": "'Time flies' means:",
+    "options": [
+      "time passes very quickly",
+      "a clock is broken",
+      "you are late",
+      "an insect measures time"
+    ],
+    "answerIndex": 0,
+    "explanation": "The idiom 'Time flies' means time seems to pass quickly.",
+    "optionExplanations": [
+      "Correct: passes quickly. ✓",
+      "Wrong: literal.",
+      "Wrong: not about lateness.",
+      "Wrong: nonsense."
+    ]
+  },
+  {
+    "id": "en-145",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Double genitive",
+    "difficulty": "MEDIUM",
+    "statement": "A friend of _____ is coming to visit.",
+    "options": [
+      "me",
+      "my",
+      "mine",
+      "I"
+    ],
+    "answerIndex": 2,
+    "explanation": "Double genitive: 'a friend of mine' (mine = my friends).",
+    "optionExplanations": [
+      "Wrong: object pronoun.",
+      "Wrong: possessive adjective, needs noun.",
+      "Correct: possessive pronoun. ✓",
+      "Wrong: subject pronoun."
+    ]
+  },
+  {
+    "id": "en-146",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Suffix -ful",
+    "difficulty": "EASY",
+    "statement": "The word 'beautiful' contains the suffix -ful, which means:",
+    "options": [
+      "without",
+      "full of",
+      "able to",
+      "state of"
+    ],
+    "answerIndex": 1,
+    "explanation": "'-ful' means 'full of', as in beautiful (full of beauty).",
+    "optionExplanations": [
+      "Wrong: -less.",
+      "Correct: full of. ✓",
+      "Wrong: -able.",
+      "Wrong: -ness."
+    ]
+  },
+  {
+    "id": "en-147",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Adjective order",
+    "difficulty": "HARD",
+    "statement": "Choose the correct order: She bought a _____ dress.",
+    "options": [
+      "red beautiful long silk",
+      "beautiful long red silk",
+      "silk red beautiful long",
+      "long silk beautiful red"
+    ],
+    "answerIndex": 1,
+    "explanation": "Order: opinion (beautiful), size (long), colour (red), material (silk).",
+    "optionExplanations": [
+      "Wrong: opinion first.",
+      "Correct: opinion, size, colour, material. ✓",
+      "Wrong: wrong order.",
+      "Wrong: wrong order."
+    ]
+  },
+  {
+    "id": "en-148",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Words for groups",
+    "difficulty": "MEDIUM",
+    "statement": "A group of bees is called a:",
+    "options": [
+      "flock",
+      "herd",
+      "swarm",
+      "pack"
+    ],
+    "answerIndex": 2,
+    "explanation": "The collective noun for bees is 'swarm'.",
+    "optionExplanations": [
+      "Wrong: birds, sheep.",
+      "Wrong: cattle.",
+      "Correct: swarm. ✓",
+      "Wrong: wolves, dogs."
+    ]
+  },
+  {
+    "id": "en-149",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Determiners with superlatives",
+    "difficulty": "EASY",
+    "statement": "That was _____ best meal I've ever had.",
+    "options": [
+      "a",
+      "an",
+      "the",
+      "no article"
+    ],
+    "answerIndex": 2,
+    "explanation": "Superlatives are usually preceded by 'the'.",
+    "optionExplanations": [
+      "Wrong: indefinite.",
+      "Wrong: vowel sound.",
+      "Correct: the best. ✓",
+      "Wrong: article needed."
+    ]
+  },
+  {
+    "id": "en-150",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Confusing words",
+    "difficulty": "HARD",
+    "statement": "The _____ of the school gave a speech.",
+    "options": [
+      "principle",
+      "principal",
+      "principles",
+      "principality"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Principal' means head of a school. 'Principle' is a fundamental rule.",
+    "optionExplanations": [
+      "Wrong: a rule.",
+      "Correct: head of school. ✓",
+      "Wrong: plural of principle.",
+      "Wrong: a territory."
+    ]
+  },
+  {
+    "id": "en-151",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Conjunctions",
+    "difficulty": "EASY",
+    "statement": "I wanted to go, _____ I was too tired.",
+    "options": [
+      "so",
+      "but",
+      "because",
+      "and"
+    ],
+    "answerIndex": 1,
+    "explanation": "'But' shows contrast between wanting to go and being tired.",
+    "optionExplanations": [
+      "Wrong: result.",
+      "Correct: contrast. ✓",
+      "Wrong: reason.",
+      "Wrong: addition."
+    ]
+  },
+  {
+    "id": "en-152",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Emotions",
+    "difficulty": "EASY",
+    "statement": "Which word describes a feeling of great joy?",
+    "options": [
+      "sorrow",
+      "elation",
+      "anger",
+      "fear"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Elation' means great happiness and exhilaration.",
+    "optionExplanations": [
+      "Wrong: sadness.",
+      "Correct: great joy. ✓",
+      "Wrong: mad.",
+      "Wrong: scared."
+    ]
+  },
+  {
+    "id": "en-153",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Inversion in conditional",
+    "difficulty": "HARD",
+    "statement": "_____ you need any help, don't hesitate to call.",
+    "options": [
+      "Should",
+      "Would",
+      "Could",
+      "Might"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Should you need' is a formal way of saying 'If you should need / If you need'.",
+    "optionExplanations": [
+      "Correct: inversion with 'should'. ✓",
+      "Wrong: not used for condition.",
+      "Wrong: not used.",
+      "Wrong: not used."
+    ]
+  },
+  {
+    "id": "en-154",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal verbs with 'put'",
+    "difficulty": "MEDIUM",
+    "statement": "What does 'put off' mean?",
+    "options": [
+      "to extinguish",
+      "to postpone",
+      "to wear",
+      "to insult"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Put off' means to delay or postpone.",
+    "optionExplanations": [
+      "Wrong: 'put out'.",
+      "Correct: postpone. ✓",
+      "Wrong: 'put on'.",
+      "Wrong: 'put down' can mean insult."
+    ]
+  },
+  {
+    "id": "en-155",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Both, either, neither",
+    "difficulty": "MEDIUM",
+    "statement": "_____ of the two options is acceptable. (You can choose any one.)",
+    "options": [
+      "Both",
+      "Either",
+      "Neither",
+      "All"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Either' means one or the other of two. 'Both' means the two together.",
+    "optionExplanations": [
+      "Wrong: plural, would need 'are'.",
+      "Correct: either is singular. ✓",
+      "Wrong: means none.",
+      "Wrong: for more than two."
+    ]
+  },
+  {
+    "id": "en-156",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Words of French origin",
+    "difficulty": "HARD",
+    "statement": "Which English word is originally French?",
+    "options": [
+      "kindergarten",
+      "ballet",
+      "piano",
+      "patio"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Ballet' comes from French. 'Kindergarten' is German, 'piano' Italian, 'patio' Spanish.",
+    "optionExplanations": [
+      "Wrong: German.",
+      "Correct: French. ✓",
+      "Wrong: Italian.",
+      "Wrong: Spanish."
+    ]
+  },
+  {
+    "id": "en-157",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Emphatic 'do'",
+    "difficulty": "EASY",
+    "statement": "I _____ want to go! (emphatic)",
+    "options": [
+      "does",
+      "do",
+      "doing",
+      "done"
+    ],
+    "answerIndex": 1,
+    "explanation": "Emphatic present simple with 'I' uses 'do' + base verb.",
+    "optionExplanations": [
+      "Wrong: third person.",
+      "Correct: do want. ✓",
+      "Wrong: gerund.",
+      "Wrong: past participle."
+    ]
+  },
+  {
+    "id": "en-158",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms for 'happy'",
+    "difficulty": "EASY",
+    "statement": "Which word is NOT a synonym of 'happy'?",
+    "options": [
+      "glad",
+      "content",
+      "miserable",
+      "joyful"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Miserable' is the opposite of happy.",
+    "optionExplanations": [
+      "Wrong: synonym.",
+      "Wrong: synonym.",
+      "Correct: antonym. ✓",
+      "Wrong: synonym."
+    ]
+  },
+  {
+    "id": "en-159",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Countable/Uncountable",
+    "difficulty": "EASY",
+    "statement": "How _____ money do you have?",
+    "options": [
+      "many",
+      "much",
+      "few",
+      "a few"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Money' is uncountable, use 'how much'.",
+    "optionExplanations": [
+      "Wrong: for countable.",
+      "Correct: how much. ✓",
+      "Wrong: for countable.",
+      "Wrong: for countable."
+    ]
+  },
+  {
+    "id": "en-160",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Euphemisms",
+    "difficulty": "MEDIUM",
+    "statement": "Which phrase is a euphemism for 'died'?",
+    "options": [
+      "passed away",
+      "gave up",
+      "ran away",
+      "went out"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Passed away' is a gentle way to say someone has died.",
+    "optionExplanations": [
+      "Correct: died. ✓",
+      "Wrong: surrendered.",
+      "Wrong: escaped.",
+      "Wrong: left the house."
+    ]
+  },
+  {
+    "id": "en-161",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Future perfect continuous",
+    "difficulty": "HARD",
+    "statement": "By next month, she _____ English for three years.",
+    "options": [
+      "will have been learning",
+      "will learn",
+      "learns",
+      "has learned"
+    ],
+    "answerIndex": 0,
+    "explanation": "Future perfect continuous emphasizes duration until a future point: will have been learning.",
+    "optionExplanations": [
+      "Correct: will have been learning. ✓",
+      "Wrong: simple future.",
+      "Wrong: present simple.",
+      "Wrong: present perfect."
+    ]
+  },
+  {
+    "id": "en-162",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Antonyms",
+    "difficulty": "MEDIUM",
+    "statement": "What is the antonym of 'ancient'?",
+    "options": [
+      "old",
+      "modern",
+      "historic",
+      "antique"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Modern' means relating to the present or recent times, opposite of ancient.",
+    "optionExplanations": [
+      "Wrong: synonym.",
+      "Correct: modern. ✓",
+      "Wrong: similar.",
+      "Wrong: similar."
+    ]
+  },
+  {
+    "id": "en-163",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Prepositions after adjectives",
+    "difficulty": "MEDIUM",
+    "statement": "She is proud _____ her achievements.",
+    "options": [
+      "of",
+      "for",
+      "about",
+      "with"
+    ],
+    "answerIndex": 0,
+    "explanation": "The adjective 'proud' takes the preposition 'of': proud of.",
+    "optionExplanations": [
+      "Correct: proud of. ✓",
+      "Wrong: not used.",
+      "Wrong: not used.",
+      "Wrong: not used."
+    ]
+  },
+  {
+    "id": "en-164",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Word meaning",
+    "difficulty": "EASY",
+    "statement": "What does 'vivid' mean?",
+    "options": [
+      "dull",
+      "producing powerful feelings or strong, clear images",
+      "unclear",
+      "forgetful"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Vivid' means bright, intense, or producing clear mental images.",
+    "optionExplanations": [
+      "Wrong: opposite.",
+      "Correct: powerful, clear. ✓",
+      "Wrong: opposite.",
+      "Wrong: unrelated."
+    ]
+  },
+  {
+    "id": "en-165",
+    "subject": "ENGLISH",
+    "topic": "Grammar",
+    "subtopic": "Causative 'have'",
+    "difficulty": "HARD",
+    "statement": "I need to get my car _____.",
+    "options": [
+      "repair",
+      "repaired",
+      "repairing",
+      "to repair"
+    ],
+    "answerIndex": 1,
+    "explanation": "Causative: have/get + object + past participle (service done by someone else).",
+    "optionExplanations": [
+      "Wrong: bare infinitive.",
+      "Correct: past participle. ✓",
+      "Wrong: gerund.",
+      "Wrong: infinitive."
+    ]
+  },
+  {
+    "id": "en-166",
+    "subject": "ENGLISH",
+    "topic": "Vocabulary",
+    "subtopic": "Collocations with 'do' and 'make'",
+    "difficulty": "MEDIUM",
+    "statement": "Which is correct?",
+    "options": [
+      "do a mistake",
+      "make a mistake",
+      "do a decision",
+      "make a homework"
+    ],
+    "answerIndex": 1,
+    "explanation": "Correct collocations: make a mistake, make a decision, do homework.",
+    "optionExplanations": [
+      "Wrong: 'make a mistake'.",
+      "Correct: make a mistake. ✓",
+      "Wrong: 'make a decision'.",
+      "Wrong: 'do homework'."
+    ]
   }
 ]

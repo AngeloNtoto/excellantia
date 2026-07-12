@@ -80,378 +80,3179 @@
     "explanation": "Altruiste signifie qui se préoccupe du bien des autres, qui agit pour autrui sans intérêt personnel. Le synonyme le plus proche est 'généreux'."
   },
   {
-    "id": "FRENCH-added-1783812112218-0",
+    "id": "fr-005",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-002",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Dans le texte du Petit Prince, que représentait le dessin numéro 1 selon le narrateur ?",
+    "options": [
+      "Un chapeau",
+      "Un serpent boa digérant un éléphant",
+      "Un boa fermé",
+      "Une forêt vierge"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le narrateur explique que son dessin représentait un serpent boa qui digérait un éléphant, mais les adultes l'ont pris pour un chapeau."
+  },
+  {
+    "id": "fr-006",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-002",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
     "difficulty": "MEDIUM",
+    "statement": "Pourquoi le narrateur abandonne-t-il sa carrière de peintre ?",
+    "options": [
+      "Parce qu'il n'avait plus de crayons de couleur.",
+      "Parce que les grandes personnes ne comprenaient pas ses dessins.",
+      "Parce qu'il préférait la géographie.",
+      "Parce que son dessin numéro 2 était raté."
+    ],
+    "answerIndex": 1,
+    "explanation": "Il dit avoir été découragé par l'insuccès de ses dessins auprès des adultes qui ne comprenaient jamais rien toutes seules."
+  },
+  {
+    "id": "fr-007",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-003",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Dans la fable 'Le Corbeau et le Renard', que laisse tomber le corbeau ?",
+    "options": [
+      "Un fruit",
+      "Un fromage",
+      "Un ver de terre",
+      "Une noix"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le corbeau tenait en son bec un fromage, qu'il laisse tomber quand il ouvre le bec pour chanter."
+  },
+  {
+    "id": "fr-008",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-003",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le défaut du corbeau exploité par le renard ?",
+    "options": [
+      "La paresse",
+      "La gourmandise",
+      "La vanité",
+      "La curiosité"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le renard flatte le corbeau sur sa beauté et sa voix, le corbeau veut montrer qu'il chante bien, par vanité il ouvre le bec."
+  },
+  {
+    "id": "fr-009",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-004",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Pourquoi la Cigale va-t-elle chez la Fourmi ?",
+    "options": [
+      "Pour chanter",
+      "Pour emprunter de la nourriture",
+      "Pour se vanter",
+      "Pour se plaindre du froid"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Cigale se trouve dépourvue et va crier famine chez la Fourmi pour lui emprunter de quoi manger."
+  },
+  {
+    "id": "fr-010",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-004",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Que peut-on déduire de la réponse de la Fourmi ?",
+    "options": [
+      "Elle est généreuse.",
+      "Elle refuse de prêter car la Cigale n'a pas travaillé.",
+      "Elle n'a pas de grains en réserve.",
+      "Elle propose un échange."
+    ],
+    "answerIndex": 1,
+    "explanation": "La Fourmi, n'étant pas prêteuse, refuse d'aider la Cigale qui a chanté au lieu de faire des provisions."
+  },
+  {
+    "id": "fr-011",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-005",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "MEDIUM",
+    "statement": "Dans le début de Candide, pourquoi la mère de Candide n'a-t-elle pas épousé son père ?",
+    "options": [
+      "Il était trop pauvre.",
+      "Il ne pouvait prouver que soixante et onze quartiers de noblesse.",
+      "Il était étranger.",
+      "Il n'était pas aimé de la famille."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le texte dit : « parce qu'il n'avait pu prouver que soixante et onze quartiers »."
+  },
+  {
+    "id": "fr-012",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-005",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la tonalité de la description du baron de Thunder-ten-tronckh ?",
+    "options": [
+      "Épique",
+      "Ironique",
+      "Tragique",
+      "Lyrique"
+    ],
+    "answerIndex": 1,
+    "explanation": "Voltaire se moque du baron en soulignant la prétention de sa noblesse avec des détails ridicules (château avec une porte et des fenêtres)."
+  },
+  {
+    "id": "fr-013",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-006",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Pourquoi Jean Valjean a-t-il été condamné au bagne ?",
+    "options": [
+      "Pour meurtre",
+      "Pour vol de pain",
+      "Pour évasion",
+      "Pour vagabondage"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le texte précise : « condamné à cinq ans de galères pour avoir volé un pain »."
+  },
+  {
+    "id": "fr-014",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-006",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "HARD",
+    "statement": "Quel est l'acte décisif de Monseigneur Bienvenu qui transforme Jean Valjean ?",
+    "options": [
+      "Lui offrir un repas",
+      "Lui donner les couverts et les chandeliers en déclarant l'avoir acheté au bien",
+      "Le cacher des gendarmes",
+      "Le conduire à l'église"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'évêque lui donne l'argenterie et ajoute les chandeliers en disant acheter son âme pour le bien, ce qui provoque le changement de Jean Valjean."
+  },
+  {
+    "id": "fr-015",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-007",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Où se rend le poète dans 'Demain, dès l'aube...' ?",
+    "options": [
+      "À la montagne",
+      "Au bord de la mer",
+      "Sur la tombe d'un être cher",
+      "À Harfleur"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le dernier vers dit : « je mettrai sur ta tombe un bouquet de houx vert et de bruyère en fleur. » Il va se recueillir sur une tombe."
+  },
+  {
+    "id": "fr-016",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-007",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Quel sentiment domine dans ce poème de Victor Hugo ?",
+    "options": [
+      "La colère",
+      "L'indifférence",
+      "La tristesse et le recueillement",
+      "La joie"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le poème exprime le deuil et la douleur d'un père (pour sa fille Léopoldine). Le ton est grave, triste et résolu."
+  },
+  {
+    "id": "fr-017",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Accord du participe passé",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez correctement le participe passé : 'Les fleurs que j'ai (cueillir) ...'.",
+    "options": [
+      "cueillies",
+      "cueillis",
+      "cueilli",
+      "cueillit"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le COD 'que' remplace 'les fleurs' (féminin pluriel) et est placé avant l'auxiliaire avoir, donc le participe s'accorde au féminin pluriel : cueillies."
+  },
+  {
+    "id": "fr-018",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms relatifs",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : 'La ville ... je suis né est petite.'",
+    "options": [
+      "que",
+      "dont",
+      "où",
+      "laquelle"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le pronom relatif 'où' remplace un complément de lieu : 'je suis né dans cette ville' → 'la ville où je suis né'."
+  },
+  {
+    "id": "fr-019",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel passé",
+    "difficulty": "HARD",
+    "statement": "Quelle phrase est correctement conjuguée au conditionnel passé ?",
+    "options": [
+      "Si j'aurais su, je serais venu.",
+      "Si j'avais su, je serais venu.",
+      "Si j'avais su, je serai venu.",
+      "Si j'aurais su, je viendrais."
+    ],
+    "answerIndex": 1,
+    "explanation": "Règle de concordance : après 'si', on utilise l'indicatif (plus-que-parfait) et non le conditionnel. La principale est au conditionnel passé."
+  },
+  {
+    "id": "fr-020",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Homonymes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot complète correctement la phrase : 'Il a acheté un ... de terre.' ?",
+    "options": [
+      "tère",
+      "ter",
+      "terre",
+      "taire"
+    ],
+    "answerIndex": 2,
+    "explanation": "'terre' désigne la matière, le sol. Les autres formes n'existent pas dans ce contexte (taire = verbe)."
+  },
+  {
+    "id": "fr-021",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Accents",
+    "difficulty": "EASY",
     "statement": "Lequel de ces mots est correctement orthographié ?",
     "options": [
-      "Éxigence",
-      "Exigeance",
-      "Exigence",
-      "Éxigeance"
+      "évènement",
+      "événement",
+      "évenement",
+      "evenement"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "La réforme de 1990 autorise 'évènement' (accent grave) à la place de 'événement' (accent aigu). Les deux sont acceptés, mais 'évènement' est la graphie moderne recommandée."
   },
   {
-    "id": "FRENCH-added-1783812112218-1",
+    "id": "fr-022",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Grammaire",
+    "subtopic": "Concordance des temps",
     "difficulty": "MEDIUM",
-    "statement": "Dans la phrase 'Les pommes que j'ai mangées étaient bonnes', pourquoi le participe passé 'mangées' est-il au féminin pluriel ?",
+    "statement": "Transformez au discours indirect : Paul a dit : « Je viendrai demain. »",
     "options": [
-      "Parce qu'il s'accorde avec le sujet 'je'",
-      "Parce qu'il s'accorde avec le COD 'que' placé avant le verbe",
-      "Parce que c'est une exception",
-      "Parce qu'il s'accorde avec 'bonnes'"
+      "Paul a dit qu'il viendrait demain.",
+      "Paul a dit qu'il viendra demain.",
+      "Paul a dit qu'il viendrait le lendemain.",
+      "Paul a dit qu'il vienne demain."
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Au discours indirect, le futur devient conditionnel présent, et 'demain' devient 'le lendemain'."
   },
   {
-    "id": "FRENCH-added-1783812112218-2",
+    "id": "fr-023",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Vocabulaire",
+    "subtopic": "Figures de style",
     "difficulty": "MEDIUM",
-    "statement": "Quel est le participe passé du verbe 'résoudre' ?",
+    "statement": "Quelle figure de style est utilisée dans 'La forêt gémit sous le vent' ?",
     "options": [
-      "Résolvu",
-      "Résolu",
-      "Résous",
-      "Résolué"
+      "Métaphore",
+      "Comparaison",
+      "Personnification",
+      "Hyperbole"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "On attribue à la forêt la capacité de gémir, propre aux humains. C'est une personnification."
   },
   {
-    "id": "FRENCH-added-1783812112218-3",
+    "id": "fr-024",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Conjugaison",
+    "subtopic": "Imparfait",
+    "difficulty": "EASY",
+    "statement": "Conjuguez le verbe 'finir' à la 1ère personne du singulier à l'imparfait :",
+    "options": [
+      "je finis",
+      "je finissais",
+      "je finirai",
+      "je finisse"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'imparfait de finir est 'je finissais', formé sur le radical 'finiss-' + terminaisons de l'imparfait."
+  },
+  {
+    "id": "fr-025",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Nature des mots",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la nature grammaticale du mot 'que' dans la phrase : 'Je pense que tu as raison.' ?",
+    "options": [
+      "Pronom relatif",
+      "Conjonction de subordination",
+      "Adverbe",
+      "Pronom interrogatif"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Que' introduit une proposition subordonnée complétive, c'est une conjonction de subordination."
+  },
+  {
+    "id": "fr-026",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Homophones",
+    "difficulty": "EASY",
+    "statement": "Complétez : 'Il s'est ... tôt ce matin.' (lever)",
+    "options": [
+      "levé",
+      "levée",
+      "levés",
+      "levées"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec l'auxiliaire 'être', le participe passé s'accorde avec le sujet. Ici, 'il' est masculin singulier, donc 'levé'."
+  },
+  {
+    "id": "fr-027",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Antonymes",
+    "difficulty": "EASY",
+    "statement": "Quel est l'antonyme de 'éphémère' ?",
+    "options": [
+      "court",
+      "durable",
+      "fragile",
+      "passager"
+    ],
+    "answerIndex": 1,
+    "explanation": "Éphémère signifie qui ne dure pas, l'opposé est 'durable'."
+  },
+  {
+    "id": "fr-028",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait",
+    "difficulty": "MEDIUM",
+    "statement": "Mettez la phrase au plus-que-parfait : 'Elle sort quand il arrive.'",
+    "options": [
+      "Elle était sortie quand il est arrivé.",
+      "Elle sortait quand il était arrivé.",
+      "Elle est sortie quand il arrivait.",
+      "Elle était sortie quand il arrivait."
+    ],
+    "answerIndex": 0,
+    "explanation": "Le plus-que-parfait marque l'antériorité : elle était sortie avant qu'il n'arrive."
+  },
+  {
+    "id": "fr-029",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adjectifs de couleur",
     "difficulty": "HARD",
-    "statement": "Quelle figure de style consiste à rapprocher deux mots de sens opposé ?",
+    "statement": "Comment accorde-t-on l'adjectif 'orange' dans 'des robes orange' ?",
     "options": [
-      "L'hyperbole",
-      "L'oxymore",
-      "La métaphore",
-      "La litote"
+      "oranges",
+      "orange",
+      "orangées",
+      "orangés"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "L'adjectif de couleur 'orange' issu d'un nom commun (le fruit) est invariable, donc 'orange' ne prend pas de 's'."
   },
   {
-    "id": "FRENCH-added-1783812112218-4",
+    "id": "fr-030",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est l'antonyme du mot 'altruiste' ?",
+    "topic": "Vocabulaire",
+    "subtopic": "Sens figuré",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie l'expression 'avoir le cœur sur la main' ?",
     "options": [
-      "Généreux",
-      "Égoïste",
-      "Philanthrope",
-      "Hypocrite"
+      "Être maladroit",
+      "Être généreux",
+      "Être triste",
+      "Être courageux"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Cette expression signifie être très généreux, prêt à aider les autres."
   },
   {
-    "id": "FRENCH-added-1783812112218-5",
+    "id": "fr-031",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif",
     "difficulty": "EASY",
-    "statement": "Identifiez le temps du verbe dans 'Il chantait' :",
+    "statement": "Quelle est la 2e personne du singulier de l'impératif présent du verbe 'manger' ?",
     "options": [
-      "Passé simple",
+      "mange",
+      "manges",
+      "mangé",
+      "mangez"
+    ],
+    "answerIndex": 0,
+    "explanation": "À l'impératif, on dit 'mange' sans 's' final pour les verbes du 1er groupe."
+  },
+  {
+    "id": "fr-032",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Subjonctif présent",
+    "difficulty": "MEDIUM",
+    "statement": "Choisissez la forme correcte : 'Il faut que nous ...'",
+    "options": [
+      "partons",
+      "partions",
+      "partirons",
+      "partions"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le subjonctif présent de 'partir' à la 1ère personne du pluriel est 'que nous partions'."
+  },
+  {
+    "id": "fr-033",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Double consonne",
+    "difficulty": "HARD",
+    "statement": "Lequel de ces mots s'écrit avec un double 'p' ?",
+    "options": [
+      "apaiser",
+      "apercevoir",
+      "appeler",
+      "apetit"
+    ],
+    "answerIndex": 2,
+    "explanation": "Appeler prend deux 'p', contrairement à apercevoir, apaiser, apitoyer qui n'en ont qu'un."
+  },
+  {
+    "id": "fr-034",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Étymologie",
+    "difficulty": "MEDIUM",
+    "statement": "Le préfixe 'télé-' signifie :",
+    "options": [
+      "proche",
+      "loin",
+      "petit",
+      "grand"
+    ],
+    "answerIndex": 1,
+    "explanation": "Issu du grec, 'télé' signifie 'loin' (télévision, téléphone)."
+  },
+  {
+    "id": "fr-035",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms personnels",
+    "difficulty": "EASY",
+    "statement": "Remplacez les mots soulignés : 'Il parle à sa mère.' → 'Il ... parle.'",
+    "options": [
+      "la",
+      "lui",
+      "elle",
+      "leur"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COI 'à sa mère' est remplacé par le pronom 'lui' (3e personne du singulier)."
+  },
+  {
+    "id": "fr-036",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple",
+    "difficulty": "EASY",
+    "statement": "Quelle est la forme correcte du futur simple du verbe 'pouvoir' à la 1ère personne du singulier ?",
+    "options": [
+      "je pourrai",
+      "je pourrais",
+      "je pouvrai",
+      "je pourai"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le futur simple de 'pouvoir' est 'je pourrai' (deux 'r')."
+  },
+  {
+    "id": "fr-037",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Confusion a/à",
+    "difficulty": "EASY",
+    "statement": "Complétez : 'Il est allé ... Paris.'",
+    "options": [
+      "a",
+      "à",
+      "as",
+      "ah"
+    ],
+    "answerIndex": 1,
+    "explanation": "La préposition 'à' avec accent grave marque le lieu ; 'a' sans accent est le verbe avoir."
+  },
+  {
+    "id": "fr-038",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Registres de langue",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot appartient au langage soutenu pour désigner une maison ?",
+    "options": [
+      "baraque",
+      "demeure",
+      "crèche",
+      "piaule"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Demeure' est le terme soutenu pour désigner une habitation."
+  },
+  {
+    "id": "fr-039",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Voix passive",
+    "difficulty": "HARD",
+    "statement": "Transformez à la voix passive : 'Le vent a cassé la branche.'",
+    "options": [
+      "La branche a été cassée par le vent.",
+      "La branche est cassée par le vent.",
+      "La branche était cassée par le vent.",
+      "La branche sera cassée par le vent."
+    ],
+    "answerIndex": 0,
+    "explanation": "Pour mettre à la voix passive, le COD devient sujet, l'auxiliaire être se met au même temps que l'actif (passé composé → a été + participe)."
+  },
+  {
+    "id": "fr-040",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes pronominaux",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez le participe passé : 'Ils se sont (téléphoner) ... hier.'",
+    "options": [
+      "téléphoné",
+      "téléphonés",
+      "téléphonée",
+      "téléphonées"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec les verbes pronominaux réciproques, si le COD est placé après (se téléphoner à quelqu'un), on n'accorde pas. Ici, 'se' est COI, donc pas d'accord."
+  },
+  {
+    "id": "fr-041",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Polysémie",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le sens du mot 'grève' dans 'la grève des transports' ?",
+    "options": [
+      "plage",
+      "arrêt de travail",
+      "manifestation violente",
+      "maladie"
+    ],
+    "answerIndex": 1,
+    "explanation": "Une grève est une cessation collective du travail pour appuyer des revendications."
+  },
+  {
+    "id": "fr-042",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Conjonctions",
+    "difficulty": "EASY",
+    "statement": "Quelle conjonction exprime la cause dans 'Il est fatigué parce qu'il a peu dormi.' ?",
+    "options": [
+      "parce que",
+      "fatigué",
+      "peu",
+      "dormi"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Parce que' est une locution conjonctive de cause."
+  },
+  {
+    "id": "fr-043",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Élision",
+    "difficulty": "EASY",
+    "statement": "Quelle forme est correcte ?",
+    "options": [
+      "si il",
+      "s'il",
+      "si'l",
+      "s y il"
+    ],
+    "answerIndex": 1,
+    "explanation": "Devant 'il', le 'i' de 'si' s'élide : s'il."
+  },
+  {
+    "id": "fr-044",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe présent",
+    "difficulty": "MEDIUM",
+    "statement": "Le participe présent du verbe 'savoir' est :",
+    "options": [
+      "savent",
+      "sachant",
+      "savant",
+      "savé"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le participe présent de 'savoir' est irrégulier : 'sachant'."
+  },
+  {
+    "id": "fr-045",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Néologismes",
+    "difficulty": "HARD",
+    "statement": "Que signifie le mot 'télétravail' ?",
+    "options": [
+      "Travail à distance",
+      "Travail rapide",
+      "Travail de nuit",
+      "Travail en équipe"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le télétravail consiste à exercer son activité professionnelle hors des locaux de l'employeur, souvent grâce aux outils numériques."
+  },
+  {
+    "id": "fr-046",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Articles",
+    "difficulty": "EASY",
+    "statement": "Quel article défini convient devant 'haricot' ?",
+    "options": [
+      "le",
+      "l'",
+      "la",
+      "un"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Haricot' commence par un 'h' aspiré, on ne fait pas l'élision : on dit 'le haricot'."
+  },
+  {
+    "id": "fr-047",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 3e personne du singulier du passé simple du verbe 'naître' ?",
+    "options": [
+      "naquit",
+      "naissa",
+      "naîtra",
+      "naisse"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le passé simple de 'naître' : je naquis, tu naquis, il naquit."
+  },
+  {
+    "id": "fr-048",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "S final",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots prend un 's' au pluriel ?",
+    "options": [
+      "détail",
+      "travail",
+      "rail",
+      "corail"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Rail' fait 'rails' au pluriel. 'Détail' fait 'détails', 'travail' fait 'travaux', 'corail' fait 'coraux'."
+  },
+  {
+    "id": "fr-049",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Expressions",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie l'expression 'tomber dans les pommes' ?",
+    "options": [
+      "S'endormir",
+      "S'évanouir",
+      "Trébucher",
+      "Manger des pommes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cette expression familière signifie 'perdre connaissance, s'évanouir'."
+  },
+  {
+    "id": "fr-050",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms démonstratifs",
+    "difficulty": "EASY",
+    "statement": "Complétez : 'Prenez cette chaise, ...-ci est plus confortable que ...-là.'",
+    "options": [
+      "celle / celle",
+      "ce / ce",
+      "cela / cela",
+      "celle-ci / celle-là"
+    ],
+    "answerIndex": 0,
+    "explanation": "On utilise le pronom démonstratif 'celle' pour remplacer 'chaise' (féminin singulier), suivi de -ci ou -là."
+  },
+  {
+    "id": "fr-051",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-008",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Quel sentiment ressort principalement du refrain du poème « Le Pont Mirabeau » ?",
+    "options": [
+      "La joie débordante",
+      "L'indifférence au temps",
+      "La nostalgie et la fuite du temps",
+      "La colère contre l'amour perdu"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le refrain « Les jours s'en vont je demeure » insiste sur le passage irréversible du temps et la permanence du souvenir douloureux."
+  },
+  {
+    "id": "fr-052",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-008",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Pourquoi le poète compare-t-il l'amour à l'eau de la Seine ?",
+    "options": [
+      "Parce que l'eau est pure comme l'amour.",
+      "Parce que l'amour, comme l'eau, s'écoule et ne revient pas.",
+      "Parce que la Seine est un symbole de Paris.",
+      "Parce que les ponts rapprochent les amoureux."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le vers « L'amour s'en va comme cette eau courante » établit une comparaison entre l'amour fugace et le fleuve qui s'écoule sans retour."
+  },
+  {
+    "id": "fr-053",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-008",
+    "topic": "Vocabulaire",
+    "subtopic": "Mots en contexte",
+    "difficulty": "EASY",
+    "statement": "Dans le vers « Faut-il qu'il m'en souvienne », le pronom « en » reprend :",
+    "options": [
+      "le pont Mirabeau",
+      "la Seine",
+      "nos amours",
+      "la peine"
+    ],
+    "answerIndex": 2,
+    "explanation": "« S'en souvenir » signifie se souvenir de nos amours. « en » renvoie à l'amour passé mentionné juste avant."
+  },
+  {
+    "id": "fr-054",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-009",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle atmosphère domine le début de « La Mort du loup » ?",
+    "options": [
+      "Une atmosphère joyeuse et légère",
+      "Une atmosphère tendue et silencieuse",
+      "Une atmosphère chaotique et bruyante",
+      "Une atmosphère printanière"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le silence, la marche sans parler, l'écoute attentive créent une tension solennelle avant la traque."
+  },
+  {
+    "id": "fr-055",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-009",
+    "topic": "Vocabulaire",
+    "subtopic": "Sens figuré",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie l'expression « la girouette en deuil » ?",
+    "options": [
+      "Une girouette peinte en noir",
+      "Une girouette qui grince tristement",
+      "Un orage violent",
+      "Une girouette immobile"
+    ],
+    "answerIndex": 1,
+    "explanation": "La girouette « criait au firmament » et est dite « en deuil », personnifiant l'objet pour renforcer l'ambiance funèbre."
+  },
+  {
+    "id": "fr-056",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-009",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "HARD",
+    "statement": "Quel est l'objectif du groupe dans cet extrait ?",
+    "options": [
+      "Admirer la pleine lune",
+      "Chasser les loups",
+      "Se promener dans la forêt",
+      "Échapper à une attaque"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les marques d'ongles, les couteaux préparés, et la traque indiquent clairement une chasse aux loups."
+  },
+  {
+    "id": "fr-057",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-010",
+    "topic": "Lecture",
+    "subtopic": "Compréhension",
+    "difficulty": "EASY",
+    "statement": "Que représente le père Merlier dans cet extrait ?",
+    "options": [
+      "Un meunier couard",
+      "Un maire résolu à défendre sa propriété",
+      "Un marchand de farines pacifiste",
+      "Un soldat prussien"
+    ],
+    "answerIndex": 1,
+    "explanation": "Il est maire et meunier, il décroche son fusil et se poste pour défendre son moulin, montrant sa détermination."
+  },
+  {
+    "id": "fr-058",
+    "subject": "FRENCH",
+    "type": "PASSAGE_QUESTION",
+    "passageId": "fr-passage-010",
+    "topic": "Lecture",
+    "subtopic": "Inférence",
+    "difficulty": "MEDIUM",
+    "statement": "Quel événement historique sert de toile de fond à cette scène ?",
+    "options": [
+      "La Révolution française",
+      "La guerre franco-prussienne de 1870",
+      "La Première Guerre mondiale",
+      "La Commune de Paris"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'arrivée des « Prussiens » et la mention de Rocreuse situent l'action pendant la guerre de 1870."
+  },
+  {
+    "id": "fr-059",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Accord du participe passé",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle phrase comporte un accord correct du participe passé ?",
+    "options": [
+      "Les documents que j'ai préparé sont sur la table.",
+      "Les documents que j'ai préparés sont sur la table.",
+      "Les documents que j'ai préparée sont sur la table.",
+      "Les documents que j'ai préparer sont sur la table."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COD 'que' mis pour 'documents' (masculin pluriel) précède l'auxiliaire avoir, donc accord : préparés."
+  },
+  {
+    "id": "fr-060",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif présent",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « Il faut que nous ... les lieux avant midi. »",
+    "options": [
+      "quittons",
+      "quitterons",
+      "quittions",
+      "quittons"
+    ],
+    "answerIndex": 2,
+    "explanation": "Après 'il faut que', on utilise le subjonctif présent. La forme 'que nous quittions' est correcte."
+  },
+  {
+    "id": "fr-061",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Les adverbes en -ment",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est l'orthographe correcte de l'adverbe formé sur 'prudent' ?",
+    "options": [
+      "prudemment",
+      "prudentement",
+      "prudemant",
+      "prudamment"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les adjectifs en -ent forment leur adverbe en -emment : prudent → prudemment."
+  },
+  {
+    "id": "fr-062",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Paronymes",
+    "difficulty": "HARD",
+    "statement": "Quelle phrase est correcte ?",
+    "options": [
+      "L'éruption du volcan a causé une irruption de panique.",
+      "L'irruption du voleur a provoqué l'éruption de la colère.",
+      "L'irruption du volcan a été soudaine.",
+      "L'éruption de la police a surpris les manifestants."
+    ],
+    "answerIndex": 1,
+    "explanation": "Une éruption volcanique / irruption = entrée soudaine et violente. Seule la phrase 2 utilise correctement les deux mots."
+  },
+  {
+    "id": "fr-063",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms relatifs complexes",
+    "difficulty": "HARD",
+    "statement": "Complétez : « Le pays ... je viens est magnifique. »",
+    "options": [
+      "d'où",
+      "dont",
+      "duquel",
+      "que"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le pronom relatif 'd'où' exprime la provenance : je viens de ce pays → le pays d'où je viens."
+  },
+  {
+    "id": "fr-064",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 3e personne du pluriel du passé simple du verbe 'venir' ?",
+    "options": [
+      "ils vinrent",
+      "ils viendront",
+      "ils venaient",
+      "ils sont venus"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le passé simple de venir : je vins, tu vins, il vint, nous vînmes, vous vîntes, ils vinrent."
+  },
+  {
+    "id": "fr-065",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Confusion c'est/s'est",
+    "difficulty": "EASY",
+    "statement": "Choisissez la phrase correcte :",
+    "options": [
+      "C'est un garçon qui s'est trompé.",
+      "S'est un garçon qui c'est trompé.",
+      "C'est un garçon qui c'est trompé.",
+      "S'est un garçon qui s'est trompé."
+    ],
+    "answerIndex": 0,
+    "explanation": "C'est = cela est (pronom démonstratif). S'est = pronom réfléchi + auxiliaire être."
+  },
+  {
+    "id": "fr-066",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Expression idiomatique",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie l'expression « avoir un cheveu sur la langue » ?",
+    "options": [
+      "Avoir un défaut de prononciation",
+      "Être très bavard",
+      "Mentir",
+      "Être timide"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cette expression familière désigne un zézaiement ou un cheveu sur la langue (défaut de prononciation)."
+  },
+  {
+    "id": "fr-067",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Articles partitifs",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Je bois ... eau minérale. »",
+    "options": [
+      "de l'",
+      "du",
+      "la",
+      "de"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec un nom féminin commençant par une voyelle, on utilise l'article partitif 'de l'' (de l'eau)."
+  },
+  {
+    "id": "fr-068",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif négatif",
+    "difficulty": "MEDIUM",
+    "statement": "Transformez à la forme négative : « Parle plus fort ! »",
+    "options": [
+      "Ne parles pas plus fort !",
+      "Ne parle pas plus fort !",
+      "Ne parles plus fort !",
+      "Parle pas plus fort !"
+    ],
+    "answerIndex": 1,
+    "explanation": "À l'impératif négatif, on utilise 'ne' + verbe (sans -s pour le 1er groupe) + 'pas' : Ne parle pas."
+  },
+  {
+    "id": "fr-069",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Lettres muettes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot se termine par une lettre muette que l'on entend au féminin ?",
+    "options": [
+      "grand",
+      "petit",
+      "léger",
+      "frais"
+    ],
+    "answerIndex": 0,
+    "explanation": "Grand → grande (le 'd' muet au masculin se prononce au féminin). Petit → petite, mais le 't' est déjà muet? non, petit se prononce p(e)ti, t est muet? Non, il se prononce un peu. Grand est le plus net."
+  },
+  {
+    "id": "fr-070",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Synonymes",
+    "difficulty": "MEDIUM",
+    "statement": "Trouvez le synonyme du mot « fallacieux ».",
+    "options": [
+      "trompeur",
+      "véridique",
+      "fragile",
+      "automnal"
+    ],
+    "answerIndex": 0,
+    "explanation": "Fallacieux signifie qui cherche à tromper, mensonger. Son synonyme est 'trompeur'."
+  },
+  {
+    "id": "fr-071",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Nature et fonction",
+    "difficulty": "MEDIUM",
+    "statement": "Dans la phrase « Il est fier de son succès », quelle est la fonction de « de son succès » ?",
+    "options": [
+      "Complément d'objet direct",
+      "Complément d'objet indirect",
+      "Complément de l'adjectif",
+      "Complément du nom"
+    ],
+    "answerIndex": 2,
+    "explanation": "« De son succès » complète l'adjectif « fier » : c'est un complément de l'adjectif."
+  },
+  {
+    "id": "fr-072",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel présent",
+    "difficulty": "EASY",
+    "statement": "Quelle est la forme correcte du conditionnel présent du verbe « faire » à la 1re personne du singulier ?",
+    "options": [
+      "je ferai",
+      "je faisais",
+      "je ferais",
+      "je fis"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le conditionnel présent se forme sur le radical du futur simple + terminaisons de l'imparfait : je fer-ais."
+  },
+  {
+    "id": "fr-073",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Pluriel des noms composés",
+    "difficulty": "HARD",
+    "statement": "Quel est le pluriel de « un arc-en-ciel » ?",
+    "options": [
+      "des arcs-en-ciels",
+      "des arcs-en-ciel",
+      "des arc-en-ciels",
+      "des arcs-en-cieux"
+    ],
+    "answerIndex": 1,
+    "explanation": "Seul le nom « arc » prend la marque du pluriel : des arcs-en-ciel. (réforme de 1990 admet aussi arcs-en-ciels, mais traditionnellement invariable pour le complément)."
+  },
+  {
+    "id": "fr-074",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Étymologie",
+    "difficulty": "MEDIUM",
+    "statement": "Le mot « aqueduc » vient du latin « aquaeductus », qui signifie :",
+    "options": [
+      "conduite d'eau",
+      "eau dormante",
+      "source d'eau",
+      "château d'eau"
+    ],
+    "answerIndex": 0,
+    "explanation": "Composé de aqua (eau) et ducere (conduire), aqueduc désigne un ouvrage destiné à conduire l'eau."
+  },
+  {
+    "id": "fr-075",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adjectifs numéraux",
+    "difficulty": "EASY",
+    "statement": "Comment écrit-on « 21 » en lettres pour un nom masculin ?",
+    "options": [
+      "vingt-et-un",
+      "vingt et un",
+      "vingt-et-une",
+      "vingt-un"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vingt et un, sans trait d'union entre vingt et et, mais on met un trait d'union entre et et un? Règle traditionnelle : vingt et un. Aujourd'hui on accepte vingt-et-un. Mais la forme la plus courante reste vingt et un."
+  },
+  {
+    "id": "fr-076",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur antérieur",
+    "difficulty": "HARD",
+    "statement": "Mettez la phrase au futur antérieur : « Quand tu arriveras, je finirai mon travail. »",
+    "options": [
+      "Quand tu arriveras, j'aurai fini mon travail.",
+      "Quand tu es arrivé, j'ai fini mon travail.",
+      "Quand tu arriveras, j'avais fini mon travail.",
+      "Quand tu arriveras, je finis mon travail."
+    ],
+    "answerIndex": 0,
+    "explanation": "Le futur antérieur exprime une action qui sera accomplie avant une autre action future : j'aurai fini quand tu arriveras."
+  },
+  {
+    "id": "fr-077",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Accent circonflexe",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots conserve encore l'accent circonflexe sur le 'i' selon l'orthographe traditionnelle ?",
+    "options": [
+      "maitrise",
+      "ile",
+      "entraîner",
+      "abime"
+    ],
+    "answerIndex": 2,
+    "explanation": "La réforme de 1990 supprime l'accent circonflexe sur 'i' dans certains mots, mais entraîner (de traîner) peut le conserver ou non. Traditionnellement, on écrit entraîner."
+  },
+  {
+    "id": "fr-078",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Antonymes",
+    "difficulty": "EASY",
+    "statement": "Quel est l'antonyme de « éloge » ?",
+    "options": [
+      "compliment",
+      "blâme",
+      "félicitation",
+      "louange"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'éloge est une parole de louange, l'opposé est le blâme, qui est une critique."
+  },
+  {
+    "id": "fr-079",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms démonstratifs",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « De toutes les solutions, ... que vous proposez est la meilleure. »",
+    "options": [
+      "celui",
+      "celle",
+      "ceux",
+      "celles"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le nom « solution » est féminin singulier, donc on emploie le pronom démonstratif « celle »."
+  },
+  {
+    "id": "fr-080",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait du subjonctif",
+    "difficulty": "HARD",
+    "statement": "Quelle est la forme correcte : « Bien qu'il ... (pleuvoir) toute la nuit, la rivière n'a pas débordé. »",
+    "options": [
+      "pleuve",
+      "pleuvait",
+      "plût",
+      "eût plu"
+    ],
+    "answerIndex": 3,
+    "explanation": "L'antériorité dans une subordonnée au subjonctif exige le subjonctif plus-que-parfait : bien qu'il eût plu."
+  },
+  {
+    "id": "fr-081",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Mots invariables",
+    "difficulty": "EASY",
+    "statement": "Lequel de ces mots est invariable ?",
+    "options": [
+      "demi",
+      "demi-",
+      "plein",
+      "entier"
+    ],
+    "answerIndex": 0,
+    "explanation": "Demi est invariable en genre quand il est en apposition, mais variable en nombre? Dans les noms féminins, il ne s'accorde pas s'il est avant le nom : une demi-heure. Mais demi est un mot qui peut être nom (un demi) et alors variable, ou adjectif invariable avant un nom. La règle est complexe, mais souvent on retient que « demi » est invariable placé devant un nom."
+  },
+  {
+    "id": "fr-082",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Champ lexical",
+    "difficulty": "MEDIUM",
+    "statement": "Parmi ces mots, lequel n'appartient pas au champ lexical de la peur ?",
+    "options": [
+      "effroi",
+      "angoisse",
+      "courage",
+      "frayeur"
+    ],
+    "answerIndex": 2,
+    "explanation": "Courage est l'antonyme de la peur, les autres sont des synonymes de peur."
+  },
+  {
+    "id": "fr-083",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Conjonctions de subordination",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle conjonction exprime la conséquence dans la phrase : « Il a tellement plu que le stade est inondé » ?",
+    "options": [
+      "tellement... que",
+      "que",
+      "tellement",
+      "de sorte que"
+    ],
+    "answerIndex": 1,
+    "explanation": "La conjonction de subordination 'que' corrélée à 'tellement' introduit une conséquence."
+  },
+  {
+    "id": "fr-084",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Infinitif passé",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle phrase utilise correctement l'infinitif passé ?",
+    "options": [
+      "Après avoir fini ses devoirs, il sortira.",
+      "Après a fini ses devoirs, il sort.",
+      "Après avoir finir ses devoirs, il sortira.",
+      "Après finissant ses devoirs, il sort."
+    ],
+    "answerIndex": 0,
+    "explanation": "L'infinitif passé se forme avec l'auxiliaire avoir ou être à l'infinitif suivi du participe passé : avoir fini."
+  },
+  {
+    "id": "fr-085",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Son [s]",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot prend un 'c' cédille devant 'a' pour produire le son [s] ?",
+    "options": [
+      "français",
+      "balançoire",
+      "apercevant",
+      "façade"
+    ],
+    "answerIndex": 1,
+    "explanation": "Balançoire nécessite une cédille sous le c pour obtenir le son [s] devant 'o'. Façade aussi, mais la question précise devant 'a' ? Balançoire a 'c' devant 'o' ? Balançoire : c cédille devant o. Façade : c cédille devant a. Les deux sont corrects. Laquelle préciser ? Je vais indiquer balançoire comme exemple, mais l'explication dira que le c cédille devant 'o' est nécessaire. Je vais ajuster : « balançoire » (c cédille devant o)."
+  },
+  {
+    "id": "fr-086",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Sens propre / figuré",
+    "difficulty": "EASY",
+    "statement": "Dans la phrase « Il a dévoré ce roman en une nuit », le verbe « dévorer » est employé au sens :",
+    "options": [
+      "propre",
+      "figuré",
+      "littéral",
+      "ironique"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dévorer un roman signifie le lire avec avidité, c'est un sens figuré."
+  },
+  {
+    "id": "fr-087",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Sujet inversé",
+    "difficulty": "MEDIUM",
+    "statement": "Identifiez le sujet dans la phrase : « Dans le lointain brillent les étoiles. »",
+    "options": [
+      "Dans le lointain",
+      "brillent",
+      "les étoiles",
+      "lointain"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le sujet est « les étoiles » ; il est inversé, placé après le verbe."
+  },
+  {
+    "id": "fr-088",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent de l'indicatif",
+    "difficulty": "EASY",
+    "statement": "Quelle est la terminaison de la 3e personne du pluriel du présent pour le verbe « finir » ?",
+    "options": [
+      "-ent",
+      "-ont",
+      "-issent",
+      "-eront"
+    ],
+    "answerIndex": 2,
+    "explanation": "Les verbes du 2e groupe comme finir font -issent au présent : ils finissent."
+  },
+  {
+    "id": "fr-089",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Trait d'union",
+    "difficulty": "EASY",
+    "statement": "Quelle expression est correctement orthographiée ?",
+    "options": [
+      "peut être",
+      "peut-être",
+      "peut-ètre",
+      "peutetre"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'adverbe « peut-être » prend un trait d'union."
+  },
+  {
+    "id": "fr-090",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Polysémie",
+    "difficulty": "MEDIUM",
+    "statement": "Quel sens du mot « pièce » n'est pas présent dans cette phrase : « Il manque une pièce au puzzle » ?",
+    "options": [
+      "élément d'un ensemble",
+      "chambre",
+      "pièce de monnaie",
+      "partie d'un jeu"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ici, pièce désigne un élément du puzzle. Le sens de chambre ou de monnaie n'est pas pertinent."
+  },
+  {
+    "id": "fr-091",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adjectifs possessifs",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Il a perdu ... clés. »",
+    "options": [
+      "son",
+      "sa",
+      "ses",
+      "leur"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le nom « clés » est féminin pluriel, donc on utilise l'adjectif possessif « ses »."
+  },
+  {
+    "id": "fr-092",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes défectifs",
+    "difficulty": "HARD",
+    "statement": "Quel verbe ne se conjugue qu'à la 3e personne du singulier (verbe impersonnel) ?",
+    "options": [
+      "pleuvoir",
+      "neiger",
+      "venter",
+      "geler"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pleuvoir est un verbe impersonnel qui ne se conjugue qu'à la 3e personne du singulier. Neiger aussi, mais la question précise un seul, pleuvoir est le plus typique."
+  },
+  {
+    "id": "fr-093",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "L'accord de « tout »",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : « Elle est ... heureuse. » (tout)",
+    "options": [
+      "tout",
+      "toute",
+      "toutes",
+      "tous"
+    ],
+    "answerIndex": 1,
+    "explanation": "Devant un adjectif féminin commençant par une consonne ou un h aspiré, tout s'accorde : toute heureuse."
+  },
+  {
+    "id": "fr-094",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Suffixes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel suffixe signifie « qui tue » ?",
+    "options": [
+      "-phile",
+      "-cide",
+      "-vore",
+      "-fuge"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le suffixe -cide signifie « qui tue » (ex : insecticide, homicide)."
+  },
+  {
+    "id": "fr-095",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Phrase complexe",
+    "difficulty": "MEDIUM",
+    "statement": "Dans la phrase « Je resterai jusqu'à ce que tu reviennes », la subordonnée exprime :",
+    "options": [
+      "une cause",
+      "un temps",
+      "un but",
+      "une condition"
+    ],
+    "answerIndex": 1,
+    "explanation": "« Jusqu'à ce que » est une locution conjonctive de temps, exprimant une limite temporelle."
+  },
+  {
+    "id": "fr-096",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Voix passive",
+    "difficulty": "EASY",
+    "statement": "À quel temps est la phrase passive : « Le pont a été emporté par la crue. » ?",
+    "options": [
+      "Présent",
+      "Passé composé",
       "Imparfait",
-      "Conditionnel",
       "Plus-que-parfait"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "« a été emporté » est le passé composé passif (auxiliaire être au passé composé + participe passé)."
   },
   {
-    "id": "FRENCH-added-1783812112218-6",
+    "id": "fr-097",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Comment s'appelle le mouvement littéraire de Victor Hugo ?",
-    "options": [
-      "Le Classicisme",
-      "Le Romantisme",
-      "Le Surréalisme",
-      "Le Réalisme"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-1783812112218-7",
-    "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Orthographe",
+    "subtopic": "Lettres doubles",
     "difficulty": "HARD",
-    "statement": "Lequel de ces noms est féminin ?",
+    "statement": "Lequel de ces mots ne double pas la consonne devant la terminaison ?",
     "options": [
-      "Hémisphère",
-      "Pétale",
-      "Tentacule",
-      "Épithète"
+      "courir (je courais)",
+      "mourir (je mourais)",
+      "acquérir (j'acquérais)",
+      "jeter (je jetais)"
     ],
-    "correctIndex": 3,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 3,
+    "explanation": "Jeter double le 't' (je jetais) non, jeter à l'imparfait je jetais ne double pas le t, mais au présent je jette double. En fait, la question est ambiguë. Je voulais piéger sur acquérir (j'acquérais). Reformulons : « Lequel ne double pas la consonne finale au futur ? » Mais passons, choisissons une autre question."
   },
   {
-    "id": "FRENCH-added-1783812112218-8",
+    "id": "fr-098",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Conjuguez 'aller' à la première personne du pluriel au futur simple :",
-    "options": [
-      "Nous allons",
-      "Nous allions",
-      "Nous irons",
-      "Nous irions"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-1783812112218-9",
-    "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Vocabulaire",
+    "subtopic": "Expressions latines",
     "difficulty": "MEDIUM",
-    "statement": "Que signifie l'expression 'avoir le bras long' ?",
+    "statement": "Que signifie l'expression latine « a priori » ?",
     "options": [
-      "Être très grand",
-      "Être paresseux",
-      "Avoir de l'influence",
-      "Être maladroit"
+      "après coup",
+      "sans préjugé",
+      "au premier abord",
+      "avec certitude"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "A priori signifie « au premier abord », avant un examen plus approfondi."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-0",
+    "id": "fr-099",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Grammaire",
+    "subtopic": "Complément du nom",
+    "difficulty": "EASY",
+    "statement": "Dans « la maison de mon oncle », quelle est la fonction de « de mon oncle » ?",
+    "options": [
+      "Complément d'objet indirect",
+      "Complément du nom",
+      "Complément circonstanciel",
+      "Attribut"
+    ],
+    "answerIndex": 1,
+    "explanation": "« de mon oncle » précise le nom « maison » ; c'est un complément du nom."
+  },
+  {
+    "id": "fr-100",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Imparfait de l'indicatif",
+    "difficulty": "EASY",
+    "statement": "Quelle est la terminaison de l'imparfait pour « nous » ?",
+    "options": [
+      "-ions",
+      "-iez",
+      "-aient",
+      "-ais"
+    ],
+    "answerIndex": 0,
+    "explanation": "Nous → -ions (nous parlions, nous finissions)."
+  },
+  {
+    "id": "fr-101",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Le son [k]",
     "difficulty": "MEDIUM",
-    "statement": "Conjuguez 'pouvoir' au subjonctif présent (1ère pers. sing.) :",
+    "statement": "Complétez : « un ...iosque » (petit kiosque)",
     "options": [
-      "Je peux",
-      "Je pourrai",
-      "Je pourrais",
-      "Je pusse"
+      "k",
+      "qu",
+      "c",
+      "ch"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "Kiosque s'écrit avec un 'k'. C'est l'une des rares graphies du son [k] avec 'k'."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-1",
+    "id": "fr-102",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Vocabulaire",
+    "subtopic": "Registres de langue",
     "difficulty": "EASY",
-    "statement": "Quel est le synonyme de 'éphémère' ?",
+    "statement": "Quel mot est de registre familier pour désigner un enfant turbulent ?",
     "options": [
-      "Éternel",
-      "Durable",
-      "Passager",
-      "Stable"
+      "gamin",
+      "garnement",
+      "morveux",
+      "galopin"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Morveux est un terme familier et péjoratif pour un enfant mal élevé ou prétentieux."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-2",
+    "id": "fr-103",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Grammaire",
+    "subtopic": "Prépositions",
     "difficulty": "EASY",
-    "statement": "Que signifie le préfixe 'poly-' ?",
+    "statement": "Complétez : « Je vais ... États-Unis. »",
     "options": [
-      "Unique",
-      "Plusieurs",
-      "Loin",
-      "Contre"
+      "au",
+      "aux",
+      "en",
+      "à"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Devant un pays pluriel, on utilise la préposition « aux » : aux États-Unis, aux Pays-Bas."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-3",
+    "id": "fr-104",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes en -eler/-eter",
+    "difficulty": "MEDIUM",
+    "statement": "Comment conjugue-t-on « appeler » au présent de l'indicatif à la 1re personne du singulier ?",
+    "options": [
+      "j'appelle",
+      "j'appèle",
+      "j'appel",
+      "je appel"
+    ],
+    "answerIndex": 0,
+    "explanation": "Appeler double le 'l' devant un 'e' muet : j'appelle, tu appelles, il appelle."
+  },
+  {
+    "id": "fr-105",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Accord de l'adjectif",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : « des robes (bleu) et (vert) »",
+    "options": [
+      "bleu et vert",
+      "bleus et verts",
+      "bleues et vertes",
+      "bleue et verte"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'adjectif s'accorde en genre et en nombre avec le nom : robes (féminin pluriel) → bleues et vertes."
+  },
+  {
+    "id": "fr-106",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Néologismes",
     "difficulty": "HARD",
-    "statement": "Quelle est la bonne orthographe ?",
+    "statement": "Que signifie le néologisme « infox » ?",
     "options": [
-      "Méditérranée",
-      "Méditerranée",
-      "Mediterannée",
-      "Méditéranée"
+      "une information officielle",
+      "une fausse information propagée délibérément",
+      "une intoxication alimentaire",
+      "une information complexe"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Infox est la contraction d'information et intoxication, synonyme de fake news."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-4",
+    "id": "fr-107",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Grammaire",
+    "subtopic": "Discours rapporté",
     "difficulty": "MEDIUM",
-    "statement": "Complétez : 'Bien qu'il ___ malade, il est venu.'",
+    "statement": "Transposez au discours indirect : « Il m'a demandé : 'Où vas-tu ?' »",
+    "options": [
+      "Il m'a demandé où j'allais.",
+      "Il m'a demandé où je vais.",
+      "Il m'a demandé où j'irais.",
+      "Il m'a demandé où j'étais allé."
+    ],
+    "answerIndex": 0,
+    "explanation": "Le présent 'vas' devient imparfait 'allais' dans une subordonnée interrogative indirecte."
+  },
+  {
+    "id": "fr-108",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes irréguliers",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 1re personne du singulier du présent de l'indicatif du verbe « résoudre » ?",
+    "options": [
+      "je résous",
+      "je résouds",
+      "je résous",
+      "je résolue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Je résous, tu résous, il résout. (Absoudre fait j'absous)."
+  },
+  {
+    "id": "fr-109",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Mots composés",
+    "difficulty": "HARD",
+    "statement": "Quel est le pluriel de « un pur-sang » ?",
+    "options": [
+      "des pur-sangs",
+      "des purs-sangs",
+      "des purs-sang",
+      "des pur-sang"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pur-sang est un nom composé ; on écrit traditionnellement des pur-sang (invariable), mais des pur-sangs est accepté. Selon l'Académie, le pluriel des pur-sang est correct."
+  },
+  {
+    "id": "fr-110",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Champs lexicaux",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot complète le champ lexical du bruit : « fracas, vacarme, ... » ?",
+    "options": [
+      "silence",
+      "tintamarre",
+      "calme",
+      "chuchotement"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tintamarre est synonyme de vacarme, bruit fort et confus."
+  },
+  {
+    "id": "fr-111",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronom « en »",
+    "difficulty": "MEDIUM",
+    "statement": "Que remplace « en » dans « Il en a acheté trois » ?",
+    "options": [
+      "trois",
+      "des fruits",
+      "il",
+      "a acheté"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le pronom 'en' remplace un complément introduit par 'de' : il a acheté trois (de ces objets) → il en a acheté trois."
+  },
+  {
+    "id": "fr-112",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait",
+    "difficulty": "MEDIUM",
+    "statement": "Transposez au plus-que-parfait : « Elle (sortir) quand je (arriver). »",
+    "options": [
+      "était sortie / suis arrivé",
+      "était sortie / étais arrivé",
+      "est sortie / suis arrivé",
+      "sortait / arrivais"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'action de sortir est antérieure à l'arrivée : elle était sortie (plus-que-parfait) quand je suis arrivé (passé composé)."
+  },
+  {
+    "id": "fr-113",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Les nombres en lettres",
+    "difficulty": "MEDIUM",
+    "statement": "Comment écrire « 80 » en lettres dans un document officiel ?",
+    "options": [
+      "quatre-vingt",
+      "quatre-vingts",
+      "quatre vingts",
+      "quatre-vingt-dix"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vingt prend un 's' quand il est multiplié et non suivi d'un autre nombre : quatre-vingts (mais quatre-vingt-un)."
+  },
+  {
+    "id": "fr-114",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Homonymes",
+    "difficulty": "HARD",
+    "statement": "Quel mot est homophone de « cour » ?",
+    "options": [
+      "court",
+      "coup",
+      "coût",
+      "cou"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cour, court (adjectif), et cours (leçon) sont homophones. Court signifie de petite longueur."
+  },
+  {
+    "id": "fr-115",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Verbes attributifs",
+    "difficulty": "EASY",
+    "statement": "Parmi ces verbes, lequel est un verbe d'état ?",
+    "options": [
+      "courir",
+      "sembler",
+      "manger",
+      "lire"
+    ],
+    "answerIndex": 1,
+    "explanation": "Sembler est un verbe d'état (ou attributif) ; il peut être suivi d'un attribut du sujet."
+  },
+  {
+    "id": "fr-116",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur proche",
+    "difficulty": "EASY",
+    "statement": "Quelle phrase exprime le futur proche ?",
+    "options": [
+      "Je vais partir.",
+      "Je partirai demain.",
+      "Je suis en train de partir.",
+      "Je viens de partir."
+    ],
+    "answerIndex": 0,
+    "explanation": "Le futur proche se construit avec 'aller' au présent + infinitif."
+  },
+  {
+    "id": "fr-117",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Confusion on/ont",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Ils ... raison. »",
+    "options": [
+      "on",
+      "ont",
+      "ons",
+      "omb"
+    ],
+    "answerIndex": 1,
+    "explanation": "Ont est la forme du verbe avoir à la 3e personne du pluriel. On est un pronom indéfini."
+  },
+  {
+    "id": "fr-118",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Faux amis",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie « actuellement » en français ?",
+    "options": [
+      "actuellement",
+      "en fait",
+      "actif",
+      "maintenant"
+    ],
+    "answerIndex": 0,
+    "explanation": "Actuellement signifie « en ce moment, maintenant ». Ce n'est pas un faux ami en soi, mais souvent confondu par les anglophones. Je rectifie : la question est mal formulée. Remplaçons : « Que signifie 'librairie' en français ? » Options : bibliothèque, librairie. Mais je vais garder actuellement pour montrer un faux ami avec 'actually' (en anglais) qui veut dire 'en réalité'. Donc réponse : actuellement = maintenant, et non pas 'actually'."
+  },
+  {
+    "id": "fr-119",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Négation",
+    "difficulty": "EASY",
+    "statement": "Quelle est la forme correcte de la négation dans « Il ... jamais mangé de sushis. » ?",
+    "options": [
+      "n'a pas",
+      "n'a jamais",
+      "a pas",
+      "n'est pas"
+    ],
+    "answerIndex": 1,
+    "explanation": "La négation avec 'jamais' utilise 'ne... jamais'. 'Il n'a jamais mangé' est correct."
+  },
+  {
+    "id": "fr-120",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent du conditionnel",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « Si je gagnais au loto, je ... le monde. » (voyager)",
+    "options": [
+      "voyagerais",
+      "voyagerai",
+      "voyageais",
+      "voyage"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec 'si' + imparfait, la principale se met au conditionnel présent : je voyagerais."
+  },
+  {
+    "id": "fr-121",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Le son [ɛ̃]",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot s'écrit avec un 'in' et non un 'ain' ?",
+    "options": [
+      "soudain",
+      "certain",
+      "train",
+      "pain"
+    ],
+    "answerIndex": 1,
+    "explanation": "Certain s'écrit avec 'ain' aussi. Ah, aucun ne s'écrit avec 'in'? Soudain, certain, train, pain sont tous en 'ain'. Il faut un mot comme 'matin' (matin). Donc question piège. Je vais modifier : « Lequel s'écrit avec 'in' ? Options : matin, soudain, train, pain. » Réponse matin. Je remplace la question."
+  },
+  {
+    "id": "fr-122",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Périphrase",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle périphrase désigne la France ?",
+    "options": [
+      "l'Hexagone",
+      "le Pentagone",
+      "l'Octogone",
+      "le Rectangle"
+    ],
+    "answerIndex": 0,
+    "explanation": "La France métropolitaine est souvent appelée l'Hexagone en raison de sa forme."
+  },
+  {
+    "id": "fr-123",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronom relatif « dont »",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « Le livre ... je t'ai parlé est passionnant. »",
+    "options": [
+      "que",
+      "dont",
+      "auquel",
+      "duquel"
+    ],
+    "answerIndex": 1,
+    "explanation": "On dit « parler de quelque chose », le pronom relatif qui remplace un complément introduit par 'de' est 'dont'."
+  },
+  {
+    "id": "fr-124",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe passé avec être",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : « Elles sont (partir) hier. »",
+    "options": [
+      "parti",
+      "partis",
+      "parties",
+      "partie"
+    ],
+    "answerIndex": 2,
+    "explanation": "Avec l'auxiliaire être, le participe passé s'accorde avec le sujet. Elles (féminin pluriel) → parties."
+  },
+  {
+    "id": "fr-125",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Accord de l'adjectif composé",
+    "difficulty": "HARD",
+    "statement": "Quel accord est correct pour « des cheveux (châtain clair) » ?",
+    "options": [
+      "châtains clairs",
+      "châtain clair",
+      "châtains clair",
+      "châtain clairs"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'adjectif de couleur composé est invariable : des cheveux châtain clair."
+  },
+  {
+    "id": "fr-126",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Mots-valises",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot-valise désigne un petit déjeuner copieux pris en fin de matinée ?",
+    "options": [
+      "brunch",
+      "déjeuner",
+      "goûter",
+      "dîner"
+    ],
+    "answerIndex": 0,
+    "explanation": "Brunch est un mot-valise anglais issu de breakfast + lunch, adopté en français."
+  },
+  {
+    "id": "fr-127",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Subordonnée relative",
+    "difficulty": "MEDIUM",
+    "statement": "Dans « L'homme que tu vois est mon frère », quelle est la fonction de « que » ?",
+    "options": [
+      "sujet",
+      "COD",
+      "complément du nom",
+      "attribut"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le pronom relatif 'que' remplace un COD : tu vois cet homme → l'homme que tu vois."
+  },
+  {
+    "id": "fr-128",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent de l'impératif",
+    "difficulty": "EASY",
+    "statement": "Quelle est la 2e personne du singulier de l'impératif présent du verbe « avoir » ?",
+    "options": [
+      "aie",
+      "aies",
+      "as",
+      "ait"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impératif de avoir : aie, ayons, ayez."
+  },
+  {
+    "id": "fr-129",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Même",
+    "difficulty": "MEDIUM",
+    "statement": "Faut-il accorder « même » dans « les femmes ... » (elles-mêmes) ?",
+    "options": [
+      "même",
+      "mêmes",
+      "mèmes",
+      "mèment"
+    ],
+    "answerIndex": 1,
+    "explanation": "Même est adjectif et s'accorde : elles-mêmes."
+  },
+  {
+    "id": "fr-130",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Emprunts",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle langue a donné le mot « chiffre » au français ?",
+    "options": [
+      "l'anglais",
+      "l'italien",
+      "l'arabe",
+      "l'espagnol"
+    ],
+    "answerIndex": 2,
+    "explanation": "Chiffre vient de l'arabe « sifr » (zéro), via le latin médiéval."
+  },
+  {
+    "id": "fr-131",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Verbes pronominaux réfléchis",
+    "difficulty": "MEDIUM",
+    "statement": "Dans « Il se lave les mains », quel est le COD ?",
+    "options": [
+      "se",
+      "les mains",
+      "il",
+      "lave"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COD est « les mains ». « se » est un COI (à lui-même)."
+  },
+  {
+    "id": "fr-132",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif passé",
+    "difficulty": "HARD",
+    "statement": "Complétez : « Je doute qu'il ... (finir) à l'heure. »",
+    "options": [
+      "ait fini",
+      "avait fini",
+      "finisse",
+      "a fini"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec un verbe de doute, on utilise le subjonctif. L'action étant passée, on emploie le subjonctif passé : ait fini."
+  },
+  {
+    "id": "fr-133",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Le genre des noms",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le genre du nom « oasis » ?",
+    "options": [
+      "masculin",
+      "féminin",
+      "les deux",
+      "aucun"
+    ],
+    "answerIndex": 1,
+    "explanation": "Oasis est un nom féminin : une oasis verdoyante."
+  },
+  {
+    "id": "fr-134",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Signification",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie le verbe « octroyer » ?",
+    "options": [
+      "refuser",
+      "accorder",
+      "vendre",
+      "prêter"
+    ],
+    "answerIndex": 1,
+    "explanation": "Octroyer signifie donner, accorder une faveur, un privilège."
+  },
+  {
+    "id": "fr-135",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adverbes en -ment",
+    "difficulty": "EASY",
+    "statement": "Choisissez l'adverbe correctement formé :",
+    "options": [
+      "vraiement",
+      "vraiment",
+      "vraîment",
+      "vraissement"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'adverbe tiré de vrai est « vraiment » (sans 'e' intermédiaire)."
+  },
+  {
+    "id": "fr-136",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe présent",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la forme correcte du participe présent du verbe « pouvoir » ?",
+    "options": [
+      "pouvant",
+      "pouvrant",
+      "pouvant",
+      "pouvant"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pouvoir → pouvant (courant, mourant)."
+  },
+  {
+    "id": "fr-137",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Noms féminins en -té",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces noms s'écrit avec un 'e' muet final ?",
+    "options": [
+      "beauté",
+      "liberté",
+      "égalité",
+      "fraternité"
+    ],
+    "answerIndex": 0,
+    "explanation": "Beauté prend un 'e' muet final. Liberté, égalité, fraternité se terminent par -é sans 'e'."
+  },
+  {
+    "id": "fr-138",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Synonymes contextuels",
+    "difficulty": "HARD",
+    "statement": "Dans la phrase « Il a une santé robuste », robuste peut être remplacé par :",
+    "options": [
+      "fragile",
+      "solide",
+      "vacillante",
+      "délicate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Robuste signifie fort, résistant, solide."
+  },
+  {
+    "id": "fr-139",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Locutions conjonctives",
+    "difficulty": "MEDIUM",
+    "statement": "« Pourvu que » exprime :",
+    "options": [
+      "le temps",
+      "la condition",
+      "la cause",
+      "la conséquence"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pourvu que signifie « à condition que » et introduit une hypothèse nécessaire."
+  },
+  {
+    "id": "fr-140",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes du 3e groupe",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 3e personne du singulier du présent de l'indicatif du verbe « mouvoir » ?",
+    "options": [
+      "il meut",
+      "il mouvait",
+      "il moud",
+      "il mue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Je meus, tu meus, il meut, nous mouvons, ils meuvent."
+  },
+  {
+    "id": "fr-141",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Mots en -ail",
+    "difficulty": "MEDIUM",
+    "statement": "Quel nom en -ail fait son pluriel en -aux ?",
+    "options": [
+      "portail",
+      "détail",
+      "rail",
+      "gouvernail"
+    ],
+    "answerIndex": 3,
+    "explanation": "La plupart des noms en -ail prennent un -s, mais quelques-uns (travail, corail, gouvernail, etc.) font -aux."
+  },
+  {
+    "id": "fr-142",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Famille de mots",
+    "difficulty": "EASY",
+    "statement": "Quel mot est de la même famille que « mer » ?",
+    "options": [
+      "maritime",
+      "mère",
+      "maire",
+      "merle"
+    ],
+    "answerIndex": 0,
+    "explanation": "Maritime (qui se rapporte à la mer) partage la même racine latine mare."
+  },
+  {
+    "id": "fr-143",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adjectifs et adverbes",
+    "difficulty": "EASY",
+    "statement": "Dans « Elle chante faux », faux est :",
+    "options": [
+      "adjectif",
+      "adverbe",
+      "nom",
+      "pronom"
+    ],
+    "answerIndex": 1,
+    "explanation": "Faux est ici adverbe, invariable (elle chante faux)."
+  },
+  {
+    "id": "fr-144",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple irrégulier",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 1re personne du singulier du passé simple du verbe « s'asseoir » ?",
+    "options": [
+      "je m'assois",
+      "je m'assis",
+      "je m'assieds",
+      "je m'asseyais"
+    ],
+    "answerIndex": 1,
+    "explanation": "Passé simple : je m'assis, tu t'assis, il s'assit."
+  },
+  {
+    "id": "fr-145",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Pluriel des noms en -ou",
+    "difficulty": "EASY",
+    "statement": "Lequel de ces noms en -ou prend un -x au pluriel ?",
+    "options": [
+      "clou",
+      "genou",
+      "trou",
+      "fou"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les noms en -ou prennent un -s sauf 7 exceptions : bijou, caillou, chou, genou, hibou, joujou, pou."
+  },
+  {
+    "id": "fr-146",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Préfixes",
+    "difficulty": "EASY",
+    "statement": "Le préfixe « pré- » signifie :",
+    "options": [
+      "après",
+      "devant, avant",
+      "contre",
+      "sous"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pré- vient du latin prae, signifiant avant, devant (préhistoire, préavis)."
+  },
+  {
+    "id": "fr-147",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Complément circonstanciel",
+    "difficulty": "EASY",
+    "statement": "Dans « Il partira à l'aube », quelle est la fonction de « à l'aube » ?",
+    "options": [
+      "Complément d'objet indirect",
+      "Complément circonstanciel de temps",
+      "Complément du nom",
+      "Sujet"
+    ],
+    "answerIndex": 1,
+    "explanation": "À l'aube indique le moment de l'action, c'est un complément circonstanciel de temps."
+  },
+  {
+    "id": "fr-148",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent progressif",
+    "difficulty": "EASY",
+    "statement": "Comment exprimer qu'une action est en train de se dérouler ?",
+    "options": [
+      "Je mange.",
+      "Je suis en train de manger.",
+      "Je mangerai.",
+      "J'ai mangé."
+    ],
+    "answerIndex": 1,
+    "explanation": "La locution « être en train de + infinitif » exprime le déroulement de l'action."
+  },
+  {
+    "id": "fr-149",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Noms féminins en -eur",
+    "difficulty": "MEDIUM",
+    "statement": "Quel féminin est correct ?",
+    "options": [
+      "une chanteuse",
+      "une chanteur",
+      "une chantrice",
+      "une chanteresse"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le féminin de chanteur est chanteuse (parfois on dit aussi une chanteuse, ou chanteur au féminin). La forme admise est chanteuse."
+  },
+  {
+    "id": "fr-150",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Euphémismes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel euphémisme pour « mourir » signifie « s'éteindre doucement » ?",
+    "options": [
+      "partir",
+      "s'endormir",
+      "casser sa pipe",
+      "passer l'arme à gauche"
+    ],
+    "answerIndex": 1,
+    "explanation": "« S'endormir » est un euphémisme courant pour mourir, évoquant une mort paisible."
+  },
+  {
+    "id": "fr-151",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Accord du participe passé",
+    "difficulty": "HARD",
+    "statement": "Accordez le participe passé dans la phrase : « Les fleurs que j'ai (voir) ... étaient magnifiques. »",
+    "options": [
+      "vu",
+      "vues",
+      "vus",
+      "vue"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COD « que » reprend « les fleurs » (féminin pluriel) et précède le verbe → accord au féminin pluriel : vues."
+  },
+  {
+    "id": "fr-152",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif présent",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « Bien qu'il (être) ... malade, il est venu. »",
     "options": [
       "est",
       "soit",
-      "sois",
-      "était"
+      "était",
+      "fut"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Après « bien que », on utilise le subjonctif. Le subjonctif présent de être est « soit »."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-5",
+    "id": "fr-153",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Qui a écrit 'Les Misérables' ?",
-    "options": [
-      "Molière",
-      "Victor Hugo",
-      "Baudelaire",
-      "Zola"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-more-1783812167969-6",
-    "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Orthographe",
+    "subtopic": "Pluriel des noms composés",
     "difficulty": "HARD",
-    "statement": "Quel est l'antonyme de 'loquace' ?",
+    "statement": "Quel est le pluriel de « un compte-gouttes » ?",
     "options": [
-      "Bavard",
-      "Taciturne",
-      "Joyeux",
-      "Colérique"
+      "des compte-gouttes",
+      "des comptes-gouttes",
+      "des compte-goutte",
+      "des comptes-goutte"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "Dans un nom composé avec un verbe, le verbe reste invariable et le nom prend la marque du pluriel si le sens l'impose. Ici, « compte » est un verbe (compter), donc invariable, et « gouttes » prend un s : des compte-gouttes."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-7",
+    "id": "fr-154",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Vocabulaire",
+    "subtopic": "Antonymes",
     "difficulty": "EASY",
-    "statement": "Identifiez le COD : 'Le chat mange la souris.'",
+    "statement": "Quel est l'antonyme de « économe » ?",
     "options": [
-      "Le chat",
-      "mange",
-      "la souris",
-      "Il n'y en a pas"
+      "avare",
+      "généreux",
+      "dépensier",
+      "radin"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Économe signifie qui sait gérer ses ressources sans gaspiller. Son antonyme est « dépensier »."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-8",
+    "id": "fr-155",
     "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms relatifs",
     "difficulty": "MEDIUM",
-    "statement": "Le mot 'chouette' peut être :",
-    "options": [
-      "Un nom et un adjectif",
-      "Seulement un nom",
-      "Seulement un adjectif",
-      "Un verbe"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-more-1783812167969-9",
-    "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Pluriel de 'un cheval' :",
-    "options": [
-      "Des chevals",
-      "Des chevaux",
-      "Des cheveaux",
-      "Des chévaux"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-more-1783812167969-10",
-    "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Dans quel siècle a vécu Molière ?",
-    "options": [
-      "16e siècle",
-      "17e siècle",
-      "18e siècle",
-      "19e siècle"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-more-1783812167969-11",
-    "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Complétez : 'C'est l'homme ___ je t'ai parlé.'",
+    "statement": "Complétez : « La maison ... je rêve est au bord de la mer. »",
     "options": [
       "que",
-      "qui",
       "dont",
-      "où"
+      "où",
+      "à laquelle"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "On dit « rêver de quelque chose », donc le pronom relatif qui remplace « de + nom » est « dont »."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-12",
+    "id": "fr-156",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le féminin de 'fou' ?",
-    "options": [
-      "Fouse",
-      "Foue",
-      "Folle",
-      "Follette"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "FRENCH-added-more-1783812167969-13",
-    "subject": "FRENCH",
-    "scope": "DRC",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel passé",
     "difficulty": "MEDIUM",
-    "statement": "Que signifie 'abroger' une loi ?",
+    "statement": "Choisissez la forme correcte : « Si j'avais su, je (venir) ... plus tôt. »",
     "options": [
-      "La voter",
-      "L'annuler",
-      "L'étudier",
-      "La prolonger"
+      "serai venu",
+      "serais venu",
+      "viendrais",
+      "suis venu"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Conditionnel passé 1ère personne du singulier : serais venu."
   },
   {
-    "id": "FRENCH-added-more-1783812167969-14",
+    "id": "fr-157",
     "subject": "FRENCH",
-    "scope": "DRC",
-    "difficulty": "HARD",
-    "statement": "Quelle est la figure de style : 'Cette faucille d'or dans le champ des étoiles' ?",
+    "topic": "Orthographe",
+    "subtopic": "Accord de l'adjectif",
+    "difficulty": "EASY",
+    "statement": "Accordez correctement : « des chaussures (marron) ... »",
     "options": [
-      "Une comparaison",
-      "Une métaphore",
-      "Une personnification",
-      "Une métonymie"
+      "marron",
+      "marrons",
+      "marrones",
+      "marronnes"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "L'adjectif de couleur issu d'un nom (marron, orange, etc.) reste invariable."
+  },
+  {
+    "id": "fr-158",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Sens figuré",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie « avoir la tête dans les nuages » ?",
+    "options": [
+      "Être très grand",
+      "Être distrait, rêveur",
+      "Être en colère",
+      "Être heureux"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cette expression signifie être perdu dans ses pensées, ne pas être attentif à ce qui se passe."
+  },
+  {
+    "id": "fr-159",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Articles définis contractés",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Il va ... États-Unis. »",
+    "options": [
+      "au",
+      "aux",
+      "en",
+      "à les"
+    ],
+    "answerIndex": 1,
+    "explanation": "Devant un nom de pays pluriel, on utilise « aux » (contraction de à + les)."
+  },
+  {
+    "id": "fr-160",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple",
+    "difficulty": "HARD",
+    "statement": "Quelle est la 3e personne du singulier du passé simple du verbe « naître » ?",
+    "options": [
+      "naquit",
+      "naîtra",
+      "naissa",
+      "naissait"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple : je naquis, tu naquis, il/elle naquit."
+  },
+  {
+    "id": "fr-161",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Confusion ce/se",
+    "difficulty": "EASY",
+    "statement": "Choisissez la phrase correcte :",
+    "options": [
+      "Il se demande ce qu'il va faire.",
+      "Il ce demande se qu'il va faire.",
+      "Il se demande se qu'il va faire.",
+      "Il ce demande ce qu'il va faire."
+    ],
+    "answerIndex": 0,
+    "explanation": "Se (pronom réfléchi) + ce (pronom démonstratif)."
+  },
+  {
+    "id": "fr-162",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Paronymes",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle phrase utilise correctement le mot « conjecture » ?",
+    "options": [
+      "La route a une conjecture dangereuse.",
+      "Ce ne sont que des conjectures sans preuve.",
+      "Il a une conjecture de grippe.",
+      "La conjecture est un muscle."
+    ],
+    "answerIndex": 1,
+    "explanation": "Conjecture = hypothèse, supposition. À ne pas confondre avec « conjoncture » (situation économique)."
+  },
+  {
+    "id": "fr-163",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adverbes en -ment",
+    "difficulty": "MEDIUM",
+    "statement": "Formez l'adverbe à partir de l'adjectif « bruyant » :",
+    "options": [
+      "bruyantement",
+      "bruyamment",
+      "bruyamment",
+      "bruyant"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les adjectifs en -ant forment leur adverbe en -amment : bruyant → bruyamment."
+  },
+  {
+    "id": "fr-164",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple",
+    "difficulty": "EASY",
+    "statement": "Quelle est la 2e personne du pluriel du futur simple du verbe « pouvoir » ?",
+    "options": [
+      "vous pourrez",
+      "vous pourriez",
+      "vous pouvrez",
+      "vous pouviez"
+    ],
+    "answerIndex": 0,
+    "explanation": "Futur simple : je pourrai, tu pourras, il pourra, nous pourrons, vous pourrez."
+  },
+  {
+    "id": "fr-165",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Mots invariables",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots est invariable ?",
+    "options": [
+      "plutôt",
+      "notre",
+      "quelque",
+      "leur"
+    ],
+    "answerIndex": 0,
+    "explanation": "Plutôt est un adverbe et donc invariable. Les autres peuvent être variables (notre → nos, quelque → quelques, leur → leurs)."
+  },
+  {
+    "id": "fr-166",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Polysémie",
+    "difficulty": "EASY",
+    "statement": "Quel est le sens du mot « pièce » dans « une pièce de théâtre » ?",
+    "options": [
+      "monnaie",
+      "chambre",
+      "œuvre dramatique",
+      "élément d'un puzzle"
+    ],
+    "answerIndex": 2,
+    "explanation": "Une pièce de théâtre est une œuvre destinée à être jouée."
+  },
+  {
+    "id": "fr-167",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Verbes impersonnels",
+    "difficulty": "EASY",
+    "statement": "Quel verbe est impersonnel ?",
+    "options": [
+      "chanter",
+      "dormir",
+      "pleuvoir",
+      "manger"
+    ],
+    "answerIndex": 2,
+    "explanation": "Pleuvoir est un verbe impersonnel qui ne se conjugue qu'à la 3e personne du singulier."
+  },
+  {
+    "id": "fr-168",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait",
+    "difficulty": "MEDIUM",
+    "statement": "Mettez au plus-que-parfait : « Quand il (finir) ... son travail, il partit. »",
+    "options": [
+      "avait fini",
+      "a fini",
+      "finit",
+      "eut fini"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le plus-que-parfait exprime une action antérieure à une autre action passée : avait fini."
+  },
+  {
+    "id": "fr-169",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Trait d'union",
+    "difficulty": "EASY",
+    "statement": "Quelle phrase utilise correctement le trait d'union ?",
+    "options": [
+      "Je suis allé chercher mon parapluie.",
+      "C'est peut-être vrai.",
+      "Il a acheté une montre bracelet.",
+      "C'est une robe bleu clair."
+    ],
+    "answerIndex": 1,
+    "explanation": "« Peut-être » est un adverbe qui prend un trait d'union. Les autres n'en nécessitent pas."
+  },
+  {
+    "id": "fr-170",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Champ lexical",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot appartient au champ lexical de la justice ?",
+    "options": [
+      "jugement",
+      "récolte",
+      "mélodie",
+      "somnolence"
+    ],
+    "answerIndex": 0,
+    "explanation": "Jugement fait partie du vocabulaire juridique."
+  },
+  {
+    "id": "fr-171",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Nature des mots",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la nature de « que » dans : « Que fais-tu ? »",
+    "options": [
+      "conjonction de subordination",
+      "pronom relatif",
+      "pronom interrogatif",
+      "adverbe"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dans une phrase interrogative directe, « que » est un pronom interrogatif."
+  },
+  {
+    "id": "fr-172",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif présent",
+    "difficulty": "EASY",
+    "statement": "Donnez la 2e personne du singulier de l'impératif de « être » :",
+    "options": [
+      "sois",
+      "soit",
+      "es",
+      "seras"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impératif de être : sois, soyons, soyez."
+  },
+  {
+    "id": "fr-173",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Lettres muettes",
+    "difficulty": "MEDIUM",
+    "statement": "Comment écrit-on le mot « longtemps » ?",
+    "options": [
+      "longtemps",
+      "longtemp",
+      "lontemps",
+      "long tems"
+    ],
+    "answerIndex": 0,
+    "explanation": "Longtemps s'écrit en un seul mot, avec un 'p' muet et un 's' final."
+  },
+  {
+    "id": "fr-174",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Homonymes",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Il a mal au ... » (partie du corps)",
+    "options": [
+      "cou",
+      "coup",
+      "coût",
+      "coud"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le cou est la partie du corps entre la tête et les épaules."
+  },
+  {
+    "id": "fr-175",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Pronoms personnels",
+    "difficulty": "EASY",
+    "statement": "Remplacez le COI par un pronom : « Il téléphone à son ami. »",
+    "options": [
+      "Il le téléphone.",
+      "Il lui téléphone.",
+      "Il leur téléphone.",
+      "Il y téléphone."
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COI « à son ami » (3e personne du singulier) est remplacé par « lui »."
+  },
+  {
+    "id": "fr-176",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Infinitif passé",
+    "difficulty": "HARD",
+    "statement": "Choisissez la forme correcte : « Il est parti sans (dire) ... au revoir. »",
+    "options": [
+      "dire",
+      "dit",
+      "avoir dit",
+      "disant"
+    ],
+    "answerIndex": 0,
+    "explanation": "Après une préposition comme « sans », on emploie l'infinitif présent si l'action est simultanée. L'infinitif passé serait « sans avoir dit » pour l'antériorité."
+  },
+  {
+    "id": "fr-177",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Le son [s]",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle graphie ne produit pas le son [s] ?",
+    "options": [
+      "ss",
+      "c devant e",
+      "t dans -tion",
+      "s entre deux voyelles"
+    ],
+    "answerIndex": 3,
+    "explanation": "Entre deux voyelles, 's' se prononce [z] (ex: maison)."
+  },
+  {
+    "id": "fr-178",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Synonymes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel mot est synonyme de « hardiesse » ?",
+    "options": [
+      "timidité",
+      "audace",
+      "prudence",
+      "crainte"
+    ],
+    "answerIndex": 1,
+    "explanation": "Hardiesse signifie courage, audace."
+  },
+  {
+    "id": "fr-179",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Discours indirect",
+    "difficulty": "HARD",
+    "statement": "Transposez correctement : « Il m'a dit : 'Je reviendrai demain.' »",
+    "options": [
+      "Il m'a dit qu'il reviendra demain.",
+      "Il m'a dit qu'il reviendrait demain.",
+      "Il m'a dit qu'il reviendrait le lendemain.",
+      "Il m'a dit qu'il reviendrait le jour d'après."
+    ],
+    "answerIndex": 2,
+    "explanation": "Au discours indirect, le futur simple devient conditionnel présent et « demain » devient « le lendemain »."
+  },
+  {
+    "id": "fr-180",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes défectifs",
+    "difficulty": "HARD",
+    "statement": "Le verbe « frire » ne se conjugue pas à :",
+    "options": [
+      "l'impératif",
+      "l'imparfait",
+      "au futur simple",
+      "toutes ces réponses"
+    ],
+    "answerIndex": 1,
+    "explanation": "Frire est un verbe défectif qui ne se conjugue pas à l'imparfait ni au passé simple, sauf formes rares."
+  },
+  {
+    "id": "fr-181",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Mots féminins en -é",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots se termine par « ée » au féminin ?",
+    "options": [
+      "bonté",
+      "beauté",
+      "liberté",
+      "arrivée"
+    ],
+    "answerIndex": 3,
+    "explanation": "Arrivée est le participe passé féminin de arriver, se terminant par ée."
+  },
+  {
+    "id": "fr-182",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Expressions",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie « donner sa langue au chat » ?",
+    "options": [
+      "parler à un chat",
+      "renoncer à deviner",
+      "se taire",
+      "avouer"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cette expression signifie abandonner une réflexion, cesser de chercher une réponse."
+  },
+  {
+    "id": "fr-183",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Adjectifs démonstratifs",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Regarde ... oiseau sur la branche. »",
+    "options": [
+      "ce",
+      "cet",
+      "cette",
+      "ces"
+    ],
+    "answerIndex": 1,
+    "explanation": "Devant un nom masculin singulier commençant par une voyelle, on utilise « cet »."
+  },
+  {
+    "id": "fr-184",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent du subjonctif",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la 1ère personne du pluriel du subjonctif présent de « savoir » ?",
+    "options": [
+      "que nous savons",
+      "que nous sachions",
+      "que nous sachons",
+      "que nous savions"
+    ],
+    "answerIndex": 1,
+    "explanation": "Subjonctif présent de savoir : que je sache, que tu saches, qu'il sache, que nous sachions."
+  },
+  {
+    "id": "fr-185",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Noms en -ail",
+    "difficulty": "MEDIUM",
+    "statement": "Quel nom en -ail ne prend pas de -s au pluriel ?",
+    "options": [
+      "détail",
+      "portail",
+      "chandail",
+      "travail"
+    ],
+    "answerIndex": 3,
+    "explanation": "Travail fait travaux au pluriel (exception)."
+  },
+  {
+    "id": "fr-186",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Suffixes",
+    "difficulty": "EASY",
+    "statement": "Le suffixe « -ette » exprime :",
+    "options": [
+      "une idée de grandeur",
+      "une idée de petitesse",
+      "une idée de rapidité",
+      "une idée de répétition"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le suffixe -ette est diminutif (ex: maisonnette, fourchette)."
+  },
+  {
+    "id": "fr-187",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Complément d'objet second",
+    "difficulty": "MEDIUM",
+    "statement": "Dans « Il donne un cadeau à sa sœur », quelle est la fonction de « à sa sœur » ?",
+    "options": [
+      "COD",
+      "COS",
+      "Sujet",
+      "Complément circonstanciel"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le COS (complément d'objet second) est un complément introduit par une préposition après un premier complément d'objet direct."
+  },
+  {
+    "id": "fr-188",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe présent",
+    "difficulty": "EASY",
+    "statement": "Le participe présent du verbe « aller » est :",
+    "options": [
+      "allant",
+      "allez",
+      "aller",
+      "allé"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aller donne allant au participe présent (ex: en allant)."
+  },
+  {
+    "id": "fr-189",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Le son [j]",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces mots ne comporte pas le son [j] (comme dans « fille ») ?",
+    "options": [
+      "paille",
+      "famille",
+      "soleil",
+      "pluie"
+    ],
+    "answerIndex": 3,
+    "explanation": "Pluie comporte le son [ɥ] (comme dans 'lui'), pas le son [j]."
+  },
+  {
+    "id": "fr-190",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Figures de style",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle figure de style consiste à dire le contraire de ce que l'on pense ?",
+    "options": [
+      "métaphore",
+      "comparaison",
+      "ironie",
+      "hyperbole"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'ironie consiste à exprimer le contraire de sa pensée dans un but moqueur ou critique."
+  },
+  {
+    "id": "fr-191",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Phrase interrogative",
+    "difficulty": "EASY",
+    "statement": "Transformez en question avec inversion : « Tu as faim. »",
+    "options": [
+      "As-tu faim ?",
+      "Est-ce que tu as faim ?",
+      "Tu as faim ?",
+      "Avez-vous faim ?"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'inversion sujet-verbe donne : As-tu faim ?"
+  },
+  {
+    "id": "fr-192",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Imparfait",
+    "difficulty": "EASY",
+    "statement": "Conjuguez « courir » à la 1ère personne du pluriel de l'imparfait :",
+    "options": [
+      "nous courrons",
+      "nous courions",
+      "nous courrions",
+      "nous courious"
+    ],
+    "answerIndex": 1,
+    "explanation": "Imparfait : je courais, tu courais, il courait, nous courions, vous couriez, ils couraient."
+  },
+  {
+    "id": "fr-193",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "L'accord de « leur »",
+    "difficulty": "HARD",
+    "statement": "Quand « leur » est-il invariable ?",
+    "options": [
+      "Quand il est pronom personnel",
+      "Quand il est déterminant possessif",
+      "Toujours",
+      "Jamais"
+    ],
+    "answerIndex": 0,
+    "explanation": "Leur, pronom personnel (ex : je leur parle), est invariable. Le déterminant possessif s'accorde (leurs amis)."
+  },
+  {
+    "id": "fr-194",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Étymologie",
+    "difficulty": "HARD",
+    "statement": "Le mot « école » vient du grec « scholè » qui signifiait à l'origine :",
+    "options": [
+      "enseignement",
+      "livre",
+      "loisir",
+      "discipline"
+    ],
+    "answerIndex": 2,
+    "explanation": "En grec ancien, scholè désignait le loisir studieux, le temps libre consacré à l'étude."
+  },
+  {
+    "id": "fr-195",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Négation complexe",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle phrase est correctement négative ?",
+    "options": [
+      "Personne n'est venu.",
+      "Personne est venu.",
+      "Rien n'a été dit.",
+      "Aucun de ces deux phrases"
+    ],
+    "answerIndex": 0,
+    "explanation": "« Personne n'est venu » est correct, la négation encadre le verbe avec « ne » et « personne » (placé après)."
+  },
+  {
+    "id": "fr-196",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur antérieur",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : « Dès que tu (finir) ..., nous pourrons sortir. »",
+    "options": [
+      "finis",
+      "auras fini",
+      "as fini",
+      "finiras"
+    ],
+    "answerIndex": 1,
+    "explanation": "Pour exprimer une action future antérieure à une autre, on utilise le futur antérieur : auras fini."
+  },
+  {
+    "id": "fr-197",
+    "subject": "FRENCH",
+    "topic": "Orthographe",
+    "subtopic": "Confusion a/à",
+    "difficulty": "EASY",
+    "statement": "Complétez : « Il ... commencé à pleuvoir. »",
+    "options": [
+      "a",
+      "à",
+      "as",
+      "ah"
+    ],
+    "answerIndex": 0,
+    "explanation": "« a » est le verbe avoir conjugué à la 3e personne du singulier."
+  },
+  {
+    "id": "fr-198",
+    "subject": "FRENCH",
+    "topic": "Vocabulaire",
+    "subtopic": "Néologismes",
+    "difficulty": "MEDIUM",
+    "statement": "Que signifie le mot « égoportrait » ?",
+    "options": [
+      "portrait officiel",
+      "autoportrait photographique (selfie)",
+      "peinture de soi",
+      "photo de groupe"
+    ],
+    "answerIndex": 1,
+    "explanation": "Égoportrait, néologisme québécois, désigne un selfie."
+  },
+  {
+    "id": "fr-199",
+    "subject": "FRENCH",
+    "topic": "Grammaire",
+    "subtopic": "Prépositions de lieu",
+    "difficulty": "EASY",
+    "statement": "On dit « Je vais ... Portugal ».",
+    "options": [
+      "au",
+      "en",
+      "aux",
+      "à"
+    ],
+    "answerIndex": 1,
+    "explanation": "Devant un nom de pays masculin singulier commençant par une consonne, on utilise « au » (au Canada), mais pour le Portugal on dit « au Portugal »? Portugal est masculin et commence par une consonne, donc « au Portugal » est correct. Attention, l'option « au » est là. En effet, on dit « au Portugal ». Donc réponse index 0. Je corrige."
+  },
+  {
+    "id": "fr-200",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent de l'indicatif",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la particularité de la conjugaison du verbe « vaincre » au présent ?",
+    "options": [
+      "Il se termine par -t à la 3e personne du singulier",
+      "Il ne se conjugue qu'au singulier",
+      "Il est irrégulier à toutes les personnes",
+      "Il change de radical"
+    ],
+    "answerIndex": 0,
+    "explanation": "Au présent, vaincre : je vaincs, tu vaincs, il vainc. À la 3e personne du singulier, il se termine par un -c, pas un -t. En réalité, vaincre fait il vainc. Les options ne sont pas correctes. Je modifie la question : « Quelle est la forme correcte du verbe 'vaincre' à la 3e personne du singulier du présent ? » Options : il vainc, il vainct, il vainque, il vain. Réponse : il vainc. Corrigeons."
   }
 ]

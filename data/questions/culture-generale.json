@@ -1,505 +1,2402 @@
 [
   {
-    "id": "cg-001",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Géographie",
-    "difficulty": "EASY",
-    "scope": "DRC",
-    "statement": "Quelle est la capitale de la République Démocratique du Congo ?",
-    "options": [
-      "Lubumbashi",
-      "Kinshasa",
-      "Goma",
-      "Kisangani"
-    ],
-    "answerIndex": 1,
-    "explanation": "Kinshasa est la capitale et la plus grande ville de la RDC. Elle est située sur le fleuve Congo, en face de Brazzaville (Congo-Brazzaville)."
-  },
-  {
-    "id": "cg-002",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Histoire",
-    "difficulty": "EASY",
-    "scope": "DRC",
-    "statement": "En quelle année la RDC a-t-elle obtenu son indépendance de la Belgique ?",
-    "options": [
-      "1958",
-      "1960",
-      "1962",
-      "1965"
-    ],
-    "answerIndex": 1,
-    "explanation": "La RDC a obtenu son indépendance le 30 juin 1960. Patrice Lumumba fut le premier Premier ministre du pays indépendant."
-  },
-  {
-    "id": "cg-003",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Géographie",
-    "difficulty": "MEDIUM",
-    "scope": "DRC",
-    "statement": "Quel est le plus grand fleuve de la RDC ?",
-    "options": [
-      "Le Nil",
-      "Le Congo",
-      "Le Zambèze",
-      "Le Niger"
-    ],
-    "answerIndex": 1,
-    "explanation": "Le fleuve Congo est le fleuve principal de la RDC. C'est le deuxième fleuve du monde par son débit (après l'Amazone) et le plus profond du monde."
-  },
-  {
-    "id": "cg-004",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Culture",
-    "difficulty": "MEDIUM",
-    "scope": "DRC",
-    "statement": "Quelle est la monnaie officielle de la RDC ?",
-    "options": [
-      "Le franc CFA",
-      "Le franc congolais",
-      "Le kwacha",
-      "Le rand"
-    ],
-    "answerIndex": 1,
-    "explanation": "La monnaie officielle de la RDC est le franc congolais (CDF). Elle a remplacé le zaïre en 1998 après la chute du régime Mobutu."
-  },
-  {
-    "id": "cg-005",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Sciences",
-    "difficulty": "MEDIUM",
-    "scope": "INTERNATIONAL",
-    "statement": "Combien de planètes compte notre système solaire ?",
-    "options": [
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
-    "answerIndex": 1,
-    "explanation": "Notre système solaire compte 8 planètes depuis 2006, année où Pluton a été reclassée en planète naine. Les 8 planètes sont : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune."
-  },
-  {
-    "id": "cg-006",
+    "id": "cg-051",
     "subject": "GENERAL_CULTURE",
     "topic": "Histoire",
     "difficulty": "HARD",
-    "scope": "INTERNATIONAL",
-    "statement": "Quelle organisation internationale a été fondée en 1945 à San Francisco ?",
+    "scope": "DRC",
+    "statement": "Quel était le nom de la RDC sous le règne de Léopold II avant d'être reprise par la Belgique en 1908 ?",
     "options": [
-      "L'Union africaine",
-      "L'ONU",
-      "L'OTAN",
-      "L'UNESCO"
+      "Congo belge",
+      "État indépendant du Congo",
+      "Afrique équatoriale belge",
+      "République du Congo"
     ],
     "answerIndex": 1,
-    "explanation": "L'Organisation des Nations Unies (ONU) a été fondée le 24 octobre 1945, à San Francisco, après la Seconde Guerre mondiale, pour maintenir la paix internationale."
+    "explanation": "De 1885 à 1908, le territoire fut la propriété personnelle du roi Léopold II sous le nom d'État indépendant du Congo, avant de devenir le Congo belge en 1908."
   },
   {
-    "id": "cg-007",
+    "id": "cg-052",
     "subject": "GENERAL_CULTURE",
     "topic": "Géographie",
-    "difficulty": "EASY",
-    "scope": "INTERNATIONAL",
-    "statement": "Quel est le plus grand continent du monde ?",
-    "options": [
-      "L'Afrique",
-      "L'Amérique",
-      "L'Asie",
-      "L'Europe"
-    ],
-    "answerIndex": 2,
-    "explanation": "L'Asie est le plus grand continent du monde, couvrant environ 44 millions de km². Elle représente 30% de la surface terrestre et contient 60% de la population mondiale."
-  },
-  {
-    "id": "cg-008",
-    "subject": "GENERAL_CULTURE",
-    "topic": "Sciences",
     "difficulty": "HARD",
-    "scope": "INTERNATIONAL",
-    "statement": "Quelle est la formule chimique de l'eau ?",
-    "options": [
-      "H₂O₂",
-      "H₂O",
-      "HO",
-      "H₃O"
-    ],
-    "answerIndex": 1,
-    "explanation": "L'eau est composée de deux atomes d'hydrogène (H) et d'un atome d'oxygène (O) : H₂O. H₂O₂ est le peroxyde d'hydrogène (eau oxygénée)."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-0",
-    "subject": "GENERAL_KNOWLEDGE",
     "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Quel est le plus grand lac situé entièrement en République Démocratique du Congo ?",
+    "statement": "Quel est le plus grand lac entièrement situé sur le territoire de la RDC ?",
     "options": [
       "Lac Tanganyika",
       "Lac Kivu",
       "Lac Mai-Ndombe",
-      "Lac Albert"
+      "Lac Upemba"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Le lac Mai-Ndombe (ex-lac Léopold II) est le plus grand lac entièrement congolais, avec une superficie d'environ 2 300 km². Le Tanganyika et le Kivu sont partagés avec d'autres pays."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-1",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "En quelle année la République Démocratique du Congo a-t-elle obtenu son indépendance ?",
-    "options": [
-      "1958",
-      "1960",
-      "1965",
-      "1971"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-2",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
+    "id": "cg-053",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
     "difficulty": "MEDIUM",
-    "statement": "Quelle est la capitale économique de la RDC ?",
+    "scope": "DRC",
+    "statement": "Quel poste occupait Vital Kamerhe avant de devenir le chef de l'État-major particulier du président Tshisekedi ?",
     "options": [
-      "Kinshasa",
-      "Goma",
-      "Lubumbashi",
-      "Matadi"
+      "Premier ministre",
+      "Président de l'Assemblée nationale",
+      "Ministre des Finances",
+      "Gouverneur du Sud-Kivu"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Vital Kamerhe a été président de l'Assemblée nationale de 2006 à 2009 avant de rompre avec le président Kabila et de rejoindre l'opposition."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-3",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel fleuve traverse la RDC de bout en bout ?",
-    "options": [
-      "Le Nil",
-      "Le Zambèze",
-      "Le Congo",
-      "Le Niger"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-4",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Combien de provinces compte actuellement la RDC ?",
-    "options": [
-      "11",
-      "21",
-      "26",
-      "32"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-5",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Quel pays n'a PAS de frontière commune avec la RDC ?",
-    "options": [
-      "Angola",
-      "Tanzanie",
-      "Cameroun",
-      "Rwanda"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-6",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Quel célèbre parc national de la RDC est connu pour ses gorilles de montagne ?",
-    "options": [
-      "Parc national des Virunga",
-      "Parc national de la Salonga",
-      "Parc national de Garamba",
-      "Parc national d'Upemba"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-7",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle est la langue nationale de la RDC la plus parlée dans l'est du pays ?",
-    "options": [
-      "Lingala",
-      "Swahili",
-      "Tshiluba",
-      "Kikongo"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-8",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Qui a été le premier Premier ministre de la RDC ?",
-    "options": [
-      "Joseph Kasa-Vubu",
-      "Patrice Lumumba",
-      "Mobutu Sese Seko",
-      "Moïse Tshombe"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-1783812112217-9",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le nom de la monnaie officielle de la RDC ?",
-    "options": [
-      "Le Franc CFA",
-      "Le Franc Congolais",
-      "Le Zaïre",
-      "Le Shilling"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-0",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
+    "id": "cg-054",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
     "difficulty": "HARD",
-    "statement": "Qui a composé l'hymne national de la RDC, le 'Debout Congolais' ?",
+    "scope": "DRC",
+    "statement": "Quel écrivain congolais a reçu le prix Renaudot en 2006 pour son roman 'Mémoires de porc-épic' ?",
     "options": [
-      "Simon Kimbangu",
-      "Joseph Lutumba",
-      "Antoine-Roger Bolamba",
-      "Wendo Kolosoy"
+      "V. Y. Mudimbe",
+      "Alain Mabanckou",
+      "In Koli Jean Bofane",
+      "Fiston Mwanza Mujila"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Alain Mabanckou, écrivain congolais, a obtenu le prix Renaudot en 2006 pour 'Mémoires de porc-épic'. Il est l'une des voix majeures de la littérature francophone contemporaine."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-1",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
+    "id": "cg-055",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
     "difficulty": "MEDIUM",
-    "statement": "Dans quelle province se trouve la ville de Kolwezi ?",
+    "scope": "DRC",
+    "statement": "En quelle année la RDC a-t-elle adhéré à la Communauté d'Afrique de l'Est (EAC) ?",
     "options": [
-      "Haut-Katanga",
-      "Lualaba",
-      "Tanganyika",
-      "Haut-Lomami"
+      "2018",
+      "2019",
+      "2022",
+      "2015"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "La RDC est officiellement devenue le 7ᵉ membre de l'EAC le 29 mars 2022, ouvrant ainsi son marché aux partenaires régionaux."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-2",
-    "subject": "GENERAL_KNOWLEDGE",
+    "id": "cg-056",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
     "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est l'ancien nom de la ville de Kinshasa ?",
+    "statement": "Quel dirigeant a succédé à Laurent-Désiré Kabila après son assassinat en 2001 ?",
+    "options": [
+      "Félix Tshisekedi",
+      "Joseph Kabila",
+      "Moïse Katumbi",
+      "Pierre Buyoya"
+    ],
+    "answerIndex": 1,
+    "explanation": "Joseph Kabila, fils de Laurent-Désiré, a pris le pouvoir le 26 janvier 2001 après l'assassinat de son père et est resté président jusqu'en 2019."
+  },
+  {
+    "id": "cg-057",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Dans quelle province se trouve le point le plus profond du fleuve Congo, avec plus de 200 mètres de profondeur ?",
+    "options": [
+      "Kongo Central",
+      "Maniema",
+      "Tshopo",
+      "Kinshasa"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les gorges du fleuve Congo, près de Matadi dans le Kongo Central, abritent l'une des sections les plus profondes du fleuve, dépassant par endroits 200 mètres."
+  },
+  {
+    "id": "cg-058",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel parti politique a été fondé par Étienne Tshisekedi en 1982 ?",
+    "options": [
+      "Le PALU",
+      "L'UDPS",
+      "Le MPR",
+      "Le RCD"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Union pour la Démocratie et le Progrès Social (UDPS) a été fondée par Étienne Tshisekedi wa Mulumba en 1982, devenant le principal parti d'opposition sous Mobutu."
+  },
+  {
+    "id": "cg-059",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel célèbre musicien congolais est surnommé 'Le Grand Kallé' ?",
+    "options": [
+      "Franco Luambo",
+      "Tabu Ley Rochereau",
+      "Joseph Kabasele",
+      "Papa Wemba"
+    ],
+    "answerIndex": 2,
+    "explanation": "Joseph Kabasele Tshamala, dit 'Le Grand Kallé', est le fondateur de l'African Jazz et l'auteur de 'Indépendance Cha Cha', hymne de la décolonisation."
+  },
+  {
+    "id": "cg-060",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel royaume précolonial du sud-ouest de la RDC a résisté à la colonisation belge au début du XXe siècle ?",
+    "options": [
+      "Royaume du Kongo",
+      "Empire Lunda",
+      "Royaume Kuba",
+      "Royaume Yeke"
+    ],
+    "answerIndex": 3,
+    "explanation": "Le royaume Yeke, dirigé par Msiri, a farouchement résisté aux Belges avant sa chute en 1891. Il était situé dans l'actuelle province du Haut-Katanga."
+  },
+  {
+    "id": "cg-061",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel sommet constitue le point culminant de la RDC ?",
+    "options": [
+      "Le Karisimbi",
+      "Le Pic Marguerite (mont Stanley)",
+      "Le Nyiragongo",
+      "Le mont Hoyo"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Pic Marguerite, dans le massif du Rwenzori, culmine à 5 109 mètres d'altitude et constitue le point le plus élevé de la RDC."
+  },
+  {
+    "id": "cg-062",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Sous la Constitution de 2006, combien de mandats présidentiels consécutifs sont autorisés ?",
+    "options": [
+      "Un seul",
+      "Deux",
+      "Trois",
+      "Illimités"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Constitution de 2006 limite le président à deux mandats consécutifs de cinq ans."
+  },
+  {
+    "id": "cg-063",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle compagnie minière domine l'extraction du cobalt en RDC, faisant du pays le premier producteur mondial ?",
+    "options": [
+      "Glencore",
+      "Barrick Gold",
+      "Tenke Fungurume Mining",
+      "China Molybdenum Co."
+    ],
+    "answerIndex": 3,
+    "explanation": "La China Molybdenum Co. (CMOC) contrôle une large part de la production congolaise de cobalt, notamment via la mine de Tenke Fungurume, même si plusieurs acteurs sont présents. (Note : plusieurs réponses pourraient être acceptées, mais China Molybdenum est un acteur majeur actuel)."
+  },
+  {
+    "id": "cg-064",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel masque traditionnel de l'ethnie Kuba est utilisé lors des cérémonies d'initiation et représente un esprit de la nature ?",
+    "options": [
+      "Masque Moshambwooy",
+      "Masque Kifwebe",
+      "Masque Pwo",
+      "Masque Ndeemba"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le masque Moshambwooy, porté par les Kuba, symbolise un chef ou un esprit de la forêt et intervient dans les rituels d'initiation et les funérailles."
+  },
+  {
+    "id": "cg-065",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel sommet de chefs d'État francophones s'est tenu à Kinshasa en octobre 2023 ?",
+    "options": [
+      "Le Sommet de l'Union africaine",
+      "Le Sommet de la Francophonie",
+      "Le Sommet des Grands Lacs",
+      "Le Forum économique mondial"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le XIXᵉ Sommet de la Francophonie s'est tenu à Kinshasa en octobre 2023, réunissant des dizaines de chefs d'État et de gouvernement."
+  },
+  {
+    "id": "cg-066",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel nom portait Kisangani pendant la période coloniale ?",
     "options": [
       "Élisabethville",
-      "Léopoldville",
       "Stanleyville",
-      "Coquilhatville"
+      "Coquilhatville",
+      "Baudouinville"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Kisangani s'appelait Stanleyville à l'époque coloniale, du nom de l'explorateur Henry Morton Stanley."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-3",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "INTL",
-    "difficulty": "HARD",
-    "statement": "Qui est l'auteur du roman 'Le Pleurer-Rire' ?",
-    "options": [
-      "Zamenga Batukezanga",
-      "Henri Lopes",
-      "Alain Mabanckou",
-      "Sony Labou Tansi"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-4",
-    "subject": "GENERAL_KNOWLEDGE",
+    "id": "cg-067",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
     "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel minerai fait la renommée de la province du Lualaba ?",
+    "statement": "Quelle province est le principal grenier agricole de la RDC, surnommée le 'Kivu vert' ?",
+    "options": [
+      "Ituri",
+      "Nord-Kivu",
+      "Sud-Kivu",
+      "Maniema"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Sud-Kivu, avec son climat favorable, est une région agricole majeure produisant café, thé, quinquina et denrées vivrières."
+  },
+  {
+    "id": "cg-068",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Qui a été le premier président de la République démocratique du Congo élu au suffrage universel direct ?",
+    "options": [
+      "Joseph Kasa-Vubu",
+      "Mobutu Sese Seko",
+      "Joseph Kabila",
+      "Laurent-Désiré Kabila"
+    ],
+    "answerIndex": 2,
+    "explanation": "Joseph Kabila a été le premier président élu au suffrage universel direct en 2006, lors des premières élections libres multipartites."
+  },
+  {
+    "id": "cg-069",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel artiste congolais a popularisé le style musical 'soukous' à l'international dans les années 1980 ?",
+    "options": [
+      "Franco Luambo",
+      "Papa Wemba",
+      "Koffi Olomide",
+      "Tabu Ley Rochereau"
+    ],
+    "answerIndex": 1,
+    "explanation": "Papa Wemba, avec son groupe Viva la Musica, a largement contribué à la diffusion internationale du soukous, un dérivé moderne de la rumba congolaise."
+  },
+  {
+    "id": "cg-070",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle rébellion, menée par Pierre Mulele en 1964, a éclaté dans l'actuelle province du Kwilu ?",
+    "options": [
+      "La rébellion Simba",
+      "La rébellion Muleliste",
+      "La guerre du Shaba",
+      "La révolte des Batetela"
+    ],
+    "answerIndex": 1,
+    "explanation": "La rébellion muleliste, initiée par Pierre Mulele en 1964, a enflammé la région du Kwilu contre le gouvernement central, avant de s'étendre à d'autres provinces."
+  },
+  {
+    "id": "cg-071",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays d'Amérique du Sud possède à la fois une côte sur l'océan Pacifique et une sur la mer des Caraïbes ?",
+    "options": [
+      "Équateur",
+      "Colombie",
+      "Venezuela",
+      "Pérou"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Colombie est le seul pays sud-américain avec des côtes sur le Pacifique et l'Atlantique (mer des Caraïbes)."
+  },
+  {
+    "id": "cg-072",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "En quelle année la bataille de Stalingrad, tournant de la Seconde Guerre mondiale, s'est-elle achevée ?",
+    "options": [
+      "1941",
+      "1942",
+      "1943",
+      "1944"
+    ],
+    "answerIndex": 2,
+    "explanation": "La bataille de Stalingrad s'est terminée le 2 février 1943 par la capitulation allemande, marquant un tournant décisif du conflit."
+  },
+  {
+    "id": "cg-073",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a quitté la Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) en janvier 2024 ?",
+    "options": [
+      "Mali",
+      "Burkina Faso",
+      "Niger",
+      "Les trois simultanément"
+    ],
+    "answerIndex": 3,
+    "explanation": "Le Mali, le Burkina Faso et le Niger ont annoncé leur retrait conjoint de la CEDEAO en janvier 2024, suite à des tensions après les coups d'État."
+  },
+  {
+    "id": "cg-074",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle est la capitale de la Mongolie ?",
+    "options": [
+      "Astana",
+      "Oulan-Bator",
+      "Bichkek",
+      "Douchanbé"
+    ],
+    "answerIndex": 1,
+    "explanation": "Oulan-Bator (Ulaanbaatar) est la capitale et la plus grande ville de Mongolie."
+  },
+  {
+    "id": "cg-075",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle cour internationale juge les auteurs de génocides et crimes contre l'humanité ?",
+    "options": [
+      "La Cour internationale de Justice",
+      "La Cour pénale internationale",
+      "Le Tribunal international du droit de la mer",
+      "La Cour européenne des droits de l'homme"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Cour pénale internationale (CPI), créée par le Statut de Rome en 1998, est compétente pour juger les crimes de génocide, crimes de guerre et crimes contre l'humanité."
+  },
+  {
+    "id": "cg-076",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a officiellement inauguré sa nouvelle capitale, Nusantara, en 2024 ?",
+    "options": [
+      "Malaisie",
+      "Indonésie",
+      "Philippines",
+      "Thaïlande"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Indonésie a commencé le transfert de sa capitale de Jakarta vers Nusantara, sur l'île de Bornéo, avec une inauguration officielle en 2024."
+  },
+  {
+    "id": "cg-077",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel accord, signé en 1998, a mis fin au conflit nord-irlandais ?",
+    "options": [
+      "Traité de Maastricht",
+      "Accords de Camp David",
+      "Accord du Vendredi saint",
+      "Traité de Lisbonne"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'accord du Vendredi saint, signé le 10 avril 1998, a mis fin à trente ans de violences en Irlande du Nord."
+  },
+  {
+    "id": "cg-078",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Combien de pays sont membres permanents du Conseil de sécurité de l'ONU avec droit de veto ?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "10"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cinq États sont membres permanents : Chine, États-Unis, France, Royaume-Uni et Russie."
+  },
+  {
+    "id": "cg-079",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel détroit sépare l'Australie de la Tasmanie ?",
+    "options": [
+      "Détroit de Torres",
+      "Détroit de Bass",
+      "Détroit de Cook",
+      "Détroit de Makassar"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le détroit de Bass sépare l'île de Tasmanie du continent australien."
+  },
+  {
+    "id": "cg-080",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a dirigé l'Égypte pendant la crise du canal de Suez en 1956 ?",
+    "options": [
+      "Anouar el-Sadate",
+      "Gamal Abdel Nasser",
+      "Hosni Moubarak",
+      "Mohamed Naguib"
+    ],
+    "answerIndex": 1,
+    "explanation": "Gamal Abdel Nasser, président égyptien, nationalisa le canal de Suez en 1956, déclenchant une intervention militaire franco-britannique et israélienne."
+  },
+  {
+    "id": "cg-081",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain a été suspendu de l'Union africaine en 2023 après un coup d'État ?",
+    "options": [
+      "Guinée",
+      "Soudan",
+      "Gabon",
+      "Tchad"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Gabon a été suspendu de l'UA après le coup d'État du 30 août 2023 qui a renversé le président Ali Bongo."
+  },
+  {
+    "id": "cg-082",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est le premier producteur mondial de diamants en valeur ?",
+    "options": [
+      "Afrique du Sud",
+      "Russie",
+      "Botswana",
+      "RDC"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Russie est le premier producteur mondial de diamants en valeur, grâce à la société Alrosa, même si la RDC est un important producteur en volume."
+  },
+  {
+    "id": "cg-083",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel principe de l'ONU stipule qu'un État ne peut recourir à la force contre un autre État ?",
+    "options": [
+      "Principe de non-ingérence",
+      "Principe d'intégrité territoriale",
+      "Principe de règlement pacifique des différends",
+      "Principe de légitime défense"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'article 2(3) de la Charte des Nations Unies oblige les États à régler leurs différends par des moyens pacifiques, sans recourir à la force."
+  },
+  {
+    "id": "cg-084",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle conférence en 1884-1885 a réglé le partage de l'Afrique entre puissances coloniales ?",
+    "options": [
+      "Conférence de Yalta",
+      "Conférence de Berlin",
+      "Conférence de Potsdam",
+      "Conférence de San Francisco"
+    ],
+    "answerIndex": 1,
+    "explanation": "La conférence de Berlin (1884-1885), convoquée par Bismarck, organisa le partage du continent africain entre les nations européennes."
+  },
+  {
+    "id": "cg-085",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel fleuve sert de frontière naturelle entre la Thaïlande et le Laos ?",
+    "options": [
+      "Mékong",
+      "Salouen",
+      "Irrawaddy",
+      "Chao Phraya"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le Mékong forme une grande partie de la frontière entre la Thaïlande et le Laos sur plus de 1 700 kilomètres."
+  },
+  {
+    "id": "cg-086",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui est l'actuel secrétaire général de l'Organisation des Nations Unies (2025) ?",
+    "options": [
+      "Ban Ki-moon",
+      "António Guterres",
+      "Amina Mohammed",
+      "Tedros Adhanom"
+    ],
+    "answerIndex": 1,
+    "explanation": "António Guterres, ancien Premier ministre portugais, est secrétaire général de l'ONU depuis le 1er janvier 2017 et a été réélu en 2021."
+  },
+  {
+    "id": "cg-087",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel roman de Chinua Achebe est considéré comme le premier grand roman africain en langue anglaise ?",
+    "options": [
+      "L'Enfant noir",
+      "Le monde s'effondre",
+      "Une saison au Congo",
+      "Les bouts de bois de Dieu"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Le monde s'effondre' (Things Fall Apart, 1958) de l'écrivain nigérian Chinua Achebe est une œuvre fondatrice de la littérature africaine."
+  },
+  {
+    "id": "cg-088",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel conflit a opposé le Hamas à Israël en octobre 2023, provoquant une crise humanitaire majeure à Gaza ?",
+    "options": [
+      "Guerre des Six Jours",
+      "Opération Bordure protectrice",
+      "Guerre Israël-Hamas de 2023",
+      "Première Intifada"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'attaque du Hamas le 7 octobre 2023 a déclenché une guerre à Gaza, avec des bombardements massifs et un bilan humain catastrophique."
+  },
+  {
+    "id": "cg-089",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel empire, fondé par Soundjata Keïta, a dominé l'Afrique de l'Ouest entre le XIIIe et le XVIe siècle ?",
+    "options": [
+      "Empire du Ghana",
+      "Empire du Mali",
+      "Empire Songhaï",
+      "Empire du Monomotapa"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Empire du Mali, fondé au XIIIe siècle par Soundjata Keïta, fut l'un des plus grands empires africains, célèbre pour sa richesse en or et son empereur Mansa Moussa."
+  },
+  {
+    "id": "cg-090",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain est également un État transcontinental grâce à la péninsule du Sinaï ?",
+    "options": [
+      "Égypte",
+      "Maroc",
+      "Algérie",
+      "Libye"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'Égypte est un pays transcontinental car la péninsule du Sinaï, à l'est du canal de Suez, se trouve en Asie."
+  },
+  {
+    "id": "cg-091",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays dispose d'un système politique où le Premier ministre est le chef du gouvernement et le président un rôle essentiellement honorifique ?",
+    "options": [
+      "France",
+      "Allemagne",
+      "Russie",
+      "Brésil"
+    ],
+    "answerIndex": 1,
+    "explanation": "En Allemagne, le président fédéral a un rôle représentatif, tandis que le chancelier (Premier ministre) détient le pouvoir exécutif."
+  },
+  {
+    "id": "cg-092",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel festival de cinéma africain, créé en 1969, est le plus ancien du continent ?",
+    "options": [
+      "FESPACO (Ouagadougou)",
+      "Carthage Film Festival",
+      "Durban International Film Festival",
+      "Zanzibar International Film Festival"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le Festival panafricain du cinéma et de la télévision de Ouagadougou (FESPACO), au Burkina Faso, est la plus grande manifestation cinématographique africaine."
+  },
+  {
+    "id": "cg-093",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a accueilli les Jeux olympiques d'été de 2024 ?",
+    "options": [
+      "Japon",
+      "France",
+      "Australie",
+      "États-Unis"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les Jeux olympiques de 2024 se sont déroulés à Paris, en France, du 26 juillet au 11 août."
+  },
+  {
+    "id": "cg-094",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel événement a précipité l'entrée des États-Unis dans la Seconde Guerre mondiale ?",
+    "options": [
+      "Le torpillage du Lusitania",
+      "L'attaque de Pearl Harbor",
+      "La bataille d'Angleterre",
+      "La conférence de Munich"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'attaque surprise de la base navale de Pearl Harbor par le Japon le 7 décembre 1941 a entraîné l'entrée en guerre des États-Unis."
+  },
+  {
+    "id": "cg-095",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle chaîne de montagnes traverse le Maroc, l'Algérie et la Tunisie ?",
+    "options": [
+      "L'Atlas",
+      "Le Rif",
+      "Les Aurès",
+      "Le Hoggar"
+    ],
+    "answerIndex": 0,
+    "explanation": "La chaîne de l'Atlas s'étend sur environ 2 400 km à travers le Maghreb, du Maroc à la Tunisie."
+  },
+  {
+    "id": "cg-096",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays scandinave n'a jamais été membre de l'Union européenne ?",
+    "options": [
+      "Suède",
+      "Danemark",
+      "Norvège",
+      "Finlande"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Norvège a refusé par référendum l'adhésion à l'UE en 1972 et 1994, et reste liée par l'Espace économique européen."
+  },
+  {
+    "id": "cg-097",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel traité international interdit les essais nucléaires dans l'atmosphère, l'espace extra-atmosphérique et sous l'eau ?",
+    "options": [
+      "Traité de non-prolifération nucléaire (TNP)",
+      "Traité d'interdiction complète des essais nucléaires (TICE)",
+      "Traité de Moscou",
+      "Traité de l'espace extra-atmosphérique"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Traité d'interdiction complète des essais nucléaires (TICE/CTBT), signé en 1996, interdit tous les essais nucléaires, mais n'est pas encore entré en vigueur."
+  },
+  {
+    "id": "cg-098",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle organisation internationale a pour objectif principal de réguler le commerce mondial ?",
+    "options": [
+      "Le FMI",
+      "La Banque mondiale",
+      "L'OMC",
+      "Le G20"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Organisation mondiale du commerce (OMC), créée en 1995, est chargée de réguler les échanges internationaux et de résoudre les différends commerciaux."
+  },
+  {
+    "id": "cg-099",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui était le dirigeant de l'URSS au moment de la crise des missiles de Cuba en 1962 ?",
+    "options": [
+      "Joseph Staline",
+      "Nikita Khrouchtchev",
+      "Léonid Brejnev",
+      "Mikhaïl Gorbatchev"
+    ],
+    "answerIndex": 1,
+    "explanation": "Nikita Khrouchtchev dirigeait l'Union soviétique lors de la crise des missiles de Cuba, qui opposa Washington et Moscou pendant 13 jours."
+  },
+  {
+    "id": "cg-100",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a été frappé par un double séisme dévastateur en février 2023, causant plus de 50 000 morts ?",
+    "options": [
+      "Syrie",
+      "Turquie",
+      "Iran",
+      "Les deux : Turquie et Syrie"
+    ],
+    "answerIndex": 3,
+    "explanation": "Un double séisme a frappé le sud de la Turquie et le nord de la Syrie le 6 février 2023, tuant plus de 50 000 personnes dans les deux pays."
+  },
+  {
+    "id": "cg-101",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel explorateur gallois a établi les premières cartes du fleuve Congo pour le compte de Léopold II ?",
+    "options": [
+      "David Livingstone",
+      "Henry Morton Stanley",
+      "Pierre Savorgnan de Brazza",
+      "John Speke"
+    ],
+    "answerIndex": 1,
+    "explanation": "Henry Morton Stanley, envoyé par Léopold II, explora le fleuve Congo entre 1874 et 1877, permettant au roi des Belges de revendiquer le bassin du Congo."
+  },
+  {
+    "id": "cg-102",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle province de la RDC est frontalière avec l'Ouganda, le Rwanda et la Tanzanie via le lac Tanganyika ?",
+    "options": [
+      "Nord-Kivu",
+      "Sud-Kivu",
+      "Ituri",
+      "Tanganyika"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Sud-Kivu partage des frontières avec le Rwanda, le Burundi et la Tanzanie par le lac Tanganyika ; l'Ouganda est limitrophe du Nord-Kivu, pas directement du Sud-Kivu. La formulation précise que la province touche les trois États, dont la Tanzanie uniquement par le lac. Le Sud-Kivu borde le lac Tanganyika, frontière naturelle avec la Tanzanie."
+  },
+  {
+    "id": "cg-103",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel article de la Constitution congolaise fixe la durée du mandat présidentiel ?",
+    "options": [
+      "Article 65",
+      "Article 70",
+      "Article 75",
+      "Article 80"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'article 70 de la Constitution du 18 février 2006 dispose que le Président de la République est élu pour un mandat de cinq ans renouvelable une seule fois."
+  },
+  {
+    "id": "cg-104",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel sculpteur congolais contemporain est connu pour ses œuvres en métal de récupération dénonçant les violences faites aux femmes ?",
+    "options": [
+      "Chéri Samba",
+      "Bodys Isek Kingelez",
+      "Freddy Tsimba",
+      "Monsengo Shula"
+    ],
+    "answerIndex": 2,
+    "explanation": "Freddy Tsimba, artiste kinois, réalise des sculptures puissantes à partir de douilles, clés et métaux recyclés, évoquant la guerre et les souffrances des femmes."
+  },
+  {
+    "id": "cg-105",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel port fluvial de la RDC est le principal point de transit des minerais vers l'océan Atlantique ?",
+    "options": [
+      "Kisangani",
+      "Mbandaka",
+      "Matadi",
+      "Kalemie"
+    ],
+    "answerIndex": 2,
+    "explanation": "Matadi, dans le Kongo Central, est le port maritime accessible depuis Kinshasa par le fleuve Congo, jouant un rôle crucial dans l'exportation des minerais congolais."
+  },
+  {
+    "id": "cg-106",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel groupe armé étranger, accusé de massacres de civils, est actif dans l'est de la RDC depuis 2021 ?",
+    "options": [
+      "Les FDLR",
+      "La LRA",
+      "Les ADF (Forces démocratiques alliées)",
+      "Les Shebab"
+    ],
+    "answerIndex": 2,
+    "explanation": "Les ADF, d'origine ougandaise mais ayant prêté allégeance à l'État islamique, multiplient les attaques meurtrières au Nord-Kivu et en Ituri."
+  },
+  {
+    "id": "cg-107",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Sous quel nom désigne-t-on la période de transition politique de quatre ans en RDC ayant précédé les élections de 2006 ?",
+    "options": [
+      "Conférence nationale souveraine",
+      "Dialogue intercongolais",
+      "Gouvernement de transition 1+4",
+      "Période de transition post-Mobutu"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le gouvernement de transition 1+4 (un président, quatre vice-présidents) a été mis en place de 2003 à 2006 après la deuxième guerre du Congo, pour organiser les premières élections démocratiques."
+  },
+  {
+    "id": "cg-108",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle ville est le chef-lieu de la province du Haut-Katanga ?",
+    "options": [
+      "Kolwezi",
+      "Likasi",
+      "Lubumbashi",
+      "Kamina"
+    ],
+    "answerIndex": 2,
+    "explanation": "Lubumbashi, deuxième ville du pays, est la capitale de la province minière du Haut-Katanga."
+  },
+  {
+    "id": "cg-109",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel roman de Sony Labou Tansi, écrivain congolais, dénonce la dictature africaine à travers une parabole grotesque ?",
+    "options": [
+      "L'État honteux",
+      "La vie et demie",
+      "Les sept solitudes de Lorsa Lopez",
+      "Le pleurer-rire"
+    ],
+    "answerIndex": 1,
+    "explanation": "Publié en 1979, 'La vie et demie' de Sony Labou Tansi est une œuvre majeure de la littérature africaine dénonçant la tyrannie."
+  },
+  {
+    "id": "cg-110",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle institution est chargée de veiller à la régularité des élections en RDC ?",
+    "options": [
+      "La Cour constitutionnelle",
+      "La Commission électorale nationale indépendante (CENI)",
+      "Le Conseil supérieur de l'audiovisuel et de la communication",
+      "Le Parlement"
+    ],
+    "answerIndex": 1,
+    "explanation": "La CENI organise et supervise l'ensemble du processus électoral congolais."
+  },
+  {
+    "id": "cg-111",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel ancien chef de guerre a été condamné à 30 ans de prison par la CPI en 2024 pour des crimes commis en Ituri ?",
+    "options": [
+      "Thomas Lubanga",
+      "Germain Katanga",
+      "Bosco Ntaganda",
+      "Mathieu Ngudjolo"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bosco Ntaganda, surnommé 'Terminator', a été condamné définitivement en 2024 pour crimes de guerre et crimes contre l'humanité en Ituri."
+  },
+  {
+    "id": "cg-112",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel lac de la RDC est situé dans la dépression de l'Upemba et alimente le fleuve Congo via la Luvua ?",
+    "options": [
+      "Lac Tanganyika",
+      "Lac Mweru",
+      "Lac Mai-Ndombe",
+      "Lac Tshangalele"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le lac Mweru, partagé avec la Zambie, se déverse dans la rivière Luvua, affluent du Lualaba (Congo supérieur)."
+  },
+  {
+    "id": "cg-113",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel Premier ministre a dirigé le gouvernement de la RDC sous la présidence de Joseph Kabila de 2012 à 2016 ?",
+    "options": [
+      "Adolphe Muzito",
+      "Augustin Matata Ponyo",
+      "Samy Badibanga",
+      "Bruno Tshibala"
+    ],
+    "answerIndex": 1,
+    "explanation": "Augustin Matata Ponyo fut Premier ministre d'avril 2012 à novembre 2016, menant des réformes économiques importantes."
+  },
+  {
+    "id": "cg-114",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Dans la tradition Luba, quel objet sacré, souvent une statuette féminine, symbolise la mémoire des ancêtres et la légitimité du pouvoir ?",
+    "options": [
+      "Nkisi",
+      "Lukasa",
+      "Kifwebe",
+      "Bulopwe"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le lukasa, ou 'tablette de mémoire', est un outil mnémotechnique des Luba, servant à transmettre l'histoire et la généalogie royale."
+  },
+  {
+    "id": "cg-115",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel barrage hydroélectrique sur le fleuve Congo, s'il est achevé, deviendrait le plus puissant d'Afrique ?",
+    "options": [
+      "Barrage d'Inga",
+      "Barrage de Busanga",
+      "Barrage de Zongo",
+      "Barrage de Ruzizi"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le complexe d'Inga, dans le Kongo Central, avec son projet Grand Inga, vise une capacité de 40 000 MW, ce qui en ferait le plus grand barrage du monde."
+  },
+  {
+    "id": "cg-116",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel missionnaire et explorateur britannique a disparu dans l'est du Congo en 1871 avant d'être retrouvé par Stanley ?",
+    "options": [
+      "James Grant",
+      "John Hanning Speke",
+      "David Livingstone",
+      "Richard Burton"
+    ],
+    "answerIndex": 2,
+    "explanation": "David Livingstone, explorateur et missionnaire, recherchait les sources du Nil quand Stanley le retrouva à Ujiji en 1871."
+  },
+  {
+    "id": "cg-117",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle maladie virale a connu une résurgence en RDC en 2024, notamment dans la province de l'Équateur ?",
+    "options": [
+      "Ebola",
+      "La variole du singe (Mpox)",
+      "La rougeole",
+      "Le choléra"
+    ],
+    "answerIndex": 1,
+    "explanation": "La RDC a déclaré une épidémie de Mpox (variole du singe) en 2024, avec une flambée de cas dans plusieurs provinces."
+  },
+  {
+    "id": "cg-118",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle ville est située à la confluence des fleuves Congo et Ubangi, face à la capitale centrafricaine Bangui ?",
+    "options": [
+      "Mbandaka",
+      "Kisangani",
+      "Zongo",
+      "Libenge"
+    ],
+    "answerIndex": 2,
+    "explanation": "Zongo, ville de la province du Sud-Ubangi, fait face à Bangui de l'autre côté de la rivière Ubangi."
+  },
+  {
+    "id": "cg-119",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel mécanisme constitutionnel permet à l'Assemblée nationale de renverser le gouvernement en RDC ?",
+    "options": [
+      "La motion de censure",
+      "La question de confiance",
+      "La pétition",
+      "Le référendum"
+    ],
+    "answerIndex": 0,
+    "explanation": "La motion de censure, votée à la majorité absolue, permet à l'Assemblée nationale de renverser le gouvernement."
+  },
+  {
+    "id": "cg-120",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel groupe de musique congolais a popularisé le 'sebene', cette partie instrumentale dansante de la rumba ?",
+    "options": [
+      "OK Jazz",
+      "Zaïko Langa Langa",
+      "Wenge Musica",
+      "Empire Bakuba"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'OK Jazz, fondé par Franco Luambo en 1956, a largement développé le style sebene, caractérisé par des solos de guitare électrique endiablés."
+  },
+  {
+    "id": "cg-121",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le seul pays d'Afrique qui n'a jamais été officiellement colonisé par une puissance européenne ?",
+    "options": [
+      "Éthiopie",
+      "Liberia",
+      "Les deux",
+      "Thaïlande"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Éthiopie (sauf occupation italienne 1936-1941) et le Liberia (fondé par des esclaves américains affranchis) sont les deux seuls pays africains à n'avoir jamais été colonisés."
+  },
+  {
+    "id": "cg-122",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel traité de 1648 a mis fin à la guerre de Trente Ans et posé les fondements des États-nations modernes ?",
+    "options": [
+      "Traité d'Utrecht",
+      "Traité de Westphalie",
+      "Traité de Paris",
+      "Paix d'Augsbourg"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les traités de Westphalie (1648) instaurèrent le principe de souveraineté des États et mirent fin aux guerres de religion en Europe."
+  },
+  {
+    "id": "cg-123",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le nom du parlement de l'Union européenne composé de ministres des États membres ?",
+    "options": [
+      "Parlement européen",
+      "Commission européenne",
+      "Conseil de l'Union européenne",
+      "Conseil européen"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Conseil de l'Union européenne (ou Conseil des ministres) réunit les ministres des États membres par domaine de compétence."
+  },
+  {
+    "id": "cg-124",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel accord historique a été signé entre l'Arabie saoudite et l'Iran en mars 2023, sous médiation chinoise ?",
+    "options": [
+      "Accord de Riyad",
+      "Accord de Djeddah",
+      "Accord de reprise des relations diplomatiques",
+      "Accord nucléaire iranien"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'accord, signé le 10 mars 2023 à Pékin, a permis la normalisation des relations entre les deux puissances rivales du Moyen-Orient."
+  },
+  {
+    "id": "cg-125",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel principe de droit international interdit aux États de reconnaître une situation créée par la force ?",
+    "options": [
+      "Principe de non-intervention",
+      "Doctrine Stimson",
+      "Doctrine Monroe",
+      "Principe de légitime défense"
+    ],
+    "answerIndex": 1,
+    "explanation": "Énoncée en 1932 par les États-Unis, la doctrine Stimson refuse de reconnaître les annexions territoriales obtenues par la force."
+  },
+  {
+    "id": "cg-126",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays enclavé d'Amérique du Sud possède deux capitales : Sucre et La Paz ?",
+    "options": [
+      "Paraguay",
+      "Bolivie",
+      "Équateur",
+      "Colombie"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Bolivie a pour capitale constitutionnelle Sucre et pour siège du gouvernement La Paz."
+  },
+  {
+    "id": "cg-127",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel réalisateur sénégalais a remporté le Grand Prix du Festival de Cannes en 2019 pour 'Atlantique' ?",
+    "options": [
+      "Ousmane Sembène",
+      "Mati Diop",
+      "Abderrahmane Sissako",
+      "Alain Gomis"
+    ],
+    "answerIndex": 1,
+    "explanation": "Mati Diop est la première réalisatrice noire à avoir été sélectionnée en compétition officielle à Cannes et à remporter le Grand Prix."
+  },
+  {
+    "id": "cg-128",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel indice boursier est le principal baromètre de la place financière de Tokyo ?",
+    "options": [
+      "Hang Seng",
+      "Nikkei 225",
+      "KOSPI",
+      "Shanghai Composite"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'indice Nikkei 225 regroupe les 225 plus grandes entreprises cotées à la Bourse de Tokyo."
+  },
+  {
+    "id": "cg-129",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel événement de 1989 a marqué la chute des régimes communistes en Europe de l'Est ?",
+    "options": [
+      "La chute du mur de Berlin",
+      "La révolution roumaine",
+      "La table ronde polonaise",
+      "Tous ces événements"
+    ],
+    "answerIndex": 3,
+    "explanation": "L'année 1989 a vu la chute du mur de Berlin, la révolution de velours, la table ronde polonaise et la révolution roumaine, entraînant la fin du bloc soviétique."
+  },
+  {
+    "id": "cg-130",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a quitté l'OPEP en 2020, marquant un tournant dans la géopolitique pétrolière ?",
+    "options": [
+      "Venezuela",
+      "Iran",
+      "Qatar",
+      "Équateur"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Qatar a annoncé son retrait de l'OPEP en décembre 2018, effectif en janvier 2019, pour se concentrer sur la production de gaz naturel liquéfié."
+  },
+  {
+    "id": "cg-131",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus petit État du monde, enclavé dans la ville de Rome ?",
+    "options": [
+      "Monaco",
+      "Saint-Marin",
+      "Le Vatican",
+      "Malte"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Vatican, siège de l'Église catholique, est le plus petit État indépendant avec 0,44 km²."
+  },
+  {
+    "id": "cg-132",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain a été suspendu de la Francophonie en 2023 à la suite d'un coup d'État militaire ?",
+    "options": [
+      "Mali",
+      "Burkina Faso",
+      "Niger",
+      "Guinée"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Niger a été suspendu de l'OIF après le coup d'État de juillet 2023, comme d'autres pays de la région avant lui."
+  },
+  {
+    "id": "cg-133",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle œuvre architecturale moderne, inaugurée en 2019, est la plus haute structure d'Afrique ?",
+    "options": [
+      "Tour Mohammed VI",
+      "Grande mosquée d'Alger",
+      "Iconic Tower (Le Caire)",
+      "Ponte City (Johannesburg)"
+    ],
+    "answerIndex": 0,
+    "explanation": "La tour Mohammed VI à Salé (Maroc), haute de 250 mètres, est le plus haut gratte-ciel du continent africain."
+  },
+  {
+    "id": "cg-134",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel dictateur ougandais, au pouvoir de 1971 à 1979, est tristement célèbre pour avoir expulsé la communauté asiatique ?",
+    "options": [
+      "Milton Obote",
+      "Idi Amin Dada",
+      "Yoweri Museveni",
+      "Tito Okello"
+    ],
+    "answerIndex": 1,
+    "explanation": "Idi Amin Dada, arrivé au pouvoir par un coup d'État, a expulsé en 1972 les Ougandais d'origine indienne, plongeant le pays dans la crise économique."
+  },
+  {
+    "id": "cg-135",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a rejoint officiellement l'OTAN en avril 2023, devenant son 31e membre ?",
+    "options": [
+      "Ukraine",
+      "Géorgie",
+      "Finlande",
+      "Suède"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Finlande a adhéré à l'OTAN le 4 avril 2023, à la suite de l'invasion russe de l'Ukraine."
+  },
+  {
+    "id": "cg-136",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle déclaration de l'ONU, adoptée en 2007, reconnaît les droits des peuples autochtones ?",
+    "options": [
+      "Déclaration de Rio",
+      "Convention 169 de l'OIT",
+      "Déclaration sur les droits des peuples autochtones",
+      "Charte des droits fondamentaux"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Déclaration des Nations Unies sur les droits des peuples autochtones (UNDRIP) a été adoptée le 13 septembre 2007."
+  },
+  {
+    "id": "cg-137",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel désert, le plus ancien du monde, s'étend principalement en Namibie ?",
+    "options": [
+      "Kalahari",
+      "Namib",
+      "Sahara",
+      "Atacama"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le désert du Namib, vieux de 55 millions d'années, longe la côte atlantique de la Namibie."
+  },
+  {
+    "id": "cg-138",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel type de scrutin est utilisé pour l'élection présidentielle française ?",
+    "options": [
+      "Scrutin proportionnel à un tour",
+      "Scrutin majoritaire à deux tours",
+      "Scrutin indirect",
+      "Scrutin parlementaire"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le président français est élu au suffrage universel direct majoritaire à deux tours."
+  },
+  {
+    "id": "cg-139",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle devise est utilisée par plusieurs pays d'Afrique de l'Ouest liés à la France ?",
+    "options": [
+      "Franc CFA",
+      "Euro",
+      "Naira",
+      "Cedi"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le franc CFA (Communauté financière africaine) est la monnaie de 8 pays de l'UEMOA en Afrique de l'Ouest."
+  },
+  {
+    "id": "cg-140",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel genre musical originaire de Jamaïque est inscrit au patrimoine immatériel de l'UNESCO ?",
+    "options": [
+      "Calypso",
+      "Reggae",
+      "Dancehall",
+      "Ska"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le reggae, popularisé par Bob Marley, a été inscrit au patrimoine culturel immatériel de l'humanité en 2018."
+  },
+  {
+    "id": "cg-141",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel général commandait la Force publique congolaise lors de la campagne d'Afrique de l'Est contre les Italiens en 1941 ?",
+    "options": [
+      "Charles de Gaulle",
+      "Auguste-Édouard Gilliaert",
+      "Paul Ermens",
+      "Victor Francen"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le général Gilliaert dirigea les troupes congolaises qui remportèrent la victoire d'Asosa contre les forces italiennes en Éthiopie."
+  },
+  {
+    "id": "cg-142",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel affluent du fleuve Congo prend sa source dans les marais du Bangweulu en Zambie ?",
+    "options": [
+      "Lualaba",
+      "Kasai",
+      "Lwapula",
+      "Lulonga"
+    ],
+    "answerIndex": 0,
+    "explanation": "La rivière Lwapula, puis Luvua, alimente le Lualaba, considéré comme la partie supérieure du fleuve Congo."
+  },
+  {
+    "id": "cg-143",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle cérémonie traditionnelle Luba marque le couronnement d'un nouveau chef ou empereur ?",
+    "options": [
+      "Kubandwa",
+      "Kumukongo",
+      "Lukasa",
+      "Mbudye"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le kumukongo est le rituel d'intronisation du chef Luba, riche en symboles de fertilité et de continuité dynastique."
+  },
+  {
+    "id": "cg-144",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Sous Mobutu, quel parti unique a été imposé de 1967 à 1990 ?",
+    "options": [
+      "UDPS",
+      "MPR",
+      "PALU",
+      "RCD"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Mouvement Populaire de la Révolution (MPR) était le parti-État sous la dictature de Mobutu Sese Seko."
+  },
+  {
+    "id": "cg-145",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle compagnie aérienne nationale a été relancée en 2023 après plusieurs années d'absence ?",
+    "options": [
+      "Congo Airways",
+      "Air Congo",
+      "Lignes Aériennes Congolaises",
+      "Korongo Airlines"
+    ],
+    "answerIndex": 0,
+    "explanation": "Congo Airways a repris ses vols intérieurs en 2023 après une longue suspension due à des problèmes de flotte."
+  },
+  {
+    "id": "cg-146",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel événement tragique de 1961 a marqué la fin de la sécession du Katanga ?",
+    "options": [
+      "L'assassinat de Lumumba",
+      "La bataille d'Élisabethville",
+      "L'opération des Nations Unies",
+      "La fuite de Moïse Tshombe"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'ONU mena une opération militaire pour réintégrer le Katanga au Congo en 1963, après plusieurs affrontements meurtriers."
+  },
+  {
+    "id": "cg-147",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel parc national de la RDC est classé au patrimoine mondial en péril en raison de l'exploitation pétrolière ?",
+    "options": [
+      "Salonga",
+      "Virunga",
+      "Kahuzi-Biega",
+      "Garamba"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le parc des Virunga, menacé par des concessions pétrolières et l'insécurité, est inscrit sur la liste du patrimoine mondial en péril depuis 1994."
+  },
+  {
+    "id": "cg-148",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle ressource naturelle du Kasaï a fait la richesse de l'empire Lunda ?",
     "options": [
       "L'or",
-      "Le coltan",
-      "Le cobalt et le cuivre",
-      "Le diamant"
+      "Le cuivre",
+      "Le diamant",
+      "L'ivoire"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Les gisements diamantifères du Kasaï ont attiré des commerçants et contribué à la puissance de l'empire Lunda bien avant la colonisation."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-5",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle est la plus grande forêt tropicale d'Afrique ?",
-    "options": [
-      "La forêt du bassin du Congo",
-      "La forêt amazonienne",
-      "La forêt de Taï",
-      "La forêt de Kakamega"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-6",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle ville de la RDC est appelée 'La ville volcanique' ?",
-    "options": [
-      "Bukavu",
-      "Goma",
-      "Beni",
-      "Uvira"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-7",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "En quelle année Laurent-Désiré Kabila a-t-il pris le pouvoir ?",
-    "options": [
-      "1990",
-      "1997",
-      "2001",
-      "1965"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-8",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
+    "id": "cg-149",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
     "difficulty": "HARD",
-    "statement": "Quel est le point culminant de la RDC ?",
-    "options": [
-      "Mont Hoyo",
-      "Pic Marguerite (Mont Ngaliema)",
-      "Volcan Nyiragongo",
-      "Mont Nyamuragira"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-9",
-    "subject": "GENERAL_KNOWLEDGE",
     "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel parc de la RDC abrite l'Okapi ?",
+    "statement": "Quel est le nom du mécanisme de consultation populaire qui permet aux citoyens de se prononcer directement sur une question d'intérêt national en RDC ?",
     "options": [
-      "Parc des Virunga",
-      "Réserve de faune à okapis",
-      "Parc de la Salonga",
-      "Parc marin des Mangroves"
+      "Le plébiscite",
+      "La pétition",
+      "Le référendum",
+      "L'initiative populaire"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "L'article 218 de la Constitution prévoit le référendum pour consulter le peuple sur des questions d'intérêt national."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-10",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le nom de la compagnie aérienne nationale historique de la RDC (fondée en 2015) ?",
-    "options": [
-      "Air Zaïre",
-      "Congo Airways",
-      "Hewa Bora",
-      "CAA"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-11",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Lequel de ces fleuves n'est pas en Afrique ?",
-    "options": [
-      "Zambèze",
-      "Nil",
-      "Mékong",
-      "Niger"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-12",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Qui a peint La Joconde ?",
-    "options": [
-      "Picasso",
-      "Léonard de Vinci",
-      "Michel-Ange",
-      "Van Gogh"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-13",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "INTL",
+    "id": "cg-150",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
     "difficulty": "MEDIUM",
-    "statement": "Combien de continents y a-t-il sur Terre (selon le modèle à 6 continents habités/inhabités) ?",
+    "scope": "DRC",
+    "statement": "Quel instrument de musique traditionnel, une sorte de piano à pouces, est répandu chez les Mongo ?",
     "options": [
-      "5",
-      "6",
-      "7",
-      "4"
+      "Likembe",
+      "Ngoma",
+      "Lokole",
+      "Ekonda"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 0,
+    "explanation": "Le likembe, ou sanza, est un lamellophone composé de lamelles métalliques fixées sur une caisse de résonance."
   },
   {
-    "id": "GENERAL_KNOWLEDGE-added-more-1783812167968-14",
-    "subject": "GENERAL_KNOWLEDGE",
-    "scope": "INTL",
-    "difficulty": "EASY",
-    "statement": "Quel est l'océan le plus vaste ?",
+    "id": "cg-151",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel fleuve sert de frontière entre le Texas (États-Unis) et le Mexique ?",
     "options": [
-      "Océan Atlantique",
-      "Océan Indien",
-      "Océan Pacifique",
-      "Océan Arctique"
+      "Colorado",
+      "Rio Grande",
+      "Mississippi",
+      "Missouri"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Le Rio Grande (appelé Río Bravo au Mexique) forme la frontière entre les deux pays sur plus de 1 200 km."
+  },
+  {
+    "id": "cg-152",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel empire a été défait à la bataille d'Adoua en 1896, garantissant l'indépendance de l'Éthiopie ?",
+    "options": [
+      "Empire britannique",
+      "Empire ottoman",
+      "Empire italien",
+      "Empire français"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'armée italienne fut défaite par les troupes éthiopiennes à Adoua, assurant à l'Éthiopie de rester indépendante durant le partage de l'Afrique."
+  },
+  {
+    "id": "cg-153",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays d'Asie du Sud-Est a élu en 2024 son plus jeune Premier ministre, Paetongtarn Shinawatra ?",
+    "options": [
+      "Malaisie",
+      "Indonésie",
+      "Thaïlande",
+      "Philippines"
+    ],
+    "answerIndex": 2,
+    "explanation": "Paetongtarn Shinawatra, fille de l'ancien Premier ministre Thaksin, est devenue la plus jeune cheffe de gouvernement thaïlandaise en 2024."
+  },
+  {
+    "id": "cg-154",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel système politique combine un gouvernement élu et un monarque héréditaire comme chef d'État ?",
+    "options": [
+      "République parlementaire",
+      "Monarchie constitutionnelle",
+      "République présidentielle",
+      "Théocratie"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dans une monarchie constitutionnelle (ex. Royaume-Uni, Espagne), le monarque est chef de l'État tandis que le gouvernement est responsable devant le parlement."
+  },
+  {
+    "id": "cg-155",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel peintre mexicain, époux de Frida Kahlo, est célèbre pour ses grandes fresques murales ?",
+    "options": [
+      "Diego Rivera",
+      "José Clemente Orozco",
+      "David Alfaro Siqueiros",
+      "Rufino Tamayo"
+    ],
+    "answerIndex": 0,
+    "explanation": "Diego Rivera est l'un des principaux muralistes mexicains, connu pour ses œuvres monumentales à Mexico et aux États-Unis."
+  },
+  {
+    "id": "cg-156",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est le deuxième producteur mondial de café et le premier pour la variété robusta ?",
+    "options": [
+      "Colombie",
+      "Éthiopie",
+      "Vietnam",
+      "Indonésie"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Vietnam a dépassé la Colombie pour devenir le deuxième producteur mondial de café et domine le marché du robusta."
+  },
+  {
+    "id": "cg-157",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain est traversé par le tropique du Capricorne et le tropique du Cancer ?",
+    "options": [
+      "Algérie",
+      "Afrique du Sud",
+      "Mali",
+      "Aucun"
+    ],
+    "answerIndex": 3,
+    "explanation": "Aucun pays africain n'est traversé par les deux tropiques. Le tropique du Cancer traverse l'Afrique au nord, le tropique du Capricorne au sud. Aucun pays ne s'étend sur les deux."
+  },
+  {
+    "id": "cg-158",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel explorateur portugais a atteint le cap de Bonne-Espérance en 1488 ?",
+    "options": [
+      "Vasco de Gama",
+      "Fernand de Magellan",
+      "Bartolomeu Dias",
+      "Christophe Colomb"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bartolomeu Dias a doublé le cap de Bonne-Espérance en 1488, ouvrant la voie maritime vers l'Inde."
+  },
+  {
+    "id": "cg-159",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a été frappé par des incendies catastrophiques en 2023, entraînant l'évacuation de la ville de Yellowknife ?",
+    "options": [
+      "Australie",
+      "Canada",
+      "États-Unis",
+      "Grèce"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les feux de forêt de 2023 au Canada ont été les plus étendus de son histoire, forçant l'évacuation de Yellowknife dans les Territoires du Nord-Ouest."
+  },
+  {
+    "id": "cg-160",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel concept juridique empêche un ancien chef d'État d'être poursuivi pour des actes commis durant son mandat, sauf exceptions ?",
+    "options": [
+      "Amnistie",
+      "Immunité présidentielle",
+      "Prescription",
+      "Grâce présidentielle"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'immunité protège les chefs d'État en fonction, et parfois après leur mandat, de poursuites judiciaires."
+  },
+  {
+    "id": "cg-161",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel archipel du Pacifique, territoire français, a organisé un référendum d'autodétermination en 2021 ?",
+    "options": [
+      "Polynésie française",
+      "Nouvelle-Calédonie",
+      "Wallis-et-Futuna",
+      "Mayotte"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Nouvelle-Calédonie a tenu trois référendums d'indépendance (2018, 2020, 2021), le dernier ayant été boycotté par les indépendantistes."
+  },
+  {
+    "id": "cg-162",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel art martial brésilien mêle danse, lutte et musique, reconnu par l'UNESCO ?",
+    "options": [
+      "Jiu-jitsu brésilien",
+      "Capoeira",
+      "Vale tudo",
+      "Maculélé"
+    ],
+    "answerIndex": 1,
+    "explanation": "La capoeira, développée par les esclaves africains au Brésil, a été inscrite au patrimoine immatériel de l'UNESCO en 2014."
+  },
+  {
+    "id": "cg-163",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle organisation intergouvernementale a pour membres la Russie, la Chine, l'Inde, le Brésil et l'Afrique du Sud ?",
+    "options": [
+      "G7",
+      "G20",
+      "BRICS",
+      "Mercosur"
+    ],
+    "answerIndex": 2,
+    "explanation": "Les BRICS (Brésil, Russie, Inde, Chine, Afrique du Sud) sont un groupe de grandes économies émergentes, qui s'est élargi en 2024."
+  },
+  {
+    "id": "cg-164",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain est le premier producteur mondial de cacao ?",
+    "options": [
+      "Ghana",
+      "Nigeria",
+      "Côte d'Ivoire",
+      "Cameroun"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Côte d'Ivoire produit environ 40 % du cacao mondial, devant le Ghana."
+  },
+  {
+    "id": "cg-165",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a été la première femme élue chef d'État en Afrique ?",
+    "options": [
+      "Ellen Johnson Sirleaf",
+      "Joyce Banda",
+      "Sahle-Work Zewde",
+      "Samia Suluhu"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ellen Johnson Sirleaf, présidente du Liberia de 2006 à 2018, a été la première femme élue chef d'État d'un pays africain."
+  },
+  {
+    "id": "cg-166",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays a lancé avec succès la sonde spatiale Chandrayaan-3 qui s'est posée sur la Lune en 2023 ?",
+    "options": [
+      "Chine",
+      "États-Unis",
+      "Inde",
+      "Japon"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Inde est devenue le quatrième pays à poser un engin sur la Lune avec Chandrayaan-3, et le premier au pôle Sud lunaire."
+  },
+  {
+    "id": "cg-167",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle mer intérieure, située entre l'Europe et l'Afrique, est en voie d'assèchement rapide ?",
+    "options": [
+      "Mer Morte",
+      "Mer d'Aral",
+      "Mer Caspienne",
+      "Mer Noire"
+    ],
+    "answerIndex": 0,
+    "explanation": "La mer Morte, située entre Israël, la Jordanie et la Cisjordanie, perd environ un mètre de niveau par an en raison de l'évaporation et du détournement du Jourdain."
+  },
+  {
+    "id": "cg-168",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel architecte a conçu le Musée national d'histoire et de culture afro-américaine à Washington ?",
+    "options": [
+      "David Adjaye",
+      "Diébédo Francis Kéré",
+      "Norman Foster",
+      "Frank Gehry"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le cabinet Adjaye Associates, dirigé par David Adjaye, a conçu ce musée inauguré en 2016 sur le National Mall."
+  },
+  {
+    "id": "cg-169",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle est la particularité du système politique suisse ?",
+    "options": [
+      "Un président élu à vie",
+      "Un directoire collégial de 7 membres",
+      "Un monarque absolu",
+      "Un système à parti unique"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Suisse est dirigée par un Conseil fédéral de 7 membres qui prend les décisions collégialement, avec une présidence tournante d'un an."
+  },
+  {
+    "id": "cg-170",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle est la différence entre un réfugié et un déplacé interne ?",
+    "options": [
+      "Le réfugié a franchi une frontière internationale",
+      "Le déplacé interne a un statut juridique plus protecteur",
+      "Aucune différence",
+      "Le réfugié reste dans son pays"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un réfugié traverse une frontière pour fuir des persécutions, tandis qu'un déplacé interne reste à l'intérieur de son pays."
+  },
+  {
+    "id": "cg-171",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel important gisement de pétrole a été découvert en RDC en 2024 ?",
+    "options": [
+      "Bloc 5 dans le lac Albert",
+      "Bloc 27 au large de Moanda",
+      "Bloc 9 dans le bassin de la Cuvette-Centrale",
+      "Aucune découverte majeure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le bloc 27, dans le Kongo Central, a livré des découvertes prometteuses de pétrole offshore en 2024."
+  },
+  {
+    "id": "cg-172",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel peuple de la RDC pratique le rite de passage masculin appelé 'Mukanda', comprenant la circoncision et l'enseignement des traditions ?",
+    "options": [
+      "Mongo",
+      "Luba",
+      "Yaka",
+      "Tutsi"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le Mukanda est une institution initiatique traditionnelle des Yaka et Suku du Kwango, mêlant formation sociale et circoncision collective."
+  },
+  {
+    "id": "cg-173",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle province de la RDC est frontalière avec le Soudan du Sud et la République centrafricaine ?",
+    "options": [
+      "Ituri",
+      "Haut-Uélé",
+      "Bas-Uélé",
+      "Nord-Kivu"
+    ],
+    "answerIndex": 1,
+    "explanation": "La province du Haut-Uélé partage une frontière avec le Soudan du Sud au nord et la République centrafricaine à l'ouest."
+  },
+  {
+    "id": "cg-174",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quelle reine du royaume de Matamba (actuel Angola, mais historiquement liée au nord de la RDC) a résisté aux Portugais au XVIIe siècle ?",
+    "options": [
+      "Nzinga Mbandi",
+      "Kimpa Vita",
+      "Régina Mundi",
+      "Maman Sando"
+    ],
+    "answerIndex": 0,
+    "explanation": "La reine Nzinga Mbandi (ou Anne Zingha) a mené une longue résistance contre la colonisation portugaise dans la région frontalière de l'Angola et du Congo."
+  },
+  {
+    "id": "cg-175",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel minéral stratégique, utilisé dans les écrans tactiles, est abondant au Kivu ?",
+    "options": [
+      "Cobalt",
+      "Coltan",
+      "Cassitérite",
+      "Wolframite"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le coltan (colombite-tantalite) est essentiel pour les condensateurs des téléphones portables et ordinateurs, et la RDC en possède les plus grandes réserves."
+  },
+  {
+    "id": "cg-176",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel événement sportif majeur la RDC a-t-elle accueilli en 2023 ?",
+    "options": [
+      "Coupe d'Afrique des Nations de football",
+      "Jeux de la Francophonie",
+      "Championnat d'Afrique de basketball",
+      "Marathon de Kinshasa"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les IXᵉˢ Jeux de la Francophonie se sont tenus à Kinshasa en juillet-août 2023."
+  },
+  {
+    "id": "cg-177",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quel est le nom de la chambre haute du Parlement congolais ?",
+    "options": [
+      "Sénat",
+      "Assemblée nationale",
+      "Conseil économique et social",
+      "Bureau politique"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le Sénat est la chambre haute du Parlement, représentant les provinces."
+  },
+  {
+    "id": "cg-178",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel est le principal affluent de la rivière Kasaï, formant une importante voie navigable ?",
+    "options": [
+      "Sankuru",
+      "Lulua",
+      "Fimi",
+      "Kwilu"
+    ],
+    "answerIndex": 1,
+    "explanation": "La rivière Lulua est l'un des plus grands affluents du Kasaï, arrosant la ville de Kananga."
+  },
+  {
+    "id": "cg-179",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "DRC",
+    "statement": "Quelle chanteuse congolaise a été couronnée 'Reine de la rumba' dans les années 1950 ?",
+    "options": [
+      "M'bilia Bel",
+      "Tshala Muana",
+      "Abeti Masikini",
+      "Lucie Eyenga"
+    ],
+    "answerIndex": 3,
+    "explanation": "Lucie Eyenga, chanteuse de l'African Jazz, est considérée comme la première grande voix féminine de la rumba congolaise moderne."
+  },
+  {
+    "id": "cg-180",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "DRC",
+    "statement": "Quel traité signé en 1908 a transféré la souveraineté de l'État indépendant du Congo à la Belgique ?",
+    "options": [
+      "Traité de Bruxelles",
+      "Traité de cession du Congo",
+      "Charte coloniale",
+      "Acte de Berlin"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Charte coloniale du 18 octobre 1908 a officiellement annexé le Congo à la Belgique, en faisant le Congo belge."
+  },
+  {
+    "id": "cg-181",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quel est le nom officiel complet de la RDC ?",
+    "options": [
+      "République du Congo",
+      "République démocratique du Congo",
+      "Congo-Kinshasa",
+      "État du Congo"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Constitution consacre le nom de République démocratique du Congo, souvent abrégé en RDC."
+  },
+  {
+    "id": "cg-182",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays d'Afrique australe a connu une grave crise post-électorale en 2023-2024, contestée par l'opposition ?",
+    "options": [
+      "Zimbabwe",
+      "Mozambique",
+      "Malawi",
+      "Madagascar"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les élections municipales au Mozambique en 2023 ont été suivies de violentes manifestations de l'opposition dénonçant des fraudes."
+  },
+  {
+    "id": "cg-183",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays du Golfe est une île reliée à l'Arabie saoudite par le pont du roi Fahd ?",
+    "options": [
+      "Qatar",
+      "Bahreïn",
+      "Koweït",
+      "Émirats arabes unis"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le pont du roi Fahd, long de 25 km, relie Bahreïn à l'Arabie saoudite depuis 1986."
+  },
+  {
+    "id": "cg-184",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est régi par un régime d'apartheid jusqu'en 1994 ?",
+    "options": [
+      "Rhodésie",
+      "Namibie",
+      "Afrique du Sud",
+      "Mozambique"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Afrique du Sud a aboli le système de ségrégation raciale de l'apartheid avec l'élection de Nelson Mandela en 1994."
+  },
+  {
+    "id": "cg-185",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel dramaturge nigérian a reçu le prix Nobel de littérature en 1986 ?",
+    "options": [
+      "Chinua Achebe",
+      "Wole Soyinka",
+      "Ben Okri",
+      "Chimamanda Ngozi Adichie"
+    ],
+    "answerIndex": 1,
+    "explanation": "Wole Soyinka est le premier Africain à recevoir le prix Nobel de littérature, pour l'ensemble de son œuvre."
+  },
+  {
+    "id": "cg-186",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est le plus grand producteur de thé au monde ?",
+    "options": [
+      "Inde",
+      "Chine",
+      "Sri Lanka",
+      "Kenya"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Chine est le premier producteur mondial de thé, suivie de l'Inde et du Kenya."
+  },
+  {
+    "id": "cg-187",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel événement de 1979 a profondément changé l'équilibre géopolitique du Moyen-Orient ?",
+    "options": [
+      "La guerre du Kippour",
+      "La révolution iranienne",
+      "L'invasion soviétique de l'Afghanistan",
+      "Les accords de Camp David"
+    ],
+    "answerIndex": 1,
+    "explanation": "La révolution islamique en Iran, menée par l'ayatollah Khomeiny, a renversé le Shah et instauré une république islamique."
+  },
+  {
+    "id": "cg-188",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle organisation régionale a imposé des sanctions au Niger après le coup d'État de 2023 ?",
+    "options": [
+      "Union africaine",
+      "CEDEAO",
+      "SADC",
+      "Ligue arabe"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Communauté économique des États de l'Afrique de l'Ouest (CEDEAO) a imposé des sanctions économiques et financières sévères au Niger."
+  },
+  {
+    "id": "cg-189",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le point le plus bas de la surface terrestre, hors océan ?",
+    "options": [
+      "Mer Morte",
+      "Vallée de la Mort",
+      "Dépression de Danakil",
+      "Lac Assal"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le rivage de la mer Morte, à environ 430 mètres sous le niveau de la mer, est le point émergé le plus bas du globe."
+  },
+  {
+    "id": "cg-190",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel principe de l'ONU autorise un État à utiliser la force pour repousser une agression armée ?",
+    "options": [
+      "Droit d'ingérence",
+      "Légitime défense",
+      "Responsabilité de protéger",
+      "Sécurité collective"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'article 51 de la Charte des Nations Unies reconnaît le droit naturel de légitime défense en cas d'attaque armée."
+  },
+  {
+    "id": "cg-191",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel chanteur américain a popularisé le 'Moonwalk' dans les années 1980 ?",
+    "options": [
+      "Prince",
+      "Michael Jackson",
+      "James Brown",
+      "Stevie Wonder"
+    ],
+    "answerIndex": 1,
+    "explanation": "Michael Jackson a présenté le Moonwalk pour la première fois en 1983 lors du spectacle 'Motown 25'."
+  },
+  {
+    "id": "cg-192",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est le seul à avoir quitté l'Union européenne ?",
+    "options": [
+      "Norvège",
+      "Royaume-Uni",
+      "Suisse",
+      "Groenland"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Royaume-Uni a officiellement quitté l'UE le 31 janvier 2020 après le référendum de 2016 (Brexit)."
+  },
+  {
+    "id": "cg-193",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus long fleuve d'Afrique ?",
+    "options": [
+      "Congo",
+      "Nil",
+      "Niger",
+      "Zambèze"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Nil, avec environ 6 650 km, est généralement considéré comme le plus long fleuve d'Afrique, bien que certaines études donnent l'Amazone comme plus long du monde."
+  },
+  {
+    "id": "cg-194",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a prononcé le discours 'I Have a Dream' en 1963 ?",
+    "options": [
+      "Malcolm X",
+      "Martin Luther King",
+      "Nelson Mandela",
+      "Rosa Parks"
+    ],
+    "answerIndex": 1,
+    "explanation": "Martin Luther King a prononcé ce discours historique lors de la marche sur Washington pour l'emploi et la liberté."
+  },
+  {
+    "id": "cg-195",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Actualités",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle entreprise technologique a été condamnée par l'UE à une amende record de 1,8 milliard d'euros pour abus de position dominante en 2024 ?",
+    "options": [
+      "Google",
+      "Apple",
+      "Meta",
+      "Amazon"
+    ],
+    "answerIndex": 1,
+    "explanation": "Apple a été condamnée en mars 2024 pour pratiques anticoncurrentielles liées à son service de streaming musical."
+  },
+  {
+    "id": "cg-196",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain est le premier producteur de platine au monde ?",
+    "options": [
+      "Zimbabwe",
+      "Afrique du Sud",
+      "Botswana",
+      "RD Congo"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Afrique du Sud détient environ 70 % de la production mondiale de platine."
+  },
+  {
+    "id": "cg-197",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle convention internationale régit le traitement des prisonniers de guerre ?",
+    "options": [
+      "Convention de Genève",
+      "Convention de La Haye",
+      "Convention de Vienne",
+      "Convention de New York"
+    ],
+    "answerIndex": 0,
+    "explanation": "La troisième Convention de Genève de 1949 définit les droits et protections des prisonniers de guerre."
+  },
+  {
+    "id": "cg-198",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays partage une frontière terrestre avec le Danemark via un pont-tunnel ?",
+    "options": [
+      "Norvège",
+      "Allemagne",
+      "Suède",
+      "Pays-Bas"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le pont de l'Øresund relie le Danemark (Copenhague) à la Suède (Malmö) depuis 2000."
+  },
+  {
+    "id": "cg-199",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "MEDIUM",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel festival de musique, créé en 1969, est devenu le symbole de la contre-culture hippie ?",
+    "options": [
+      "Coachella",
+      "Glastonbury",
+      "Woodstock",
+      "Live Aid"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le festival de Woodstock a réuni près de 500 000 personnes en août 1969 dans l'État de New York."
+  },
+  {
+    "id": "cg-200",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "HARD",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain a connu le plus long conflit armé de l'histoire récente du continent, de 1975 à 2002 ?",
+    "options": [
+      "RD Congo",
+      "Soudan",
+      "Angola",
+      "Somalie"
+    ],
+    "answerIndex": 2,
+    "explanation": "La guerre civile angolaise a duré 27 ans, opposant le MPLA au pouvoir à l'UNITA, avec des implications de la guerre froide."
   }
 ]

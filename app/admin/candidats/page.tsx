@@ -71,7 +71,7 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
                           {c.isActive ? "Actif" : "Désactivé"}
                         </span>
                       </td>
-                      <td>
+                      <td style={{ display: "flex", gap: "8px" }}>
                         <form action={async () => {
                           "use server";
                           const { toggleCandidateAction } = await import("@/lib/actions/candidates");
@@ -79,6 +79,21 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
                         }}>
                           <button type="submit" className="btn btn-ghost" style={{ padding: "4px 8px", fontSize: "0.75rem" }}>
                             {c.isActive ? "Désactiver" : "Activer"}
+                          </button>
+                        </form>
+
+                        <form action={async () => {
+                          "use server";
+                          const { deleteCandidateAction } = await import("@/lib/actions/candidates");
+                          await deleteCandidateAction(c.id);
+                        }}>
+                          <button 
+                            type="submit" 
+                            className="btn" 
+                            style={{ padding: "4px 8px", fontSize: "0.75rem", background: "var(--error)", color: "white", borderColor: "var(--error)" }}
+                            title="Supprimer ce candidat"
+                          >
+                            Supprimer
                           </button>
                         </form>
                       </td>

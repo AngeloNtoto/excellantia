@@ -396,378 +396,775 @@
     ]
   },
   {
-    "id": "MATHEMATICS-added-1783812112212-0",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-019",
+    "subject": "MATH",
+    "topic": "Géométrie",
+    "subtopic": "Vecteurs",
+    "difficulty": "EASY",
+    "statement": "Soient les points A(1, 2) et B(4, 6). Quelles sont les coordonnées du vecteur AB ?",
+    "options": [
+      "(3, 4)",
+      "(5, 8)",
+      "(-3, -4)",
+      "(3, 8)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les coordonnées du vecteur AB se calculent par (x_B - x_A, y_B - y_A). Soit (4 - 1, 6 - 2) = (3, 4).",
+    "optionExplanations": [
+      "Correct : (3, 4). ✓",
+      "Faux : Vous avez additionné les coordonnées au lieu de les soustraire.",
+      "Faux : C'est le vecteur BA, pas AB.",
+      "Faux : Erreur de calcul sur l'ordonnée."
+    ]
+  },
+  {
+    "id": "math-020",
+    "subject": "MATH",
+    "topic": "Analyse",
+    "subtopic": "Intégration",
     "difficulty": "MEDIUM",
-    "statement": "Quelle est la dérivée de f(x) = $x^2 \\sin(x)$ ?",
+    "statement": "Que vaut l'intégrale définie de 2x dx de 0 à 3 ?",
     "options": [
-      "$2x \\cos(x)$",
-      "$2x \\sin(x) + x^2 \\cos(x)$",
-      "$2x \\sin(x) - x^2 \\cos(x)$",
-      "$x^2 \\cos(x)$"
+      "6",
+      "9",
+      "12",
+      "18"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Une primitive de 2x est x². L'intégrale de 0 à 3 est donc 3² - 0² = 9.",
+    "optionExplanations": [
+      "Faux : 6 correspondrait à l'évaluation de 2x en x=3, pas à l'intégrale.",
+      "Correct : L'aire sous la courbe est bien 9. ✓",
+      "Faux : Erreur de calcul de primitive.",
+      "Faux : Erreur d'évaluation."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-1783812112212-1",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-021",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "subtopic": "Factorisation",
     "difficulty": "EASY",
-    "statement": "Quelle est la valeur de $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$ ?",
+    "statement": "Quelle est la forme factorisée de x² - 9 ?",
     "options": [
-      "0",
-      "1",
-      "$\\infty$",
-      "Non définie"
+      "(x - 3)²",
+      "(x + 3)²",
+      "(x - 3)(x + 3)",
+      "(x - 9)(x + 1)"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Il s'agit de l'identité remarquable a² - b² = (a - b)(a + b) avec a = x et b = 3.",
+    "optionExplanations": [
+      "Faux : (x - 3)² = x² - 6x + 9.",
+      "Faux : (x + 3)² = x² + 6x + 9.",
+      "Correct : x² - 3² = (x - 3)(x + 3). ✓",
+      "Faux : Développer donne x² - 8x - 9."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-1783812112212-2",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle est la solution de l'équation $e^x = 5$ ?",
+    "id": "math-022",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "subtopic": "Loi binomiale",
+    "difficulty": "HARD",
+    "statement": "On lance une pièce équilibrée 3 fois. Quelle est la probabilité d'obtenir exactement 2 fois 'Pile' ?",
     "options": [
-      "$x = \\ln(5)$",
-      "$x = 5$",
-      "$x = e^5$",
-      "$x = \\log_{10}(5)$"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-3",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle est l'intégrale de $\\int 2x dx$ ?",
-    "options": [
-      "$x^2 + C$",
-      "$2x^2 + C$",
-      "$x + C$",
-      "$\\frac{1}{2}x^2 + C$"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-4",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le module du nombre complexe $z = 3 + 4i$ ?",
-    "options": [
-      "7",
-      "5",
-      "25",
-      "12"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-5",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Si on lance un dé équilibré à 6 faces, quelle est la probabilité d'obtenir un nombre premier ?",
-    "options": [
-      "1/6",
-      "1/3",
+      "1/8",
+      "3/8",
       "1/2",
-      "2/3"
+      "1/4"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "P(X=2) = C(3,2) * (1/2)^2 * (1/2)^1 = 3 * (1/8) = 3/8.",
+    "optionExplanations": [
+      "Faux : C'est la probabilité d'obtenir 3 fois 'Pile'.",
+      "Correct : 3 combinaisons possibles donnent 2 'Pile' sur 8 issues totales. ✓",
+      "Faux : La probabilité est inférieure à 1/2.",
+      "Faux : Cela correspondrait à 2/8, or il y a 3 issues favorables."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-1783812112212-6",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-023",
+    "subject": "MATH",
+    "topic": "Suites",
+    "subtopic": "Suites géométriques",
     "difficulty": "MEDIUM",
-    "statement": "Quelle est la forme trigonométrique du nombre complexe $1 + i$ ?",
+    "statement": "Soit une suite géométrique de premier terme u0 = 2 et de raison q = 3. Que vaut u3 ?",
     "options": [
-      "$\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$",
-      "$2(\\cos(\\pi/4) + i\\sin(\\pi/4))$",
-      "$\\sqrt{2}(\\cos(\\pi/2) + i\\sin(\\pi/2))$",
-      "$\\cos(\\pi/4) + i\\sin(\\pi/4)$"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-7",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Dans l'espace, quelle est l'équation paramétrique d'une droite passant par le point $A(1, 2, 3)$ et de vecteur directeur $\\vec{u}(4, 5, 6)$ ?",
-    "options": [
-      "$x=1+4t, y=2+5t, z=3+6t$",
-      "$x=4+t, y=5+2t, z=6+3t$",
-      "$x=1-4t, y=2-5t, z=3-6t$",
-      "Aucune des réponses"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-8",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "MEDIUM",
-    "statement": "Soit $U_n$ une suite arithmétique de premier terme $U_0 = 3$ et de raison $r = 5$. Quel est le terme $U_{10}$ ?",
-    "options": [
-      "53",
-      "50",
-      "48",
-      "38"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-1783812112212-9",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Combien d'anagrammes distincts peut-on former avec les lettres du mot MATHS ?",
-    "options": [
+      "18",
       "24",
-      "60",
-      "120",
-      "256"
+      "54",
+      "162"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "La formule est un = u0 * q^n. Ainsi u3 = 2 * 3³ = 2 * 27 = 54.",
+    "optionExplanations": [
+      "Faux : 18 correspond à u2 = 2 * 3².",
+      "Faux : Erreur de calcul de puissance.",
+      "Correct : 2 * 3³ = 54. ✓",
+      "Faux : 162 correspond à u4 = 2 * 3⁴."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-more-1783812167959-0",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-024",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "subtopic": "Médiane",
     "difficulty": "EASY",
-    "statement": "Résoudre le système : $x + y = 5$ et $x - y = 1$",
+    "statement": "Quelle est la médiane de la série de données : 2, 5, 8, 11, 14 ?",
     "options": [
-      "x=2, y=3",
-      "x=3, y=2",
-      "x=4, y=1",
-      "x=1, y=4"
+      "5",
+      "8",
+      "11",
+      "14"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "La série est ordonnée et contient 5 valeurs. La médiane est la valeur centrale, soit la 3ème valeur : 8.",
+    "optionExplanations": [
+      "Faux : 5 est le deuxième quartile ou une valeur inférieure.",
+      "Correct : 8 est la valeur au centre de la série. ✓",
+      "Faux : 11 est plus grand que la médiane.",
+      "Faux : C'est le maximum de la série."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-more-1783812167959-1",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-025",
+    "subject": "MATH",
+    "topic": "Nombres complexes",
+    "subtopic": "Conjugué",
     "difficulty": "EASY",
-    "statement": "Quel est le domaine de définition de la fonction $f(x) = \\sqrt{x-3}$ ?",
+    "statement": "Quel est le conjugué du nombre complexe z = 5 - 2i ?",
     "options": [
-      "$]-\\infty, 3]$",
-      "$[3, +\\infty[$",
-      "$]-3, +\\infty[$",
-      "$\\mathbb{R}$"
+      "-5 - 2i",
+      "5 + 2i",
+      "-5 + 2i",
+      "2 - 5i"
     ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "Le conjugué s'obtient en changeant le signe de la partie imaginaire. Ainsi, z* = 5 + 2i.",
+    "optionExplanations": [
+      "Faux : Vous avez changé le signe de la partie réelle.",
+      "Correct : 5 + 2i. ✓",
+      "Faux : C'est l'opposé de z (-z).",
+      "Faux : Vous avez inversé la partie réelle et imaginaire."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-more-1783812167959-2",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Que vaut $\\cos(\\pi/3)$ ?",
+    "id": "math-026",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "subtopic": "Équations",
+    "difficulty": "HARD",
+    "statement": "Sur l'intervalle [0, 2π[, quelles sont les solutions de cos(x) = 1/2 ?",
     "options": [
-      "$1/2$",
-      "$\\sqrt{3}/2$",
-      "$\\sqrt{2}/2$",
-      "1"
+      "π/3 et 2π/3",
+      "π/6 et 11π/6",
+      "π/3 et 5π/3",
+      "π/4 et 7π/4"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Le cosinus vaut 1/2 pour x = π/3 et pour x = 2π - π/3 = 5π/3.",
+    "optionExplanations": [
+      "Faux : cos(2π/3) = -1/2.",
+      "Faux : cos(π/6) = √3/2.",
+      "Correct : π/3 et 5π/3. ✓",
+      "Faux : cos(π/4) = √2/2."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-more-1783812167959-3",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "La fonction $f(x) = x^3$ est-elle paire ou impaire ?",
-    "options": [
-      "Paire",
-      "Impaire",
-      "Ni paire ni impaire",
-      "Les deux"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-4",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
+    "id": "math-027",
+    "subject": "MATH",
+    "topic": "Géométrie de l'espace",
+    "subtopic": "Volumes",
     "difficulty": "MEDIUM",
-    "statement": "Calculer l'intégrale $\\int_0^1 x^2 dx$ :",
+    "statement": "Quel est le volume d'un cylindre de rayon r = 3 et de hauteur h = 5 ?",
     "options": [
-      "1/3",
-      "1/2",
-      "1",
-      "2/3"
+      "15π",
+      "30π",
+      "45π",
+      "75π"
     ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 2,
+    "explanation": "Le volume d'un cylindre est V = π * r² * h = π * 3² * 5 = 45π.",
+    "optionExplanations": [
+      "Faux : Cela correspondrait à 2 * π * r * h (aire latérale si oubli de 2).",
+      "Faux : Ce serait pour un cylindre de r=3 et h=5 avec une autre formule.",
+      "Correct : 9 * 5 * π = 45π. ✓",
+      "Faux : Cela correspond à π * r * h²."
+    ]
   },
   {
-    "id": "MATHEMATICS-added-more-1783812167959-5",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le discriminant $\\Delta$ de l'équation $2x^2 - 4x + 2 = 0$ ?",
+    "id": "math-028",
+    "subject": "MATH",
+    "topic": "Arithmétique",
+    "subtopic": "Congruence",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le reste de la division euclidienne de 17 par 5 ?",
     "options": [
-      "0",
-      "4",
-      "-4",
-      "16"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-6",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "La somme des angles intérieurs d'un triangle vaut :",
-    "options": [
-      "$\\pi/2$ radians",
-      "$\\pi$ radians",
-      "$2\\pi$ radians",
-      "$3\\pi/2$ radians"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-7",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Une urne contient 3 boules rouges et 2 boules noires. Probabilité de tirer une rouge ?",
-    "options": [
-      "3/5",
-      "2/5",
-      "1/2",
-      "3/2"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-8",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Que vaut $\\ln(e^2)$ ?",
-    "options": [
-      "e",
       "1",
       "2",
-      "0"
+      "3",
+      "4"
     ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
+    "answerIndex": 1,
+    "explanation": "17 = 3 * 5 + 2. Donc 17 ≡ 2 (mod 5).",
+    "optionExplanations": [
+      "Faux : 16 est congru à 1 modulo 5.",
+      "Correct : Le reste est bien 2. ✓",
+      "Faux : 18 est congru à 3 modulo 5.",
+      "Faux : 19 est congru à 4 modulo 5."
+    ]
   },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-9",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Dérivée de $f(x) = \\ln(x)$ ?",
-    "options": [
-      "$1/x$",
-      "$x$",
-      "$e^x$",
-      "$-1/x^2$"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-10",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quelle est la limite de $1/x$ quand $x \\to +\\infty$ ?",
-    "options": [
-      "0",
-      "$+\\infty$",
-      "$-\\infty$",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-11",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Volume d'un cube d'arête $a$ ?",
-    "options": [
-      "$a^2$",
-      "$a^3$",
-      "$3a^2$",
-      "$4a^3/3$"
-    ],
-    "correctIndex": 1,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-12",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Quel est le barycentre des points pondérés $(A,1)$ et $(B,1)$ ?",
-    "options": [
-      "A",
-      "B",
-      "Le milieu de [AB]",
-      "Aucun"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-13",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "L'équation $|x| = -2$ admet combien de solutions dans $\\mathbb{R}$ ?",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "Une infinité"
-    ],
-    "correctIndex": 0,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  },
-  {
-    "id": "MATHEMATICS-added-more-1783812167959-14",
-    "subject": "MATHEMATICS",
-    "scope": "DRC",
-    "difficulty": "EASY",
-    "statement": "Que vaut $2^3 \\times 2^4$ ?",
-    "options": [
-      "$2^{12}$",
-      "$4^7$",
-      "$2^7$",
-      "$4^{12}$"
-    ],
-    "correctIndex": 2,
-    "explanation": "L'explication détaillée sera disponible prochainement."
-  }
+  [
+    {
+      "id": "math-029",
+      "subject": "MATH",
+      "topic": "Analyse",
+      "subtopic": "Dérivation",
+      "difficulty": "EASY",
+      "statement": "Quelle est la dérivée de la fonction f(x) = x³ ?",
+      "options": [
+        "3x²",
+        "x²",
+        "3x",
+        "x³"
+      ],
+      "answerIndex": 0,
+      "explanation": "La dérivée de x^n est nx^(n-1). Ici n=3, donc f'(x) = 3x².",
+      "optionExplanations": [
+        "Correct : f'(x) = 3x². ✓",
+        "Faux : Vous avez oublié le coefficient 3.",
+        "Faux : La dérivée de x³ n'est pas 3x.",
+        "Faux : C'est la fonction elle-même, non dérivée."
+      ]
+    },
+    {
+      "id": "math-030",
+      "subject": "MATH",
+      "topic": "Probabilités",
+      "subtopic": "Probabilités conditionnelles",
+      "difficulty": "MEDIUM",
+      "statement": "Dans une urne contenant 3 boules rouges et 2 boules bleues, on tire successivement deux boules sans remise. Quelle est la probabilité que la deuxième boule soit rouge sachant que la première était rouge ?",
+      "options": [
+        "3/5",
+        "2/4",
+        "3/4",
+        "2/5"
+      ],
+      "answerIndex": 1,
+      "explanation": "Après avoir tiré une rouge, il reste 2 rouges et 2 bleues, donc probabilité = 2/4 = 1/2.",
+      "optionExplanations": [
+        "Faux : 3/5 est la probabilité initiale de tirer une rouge.",
+        "Correct : 2 rouges sur 4 boules restantes. ✓",
+        "Faux : 3/4 correspondrait à un autre contexte.",
+        "Faux : 2/5 serait si on considérait les deux tirages indépendants."
+      ]
+    },
+    {
+      "id": "math-031",
+      "subject": "MATH",
+      "topic": "Suites",
+      "subtopic": "Suites arithmétiques",
+      "difficulty": "EASY",
+      "statement": "Soit une suite arithmétique de premier terme u0 = 10 et de raison r = -2. Que vaut u3 ?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "14"
+      ],
+      "answerIndex": 0,
+      "explanation": "u_n = u0 + nr. u3 = 10 + 3(-2) = 10 - 6 = 4.",
+      "optionExplanations": [
+        "Correct : 10 - 6 = 4. ✓",
+        "Faux : 6 correspond à u2 = 10 - 4.",
+        "Faux : 8 correspond à u1 = 10 - 2.",
+        "Faux : 14 serait avec une raison +2."
+      ]
+    },
+    {
+      "id": "math-032",
+      "subject": "MATH",
+      "topic": "Géométrie",
+      "subtopic": "Théorème de Pythagore",
+      "difficulty": "EASY",
+      "statement": "Dans un triangle rectangle dont les côtés de l'angle droit mesurent 6 cm et 8 cm, quelle est la longueur de l'hypoténuse ?",
+      "options": [
+        "10 cm",
+        "14 cm",
+        "9 cm",
+        "12 cm"
+      ],
+      "answerIndex": 0,
+      "explanation": "D'après Pythagore, hypoténuse = √(6² + 8²) = √(36+64) = √100 = 10.",
+      "optionExplanations": [
+        "Correct : 10 cm. ✓",
+        "Faux : 6+8 = 14, mais ce n'est pas une somme.",
+        "Faux : √(81) = 9, mais 6²+8² ≠ 81.",
+        "Faux : 12 serait si les côtés étaient 6 et 6√3."
+      ]
+    },
+    {
+      "id": "math-033",
+      "subject": "MATH",
+      "topic": "Nombres complexes",
+      "subtopic": "Module",
+      "difficulty": "MEDIUM",
+      "statement": "Quel est le module du nombre complexe z = 3 + 4i ?",
+      "options": [
+        "5",
+        "7",
+        "25",
+        "√7"
+      ],
+      "answerIndex": 0,
+      "explanation": "Module = √(3² + 4²) = √(9+16) = √25 = 5.",
+      "optionExplanations": [
+        "Correct : 5. ✓",
+        "Faux : 3+4 = 7, mais le module n'est pas la somme.",
+        "Faux : 25 est le carré du module.",
+        "Faux : √7 correspondrait à autre chose."
+      ]
+    },
+    {
+      "id": "math-034",
+      "subject": "MATH",
+      "topic": "Analyse",
+      "subtopic": "Limites",
+      "difficulty": "HARD",
+      "statement": "Quelle est la limite de (sin x)/x lorsque x tend vers 0 ?",
+      "options": [
+        "0",
+        "1",
+        "Infini",
+        "N'existe pas"
+      ],
+      "answerIndex": 1,
+      "explanation": "C'est une limite classique : lim(x→0) sin(x)/x = 1.",
+      "optionExplanations": [
+        "Faux : sin(0)=0, mais le rapport tend vers 1.",
+        "Correct : 1. ✓",
+        "Faux : La fonction ne diverge pas.",
+        "Faux : La limite existe bien."
+      ]
+    },
+    {
+      "id": "math-035",
+      "subject": "MATH",
+      "topic": "Polynômes",
+      "subtopic": "Racines",
+      "difficulty": "EASY",
+      "statement": "Quelles sont les racines du polynôme x² - 5x + 6 ?",
+      "options": [
+        "2 et 3",
+        "-2 et -3",
+        "1 et 6",
+        "-1 et -6"
+      ],
+      "answerIndex": 0,
+      "explanation": "Discriminant Δ = 25 - 24 = 1, racines (5±1)/2 soit 2 et 3.",
+      "optionExplanations": [
+        "Correct : 2 et 3. ✓",
+        "Faux : changer les signes donne x²+5x+6.",
+        "Faux : la somme serait 7, pas 5.",
+        "Faux : mauvais signes."
+      ]
+    },
+    {
+      "id": "math-036",
+      "subject": "MATH",
+      "topic": "Statistiques",
+      "subtopic": "Moyenne",
+      "difficulty": "EASY",
+      "statement": "Quelle est la moyenne des nombres 4, 8, 12, 16 ?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "answerIndex": 1,
+      "explanation": "Somme = 40, divisée par 4 = 10.",
+      "optionExplanations": [
+        "Faux : 8 est la moitié de 16.",
+        "Correct : 10. ✓",
+        "Faux : 12 est la valeur médiane mais pas la moyenne.",
+        "Faux : 14 est trop élevé."
+      ]
+    },
+    {
+      "id": "math-037",
+      "subject": "MATH",
+      "topic": "Algèbre",
+      "subtopic": "Équations linéaires",
+      "difficulty": "EASY",
+      "statement": "Résoudre 2x + 4 = 10.",
+      "options": [
+        "x = 2",
+        "x = 3",
+        "x = 4",
+        "x = 7"
+      ],
+      "answerIndex": 1,
+      "explanation": "2x = 6 donc x = 3.",
+      "optionExplanations": [
+        "Faux : 22+4=8.",
+        "Correct : 23+4=10. ✓",
+        "Faux : 24+4=12.",
+        "Faux : 27+4=18."
+      ]
+    },
+    {
+      "id": "math-038",
+      "subject": "MATH",
+      "topic": "Trigonométrie",
+      "subtopic": "Cercle trigonométrique",
+      "difficulty": "MEDIUM",
+      "statement": "Quelle est la valeur exacte de sin(π/6) ?",
+      "options": [
+        "1/2",
+        "√2/2",
+        "√3/2",
+        "0"
+      ],
+      "answerIndex": 0,
+      "explanation": "sin(30°) = 1/2.",
+      "optionExplanations": [
+        "Correct : 1/2. ✓",
+        "Faux : c'est sin(π/4).",
+        "Faux : c'est sin(π/3).",
+        "Faux : sin(0)=0."
+      ]
+    },
+    {
+      "id": "math-039",
+      "subject": "MATH",
+      "topic": "Géométrie de l'espace",
+      "subtopic": "Aire",
+      "difficulty": "MEDIUM",
+      "statement": "Quelle est l'aire d'une sphère de rayon R = 2 ?",
+      "options": [
+        "8π",
+        "12π",
+        "16π",
+        "4π"
+      ],
+      "answerIndex": 2,
+      "explanation": "Aire = 4πR² = 4π4 = 16π.",
+      "optionExplanations": [
+        "Faux : 8π serait 2πR².",
+        "Faux : 12π n'est pas la formule.",
+        "Correct : 16π. ✓",
+        "Faux : 4π correspondrait à R=1."
+      ]
+    },
+    {
+      "id": "math-040",
+      "subject": "MATH",
+      "topic": "Arithmétique",
+      "subtopic": "Divisibilité",
+      "difficulty": "EASY",
+      "statement": "Quel est le plus grand diviseur commun de 24 et 36 ?",
+      "options": [
+        "4",
+        "6",
+        "12",
+        "24"
+      ],
+      "answerIndex": 2,
+      "explanation": "PGCD(24,36) = 12 (24=212, 36=312).",
+      "optionExplanations": [
+        "Faux : 4 divise les deux mais pas le plus grand.",
+        "Faux : 6 est plus petit que 12.",
+        "Correct : 12. ✓",
+        "Faux : 24 ne divise pas 36."
+      ]
+    },
+    {
+      "id": "math-041",
+      "subject": "MATH",
+      "topic": "Analyse",
+      "subtopic": "Intégration",
+      "difficulty": "MEDIUM",
+      "statement": "Calculez l'intégrale de 0 à 1 de e^x dx.",
+      "options": [
+        "e",
+        "e - 1",
+        "1 - e",
+        "1"
+      ],
+      "answerIndex": 1,
+      "explanation": "Primitive de e^x est e^x, donc [e^x] de 0 à 1 = e^1 - e^0 = e - 1.",
+      "optionExplanations": [
+        "Faux : c'est la valeur en 1 seulement.",
+        "Correct : e - 1. ✓",
+        "Faux : signe inversé.",
+        "Faux : e^0=1 mais il faut soustraire."
+      ]
+    },
+    {
+      "id": "math-042",
+      "subject": "MATH",
+      "topic": "Probabilités",
+      "subtopic": "Dénombrement",
+      "difficulty": "MEDIUM",
+      "statement": "Combien de mots de 3 lettres (ayant un sens ou non) peut-on former avec les lettres A, B, C, D si les répétitions sont interdites ?",
+      "options": [
+        "12",
+        "24",
+        "64",
+        "16"
+      ],
+      "answerIndex": 1,
+      "explanation": "Il s'agit d'un arrangement de 3 parmi 4 : A(4,3) = 432 = 24.",
+      "optionExplanations": [
+        "Faux : 12 = 43.",
+        "Correct : 24. ✓",
+        "Faux : 64 = 4^3 avec répétitions.",
+        "Faux : 16 = 4^2."
+      ]
+    },
+    {
+      "id": "math-043",
+      "subject": "MATH",
+      "topic": "Suites",
+      "subtopic": "Convergence",
+      "difficulty": "HARD",
+      "statement": "La suite définie par u_n = (-1)^n / n converge-t-elle ?",
+      "options": [
+        "Oui, vers 0",
+        "Oui, vers 1",
+        "Non, elle diverge",
+        "Oui, vers -1"
+      ],
+      "answerIndex": 0,
+      "explanation": "La suite tend vers 0 car 1/n → 0 et (-1)^n est borné.",
+      "optionExplanations": [
+        "Correct : elle converge vers 0. ✓",
+        "Faux : les termes ne tendent pas vers 1.",
+        "Faux : elle converge.",
+        "Faux : pas vers -1."
+      ]
+    },
+    {
+      "id": "math-044",
+      "subject": "MATH",
+      "topic": "Fonctions",
+      "subtopic": "Logarithme",
+      "difficulty": "MEDIUM",
+      "statement": "Quelle est la valeur de ln(e^3) ?",
+      "options": [
+        "e",
+        "3",
+        "e^3",
+        "1"
+      ],
+      "answerIndex": 1,
+      "explanation": "ln(e^x) = x, donc ln(e^3) = 3.",
+      "optionExplanations": [
+        "Faux : e n'est pas la réponse.",
+        "Correct : 3. ✓",
+        "Faux : c'est l'argument.",
+        "Faux : ln(e)=1."
+      ]
+    },
+    {
+      "id": "math-045",
+      "subject": "MATH",
+      "topic": "Géométrie",
+      "subtopic": "Coordonnées polaires",
+      "difficulty": "HARD",
+      "statement": "Quelles sont les coordonnées polaires (r, θ) du point cartésien (1, -√3) avec r>0 et θ∈[0,2π[ ?",
+      "options": [
+        "(2, 5π/3)",
+        "(2, 2π/3)",
+        "(√3, 5π/3)",
+        "(2, π/3)"
+      ],
+      "answerIndex": 0,
+      "explanation": "r = √(1²+3)=2, cosθ=1/2, sinθ=-√3/2, donc θ=5π/3.",
+      "optionExplanations": [
+        "Correct : (2, 5π/3). ✓",
+        "Faux : angle 2π/3 donne sin positif.",
+        "Faux : r=√3 est faux.",
+        "Faux : angle π/3 donne sin positif."
+      ]
+    },
+    {
+      "id": "math-046",
+      "subject": "MATH",
+      "topic": "Algèbre linéaire",
+      "subtopic": "Déterminant",
+      "difficulty": "MEDIUM",
+      "statement": "Quel est le déterminant de la matrice [[2, 3], [1, 4]] ?",
+      "options": [
+        "5",
+        "8",
+        "11",
+        "10"
+      ],
+      "answerIndex": 0,
+      "explanation": "det = 24 - 31 = 8-3 = 5.",
+      "optionExplanations": [
+        "Correct : 5. ✓",
+        "Faux : 8 = 24.",
+        "Faux : 11 = 24+31.",
+        "Faux : 10 = 25."
+      ]
+    },
+    {
+      "id": "math-047",
+      "subject": "MATH",
+      "topic": "Analyse",
+      "subtopic": "Étude de fonctions",
+      "difficulty": "EASY",
+      "statement": "Soit f(x) = 1/x. Quel est le domaine de définition de f ?",
+      "options": [
+        "ℝ",
+        "ℝ",
+        "[0, +∞[",
+        "]0, +∞["
+      ],
+      "answerIndex": 1,
+      "explanation": "La fonction inverse est définie pour tout réel non nul, donc ℝ.",
+      "optionExplanations": [
+        "Faux : 0 est exclu.",
+        "Correct : ℝ (ℝ privé de 0). ✓",
+        "Faux : les négatifs sont permis.",
+        "Faux : exclut les strictement négatifs."
+      ]
+    },
+    {
+      "id": "math-048",
+      "subject": "MATH",
+      "topic": "Probabilités",
+      "subtopic": "Loi uniforme continue",
+      "difficulty": "MEDIUM",
+      "statement": "X suit une loi uniforme continue sur [0, 4]. Quelle est la probabilité P(X ≤ 1) ?",
+      "options": [
+        "0.25",
+        "0.5",
+        "0.75",
+        "1"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pour une uniforme sur [0,4], densité 1/4, P(X≤1)=1/4=0.25.",
+      "optionExplanations": [
+        "Correct : 0.25. ✓",
+        "Faux : 0.5 serait pour ≤2.",
+        "Faux : 0.75 pour ≤3.",
+        "Faux : 1 pour ≤4."
+      ]
+    },
+    {
+      "id": "math-049",
+      "subject": "MATH",
+      "topic": "Suites",
+      "subtopic": "Récurrence",
+      "difficulty": "HARD",
+      "statement": "On définit u0 = 0 et u_{n+1} = √(u_n + 6). Quelle est la limite de cette suite si elle existe ?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "√6"
+      ],
+      "answerIndex": 1,
+      "explanation": "Si L est limite, L = √(L+6) ⇒ L² = L+6 ⇒ L² - L - 6 = 0 ⇒ L=3 ou L=-2. Comme u_n ≥0, L=3.",
+      "optionExplanations": [
+        "Faux : 2 ne vérifie pas l'équation.",
+        "Correct : 3. ✓",
+        "Faux : 6 ne vérifie pas.",
+        "Faux : √6 ne vérifie pas."
+      ]
+    },
+    {
+      "id": "math-050",
+      "subject": "MATH",
+      "topic": "Géométrie",
+      "subtopic": "Cercles",
+      "difficulty": "MEDIUM",
+      "statement": "Quelle est l'équation du cercle de centre (2, -1) et de rayon 3 ?",
+      "options": [
+        "(x-2)² + (y+1)² = 9",
+        "(x+2)² + (y-1)² = 9",
+        "(x-2)² + (y-1)² = 3",
+        "(x+2)² + (y+1)² = 9"
+      ],
+      "answerIndex": 0,
+      "explanation": "Équation (x-a)²+(y-b)²=R² avec a=2, b=-1, R=3 donne (x-2)²+(y+1)²=9.",
+      "optionExplanations": [
+        "Correct : (x-2)²+(y+1)²=9. ✓",
+        "Faux : mauvais signe du centre.",
+        "Faux : rayon au carré doit être 9.",
+        "Faux : centre (-2,-1)."
+      ]
+    },
+    {
+      "id": "math-051",
+      "subject": "MATH",
+      "topic": "Fonctions exponentielles",
+      "subtopic": "Propriétés",
+      "difficulty": "EASY",
+      "statement": "Simplifiez e^{ln(5)}.",
+      "options": [
+        "5",
+        "ln(5)",
+        "e",
+        "1"
+      ],
+      "answerIndex": 0,
+      "explanation": "e^ln(x) = x pour x>0, donc 5.",
+      "optionExplanations": [
+        "Correct : 5. ✓",
+        "Faux : c'est l'exposant seul.",
+        "Faux : e^1 = e.",
+        "Faux : e^0=1."
+      ]
+    },
+    {
+      "id": "math-052",
+      "subject": "MATH",
+      "topic": "Statistiques",
+      "subtopic": "Écart-type",
+      "difficulty": "MEDIUM",
+      "statement": "Pour une série de variance 16, quel est l'écart-type ?",
+      "options": [
+        "4",
+        "16",
+        "256",
+        "2"
+      ],
+      "answerIndex": 0,
+      "explanation": "L'écart-type est la racine carrée de la variance, √16 = 4.",
+      "optionExplanations": [
+        "Correct : 4. ✓",
+        "Faux : c'est la variance.",
+        "Faux : c'est le carré.",
+        "Faux : √4=2, pas de 16."
+      ]
+    },
+    {
+      "id": "math-053",
+      "subject": "MATH",
+      "topic": "Trigonométrie",
+      "subtopic": "Formules d'addition",
+      "difficulty": "HARD",
+      "statement": "Simplifiez cos(π/2 - x).",
+      "options": [
+        "sin x",
+        "cos x",
+        "-sin x",
+        "-cos x"
+      ],
+      "answerIndex": 0,
+      "explanation": "cos(π/2 - x) = sin x (identité trigonométrique).",
+      "optionExplanations": [
+        "Correct : sin x. ✓",
+        "Faux : cos(π/2 - x) n'est pas cos x.",
+        "Faux : ce serait cos(π/2 + x).",
+        "Faux : -cos x pour autre angle."
+      ]
+    }
+  ]
 ]

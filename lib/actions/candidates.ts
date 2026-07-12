@@ -120,3 +120,18 @@ export async function updateCandidateNameAction(id: string, fullname: string) {
   revalidatePath("/admin/candidats");
   return { ok: true };
 }
+
+// ─── Supprimer un candidat ────────────────────────────────────────────────────
+
+export async function deleteCandidateAction(id: string) {
+  await requireAdmin();
+  const user = await prisma.user.findUnique({ where: { id } });
+  if (!user) return { error: "Utilisateur introuvable." };
+
+  // Delete the user and all associated records (attempts, answers) via cascade if configured,
+  // or explicitly if cascade is not set. Assuming Prisma handles cascade on Attempts.
+  await prisma.user.delete({ where: { id } });
+
+  revalidatePath("/admin/candidats");
+  return { ok: true };
+}

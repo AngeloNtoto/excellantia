@@ -50,12 +50,23 @@ export function ImportCandidatesForm() {
       </button>
 
       {report && (
-        <div style={{ marginTop: 16, padding: 12, background: "var(--bg-muted)", borderRadius: "var(--radius-sm)", fontSize: "0.875rem" }}>
-          <p style={{ margin: "0 0 8px 0", fontWeight: 600 }}>Rapport d'importation :</p>
-          <ul style={{ margin: 0, paddingLeft: 20, color: "var(--text-secondary)" }}>
-            <li><span style={{ color: "var(--success)", fontWeight: 600 }}>{report.created}</span> créés</li>
-            <li><span style={{ color: "var(--warning)", fontWeight: 600 }}>{report.skipped}</span> ignorés (doublons)</li>
-            <li><span style={{ color: "var(--error)", fontWeight: 600 }}>{report.errors.length}</span> erreurs</li>
+        <div style={{ 
+          marginTop: 16, 
+          padding: 16, 
+          background: report.errors.length > 0 ? "rgba(239, 68, 68, 0.1)" : "rgba(34, 197, 94, 0.1)", 
+          border: `1px solid ${report.errors.length > 0 ? "var(--error)" : "var(--success)"}`,
+          borderRadius: "var(--radius-sm)", 
+          fontSize: "0.875rem" 
+        }}>
+          <p style={{ margin: "0 0 12px 0", fontWeight: 600, display: "flex", alignItems: "center", gap: "8px", color: report.errors.length > 0 ? "var(--error)" : "var(--success)" }}>
+            {report.errors.length > 0 ? "⚠️ Importation terminée avec des erreurs" : "✅ Importation réussie !"}
+          </p>
+          <ul style={{ margin: 0, paddingLeft: 20, color: "var(--text-secondary)", display: "flex", flexDirection: "column", gap: "4px" }}>
+            <li><span style={{ color: "var(--success)", fontWeight: 700 }}>{report.created}</span> comptes créés</li>
+            <li><span style={{ color: "var(--warning)", fontWeight: 700 }}>{report.skipped}</span> ignorés (doublons détectés)</li>
+            {report.errors.length > 0 && (
+              <li><span style={{ color: "var(--error)", fontWeight: 700 }}>{report.errors.length}</span> erreurs rencontrées</li>
+            )}
           </ul>
         </div>
       )}
