@@ -196,32 +196,44 @@ export function ExamClient({
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
-                {subjectQuestions.map((q: any, i: number) => {
-                  const passage = q.passageId ? passages.find((p: any) => p.id === q.passageId) : null;
-                  const isAnswered = answers[q.id]?.selectedIndex !== null && answers[q.id]?.selectedIndex !== undefined;
-                  const isFlagged = answers[q.id]?.flagged;
-                  
-                  return (
-                    <motion.div 
-                      key={q.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="card"
-                      style={{ 
-                        padding: 24, 
-                        borderLeft: isFlagged ? "4px solid var(--warning)" : isAnswered ? "4px solid var(--success)" : "4px solid var(--border)",
-                        background: isFlagged ? "var(--warning-light)" : "var(--bg-card)"
-                      }}
-                    >
-                      {passage && (
-                        <div style={{ 
-                          background: "var(--bg-muted)", padding: 20, borderRadius: "var(--radius-sm)", 
-                          marginBottom: 20, fontSize: "0.9375rem", lineHeight: 1.6
-                        }}>
-                          <h4 style={{ margin: "0 0 12px 0", fontWeight: 600 }}>{passage.title}</h4>
-                          <div style={{ whiteSpace: "pre-wrap", color: "var(--text-secondary)" }}>{passage.content}</div>
-                        </div>
-                      )}
+                {(() => {
+                  const passagesGroup = new Map<string | null, typeof subjectQuestions>();
+                  subjectQuestions.forEach((q: any) => {
+                    const pId = q.passageId || null;
+                    if (!passagesGroup.has(pId)) passagesGroup.set(pId, []);
+                    passagesGroup.get(pId)!.push(q);
+                  });
+
+                  return Array.from(passagesGroup.entries()).map(([passageId, pQuestions]) => {
+                    const passage = passageId ? passages.find((p: any) => p.id === passageId) : null;
+                    return (
+                      <div key={passageId || "no-passage"} style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+                        {passage && (
+                          <div style={{ 
+                            background: "var(--bg-muted)", padding: 24, borderRadius: "var(--radius-md)", 
+                            borderLeft: "4px solid var(--accent)", fontSize: "0.9375rem", lineHeight: 1.6
+                          }}>
+                            <h4 style={{ margin: "0 0 16px 0", fontWeight: 700, fontSize: "1.125rem" }}>{passage.title}</h4>
+                            <div style={{ whiteSpace: "pre-wrap", color: "var(--text-secondary)" }}>{passage.content}</div>
+                          </div>
+                        )}
+                        {pQuestions.map((q: any) => {
+                          const i = subjectQuestions.findIndex((orig: any) => orig.id === q.id);
+                          const isAnswered = answers[q.id]?.selectedIndex !== null && answers[q.id]?.selectedIndex !== undefined;
+                          const isFlagged = answers[q.id]?.flagged;
+                          
+                          return (
+                            <motion.div 
+                              key={q.id}
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              className="card"
+                              style={{ 
+                                padding: 24, 
+                                borderLeft: isFlagged ? "4px solid var(--warning)" : isAnswered ? "4px solid var(--success)" : "4px solid var(--border)",
+                                background: isFlagged ? "var(--warning-light)" : "var(--bg-card)"
+                              }}
+                            >
                       
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                         <div style={{ fontSize: "1.0625rem", fontWeight: 500, lineHeight: 1.5 }}>
@@ -272,9 +284,13 @@ export function ExamClient({
                           );
                         })}
                       </div>
-                    </motion.div>
-                  );
-                })}
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    );
+                  });
+                })()}
               </div>
             </div>
           );

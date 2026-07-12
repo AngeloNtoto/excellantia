@@ -148,7 +148,7 @@ export function buildRanking(
     fullname: string;
     score: number | null;
     percentage: number | null;
-    scoreBySubject: string | null;
+    scoreBySubject: any;
     submittedAt: Date | null;
     status: string;
   }>
@@ -168,7 +168,11 @@ export function buildRanking(
   return sorted.map((a, i) => {
     let bySubject: Record<Subject, number> = { MATH: 0, FRENCH: 0, ENGLISH: 0, GENERAL_CULTURE: 0 };
     if (a.scoreBySubject) {
-      try { bySubject = JSON.parse(a.scoreBySubject); } catch { /* */ }
+      if (typeof a.scoreBySubject === 'string') {
+        try { bySubject = JSON.parse(a.scoreBySubject); } catch { /* */ }
+      } else {
+        bySubject = a.scoreBySubject as Record<Subject, number>;
+      }
     }
     return {
       rank: i + 1,
