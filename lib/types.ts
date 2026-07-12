@@ -66,6 +66,7 @@ export interface RoomConfig {
   french?: { passageQuestions: number; passages: number };
   english?: { passageQuestions: number; passages: number };
   generalCulture?: { drc: number; international: number };
+  pausableTimer?: boolean;
 }
 
 // ─── Tentatives ──────────────────────────────────────────────────────────────

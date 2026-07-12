@@ -2398,5 +2398,805 @@
     ],
     "answerIndex": 2,
     "explanation": "La guerre civile angolaise a duré 27 ans, opposant le MPLA au pouvoir à l'UNITA, avec des implications de la guerre froide."
+  },
+  {
+    "id": "cg-201",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "En quelle année la République Démocratique du Congo a-t-elle obtenu son indépendance ?",
+    "options": [
+      "1958",
+      "1960",
+      "1962",
+      "1965"
+    ],
+    "answerIndex": 1,
+    "explanation": "La RDC a accédé à l'indépendance le 30 juin 1960."
+  },
+  {
+    "id": "cg-202",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Qui fut le premier Premier ministre de la RDC indépendante ?",
+    "options": [
+      "Joseph Kasa-Vubu",
+      "Patrice Lumumba",
+      "Mobutu Sese Seko",
+      "Moise Tshombe"
+    ],
+    "answerIndex": 1,
+    "explanation": "Patrice Émery Lumumba est devenu le premier Premier ministre le 24 juin 1960."
+  },
+  {
+    "id": "cg-203",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel événement historique s'est déroulé en France le 14 juillet 1789 ?",
+    "options": [
+      "La signature de la Déclaration des droits de l'homme",
+      "La prise de la Bastille",
+      "Le sacre de Napoléon",
+      "La chute de la monarchie"
+    ],
+    "answerIndex": 1,
+    "explanation": "La prise de la Bastille le 14 juillet 1789 marque le début symbolique de la Révolution française."
+  },
+  {
+    "id": "cg-204",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "La Seconde Guerre mondiale s'est terminée en quelle année ?",
+    "options": [
+      "1943",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Seconde Guerre mondiale s'est terminée en 1945 avec la capitulation du Japon le 2 septembre."
+  },
+  {
+    "id": "cg-205",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a été le premier homme à marcher sur la Lune ?",
+    "options": [
+      "Buzz Aldrin",
+      "Youri Gagarine",
+      "Neil Armstrong",
+      "John Glenn"
+    ],
+    "answerIndex": 2,
+    "explanation": "Neil Armstrong a posé le pied sur la Lune le 20 juillet 1969 lors de la mission Apollo 11."
+  },
+  {
+    "id": "cg-206",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel mur, symbole de la Guerre froide, est tombé en 1989 ?",
+    "options": [
+      "Le mur de Chine",
+      "Le mur de Berlin",
+      "Le mur des Lamentations",
+      "Le mur d'Hadrien"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le mur de Berlin est tombé le 9 novembre 1989, marquant la fin de la division de l'Allemagne."
+  },
+  {
+    "id": "cg-207",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quel nom portait la RDC entre 1971 et 1997 ?",
+    "options": [
+      "Congo belge",
+      "République du Congo",
+      "Zaïre",
+      "Congo-Kinshasa"
+    ],
+    "answerIndex": 2,
+    "explanation": "Mobutu a renommé le pays « République du Zaïre » le 27 octobre 1971."
+  },
+  {
+    "id": "cg-208",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "En quelle année l'Organisation des Nations Unies (ONU) a-t-elle été fondée ?",
+    "options": [
+      "1919",
+      "1939",
+      "1945",
+      "1948"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'ONU a été fondée le 24 octobre 1945, après la fin de la Seconde Guerre mondiale."
+  },
+  {
+    "id": "cg-209",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays africain n'a jamais été colonisé ?",
+    "options": [
+      "Ghana",
+      "Éthiopie",
+      "Nigeria",
+      "Sénégal"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Éthiopie est l'un des rares pays africains à n'avoir jamais été colonisé, malgré une brève occupation italienne (1936-1941)."
+  },
+  {
+    "id": "cg-210",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Histoire",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a découvert l'Amérique en 1492 ?",
+    "options": [
+      "Vasco de Gama",
+      "Fernand de Magellan",
+      "Christophe Colomb",
+      "Marco Polo"
+    ],
+    "answerIndex": 2,
+    "explanation": "Christophe Colomb a atteint les Amériques le 12 octobre 1492 lors de son premier voyage."
+  },
+  {
+    "id": "cg-211",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle est la capitale de la République Démocratique du Congo ?",
+    "options": [
+      "Lubumbashi",
+      "Kinshasa",
+      "Kisangani",
+      "Goma"
+    ],
+    "answerIndex": 1,
+    "explanation": "Kinshasa est la capitale et la plus grande ville de la RDC."
+  },
+  {
+    "id": "cg-212",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quel est le plus grand lac de la RDC ?",
+    "options": [
+      "Lac Kivu",
+      "Lac Moero",
+      "Lac Tanganyika",
+      "Lac Édouard"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le lac Tanganyika est le plus grand lac bordant la RDC et le deuxième plus profond au monde."
+  },
+  {
+    "id": "cg-213",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus grand continent du monde en superficie ?",
+    "options": [
+      "Afrique",
+      "Amérique",
+      "Asie",
+      "Europe"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Asie est le plus grand continent avec environ 44,6 millions de km²."
+  },
+  {
+    "id": "cg-214",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus long fleuve du monde ?",
+    "options": [
+      "L'Amazone",
+      "Le Nil",
+      "Le Mississippi",
+      "Le Yangtsé"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Nil, avec environ 6 650 km, est généralement considéré comme le plus long fleuve du monde."
+  },
+  {
+    "id": "cg-215",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Combien y a-t-il de continents ?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "explanation": "On distingue traditionnellement 7 continents : Afrique, Amérique du Nord, Amérique du Sud, Antarctique, Asie, Europe et Océanie."
+  },
+  {
+    "id": "cg-216",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel pays est le plus grand du monde en superficie ?",
+    "options": [
+      "Canada",
+      "Chine",
+      "États-Unis",
+      "Russie"
+    ],
+    "answerIndex": 3,
+    "explanation": "La Russie est le plus grand pays du monde avec environ 17,1 millions de km²."
+  },
+  {
+    "id": "cg-217",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Avec combien de pays la RDC partage-t-elle une frontière ?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answerIndex": 2,
+    "explanation": "La RDC partage ses frontières avec 9 pays : Congo-Brazzaville, RCA, Soudan du Sud, Ouganda, Rwanda, Burundi, Tanzanie, Zambie et Angola."
+  },
+  {
+    "id": "cg-218",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le plus petit pays du monde ?",
+    "options": [
+      "Monaco",
+      "Vatican",
+      "San Marin",
+      "Liechtenstein"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le Vatican, avec 0,44 km², est le plus petit État indépendant du monde."
+  },
+  {
+    "id": "cg-219",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel océan borde la côte ouest de l'Afrique ?",
+    "options": [
+      "Océan Indien",
+      "Océan Pacifique",
+      "Océan Atlantique",
+      "Océan Arctique"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'océan Atlantique borde la côte ouest du continent africain."
+  },
+  {
+    "id": "cg-220",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Géographie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le désert le plus grand du monde ?",
+    "options": [
+      "Le Sahara",
+      "Le Gobi",
+      "Le Kalahari",
+      "L'Antarctique"
+    ],
+    "answerIndex": 3,
+    "explanation": "L'Antarctique est techniquement le plus grand désert du monde (14 millions de km²). Le Sahara est le plus grand désert chaud."
+  },
+  {
+    "id": "cg-221",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Qui est le premier président de la RDC indépendante ?",
+    "options": [
+      "Patrice Lumumba",
+      "Joseph Kasa-Vubu",
+      "Mobutu Sese Seko",
+      "Laurent-Désiré Kabila"
+    ],
+    "answerIndex": 1,
+    "explanation": "Joseph Kasa-Vubu a été élu premier président de la République du Congo le 24 juin 1960."
+  },
+  {
+    "id": "cg-222",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le siège principal de l'ONU ?",
+    "options": [
+      "Genève",
+      "Paris",
+      "New York",
+      "Washington"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le siège principal de l'Organisation des Nations Unies se trouve à New York, aux États-Unis."
+  },
+  {
+    "id": "cg-223",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Combien de pays membres l'Union africaine compte-t-elle ?",
+    "options": [
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Union africaine compte 55 États membres, représentant tous les pays du continent africain."
+  },
+  {
+    "id": "cg-224",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est le système politique de la France ?",
+    "options": [
+      "Monarchie constitutionnelle",
+      "République fédérale",
+      "République semi-présidentielle",
+      "République parlementaire"
+    ],
+    "answerIndex": 2,
+    "explanation": "La France est une république semi-présidentielle depuis la Constitution de 1958 (Ve République)."
+  },
+  {
+    "id": "cg-225",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Combien de provinces compte actuellement la RDC ?",
+    "options": [
+      "11",
+      "20",
+      "26",
+      "30"
+    ],
+    "answerIndex": 2,
+    "explanation": "Depuis la Constitution de 2006, la RDC est découpée en 25 provinces plus la ville-province de Kinshasa, soit 26 au total."
+  },
+  {
+    "id": "cg-226",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qu'est-ce que la démocratie ?",
+    "options": [
+      "Le pouvoir exercé par un roi",
+      "Le pouvoir exercé par le peuple",
+      "Le pouvoir exercé par l'armée",
+      "Le pouvoir exercé par un parti unique"
+    ],
+    "answerIndex": 1,
+    "explanation": "La démocratie vient du grec « demos » (peuple) et « kratos » (pouvoir) : c'est le gouvernement du peuple, par le peuple."
+  },
+  {
+    "id": "cg-227",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel document constitue la loi fondamentale d'un pays ?",
+    "options": [
+      "Le code civil",
+      "La constitution",
+      "Le budget national",
+      "Le traité de paix"
+    ],
+    "answerIndex": 1,
+    "explanation": "La constitution est la loi suprême d'un État, définissant les droits fondamentaux et l'organisation des pouvoirs."
+  },
+  {
+    "id": "cg-228",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Politique",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quels sont les trois pouvoirs d'un État démocratique ?",
+    "options": [
+      "Militaire, religieux, économique",
+      "Exécutif, législatif, judiciaire",
+      "Présidentiel, royal, populaire",
+      "National, provincial, communal"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les trois pouvoirs sont l'exécutif (gouverner), le législatif (faire les lois) et le judiciaire (rendre la justice)."
+  },
+  {
+    "id": "cg-229",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle langue est la plus parlée au monde en nombre de locuteurs natifs ?",
+    "options": [
+      "L'anglais",
+      "L'espagnol",
+      "Le mandarin",
+      "L'hindi"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le mandarin (chinois) est la langue la plus parlée en tant que langue maternelle, avec plus de 900 millions de locuteurs natifs."
+  },
+  {
+    "id": "cg-230",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelles sont les quatre langues nationales de la RDC ?",
+    "options": [
+      "Français, swahili, lingala, tshiluba",
+      "Lingala, swahili, kikongo, tshiluba",
+      "Français, lingala, kikongo, swahili",
+      "Swahili, lingala, tshiluba, mongo"
+    ],
+    "answerIndex": 1,
+    "explanation": "Les quatre langues nationales de la RDC sont le lingala, le swahili, le kikongo et le tshiluba."
+  },
+  {
+    "id": "cg-231",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qui a peint la Joconde (Mona Lisa) ?",
+    "options": [
+      "Michel-Ange",
+      "Raphaël",
+      "Léonard de Vinci",
+      "Pablo Picasso"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Joconde a été peinte par Léonard de Vinci entre 1503 et 1519."
+  },
+  {
+    "id": "cg-232",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Tous les combien d'années les Jeux olympiques d'été ont-ils lieu ?",
+    "options": [
+      "2 ans",
+      "3 ans",
+      "4 ans",
+      "5 ans"
+    ],
+    "answerIndex": 2,
+    "explanation": "Les Jeux olympiques d'été se déroulent tous les 4 ans depuis 1896."
+  },
+  {
+    "id": "cg-233",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle est la langue officielle de la RDC ?",
+    "options": [
+      "Le lingala",
+      "Le swahili",
+      "Le français",
+      "Le kikongo"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le français est la langue officielle de la RDC, utilisée dans l'administration, l'éducation et les médias."
+  },
+  {
+    "id": "cg-234",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel est l'instrument de musique à cordes le plus courant dans un orchestre ?",
+    "options": [
+      "La guitare",
+      "Le violon",
+      "Le piano",
+      "La harpe"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le violon est l'instrument à cordes le plus représenté dans un orchestre symphonique."
+  },
+  {
+    "id": "cg-235",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel sport est le plus populaire au monde ?",
+    "options": [
+      "Le basketball",
+      "Le cricket",
+      "Le football",
+      "Le tennis"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le football est le sport le plus pratiqué et suivi dans le monde, avec environ 4 milliards de fans."
+  },
+  {
+    "id": "cg-236",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Culture",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Combien de joueurs composent une équipe de football sur le terrain ?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "Une équipe de football est composée de 11 joueurs sur le terrain, gardien compris."
+  },
+  {
+    "id": "cg-237",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle est la monnaie officielle de la RDC ?",
+    "options": [
+      "Le dollar américain",
+      "Le franc CFA",
+      "Le franc congolais",
+      "Le shilling"
+    ],
+    "answerIndex": 2,
+    "explanation": "Le franc congolais (CDF) est la monnaie officielle de la République Démocratique du Congo."
+  },
+  {
+    "id": "cg-238",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Que signifie le sigle PIB ?",
+    "options": [
+      "Produit International Brut",
+      "Produit Intérieur Brut",
+      "Production Industrielle de Base",
+      "Profit Intérieur Bancaire"
+    ],
+    "answerIndex": 1,
+    "explanation": "PIB signifie Produit Intérieur Brut, c'est la valeur totale des biens et services produits dans un pays en un an."
+  },
+  {
+    "id": "cg-239",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quelle est la monnaie commune des pays de la zone euro ?",
+    "options": [
+      "Le dollar",
+      "La livre",
+      "L'euro",
+      "Le franc"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'euro (€) est la monnaie commune utilisée par 20 pays de l'Union européenne."
+  },
+  {
+    "id": "cg-240",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle est la principale ressource minière de la RDC ?",
+    "options": [
+      "L'or",
+      "Le cuivre",
+      "Le cobalt",
+      "Le diamant"
+    ],
+    "answerIndex": 2,
+    "explanation": "La RDC détient environ 70% des réserves mondiales de cobalt, essentiel pour les batteries des véhicules électriques."
+  },
+  {
+    "id": "cg-241",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qu'est-ce que l'inflation ?",
+    "options": [
+      "La baisse des prix",
+      "La hausse générale des prix",
+      "L'augmentation des salaires",
+      "La croissance économique"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'inflation désigne la hausse générale et durable du niveau des prix des biens et services."
+  },
+  {
+    "id": "cg-242",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel organisme international prête de l'argent aux pays en développement ?",
+    "options": [
+      "L'OMS",
+      "L'UNESCO",
+      "La Banque mondiale",
+      "L'UNICEF"
+    ],
+    "answerIndex": 2,
+    "explanation": "La Banque mondiale (Groupe de la Banque mondiale) fournit des prêts et des subventions aux pays en développement."
+  },
+  {
+    "id": "cg-243",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Économie",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel continent est le plus peuplé du monde ?",
+    "options": [
+      "L'Afrique",
+      "L'Europe",
+      "L'Asie",
+      "L'Amérique"
+    ],
+    "answerIndex": 2,
+    "explanation": "L'Asie est le continent le plus peuplé avec plus de 4,7 milliards d'habitants."
+  },
+  {
+    "id": "cg-244",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelles sont les couleurs du drapeau de la RDC ?",
+    "options": [
+      "Vert, jaune, rouge",
+      "Bleu ciel avec une étoile jaune et une bande rouge",
+      "Noir, jaune, rouge",
+      "Vert, blanc, orange"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le drapeau de la RDC est bleu ciel avec une étoile jaune dans le coin supérieur gauche et une bande diagonale rouge bordée de jaune."
+  },
+  {
+    "id": "cg-245",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quel est l'hymne national de la RDC ?",
+    "options": [
+      "La Zaïroise",
+      "Debout Congolais",
+      "L'hymne de l'indépendance",
+      "Salut au drapeau"
+    ],
+    "answerIndex": 1,
+    "explanation": "« Debout Congolais » est l'hymne national de la RDC depuis l'indépendance en 1960."
+  },
+  {
+    "id": "cg-246",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Qu'est-ce qu'un droit fondamental ?",
+    "options": [
+      "Un privilège réservé aux riches",
+      "Un droit accordé uniquement aux adultes",
+      "Un droit reconnu à tout être humain",
+      "Un droit lié à la nationalité"
+    ],
+    "answerIndex": 2,
+    "explanation": "Les droits fondamentaux sont des droits universels, inaliénables et reconnus à tout être humain."
+  },
+  {
+    "id": "cg-247",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Quel document international proclame les droits universels de l'homme ?",
+    "options": [
+      "La Charte de l'OUA",
+      "La Déclaration universelle des droits de l'homme",
+      "Le Traité de Versailles",
+      "L'Accord de Paris"
+    ],
+    "answerIndex": 1,
+    "explanation": "La Déclaration universelle des droits de l'homme a été adoptée par l'ONU le 10 décembre 1948."
+  },
+  {
+    "id": "cg-248",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "À quel âge peut-on généralement voter en RDC ?",
+    "options": [
+      "16 ans",
+      "18 ans",
+      "20 ans",
+      "21 ans"
+    ],
+    "answerIndex": 1,
+    "explanation": "En RDC, le droit de vote est accordé à tout citoyen congolais âgé de 18 ans révolus."
+  },
+  {
+    "id": "cg-249",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "INTERNATIONAL",
+    "statement": "Que signifie le sigle ONG ?",
+    "options": [
+      "Organisation Nationale du Gouvernement",
+      "Organisation Non Gouvernementale",
+      "Office National de Gestion",
+      "Ordre National des Grades"
+    ],
+    "answerIndex": 1,
+    "explanation": "ONG signifie Organisation Non Gouvernementale, une association privée à but non lucratif."
+  },
+  {
+    "id": "cg-250",
+    "subject": "GENERAL_CULTURE",
+    "topic": "Civisme",
+    "difficulty": "EASY",
+    "scope": "DRC",
+    "statement": "Quelle devise figure sur les armoiries de la RDC ?",
+    "options": [
+      "Unité, Travail, Progrès",
+      "Justice, Paix, Travail",
+      "Liberté, Égalité, Fraternité",
+      "Paix, Justice, Développement"
+    ],
+    "answerIndex": 1,
+    "explanation": "La devise de la RDC est « Justice, Paix, Travail », inscrite sur ses armoiries officielles."
   }
 ]
