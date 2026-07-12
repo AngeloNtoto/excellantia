@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { ROOM_STATUS_LABELS } from "@/lib/types";
 import { startAttemptAction } from "@/lib/actions/attempts";
 import { buildWhatsAppMessage, buildWhatsAppUrl, buildRanking } from "@/lib/scoring";
+import { Trophy } from "lucide-react";
 import { AccessCodeForm } from "./access-form";
 
 export default async function RoomDetailsPage({ params }: { params: Promise<{ id: string }> }) {
@@ -129,39 +130,14 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
                   <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     <div style={{ 
                       width: 40, height: 40, borderRadius: 12, 
-                      background: "linear-gradient(135deg, #f59e0b, #d97706)", 
+                      background: "var(--accent-light)", 
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      color: "white", fontSize: "1.25rem", boxShadow: "0 4px 10px rgba(245, 158, 11, 0.3)"
+                      color: "var(--accent)", border: "1px solid rgba(59, 130, 246, 0.2)"
                     }}>
-                      🏆
+                      <Trophy size={20} strokeWidth={2.5} />
                     </div>
-                    <h2 style={{ fontSize: "1.25rem", fontWeight: 800, margin: 0, color: "var(--text-primary)" }}>Classement final</h2>
+                    <h2 style={{ fontSize: "1.25rem", fontWeight: 700, margin: 0, color: "var(--text-primary)" }}>Classement final</h2>
                   </div>
-                  
-                  <a 
-                    href={buildWhatsAppUrl(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, ranking))}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    style={{ 
-                      background: "linear-gradient(135deg, #25D366, #1da851)", 
-                      color: "white", 
-                      padding: "10px 20px", 
-                      borderRadius: "100px",
-                      fontSize: "0.9375rem", 
-                      fontWeight: 700,
-                      display: "flex", 
-                      alignItems: "center", 
-                      gap: 8,
-                      textDecoration: "none",
-                      boxShadow: "0 4px 12px rgba(37, 211, 102, 0.3)",
-                      transition: "transform 0.2s, box-shadow 0.2s"
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-2px)"}
-                    onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
-                  >
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    Partager les résultats
-                  </a>
                 </div>
                 
                 <div style={{ background: "var(--bg-card)", borderRadius: "16px", border: "1px solid var(--border-subtle)", boxShadow: "0 4px 20px rgba(0,0,0,0.04)", overflow: "hidden" }}>
@@ -232,6 +208,30 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
                       Seuls les 50 premiers candidats sont affichés.
                     </div>
                   )}
+                </div>
+                
+                <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 24 }}>
+                  <a
+                    href={buildWhatsAppUrl(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, ranking))}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ 
+                      background: "linear-gradient(135deg, #25D366, #1da851)", 
+                      color: "white", 
+                      padding: "12px 24px", 
+                      borderRadius: "100px",
+                      fontSize: "1rem", 
+                      fontWeight: 700,
+                      display: "flex", 
+                      alignItems: "center", 
+                      gap: 10,
+                      textDecoration: "none",
+                      boxShadow: "0 8px 16px rgba(37, 211, 102, 0.2)"
+                    }}
+                  >
+                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Partager sur WhatsApp
+                  </a>
                 </div>
               </div>
             )}
