@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { saveAnswerAction, toggleFlagAction, submitAttemptAction } from "@/lib/actions/attempts";
+import { saveAnswerAction, toggleFlagAction, submitAttemptAction, saveElapsedTimeAction } from "@/lib/actions/attempts";
 import { SUBJECT_LABELS, SUBJECT_COLORS } from "@/lib/types";
 import { Clock } from "lucide-react";
 
@@ -16,7 +16,9 @@ export function ExamClient({
   startedAt,
   timeMode,
   roomId,
-  accessCode
+  accessCode,
+  pausableTimer,
+  previousTimeUsedSec
 }: any) {
   const [answers, setAnswers] = useState(initialAnswers);
   const [isPending, startTransition] = useTransition();
@@ -26,26 +28,71 @@ export function ExamClient({
   const subjects = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
   
   useEffect(() => {
+    const totalSec = durationMin * 60;
+    // Track how many seconds have been "used" since we opened this page
+    const pageOpenedAt = Date.now();
+
     const timer = setInterval(() => {
       const now = Date.now();
-      let target = 0;
-      
-      if (timeMode === "ABSOLUTE" && endsAt) {
-        target = endsAt;
+      let remaining = 0;
+
+      if (pausableTimer) {
+        // PAUSABLE: elapsed = previousTimeUsedSec + time spent on this page load
+        const sessionElapsed = Math.floor((now - pageOpenedAt) / 1000);
+        const totalElapsed = previousTimeUsedSec + sessionElapsed;
+        remaining = Math.max(0, totalSec - totalElapsed);
+      } else if (timeMode === "ABSOLUTE" && endsAt) {
+        // ABSOLUTE: server-set end time
+        remaining = Math.max(0, Math.floor((endsAt - now) / 1000));
       } else {
-        target = startedAt + (durationMin * 60 * 1000);
+        // RELATIVE (strict): based on startedAt
+        const target = startedAt + totalSec * 1000;
+        remaining = Math.max(0, Math.floor((target - now) / 1000));
       }
-      
-      const diff = Math.max(0, Math.floor((target - now) / 1000));
-      setTimeLeft(diff);
-      
-      if (diff === 0) {
+
+      setTimeLeft(remaining);
+
+      if (remaining === 0) {
         clearInterval(timer);
         handleSubmit(true);
       }
     }, 1000);
-    return () => clearInterval(timer);
-  }, [endsAt, startedAt, durationMin, timeMode]);
+
+    // PAUSABLE: save elapsed time to server every 15 seconds
+    let saveTimer: ReturnType<typeof setInterval> | null = null;
+    if (pausableTimer) {
+      saveTimer = setInterval(() => {
+        const sessionElapsed = Math.floor((Date.now() - pageOpenedAt) / 1000);
+        const totalElapsed = previousTimeUsedSec + sessionElapsed;
+        saveElapsedTimeAction(attemptId, totalElapsed);
+      }, 15000);
+    }
+
+    // PAUSABLE: save on page unload
+    const handleBeforeUnload = () => {
+      if (pausableTimer) {
+        const sessionElapsed = Math.floor((Date.now() - pageOpenedAt) / 1000);
+        const totalElapsed = previousTimeUsedSec + sessionElapsed;
+        // Use sendBeacon for reliability on page close
+        const data = JSON.stringify({ attemptId, timeUsedSec: totalElapsed });
+        navigator.sendBeacon?.("/api/save-time", data);
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      clearInterval(timer);
+      if (saveTimer) clearInterval(saveTimer);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      // Save one final time on unmount
+      if (pausableTimer) {
+        const sessionElapsed = Math.floor((Date.now() - pageOpenedAt) / 1000);
+        const totalElapsed = previousTimeUsedSec + sessionElapsed;
+        saveElapsedTimeAction(attemptId, totalElapsed);
+      }
+    };
+  }, [endsAt, startedAt, durationMin, timeMode, pausableTimer, previousTimeUsedSec]);
 
   const handleSelect = (qId: string, index: number) => {
     const current = answers[qId]?.selectedIndex;

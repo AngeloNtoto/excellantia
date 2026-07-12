@@ -45,7 +45,8 @@ export async function startTrainingAction(formData: FormData) {
       FRENCH: countFrench > 0 ? makeSubjectDiff(countFrench) : { easy: 0, medium: 0, hard: 0 },
       ENGLISH: countEnglish > 0 ? makeSubjectDiff(countEnglish) : { easy: 0, medium: 0, hard: 0 },
       GENERAL_CULTURE: countCulture > 0 ? makeSubjectDiff(countCulture) : { easy: 0, medium: 0, hard: 0 },
-    }
+    },
+    pausableTimer: formData.get("pausableTimer") === "true",
   };
 
   const gen = generateRoomQuestions(config);

@@ -98,6 +98,23 @@ export async function toggleFlagAction(attemptId: string, questionId: string) {
   return { ok: true };
 }
 
+// ─── Sauvegarder le temps écoulé (mode pausable) ──────────────────────────────
+
+export async function saveElapsedTimeAction(attemptId: string, timeUsedSec: number) {
+  const session = await requireAuth();
+
+  const attempt = await prisma.attempt.findUnique({ where: { id: attemptId } });
+  if (!attempt || attempt.userId !== session.id) return { error: "Tentative introuvable." };
+  if (attempt.status !== "IN_PROGRESS") return { error: "Tentative déjà soumise." };
+
+  await prisma.attempt.update({
+    where: { id: attemptId },
+    data: { timeUsedSec },
+  });
+
+  return { ok: true };
+}
+
 // ─── Soumettre une tentative ──────────────────────────────────────────────────
 
 export async function submitAttemptAction(attemptId: string) {

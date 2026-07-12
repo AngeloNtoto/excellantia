@@ -46,6 +46,7 @@ export default function TrainingPage() {
   });
   const [difficulty, setDifficulty] = useState("MIXED");
   const [duration, setDuration] = useState(60);
+  const [pausableTimer, setPausableTimer] = useState(true); // Default to pausable
   const [error, setError] = useState("");
 
   const totalQuestions = selectedSubjects.reduce((acc, id) => acc + (subjectCounts[id] || 0), 0);
@@ -86,6 +87,7 @@ export default function TrainingPage() {
     });
     fd.append("difficulty", difficulty);
     fd.append("duration", duration.toString());
+    fd.append("pausableTimer", pausableTimer.toString());
 
     startTransition(async () => {
       const res = await startTrainingAction(fd);
@@ -119,11 +121,14 @@ export default function TrainingPage() {
           
           {/* MATIÈRES */}
           <motion.section variants={itemVariants}>
-            <div className="flex items-center justify-between mb-4">
-              <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-indigo-500" />
-                Matières et questions
-              </label>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">1</span>
+                <div>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Matières et questions</h3>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Sélectionnez les matières à entraîner</p>
+                </div>
+              </div>
               <div className="flex items-center gap-2">
                 <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 rounded-lg text-sm font-bold">
                   {totalQuestions} questions au total
@@ -216,14 +221,15 @@ export default function TrainingPage() {
             </motion.div>
           </motion.section>
 
-          <motion.hr variants={itemVariants} className="border-gray-200 dark:border-white/10" />
-
           {/* DIFFICULTÉ */}
           <motion.section variants={itemVariants}>
-            <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
-              <Gauge className="w-5 h-5 text-indigo-500" />
-              Niveau de difficulté
-            </label>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">2</span>
+              <div>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Niveau de difficulté</h3>
+                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Choisissez le niveau des questions générées</p>
+              </div>
+            </div>
             
             <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {DIFFICULTIES.map((diff) => {
@@ -261,14 +267,40 @@ export default function TrainingPage() {
             </motion.div>
           </motion.section>
 
-          <motion.hr variants={itemVariants} className="border-gray-200 dark:border-white/10" />
+          {/* CHRONOMÈTRE */}
+          <motion.section variants={itemVariants}>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">3</span>
+              <div>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Mode du chronomètre</h3>
+                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Strict pour un examen réel, flexible pour réviser à son rythme</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <label className={`cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 transition-all duration-300 ${!pausableTimer ? 'border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md' : 'border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10'}`}>
+                <input type="radio" name="pausableTimer" value="false" checked={!pausableTimer} onChange={() => setPausableTimer(false)} className="sr-only" />
+                <span className="font-bold mb-1 text-gray-900 dark:text-white">Strict (Temps réel)</span>
+                <span className="text-xs font-medium text-gray-500">Le temps s'écoule même si vous quittez la page. Idéal pour simuler l'examen réel.</span>
+              </label>
+              
+              <label className={`cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 transition-all duration-300 ${pausableTimer ? 'border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md' : 'border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10'}`}>
+                <input type="radio" name="pausableTimer" value="true" checked={pausableTimer} onChange={() => setPausableTimer(true)} className="sr-only" />
+                <span className="font-bold mb-1 text-gray-900 dark:text-white">Flexible (Pause active)</span>
+                <span className="text-xs font-medium text-gray-500">Le chronomètre se fige si vous vous déconnectez ou quittez la page. Idéal pour un entraînement fragmenté.</span>
+              </label>
+            </div>
+          </motion.section>
 
           {/* DURÉE */}
           <motion.section variants={itemVariants}>
-            <label className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
-              <Clock className="w-5 h-5 text-indigo-500" />
-              Durée de l'épreuve
-            </label>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">4</span>
+              <div>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Durée de l'épreuve</h3>
+                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Définissez le temps imparti en minutes</p>
+              </div>
+            </div>
             
             <div className="flex items-center gap-6">
               <div className="relative">

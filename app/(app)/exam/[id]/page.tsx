@@ -67,6 +67,8 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
         durationMin={room.durationMin}
         startedAt={attempt.startedAt.getTime()}
         timeMode={room.timeMode}
+        pausableTimer={(room.config as any)?.pausableTimer === true}
+        previousTimeUsedSec={attempt.timeUsedSec ?? 0}
       />
     </div>
   );
