@@ -33,6 +33,47 @@ export function ImportCandidatesForm() {
 
   return (
     <div>
+      <div style={{ marginBottom: 16 }}>
+        <textarea
+          placeholder="Collez votre JSON ici..."
+          className="input"
+          style={{ width: "100%", height: "120px", padding: "12px", fontFamily: "var(--font-mono)", fontSize: "0.875rem", resize: "vertical" }}
+          onChange={(e) => {
+            if (!e.target.value.trim()) return;
+            try {
+              const json = JSON.parse(e.target.value);
+              startTransition(async () => {
+                const res = await importCandidatesAction(json);
+                setReport(res);
+                e.target.value = ""; // Clear on success
+              });
+            } catch (err) {
+              // Not a valid JSON yet, do nothing until they paste completely or click a button
+            }
+          }}
+          onBlur={(e) => {
+            if (!e.target.value.trim()) return;
+            try {
+              const json = JSON.parse(e.target.value);
+              startTransition(async () => {
+                const res = await importCandidatesAction(json);
+                setReport(res);
+                e.target.value = "";
+              });
+            } catch (err) {
+              alert("Le JSON collé est invalide.");
+            }
+          }}
+          disabled={isPending}
+        />
+      </div>
+
+      <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "16px" }}>
+        <div style={{ flex: 1, height: "1px", background: "var(--border-subtle)" }}></div>
+        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 600 }}>OU</span>
+        <div style={{ flex: 1, height: "1px", background: "var(--border-subtle)" }}></div>
+      </div>
+
       <input 
         type="file" 
         accept=".json" 
