@@ -28,6 +28,13 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
   if (!room) redirect("/admin/salles");
 
   const config = typeof room.config === 'string' ? JSON.parse(room.config) : room.config;
+  const totalQuestions = Array.isArray(room.questionIds)
+    ? room.questionIds.length
+    : typeof room.questionIds === "string"
+      ? (() => {
+          try { return JSON.parse(room.questionIds).length; } catch { return 0; }
+        })()
+      : 0;
   const isRunning = room.status === "RUNNING";
   const isWaiting = room.status === "WAITING" || room.status === "SCHEDULED";
   const isClosed = room.status === "CLOSED";
@@ -64,7 +71,7 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
           )}
           {isClosed && room.attempts.length > 0 && (
             <a 
-              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map((attempt: any) => ({ ...attempt, fullname: attempt.user.fullname, scoreBySubject: typeof attempt.scoreBySubject === 'string' ? attempt.scoreBySubject : JSON.stringify(attempt.scoreBySubject) })))))}`} 
+              href={`https://wa.me/?text=${encodeURIComponent(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, buildRanking(room.attempts.map((attempt: any) => ({ ...attempt, fullname: attempt.user.fullname, scoreBySubject: typeof attempt.scoreBySubject === 'string' ? attempt.scoreBySubject : JSON.stringify(attempt.scoreBySubject) }))), totalQuestions))}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-success"

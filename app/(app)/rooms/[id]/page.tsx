@@ -31,6 +31,14 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
   }
 
   let ranking: any[] = [];
+  const totalQuestions = Array.isArray(room.questionIds)
+    ? room.questionIds.length
+    : typeof room.questionIds === "string"
+      ? (() => {
+          try { return JSON.parse(room.questionIds).length; } catch { return 0; }
+        })()
+      : 0;
+
   if (room.status === "CLOSED" && hasAccess) {
     const attempts = await prisma.attempt.findMany({
       where: { roomId: room.id, status: { not: "IN_PROGRESS" } },
@@ -212,7 +220,7 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
                 
                 <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 24 }}>
                   <a
-                    href={buildWhatsAppUrl(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, ranking))}
+                    href={buildWhatsAppUrl(buildWhatsAppMessage(room.title, room.createdAt.toLocaleDateString(), room.durationMin, ranking, totalQuestions))}
                     target="_blank" 
                     rel="noopener noreferrer"
                     style={{ 

@@ -193,14 +193,15 @@ export function buildWhatsAppMessage(
   title: string,
   date: string,
   durationMin: number,
-  ranking: RankingEntry[]
+  ranking: RankingEntry[],
+  totalQuestions: number
 ): string {
   const top = ranking.slice(0, 20);
   const lines = [
     `🏆 *Resultats — ${title}*`,
     `📅 ${date} | ⏱ ${durationMin} min | 👥 ${ranking.length} participants`,
     ``,
-    ...top.map((e) => `${e.rank}. ${e.fullname} — ${e.percentage}% (${e.score}/100)`),
+    ...top.map((e) => `${e.rank}. ${e.fullname} — ${e.percentage}% (${e.score}/${totalQuestions})`),
     ``,
     `_Plateforme Excellantia_`,
   ];
