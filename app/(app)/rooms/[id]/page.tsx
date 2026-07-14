@@ -15,20 +15,20 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
   const room = await prisma.room.findUnique({ where: { id } });
   if (!room) redirect("/rooms");
 
-  // Si c'est une salle privée, vérifier l'accès
-  let hasAccess = room.visibility === "PUBLIC" || session.role === "ADMIN";
-  if (!hasAccess) {
-    const access = await prisma.roomAccess.findUnique({
-      where: { roomId_userId: { roomId: room.id, userId: session.id } }
-    });
-    hasAccess = !!access;
-  }
-
   // Vérifier si l'utilisateur a déjà une tentative
   const existingAttempt = await prisma.attempt.findFirst({
     where: { userId: session.id, roomId: room.id },
     orderBy: { createdAt: 'desc' }
   });
+
+  // Si c'est une salle privée, vérifier l'accès
+  let hasAccess = room.visibility === "PUBLIC" || session.role === "ADMIN" || room.createdById === session.id;
+  if (!hasAccess) {
+    const access = await prisma.roomAccess.findUnique({
+      where: { roomId_userId: { roomId: room.id, userId: session.id } }
+    });
+    hasAccess = !!access || !!existingAttempt;
+  }
 
   let ranking: any[] = [];
   if (room.status === "CLOSED" && hasAccess) {

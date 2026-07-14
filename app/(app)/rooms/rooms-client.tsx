@@ -10,6 +10,7 @@ interface RoomData {
   title: string;
   visibility: string;
   status: string;
+  timeMode?: string;
   durationMin: number;
   startsAt: Date | null;
   endsAt: Date | null;
@@ -73,12 +74,18 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
         <motion.div variants={containerVariants} className="grid gap-4 mb-12">
           {availableRooms.map((room) => {
             const isPrivate = room.visibility === "PRIVATE";
-            const isRunning = room.status === "RUNNING";
-            const isScheduled = room.status === "SCHEDULED";
+            const calculatedEndAt = room.endsAt
+              ? new Date(room.endsAt)
+              : room.timeMode === "ABSOLUTE" && room.startsAt
+                ? new Date(new Date(room.startsAt).getTime() + room.durationMin * 60_000)
+                : null;
+            const isExpired = !!calculatedEndAt && calculatedEndAt <= now;
+            const isRunning = room.status === "RUNNING" && !isExpired;
+            const isScheduled = room.status === "SCHEDULED" && !isExpired;
             
             let timeInfo = "";
-            if (isRunning && room.endsAt) {
-              const remaining = Math.max(0, Math.floor((room.endsAt.getTime() - now.getTime()) / 60000));
+            if (isRunning && calculatedEndAt) {
+              const remaining = Math.max(0, Math.floor((calculatedEndAt.getTime() - now.getTime()) / 60000));
               timeInfo = `Reste : ${remaining} min`;
             } else if (isScheduled && room.startsAt) {
               timeInfo = `Débute le ${new Date(room.startsAt).toLocaleDateString()} à ${new Date(room.startsAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
@@ -106,7 +113,7 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
                       isRunning ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400" : 
                       isScheduled ? "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400" : "bg-gray-100 text-gray-600 dark:bg-white/10 dark:text-gray-400"
                     }`}>
-                      {ROOM_STATUS_LABELS[room.status as keyof typeof ROOM_STATUS_LABELS]}
+                      {isExpired ? "Terminé" : ROOM_STATUS_LABELS[room.status as keyof typeof ROOM_STATUS_LABELS]}
                     </span>
                   </div>
                   <div className="flex items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -133,7 +140,7 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
                       : "bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-900 dark:text-white"
                   }`}
                 >
-                  {isRunning ? "Entrer" : "Détails"}
+                  {isRunning ? "Entrer" : isExpired ? "Voir" : "Détails"}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>

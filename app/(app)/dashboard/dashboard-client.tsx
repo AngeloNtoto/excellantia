@@ -64,7 +64,7 @@ export function DashboardClient({ firstname, stats, subjectTotals, rooms, attemp
                 transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 5 }}
               >👋</motion.span>
             </h1>
-            <p className="text-blue-100 dark:text-blue-200/80 text-lg max-w-xl leading-relaxed">
+            <p className="text-white/90 dark:text-blue-100 text-lg max-w-xl leading-relaxed">
               {isExcellent 
                 ? "Excellent travail jusqu'à présent. Continuez sur cette lancée pour atteindre vos objectifs !"
                 : "C'est le moment idéal pour lancer une nouvelle session d'entraînement et améliorer vos scores."}

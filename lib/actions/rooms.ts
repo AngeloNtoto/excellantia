@@ -15,6 +15,19 @@ async function requireAdmin() {
   return session;
 }
 
+async function requireRoomOwnerOrAdmin(roomId: string) {
+  const session = await getSession();
+  if (!session) redirect("/");
+
+  const room = await prisma.room.findUnique({ where: { id: roomId }, select: { createdById: true } });
+  if (!room) redirect("/rooms");
+  if (session.role === "ADMIN" || room.createdById === session.id) {
+    return session;
+  }
+
+  redirect("/");
+}
+
 async function requireAuth() {
   const session = await getSession();
   if (!session) redirect("/");
@@ -128,7 +141,7 @@ function generateAccessCode(): string {
 // ─── Démarrer une salle maintenant ───────────────────────────────────────────
 
 export async function startRoomNowAction(roomId: string) {
-  await requireAdmin();
+  await requireRoomOwnerOrAdmin(roomId);
   const room = await prisma.room.findUnique({ where: { id: roomId } });
   if (!room) return { error: "Salle introuvable." };
   if (room.status === "RUNNING") return { error: "Salle déjà en cours." };
@@ -153,7 +166,7 @@ export async function startRoomNowAction(roomId: string) {
 // ─── Fermer / annuler une salle ───────────────────────────────────────────────
 
 export async function closeRoomAction(roomId: string) {
-  await requireAdmin();
+  await requireRoomOwnerOrAdmin(roomId);
   await prisma.room.update({
     where: { id: roomId },
     data: { status: "CLOSED", endsAt: new Date() },
@@ -165,7 +178,7 @@ export async function closeRoomAction(roomId: string) {
 }
 
 export async function cancelRoomAction(roomId: string) {
-  await requireAdmin();
+  await requireRoomOwnerOrAdmin(roomId);
   await prisma.room.update({ where: { id: roomId }, data: { status: "CANCELLED" } });
   revalidatePath("/admin");
   revalidatePath("/rooms");
@@ -196,16 +209,39 @@ export async function checkRoomStatuses() {
   }
 
   // 2. Fermer les salles terminées
-  const expired = await prisma.room.findMany({
-    where: { status: "RUNNING", endsAt: { lte: now } },
+  const runningRooms = await prisma.room.findMany({
+    where: { status: "RUNNING" },
   });
 
-  for (const room of expired) {
-    await prisma.room.update({
-      where: { id: room.id },
-      data: { status: "CLOSED" },
+  for (const room of runningRooms) {
+    const effectiveEndAt = room.endsAt
+      ? new Date(room.endsAt)
+      : room.timeMode === "ABSOLUTE" && room.startsAt
+        ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
+        : null;
+
+    const attempts = await prisma.attempt.findMany({
+      where: { roomId: room.id },
+      select: { status: true },
     });
-    await autoSubmitExpiredAttempts(room.id);
+
+    const allAttemptsSubmitted = attempts.length > 0 && attempts.every((attempt) =>
+      attempt.status === "SUBMITTED" || attempt.status === "AUTO_SUBMITTED_TIME_EXPIRED" || attempt.status === "AUTO_SUBMITTED_DISCONNECTED"
+    );
+
+    const shouldClose = (room.timeMode === "ABSOLUTE" && effectiveEndAt && effectiveEndAt <= now)
+      || (room.timeMode === "RELATIVE" && allAttemptsSubmitted);
+
+    if (shouldClose) {
+      await prisma.room.update({
+        where: { id: room.id },
+        data: { status: "CLOSED", endsAt: effectiveEndAt ?? now },
+      });
+
+      if (room.timeMode === "ABSOLUTE" && effectiveEndAt && effectiveEndAt <= now) {
+        await autoSubmitExpiredAttempts(room.id);
+      }
+    }
   }
 }
 

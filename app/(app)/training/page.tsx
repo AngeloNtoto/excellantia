@@ -46,7 +46,7 @@ export default function TrainingPage() {
   });
   const [difficulty, setDifficulty] = useState("MIXED");
   const [duration, setDuration] = useState(60);
-  const [pausableTimer, setPausableTimer] = useState(true); // Default to pausable
+  const [pausableTimer, setPausableTimer] = useState(false); // Default to pausable
   const [error, setError] = useState("");
 
   const totalQuestions = selectedSubjects.reduce((acc, id) => acc + (subjectCounts[id] || 0), 0);

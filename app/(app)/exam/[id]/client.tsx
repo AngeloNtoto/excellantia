@@ -28,7 +28,7 @@ export function ExamClient({
   const subjects = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
   
   useEffect(() => {
-    const totalSec = durationMin * 60;
+    const totalSec = Math.min(durationMin * 60, 2 * 60 * 60);
     // Track how many seconds have been "used" since we opened this page
     const pageOpenedAt = Date.now();
 

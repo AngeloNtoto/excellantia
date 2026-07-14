@@ -51,7 +51,7 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
   return (
     <main className="page">
       <div style={{ marginBottom: 40, textAlign: "center" }}>
-        <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: 8 }}>Résultats de la simulation</h1>
+        <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: 8 }}>Résultats de l'Examen</h1>
         <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem" }}>{room.title}</p>
       </div>
 
