@@ -34,19 +34,26 @@ export async function startTrainingAction(formData: FormData) {
 
   // ── Entraînement : inclure UN SEUL texte de compréhension si > 30 questions ──
   // Pour FR et ANG, si le candidat demande plus de 30 questions dans la matière,
-  // on inclut automatiquement les questions d'un seul texte aléatoire (~15% du total).
+  // on inclut automatiquement les questions d'un seul texte aléatoire.
+  // Max questions texte = total / 10 (ex: 40→4, 50→5, 60→6)
+  // Le nombre réel est aléatoire entre 1 et ce max, pour varier les sessions.
   // En dessous de 30, pas de texte pour garder les sessions courtes et ciblées.
   const PASSAGE_THRESHOLD = 30; // Seuil minimum pour inclure un texte
-  const PASSAGE_PCT = 0.15;     // Proportion de questions texte (~15%)
-  const MIN_PASSAGE_QS = 3;     // Nombre minimum de questions texte
 
-  const frenchPassageConfig = countFrench > PASSAGE_THRESHOLD
-    ? { passageQuestions: Math.max(MIN_PASSAGE_QS, Math.round(countFrench * PASSAGE_PCT)), passages: 1 }
-    : undefined;
+  /**
+   * Calcule la config passage pour l'entraînement :
+   * - max = floor(total / 10)  →  40 questions = max 4, 50 = max 5, etc.
+   * - nombre réel = aléatoire entre 1 et max (inclusif)
+   */
+  const makePassageConfig = (count: number) => {
+    if (count <= PASSAGE_THRESHOLD) return undefined;
+    const max = Math.floor(count / 10);        // 40→4, 50→5, 60→6...
+    const actual = Math.floor(Math.random() * max) + 1; // entre 1 et max
+    return { passageQuestions: actual, passages: 1 };
+  };
 
-  const englishPassageConfig = countEnglish > PASSAGE_THRESHOLD
-    ? { passageQuestions: Math.max(MIN_PASSAGE_QS, Math.round(countEnglish * PASSAGE_PCT)), passages: 1 }
-    : undefined;
+  const frenchPassageConfig = makePassageConfig(countFrench);
+  const englishPassageConfig = makePassageConfig(countEnglish);
 
   const config: RoomConfig = {
     totalQuestions,
