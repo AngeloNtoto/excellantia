@@ -174,21 +174,57 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
     const total = config.bySubject[subject];
     const diff = config.difficulty[subject];
 
-    // Cas spéciaux
+    // Cas spéciaux : gestion des questions liées à un texte (passage)
+    // Si passages === 1, on choisit un seul texte au hasard et on prend toutes ses questions
+    // Sinon, on pioche parmi l'ensemble des questions de texte
     if ((subject === "FRENCH" && config.french?.passageQuestions) || 
         (subject === "ENGLISH" && config.english?.passageQuestions)) {
       
-      const needed = subject === "FRENCH" 
-        ? config.french!.passageQuestions 
-        : config.english!.passageQuestions;
+      const subjectConfig = subject === "FRENCH" ? config.french! : config.english!;
+      const needed = subjectConfig.passageQuestions;
+      const maxPassages = subjectConfig.passages ?? Infinity; // Nombre max de textes à utiliser
 
       const passageQs = allForSubject.filter((q) => q.passageId);
       const nonPassageQs = allForSubject.filter((q) => !q.passageId);
 
-      if (passageQs.length < needed) {
-        errors.push(`${subject} texte : ${needed} questions demandées, ${passageQs.length} disponibles.`);
+      // Regrouper les questions par passageId pour un contrôle par texte
+      const byPassage = new Map<string, Question[]>();
+      for (const q of passageQs) {
+        const pid = q.passageId!;
+        if (!byPassage.has(pid)) byPassage.set(pid, []);
+        byPassage.get(pid)!.push(q);
+      }
+
+      let selectedPassageQs: Question[] = [];
+
+      if (maxPassages < Infinity && byPassage.size > 0) {
+        // Mode texte limité (ex: entraînement) : choisir N texte(s) aléatoire(s)
+        // et prendre TOUTES les questions de ces textes
+        const passageIds = Array.from(byPassage.keys());
+        const chosenPassageIds = pickRandom(passageIds, Math.min(maxPassages, passageIds.length));
+        
+        for (const pid of chosenPassageIds) {
+          selectedPassageQs.push(...byPassage.get(pid)!);
+        }
+
+        // Limiter au nombre demandé si un texte a trop de questions
+        if (selectedPassageQs.length > needed) {
+          selectedPassageQs = pickRandom(selectedPassageQs, needed);
+        }
       } else {
-        const regularNeeded = total - needed;
+        // Mode classique (salles admin) : piocher parmi tous les passages
+        if (passageQs.length < needed) {
+          errors.push(`${subject} texte : ${needed} questions demandées, ${passageQs.length} disponibles.`);
+          // Fall through to standard difficulty-based selection below
+        } else {
+          selectedPassageQs = pickRandom(passageQs, needed);
+        }
+      }
+
+      // Si on a des questions de texte sélectionnées, compléter avec des questions hors-texte
+      if (selectedPassageQs.length > 0 || (maxPassages < Infinity && byPassage.size > 0)) {
+        const actualPassageCount = selectedPassageQs.length;
+        const regularNeeded = total - actualPassageCount;
         
         // diff.* are absolute numbers for the whole subject, so we need to scale them down for the regular questions
         let e = Math.round(regularNeeded * (diff.easy / total));
@@ -204,7 +240,7 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
         const result = splitByDifficulty(nonPassageQs, e, m, h);
         
         if (!result) errors.push(`${subject} hors-texte : stock insuffisant.`);
-        else selected.push(...pickRandom(passageQs, needed), ...result);
+        else selected.push(...selectedPassageQs, ...result);
         continue;
       }
     }

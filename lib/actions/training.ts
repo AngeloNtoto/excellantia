@@ -32,6 +32,22 @@ export async function startTrainingAction(formData: FormData) {
     hard: Math.max(0, total - Math.round(total * easyPct / 100) - Math.round(total * mediumPct / 100)),
   });
 
+  // ── Entraînement : inclure UN SEUL texte de compréhension si > 30 questions ──
+  // Pour FR et ANG, si le candidat demande plus de 30 questions dans la matière,
+  // on inclut automatiquement les questions d'un seul texte aléatoire (~15% du total).
+  // En dessous de 30, pas de texte pour garder les sessions courtes et ciblées.
+  const PASSAGE_THRESHOLD = 30; // Seuil minimum pour inclure un texte
+  const PASSAGE_PCT = 0.15;     // Proportion de questions texte (~15%)
+  const MIN_PASSAGE_QS = 3;     // Nombre minimum de questions texte
+
+  const frenchPassageConfig = countFrench > PASSAGE_THRESHOLD
+    ? { passageQuestions: Math.max(MIN_PASSAGE_QS, Math.round(countFrench * PASSAGE_PCT)), passages: 1 }
+    : undefined;
+
+  const englishPassageConfig = countEnglish > PASSAGE_THRESHOLD
+    ? { passageQuestions: Math.max(MIN_PASSAGE_QS, Math.round(countEnglish * PASSAGE_PCT)), passages: 1 }
+    : undefined;
+
   const config: RoomConfig = {
     totalQuestions,
     bySubject: {
@@ -46,6 +62,9 @@ export async function startTrainingAction(formData: FormData) {
       ENGLISH: countEnglish > 0 ? makeSubjectDiff(countEnglish) : { easy: 0, medium: 0, hard: 0 },
       GENERAL_CULTURE: countCulture > 0 ? makeSubjectDiff(countCulture) : { easy: 0, medium: 0, hard: 0 },
     },
+    // Textes de compréhension : 1 seul texte aléatoire si > 30 questions
+    french: frenchPassageConfig,
+    english: englishPassageConfig,
     pausableTimer: formData.get("pausableTimer") === "true",
   };
 
