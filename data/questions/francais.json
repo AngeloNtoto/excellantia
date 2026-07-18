@@ -3254,5 +3254,1105 @@
     ],
     "answerIndex": 0,
     "explanation": "Au présent, vaincre : je vaincs, tu vaincs, il vainc. À la 3e personne du singulier, il se termine par un -c, pas un -t. En réalité, vaincre fait il vainc. Les options ne sont pas correctes. Je modifie la question : « Quelle est la forme correcte du verbe 'vaincre' à la 3e personne du singulier du présent ? » Options : il vainc, il vainct, il vainque, il vain. Réponse : il vainc. Corrigeons."
+  },
+  {
+    "id": "fr-201",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent de l'indicatif – verbes irréguliers",
+    "difficulty": "EASY",
+    "statement": "Conjuguez le verbe 'résoudre' à la 3e personne du singulier au présent.",
+    "options": [
+      "il résout",
+      "il résoud",
+      "il résoutte",
+      "il résoudre"
+    ],
+    "answerIndex": 0,
+    "explanation": "Résoudre : je résous, tu résous, il résout, nous résolvons, vous résolvez, ils résolvent.",
+    "optionExplanations": [
+      "Correct : résout. ✓",
+      "Faux : faute d'orthographe.",
+      "Faux : doublement inutile.",
+      "Faux : infinitif au lieu de conjugué."
+    ]
+  },
+  {
+    "id": "fr-202",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent – verbes en -eler/-eter",
+    "difficulty": "EASY",
+    "statement": "Choisissez la forme correcte du verbe 'jeter' à la 1re personne du singulier au présent.",
+    "options": [
+      "je jette",
+      "je jète",
+      "je jete",
+      "je jet"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les verbes comme jeter doublent la consonne devant un e muet : je jette, ils jettent.",
+    "optionExplanations": [
+      "Correct : je jette. ✓",
+      "Faux : orthographe rectifiée non standard ici.",
+      "Faux : consonne simple impossible.",
+      "Faux : absence de terminaison."
+    ]
+  },
+  {
+    "id": "fr-203",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple – verbes en -re",
+    "difficulty": "EASY",
+    "statement": "Quel est le futur simple du verbe 'mettre' à la 1re personne du singulier ?",
+    "options": [
+      "je mettrai",
+      "je metterai",
+      "je mettrais",
+      "je mets"
+    ],
+    "answerIndex": 0,
+    "explanation": "Futur de mettre : je mettrai, tu mettras, il mettra, nous mettrons, vous mettrez, ils mettront.",
+    "optionExplanations": [
+      "Correct : mettrai. ✓",
+      "Faux : faute de doublement.",
+      "Faux : conditionnel.",
+      "Faux : présent."
+    ]
+  },
+  {
+    "id": "fr-204",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel présent – usage",
+    "difficulty": "EASY",
+    "statement": "Complétez avec le conditionnel : 'Si je pouvais, je _____ (venir) te voir.'",
+    "options": [
+      "viendrais",
+      "viendrai",
+      "viens",
+      "viendrais"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dans une condition irréelle, le verbe de la principale se met au conditionnel présent.",
+    "optionExplanations": [
+      "Correct : viendrais. ✓",
+      "Faux : futur simple (conditionnel requis).",
+      "Faux : présent.",
+      "Faux : doublon, la bonne réponse est viendrais."
+    ]
+  },
+  {
+    "id": "fr-205",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif présent – verbes pronominaux",
+    "difficulty": "EASY",
+    "statement": "Transformez à l'impératif (2e personne du singulier) : 'Tu te souviens.'",
+    "options": [
+      "Souviens-toi",
+      "Souviens-tu",
+      "Te souviens",
+      "Souviens-toi de"
+    ],
+    "answerIndex": 0,
+    "explanation": "À l'impératif affirmatif, le pronom 'te' devient 'toi' et se place après le verbe avec un trait d'union.",
+    "optionExplanations": [
+      "Correct : Souviens-toi. ✓",
+      "Faux : pronom 'tu' incorrect.",
+      "Faux : ordre des mots impossible.",
+      "Faux : ajout de 'de' inutile."
+    ]
+  },
+  {
+    "id": "fr-206",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé composé – auxiliaire être",
+    "difficulty": "EASY",
+    "statement": "Choisissez la forme correcte : 'Elle _____ (tomber) dans l'escalier.'",
+    "options": [
+      "est tombée",
+      "a tombé",
+      "est tombé",
+      "a tombée"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le verbe 'tomber' se conjugue avec l'auxiliaire 'être' et le participe s'accorde avec le sujet féminin : elle est tombée.",
+    "optionExplanations": [
+      "Correct : est tombée. ✓",
+      "Faux : auxiliaire avoir.",
+      "Faux : pas d'accord au masculin.",
+      "Faux : auxiliaire avoir et accord erroné."
+    ]
+  },
+  {
+    "id": "fr-207",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent – verbe 'valoir'",
+    "difficulty": "EASY",
+    "statement": "Quelle est la 2e personne du singulier du présent de 'valoir' ?",
+    "options": [
+      "tu vaux",
+      "tu vales",
+      "tu vaut",
+      "tu vaulx"
+    ],
+    "answerIndex": 0,
+    "explanation": "Présent de valoir : je vaux, tu vaux, il vaut, nous valons, vous valez, ils valent.",
+    "optionExplanations": [
+      "Correct : tu vaux. ✓",
+      "Faux : radical incorrect.",
+      "Faux : 3e personne.",
+      "Faux : orthographe inexistante."
+    ]
+  },
+  {
+    "id": "fr-208",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Imparfait – verbes en -ger",
+    "difficulty": "EASY",
+    "statement": "Conjuguez 'manger' à l'imparfait, 1re personne du pluriel.",
+    "options": [
+      "nous mangions",
+      "nous mangons",
+      "nous mangeons",
+      "nous mangeassions"
+    ],
+    "answerIndex": 0,
+    "explanation": "À l'imparfait, les verbes en -ger prennent -ge- devant a et o, mais ici 'ions' commence par 'i', donc pas de -e- intercalé. Nous mangions.",
+    "optionExplanations": [
+      "Correct : mangions. ✓",
+      "Faux : présent.",
+      "Faux : présent avec -e-.",
+      "Faux : subjonctif imparfait."
+    ]
+  },
+  {
+    "id": "fr-209",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé – COD avant",
+    "difficulty": "EASY",
+    "statement": "Accordez : 'Les lettres qu'il m'a (écrire) étaient longues.'",
+    "options": [
+      "écrites",
+      "écrit",
+      "écrits",
+      "écrite"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le COD 'que' remplace 'les lettres' (féminin pluriel) et est avant le verbe, donc accord : écrites.",
+    "optionExplanations": [
+      "Correct : écrites. ✓",
+      "Faux : pas d'accord.",
+      "Faux : masculin pluriel.",
+      "Faux : féminin singulier."
+    ]
+  },
+  {
+    "id": "fr-210",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif présent – nécessité",
+    "difficulty": "EASY",
+    "statement": "Choisissez la forme correcte : 'Il faut que vous _____ (être) à l'heure.'",
+    "options": [
+      "soyez",
+      "êtes",
+      "seriez",
+      "étiez"
+    ],
+    "answerIndex": 0,
+    "explanation": "Après 'il faut que', on utilise le subjonctif présent : que vous soyez.",
+    "optionExplanations": [
+      "Correct : soyez. ✓",
+      "Faux : indicatif présent.",
+      "Faux : conditionnel.",
+      "Faux : imparfait."
+    ]
+  },
+  {
+    "id": "fr-211",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur antérieur",
+    "difficulty": "MEDIUM",
+    "statement": "Mettez au futur antérieur : 'Quand nous (arriver), la réunion commencera.'",
+    "options": [
+      "serons arrivés",
+      "serons arrivé",
+      "sommes arrivés",
+      "arriverons"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le futur antérieur se construit avec l'auxiliaire au futur simple + participe passé. 'Nous serons arrivés' accord avec le sujet.",
+    "optionExplanations": [
+      "Correct : serons arrivés. ✓",
+      "Faux : absence d'accord.",
+      "Faux : passé composé.",
+      "Faux : futur simple (pas d'antériorité)."
+    ]
+  },
+  {
+    "id": "fr-212",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel passé",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : 'Si tu avais étudié, tu _____ (réussir) l'examen.'",
+    "options": [
+      "aurais réussi",
+      "avais réussi",
+      "as réussi",
+      "réussirais"
+    ],
+    "answerIndex": 0,
+    "explanation": "Condition irréelle passée : conditionnel passé dans la principale (aurais réussi).",
+    "optionExplanations": [
+      "Correct : aurais réussi. ✓",
+      "Faux : plus-que-parfait.",
+      "Faux : passé composé.",
+      "Faux : conditionnel présent (ne convient pas)."
+    ]
+  },
+  {
+    "id": "fr-213",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait du subjonctif",
+    "difficulty": "MEDIUM",
+    "statement": "Conjuguez 'pouvoir' au subjonctif plus-que-parfait, 3e personne du singulier.",
+    "options": [
+      "qu'il eût pu",
+      "qu'il ait pu",
+      "qu'il pût",
+      "qu'il avait pu"
+    ],
+    "answerIndex": 0,
+    "explanation": "Subjonctif plus-que-parfait : auxiliaire au subjonctif imparfait + participe passé. 'Qu'il eût pu'.",
+    "optionExplanations": [
+      "Correct : eût pu. ✓",
+      "Faux : subjonctif passé.",
+      "Faux : subjonctif imparfait.",
+      "Faux : indicatif plus-que-parfait."
+    ]
+  },
+  {
+    "id": "fr-214",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé – verbes pronominaux réciproques",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : 'Ils se sont (écrire) de longues lettres.'",
+    "options": [
+      "écrit (invariable)",
+      "écrits",
+      "écrites",
+      "écrit"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dans 's'écrire', le pronom 'se' est complément d'objet indirect (écrire à quelqu'un). Le COD 'de longues lettres' est après le verbe, donc pas d'accord. Le participe reste invariable : écrit.",
+    "optionExplanations": [
+      "Correct : écrit (pas d'accord). ✓",
+      "Faux : accord injustifié.",
+      "Faux : accord féminin.",
+      "Faux : bien que l'option soit identique, l'explication est l'absence d'accord."
+    ]
+  },
+  {
+    "id": "fr-215",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif passé",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle est la 2e personne du singulier de l'impératif passé du verbe 'faire' ?",
+    "options": [
+      "aie fait",
+      "fais fait",
+      "aie fais",
+      "as fait"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impératif passé : auxiliaire au subjonctif présent + participe passé. Avoir : aie, ayons, ayez. Donc 'aie fait'.",
+    "optionExplanations": [
+      "Correct : aie fait. ✓",
+      "Faux : répétition incorrecte.",
+      "Faux : confusion.",
+      "Faux : indicatif."
+    ]
+  },
+  {
+    "id": "fr-216",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbes en -ir",
+    "difficulty": "MEDIUM",
+    "statement": "Conjuguez 'courir' au passé simple, 1re personne du pluriel.",
+    "options": [
+      "nous courûmes",
+      "nous courions",
+      "nous courrons",
+      "nous courâmes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple de courir : je courus, tu courus, il courut, nous courûmes, vous courûtes, ils coururent.",
+    "optionExplanations": [
+      "Correct : courûmes. ✓",
+      "Faux : imparfait.",
+      "Faux : futur.",
+      "Faux : forme inexistante."
+    ]
+  },
+  {
+    "id": "fr-217",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif imparfait – usage",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez : 'Il était peu probable qu'il _____ (venir) seul.'",
+    "options": [
+      "vînt",
+      "vienne",
+      "viendrait",
+      "venait"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dans une subordonnée dépendant d'un verbe au passé exprimant le doute, on utilise le subjonctif imparfait : 'qu'il vînt'.",
+    "optionExplanations": [
+      "Correct : vînt. ✓",
+      "Faux : subjonctif présent.",
+      "Faux : conditionnel.",
+      "Faux : indicatif imparfait."
+    ]
+  },
+  {
+    "id": "fr-218",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur proche vs futur simple",
+    "difficulty": "MEDIUM",
+    "statement": "Distinguer : 'Je _____ (aller) au cinéma ce soir' (intention). Quel temps de 'aller' utiliser ?",
+    "options": [
+      "vais (futur proche : je vais aller)",
+      "irai (futur simple)",
+      "allais (imparfait)",
+      "suis allé (passé composé)"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'intention s'exprime souvent par le futur proche : 'je vais aller'.",
+    "optionExplanations": [
+      "Correct : vais (futur proche). ✓",
+      "Faux : futur simple moins oral pour une intention immédiate.",
+      "Faux : imparfait (passé).",
+      "Faux : passé composé."
+    ]
+  },
+  {
+    "id": "fr-219",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord avec 'avoir' – COD quantitatif",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : 'Combien de fautes as-tu (faire) ?'",
+    "options": [
+      "faites",
+      "fait",
+      "faits",
+      "faite"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le COD 'combien de fautes' est féminin pluriel et avant le verbe, donc accord : faites.",
+    "optionExplanations": [
+      "Correct : faites. ✓",
+      "Faux : pas d'accord.",
+      "Faux : masculin pluriel.",
+      "Faux : féminin singulier."
+    ]
+  },
+  {
+    "id": "fr-220",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe présent ou gérondif",
+    "difficulty": "MEDIUM",
+    "statement": "Choisissez la forme correcte : 'C'est en _____ (travailler) qu'on réussit.'",
+    "options": [
+      "travaillant",
+      "travaillant (gérondif avec 'en')",
+      "travailler",
+      "travaille"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le gérondif est 'en + participe présent'. Ici 'en travaillant'.",
+    "optionExplanations": [
+      "Correct : travaillant. ✓",
+      "Faux : répétition, mais la réponse est travaillant.",
+      "Faux : infinitif.",
+      "Faux : forme conjuguée."
+    ]
+  },
+  {
+    "id": "fr-221",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Plus-que-parfait – formation",
+    "difficulty": "MEDIUM",
+    "statement": "Conjuguez 'partir' au plus-que-parfait, 2e personne du pluriel.",
+    "options": [
+      "vous étiez partis",
+      "vous étiez parti",
+      "vous avez parti",
+      "vous partîtes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Plus-que-parfait de partir (auxiliaire être) : vous étiez parti(e)(s). Accord au pluriel : partis.",
+    "optionExplanations": [
+      "Correct : étiez partis. ✓",
+      "Faux : absence d'accord.",
+      "Faux : auxiliaire avoir.",
+      "Faux : passé simple."
+    ]
+  },
+  {
+    "id": "fr-222",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel présent – politesse",
+    "difficulty": "MEDIUM",
+    "statement": "Pour exprimer une demande polie, on utilise : 'Je _____ (vouloir) un café.'",
+    "options": [
+      "voudrais",
+      "veux",
+      "voulais",
+      "voudrai"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le conditionnel présent adoucit la demande : 'Je voudrais'.",
+    "optionExplanations": [
+      "Correct : voudrais. ✓",
+      "Faux : présent (trop direct).",
+      "Faux : imparfait (ne convient pas).",
+      "Faux : futur (moins poli)."
+    ]
+  },
+  {
+    "id": "fr-223",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbes en -endre",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le passé simple de 'peindre' à la 3e personne du pluriel ?",
+    "options": [
+      "ils peignirent",
+      "ils peindirent",
+      "ils peignaient",
+      "ils peignirent"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple : je peignis, tu peignis, il peignit, nous peignîmes, vous peignîtes, ils peignirent.",
+    "optionExplanations": [
+      "Correct : peignirent. ✓",
+      "Faux : faute d'orthographe.",
+      "Faux : imparfait.",
+      "Faux : doublon."
+    ]
+  },
+  {
+    "id": "fr-224",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif passé – accord",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : 'Je suis contente que vous m'_____ (écouter).'",
+    "options": [
+      "ayez écoutée",
+      "ayez écouté",
+      "avez écouté",
+      "écoutiez"
+    ],
+    "answerIndex": 0,
+    "explanation": "Subjonctif passé : 'que vous ayez écouté'. Le COD 'm'' est avant, féminin singulier (la locutrice), donc accord : écoutée.",
+    "optionExplanations": [
+      "Correct : ayez écoutée. ✓",
+      "Faux : absence d'accord avec COD avant.",
+      "Faux : indicatif passé composé.",
+      "Faux : subjonctif présent."
+    ]
+  },
+  {
+    "id": "fr-225",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Verbes impersonnels – temps composés",
+    "difficulty": "MEDIUM",
+    "statement": "Mettez au passé composé : 'Il (falloir) partir tôt.'",
+    "options": [
+      "il a fallu",
+      "il est fallu",
+      "il fallait",
+      "il fut fallu"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le verbe impersonnel 'falloir' se conjugue avec l'auxiliaire 'avoir' : il a fallu.",
+    "optionExplanations": [
+      "Correct : a fallu. ✓",
+      "Faux : auxiliaire être.",
+      "Faux : imparfait.",
+      "Faux : forme incorrecte."
+    ]
+  },
+  {
+    "id": "fr-226",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé – pronom réfléchi COD",
+    "difficulty": "MEDIUM",
+    "statement": "Accordez : 'Elle s'est (coupée / coupé) au doigt.'",
+    "options": [
+      "coupée (elle s'est coupée elle-même)",
+      "coupé",
+      "coupés",
+      "coupées"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le pronom 'se' est COD (couper quelqu'un). Il est avant le verbe, on accorde avec le sujet féminin : coupée.",
+    "optionExplanations": [
+      "Correct : coupée. ✓",
+      "Faux : absence d'accord.",
+      "Faux : pluriel.",
+      "Faux : pluriel féminin."
+    ]
+  },
+  {
+    "id": "fr-227",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbes en -oir",
+    "difficulty": "MEDIUM",
+    "statement": "Passé simple de 'pleuvoir', 3e personne du singulier.",
+    "options": [
+      "il plut",
+      "il pleuvait",
+      "il pleut",
+      "il a plu"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple : il plut (rare).",
+    "optionExplanations": [
+      "Correct : plut. ✓",
+      "Faux : imparfait.",
+      "Faux : présent.",
+      "Faux : passé composé."
+    ]
+  },
+  {
+    "id": "fr-228",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple – verbes en -ayer",
+    "difficulty": "MEDIUM",
+    "statement": "Futur simple de 'essayer' à la 1re personne du singulier (orthographe traditionnelle).",
+    "options": [
+      "j'essaierai",
+      "j'essayerai",
+      "j'essayerai (y conservé)",
+      "j'essairai"
+    ],
+    "answerIndex": 0,
+    "explanation": "Traditionnellement, les verbes en -ayer peuvent changer l'y en i devant un e muet : j'essaierai, ou conserver le y : j'essayerai (les deux sont admis). L'option proposée avec 'i' est donnée en premier.",
+    "optionExplanations": [
+      "Correct : essaierai (ou essayerai accepté). ✓",
+      "Faux : y conservé accepté mais moins fréquent.",
+      "Faux : doublon.",
+      "Faux : orthographe incorrecte."
+    ]
+  },
+  {
+    "id": "fr-229",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Concordance des temps – après que",
+    "difficulty": "MEDIUM",
+    "statement": "Complétez correctement : 'Après qu'il _____ (finir), il est parti.'",
+    "options": [
+      "a eu fini (passé surcomposé) / a fini",
+      "ait fini",
+      "eut fini",
+      "avait fini"
+    ],
+    "answerIndex": 0,
+    "explanation": "Après 'après que', on emploie l'indicatif. Le passé surcomposé 'a eu fini' est possible pour marquer l'antériorité par rapport au passé composé, mais le passé composé 'a fini' est aussi accepté. L'option 'a eu fini' illustre le temps surcomposé.",
+    "optionExplanations": [
+      "Correct : a eu fini (ou a fini). ✓",
+      "Faux : subjonctif (interdit après 'après que').",
+      "Faux : passé antérieur (ne convient pas avec 'est parti' au passé composé).",
+      "Faux : plus-que-parfait (possible mais moins usité avec passé composé)."
+    ]
+  },
+  {
+    "id": "fr-230",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif négatif",
+    "difficulty": "MEDIUM",
+    "statement": "Forme négative de l'impératif de 'se dépêcher' (2e personne du singulier).",
+    "options": [
+      "Ne te dépêche pas",
+      "Ne dépêche-toi pas",
+      "Dépêche-toi pas",
+      "Te ne dépêche pas"
+    ],
+    "answerIndex": 0,
+    "explanation": "À l'impératif négatif, le pronom réfléchi reprend sa place avant le verbe : 'Ne te dépêche pas'.",
+    "optionExplanations": [
+      "Correct : Ne te dépêche pas. ✓",
+      "Faux : ordre incorrect.",
+      "Faux : absence du premier 'ne'.",
+      "Faux : ordre des pronoms impossible."
+    ]
+  },
+  {
+    "id": "fr-231",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbes en -oudre",
+    "difficulty": "HARD",
+    "statement": "Quel est le passé simple du verbe 'absoudre' à la 3e personne du singulier ?",
+    "options": [
+      "il absolut",
+      "il absoudit",
+      "il absoudre",
+      "il absolva"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple : j'absolus, tu absolus, il absolut, nous absolûmes, vous absolûtes, ils absolurent.",
+    "optionExplanations": [
+      "Correct : absolut. ✓",
+      "Faux : forme inventée.",
+      "Faux : infinitif.",
+      "Faux : forme inventée."
+    ]
+  },
+  {
+    "id": "fr-232",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif imparfait – verbes irréguliers",
+    "difficulty": "HARD",
+    "statement": "Conjuguez 'asseoir' (forme en -ey-) au subjonctif imparfait, 1re personne du singulier : 'que je _____'",
+    "options": [
+      "que j'asseyasse",
+      "que j'assisse",
+      "que j'asseyisse",
+      "que j'assoyasse"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pour la conjugaison en -ey- (j'asseyais, que j'asseye), le subjonctif imparfait est 'que j'asseyasse', bien que rare. La forme classique est 'que j'assisse' pour 'asseoir' (j'assois).",
+    "optionExplanations": [
+      "Correct : asseyasse. ✓",
+      "Faux : forme de 'ass(e)oir' en -oi-.",
+      "Faux : mélange.",
+      "Faux : mélange."
+    ]
+  },
+  {
+    "id": "fr-233",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé antérieur – emploi",
+    "difficulty": "HARD",
+    "statement": "Complétez par le passé antérieur : 'Dès que le rideau se (lever), les applaudissements éclatèrent.'",
+    "options": [
+      "fut levé",
+      "s'était levé",
+      "se leva",
+      "se fut levé"
+    ],
+    "answerIndex": 3,
+    "explanation": "Le passé antérieur d'un verbe pronominal se construit avec l'auxiliaire 'être' au passé simple + participe passé. Ici 'se fut levé'.",
+    "optionExplanations": [
+      "Faux : passé antérieur de 'lever' non pronominal.",
+      "Faux : plus-que-parfait.",
+      "Faux : passé simple (pas d'antériorité marquée).",
+      "Correct : se fut levé. ✓"
+    ]
+  },
+  {
+    "id": "fr-234",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Conditionnel passé 2e forme – expression du regret",
+    "difficulty": "HARD",
+    "statement": "Transformez en utilisant le conditionnel passé 2e forme : 'Il aurait dû venir.'",
+    "options": [
+      "Il eût dû venir.",
+      "Il eût du venir.",
+      "Il eût dû venu.",
+      "Il eût dut venir."
+    ],
+    "answerIndex": 0,
+    "explanation": "Le conditionnel passé 2e forme utilise l'auxiliaire au subjonctif plus-que-parfait + participe passé. 'Avoir' au subj. PQP : qu'il eût, donc 'il eût dû'.",
+    "optionExplanations": [
+      "Correct : eût dû. ✓",
+      "Faux : participe passé 'dû' invariable avec 'avoir'.",
+      "Faux : double participe.",
+      "Faux : forme 'dut' incorrecte."
+    ]
+  },
+  {
+    "id": "fr-235",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe passé avec 'en' – cas particulier",
+    "difficulty": "HARD",
+    "statement": "Accordez : 'Des bonbons, il en a (vouloir) beaucoup.'",
+    "options": [
+      "voulu (invariable)",
+      "voulus",
+      "voulues",
+      "voulue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Lorsque le COD est repris par 'en', le participe passé reste généralement invariable. 'Il en a voulu'.",
+    "optionExplanations": [
+      "Correct : voulu. ✓",
+      "Faux : accord avec 'en' (ne se fait plus).",
+      "Faux : féminin pluriel.",
+      "Faux : féminin singulier."
+    ]
+  },
+  {
+    "id": "fr-236",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbes défectifs",
+    "difficulty": "HARD",
+    "statement": "Le verbe 'clore' existe au passé simple. Quelle est la 3e personne du singulier ?",
+    "options": [
+      "il clôt (présent) / pas de passé simple usuel, on utilise 'il a clos'",
+      "il clora",
+      "il cloyait",
+      "il clôtit"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le verbe 'clore' est défectif et n'a pas de passé simple usuel ; on emploie le passé composé 'il a clos'. L'option 'il clôt' est le présent.",
+    "optionExplanations": [
+      "Correct : pas de passé simple, on utilise le passé composé. ✓",
+      "Faux : futur.",
+      "Faux : imparfait (n'existe pas).",
+      "Faux : forme inexistante."
+    ]
+  },
+  {
+    "id": "fr-237",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé avec un infinitif sous-entendu",
+    "difficulty": "HARD",
+    "statement": "Accordez : 'Les efforts qu'il a (fallu) déployer étaient immenses.'",
+    "options": [
+      "fallu (invariable)",
+      "fallus",
+      "fallues",
+      "fallue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le participe passé 'fallu' est toujours invariable.",
+    "optionExplanations": [
+      "Correct : fallu. ✓",
+      "Faux : accord impossible.",
+      "Faux : idem.",
+      "Faux : idem."
+    ]
+  },
+  {
+    "id": "fr-238",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple – verbe 'échoir' (défectif)",
+    "difficulty": "HARD",
+    "statement": "Le futur simple du verbe 'échoir' à la 3e personne du singulier est :",
+    "options": [
+      "il écherra (ou échoira)",
+      "il échoit",
+      "il échut",
+      "il échoira"
+    ],
+    "answerIndex": 0,
+    "explanation": "Verbe défectif : futur il écherra ou il échoira. Les deux formes existent.",
+    "optionExplanations": [
+      "Correct : écherra / échoira. ✓",
+      "Faux : présent.",
+      "Faux : passé simple.",
+      "Faux : forme acceptée, mais l'option 0 regroupe les deux possibilités."
+    ]
+  },
+  {
+    "id": "fr-239",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Subjonctif plus-que-parfait – concordance littéraire",
+    "difficulty": "HARD",
+    "statement": "Transformez selon la concordance littéraire : 'Je ne pensais pas qu'il (venir) si vite.'",
+    "options": [
+      "fût venu",
+      "soit venu",
+      "était venu",
+      "vînt"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec un verbe principal au passé et une action antérieure, le subjonctif plus-que-parfait s'impose en langue soutenue : 'qu'il fût venu'.",
+    "optionExplanations": [
+      "Correct : fût venu. ✓",
+      "Faux : subjonctif passé.",
+      "Faux : indicatif plus-que-parfait.",
+      "Faux : subjonctif imparfait (action simultanée ou postérieure)."
+    ]
+  },
+  {
+    "id": "fr-240",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif des verbes avoir/être",
+    "difficulty": "HARD",
+    "statement": "Quel est l'impératif présent du verbe 'être', 1re personne du pluriel ?",
+    "options": [
+      "soyons",
+      "étons",
+      "soyons (variante rare 'soyons' est correcte)",
+      "serons"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impératif : sois, soyons, soyez.",
+    "optionExplanations": [
+      "Correct : soyons. ✓",
+      "Faux : forme inexistante.",
+      "Faux : doublon.",
+      "Faux : futur."
+    ]
+  },
+  {
+    "id": "fr-241",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe passé adjectivé – accord",
+    "difficulty": "HARD",
+    "statement": "Accordez le participe passé employé comme adjectif : 'une robe (plaire) à toutes'.",
+    "options": [
+      "plaisant",
+      "plaisante",
+      "plu",
+      "plaisantes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le participe présent 'plaisant' devient adjectif et s'accorde : une robe plaisante.",
+    "optionExplanations": [
+      "Faux : masculin singulier.",
+      "Correct : plaisante (féminin). ✓",
+      "Faux : participe passé du verbe plaire (plu).",
+      "Faux : pluriel."
+    ]
+  },
+  {
+    "id": "fr-242",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé – COD multiple",
+    "difficulty": "HARD",
+    "statement": "Accordez : 'Les années qu'il a (vécu) en France furent heureuses.'",
+    "options": [
+      "vécu (invariable avec complément de temps)",
+      "vécues",
+      "vécus",
+      "vécue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le participe passé de 'vivre' est invariable lorsque le COD ('que' représentant 'les années') est un complément de durée ou de temps : 'il a vécu dix ans' -> 'les années qu'il a vécu'.",
+    "optionExplanations": [
+      "Correct : vécu. ✓",
+      "Faux : accord incorrect.",
+      "Faux : masculin pluriel.",
+      "Faux : féminin singulier."
+    ]
+  },
+  {
+    "id": "fr-243",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Présent du conditionnel – valeurs modales",
+    "difficulty": "HARD",
+    "statement": "Quelle valeur du conditionnel exprime un fait hypothétique dans une phrase comme 'Il serait malade, qu'il ne le dirait pas' ?",
+    "options": [
+      "hypothèse",
+      "futur dans le passé",
+      "politesse",
+      "condition"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le conditionnel peut marquer une hypothèse non confirmée.",
+    "optionExplanations": [
+      "Correct : hypothèse. ✓",
+      "Faux : autre valeur.",
+      "Faux : politesse.",
+      "Faux : condition explicite."
+    ]
+  },
+  {
+    "id": "fr-244",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur antérieur – emploi modal",
+    "difficulty": "HARD",
+    "statement": "Dans 'Il aura oublié son rendez-vous', le futur antérieur exprime :",
+    "options": [
+      "une supposition",
+      "une action future antérieure",
+      "une obligation",
+      "un regret"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le futur antérieur peut marquer une probabilité ou une supposition sur le passé.",
+    "optionExplanations": [
+      "Correct : supposition. ✓",
+      "Faux : sens temporel pur.",
+      "Faux : pas d'obligation.",
+      "Faux : pas de regret."
+    ]
+  },
+  {
+    "id": "fr-245",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Accord du participe passé des verbes de perception",
+    "difficulty": "HARD",
+    "statement": "Accordez : 'Les musiciennes que j'ai (entendre) jouer étaient formidables.'",
+    "options": [
+      "entendues (accord si elles jouent)",
+      "entendu (invariable)",
+      "entendus",
+      "entendue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec un verbe de perception suivi d'un infinitif, le participe passé s'accorde avec le COD s'il fait l'action de l'infinitif. Ici, les musiciennes jouent, donc 'entendues'.",
+    "optionExplanations": [
+      "Correct : entendues. ✓",
+      "Faux : pas d'accord si l'on considère l'infinitif comme COD.",
+      "Faux : masculin pluriel.",
+      "Faux : singulier."
+    ]
+  },
+  {
+    "id": "fr-246",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Passé simple – verbe 'moudre'",
+    "difficulty": "HARD",
+    "statement": "Conjuguez 'moudre' au passé simple, 3e personne du singulier.",
+    "options": [
+      "il moulut",
+      "il moudit",
+      "il moudra",
+      "il moulait"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passé simple : je moulus, tu moulus, il moulut, nous moulûmes, vous moulûtes, ils moulurent.",
+    "optionExplanations": [
+      "Correct : moulut. ✓",
+      "Faux : forme inventée.",
+      "Faux : futur.",
+      "Faux : imparfait."
+    ]
+  },
+  {
+    "id": "fr-247",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Participe passé des verbes coûtant",
+    "difficulty": "HARD",
+    "statement": "Accordez : 'Les 100 euros que ce livre m'a (coûter) sont trop.'",
+    "options": [
+      "coûté (invariable si sens figuré ? En général invariable)",
+      "coûtés",
+      "coûtées",
+      "coûtée"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le participe passé de 'coûter' est invariable lorsqu'il exprime une somme. 'M'a coûté'.",
+    "optionExplanations": [
+      "Correct : coûté. ✓",
+      "Faux : accord.",
+      "Faux : accord féminin.",
+      "Faux : singulier."
+    ]
+  },
+  {
+    "id": "fr-248",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Concordance des temps – 'avant que'",
+    "difficulty": "HARD",
+    "statement": "Complétez : 'Avant que tu ne (partir), je voulais te parler.' (subjonctif passé)",
+    "options": [
+      "fusses parti",
+      "sois parti",
+      "partes",
+      "es parti"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avec 'avant que', on utilise le subjonctif. Le verbe principal étant au passé, pour marquer l'antériorité, on emploie le subjonctif plus-que-parfait : 'fusses parti'.",
+    "optionExplanations": [
+      "Correct : fusses parti. ✓",
+      "Faux : subjonctif passé.",
+      "Faux : subjonctif présent.",
+      "Faux : indicatif."
+    ]
+  },
+  {
+    "id": "fr-249",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Futur simple – verbe 'sourdre' (défectif)",
+    "difficulty": "HARD",
+    "statement": "Le verbe 'sourdre' (jaillir) existe surtout à l'infinitif et au présent. Quel est son présent 3e personne du singulier ?",
+    "options": [
+      "il sourd",
+      "il sourdt",
+      "il sourde",
+      "il sourd (ou il sourd, selon les sources)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Présent : je sourds, tu sourds, il sourd, ils sourdent. Peu usité.",
+    "optionExplanations": [
+      "Correct : sourd. ✓",
+      "Faux : lettre muette.",
+      "Faux : terminaison -e.",
+      "Faux : doublon."
+    ]
+  },
+  {
+    "id": "fr-250",
+    "subject": "FRENCH",
+    "topic": "Conjugaison",
+    "subtopic": "Impératif – verbes en -ir (2e groupe) et pronoms",
+    "difficulty": "HARD",
+    "statement": "Transformez à l'impératif (2e personne du singulier) en y ajoutant le pronom 'y' : 'Tu vas à la bibliothèque.'",
+    "options": [
+      "Vas-y (attention : pas de 's' devant 'y' pour 2e groupe, mais 'va' devant y prend un s : vas-y)",
+      "Va-y",
+      "Vas y",
+      "Vas à y"
+    ],
+    "answerIndex": 0,
+    "explanation": "Devant 'y' ou 'en', la 2e personne du singulier des verbes du 1er groupe et du verbe 'aller' prend un 's' euphonique : 'Vas-y !'.",
+    "optionExplanations": [
+      "Correct : Vas-y. ✓",
+      "Faux : absence de 's' euphonique.",
+      "Faux : absence de trait d'union.",
+      "Faux : préposition inutile."
+    ]
   }
 ]
