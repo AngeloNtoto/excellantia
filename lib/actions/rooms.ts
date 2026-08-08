@@ -75,15 +75,10 @@ export async function createRoomAction(formData: FormData) {
       ENGLISH: makeSubjectDiff(d.englishCount),
       GENERAL_CULTURE: makeSubjectDiff(d.cultureCount),
     },
-    french: d.frenchPassageQuestions > 0
-      ? { passageQuestions: d.frenchPassageQuestions, passages: d.frenchPassages }
-      : undefined,
-    english: d.englishPassageQuestions > 0
-      ? { passageQuestions: d.englishPassageQuestions, passages: d.englishPassages }
-      : undefined,
     generalCulture: d.cultureDrc > 0
       ? { drc: d.cultureDrc, international: d.cultureCount - d.cultureDrc }
       : undefined,
+    selectedTopics: d.selectedTopics ? JSON.parse(d.selectedTopics) : undefined,
   };
 
   // Générer les questions

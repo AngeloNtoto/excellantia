@@ -5,26 +5,28 @@ import { getSession } from "@/lib/session";
 import { generateRoomQuestions } from "@/lib/questions";
 import { redirect } from "next/navigation";
 import { startAttemptAction } from "@/lib/actions/attempts";
-import type { RoomConfig } from "@/lib/types";
+import type { RoomConfig, Subject } from "@/lib/types";
 
 export async function startTrainingAction(formData: FormData) {
   const session = await getSession();
   if (!session || session.role !== "CANDIDATE") redirect("/");
 
+  // ── Question counts per subject ──
   const countMath = parseInt(formData.get("subject_count_0") as string) || 0;
   const countFrench = parseInt(formData.get("subject_count_1") as string) || 0;
   const countEnglish = parseInt(formData.get("subject_count_2") as string) || 0;
   const countCulture = parseInt(formData.get("subject_count_3") as string) || 0;
-  
+
   const totalQuestions = countMath + countFrench + countEnglish + countCulture;
   if (totalQuestions === 0) return { error: "Veuillez sélectionner au moins une matière avec des questions." };
 
+  // ── Durée et difficulté ──
   const durationMin = parseInt(formData.get("duration") as string) || 60;
   const diffMode = formData.get("difficulty") as string;
-  let easyPct = 40, mediumPct = 40, hardPct = 20;
+  let easyPct = 40, mediumPct = 40;
 
-  if (diffMode === "EASY") { easyPct = 70; mediumPct = 30; hardPct = 0; }
-  else if (diffMode === "HARD") { easyPct = 0; mediumPct = 50; hardPct = 50; }
+  if (diffMode === "EASY") { easyPct = 70; mediumPct = 30; }
+  else if (diffMode === "HARD") { easyPct = 0; mediumPct = 50; }
 
   const makeSubjectDiff = (total: number) => ({
     easy: Math.round(total * easyPct / 100),
@@ -32,28 +34,19 @@ export async function startTrainingAction(formData: FormData) {
     hard: Math.max(0, total - Math.round(total * easyPct / 100) - Math.round(total * mediumPct / 100)),
   });
 
-  // ── Entraînement : inclure UN SEUL texte de compréhension si > 30 questions ──
-  // Pour FR et ANG, si le candidat demande plus de 30 questions dans la matière,
-  // on inclut automatiquement les questions d'un seul texte aléatoire.
-  // Max questions texte = total / 10 (ex: 40→4, 50→5, 60→6)
-  // Le nombre réel est aléatoire entre 1 et ce max, pour varier les sessions.
-  // En dessous de 30, pas de texte pour garder les sessions courtes et ciblées.
-  const PASSAGE_THRESHOLD = 30; // Seuil minimum pour inclure un texte
-
-  /**
-   * Calcule la config passage pour l'entraînement :
-   * - max = floor(total / 10)  →  40 questions = max 4, 50 = max 5, etc.
-   * - nombre réel = aléatoire entre 1 et max (inclusif)
-   */
-  const makePassageConfig = (count: number) => {
-    if (count <= PASSAGE_THRESHOLD) return undefined;
-    const max = Math.floor(count / 10);        // 40→4, 50→5, 60→6...
-    const actual = Math.floor(Math.random() * max) + 1; // entre 1 et max
-    return { passageQuestions: actual, passages: 1 };
-  };
-
-  const frenchPassageConfig = makePassageConfig(countFrench);
-  const englishPassageConfig = makePassageConfig(countEnglish);
+  // ── Sous-branches sélectionnées (JSON envoyé depuis le client) ──
+  let selectedTopics: Record<Subject, string[]> | undefined;
+  const rawTopics = formData.get("selectedTopics") as string | null;
+  if (rawTopics) {
+    try {
+      const parsed = JSON.parse(rawTopics);
+      // Filtrer les sous-branches vides (vide = tout inclus)
+      const hasAny = Object.values(parsed).some((arr) => Array.isArray(arr) && arr.length > 0);
+      if (hasAny) selectedTopics = parsed;
+    } catch {
+      // Ignorer les erreurs de parsing
+    }
+  }
 
   const config: RoomConfig = {
     totalQuestions,
@@ -69,10 +62,8 @@ export async function startTrainingAction(formData: FormData) {
       ENGLISH: countEnglish > 0 ? makeSubjectDiff(countEnglish) : { easy: 0, medium: 0, hard: 0 },
       GENERAL_CULTURE: countCulture > 0 ? makeSubjectDiff(countCulture) : { easy: 0, medium: 0, hard: 0 },
     },
-    // Textes de compréhension : 1 seul texte aléatoire si > 30 questions
-    french: frenchPassageConfig,
-    english: englishPassageConfig,
     pausableTimer: formData.get("pausableTimer") === "true",
+    selectedTopics,
   };
 
   const gen = generateRoomQuestions(config);
@@ -82,7 +73,17 @@ export async function startTrainingAction(formData: FormData) {
 
   const room = await prisma.room.create({
     data: {
-      title: "Duel / Entraînement - " + new Date().toLocaleDateString("fr-FR", { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }).replace(',', ' à'),
+      title:
+        "Duel / Entraînement - " +
+        new Date()
+          .toLocaleDateString("fr-FR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          })
+          .replace(",", " à"),
       status: "RUNNING",
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
@@ -91,21 +92,21 @@ export async function startTrainingAction(formData: FormData) {
       questionIds: gen.questionIds as any,
       config: config as any,
       createdById: session.id,
-      startsAt: new Date()
+      startsAt: new Date(),
     },
   });
 
   // Donner l'accès au candidat
   await prisma.roomAccess.create({
-    data: { roomId: room.id, userId: session.id }
+    data: { roomId: room.id, userId: session.id },
   });
 
   // Démarrer la tentative
   const res = await startAttemptAction(room.id);
-  
+
   if (res.ok) {
     redirect(`/exam/${res.attemptId}`);
   }
-  
+
   return { error: res.error || "Erreur de démarrage." };
 }

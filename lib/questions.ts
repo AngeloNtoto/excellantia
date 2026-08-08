@@ -58,6 +58,12 @@ export function getQuestionsBySubject(subject: Subject): Question[] {
   return loadQuestions(fileMap[subject]);
 }
 
+export function getTopicsBySubject(subject: Subject): string[] {
+  const questions = getQuestionsBySubject(subject);
+  const topics = new Set(questions.map((q) => q.topic).filter(Boolean));
+  return Array.from(topics) as string[];
+}
+
 export function getQuestionById(id: string): Question | null {
   return getAllQuestions().find((q) => q.id === id) ?? null;
 }
@@ -170,79 +176,14 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
   const selected: Question[] = [];
 
   for (const subject of subjects) {
-    const allForSubject = getQuestionsBySubject(subject);
+    let allForSubject = getQuestionsBySubject(subject);
     const total = config.bySubject[subject];
     const diff = config.difficulty[subject];
 
-    // Cas spéciaux : gestion des questions liées à un texte (passage)
-    // Si passages === 1, on choisit un seul texte au hasard et on prend toutes ses questions
-    // Sinon, on pioche parmi l'ensemble des questions de texte
-    if ((subject === "FRENCH" && config.french?.passageQuestions) || 
-        (subject === "ENGLISH" && config.english?.passageQuestions)) {
-      
-      const subjectConfig = subject === "FRENCH" ? config.french! : config.english!;
-      const needed = subjectConfig.passageQuestions;
-      const maxPassages = subjectConfig.passages ?? Infinity; // Nombre max de textes à utiliser
-
-      const passageQs = allForSubject.filter((q) => q.passageId);
-      const nonPassageQs = allForSubject.filter((q) => !q.passageId);
-
-      // Regrouper les questions par passageId pour un contrôle par texte
-      const byPassage = new Map<string, Question[]>();
-      for (const q of passageQs) {
-        const pid = q.passageId!;
-        if (!byPassage.has(pid)) byPassage.set(pid, []);
-        byPassage.get(pid)!.push(q);
-      }
-
-      let selectedPassageQs: Question[] = [];
-
-      if (maxPassages < Infinity && byPassage.size > 0) {
-        // Mode texte limité (ex: entraînement) : choisir N texte(s) aléatoire(s)
-        // et prendre TOUTES les questions de ces textes
-        const passageIds = Array.from(byPassage.keys());
-        const chosenPassageIds = pickRandom(passageIds, Math.min(maxPassages, passageIds.length));
-        
-        for (const pid of chosenPassageIds) {
-          selectedPassageQs.push(...byPassage.get(pid)!);
-        }
-
-        // Limiter au nombre demandé si un texte a trop de questions
-        if (selectedPassageQs.length > needed) {
-          selectedPassageQs = pickRandom(selectedPassageQs, needed);
-        }
-      } else {
-        // Mode classique (salles admin) : piocher parmi tous les passages
-        if (passageQs.length < needed) {
-          errors.push(`${subject} texte : ${needed} questions demandées, ${passageQs.length} disponibles.`);
-          // Fall through to standard difficulty-based selection below
-        } else {
-          selectedPassageQs = pickRandom(passageQs, needed);
-        }
-      }
-
-      // Si on a des questions de texte sélectionnées, compléter avec des questions hors-texte
-      if (selectedPassageQs.length > 0 || (maxPassages < Infinity && byPassage.size > 0)) {
-        const actualPassageCount = selectedPassageQs.length;
-        const regularNeeded = total - actualPassageCount;
-        
-        // diff.* are absolute numbers for the whole subject, so we need to scale them down for the regular questions
-        let e = Math.round(regularNeeded * (diff.easy / total));
-        let m = Math.round(regularNeeded * (diff.medium / total));
-        let h = regularNeeded - e - m;
-        // ensure h is not negative due to rounding
-        if (h < 0) {
-          if (e >= m) e += h;
-          else m += h;
-          h = 0;
-        }
-
-        const result = splitByDifficulty(nonPassageQs, e, m, h);
-        
-        if (!result) errors.push(`${subject} hors-texte : stock insuffisant.`);
-        else selected.push(...selectedPassageQs, ...result);
-        continue;
-      }
+    // Filter by selected topics (sous-branches)
+    if (config.selectedTopics && config.selectedTopics[subject] && config.selectedTopics[subject].length > 0) {
+      const selectedTopics = config.selectedTopics[subject];
+      allForSubject = allForSubject.filter((q) => q.topic && selectedTopics.includes(q.topic));
     }
 
     if (subject === "GENERAL_CULTURE" && config.generalCulture) {
@@ -270,7 +211,7 @@ export function generateRoomQuestions(config: RoomConfig): GenerationResult {
       const mediumQ = allForSubject.filter((q) => q.difficulty === "MEDIUM").length;
       const hardQ = allForSubject.filter((q) => q.difficulty === "HARD").length;
       errors.push(
-        `${subject} : stock insuffisant (EASY ${easyQ}/${diff.easy}, MEDIUM ${mediumQ}/${diff.medium}, HARD ${hardQ}/${diff.hard})`
+        `${subject} : stock insuffisant pour les options sélectionnées (EASY ${easyQ}/${diff.easy}, MEDIUM ${mediumQ}/${diff.medium}, HARD ${hardQ}/${diff.hard})`
       );
     } else {
       selected.push(...result);

@@ -63,10 +63,9 @@ export interface RoomConfig {
   totalQuestions: number;
   bySubject: Record<Subject, number>;
   difficulty: Record<Subject, { easy: number; medium: number; hard: number }>;
-  french?: { passageQuestions: number; passages: number };
-  english?: { passageQuestions: number; passages: number };
   generalCulture?: { drc: number; international: number };
   pausableTimer?: boolean;
+  selectedTopics?: Record<Subject, string[]>;
 }
 
 // ─── Tentatives ──────────────────────────────────────────────────────────────
