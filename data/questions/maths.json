@@ -4435,7 +4435,7 @@
     "subject": "MATH",
     "topic": "Opérations sur les nombres",
     "difficulty": "HARD",
-    "statement": "Si 2³⁰ + 2³⁰ + 2³⁰ = 2ˣ, que vaut x ?",
+    "statement": "Si 2³⁰ + 2³⁰ + 2³⁰ + 2³⁰ = 2ˣ, que vaut x ?",
     "options": [
       "30",
       "31",
@@ -4443,12 +4443,12 @@
       "33"
     ],
     "answerIndex": 2,
-    "explanation": "2³⁰ + 2³⁰ + 2³⁰ = 3 × 2³⁰. Or 3 n'est pas une puissance de 2, donc il y a une erreur ! Recalculons : 2³⁰ + 2³⁰ = 2×2³⁰ = 2³¹. Puis + 2³⁰ = 2³¹ + 2³⁰ = 2³⁰(2+1)=3×2³⁰. Ce n'est pas une puissance de 2 pure. Attends, l'énoncé dit \"2³⁰ + 2³⁰ + 2³⁰\" = 3 × 2³⁰. Si c'était 2³⁰ + 2³⁰ = 2³¹, et 2³¹ + 2³¹ = 2³². Donc il faudrait 4 termes pour 2³². Avec 3 termes, ce n'est pas une puissance entière. Je vais modifier l'énoncé pour que ce soit 2³⁰ + 2³⁰ + 2³⁰ + 2³⁰ = 2ˣ ⇒ 4×2³⁰ = 2²×2³⁰ = 2³². Donc x=32. Je vais écrire 4 termes.",
+    "explanation": "2³⁰ + 2³⁰ + 2³⁰ + 2³⁰ = 4 × 2³⁰ = 2² × 2³⁰ = 2³². Par conséquent, x = 32.",
     "optionExplanations": [
       "Faux : 30 est l'exposant de base.",
       "Faux : 31 est la somme de deux termes.",
-      "Correct : 32 (4×2³⁰). ✓",
-      "Faux : 33 est 3×11."
+      "Correct : 32 (4 × 2³⁰). ✓",
+      "Faux : 33 est 3 × 11."
     ]
   },
   {
