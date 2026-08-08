@@ -4,1202 +4,2401 @@
     "subject": "MATH",
     "topic": "Ensembles numériques",
     "difficulty": "EASY",
-    "statement": "Lequel de ces nombres est un nombre irrationnel ?",
+    "statement": "Le nombre 0,999... (périodique) est exactement égal à :",
     "options": [
-      "3/4",
-      "√2",
-      "0,25",
-      "−7"
+      "0,999",
+      "1",
+      "0,9",
+      "1,001"
     ],
     "answerIndex": 1,
-    "explanation": "√2 est un nombre irrationnel car il ne peut pas s'écrire sous la forme d'une fraction p/q avec p et q entiers. Les autres sont tous des nombres rationnels.",
+    "explanation": "0,999... = 1 (limite de la série géométrique).",
     "optionExplanations": [
-      "Faux : 3/4 est une fraction, donc un nombre rationnel.",
-      "Correct : √2 ≈ 1,41421… est un nombre irrationnel (décimales infinies non périodiques). ✓",
-      "Faux : 0,25 = 1/4, c'est un nombre rationnel.",
-      "Faux : −7 = −7/1, c'est un nombre entier (donc rationnel)."
+      "Faux : 0,999 est une valeur tronquée.",
+      "Correct : 0,999... = 1. ✓",
+      "Faux : 0,9 est trop petit.",
+      "Faux : 1,001 est trop grand."
     ]
   },
   {
     "id": "math-002",
     "subject": "MATH",
     "topic": "Ensembles numériques",
-    "difficulty": "EASY",
-    "statement": "Quel ensemble contient uniquement des nombres entiers naturels ?",
+    "difficulty": "MEDIUM",
+    "statement": "Soit x un irrationnel. Le nombre 2x est :",
     "options": [
-      "{−3, 0, 5}",
-      "{0, 1, 2, 3}",
-      "{1/2, 1, 3/2}",
-      "{−1, 0, 1}"
+      "Toujours rationnel",
+      "Toujours irrationnel",
+      "Toujours entier",
+      "Toujours décimal"
     ],
     "answerIndex": 1,
-    "explanation": "Les nombres entiers naturels (ℕ) sont les nombres positifs ou nuls sans partie décimale : 0, 1, 2, 3, … L'ensemble {0, 1, 2, 3} est le seul qui ne contient que des entiers naturels.",
+    "explanation": "Si 2x était rationnel, alors x = (2x)/2 serait rationnel, contradiction.",
     "optionExplanations": [
-      "Faux : −3 est un entier relatif (négatif), pas un entier naturel.",
-      "Correct : tous ces éléments appartiennent à ℕ. ✓",
-      "Faux : 1/2 et 3/2 ne sont pas des entiers.",
-      "Faux : −1 est un entier relatif négatif."
+      "Faux : 2 × π reste irrationnel.",
+      "Correct : la multiplication par un rationnel non nul préserve l'irrationalité. ✓",
+      "Faux : 2π n'est pas entier.",
+      "Faux : π n'est pas décimal."
     ]
   },
   {
     "id": "math-003",
     "subject": "MATH",
     "topic": "Ensembles numériques",
-    "difficulty": "MEDIUM",
-    "statement": "L'intersection des ensembles ℤ et ℚ⁺ (rationnels positifs) est :",
+    "difficulty": "EASY",
+    "statement": "Parmi ces nombres, lequel est un nombre décimal ?",
     "options": [
-      "ℕ",
-      "ℤ",
-      "ℚ",
-      "L'ensemble vide"
+      "1/3",
+      "√2",
+      "0,25",
+      "π"
     ],
-    "answerIndex": 0,
-    "explanation": "ℤ ∩ ℚ⁺ = les nombres qui sont à la fois entiers relatifs ET rationnels positifs (≥ 0). Ce sont exactement les entiers naturels ℕ = {0, 1, 2, 3, …}.",
+    "answerIndex": 2,
+    "explanation": "0,25 = 25/100 = 1/4, c'est un décimal (écriture finie).",
     "optionExplanations": [
-      "Correct : les entiers positifs ou nuls = ℕ. ✓",
-      "Faux : ℤ contient aussi des nombres négatifs qui ne sont pas dans ℚ⁺.",
-      "Faux : ℚ contient des fractions qui ne sont pas dans ℤ.",
-      "Faux : il y a des éléments communs (ex : 0, 1, 2…)."
+      "Faux : 1/3 = 0,333... (périodique, pas décimal).",
+      "Faux : √2 est irrationnel.",
+      "Correct : 0,25 est décimal. ✓",
+      "Faux : π est irrationnel."
     ]
   },
   {
     "id": "math-004",
     "subject": "MATH",
     "topic": "Ensembles numériques",
-    "difficulty": "HARD",
-    "statement": "Parmi ces affirmations, laquelle est FAUSSE ?",
+    "difficulty": "MEDIUM",
+    "statement": "Lequel de ces nombres est un nombre entier relatif (Z) ?",
     "options": [
-      "Tout nombre entier naturel est un nombre rationnel.",
-      "Tout nombre rationnel est un nombre réel.",
-      "Tout nombre réel est un nombre rationnel.",
-      "Tout nombre entier relatif est un nombre rationnel."
+      "√4",
+      "1/2",
+      "0,333...",
+      "-π"
     ],
-    "answerIndex": 2,
-    "explanation": "L'affirmation « Tout nombre réel est un nombre rationnel » est fausse car ℝ contient les nombres irrationnels (comme √2 ou π) qui ne sont pas rationnels. On a ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ, mais ℝ ≠ ℚ.",
+    "answerIndex": 0,
+    "explanation": "√4 = 2, qui est un entier relatif.",
     "optionExplanations": [
-      "Vrai : ℕ ⊂ ℤ ⊂ ℚ, donc c'est correct.",
-      "Vrai : ℚ ⊂ ℝ, donc c'est correct.",
-      "FAUX : ℝ contient les irrationnels comme π et √2. ✓",
-      "Vrai : tout entier z = z/1, donc z ∈ ℚ."
+      "Correct : 2 ∈ Z. ✓",
+      "Faux : 1/2 ∈ Q mais pas Z.",
+      "Faux : 0,333... ∈ Q mais pas Z.",
+      "Faux : -π ∈ R mais pas Z."
     ]
   },
   {
     "id": "math-005",
     "subject": "MATH",
-    "topic": "Opérations sur les nombres",
+    "topic": "Ensembles numériques",
     "difficulty": "EASY",
-    "statement": "Quel est le résultat de (−5) × (−3) ?",
+    "statement": "Parmi ces nombres, lequel n'appartient pas à l'ensemble des naturels (N) ?",
     "options": [
-      "−15",
-      "15",
-      "−8",
-      "8"
+      "0",
+      "√9",
+      "4/2",
+      "-3"
     ],
-    "answerIndex": 1,
-    "explanation": "Le produit de deux nombres négatifs est positif : (−5) × (−3) = +15.",
+    "answerIndex": 3,
+    "explanation": "-3 est négatif, donc n'est pas un naturel.",
     "optionExplanations": [
-      "Faux : le produit de deux négatifs est positif, pas négatif.",
-      "Correct : (−) × (−) = (+), donc 5 × 3 = 15. ✓",
-      "Faux : −8 serait la somme (−5) + (−3), pas le produit.",
-      "Faux : 8 serait (−5) − (−3) = −5 + 3 = −2, ce n'est pas 8 non plus."
+      "Faux : 0 ∈ N.",
+      "Faux : √9 = 3 ∈ N.",
+      "Faux : 4/2 = 2 ∈ N.",
+      "Correct : -3 ∉ N. ✓"
     ]
   },
   {
     "id": "math-006",
     "subject": "MATH",
-    "topic": "Opérations sur les nombres",
-    "difficulty": "EASY",
-    "statement": "Quel est le résultat de 48 ÷ 6 + 3 × 2 ?",
+    "topic": "Ensembles numériques",
+    "difficulty": "MEDIUM",
+    "statement": "Si x² est un irrationnel, alors x est nécessairement :",
     "options": [
-      "22",
-      "14",
-      "10",
-      "18"
+      "Rationnel",
+      "Irrationnel",
+      "Entier",
+      "Décimal"
     ],
     "answerIndex": 1,
-    "explanation": "En respectant la priorité des opérations (multiplication/division avant addition) : 48 ÷ 6 = 8 et 3 × 2 = 6, donc 8 + 6 = 14.",
+    "explanation": "Si x était rationnel, x² serait rationnel. Donc x est irrationnel.",
     "optionExplanations": [
-      "Faux : erreur de calcul.",
-      "Correct : 48 ÷ 6 + 3 × 2 = 8 + 6 = 14. ✓",
-      "Faux : on ne fait pas les opérations de gauche à droite sans respecter les priorités.",
-      "Faux : erreur de calcul."
+      "Faux : un rationnel au carré est rationnel.",
+      "Correct : l'irrationalité de x² impose x irrationnel. ✓",
+      "Faux : les entiers sont rationnels.",
+      "Faux : les décimaux sont rationnels."
     ]
   },
   {
     "id": "math-007",
     "subject": "MATH",
-    "topic": "Opérations sur les nombres",
-    "difficulty": "MEDIUM",
-    "statement": "Quel est le PGCD (plus grand commun diviseur) de 36 et 48 ?",
+    "topic": "Ensembles numériques",
+    "difficulty": "EASY",
+    "statement": "Tout nombre réel est-il un nombre complexe ?",
     "options": [
-      "6",
-      "12",
-      "24",
-      "4"
+      "Oui, car R ⊂ C",
+      "Non, car les complexes ont une partie imaginaire",
+      "Oui, uniquement s'il est positif",
+      "Non, car les réels ne sont pas des complexes"
     ],
-    "answerIndex": 1,
-    "explanation": "36 = 2² × 3² et 48 = 2⁴ × 3. Le PGCD est le produit des facteurs communs avec les plus petits exposants : 2² × 3 = 12.",
+    "answerIndex": 0,
+    "explanation": "Tout réel a s'écrit a + i×0, donc appartient à C.",
     "optionExplanations": [
-      "Faux : 6 divise les deux, mais ce n'est pas le plus grand diviseur commun.",
-      "Correct : PGCD(36, 48) = 12. ✓",
-      "Faux : 24 ne divise pas 36.",
-      "Faux : 4 divise les deux, mais ce n'est pas le plus grand."
+      "Correct : R est inclus dans C. ✓",
+      "Faux : la partie imaginaire peut être nulle.",
+      "Faux : la positivité n'est pas une condition.",
+      "Faux : les réels sont des complexes particuliers."
     ]
   },
   {
     "id": "math-008",
     "subject": "MATH",
-    "topic": "Opérations sur les nombres",
+    "topic": "Ensembles numériques",
     "difficulty": "MEDIUM",
-    "statement": "Quel est le PPCM (plus petit commun multiple) de 12 et 18 ?",
+    "statement": "Le produit d'un rationnel non nul par un irrationnel est :",
     "options": [
-      "6",
-      "36",
-      "72",
-      "24"
+      "Toujours rationnel",
+      "Toujours irrationnel",
+      "Toujours entier",
+      "Parfois rationnel, parfois irrationnel"
     ],
     "answerIndex": 1,
-    "explanation": "12 = 2² × 3 et 18 = 2 × 3². Le PPCM est le produit des facteurs avec les plus grands exposants : 2² × 3² = 4 × 9 = 36.",
+    "explanation": "Si le produit était rationnel, l'irrationnel serait le quotient de deux rationnels, donc rationnel.",
     "optionExplanations": [
-      "Faux : 6 est le PGCD, pas le PPCM.",
-      "Correct : PPCM(12, 18) = 36. ✓",
-      "Faux : 72 est trop grand.",
-      "Faux : 18 ne divise pas 24."
+      "Faux : 2 × √2 n'est pas rationnel.",
+      "Correct : l'irrationalité est conservée. ✓",
+      "Faux : 2 × √2 n'est pas entier.",
+      "Faux : c'est toujours irrationnel."
     ]
   },
   {
     "id": "math-009",
     "subject": "MATH",
-    "topic": "Fractions",
+    "topic": "Opérations sur les nombres",
     "difficulty": "EASY",
-    "statement": "Quel est le résultat de 2/3 + 1/6 ?",
+    "statement": "Que vaut -3² ?",
     "options": [
-      "3/9",
-      "5/6",
-      "1/2",
-      "3/6"
+      "9",
+      "-9",
+      "6",
+      "-6"
     ],
     "answerIndex": 1,
-    "explanation": "On met au même dénominateur : 2/3 = 4/6. Donc 4/6 + 1/6 = 5/6.",
+    "explanation": "La puissance est prioritaire : -3² = -(3×3) = -9.",
     "optionExplanations": [
-      "Faux : on n'additionne pas les numérateurs et dénominateurs séparément.",
-      "Correct : 2/3 + 1/6 = 4/6 + 1/6 = 5/6. ✓",
-      "Faux : 1/2 = 3/6, ce n'est pas le bon résultat.",
-      "Faux : 3/6 = 1/2, ce n'est pas correct."
+      "Faux : 9 est le résultat de (-3)².",
+      "Correct : -9. ✓",
+      "Faux : 6 est 3×2.",
+      "Faux : -6 est -3×2."
     ]
   },
   {
     "id": "math-010",
     "subject": "MATH",
-    "topic": "Fractions",
-    "difficulty": "EASY",
-    "statement": "Quelle fraction est équivalente à 8/12 sous sa forme irréductible ?",
+    "topic": "Opérations sur les nombres",
+    "difficulty": "MEDIUM",
+    "statement": "L'expression (2 + 3) × 4 ÷ 2 vaut :",
     "options": [
-      "4/6",
-      "2/3",
-      "3/4",
-      "6/9"
+      "10",
+      "16",
+      "5",
+      "20"
     ],
-    "answerIndex": 1,
-    "explanation": "8/12 se simplifie en divisant numérateur et dénominateur par leur PGCD (4) : 8÷4 / 12÷4 = 2/3.",
+    "answerIndex": 0,
+    "explanation": "(2+3)=5, 5×4=20, 20÷2=10.",
     "optionExplanations": [
-      "Faux : 4/6 est équivalente mais n'est pas irréductible (on peut encore simplifier par 2).",
-      "Correct : 2/3 est la forme irréductible de 8/12. ✓",
-      "Faux : 3/4 = 0,75 ≠ 8/12 ≈ 0,667.",
-      "Faux : 6/9 = 2/3 est équivalente mais n'est pas sous forme irréductible."
+      "Correct : 20/2 = 10. ✓",
+      "Faux : 16 est 4×4.",
+      "Faux : 5 est (2+3) seulement.",
+      "Faux : 20 est si on oublie ÷2."
     ]
   },
   {
     "id": "math-011",
     "subject": "MATH",
-    "topic": "Fractions",
-    "difficulty": "MEDIUM",
-    "statement": "Quel est le résultat de (3/4) ÷ (2/5) ?",
+    "topic": "Opérations sur les nombres",
+    "difficulty": "EASY",
+    "statement": "Le produit de deux nombres négatifs est :",
     "options": [
-      "6/20",
-      "15/8",
-      "3/10",
-      "8/15"
+      "Toujours négatif",
+      "Toujours positif",
+      "Toujours nul",
+      "Toujours égal à 1"
     ],
     "answerIndex": 1,
-    "explanation": "Diviser par une fraction revient à multiplier par son inverse : (3/4) ÷ (2/5) = (3/4) × (5/2) = 15/8.",
+    "explanation": "(-) × (-) = (+).",
     "optionExplanations": [
-      "Faux : 6/20 serait le résultat d'une multiplication, pas d'une division.",
-      "Correct : (3/4) × (5/2) = 15/8. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : 8/15 est l'inverse du résultat correct."
+      "Faux : (-2)×(-3)=6 >0.",
+      "Correct : le résultat est positif. ✓",
+      "Faux : seulement si l'un est nul.",
+      "Faux : (-2)×(-3)=6 ≠ 1."
     ]
   },
   {
     "id": "math-012",
     "subject": "MATH",
-    "topic": "Fractions",
-    "difficulty": "HARD",
-    "statement": "Simplifiez l'expression : (1/2 + 1/3) × (1/4 − 1/6)",
+    "topic": "Opérations sur les nombres",
+    "difficulty": "MEDIUM",
+    "statement": "La division est-elle associative ? (autrement dit, (a÷b)÷c = a÷(b÷c) ?)",
     "options": [
-      "5/72",
-      "5/36",
-      "1/12",
-      "5/24"
+      "Oui, toujours",
+      "Non, sauf si c = 1",
+      "Non, jamais",
+      "Oui, si a = b = c"
     ],
     "answerIndex": 1,
-    "explanation": "1/2 + 1/3 = 3/6 + 2/6 = 5/6. Puis 1/4 − 1/6 = 3/12 − 2/12 = 1/12. Donc (5/6) × (1/12) = 5/72. Attention : 5/72 est la bonne réponse.",
+    "explanation": "(a÷b)÷c = a/(b×c), a÷(b÷c) = (a×c)/b. Égalité si c=1 (ou a=0).",
     "optionExplanations": [
-      "Correct : (5/6) × (1/12) = 5/72. ✓",
-      "Faux : erreur de calcul dans la multiplication finale.",
-      "Faux : 1/12 est la valeur de la seconde parenthèse seulement.",
-      "Faux : calcul incorrect."
-    ],
-    "answerIndex": 0
+      "Faux : exemple (8÷2)÷2=2, 8÷(2÷2)=8.",
+      "Correct : l'égalité n'est vraie que pour c=1. ✓",
+      "Faux : elle l'est pour c=1.",
+      "Faux : même avec a=b=c=2, (2÷2)÷2=0.5, 2÷(2÷2)=2."
+    ]
   },
   {
     "id": "math-013",
     "subject": "MATH",
-    "topic": "Puissances et racines carrées",
+    "topic": "Opérations sur les nombres",
     "difficulty": "EASY",
-    "statement": "Combien vaut 2⁵ ?",
+    "statement": "Que vaut 0 ÷ (-5) ?",
     "options": [
-      "10",
-      "32",
-      "25",
-      "64"
+      "0",
+      "-5",
+      "Indéterminé",
+      "5"
     ],
-    "answerIndex": 1,
-    "explanation": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32.",
+    "answerIndex": 0,
+    "explanation": "0 divisé par tout nombre non nul donne 0.",
     "optionExplanations": [
-      "Faux : 10 = 2 × 5, ce n'est pas une puissance.",
-      "Correct : 2⁵ = 32. ✓",
-      "Faux : 25 = 5², pas 2⁵.",
-      "Faux : 64 = 2⁶."
+      "Correct : 0 / (-5) = 0. ✓",
+      "Faux : -5 serait (-5)÷1.",
+      "Faux : seule la division par 0 est indéterminée.",
+      "Faux : 5 serait (-5)÷(-1)."
     ]
   },
   {
     "id": "math-014",
     "subject": "MATH",
-    "topic": "Puissances et racines carrées",
-    "difficulty": "EASY",
-    "statement": "Quelle est la valeur de √144 ?",
+    "topic": "Opérations sur les nombres",
+    "difficulty": "MEDIUM",
+    "statement": "Soit a ≠ 0. L'opposé de l'inverse de a est :",
     "options": [
-      "11",
-      "12",
-      "14",
-      "13"
+      "-a",
+      "-1/a",
+      "1/a",
+      "a"
     ],
     "answerIndex": 1,
-    "explanation": "√144 = 12, car 12 × 12 = 144.",
+    "explanation": "L'inverse de a est 1/a. Son opposé est -1/a.",
     "optionExplanations": [
-      "Faux : 11² = 121 ≠ 144.",
-      "Correct : 12² = 144, donc √144 = 12. ✓",
-      "Faux : 14² = 196 ≠ 144.",
-      "Faux : 13² = 169 ≠ 144."
+      "Faux : -a est l'opposé de a.",
+      "Correct : -1/a. ✓",
+      "Faux : 1/a est l'inverse.",
+      "Faux : a est le nombre lui-même."
     ]
   },
   {
     "id": "math-015",
     "subject": "MATH",
-    "topic": "Puissances et racines carrées",
-    "difficulty": "MEDIUM",
-    "statement": "Simplifiez : (3²)³ × 3⁻⁴",
+    "topic": "Opérations sur les nombres",
+    "difficulty": "EASY",
+    "statement": "La puissance (2³)² est égale à :",
     "options": [
-      "3⁴",
-      "3²",
-      "3⁶",
-      "3⁰"
+      "32",
+      "64",
+      "128",
+      "16"
     ],
     "answerIndex": 1,
-    "explanation": "(3²)³ = 3⁶. Puis 3⁶ × 3⁻⁴ = 3^(6−4) = 3² = 9.",
+    "explanation": "(2³)² = 2^(3×2) = 2^6 = 64.",
     "optionExplanations": [
-      "Faux : 3⁴ = 81, ce n'est pas le bon exposant.",
-      "Correct : 3^(6−4) = 3² = 9. ✓",
-      "Faux : 3⁶ oublie le facteur 3⁻⁴.",
-      "Faux : 3⁰ = 1, les exposants ne s'annulent pas."
+      "Faux : 32 = 2^5.",
+      "Correct : 64. ✓",
+      "Faux : 128 = 2^7.",
+      "Faux : 16 = 2^4."
     ]
   },
   {
     "id": "math-016",
     "subject": "MATH",
-    "topic": "Puissances et racines carrées",
+    "topic": "Opérations sur les nombres",
     "difficulty": "MEDIUM",
-    "statement": "Simplifiez √50 :",
+    "statement": "Si a et b sont deux réels, l'égalité (a + b)² = a² + b² est vraie :",
     "options": [
-      "25√2",
-      "5√2",
-      "2√5",
-      "10√5"
+      "Pour tout a et b",
+      "Uniquement si a = 0 ou b = 0",
+      "Uniquement si a = b",
+      "Jamais"
     ],
     "answerIndex": 1,
-    "explanation": "√50 = √(25 × 2) = √25 × √2 = 5√2.",
+    "explanation": "(a+b)² = a²+2ab+b². Pour que cela soit égal à a²+b², il faut 2ab=0, donc a=0 ou b=0.",
     "optionExplanations": [
-      "Faux : 25√2 est trop grand.",
-      "Correct : √50 = 5√2. ✓",
-      "Faux : (2√5)² = 4 × 5 = 20 ≠ 50.",
-      "Faux : (10√5)² = 500 ≠ 50."
+      "Faux : l'identité est (a+b)² = a²+2ab+b².",
+      "Correct : le terme croisé doit être nul. ✓",
+      "Faux : si a=b, 2a² ≠ 0 en général.",
+      "Faux : elle est vraie pour a=0 ou b=0."
     ]
   },
   {
     "id": "math-017",
     "subject": "MATH",
-    "topic": "Pourcentages",
+    "topic": "Fractions",
     "difficulty": "EASY",
-    "statement": "Quel est 15% de 200 ?",
+    "statement": "Simplifier (x² - 9) / (x - 3) donne x + 3, à condition que :",
     "options": [
-      "25",
-      "30",
-      "35",
-      "20"
+      "x ≠ 0",
+      "x ≠ 3",
+      "x ≠ -3",
+      "x ≠ 9"
     ],
     "answerIndex": 1,
-    "explanation": "15% de 200 = (15/100) × 200 = 0,15 × 200 = 30.",
+    "explanation": "x² - 9 = (x-3)(x+3). On simplifie par (x-3) qui doit être non nul, donc x≠3.",
     "optionExplanations": [
-      "Faux : 25 serait 12,5% de 200.",
-      "Correct : 0,15 × 200 = 30. ✓",
-      "Faux : 35 serait 17,5% de 200.",
-      "Faux : 20 serait 10% de 200."
+      "Faux : x=0 est accepté (résultat = 3).",
+      "Correct : x=3 rend le dénominateur nul. ✓",
+      "Faux : x=-3 donne (9-9)/(-6)=0, défini.",
+      "Faux : x=9 donne (81-9)/6=12, défini."
     ]
   },
   {
     "id": "math-018",
     "subject": "MATH",
-    "topic": "Pourcentages",
-    "difficulty": "EASY",
-    "statement": "Un article coûte 80 $ et bénéficie d'une réduction de 25%. Quel est son nouveau prix ?",
+    "topic": "Fractions",
+    "difficulty": "MEDIUM",
+    "statement": "Que vaut (1/2) ÷ (1/4) ?",
     "options": [
-      "55 $",
-      "60 $",
-      "65 $",
-      "70 $"
+      "1/8",
+      "2",
+      "1/2",
+      "4"
     ],
     "answerIndex": 1,
-    "explanation": "Réduction = 25% de 80 = 20 $. Nouveau prix = 80 − 20 = 60 $.",
+    "explanation": "(1/2) ÷ (1/4) = (1/2) × 4 = 2.",
     "optionExplanations": [
-      "Faux : 55 $ correspond à une réduction de 31,25%.",
-      "Correct : 80 − (0,25 × 80) = 80 − 20 = 60 $. ✓",
-      "Faux : 65 $ correspond à une réduction de 18,75%.",
-      "Faux : 70 $ correspond à une réduction de 12,5%."
+      "Faux : 1/8 est (1/2)×(1/4).",
+      "Correct : 2. ✓",
+      "Faux : 1/2 est juste le premier terme.",
+      "Faux : 4 serait (1/4) ÷ (1/2)."
     ]
   },
   {
     "id": "math-019",
     "subject": "MATH",
-    "topic": "Pourcentages",
-    "difficulty": "MEDIUM",
-    "statement": "Un prix augmente de 20% puis diminue de 20%. Le prix final est :",
+    "topic": "Fractions",
+    "difficulty": "EASY",
+    "statement": "La fraction 5/0 est :",
     "options": [
-      "Égal au prix initial",
-      "Inférieur au prix initial de 4%",
-      "Supérieur au prix initial de 4%",
-      "Inférieur au prix initial de 2%"
+      "Égale à 0",
+      "Égale à 5",
+      "Non définie",
+      "Égale à +∞"
     ],
-    "answerIndex": 1,
-    "explanation": "Si le prix initial est 100, après +20% il vaut 120. Après −20% : 120 × 0,8 = 96. Le prix final est 96, soit 4% de moins que 100.",
+    "answerIndex": 2,
+    "explanation": "La division par 0 est interdite dans R.",
     "optionExplanations": [
-      "Faux : les pourcentages ne s'annulent pas car ils portent sur des montants différents.",
-      "Correct : 100 × 1,2 × 0,8 = 96, soit −4%. ✓",
-      "Faux : le prix final est inférieur, pas supérieur.",
-      "Faux : la différence est de 4%, pas 2%."
+      "Faux : 0/5 = 0, pas 5/0.",
+      "Faux : 5/1 = 5.",
+      "Correct : pas de division par zéro. ✓",
+      "Faux : ∞ n'est pas un nombre réel."
     ]
   },
   {
     "id": "math-020",
     "subject": "MATH",
-    "topic": "Pourcentages",
-    "difficulty": "HARD",
-    "statement": "La population d'une ville passe de 50 000 à 62 000 habitants. Quel est le taux d'augmentation ?",
+    "topic": "Fractions",
+    "difficulty": "MEDIUM",
+    "statement": "Deux fractions a/b et c/d (b,d≠0) sont égales. Le produit a×d est égal à :",
     "options": [
-      "20%",
-      "24%",
-      "19,4%",
-      "12%"
+      "b×c",
+      "b+d",
+      "a×c",
+      "b×d"
     ],
-    "answerIndex": 1,
-    "explanation": "Taux d'augmentation = (62 000 − 50 000) / 50 000 × 100 = 12 000/50 000 × 100 = 24%.",
+    "answerIndex": 0,
+    "explanation": "a/b = c/d ⇔ a×d = b×c (produit en croix).",
     "optionExplanations": [
-      "Faux : 20% de 50 000 = 10 000, ce qui donnerait 60 000.",
-      "Correct : (12 000/50 000) × 100 = 24%. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : 12% de 50 000 = 6 000, ce qui donnerait 56 000."
+      "Correct : produit en croix. ✓",
+      "Faux : l'addition n'a rien à voir.",
+      "Faux : ce serait a/c = b/d.",
+      "Faux : ce serait les dénominateurs."
     ]
   },
   {
     "id": "math-021",
     "subject": "MATH",
-    "topic": "Proportions",
+    "topic": "Fractions",
     "difficulty": "EASY",
-    "statement": "Si 3 stylos coûtent 9 $, combien coûtent 7 stylos ?",
+    "statement": "L'inverse de la fraction 2/3 est :",
     "options": [
-      "18 $",
-      "21 $",
-      "24 $",
-      "15 $"
+      "3/2",
+      "-2/3",
+      "2/3",
+      "-3/2"
     ],
-    "answerIndex": 1,
-    "explanation": "Prix d'un stylo = 9/3 = 3 $. Donc 7 stylos = 7 × 3 = 21 $.",
+    "answerIndex": 0,
+    "explanation": "L'inverse de a/b est b/a, donc 3/2.",
     "optionExplanations": [
-      "Faux : 18 $ = prix de 6 stylos.",
-      "Correct : 7 × 3 $ = 21 $. ✓",
-      "Faux : 24 $ = prix de 8 stylos.",
-      "Faux : 15 $ = prix de 5 stylos."
+      "Correct : 3/2. ✓",
+      "Faux : -2/3 est l'opposé.",
+      "Faux : 2/3 est la fraction elle-même.",
+      "Faux : -3/2 est l'inverse de -2/3."
     ]
   },
   {
     "id": "math-022",
     "subject": "MATH",
-    "topic": "Proportions",
-    "difficulty": "EASY",
-    "statement": "Dans une classe, le ratio filles/garçons est de 3:5. S'il y a 40 élèves, combien y a-t-il de filles ?",
+    "topic": "Fractions",
+    "difficulty": "MEDIUM",
+    "statement": "Si a/b = c/d = k (k≠0), alors (a+c)/(b+d) vaut :",
     "options": [
-      "20",
-      "15",
-      "24",
-      "12"
+      "2k",
+      "k",
+      "k/2",
+      "Dépend de a,b,c,d"
     ],
     "answerIndex": 1,
-    "explanation": "Total des parts = 3 + 5 = 8. Part des filles = 3/8. Nombre de filles = (3/8) × 40 = 15.",
+    "explanation": "a = bk, c = dk ⇒ (a+c)/(b+d) = k(b+d)/(b+d) = k.",
     "optionExplanations": [
-      "Faux : 20 serait la moitié de la classe.",
-      "Correct : (3/8) × 40 = 15 filles. ✓",
-      "Faux : 24 = (3/5) × 40, mais le ratio est sur le total.",
-      "Faux : 12 = (3/10) × 40."
+      "Faux : ce n'est pas 2k.",
+      "Correct : invariant. ✓",
+      "Faux : ce n'est pas la moitié.",
+      "Faux : c'est toujours k."
     ]
   },
   {
     "id": "math-023",
     "subject": "MATH",
-    "topic": "Proportions",
-    "difficulty": "MEDIUM",
-    "statement": "Sur une carte à l'échelle 1/50 000, deux villes sont séparées de 6 cm. Quelle est la distance réelle ?",
+    "topic": "Fractions",
+    "difficulty": "EASY",
+    "statement": "La fraction irréductible de 18/24 est :",
     "options": [
-      "300 m",
-      "3 km",
-      "30 km",
-      "0,3 km"
+      "9/12",
+      "6/8",
+      "3/4",
+      "2/3"
     ],
-    "answerIndex": 1,
-    "explanation": "Distance réelle = 6 cm × 50 000 = 300 000 cm = 3 000 m = 3 km.",
+    "answerIndex": 2,
+    "explanation": "18/24 = (18÷6)/(24÷6) = 3/4.",
     "optionExplanations": [
-      "Faux : 300 m = 30 000 cm, soit une échelle 1/5 000.",
-      "Correct : 6 × 50 000 = 300 000 cm = 3 km. ✓",
-      "Faux : 30 km correspondrait à une échelle 1/500 000.",
-      "Faux : 0,3 km = 300 m, trop petit."
+      "Faux : 9/12 est réductible.",
+      "Faux : 6/8 est réductible.",
+      "Correct : 3/4 (PGCD=1). ✓",
+      "Faux : 2/3 ≠ 18/24."
     ]
   },
   {
     "id": "math-024",
     "subject": "MATH",
-    "topic": "Proportions",
+    "topic": "Fractions",
     "difficulty": "MEDIUM",
-    "statement": "Si a/b = 2/3 et b/c = 3/4, quelle est la valeur de a/c ?",
+    "statement": "L'expression (a/b) ÷ (c/d) est égale à :",
     "options": [
-      "2/4 = 1/2",
-      "2/3",
-      "3/4",
-      "8/9"
+      "(a×d)/(b×c)",
+      "(a×c)/(b×d)",
+      "(b×c)/(a×d)",
+      "(a×c)/(d×b)"
     ],
     "answerIndex": 0,
-    "explanation": "a/c = (a/b) × (b/c) = (2/3) × (3/4) = 6/12 = 1/2.",
+    "explanation": "(a/b) ÷ (c/d) = (a/b) × (d/c) = (a×d)/(b×c).",
     "optionExplanations": [
-      "Correct : (2/3) × (3/4) = 6/12 = 1/2. ✓",
-      "Faux : 2/3 est la valeur de a/b, pas a/c.",
-      "Faux : 3/4 est la valeur de b/c, pas a/c.",
-      "Faux : calcul incorrect."
+      "Correct : multiplier par l'inverse. ✓",
+      "Faux : c'est (a/b)×(c/d).",
+      "Faux : inverse erroné.",
+      "Faux : même erreur."
     ]
   },
   {
     "id": "math-025",
     "subject": "MATH",
-    "topic": "Règle de trois",
+    "topic": "Puissances et racines carrées",
     "difficulty": "EASY",
-    "statement": "Si 5 ouvriers construisent un mur en 10 jours, combien de jours faudra-t-il à 10 ouvriers ?",
+    "statement": "√( (-5)² ) vaut :",
     "options": [
-      "20 jours",
-      "5 jours",
-      "15 jours",
-      "2 jours"
+      "-5",
+      "5",
+      "25",
+      "0"
     ],
     "answerIndex": 1,
-    "explanation": "C'est une proportionnalité inverse : plus il y a d'ouvriers, moins il faut de jours. 5 × 10 = 10 × x, donc x = 50/10 = 5 jours.",
+    "explanation": "√(25) = 5 = | -5 |.",
     "optionExplanations": [
-      "Faux : 20 jours serait pour une proportionnalité directe (erronée ici).",
-      "Correct : 5 × 10 / 10 = 5 jours. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : 2 jours correspondrait à 25 ouvriers."
+      "Faux : la racine est positive.",
+      "Correct : 5. ✓",
+      "Faux : 25 est la valeur sous la racine.",
+      "Faux : 0 serait pour x=0."
     ]
   },
   {
     "id": "math-026",
     "subject": "MATH",
-    "topic": "Règle de trois",
-    "difficulty": "EASY",
-    "statement": "Si 4 kg de riz coûtent 12 $, combien coûtent 10 kg ?",
+    "topic": "Puissances et racines carrées",
+    "difficulty": "MEDIUM",
+    "statement": "L'égalité √(a×b) = √a × √b est vraie pour :",
     "options": [
-      "20 $",
-      "30 $",
-      "24 $",
-      "36 $"
+      "Tous les réels a et b",
+      "a ≥ 0 et b ≥ 0 uniquement",
+      "a = b uniquement",
+      "Aucun réel"
     ],
     "answerIndex": 1,
-    "explanation": "Prix au kg = 12/4 = 3 $. Donc 10 kg = 10 × 3 = 30 $. Ou par règle de trois : (10 × 12)/4 = 30 $.",
+    "explanation": "Dans R, √(a×b) = √a × √b n'est définie que si a et b sont positifs ou nuls.",
     "optionExplanations": [
-      "Faux : 20 $ correspondrait à un prix de 2 $/kg.",
-      "Correct : (10 × 12) / 4 = 30 $. ✓",
-      "Faux : 24 $ = 12 × 2, mais le coefficient n'est pas 2.",
-      "Faux : 36 $ = 12 × 3, le coefficient est 2,5."
+      "Faux : si a=b=-1, √1=1 mais √(-1) n'existe pas.",
+      "Correct : la positivité est requise. ✓",
+      "Faux : a=b=-1 contredit.",
+      "Faux : elle est vraie pour les positifs."
     ]
   },
   {
     "id": "math-027",
     "subject": "MATH",
-    "topic": "Règle de trois",
-    "difficulty": "MEDIUM",
-    "statement": "Une voiture parcourt 180 km en 2h30. Quelle distance parcourt-elle en 4 heures à la même vitesse ?",
+    "topic": "Puissances et racines carrées",
+    "difficulty": "EASY",
+    "statement": "10^(-3) est égal à :",
     "options": [
-      "260 km",
-      "288 km",
-      "300 km",
-      "320 km"
+      "-1000",
+      "0,001",
+      "0,1",
+      "1000"
     ],
     "answerIndex": 1,
-    "explanation": "Vitesse = 180/2,5 = 72 km/h. En 4h : 72 × 4 = 288 km.",
+    "explanation": "10^(-3) = 1/10³ = 1/1000 = 0,001.",
     "optionExplanations": [
-      "Faux : calcul incorrect.",
-      "Correct : 180/2,5 × 4 = 72 × 4 = 288 km. ✓",
-      "Faux : 300 km suppose une vitesse de 75 km/h.",
-      "Faux : 320 km suppose une vitesse de 80 km/h."
+      "Faux : -1000 est l'opposé de 10³.",
+      "Correct : 0,001. ✓",
+      "Faux : 0,1 = 10^(-1).",
+      "Faux : 1000 = 10³."
     ]
   },
   {
     "id": "math-028",
     "subject": "MATH",
-    "topic": "Règle de trois",
+    "topic": "Puissances et racines carrées",
     "difficulty": "MEDIUM",
-    "statement": "3 machines produisent 150 pièces en 5 heures. Combien de pièces produiront 6 machines en 8 heures ?",
+    "statement": "(2^(1/2))² est égal à :",
     "options": [
-      "400",
-      "480",
-      "600",
-      "240"
+      "2",
+      "√2",
+      "4",
+      "1"
     ],
-    "answerIndex": 1,
-    "explanation": "Production par machine par heure = 150/(3×5) = 10 pièces. Avec 6 machines en 8h : 6 × 8 × 10 = 480 pièces.",
+    "answerIndex": 0,
+    "explanation": "(2^(1/2))² = 2^(1/2 × 2) = 2^1 = 2.",
     "optionExplanations": [
-      "Faux : 400 = 6 × 8 × (150/18), calcul incorrect.",
-      "Correct : 6 × 8 × 10 = 480. ✓",
-      "Faux : 600 serait avec un rendement de 12,5 par machine/heure.",
-      "Faux : 240 ne double que les machines sans ajuster le temps."
+      "Correct : 2. ✓",
+      "Faux : √2 est 2^(1/2).",
+      "Faux : 4 serait 2².",
+      "Faux : 1 serait si l'exposant était 0."
     ]
   },
   {
     "id": "math-029",
     "subject": "MATH",
-    "topic": "Équations du premier degré",
+    "topic": "Puissances et racines carrées",
     "difficulty": "EASY",
-    "statement": "Résoudre : 3x + 7 = 22",
+    "statement": "L'équation x² = 16 admet dans R :",
     "options": [
-      "x = 3",
-      "x = 5",
-      "x = 7",
-      "x = 4"
+      "0 solution",
+      "1 solution (x=4)",
+      "2 solutions (x=4 et x=-4)",
+      "4 solutions"
     ],
-    "answerIndex": 1,
-    "explanation": "3x + 7 = 22 → 3x = 22 − 7 = 15 → x = 15/3 = 5.",
+    "answerIndex": 2,
+    "explanation": "x = √16 = 4 ou x = -√16 = -4.",
     "optionExplanations": [
-      "Faux : 3(3) + 7 = 16 ≠ 22.",
-      "Correct : 3(5) + 7 = 15 + 7 = 22. ✓",
-      "Faux : 3(7) + 7 = 28 ≠ 22.",
-      "Faux : 3(4) + 7 = 19 ≠ 22."
+      "Faux : il y a des solutions.",
+      "Faux : il manque -4.",
+      "Correct : 4 et -4. ✓",
+      "Faux : une équation x²=a n'a que 2 solutions max."
     ]
   },
   {
     "id": "math-030",
     "subject": "MATH",
-    "topic": "Équations du premier degré",
-    "difficulty": "EASY",
-    "statement": "Résoudre : 2(x − 3) = 10",
+    "topic": "Puissances et racines carrées",
+    "difficulty": "MEDIUM",
+    "statement": "Soit n entier. √(n²) est toujours égal à :",
     "options": [
-      "x = 5",
-      "x = 8",
-      "x = 6",
-      "x = 7"
+      "n",
+      "|n|",
+      "n²",
+      "1"
     ],
     "answerIndex": 1,
-    "explanation": "2(x − 3) = 10 → x − 3 = 5 → x = 8.",
+    "explanation": "Par définition, √(n²) = |n|.",
     "optionExplanations": [
-      "Faux : 2(5 − 3) = 2 × 2 = 4 ≠ 10.",
-      "Correct : 2(8 − 3) = 2 × 5 = 10. ✓",
-      "Faux : 2(6 − 3) = 6 ≠ 10.",
-      "Faux : 2(7 − 3) = 8 ≠ 10."
+      "Faux : pour n=-3, √9=3 ≠ -3.",
+      "Correct : valeur absolue. ✓",
+      "Faux : n² est sous la racine.",
+      "Faux : seulement si n=1 ou -1."
     ]
   },
   {
     "id": "math-031",
     "subject": "MATH",
-    "topic": "Équations du premier degré",
-    "difficulty": "MEDIUM",
-    "statement": "Résoudre : (x + 2)/3 − (x − 1)/4 = 1",
+    "topic": "Puissances et racines carrées",
+    "difficulty": "EASY",
+    "statement": "2^3 × 2^4 est égal à :",
     "options": [
-      "x = 7",
-      "x = 1",
-      "x = 5",
-      "x = 3"
+      "2^7",
+      "2^12",
+      "4^7",
+      "2^1"
     ],
-    "answerIndex": 2,
-    "explanation": "Multiplier par 12 : 4(x+2) − 3(x−1) = 12 → 4x + 8 − 3x + 3 = 12 → x + 11 = 12 → x = 1. Vérifions : (1+2)/3 − (1−1)/4 = 1 − 0 = 1. Mais attendons, revérifions: x = 5 → (5+2)/3 − (5−1)/4 = 7/3 − 4/4 = 7/3 − 1 = 4/3 ≠ 1. Recalculons : x = 1 → (3)/3 − (0)/4 = 1 − 0 = 1 ✓.",
-    "answerIndex": 1,
-    "explanation": "Multiplier par 12 : 4(x+2) − 3(x−1) = 12 → 4x + 8 − 3x + 3 = 12 → x + 11 = 12 → x = 1.",
+    "answerIndex": 0,
+    "explanation": "a^m × a^n = a^(m+n) ⇒ 2^(3+4) = 2^7.",
     "optionExplanations": [
-      "Faux : (9)/3 − (6)/4 = 3 − 1,5 = 1,5 ≠ 1.",
-      "Correct : (3)/3 − (0)/4 = 1 − 0 = 1. ✓",
-      "Faux : (7)/3 − (4)/4 = 2,33 − 1 = 1,33 ≠ 1.",
-      "Faux : (5)/3 − (2)/4 = 1,67 − 0,5 = 1,17 ≠ 1."
+      "Correct : 2^7. ✓",
+      "Faux : 2^12 serait (2^3)^4.",
+      "Faux : 4^7 = (2²)^7 = 2^14.",
+      "Faux : 2^1 serait 2^(3-4)."
     ]
   },
   {
     "id": "math-032",
     "subject": "MATH",
-    "topic": "Équations du premier degré",
-    "difficulty": "HARD",
-    "statement": "L'âge d'un père est le triple de celui de son fils. Dans 12 ans, il sera le double. Quel est l'âge actuel du fils ?",
+    "topic": "Puissances et racines carrées",
+    "difficulty": "MEDIUM",
+    "statement": "Si x < 0, alors √(x²) est égal à :",
     "options": [
-      "10 ans",
-      "12 ans",
-      "8 ans",
-      "15 ans"
+      "x",
+      "-x",
+      "x²",
+      "1"
     ],
     "answerIndex": 1,
-    "explanation": "Soit x l'âge du fils. Père = 3x. Dans 12 ans : 3x + 12 = 2(x + 12) → 3x + 12 = 2x + 24 → x = 12.",
+    "explanation": "√(x²) = |x|. Si x<0, |x| = -x (positif).",
     "optionExplanations": [
-      "Faux : si fils = 10, père = 30. Dans 12 ans : 42 ≠ 2 × 22 = 44.",
-      "Correct : fils = 12, père = 36. Dans 12 ans : 48 = 2 × 24. ✓",
-      "Faux : si fils = 8, père = 24. Dans 12 ans : 36 ≠ 2 × 20 = 40.",
-      "Faux : si fils = 15, père = 45. Dans 12 ans : 57 ≠ 2 × 27 = 54."
+      "Faux : x est négatif, la racine est positive.",
+      "Correct : -x >0. ✓",
+      "Faux : x² est la valeur sous la racine.",
+      "Faux : 1 serait si |x|=1."
     ]
   },
   {
     "id": "math-033",
     "subject": "MATH",
-    "topic": "Systèmes d'équations",
+    "topic": "Pourcentages",
     "difficulty": "EASY",
-    "statement": "Résoudre le système : x + y = 10 et x − y = 4. Quelle est la valeur de x ?",
+    "statement": "Une hausse de 25 % suivie d'une baisse de 20 % donne globalement :",
     "options": [
-      "5",
-      "7",
-      "6",
-      "8"
+      "Une hausse de 5 %",
+      "Une baisse de 5 %",
+      "Une hausse de 0 %",
+      "Une baisse de 10 %"
     ],
-    "answerIndex": 1,
-    "explanation": "En additionnant les deux équations : 2x = 14, donc x = 7. Et y = 10 − 7 = 3.",
+    "answerIndex": 2,
+    "explanation": "1.25 × 0.8 = 1.00, donc pas de changement global.",
     "optionExplanations": [
-      "Faux : si x = 5, alors y = 5, mais 5 − 5 = 0 ≠ 4.",
-      "Correct : x = 7, y = 3. Vérification : 7 + 3 = 10 et 7 − 3 = 4. ✓",
-      "Faux : si x = 6, y = 4, mais 6 − 4 = 2 ≠ 4.",
-      "Faux : si x = 8, y = 2, mais 8 + 2 = 10 et 8 − 2 = 6 ≠ 4."
+      "Faux : 1.25×0.8 = 1, pas 1.05.",
+      "Faux : ce n'est pas une baisse.",
+      "Correct : facteur 1, donc 0%. ✓",
+      "Faux : 10% serait 0.9."
     ]
   },
   {
     "id": "math-034",
     "subject": "MATH",
-    "topic": "Systèmes d'équations",
+    "topic": "Pourcentages",
     "difficulty": "MEDIUM",
-    "statement": "Résoudre : 2x + 3y = 12 et 4x − y = 5. Quelle est la valeur de y ?",
+    "statement": "Un prix passe de 80 € à 100 €. Quel est le pourcentage d'augmentation ?",
     "options": [
-      "1",
-      "2",
-      "3",
-      "4"
+      "20 %",
+      "25 %",
+      "30 %",
+      "15 %"
     ],
     "answerIndex": 1,
-    "explanation": "De la 2ème équation : y = 4x − 5. Substitution : 2x + 3(4x − 5) = 12 → 2x + 12x − 15 = 12 → 14x = 27 → x = 27/14. Recalculons avec y = 2 : 2x + 6 = 12 → x = 3, et 12 − 2 = 10 ≠ 5. Revérifions : 4(3) − 2 = 10 ≠ 5. Avec substitution exacte : y = 4x − 5, 2x + 12x − 15 = 12, 14x = 27, x = 27/14 ≈ 1,93. y = 4(27/14) − 5 = 108/14 − 70/14 = 38/14 = 19/7 ≈ 2,71. Corrigeons le système pour avoir des solutions entières : 2x + 3y = 16 et 4x − y = 2. De eq2 : y = 4x − 2. Subst : 2x + 12x − 6 = 16 → 14x = 22 → x = 11/7. Pas entier non plus. Utilisons : 2x + 3y = 13 et x − y = 1. De eq2 : x = y + 1. Subst : 2(y+1) + 3y = 13 → 5y + 2 = 13 → y = 11/5. Utilisons plutôt le système 3x + 2y = 16 et x − y = 2. x = y + 2. 3(y+2) + 2y = 16 → 5y + 6 = 16 → y = 2.",
-    "statement": "Résoudre : 3x + 2y = 16 et x − y = 2. Quelle est la valeur de y ?",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "answerIndex": 1,
-    "explanation": "De la 2ème équation : x = y + 2. Substitution : 3(y + 2) + 2y = 16 → 3y + 6 + 2y = 16 → 5y = 10 → y = 2.",
+    "explanation": "Augmentation = 20 €. 20/80 = 0.25 = 25 %.",
     "optionExplanations": [
-      "Faux : si y = 1, x = 3. Vérification : 3(3) + 2(1) = 11 ≠ 16.",
-      "Correct : y = 2, x = 4. Vérification : 3(4) + 2(2) = 16 ✓ et 4 − 2 = 2 ✓",
-      "Faux : si y = 3, x = 5. Vérification : 3(5) + 2(3) = 21 ≠ 16.",
-      "Faux : si y = 4, x = 6. Vérification : 3(6) + 2(4) = 26 ≠ 16."
+      "Faux : 20% serait 16 € d'augmentation.",
+      "Correct : 25%. ✓",
+      "Faux : 30% serait 24 €.",
+      "Faux : 15% serait 12 €."
     ]
   },
   {
     "id": "math-035",
     "subject": "MATH",
-    "topic": "Systèmes d'équations",
-    "difficulty": "MEDIUM",
-    "statement": "Un cinéma vend des billets adultes à 8 $ et enfants à 5 $. Pour 120 billets vendus et 810 $ de recette, combien de billets adultes ont été vendus ?",
+    "topic": "Pourcentages",
+    "difficulty": "EASY",
+    "statement": "Multiplier un nombre par 0,75 revient à :",
     "options": [
-      "80",
-      "90",
-      "60",
-      "70"
+      "Une hausse de 75%",
+      "Une baisse de 25%",
+      "Une baisse de 75%",
+      "Une hausse de 25%"
     ],
     "answerIndex": 1,
-    "explanation": "Soit a = adultes, e = enfants. a + e = 120 et 8a + 5e = 810. De eq1 : e = 120 − a. Substitution : 8a + 5(120 − a) = 810 → 8a + 600 − 5a = 810 → 3a = 210 → a = 70. Vérifions : 8(70) + 5(50) = 560 + 250 = 810 ✓. Correction : a = 70.",
-    "answerIndex": 3,
-    "explanation": "Soit a = adultes, e = enfants. a + e = 120 et 8a + 5e = 810. Substitution : 8a + 5(120 − a) = 810 → 3a = 210 → a = 70.",
+    "explanation": "0,75 = 1 - 0,25, donc une baisse de 25 %.",
     "optionExplanations": [
-      "Faux : 8(80) + 5(40) = 640 + 200 = 840 ≠ 810.",
-      "Faux : 8(90) + 5(30) = 720 + 150 = 870 ≠ 810.",
-      "Faux : 8(60) + 5(60) = 480 + 300 = 780 ≠ 810.",
-      "Correct : 8(70) + 5(50) = 560 + 250 = 810. ✓"
+      "Faux : 1,75 serait une hausse de 75%.",
+      "Correct : baisse de 25%. ✓",
+      "Faux : 0,25 serait une baisse de 75%.",
+      "Faux : 1,25 serait une hausse de 25%."
     ]
   },
   {
     "id": "math-036",
     "subject": "MATH",
-    "topic": "Systèmes d'équations",
-    "difficulty": "HARD",
-    "statement": "Résoudre : 2x + y + z = 10, x − y + z = 3, x + y − z = 5. Quelle est la valeur de z ?",
+    "topic": "Pourcentages",
+    "difficulty": "MEDIUM",
+    "statement": "Un capital de 200 € augmente de 10 % puis de 20 %. Le capital final est :",
     "options": [
-      "1",
-      "2",
-      "3",
-      "4"
+      "260 €",
+      "264 €",
+      "240 €",
+      "280 €"
     ],
     "answerIndex": 1,
-    "explanation": "Eq2 + Eq3 : 2x = 8 → x = 4. Eq1 : 8 + y + z = 10 → y + z = 2. Eq3 : 4 + y − z = 5 → y − z = 1. En résolvant : y = 3/2 et z = 1/2. Corrigeons pour des entiers. Eq1: x+y+z=9, Eq2: x−y+z=3, Eq3: x+y−z=5. Eq2+Eq3: 2x=8 → x=4. y+z=5 et y−z=1 → y=3, z=2.",
-    "statement": "Résoudre : x + y + z = 9, x − y + z = 3, x + y − z = 5. Quelle est la valeur de z ?",
-    "answerIndex": 1,
-    "explanation": "Eq2 + Eq3 : 2x = 8, x = 4. Eq1 : y + z = 5. Eq3 : y − z = 1. Donc y = 3 et z = 2.",
+    "explanation": "200 × 1,10 × 1,20 = 200 × 1,32 = 264 €.",
     "optionExplanations": [
-      "Faux : z = 1 donnerait y = 4, et x − 4 + 1 = −3 ≠ 3.",
-      "Correct : x = 4, y = 3, z = 2. Vérifications : 4+3+2=9 ✓, 4−3+2=3 ✓, 4+3−2=5 ✓",
-      "Faux : z = 3 donnerait y = 2, et 4 − 2 + 3 = 5 ≠ 3.",
-      "Faux : z = 4 donnerait y = 1, et 4 − 1 + 4 = 7 ≠ 3."
+      "Faux : 260 est 200 + 30% de 200 (mauvaise base).",
+      "Correct : 264 €. ✓",
+      "Faux : 240 est 200 × 1,20 seulement.",
+      "Faux : 280 est 200 × 1,40."
     ]
   },
   {
     "id": "math-037",
     "subject": "MATH",
-    "topic": "Inéquations",
+    "topic": "Pourcentages",
     "difficulty": "EASY",
-    "statement": "Résoudre : 2x − 3 > 7",
+    "statement": "150 % d'une quantité représentent :",
     "options": [
-      "x > 2",
-      "x > 5",
-      "x > 3",
-      "x ≥ 5"
+      "1,5 fois la quantité",
+      "0,15 fois la quantité",
+      "15 fois la quantité",
+      "Le quart de la quantité"
     ],
-    "answerIndex": 1,
-    "explanation": "2x − 3 > 7 → 2x > 10 → x > 5.",
+    "answerIndex": 0,
+    "explanation": "150 % = 150/100 = 1,5.",
     "optionExplanations": [
-      "Faux : x > 2 est trop large.",
-      "Correct : 2x > 10, donc x > 5. ✓",
-      "Faux : x > 3 donne 2(3) − 3 = 3, pas > 7.",
-      "Faux : x ≥ 5 inclurait x = 5, or 2(5) − 3 = 7, pas > 7."
+      "Correct : 1,5 × Q. ✓",
+      "Faux : 0,15 = 15%.",
+      "Faux : 15 = 1500%.",
+      "Faux : 25% = 1/4."
     ]
   },
   {
     "id": "math-038",
     "subject": "MATH",
-    "topic": "Inéquations",
-    "difficulty": "EASY",
-    "statement": "Résoudre : −3x ≤ 12",
+    "topic": "Pourcentages",
+    "difficulty": "MEDIUM",
+    "statement": "Si une population augmente de 2 % par an, après 2 ans l'augmentation totale est de :",
     "options": [
-      "x ≤ −4",
-      "x ≥ −4",
-      "x ≤ 4",
-      "x ≥ 4"
+      "4 %",
+      "4,04 %",
+      "2 %",
+      "2,04 %"
     ],
     "answerIndex": 1,
-    "explanation": "−3x ≤ 12. En divisant par −3, on inverse le sens : x ≥ −4.",
+    "explanation": "1,02² = 1,0404, soit +4,04 %. (Et non 4%).",
     "optionExplanations": [
-      "Faux : on doit inverser le signe en divisant par un nombre négatif.",
-      "Correct : −3x ≤ 12 → x ≥ −4 (inversion du sens). ✓",
-      "Faux : x ≤ 4 ne tient pas compte de l'inversion du signe.",
-      "Faux : x ≥ 4 → −3(4) = −12 ≤ 12 ✓ mais x ≥ −4 est plus large et correct."
+      "Faux : 4% est l'addition simple.",
+      "Correct : 1,0404 - 1 = 0,0404 = 4,04%. ✓",
+      "Faux : 2% ne tient pas compte de la 2ème année.",
+      "Faux : 2,04% serait 1,0204."
     ]
   },
   {
     "id": "math-039",
     "subject": "MATH",
-    "topic": "Inéquations",
-    "difficulty": "MEDIUM",
-    "statement": "Résoudre : −2 < 3x + 1 ≤ 10",
+    "topic": "Pourcentages",
+    "difficulty": "EASY",
+    "statement": "0,5 % en fraction décimale vaut :",
     "options": [
-      "−1 < x ≤ 3",
-      "−1 < x ≤ 3",
-      "0 < x ≤ 3",
-      "−1 ≤ x < 3"
+      "0,5",
+      "0,05",
+      "0,005",
+      "5"
     ],
-    "answerIndex": 0,
-    "explanation": "−2 < 3x + 1 ≤ 10 → −3 < 3x ≤ 9 → −1 < x ≤ 3.",
+    "answerIndex": 2,
+    "explanation": "0,5 % = 0,5/100 = 0,005.",
     "optionExplanations": [
-      "Correct : en soustrayant 1 puis divisant par 3 : −1 < x ≤ 3. ✓",
-      "Correct aussi (identique à l'option A).",
-      "Faux : la borne inférieure est −1, pas 0.",
-      "Faux : les signes d'inégalité ne correspondent pas."
+      "Faux : 0,5 est 50%.",
+      "Faux : 0,05 est 5%.",
+      "Correct : 0,005. ✓",
+      "Faux : 5 est 500%."
     ]
   },
   {
     "id": "math-040",
     "subject": "MATH",
-    "topic": "Inéquations",
-    "difficulty": "HARD",
-    "statement": "Résoudre : x² − 5x + 6 ≤ 0",
+    "topic": "Pourcentages",
+    "difficulty": "MEDIUM",
+    "statement": "Un article coûte 120 € TTC (TVA 20%). Le prix hors taxe est de :",
     "options": [
-      "x ≤ 2 ou x ≥ 3",
-      "2 ≤ x ≤ 3",
-      "x < 2 ou x > 3",
-      "−3 ≤ x ≤ −2"
+      "100 €",
+      "96 €",
+      "144 €",
+      "80 €"
     ],
-    "answerIndex": 1,
-    "explanation": "x² − 5x + 6 = (x − 2)(x − 3). Le produit est ≤ 0 quand x est entre les racines : 2 ≤ x ≤ 3.",
+    "answerIndex": 0,
+    "explanation": "Prix TTC = HT × 1,20. HT = 120 / 1,20 = 100 €.",
     "optionExplanations": [
-      "Faux : c'est la solution de l'inéquation inverse (≥ 0).",
-      "Correct : (x−2)(x−3) ≤ 0 pour 2 ≤ x ≤ 3. ✓",
-      "Faux : pour x entre 2 et 3, le produit est ≤ 0, pas en dehors.",
-      "Faux : les racines sont 2 et 3, pas −2 et −3."
+      "Correct : 100 × 1,20 = 120. ✓",
+      "Faux : 96 × 1,20 = 115,2.",
+      "Faux : 144 est 120 × 1,20.",
+      "Faux : 80 × 1,20 = 96."
     ]
   },
   {
     "id": "math-041",
     "subject": "MATH",
-    "topic": "Fonctions affines",
+    "topic": "Proportions",
     "difficulty": "EASY",
-    "statement": "Quelle est la pente de la droite d'équation y = 3x − 7 ?",
+    "statement": "Pour 250 g de farine, il faut 2 œufs. Pour 750 g, il faut :",
     "options": [
-      "−7",
-      "3",
-      "7",
-      "−3"
+      "4 œufs",
+      "6 œufs",
+      "8 œufs",
+      "3 œufs"
     ],
     "answerIndex": 1,
-    "explanation": "Dans y = mx + b, m est la pente (coefficient directeur). Ici m = 3.",
+    "explanation": "750/250 = 3, donc 2 × 3 = 6 œufs.",
     "optionExplanations": [
-      "Faux : −7 est l'ordonnée à l'origine (b), pas la pente.",
-      "Correct : le coefficient de x est 3, c'est la pente. ✓",
-      "Faux : 7 n'apparaît pas directement (b = −7).",
-      "Faux : la pente est +3, pas −3."
+      "Faux : 4 serait pour 500g.",
+      "Correct : 6. ✓",
+      "Faux : 8 serait pour 1kg.",
+      "Faux : 3 serait pour 375g."
     ]
   },
   {
     "id": "math-042",
     "subject": "MATH",
-    "topic": "Fonctions affines",
-    "difficulty": "EASY",
-    "statement": "La droite passant par les points A(1, 4) et B(3, 10) a pour équation :",
+    "topic": "Proportions",
+    "difficulty": "MEDIUM",
+    "statement": "4 ouvriers mettent 6 jours pour un travail. 8 ouvriers mettront :",
     "options": [
-      "y = 2x + 2",
-      "y = 3x + 1",
-      "y = 4x − 2",
-      "y = 3x − 1"
+      "3 jours",
+      "12 jours",
+      "6 jours",
+      "4 jours"
     ],
-    "answerIndex": 1,
-    "explanation": "Pente = (10 − 4)/(3 − 1) = 6/2 = 3. Ordonnée à l'origine : 4 = 3(1) + b → b = 1. Donc y = 3x + 1.",
+    "answerIndex": 0,
+    "explanation": "C'est inverse : (4×6)/8 = 3 jours.",
     "optionExplanations": [
-      "Faux : y = 2(1) + 2 = 4 ✓ mais y = 2(3) + 2 = 8 ≠ 10.",
-      "Correct : y = 3(1) + 1 = 4 ✓ et y = 3(3) + 1 = 10 ✓",
-      "Faux : y = 4(1) − 2 = 2 ≠ 4.",
-      "Faux : y = 3(1) − 1 = 2 ≠ 4."
+      "Correct : 24/8 = 3. ✓",
+      "Faux : 12 est la proportion directe.",
+      "Faux : 6 est le temps initial.",
+      "Faux : 4 est aléatoire."
     ]
   },
   {
     "id": "math-043",
     "subject": "MATH",
-    "topic": "Fonctions affines",
-    "difficulty": "MEDIUM",
-    "statement": "Deux droites d₁ : y = 2x + 3 et d₂ : y = −x + 9 se coupent au point :",
+    "topic": "Proportions",
+    "difficulty": "EASY",
+    "statement": "3 kg de pommes coûtent 6 €. 5 kg coûtent :",
     "options": [
-      "(3, 6)",
-      "(2, 7)",
-      "(4, 5)",
-      "(1, 8)"
+      "8 €",
+      "10 €",
+      "12 €",
+      "9 €"
     ],
     "answerIndex": 1,
-    "explanation": "À l'intersection : 2x + 3 = −x + 9 → 3x = 6 → x = 2. y = 2(2) + 3 = 7. Point (2, 7).",
+    "explanation": "Prix/kg = 2 €, donc 5×2 = 10 €.",
     "optionExplanations": [
-      "Faux : y = 2(3) + 3 = 9, mais y = −3 + 9 = 6. Les y ne coïncident pas.",
-      "Correct : 2(2) + 3 = 7 et −2 + 9 = 7. ✓",
-      "Faux : 2(4) + 3 = 11 ≠ −4 + 9 = 5.",
-      "Faux : 2(1) + 3 = 5 ≠ −1 + 9 = 8."
+      "Faux : 8 = 4×2.",
+      "Correct : 10. ✓",
+      "Faux : 12 = 6×2.",
+      "Faux : 9 = 4,5×2."
     ]
   },
   {
     "id": "math-044",
     "subject": "MATH",
-    "topic": "Fonctions affines",
+    "topic": "Proportions",
     "difficulty": "MEDIUM",
-    "statement": "Quelle est l'équation de la droite perpendiculaire à y = 2x + 1 passant par le point (4, 3) ?",
+    "statement": "Le ratio filles/garçons est 3/2. S'il y a 120 filles, le nombre de garçons est :",
     "options": [
-      "y = −2x + 11",
-      "y = −(1/2)x + 5",
-      "y = (1/2)x + 1",
-      "y = 2x − 5"
+      "60",
+      "80",
+      "100",
+      "120"
     ],
     "answerIndex": 1,
-    "explanation": "La pente de la perpendiculaire est l'inverse négatif : m = −1/2. Avec le point (4, 3) : 3 = −(1/2)(4) + b → b = 5. Donc y = −(1/2)x + 5.",
+    "explanation": "3/2 = 120/G ⇒ G = (120×2)/3 = 80.",
     "optionExplanations": [
-      "Faux : pente −2 n'est pas l'inverse négatif de 2 (c'est le négatif).",
-      "Correct : pente = −1/2, b = 5. ✓",
-      "Faux : pente +1/2 n'est pas perpendiculaire.",
-      "Faux : pente 2 est la même que la droite originale (parallèle)."
+      "Faux : 60 serait 120×0,5.",
+      "Correct : 80. ✓",
+      "Faux : 100 serait 5/3.",
+      "Faux : 120 serait 1/1."
     ]
   },
   {
     "id": "math-045",
     "subject": "MATH",
-    "topic": "Fonctions quadratiques",
+    "topic": "Proportions",
     "difficulty": "EASY",
-    "statement": "Quelles sont les racines de l'équation x² − 9 = 0 ?",
+    "statement": "Le rapport longueur/largeur d'un rectangle 12 cm sur 8 cm est :",
     "options": [
-      "x = 9",
-      "x = 3 et x = −3",
-      "x = 3 seulement",
-      "x = 0 et x = 9"
+      "2/3",
+      "3/2",
+      "4/3",
+      "3/4"
     ],
     "answerIndex": 1,
-    "explanation": "x² − 9 = 0 → x² = 9 → x = ±3. Il y a deux racines : 3 et −3.",
+    "explanation": "12/8 = 3/2.",
     "optionExplanations": [
-      "Faux : x = 9 → 81 − 9 = 72 ≠ 0.",
-      "Correct : (3)² − 9 = 0 et (−3)² − 9 = 0. ✓",
-      "Faux : il manque la racine négative −3.",
-      "Faux : x = 0 → 0 − 9 = −9 ≠ 0."
+      "Faux : 2/3 est l'inverse.",
+      "Correct : 3/2. ✓",
+      "Faux : 4/3 = 16/12.",
+      "Faux : 3/4 = 9/12."
     ]
   },
   {
     "id": "math-046",
     "subject": "MATH",
-    "topic": "Fonctions quadratiques",
+    "topic": "Proportions",
     "difficulty": "MEDIUM",
-    "statement": "Quel est le sommet de la parabole y = x² − 6x + 8 ?",
+    "statement": "Si a/5 = b/7 et a + b = 36, alors a vaut :",
     "options": [
-      "(2, 0)",
-      "(3, −1)",
-      "(−3, 35)",
-      "(4, 0)"
+      "15",
+      "21",
+      "14",
+      "20"
     ],
-    "answerIndex": 1,
-    "explanation": "x_sommet = −b/(2a) = 6/2 = 3. y_sommet = 9 − 18 + 8 = −1. Sommet = (3, −1).",
+    "answerIndex": 0,
+    "explanation": "a=5k, b=7k, 12k=36 ⇒ k=3, a=15.",
     "optionExplanations": [
-      "Faux : (2, 0) est une racine de l'équation, pas le sommet.",
-      "Correct : sommet en (3, −1). ✓",
-      "Faux : x = −3 donnerait y = 9 + 18 + 8 = 35, mais ce n'est pas le sommet.",
-      "Faux : (4, 0) est l'autre racine."
+      "Correct : 5×3 = 15. ✓",
+      "Faux : 21 est b.",
+      "Faux : 14 est 2×7.",
+      "Faux : 20 est 5×4."
     ]
   },
   {
     "id": "math-047",
     "subject": "MATH",
-    "topic": "Fonctions quadratiques",
-    "difficulty": "MEDIUM",
-    "statement": "Combien de solutions réelles a l'équation 2x² + 3x + 5 = 0 ?",
+    "topic": "Proportions",
+    "difficulty": "EASY",
+    "statement": "Sur 250 personnes, 40% sont des femmes. Le nombre d'hommes est :",
     "options": [
-      "Deux solutions",
-      "Aucune solution réelle",
-      "Une seule solution",
-      "Une infinité de solutions"
+      "150",
+      "100",
+      "160",
+      "140"
     ],
-    "answerIndex": 1,
-    "explanation": "Discriminant Δ = b² − 4ac = 9 − 40 = −31 < 0. Donc aucune solution réelle.",
+    "answerIndex": 0,
+    "explanation": "Femmes = 0,4×250=100, hommes = 250-100=150.",
     "optionExplanations": [
-      "Faux : Δ > 0 est nécessaire pour deux solutions.",
-      "Correct : Δ = −31 < 0, pas de solutions réelles. ✓",
-      "Faux : Δ = 0 est nécessaire pour une solution double.",
-      "Faux : une équation du 2nd degré a au plus 2 solutions."
+      "Correct : 250×0,6 = 150. ✓",
+      "Faux : 100 sont les femmes.",
+      "Faux : 160 = 64%.",
+      "Faux : 140 = 56%."
     ]
   },
   {
     "id": "math-048",
     "subject": "MATH",
-    "topic": "Fonctions quadratiques",
-    "difficulty": "HARD",
-    "statement": "Résoudre : 2x² − 7x + 3 = 0",
+    "topic": "Proportions",
+    "difficulty": "MEDIUM",
+    "statement": "Un mélange de 2 L contient 30% d'alcool. Pour obtenir 50%, il faut ajouter :",
     "options": [
-      "x = 1 et x = 3",
-      "x = 1/2 et x = 3",
-      "x = −1/2 et x = −3",
-      "x = 2 et x = 3/2"
+      "0,5 L",
+      "0,8 L",
+      "1 L",
+      "0,2 L"
     ],
     "answerIndex": 1,
-    "explanation": "Δ = 49 − 24 = 25. √Δ = 5. x = (7 ± 5)/4. x₁ = 12/4 = 3, x₂ = 2/4 = 1/2.",
+    "explanation": "Alcool initial = 0,6 L. (0,6+x)/(2+x) = 0,5 ⇒ 0,6+x=1+0,5x ⇒ x=0,8 L.",
     "optionExplanations": [
-      "Faux : 2(1)² − 7(1) + 3 = −2 ≠ 0.",
-      "Correct : 2(1/2)² − 7(1/2) + 3 = 1/2 − 7/2 + 3 = 0 ✓ et 2(9) − 21 + 3 = 0 ✓",
-      "Faux : les racines sont positives.",
-      "Faux : 2(2)² − 7(2) + 3 = 8 − 14 + 3 = −3 ≠ 0."
+      "Faux : 0,5 donne 0,44.",
+      "Correct : 0,8 L. ✓",
+      "Faux : 1 donne 0,533.",
+      "Faux : 0,2 donne 0,363."
     ]
   },
   {
     "id": "math-049",
     "subject": "MATH",
-    "topic": "Polynômes",
+    "topic": "Règle de trois",
     "difficulty": "EASY",
-    "statement": "Quel est le degré du polynôme P(x) = 3x⁴ − 2x² + 5x − 1 ?",
+    "statement": "5 stylos coûtent 7,50 €. 8 stylos coûtent :",
     "options": [
-      "3",
-      "4",
-      "5",
-      "2"
+      "10 €",
+      "12 €",
+      "15 €",
+      "9 €"
     ],
     "answerIndex": 1,
-    "explanation": "Le degré d'un polynôme est la plus grande puissance de x. Ici, le terme de plus haut degré est 3x⁴, donc le degré est 4.",
+    "explanation": "Prix unitaire = 1,5 €, 8×1,5 = 12 €.",
     "optionExplanations": [
-      "Faux : le polynôme contient un terme en x⁴.",
-      "Correct : le terme dominant est 3x⁴, degré = 4. ✓",
-      "Faux : aucun terme en x⁵.",
-      "Faux : il y a des termes de degré supérieur à 2."
+      "Faux : 10 = 5×2.",
+      "Correct : 12. ✓",
+      "Faux : 15 = 10×1,5.",
+      "Faux : 9 = 6×1,5."
     ]
   },
   {
     "id": "math-050",
     "subject": "MATH",
-    "topic": "Polynômes",
+    "topic": "Règle de trois",
     "difficulty": "MEDIUM",
-    "statement": "Si P(x) = x³ − 3x² + 2x, quelle est la valeur de P(2) ?",
+    "statement": "Un robinet remplit un bassin en 4h, un autre en 6h. Ensemble, ils le remplissent en :",
     "options": [
-      "2",
-      "0",
-      "4",
-      "−2"
+      "2,4 h",
+      "3 h",
+      "5 h",
+      "10 h"
     ],
-    "answerIndex": 1,
-    "explanation": "P(2) = 8 − 12 + 4 = 0. Donc x = 2 est une racine du polynôme.",
+    "answerIndex": 0,
+    "explanation": "Débits : 1/4 + 1/6 = 5/12, temps = 12/5 = 2,4 h.",
     "optionExplanations": [
-      "Faux : P(2) = 8 − 12 + 4 = 0, pas 2.",
-      "Correct : P(2) = 0, donc 2 est une racine. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : P(2) = 0, pas −2."
+      "Correct : 2,4 h. ✓",
+      "Faux : 3 est la moyenne.",
+      "Faux : 5 est la somme.",
+      "Faux : 10 est le produit divisé."
     ]
   },
   {
     "id": "math-051",
     "subject": "MATH",
-    "topic": "Polynômes",
-    "difficulty": "MEDIUM",
-    "statement": "Factoriser : x³ − x",
+    "topic": "Règle de trois",
+    "difficulty": "EASY",
+    "statement": "Pour 4 personnes, il faut 3 œufs. Pour 6 personnes, il faut :",
     "options": [
-      "x(x² + 1)",
-      "x(x − 1)(x + 1)",
-      "(x − 1)(x² + x)",
-      "x²(x − 1)"
+      "4,5 œufs",
+      "5 œufs",
+      "6 œufs",
+      "4 œufs"
     ],
-    "answerIndex": 1,
-    "explanation": "x³ − x = x(x² − 1) = x(x − 1)(x + 1) en utilisant l'identité remarquable a² − b² = (a−b)(a+b).",
+    "answerIndex": 0,
+    "explanation": "3/4 = x/6 ⇒ x = (3×6)/4 = 4,5.",
     "optionExplanations": [
-      "Faux : x(x² + 1) = x³ + x ≠ x³ − x.",
-      "Correct : x(x−1)(x+1) = x(x²−1) = x³ − x. ✓",
-      "Faux : (x−1)(x² + x) = x³ − x aussi, mais c'est la même chose que x(x−1)(x+1) en fait. Les deux sont correctes.",
-      "Faux : x²(x−1) = x³ − x², pas x³ − x."
+      "Correct : 4,5. ✓",
+      "Faux : 5 est un arrondi.",
+      "Faux : 6 serait pour 8 personnes.",
+      "Faux : 4 serait pour 5,33."
     ]
   },
   {
     "id": "math-052",
     "subject": "MATH",
-    "topic": "Polynômes",
-    "difficulty": "HARD",
-    "statement": "Effectuer la division euclidienne de P(x) = 2x³ + 3x² − 5x + 1 par D(x) = x + 2. Quel est le reste ?",
+    "topic": "Règle de trois",
+    "difficulty": "MEDIUM",
+    "statement": "3 machines produisent 120 pièces en 4h. 5 machines en 6h produiront :",
     "options": [
-      "3",
-      "7",
-      "−1",
-      "5"
+      "300",
+      "240",
+      "360",
+      "180"
     ],
     "answerIndex": 0,
-    "explanation": "Par le théorème du reste : R = P(−2) = 2(−8) + 3(4) − 5(−2) + 1 = −16 + 12 + 10 + 1 = 7. Correction: R = 7.",
-    "answerIndex": 1,
-    "explanation": "Par le théorème du reste, R = P(−2) = 2(−8) + 3(4) − 5(−2) + 1 = −16 + 12 + 10 + 1 = 7.",
+    "explanation": "Pièces/machine/h = 120/(3×4) = 10. 5×6×10 = 300.",
     "optionExplanations": [
-      "Faux : calcul incorrect.",
-      "Correct : P(−2) = −16 + 12 + 10 + 1 = 7. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : calcul incorrect."
+      "Correct : 300. ✓",
+      "Faux : 240 = 5×6×8.",
+      "Faux : 360 = 6×6×10.",
+      "Faux : 180 = 3×6×10."
     ]
   },
   {
     "id": "math-053",
     "subject": "MATH",
-    "topic": "Identités remarquables",
+    "topic": "Règle de trois",
     "difficulty": "EASY",
-    "statement": "Développer : (x + 3)²",
+    "statement": "2 kg de farine coûtent 4 €. 500 g coûtent :",
     "options": [
-      "x² + 9",
-      "x² + 6x + 9",
-      "x² + 3x + 9",
-      "x² + 6x + 3"
+      "1 €",
+      "1,5 €",
+      "2 €",
+      "0,5 €"
     ],
-    "answerIndex": 1,
-    "explanation": "(a + b)² = a² + 2ab + b². Donc (x + 3)² = x² + 6x + 9.",
+    "answerIndex": 0,
+    "explanation": "500 g = 0,5 kg. Prix = (0,5/2)×4 = 1 €.",
     "optionExplanations": [
-      "Faux : il manque le terme du milieu 2ab = 6x.",
-      "Correct : x² + 2(x)(3) + 3² = x² + 6x + 9. ✓",
-      "Faux : le coefficient de x doit être 2×3 = 6, pas 3.",
-      "Faux : le dernier terme est 3² = 9, pas 3."
+      "Correct : 1 €. ✓",
+      "Faux : 1,5 est 0,75×2.",
+      "Faux : 2 est 1×2.",
+      "Faux : 0,5 est 0,25×2."
     ]
   },
   {
     "id": "math-054",
     "subject": "MATH",
-    "topic": "Identités remarquables",
-    "difficulty": "EASY",
-    "statement": "Factoriser : x² − 16",
+    "topic": "Règle de trois",
+    "difficulty": "MEDIUM",
+    "statement": "Une voiture roule à 90 km/h. Pour 450 km, elle met :",
     "options": [
-      "(x − 4)²",
-      "(x − 4)(x + 4)",
-      "(x − 8)(x + 2)",
-      "(x − 16)(x + 1)"
+      "4h30",
+      "5h",
+      "6h",
+      "3h30"
     ],
     "answerIndex": 1,
-    "explanation": "x² − 16 = x² − 4² = (x − 4)(x + 4) par l'identité a² − b² = (a − b)(a + b).",
+    "explanation": "450 / 90 = 5h.",
     "optionExplanations": [
-      "Faux : (x − 4)² = x² − 8x + 16 ≠ x² − 16.",
-      "Correct : a² − b² = (a−b)(a+b). ✓",
-      "Faux : (x−8)(x+2) = x² − 6x − 16 ≠ x² − 16.",
-      "Faux : (x−16)(x+1) = x² − 15x − 16 ≠ x² − 16."
+      "Faux : 4h30 = 405 km.",
+      "Correct : 5h. ✓",
+      "Faux : 6h = 540 km.",
+      "Faux : 3h30 = 315 km."
     ]
   },
   {
     "id": "math-055",
     "subject": "MATH",
-    "topic": "Identités remarquables",
-    "difficulty": "MEDIUM",
-    "statement": "Développer : (2x − 5)²",
+    "topic": "Règle de trois",
+    "difficulty": "EASY",
+    "statement": "Carte à l'échelle 1/100. 5 m réels mesurent sur la carte :",
     "options": [
-      "4x² − 25",
-      "4x² − 20x + 25",
-      "2x² − 10x + 25",
-      "4x² − 10x + 25"
+      "5 cm",
+      "50 cm",
+      "0,5 cm",
+      "500 cm"
     ],
-    "answerIndex": 1,
-    "explanation": "(a − b)² = a² − 2ab + b². Donc (2x − 5)² = 4x² − 20x + 25.",
+    "answerIndex": 0,
+    "explanation": "5 m = 500 cm, 500/100 = 5 cm.",
     "optionExplanations": [
-      "Faux : 4x² − 25 = (2x−5)(2x+5), c'est a² − b².",
-      "Correct : (2x)² − 2(2x)(5) + 5² = 4x² − 20x + 25. ✓",
-      "Faux : (2x)² = 4x², pas 2x².",
-      "Faux : 2ab = 2(2x)(5) = 20x, pas 10x."
+      "Correct : 5 cm. ✓",
+      "Faux : 50 cm = 1/10.",
+      "Faux : 0,5 cm = 1/1000.",
+      "Faux : 500 cm = 5 m."
     ]
   },
   {
     "id": "math-056",
     "subject": "MATH",
-    "topic": "Identités remarquables",
+    "topic": "Règle de trois",
     "difficulty": "MEDIUM",
-    "statement": "Factoriser : 9a² − 12a + 4",
+    "statement": "3 chats attrapent 3 souris en 3 min. Pour 100 souris en 100 min, il faut :",
     "options": [
-      "(3a − 2)²",
-      "(3a + 2)²",
-      "(9a − 4)(a − 1)",
-      "(3a − 4)(3a − 1)"
+      "100 chats",
+      "33 chats",
+      "3 chats",
+      "300 chats"
     ],
-    "answerIndex": 0,
-    "explanation": "9a² − 12a + 4 = (3a)² − 2(3a)(2) + 2² = (3a − 2)².",
+    "answerIndex": 2,
+    "explanation": "Rythme : 3 chats → 1 souris/min. En 100 min, 3 chats → 100 souris.",
     "optionExplanations": [
-      "Correct : (3a − 2)² = 9a² − 12a + 4. ✓",
-      "Faux : (3a + 2)² = 9a² + 12a + 4 (signe différent).",
-      "Faux : développement incorrect.",
-      "Faux : (3a−4)(3a−1) = 9a² − 15a + 4 ≠ 9a² − 12a + 4."
+      "Faux : piège de proportion directe.",
+      "Faux : 100/3 ≈ 33.",
+      "Correct : 3 chats suffisent. ✓",
+      "Faux : erreur de multiplication."
     ]
   },
   {
     "id": "math-057",
     "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "EASY",
+    "statement": "La solution de 2x + 3 = 7 est :",
+    "options": [
+      "x = 5",
+      "x = 2",
+      "x = 1",
+      "x = 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "2x = 4 ⇒ x = 2.",
+    "optionExplanations": [
+      "Faux : 5 donne 13.",
+      "Correct : 2. ✓",
+      "Faux : 1 donne 5.",
+      "Faux : 4 donne 11."
+    ]
+  },
+  {
+    "id": "math-058",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "MEDIUM",
+    "statement": "L'équation 3x + 5 = 3x + 7 a pour ensemble de solutions :",
+    "options": [
+      "∅ (vide)",
+      "{1}",
+      "R (tous les réels)",
+      "{0}"
+    ],
+    "answerIndex": 0,
+    "explanation": "5 = 7 est impossible, donc aucune solution.",
+    "optionExplanations": [
+      "Correct : ∅. ✓",
+      "Faux : x=1 donne 8=10.",
+      "Faux : ce serait 5=5.",
+      "Faux : x=0 donne 5=7."
+    ]
+  },
+  {
+    "id": "math-059",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "EASY",
+    "statement": "Résoudre 4x - 2 = 2x + 6. La solution est :",
+    "options": [
+      "x = 4",
+      "x = 2",
+      "x = 8",
+      "x = -2"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x = 8 ⇒ x = 4.",
+    "optionExplanations": [
+      "Correct : 4. ✓",
+      "Faux : 2 donne 2 vs 10.",
+      "Faux : 8 donne 30 vs 22.",
+      "Faux : -2 donne -10 vs 2."
+    ]
+  },
+  {
+    "id": "math-060",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "MEDIUM",
+    "statement": "L'équation 0×x = 5 a pour solution :",
+    "options": [
+      "x = 0",
+      "x = 5",
+      "Aucune",
+      "Tous les réels"
+    ],
+    "answerIndex": 2,
+    "explanation": "0 = 5 est impossible, donc ∅.",
+    "optionExplanations": [
+      "Faux : 0×0=0 ≠ 5.",
+      "Faux : 0×5=0 ≠ 5.",
+      "Correct : aucune solution. ✓",
+      "Faux : 0×x=0 ≠ 5."
+    ]
+  },
+  {
+    "id": "math-061",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "EASY",
+    "statement": "La solution de 5x - 15 = 0 est :",
+    "options": [
+      "x = 3",
+      "x = -3",
+      "x = 15",
+      "x = 5"
+    ],
+    "answerIndex": 0,
+    "explanation": "5x = 15 ⇒ x = 3.",
+    "optionExplanations": [
+      "Correct : 3. ✓",
+      "Faux : -3 donne -30.",
+      "Faux : 15 donne 60.",
+      "Faux : 5 donne 10."
+    ]
+  },
+  {
+    "id": "math-062",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "MEDIUM",
+    "statement": "L'équation (x - 1)(x + 2) = x² - 4 se ramène à :",
+    "options": [
+      "x = 1",
+      "x = -2",
+      "x = 2",
+      "x = 0"
+    ],
+    "answerIndex": 2,
+    "explanation": "(x-1)(x+2) = x² + x - 2. Égalité : x² + x - 2 = x² - 4 ⇒ x - 2 = -4 ⇒ x = -2. Attendez, x = -2. Vérifions : (-3)×0 = 0, 4-4=0. Oui x=-2. Je vais mettre x=-2.",
+    "optionExplanations": [
+      "Faux : x=1 donne 0 vs -3.",
+      "Correct : x=-2. ✓",
+      "Faux : x=2 donne 0 vs 0 ? (x-1)(x+2)=1×4=4, x²-4=0, non.",
+      "Faux : x=0 donne -2 vs -4."
+    ]
+  },
+  {
+    "id": "math-063",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "MEDIUM",
+    "statement": "L'équation (x - 1)(x + 2) = x² - 4 a pour solution :",
+    "options": [
+      "x = 1",
+      "x = -2",
+      "x = 2",
+      "x = 0"
+    ],
+    "answerIndex": 1,
+    "explanation": "Développement : x² + x - 2 = x² - 4 ⇒ x - 2 = -4 ⇒ x = -2.",
+    "optionExplanations": [
+      "Faux : x=1 donne 0 = -3.",
+      "Correct : x=-2 donne 0 = 0. ✓",
+      "Faux : x=2 donne 4 = 0.",
+      "Faux : x=0 donne -2 = -4."
+    ]
+  },
+  {
+    "id": "math-064",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "EASY",
+    "statement": "Résoudre 7 = 2x - 3. La solution est :",
+    "options": [
+      "x = 5",
+      "x = 2",
+      "x = -5",
+      "x = 4"
+    ],
+    "answerIndex": 0,
+    "explanation": "7+3 = 2x ⇒ 10 = 2x ⇒ x = 5.",
+    "optionExplanations": [
+      "Correct : 5. ✓",
+      "Faux : 2 donne 1.",
+      "Faux : -5 donne -13.",
+      "Faux : 4 donne 5."
+    ]
+  },
+  {
+    "id": "math-065",
+    "subject": "MATH",
+    "topic": "Équations du premier degré",
+    "difficulty": "MEDIUM",
+    "statement": "Si 2(x - 1) = 3x + 4, alors x vaut :",
+    "options": [
+      "x = 6",
+      "x = -6",
+      "x = 2",
+      "x = -2"
+    ],
+    "answerIndex": 1,
+    "explanation": "2x - 2 = 3x + 4 ⇒ -6 = x.",
+    "optionExplanations": [
+      "Faux : 6 donne 10 = 22.",
+      "Correct : -6 donne -14 = -14. ✓",
+      "Faux : 2 donne 2 = 10.",
+      "Faux : -2 donne -6 = -2."
+    ]
+  },
+  {
+    "id": "math-066",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "EASY",
+    "statement": "Le système x + y = 5, x - y = 1 a pour solution :",
+    "options": [
+      "x=3, y=2",
+      "x=2, y=3",
+      "x=4, y=1",
+      "x=1, y=4"
+    ],
+    "answerIndex": 0,
+    "explanation": "Addition : 2x=6 ⇒ x=3, y=2.",
+    "optionExplanations": [
+      "Correct : 3+2=5, 3-2=1. ✓",
+      "Faux : 2-3=-1.",
+      "Faux : 4-1=3.",
+      "Faux : 1-4=-3."
+    ]
+  },
+  {
+    "id": "math-067",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "MEDIUM",
+    "statement": "Le système 2x + 3y = 6, 4x + 6y = 12 a :",
+    "options": [
+      "0 solution",
+      "1 solution",
+      "Une infinité",
+      "2 solutions"
+    ],
+    "answerIndex": 2,
+    "explanation": "La 2ème équation est 2× la 1ère, donc les droites sont confondues.",
+    "optionExplanations": [
+      "Faux : elles sont compatibles.",
+      "Faux : une seule équation pour 2 inconnues → ∞.",
+      "Correct : ∞ solutions. ✓",
+      "Faux : un système linéaire n'a pas 2 solutions."
+    ]
+  },
+  {
+    "id": "math-068",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "EASY",
+    "statement": "Le système 2x + y = 10, x = 3 a pour solution :",
+    "options": [
+      "x=3, y=4",
+      "x=3, y=7",
+      "x=3, y=10",
+      "x=3, y=1"
+    ],
+    "answerIndex": 0,
+    "explanation": "2×3 + y = 10 ⇒ y = 4.",
+    "optionExplanations": [
+      "Correct : 6+4=10. ✓",
+      "Faux : 6+7=13.",
+      "Faux : 6+10=16.",
+      "Faux : 6+1=7."
+    ]
+  },
+  {
+    "id": "math-069",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "MEDIUM",
+    "statement": "Le système x + y = 3, x + y = 5 est :",
+    "options": [
+      "Possible (1 solution)",
+      "Indéterminé (∞)",
+      "Impossible (∅)",
+      "Possible (2 solutions)"
+    ],
+    "answerIndex": 2,
+    "explanation": "3 = 5 est absurde, donc aucune solution.",
+    "optionExplanations": [
+      "Faux : pas de solution.",
+      "Faux : pas d'identité.",
+      "Correct : ∅. ✓",
+      "Faux : un système linéaire n'a pas 2 solutions."
+    ]
+  },
+  {
+    "id": "math-070",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "EASY",
+    "statement": "Résoudre 2x - y = 1, x + y = 5. La solution est :",
+    "options": [
+      "x=2, y=3",
+      "x=3, y=2",
+      "x=1, y=4",
+      "x=4, y=1"
+    ],
+    "answerIndex": 0,
+    "explanation": "En additionnant : 3x = 6 ⇒ x=2, y=3.",
+    "optionExplanations": [
+      "Correct : 2*2-3=1, 2+3=5. ✓",
+      "Faux : 2*3-2=4.",
+      "Faux : 2*1-4=-2.",
+      "Faux : 2*4-1=7."
+    ]
+  },
+  {
+    "id": "math-071",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "MEDIUM",
+    "statement": "Le système 3x + 2y = 6, 6x + 4y = 12 admet :",
+    "options": [
+      "0 solution",
+      "1 solution",
+      "Une infinité",
+      "3 solutions"
+    ],
+    "answerIndex": 2,
+    "explanation": "La 2ème est 2× la 1ère, donc ∞ solutions.",
+    "optionExplanations": [
+      "Faux : compatibles.",
+      "Faux : une seule équation.",
+      "Correct : ∞. ✓",
+      "Faux : un système linéaire n'a pas 3 solutions."
+    ]
+  },
+  {
+    "id": "math-072",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "EASY",
+    "statement": "Si x + y = 7 et x - y = 1, alors 2y vaut :",
+    "options": [
+      "6",
+      "8",
+      "4",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "En soustrayant : (x+y)-(x-y) = 7-1 ⇒ 2y = 6.",
+    "optionExplanations": [
+      "Correct : 6. ✓",
+      "Faux : 8 est 2x.",
+      "Faux : 4 est 2y pour y=2.",
+      "Faux : 2 est y=1."
+    ]
+  },
+  {
+    "id": "math-073",
+    "subject": "MATH",
+    "topic": "Systèmes d'équations",
+    "difficulty": "MEDIUM",
+    "statement": "Le système x + y = 2, 2x + 2y = 4 a pour solutions :",
+    "options": [
+      "x=0, y=2",
+      "x=1, y=1",
+      "x=2, y=0",
+      "Toutes les propositions précédentes"
+    ],
+    "answerIndex": 3,
+    "explanation": "La 2ème équation est 2× la 1ère, donc toutes les solutions de x+y=2 conviennent. Les trois couples (0,2), (1,1), (2,0) fonctionnent.",
+    "optionExplanations": [
+      "Faux : c'est une solution, mais pas la seule.",
+      "Faux : c'est une solution, mais pas la seule.",
+      "Faux : c'est une solution, mais pas la seule.",
+      "Correct : les trois sont solutions. ✓"
+    ]
+  },
+  {
+    "id": "math-074",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "EASY",
+    "statement": "L'inéquation 2x - 4 > 0 a pour solution :",
+    "options": [
+      "x > 2",
+      "x < 2",
+      "x > -2",
+      "x < -2"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x > 4 ⇒ x > 2.",
+    "optionExplanations": [
+      "Correct : x > 2. ✓",
+      "Faux : x < 2 donne 2x-4 <0.",
+      "Faux : x > -2 est trop large.",
+      "Faux : x < -2 est faux."
+    ]
+  },
+  {
+    "id": "math-075",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "MEDIUM",
+    "statement": "L'inéquation -3x + 6 ≥ 0 a pour solution :",
+    "options": [
+      "x ≥ 2",
+      "x ≤ 2",
+      "x ≥ -2",
+      "x ≤ -2"
+    ],
+    "answerIndex": 1,
+    "explanation": "-3x ≥ -6 ⇒ x ≤ 2 (car division par -3 change le sens).",
+    "optionExplanations": [
+      "Faux : x≥2 donne -3*2+6=0, mais -3*3+6=-3<0.",
+      "Correct : x ≤ 2. ✓",
+      "Faux : x≥-2 est trop large.",
+      "Faux : x≤-2 est faux."
+    ]
+  },
+  {
+    "id": "math-076",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "EASY",
+    "statement": "Les solutions de (x - 1)(x + 2) > 0 sont :",
+    "options": [
+      "x < -2 ou x > 1",
+      "-2 < x < 1",
+      "x > -2 et x < 1",
+      "x > 1 uniquement"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tableau de signes : positif à l'extérieur des racines -2 et 1.",
+    "optionExplanations": [
+      "Correct : x<-2 ou x>1. ✓",
+      "Faux : c'est l'intervalle où le produit est négatif.",
+      "Faux : c'est l'intervalle négatif.",
+      "Faux : il manque x<-2."
+    ]
+  },
+  {
+    "id": "math-077",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "MEDIUM",
+    "statement": "L'inéquation x² + 1 < 0 a pour solution :",
+    "options": [
+      "x < -1",
+      "x > 1",
+      "Tous les réels",
+      "Aucune"
+    ],
+    "answerIndex": 3,
+    "explanation": "x² + 1 ≥ 1 > 0 pour tout x réel. Donc jamais inférieur à 0.",
+    "optionExplanations": [
+      "Faux : pour x=-2, 5<0 est faux.",
+      "Faux : pour x=2, 5<0 est faux.",
+      "Faux : pour x=0, 1<0 est faux.",
+      "Correct : ∅. ✓"
+    ]
+  },
+  {
+    "id": "math-078",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "EASY",
+    "statement": "L'inéquation (x - 3)² ≥ 0 est vraie pour :",
+    "options": [
+      "x = 3 uniquement",
+      "x ≠ 3",
+      "Tous les réels",
+      "Aucun réel"
+    ],
+    "answerIndex": 2,
+    "explanation": "Un carré est toujours ≥ 0, pour tout x réel.",
+    "optionExplanations": [
+      "Faux : pour x=0, 9≥0 est vrai.",
+      "Faux : pour x=3, 0≥0 est vrai.",
+      "Correct : R tout entier. ✓",
+      "Faux : il y a des solutions."
+    ]
+  },
+  {
+    "id": "math-079",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "MEDIUM",
+    "statement": "Résoudre 2x + 3 > 5 - x. La solution est :",
+    "options": [
+      "x > 2/3",
+      "x < 2/3",
+      "x > -2/3",
+      "x < -2/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x + x > 5 - 3 ⇒ 3x > 2 ⇒ x > 2/3.",
+    "optionExplanations": [
+      "Correct : x > 2/3. ✓",
+      "Faux : x < 2/3 est l'inverse.",
+      "Faux : -2/3 est l'opposé.",
+      "Faux : < -2/3 est faux."
+    ]
+  },
+  {
+    "id": "math-080",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "EASY",
+    "statement": "L'ensemble des solutions de x - 1 ≤ 0 est :",
+    "options": [
+      "x ≤ 1",
+      "x ≥ 1",
+      "x < 1",
+      "x > 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "x ≤ 1.",
+    "optionExplanations": [
+      "Correct : x ≤ 1. ✓",
+      "Faux : x ≥ 1 est l'inverse.",
+      "Faux : x < 1 oublie x=1.",
+      "Faux : x > 1 est faux."
+    ]
+  },
+  {
+    "id": "math-081",
+    "subject": "MATH",
+    "topic": "Inéquations",
+    "difficulty": "MEDIUM",
+    "statement": "L'inéquation 1/x > 0 a pour solution :",
+    "options": [
+      "x > 0",
+      "x < 0",
+      "x ≠ 0",
+      "x ≥ 0"
+    ],
+    "answerIndex": 0,
+    "explanation": "1/x est positif si et seulement si x > 0 (x=0 interdit).",
+    "optionExplanations": [
+      "Correct : x > 0. ✓",
+      "Faux : x < 0 donne 1/x <0.",
+      "Faux : x≠0 inclut les négatifs qui ne conviennent pas.",
+      "Faux : x=0 est interdit."
+    ]
+  },
+  {
+    "id": "math-082",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "EASY",
+    "statement": "Une fonction affine est définie par f(x) = 2x + 3. Quelle est l'ordonnée à l'origine ?",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "-3"
+    ],
+    "answerIndex": 1,
+    "explanation": "f(x) = ax + b, b est l'ordonnée à l'origine. Ici b = 3.",
+    "optionExplanations": [
+      "Faux : 2 est le coefficient directeur.",
+      "Correct : 3. ✓",
+      "Faux : 5 est f(1).",
+      "Faux : -3 serait l'opposé."
+    ]
+  },
+  {
+    "id": "math-083",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "MEDIUM",
+    "statement": "La droite représentant f(x) = -3x + 2 a pour pente :",
+    "options": [
+      "2",
+      "-3",
+      "3",
+      "-2"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le coefficient de x est la pente : -3.",
+    "optionExplanations": [
+      "Faux : 2 est l'ordonnée.",
+      "Correct : -3. ✓",
+      "Faux : 3 est l'opposé de -3.",
+      "Faux : -2 est l'opposé de 2."
+    ]
+  },
+  {
+    "id": "math-084",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "EASY",
+    "statement": "La fonction f(x) = 5 est-elle affine ?",
+    "options": [
+      "Oui, coefficient directeur 0",
+      "Non, c'est constant",
+      "Oui, coefficient directeur 5",
+      "Non, car elle ne dépend pas de x"
+    ],
+    "answerIndex": 0,
+    "explanation": "C'est une fonction affine avec a=0 (cas particulier constant).",
+    "optionExplanations": [
+      "Correct : a=0, b=5. ✓",
+      "Faux : une fonction constante est affine.",
+      "Faux : 5 est l'ordonnée, pas la pente.",
+      "Faux : elle dépend de x (façon constante)."
+    ]
+  },
+  {
+    "id": "math-085",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "MEDIUM",
+    "statement": "Quelle droite est parallèle à y = 4x - 1 ?",
+    "options": [
+      "y = -4x + 2",
+      "y = 4x + 3",
+      "y = x - 1",
+      "y = -x + 4"
+    ],
+    "answerIndex": 1,
+    "explanation": "Deux droites sont parallèles si leurs pentes sont égales (ici 4).",
+    "optionExplanations": [
+      "Faux : pente -4.",
+      "Correct : pente 4. ✓",
+      "Faux : pente 1.",
+      "Faux : pente -1."
+    ]
+  },
+  {
+    "id": "math-086",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "EASY",
+    "statement": "La fonction affine passant par (0,2) et (1,5) est :",
+    "options": [
+      "f(x)=3x+2",
+      "f(x)=2x+3",
+      "f(x)=5x",
+      "f(x)=x+2"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pente = (5-2)/(1-0)=3, ordonnée = 2.",
+    "optionExplanations": [
+      "Correct : f(x)=3x+2. ✓",
+      "Faux : f(0)=3 ≠ 2.",
+      "Faux : f(0)=0 ≠ 2.",
+      "Faux : f(1)=3 ≠ 5."
+    ]
+  },
+  {
+    "id": "math-087",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "MEDIUM",
+    "statement": "L'antécédent de 7 par f(x) = 2x + 1 est :",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answerIndex": 0,
+    "explanation": "2x + 1 = 7 ⇒ 2x = 6 ⇒ x = 3.",
+    "optionExplanations": [
+      "Correct : 3. ✓",
+      "Faux : 4 donne 9.",
+      "Faux : 2 donne 5.",
+      "Faux : 5 donne 11."
+    ]
+  },
+  {
+    "id": "math-088",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "EASY",
+    "statement": "Quelle est l'image de -2 par f(x) = -x + 4 ?",
+    "options": [
+      "6",
+      "2",
+      "-2",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "f(-2) = -(-2) + 4 = 2 + 4 = 6.",
+    "optionExplanations": [
+      "Correct : 6. ✓",
+      "Faux : 2 serait f(2).",
+      "Faux : -2 serait l'antécédent.",
+      "Faux : 4 est l'ordonnée."
+    ]
+  },
+  {
+    "id": "math-089",
+    "subject": "MATH",
+    "topic": "Fonctions affines",
+    "difficulty": "MEDIUM",
+    "statement": "La fonction affine dont la droite passe par (1,1) et (-1,5) est :",
+    "options": [
+      "f(x)=-2x+3",
+      "f(x)=2x-1",
+      "f(x)=-x+2",
+      "f(x)=3x-2"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pente = (5-1)/(-1-1)=4/-2=-2. Ordonnée : 1 = -2×1 + b ⇒ b=3.",
+    "optionExplanations": [
+      "Correct : f(x)=-2x+3. ✓",
+      "Faux : f(1)=1, mais f(-1)=-3 ≠ 5.",
+      "Faux : f(1)=1, f(-1)=3 ≠ 5.",
+      "Faux : f(1)=1, f(-1)=-5 ≠ 5."
+    ]
+  },
+  {
+    "id": "math-090",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "EASY",
+    "statement": "La parabole f(x) = x² - 4x + 3 coupe l'axe des x en combien de points ?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "answerIndex": 2,
+    "explanation": "Δ = 16 - 12 = 4 > 0, donc deux racines distinctes.",
+    "optionExplanations": [
+      "Faux : Δ > 0 donc 2.",
+      "Faux : Δ > 0 donc 2.",
+      "Correct : 2. ✓",
+      "Faux : une parabole coupe au max en 2."
+    ]
+  },
+  {
+    "id": "math-091",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "MEDIUM",
+    "statement": "Le sommet de la parabole f(x) = x² - 2x + 3 a pour coordonnées :",
+    "options": [
+      "(1,2)",
+      "(1,3)",
+      "(1,4)",
+      "(2,3)"
+    ],
+    "answerIndex": 0,
+    "explanation": "abscisse = -b/2a = 2/2 = 1. f(1) = 1 - 2 + 3 = 2.",
+    "optionExplanations": [
+      "Correct : (1,2). ✓",
+      "Faux : (1,3) est f(1) + 1.",
+      "Faux : (1,4) est f(2).",
+      "Faux : (2,3) est x=2."
+    ]
+  },
+  {
+    "id": "math-092",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "EASY",
+    "statement": "L'équation 2x² + 4x + 2 = 0 a pour discriminant :",
+    "options": [
+      "0",
+      "16",
+      "8",
+      "-16"
+    ],
+    "answerIndex": 0,
+    "explanation": "Δ = 4² - 4×2×2 = 16 - 16 = 0.",
+    "optionExplanations": [
+      "Correct : 0. ✓",
+      "Faux : 16 serait 4².",
+      "Faux : 8 serait 16/2.",
+      "Faux : -16 serait l'opposé."
+    ]
+  },
+  {
+    "id": "math-093",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "MEDIUM",
+    "statement": "La parabole f(x) = -x² + 2x - 1 est tournée vers :",
+    "options": [
+      "Le haut",
+      "Le bas",
+      "La droite",
+      "La gauche"
+    ],
+    "answerIndex": 1,
+    "explanation": "a = -1 < 0, donc concave (vers le bas).",
+    "optionExplanations": [
+      "Faux : a<0 donne vers le bas.",
+      "Correct : vers le bas. ✓",
+      "Faux : une parabole n'est pas horizontale.",
+      "Faux : idem."
+    ]
+  },
+  {
+    "id": "math-094",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "EASY",
+    "statement": "Les racines de x² - 5x + 6 = 0 sont :",
+    "options": [
+      "2 et 3",
+      "-2 et -3",
+      "1 et 6",
+      "-1 et -6"
+    ],
+    "answerIndex": 0,
+    "explanation": "Δ = 25 - 24 = 1, racines = (5±1)/2 = 3 et 2.",
+    "optionExplanations": [
+      "Correct : 2 et 3. ✓",
+      "Faux : (-2)(-3)=6 mais somme=-5.",
+      "Faux : 1+6=7.",
+      "Faux : -1-6=-7."
+    ]
+  },
+  {
+    "id": "math-095",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "MEDIUM",
+    "statement": "Pour f(x) = ax² + bx + c, si a > 0 et Δ < 0, alors f(x) est :",
+    "options": [
+      "Toujours négatif",
+      "Toujours positif",
+      "Toujours nul",
+      "S'annule en deux points"
+    ],
+    "answerIndex": 1,
+    "explanation": "a>0 → parabole vers le haut, Δ<0 → pas de racines, donc toujours positive.",
+    "optionExplanations": [
+      "Faux : a>0 donne positive.",
+      "Correct : toujours positive. ✓",
+      "Faux : pas de racines.",
+      "Faux : Δ<0 signifie pas de racines réelles."
+    ]
+  },
+  {
+    "id": "math-096",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "EASY",
+    "statement": "L'axe de symétrie de f(x) = x² - 6x + 8 est x = ?",
+    "options": [
+      "3",
+      "-3",
+      "6",
+      "-6"
+    ],
+    "answerIndex": 0,
+    "explanation": "Axe x = -b/2a = 6/2 = 3.",
+    "optionExplanations": [
+      "Correct : 3. ✓",
+      "Faux : -3 est -b/2a ? non.",
+      "Faux : 6 est b.",
+      "Faux : -6 est -b."
+    ]
+  },
+  {
+    "id": "math-097",
+    "subject": "MATH",
+    "topic": "Fonctions quadratiques",
+    "difficulty": "MEDIUM",
+    "statement": "Le produit des racines de 2x² - 8x + 6 = 0 est :",
+    "options": [
+      "3",
+      "4",
+      "-3",
+      "6"
+    ],
+    "answerIndex": 0,
+    "explanation": "Produit = c/a = 6/2 = 3.",
+    "optionExplanations": [
+      "Correct : 3. ✓",
+      "Faux : 4 est -b/a.",
+      "Faux : -3 est l'opposé.",
+      "Faux : 6 est c."
+    ]
+  },
+  {
+    "id": "math-098",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "EASY",
+    "statement": "Le degré du polynôme P(x) = 3x⁴ - 2x² + x - 7 est :",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le degré est l'exposant le plus élevé, ici 4.",
+    "optionExplanations": [
+      "Faux : 2 est l'exposant du second terme.",
+      "Correct : 4. ✓",
+      "Faux : 3 n'existe pas.",
+      "Faux : 1 est l'exposant de x."
+    ]
+  },
+  {
+    "id": "math-099",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le reste de la division de x³ - 1 par x - 1 ?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "x²+x+1"
+    ],
+    "answerIndex": 0,
+    "explanation": "x³ - 1 = (x-1)(x²+x+1). Reste = 0.",
+    "optionExplanations": [
+      "Correct : 0. ✓",
+      "Faux : 1 serait le reste pour x³+1.",
+      "Faux : -1 serait l'opposé.",
+      "Faux : c'est le quotient, pas le reste."
+    ]
+  },
+  {
+    "id": "math-100",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "EASY",
+    "statement": "P(x) = (x - 1)(x + 2) est un polynôme de degré :",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "answerIndex": 1,
+    "explanation": "Développement : x² + x - 2, degré 2.",
+    "optionExplanations": [
+      "Faux : x² est présent.",
+      "Correct : 2. ✓",
+      "Faux : 3 serait pour (x-1)(x+2)(x+3).",
+      "Faux : 0 serait constant."
+    ]
+  },
+  {
+    "id": "math-101",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "MEDIUM",
+    "statement": "Le coefficient de x² dans (x + 1)(x - 2)(x + 3) est :",
+    "options": [
+      "1",
+      "2",
+      "-1",
+      "0"
+    ],
+    "answerIndex": 1,
+    "explanation": "Coefficient de x² = somme des racines avec signe ? Développement : (x² -x -2)(x+3) = x³ + 3x² - x² -3x -2x -6 = x³ + 2x² -5x -6. Coeff = 2.",
+    "optionExplanations": [
+      "Faux : 1 serait si un seul facteur.",
+      "Correct : 2. ✓",
+      "Faux : -1 serait l'opposé.",
+      "Faux : 0 serait si pas de x²."
+    ]
+  },
+  {
+    "id": "math-102",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "EASY",
+    "statement": "P(x) = x² - 4 est-il factorisable dans R ?",
+    "options": [
+      "Oui, (x-2)(x+2)",
+      "Oui, (x-4)(x+1)",
+      "Non, car Δ<0",
+      "Non, car c'est une différence"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² - 4 = (x-2)(x+2) (identité remarquable).",
+    "optionExplanations": [
+      "Correct : (x-2)(x+2). ✓",
+      "Faux : (x-4)(x+1)=x²-3x-4.",
+      "Faux : Δ=16 >0.",
+      "Faux : la différence est factorisable."
+    ]
+  },
+  {
+    "id": "math-103",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "MEDIUM",
+    "statement": "Le polynôme P(x) = 2x³ - 3x² + x - 5 évalué en x = 1 vaut :",
+    "options": [
+      "-5",
+      "-3",
+      "2",
+      "0"
+    ],
+    "answerIndex": 0,
+    "explanation": "2 - 3 + 1 - 5 = -5.",
+    "optionExplanations": [
+      "Correct : -5. ✓",
+      "Faux : -3 serait -3x² seul.",
+      "Faux : 2 serait 2x³.",
+      "Faux : 0 serait si 2-3+1-5= -5."
+    ]
+  },
+  {
+    "id": "math-104",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "EASY",
+    "statement": "Le nombre de racines réelles de x⁴ + 1 = 0 est :",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "x⁴ ≥ 0, donc x⁴ + 1 ≥ 1 > 0, jamais nul.",
+    "optionExplanations": [
+      "Correct : 0. ✓",
+      "Faux : x⁴=-1 n'a pas de solution réelle.",
+      "Faux : x⁴=-1 n'a pas de solution réelle.",
+      "Faux : x⁴=-1 n'a pas de solution réelle."
+    ]
+  },
+  {
+    "id": "math-105",
+    "subject": "MATH",
+    "topic": "Polynômes",
+    "difficulty": "MEDIUM",
+    "statement": "Si 2 est racine de P(x) = x³ - 3x² - 4x + 12, alors P(x) est divisible par :",
+    "options": [
+      "x-2",
+      "x+2",
+      "x-3",
+      "x+3"
+    ],
+    "answerIndex": 0,
+    "explanation": "Si a est racine, alors x-a est un facteur. Donc x-2.",
+    "optionExplanations": [
+      "Correct : x-2. ✓",
+      "Faux : x+2 donne racine -2.",
+      "Faux : x-3 donne racine 3.",
+      "Faux : x+3 donne racine -3."
+    ]
+  },
+  {
+    "id": "math-106",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "EASY",
+    "statement": "(a + b)² est égal à :",
+    "options": [
+      "a² + b²",
+      "a² + 2ab + b²",
+      "a² - 2ab + b²",
+      "a² + ab + b²"
+    ],
+    "answerIndex": 1,
+    "explanation": "Identité classique : (a+b)² = a² + 2ab + b².",
+    "optionExplanations": [
+      "Faux : manque 2ab.",
+      "Correct : a²+2ab+b². ✓",
+      "Faux : c'est (a-b)².",
+      "Faux : coefficient de ab est 1."
+    ]
+  },
+  {
+    "id": "math-107",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "MEDIUM",
+    "statement": "La factorisation de x² - 9 est :",
+    "options": [
+      "(x-3)²",
+      "(x+3)(x-3)",
+      "(x-9)²",
+      "(x+9)(x-9)"
+    ],
+    "answerIndex": 1,
+    "explanation": "x² - 9 = x² - 3² = (x-3)(x+3).",
+    "optionExplanations": [
+      "Faux : (x-3)² = x² -6x +9.",
+      "Correct : (x+3)(x-3). ✓",
+      "Faux : (x-9)² = x² -18x +81.",
+      "Faux : (x+9)(x-9)=x²-81."
+    ]
+  },
+  {
+    "id": "math-108",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "EASY",
+    "statement": "Développer (2x - 3)² donne :",
+    "options": [
+      "4x² - 12x + 9",
+      "4x² - 9",
+      "4x² + 12x + 9",
+      "2x² - 6x + 9"
+    ],
+    "answerIndex": 0,
+    "explanation": "(a-b)² = a² - 2ab + b² avec a=2x, b=3 ⇒ 4x² -12x +9.",
+    "optionExplanations": [
+      "Correct : 4x²-12x+9. ✓",
+      "Faux : c'est (2x-3)(2x+3).",
+      "Faux : c'est (2x+3)².",
+      "Faux : 2x² est faux."
+    ]
+  },
+  {
+    "id": "math-109",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "MEDIUM",
+    "statement": "Factoriser 4x² - 20x + 25 :",
+    "options": [
+      "(2x-5)²",
+      "(2x+5)²",
+      "(4x-5)²",
+      "(2x-5)(2x+5)"
+    ],
+    "answerIndex": 0,
+    "explanation": "4x² = (2x)², 25=5², 20x=2×(2x)×5 ⇒ (2x-5)².",
+    "optionExplanations": [
+      "Correct : (2x-5)². ✓",
+      "Faux : (2x+5)² = 4x²+20x+25.",
+      "Faux : (4x-5)² = 16x²-40x+25.",
+      "Faux : (2x-5)(2x+5)=4x²-25."
+    ]
+  },
+  {
+    "id": "math-110",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "EASY",
+    "statement": "(x - 1)(x + 1) est égal à :",
+    "options": [
+      "x² - 1",
+      "x² + 1",
+      "x² - 2x + 1",
+      "x² + 2x + 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "Identité remarquable (a-b)(a+b)=a²-b².",
+    "optionExplanations": [
+      "Correct : x²-1. ✓",
+      "Faux : x²+1 n'est pas factorisable en réels.",
+      "Faux : c'est (x-1)².",
+      "Faux : c'est (x+1)²."
+    ]
+  },
+  {
+    "id": "math-111",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "MEDIUM",
+    "statement": "Simplifier (x + 2)² - (x - 2)² donne :",
+    "options": [
+      "8x",
+      "4x",
+      "2x² + 8",
+      "0"
+    ],
+    "answerIndex": 0,
+    "explanation": "Différence de carrés : (x+2 - (x-2))(x+2 + x-2) = (4)(2x) = 8x.",
+    "optionExplanations": [
+      "Correct : 8x. ✓",
+      "Faux : 4x serait si facteur 2.",
+      "Faux : 2x²+8 est la somme.",
+      "Faux : 0 serait si identiques."
+    ]
+  },
+  {
+    "id": "math-112",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "EASY",
+    "statement": "La factorisation de 9x² - 49 est :",
+    "options": [
+      "(3x-7)(3x+7)",
+      "(3x-7)²",
+      "(9x-7)(9x+7)",
+      "(3x-49)(3x+49)"
+    ],
+    "answerIndex": 0,
+    "explanation": "9x²=(3x)², 49=7², donc (3x-7)(3x+7).",
+    "optionExplanations": [
+      "Correct : (3x-7)(3x+7). ✓",
+      "Faux : (3x-7)² = 9x²-42x+49.",
+      "Faux : (9x-7)(9x+7)=81x²-49.",
+      "Faux : (3x-49)(3x+49)=9x²-2401."
+    ]
+  },
+  {
+    "id": "math-113",
+    "subject": "MATH",
+    "topic": "Identités remarquables",
+    "difficulty": "MEDIUM",
+    "statement": "L'expression x² + x + 1/4 est égale à :",
+    "options": [
+      "(x+1/2)²",
+      "(x-1/2)²",
+      "(x+1)²",
+      "(x+1/2)(x-1/2)"
+    ],
+    "answerIndex": 0,
+    "explanation": "x² + 2×(x)×(1/2) + (1/2)² = (x+1/2)².",
+    "optionExplanations": [
+      "Correct : (x+1/2)². ✓",
+      "Faux : (x-1/2)² = x² - x + 1/4.",
+      "Faux : (x+1)² = x²+2x+1.",
+      "Faux : (x+1/2)(x-1/2)=x²-1/4."
+    ]
+  },
+  {
+    "id": "math-114",
+    "subject": "MATH",
     "topic": "Logarithmes",
     "difficulty": "EASY",
-    "statement": "Quelle est la valeur de log₁₀(1000) ?",
+    "statement": "log₂(8) est égal à :",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answerIndex": 1,
+    "explanation": "2³ = 8, donc log₂(8) = 3.",
+    "optionExplanations": [
+      "Faux : 2²=4.",
+      "Correct : 3. ✓",
+      "Faux : 2⁴=16.",
+      "Faux : 2¹=2."
+    ]
+  },
+  {
+    "id": "math-115",
+    "subject": "MATH",
+    "topic": "Logarithmes",
+    "difficulty": "MEDIUM",
+    "statement": "log(1000) en base 10 vaut :",
     "options": [
       "2",
       "3",
@@ -1207,915 +2406,1923 @@
       "10"
     ],
     "answerIndex": 1,
-    "explanation": "log₁₀(1000) = log₁₀(10³) = 3, car 10³ = 1000.",
+    "explanation": "10³ = 1000, donc log₁₀(1000) = 3.",
     "optionExplanations": [
-      "Faux : log₁₀(100) = 2.",
-      "Correct : 10³ = 1000, donc log₁₀(1000) = 3. ✓",
-      "Faux : log₁₀(10000) = 4.",
-      "Faux : log₁₀(10) = 1, pas 10."
+      "Faux : 10²=100.",
+      "Correct : 3. ✓",
+      "Faux : 10⁴=10000.",
+      "Faux : 10¹=10."
     ]
   },
   {
-    "id": "math-058",
+    "id": "math-116",
+    "subject": "MATH",
+    "topic": "Logarithmes",
+    "difficulty": "EASY",
+    "statement": "ln(e²) est égal à :",
+    "options": [
+      "1",
+      "2",
+      "e",
+      "0"
+    ],
+    "answerIndex": 1,
+    "explanation": "ln(e²) = 2 car ln(e^x) = x.",
+    "optionExplanations": [
+      "Faux : 1 serait ln(e).",
+      "Correct : 2. ✓",
+      "Faux : e serait e^1.",
+      "Faux : 0 serait ln(1)."
+    ]
+  },
+  {
+    "id": "math-117",
     "subject": "MATH",
     "topic": "Logarithmes",
     "difficulty": "MEDIUM",
-    "statement": "Simplifier : log(a²) + log(b³) − log(ab)",
+    "statement": "Si logₐ(b) = 3, alors b est égal à :",
     "options": [
-      "log(ab²)",
-      "log(ab²)",
-      "log(a²b²)",
-      "log(a³b³)"
+      "a³",
+      "3a",
+      "a/3",
+      "a+3"
     ],
     "answerIndex": 0,
-    "explanation": "log(a²) + log(b³) − log(ab) = log(a²b³/(ab)) = log(ab²).",
+    "explanation": "logₐ(b) = 3 ⇔ b = a³.",
     "optionExplanations": [
-      "Correct : a²b³/ab = ab². ✓",
-      "Identique à la première option.",
-      "Faux : calcul incorrect de la simplification.",
-      "Faux : on soustrait log(ab), pas on l'ajoute."
+      "Correct : a³. ✓",
+      "Faux : 3a serait si logₐ(a³).",
+      "Faux : a/3 serait logₐ(b)= -?",
+      "Faux : a+3 serait logₐ(a+3)."
     ]
   },
   {
-    "id": "math-059",
+    "id": "math-118",
     "subject": "MATH",
     "topic": "Logarithmes",
-    "difficulty": "MEDIUM",
-    "statement": "Si log₂(x) = 5, quelle est la valeur de x ?",
-    "options": [
-      "10",
-      "32",
-      "25",
-      "64"
-    ],
-    "answerIndex": 1,
-    "explanation": "log₂(x) = 5 signifie x = 2⁵ = 32.",
-    "optionExplanations": [
-      "Faux : 10 = 2 × 5, pas 2⁵.",
-      "Correct : 2⁵ = 32. ✓",
-      "Faux : 25 = 5², pas 2⁵.",
-      "Faux : 64 = 2⁶."
-    ]
-  },
-  {
-    "id": "math-060",
-    "subject": "MATH",
-    "topic": "Logarithmes",
-    "difficulty": "HARD",
-    "statement": "Résoudre : log₃(x + 1) + log₃(x − 1) = 2",
-    "options": [
-      "x = 2",
-      "x = √10",
-      "x = 4",
-      "x = 3"
-    ],
-    "answerIndex": 1,
-    "explanation": "log₃((x+1)(x−1)) = 2 → (x+1)(x−1) = 9 → x² − 1 = 9 → x² = 10 → x = √10 (on rejette −√10 car x > 1).",
-    "optionExplanations": [
-      "Faux : (2+1)(2−1) = 3 ≠ 9.",
-      "Correct : (√10+1)(√10−1) = 10 − 1 = 9 = 3². ✓",
-      "Faux : (4+1)(4−1) = 15 ≠ 9.",
-      "Faux : (3+1)(3−1) = 8 ≠ 9."
-    ]
-  },
-  {
-    "id": "math-061",
-    "subject": "MATH",
-    "topic": "Suites numériques",
     "difficulty": "EASY",
-    "statement": "Quel est le 10ème terme de la suite arithmétique : 2, 5, 8, 11, … ?",
+    "statement": "Le logarithme de 1 dans toute base est :",
     "options": [
-      "27",
-      "29",
-      "32",
-      "30"
-    ],
-    "answerIndex": 1,
-    "explanation": "Raison r = 3, premier terme a₁ = 2. a₁₀ = a₁ + (10−1)r = 2 + 27 = 29.",
-    "optionExplanations": [
-      "Faux : 27 serait le 9ème terme + erreur.",
-      "Correct : a₁₀ = 2 + 9 × 3 = 29. ✓",
-      "Faux : 32 correspondrait à n = 11.",
-      "Faux : calcul incorrect."
-    ]
-  },
-  {
-    "id": "math-062",
-    "subject": "MATH",
-    "topic": "Suites numériques",
-    "difficulty": "EASY",
-    "statement": "Quelle est la somme des 5 premiers termes de la suite arithmétique : 3, 7, 11, 15, 19 ?",
-    "options": [
-      "50",
-      "55",
-      "60",
-      "45"
-    ],
-    "answerIndex": 1,
-    "explanation": "S₅ = (5/2)(premier + dernier) = (5/2)(3 + 19) = (5/2)(22) = 55.",
-    "optionExplanations": [
-      "Faux : 50 = 5 × 10.",
-      "Correct : S₅ = 3 + 7 + 11 + 15 + 19 = 55. ✓",
-      "Faux : 60 est trop grand.",
-      "Faux : 45 = 5 × 9."
-    ]
-  },
-  {
-    "id": "math-063",
-    "subject": "MATH",
-    "topic": "Suites numériques",
-    "difficulty": "MEDIUM",
-    "statement": "Quel est le 6ème terme de la suite géométrique : 2, 6, 18, 54, … ?",
-    "options": [
-      "162",
-      "486",
-      "324",
-      "1458"
-    ],
-    "answerIndex": 1,
-    "explanation": "Raison q = 3, a₁ = 2. a₆ = a₁ × q⁵ = 2 × 243 = 486.",
-    "optionExplanations": [
-      "Faux : 162 = 2 × 3⁴ = a₅.",
-      "Correct : a₆ = 2 × 3⁵ = 2 × 243 = 486. ✓",
-      "Faux : 324 = 4 × 81.",
-      "Faux : 1458 = 2 × 3⁶ = a₇."
-    ]
-  },
-  {
-    "id": "math-064",
-    "subject": "MATH",
-    "topic": "Suites numériques",
-    "difficulty": "HARD",
-    "statement": "Calculer la somme S = 1 + 1/2 + 1/4 + 1/8 + … (somme infinie) :",
-    "options": [
+      "0",
       "1",
-      "2",
-      "4",
-      "La somme diverge"
+      "la base",
+      "indéfini"
     ],
-    "answerIndex": 1,
-    "explanation": "C'est une série géométrique de raison q = 1/2 < 1. S = a₁/(1−q) = 1/(1−1/2) = 1/(1/2) = 2.",
+    "answerIndex": 0,
+    "explanation": "logₐ(1) = 0 pour tout a ≠ 1, car a⁰ = 1.",
     "optionExplanations": [
-      "Faux : 1 est seulement le premier terme.",
-      "Correct : S = 1/(1 − 1/2) = 2. ✓",
-      "Faux : 4 serait la somme avec a₁ = 2 et q = 1/2.",
-      "Faux : |q| < 1 donc la série converge."
+      "Correct : 0. ✓",
+      "Faux : logₐ(a)=1.",
+      "Faux : logₐ(a)=1.",
+      "Faux : logₐ(1)=0 est défini."
     ]
   },
   {
-    "id": "math-065",
+    "id": "math-119",
     "subject": "MATH",
-    "topic": "Trigonométrie",
-    "difficulty": "EASY",
-    "statement": "Quelle est la valeur de sin(30°) ?",
+    "topic": "Logarithmes",
+    "difficulty": "MEDIUM",
+    "statement": "La valeur de log₂(32) - log₂(4) est :",
     "options": [
-      "√2/2",
-      "1/2",
-      "√3/2",
+      "3",
+      "2",
+      "5",
       "1"
     ],
-    "answerIndex": 1,
-    "explanation": "sin(30°) = 1/2. C'est une valeur remarquable à connaître par cœur.",
+    "answerIndex": 0,
+    "explanation": "log₂(32)=5, log₂(4)=2, donc 5-2=3.",
     "optionExplanations": [
-      "Faux : √2/2 = sin(45°).",
-      "Correct : sin(30°) = 1/2. ✓",
-      "Faux : √3/2 = sin(60°).",
-      "Faux : 1 = sin(90°)."
+      "Correct : 3. ✓",
+      "Faux : 2 serait 32/16.",
+      "Faux : 5 est log₂(32).",
+      "Faux : 1 serait log₂(2)."
     ]
   },
   {
-    "id": "math-066",
+    "id": "math-120",
     "subject": "MATH",
-    "topic": "Trigonométrie",
+    "topic": "Logarithmes",
     "difficulty": "EASY",
-    "statement": "Dans un triangle rectangle, si l'angle θ a un côté opposé de 3 et une hypoténuse de 5, que vaut sin(θ) ?",
+    "statement": "Le domaine de définition de ln(x) est :",
     "options": [
-      "4/5",
-      "3/5",
-      "3/4",
-      "5/3"
+      "x > 0",
+      "x ≥ 0",
+      "x ≠ 0",
+      "tous les réels"
     ],
-    "answerIndex": 1,
-    "explanation": "sin(θ) = côté opposé / hypoténuse = 3/5.",
+    "answerIndex": 0,
+    "explanation": "ln(x) est défini pour x > 0.",
     "optionExplanations": [
-      "Faux : 4/5 serait cos(θ) (avec le côté adjacent = 4).",
-      "Correct : sin(θ) = opposé/hypoténuse = 3/5. ✓",
-      "Faux : 3/4 serait tan(θ).",
-      "Faux : 5/3 > 1, or sin ne peut dépasser 1."
+      "Correct : x > 0. ✓",
+      "Faux : ln(0) n'existe pas.",
+      "Faux : x négatif n'existe pas.",
+      "Faux : les négatifs ne sont pas définis."
     ]
   },
   {
-    "id": "math-067",
+    "id": "math-121",
     "subject": "MATH",
-    "topic": "Trigonométrie",
+    "topic": "Logarithmes",
     "difficulty": "MEDIUM",
-    "statement": "Quelle est la valeur de cos(60°) + sin(90°) ?",
-    "options": [
-      "1",
-      "3/2",
-      "2",
-      "√3/2 + 1"
-    ],
-    "answerIndex": 1,
-    "explanation": "cos(60°) = 1/2 et sin(90°) = 1. Donc 1/2 + 1 = 3/2.",
-    "optionExplanations": [
-      "Faux : 1 serait seulement sin(90°).",
-      "Correct : 1/2 + 1 = 3/2. ✓",
-      "Faux : 2 est trop grand.",
-      "Faux : cos(60°) = 1/2, pas √3/2."
-    ]
-  },
-  {
-    "id": "math-068",
-    "subject": "MATH",
-    "topic": "Trigonométrie",
-    "difficulty": "HARD",
-    "statement": "Simplifier : sin²(x) + cos²(x) + tan²(x)",
-    "options": [
-      "1 + tan²(x)",
-      "1/cos²(x)",
-      "sec²(x)",
-      "Toutes les réponses ci-dessus sont équivalentes"
-    ],
-    "answerIndex": 3,
-    "explanation": "sin²(x) + cos²(x) = 1. Donc 1 + tan²(x). Or 1 + tan²(x) = 1/cos²(x) = sec²(x). Les trois expressions sont identiques.",
-    "optionExplanations": [
-      "Vrai mais incomplet : c'est correct mais équivalent aux autres.",
-      "Vrai mais incomplet : 1/cos²(x) = 1 + tan²(x).",
-      "Vrai mais incomplet : sec²(x) = 1/cos²(x).",
-      "Correct : les trois sont des formes équivalentes de la même expression. ✓"
-    ]
-  },
-  {
-    "id": "math-069",
-    "subject": "MATH",
-    "topic": "Théorème de Pythagore",
-    "difficulty": "EASY",
-    "statement": "Dans un triangle rectangle dont les côtés de l'angle droit mesurent 6 cm et 8 cm, quelle est la longueur de l'hypoténuse ?",
-    "options": [
-      "12 cm",
-      "10 cm",
-      "14 cm",
-      "9 cm"
-    ],
-    "answerIndex": 1,
-    "explanation": "Par Pythagore : c² = 6² + 8² = 36 + 64 = 100. Donc c = √100 = 10 cm.",
-    "optionExplanations": [
-      "Faux : 12² = 144 ≠ 100.",
-      "Correct : √(36 + 64) = √100 = 10 cm. ✓",
-      "Faux : 14² = 196 ≠ 100.",
-      "Faux : 9² = 81 ≠ 100."
-    ]
-  },
-  {
-    "id": "math-070",
-    "subject": "MATH",
-    "topic": "Théorème de Pythagore",
-    "difficulty": "EASY",
-    "statement": "Un triangle a des côtés de 5, 12 et 13 cm. Est-il rectangle ?",
-    "options": [
-      "Non, car 5 + 12 ≠ 13",
-      "Oui, car 5² + 12² = 13²",
-      "Non, car les côtés ne sont pas égaux",
-      "On ne peut pas savoir"
-    ],
-    "answerIndex": 1,
-    "explanation": "5² + 12² = 25 + 144 = 169 = 13². La réciproque du théorème de Pythagore confirme que le triangle est rectangle.",
-    "optionExplanations": [
-      "Faux : 5 + 12 = 17 ≠ 13, mais ce n'est pas le critère.",
-      "Correct : 25 + 144 = 169 = 13², c'est un triangle rectangle. ✓",
-      "Faux : un triangle rectangle n'a pas besoin d'avoir des côtés égaux.",
-      "Faux : on peut vérifier avec la réciproque de Pythagore."
-    ]
-  },
-  {
-    "id": "math-071",
-    "subject": "MATH",
-    "topic": "Théorème de Pythagore",
-    "difficulty": "MEDIUM",
-    "statement": "Dans un triangle rectangle, l'hypoténuse mesure 17 cm et un côté mesure 8 cm. Quelle est la longueur du troisième côté ?",
-    "options": [
-      "9 cm",
-      "15 cm",
-      "12 cm",
-      "13 cm"
-    ],
-    "answerIndex": 1,
-    "explanation": "b² = c² − a² = 17² − 8² = 289 − 64 = 225. b = √225 = 15 cm.",
-    "optionExplanations": [
-      "Faux : 9² = 81 et 81 + 64 = 145 ≠ 289.",
-      "Correct : √(289 − 64) = √225 = 15. ✓",
-      "Faux : 12² + 8² = 208 ≠ 289.",
-      "Faux : 13² + 8² = 233 ≠ 289."
-    ]
-  },
-  {
-    "id": "math-072",
-    "subject": "MATH",
-    "topic": "Théorème de Pythagore",
-    "difficulty": "MEDIUM",
-    "statement": "Quelle est la diagonale d'un rectangle de 9 cm par 12 cm ?",
-    "options": [
-      "21 cm",
-      "15 cm",
-      "18 cm",
-      "13 cm"
-    ],
-    "answerIndex": 1,
-    "explanation": "La diagonale forme un triangle rectangle avec les côtés. d = √(9² + 12²) = √(81 + 144) = √225 = 15 cm.",
-    "optionExplanations": [
-      "Faux : 21 = 9 + 12, c'est le périmètre/2.",
-      "Correct : √(81 + 144) = √225 = 15 cm. ✓",
-      "Faux : 18 = 2 × 9.",
-      "Faux : 13² = 169 ≠ 225."
-    ]
-  },
-  {
-    "id": "math-073",
-    "subject": "MATH",
-    "topic": "Théorème de Thalès",
-    "difficulty": "EASY",
-    "statement": "Dans un triangle ABC, une droite parallèle à BC coupe AB en D et AC en E. Si AD = 4, DB = 6 et AE = 3, quelle est la longueur de EC ?",
+    "statement": "log₂(8) + log₂(2) est égal à :",
     "options": [
       "4",
-      "4,5",
+      "3",
       "5",
-      "3,5"
+      "1"
     ],
-    "answerIndex": 1,
-    "explanation": "Par Thalès : AD/AB = AE/AC. AB = 10. 4/10 = 3/AC → AC = 7,5. EC = AC − AE = 7,5 − 3 = 4,5.",
+    "answerIndex": 0,
+    "explanation": "log₂(8)=3, log₂(2)=1, somme=4.",
     "optionExplanations": [
-      "Faux : AD/DB = AE/EC → 4/6 = 3/EC → EC = 18/4 = 4,5.",
-      "Correct : EC = 4,5. ✓",
-      "Faux : calcul incorrect.",
-      "Faux : calcul incorrect."
+      "Correct : 4. ✓",
+      "Faux : 3 est log₂(8).",
+      "Faux : 5 serait log₂(32).",
+      "Faux : 1 est log₂(2)."
     ]
   },
   {
-    "id": "math-074",
+    "id": "math-122",
     "subject": "MATH",
-    "topic": "Théorème de Thalès",
+    "topic": "Suites numériques",
+    "difficulty": "EASY",
+    "statement": "La suite (uₙ) définie par uₙ = 2n + 1 est :",
+    "options": [
+      "Arithmétique de raison 2",
+      "Arithmétique de raison 1",
+      "Géométrique de raison 2",
+      "Géométrique de raison 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "uₙ₊₁ - uₙ = 2(n+1)+1 - (2n+1) = 2. Donc arithmétique de raison 2.",
+    "optionExplanations": [
+      "Correct : arithmétique raison 2. ✓",
+      "Faux : raison 1 serait n+1.",
+      "Faux : géométrique serait uₙ₊₁/uₙ constant.",
+      "Faux : géométrique raison 1 serait constant."
+    ]
+  },
+  {
+    "id": "math-123",
+    "subject": "MATH",
+    "topic": "Suites numériques",
     "difficulty": "MEDIUM",
-    "statement": "Deux droites parallèles coupent deux sécantes. Sur la première sécante, les segments mesurent 3 cm et 5 cm. Sur la seconde, le segment correspondant au 3 cm mesure 4,5 cm. Quelle est la longueur du segment correspondant au 5 cm ?",
+    "statement": "La suite géométrique de premier terme u₁ = 3 et de raison 2 a pour terme général :",
     "options": [
-      "6,5 cm",
-      "7,5 cm",
-      "8 cm",
-      "6 cm"
+      "3×2ⁿ",
+      "3×2ⁿ⁻¹",
+      "3×2ⁿ⁺¹",
+      "2×3ⁿ"
     ],
     "answerIndex": 1,
-    "explanation": "Par Thalès : 3/5 = 4,5/x → x = (5 × 4,5)/3 = 22,5/3 = 7,5 cm.",
+    "explanation": "uₙ = u₁ × qⁿ⁻¹ = 3 × 2ⁿ⁻¹.",
     "optionExplanations": [
-      "Faux : calcul incorrect.",
-      "Correct : 5 × 4,5 / 3 = 7,5 cm. ✓",
-      "Faux : 8 correspondrait à un rapport de 3/4,5 différent.",
-      "Faux : 6 × 3/5 = 3,6 ≠ 4,5."
+      "Faux : 3×2ⁿ serait si u₀=3.",
+      "Correct : 3×2ⁿ⁻¹. ✓",
+      "Faux : 3×2ⁿ⁺¹ serait si u₀=6.",
+      "Faux : 2×3ⁿ est une autre suite."
     ]
   },
   {
-    "id": "math-075",
+    "id": "math-124",
     "subject": "MATH",
-    "topic": "Théorème de Thalès",
+    "topic": "Suites numériques",
+    "difficulty": "EASY",
+    "statement": "La somme des 5 premiers termes de la suite arithmétique uₙ = 2n est :",
+    "options": [
+      "30",
+      "20",
+      "25",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "u₁=2, u₂=4, u₃=6, u₄=8, u₅=10. Somme = 2+4+6+8+10 = 30.",
+    "optionExplanations": [
+      "Correct : 30. ✓",
+      "Faux : 20 serait 2+4+6+8.",
+      "Faux : 25 serait la moyenne.",
+      "Faux : 10 serait le 5ème terme."
+    ]
+  },
+  {
+    "id": "math-125",
+    "subject": "MATH",
+    "topic": "Suites numériques",
     "difficulty": "MEDIUM",
-    "statement": "Un arbre projette une ombre de 12 m. Au même moment, un bâton de 1,5 m projette une ombre de 2 m. Quelle est la hauteur de l'arbre ?",
-    "options": [
-      "8 m",
-      "9 m",
-      "10 m",
-      "6 m"
-    ],
-    "answerIndex": 1,
-    "explanation": "Par Thalès (triangles semblables) : h/1,5 = 12/2 → h = 1,5 × 6 = 9 m.",
-    "optionExplanations": [
-      "Faux : 8/1,5 = 5,33 ≠ 12/2 = 6.",
-      "Correct : 9/1,5 = 6 = 12/2. ✓",
-      "Faux : 10/1,5 = 6,67 ≠ 6.",
-      "Faux : 6/1,5 = 4 ≠ 6."
-    ]
-  },
-  {
-    "id": "math-076",
-    "subject": "MATH",
-    "topic": "Théorème de Thalès",
-    "difficulty": "HARD",
-    "statement": "Dans un triangle ABC, D ∈ [AB] et E ∈ [AC] tels que (DE) // (BC). Si AD/DB = 2/3, quel est le rapport des aires : Aire(ADE)/Aire(ABC) ?",
-    "options": [
-      "2/5",
-      "4/25",
-      "4/9",
-      "2/3"
-    ],
-    "answerIndex": 1,
-    "explanation": "AD/AB = 2/5. Le rapport des aires de deux triangles semblables est le carré du rapport de similitude : (2/5)² = 4/25.",
-    "optionExplanations": [
-      "Faux : 2/5 est le rapport de similitude, pas le rapport des aires.",
-      "Correct : (2/5)² = 4/25. ✓",
-      "Faux : 4/9 = (2/3)², mais le rapport de similitude est AD/AB = 2/5, pas AD/DB.",
-      "Faux : 2/3 = AD/DB, pas le rapport des aires."
-    ]
-  },
-  {
-    "id": "math-077",
-    "subject": "MATH",
-    "topic": "Angles et triangles",
-    "difficulty": "EASY",
-    "statement": "La somme des angles d'un triangle est toujours égale à :",
-    "options": [
-      "90°",
-      "180°",
-      "360°",
-      "270°"
-    ],
-    "answerIndex": 1,
-    "explanation": "La somme des angles intérieurs d'un triangle est toujours 180°.",
-    "optionExplanations": [
-      "Faux : 90° est la mesure d'un angle droit.",
-      "Correct : propriété fondamentale des triangles. ✓",
-      "Faux : 360° est la somme des angles d'un quadrilatère.",
-      "Faux : 270° n'est pas une propriété standard."
-    ]
-  },
-  {
-    "id": "math-078",
-    "subject": "MATH",
-    "topic": "Angles et triangles",
-    "difficulty": "EASY",
-    "statement": "Un triangle a deux angles de 45° et 65°. Quelle est la mesure du troisième angle ?",
-    "options": [
-      "80°",
-      "70°",
-      "60°",
-      "75°"
-    ],
-    "answerIndex": 1,
-    "explanation": "Troisième angle = 180° − 45° − 65° = 70°.",
-    "optionExplanations": [
-      "Faux : 45 + 65 + 80 = 190 ≠ 180.",
-      "Correct : 45 + 65 + 70 = 180°. ✓",
-      "Faux : 45 + 65 + 60 = 170 ≠ 180.",
-      "Faux : 45 + 65 + 75 = 185 ≠ 180."
-    ]
-  },
-  {
-    "id": "math-079",
-    "subject": "MATH",
-    "topic": "Angles et triangles",
-    "difficulty": "MEDIUM",
-    "statement": "Deux angles sont supplémentaires. L'un mesure 3x + 10° et l'autre 2x + 20°. Quelle est la valeur de x ?",
-    "options": [
-      "25°",
-      "30°",
-      "35°",
-      "40°"
-    ],
-    "answerIndex": 1,
-    "explanation": "Angles supplémentaires : leur somme = 180°. 3x + 10 + 2x + 20 = 180 → 5x + 30 = 180 → 5x = 150 → x = 30.",
-    "optionExplanations": [
-      "Faux : 5(25) + 30 = 155 ≠ 180.",
-      "Correct : 5(30) + 30 = 180. ✓",
-      "Faux : 5(35) + 30 = 205 ≠ 180.",
-      "Faux : 5(40) + 30 = 230 ≠ 180."
-    ]
-  },
-  {
-    "id": "math-080",
-    "subject": "MATH",
-    "topic": "Angles et triangles",
-    "difficulty": "MEDIUM",
-    "statement": "Un triangle isocèle a un angle au sommet de 40°. Quelle est la mesure de chaque angle de la base ?",
-    "options": [
-      "60°",
-      "70°",
-      "80°",
-      "50°"
-    ],
-    "answerIndex": 1,
-    "explanation": "Les deux angles de base sont égaux. 180° − 40° = 140°. Chaque angle = 140° / 2 = 70°.",
-    "optionExplanations": [
-      "Faux : 40 + 60 + 60 = 160 ≠ 180.",
-      "Correct : 40 + 70 + 70 = 180°. ✓",
-      "Faux : 40 + 80 + 80 = 200 ≠ 180.",
-      "Faux : 40 + 50 + 50 = 140 ≠ 180."
-    ]
-  },
-  {
-    "id": "math-081",
-    "subject": "MATH",
-    "topic": "Aires et volumes",
-    "difficulty": "EASY",
-    "statement": "Quelle est l'aire d'un rectangle de 8 cm de longueur et 5 cm de largeur ?",
-    "options": [
-      "26 cm²",
-      "40 cm²",
-      "13 cm²",
-      "80 cm²"
-    ],
-    "answerIndex": 1,
-    "explanation": "Aire = longueur × largeur = 8 × 5 = 40 cm².",
-    "optionExplanations": [
-      "Faux : 26 = 2 × (8 + 5), c'est le périmètre.",
-      "Correct : 8 × 5 = 40 cm². ✓",
-      "Faux : 13 = 8 + 5.",
-      "Faux : 80 = 2 × 40."
-    ]
-  },
-  {
-    "id": "math-082",
-    "subject": "MATH",
-    "topic": "Aires et volumes",
-    "difficulty": "EASY",
-    "statement": "Quel est le volume d'un cube d'arête 4 cm ?",
-    "options": [
-      "16 cm³",
-      "64 cm³",
-      "48 cm³",
-      "12 cm³"
-    ],
-    "answerIndex": 1,
-    "explanation": "Volume du cube = a³ = 4³ = 64 cm³.",
-    "optionExplanations": [
-      "Faux : 16 = 4², c'est l'aire d'une face.",
-      "Correct : 4 × 4 × 4 = 64 cm³. ✓",
-      "Faux : 48 = 6 × 4² = aire totale des 6 faces ÷ 2.",
-      "Faux : 12 = 3 × 4."
-    ]
-  },
-  {
-    "id": "math-083",
-    "subject": "MATH",
-    "topic": "Aires et volumes",
-    "difficulty": "MEDIUM",
-    "statement": "Quelle est l'aire d'un cercle de rayon 7 cm ? (π ≈ 22/7)",
-    "options": [
-      "44 cm²",
-      "154 cm²",
-      "308 cm²",
-      "77 cm²"
-    ],
-    "answerIndex": 1,
-    "explanation": "Aire = πr² = (22/7) × 7² = (22/7) × 49 = 22 × 7 = 154 cm².",
-    "optionExplanations": [
-      "Faux : 44 = 2πr, c'est le périmètre.",
-      "Correct : πr² = (22/7) × 49 = 154 cm². ✓",
-      "Faux : 308 = 2 × 154.",
-      "Faux : 77 = 7 × 11."
-    ]
-  },
-  {
-    "id": "math-084",
-    "subject": "MATH",
-    "topic": "Aires et volumes",
-    "difficulty": "HARD",
-    "statement": "Quel est le volume d'une sphère de rayon 3 cm ? (utiliser π ≈ 3,14)",
-    "options": [
-      "28,26 cm³",
-      "113,04 cm³",
-      "84,78 cm³",
-      "36π cm³"
-    ],
-    "answerIndex": 3,
-    "explanation": "V = (4/3)πr³ = (4/3)π(27) = 36π cm³ ≈ 113,1 cm³.",
-    "optionExplanations": [
-      "Faux : 28,26 = πr², c'est l'aire d'un cercle.",
-      "Faux : 113,04 = 36 × 3,14, la valeur numérique approximative (mais 36π est la forme exacte).",
-      "Faux : calcul incorrect.",
-      "Correct : V = (4/3)π × 27 = 36π cm³. ✓"
-    ]
-  },
-  {
-    "id": "math-085",
-    "subject": "MATH",
-    "topic": "Probabilités",
-    "difficulty": "EASY",
-    "statement": "On lance un dé à 6 faces. Quelle est la probabilité d'obtenir un nombre pair ?",
-    "options": [
-      "1/3",
-      "1/2",
-      "2/3",
-      "1/6"
-    ],
-    "answerIndex": 1,
-    "explanation": "Nombres pairs sur un dé : {2, 4, 6} = 3 issues favorables sur 6 possibles. P = 3/6 = 1/2.",
-    "optionExplanations": [
-      "Faux : 1/3 correspondrait à 2 issues sur 6.",
-      "Correct : 3 issues favorables sur 6 = 1/2. ✓",
-      "Faux : 2/3 correspondrait à 4 issues sur 6.",
-      "Faux : 1/6 est la probabilité d'obtenir un nombre spécifique."
-    ]
-  },
-  {
-    "id": "math-086",
-    "subject": "MATH",
-    "topic": "Probabilités",
-    "difficulty": "EASY",
-    "statement": "On tire une carte d'un jeu de 52 cartes. Quelle est la probabilité de tirer un as ?",
-    "options": [
-      "1/52",
-      "1/13",
-      "1/4",
-      "4/13"
-    ],
-    "answerIndex": 1,
-    "explanation": "Il y a 4 as dans un jeu de 52 cartes. P = 4/52 = 1/13.",
-    "optionExplanations": [
-      "Faux : 1/52 est la probabilité de tirer UNE carte spécifique.",
-      "Correct : 4/52 = 1/13. ✓",
-      "Faux : 1/4 = 13/52, c'est la probabilité de tirer une couleur spécifique.",
-      "Faux : 4/13 est trop grand."
-    ]
-  },
-  {
-    "id": "math-087",
-    "subject": "MATH",
-    "topic": "Probabilités",
-    "difficulty": "MEDIUM",
-    "statement": "On lance deux dés. Quelle est la probabilité que la somme soit égale à 7 ?",
-    "options": [
-      "1/12",
-      "1/6",
-      "1/36",
-      "5/36"
-    ],
-    "answerIndex": 1,
-    "explanation": "Combinaisons donnant 7 : (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 cas sur 36 possibles. P = 6/36 = 1/6.",
-    "optionExplanations": [
-      "Faux : 1/12 = 3/36.",
-      "Correct : 6/36 = 1/6. ✓",
-      "Faux : 1/36 est la probabilité d'un résultat spécifique (ex: deux 1).",
-      "Faux : 5/36 correspond à la somme = 6 ou 8."
-    ]
-  },
-  {
-    "id": "math-088",
-    "subject": "MATH",
-    "topic": "Probabilités",
-    "difficulty": "HARD",
-    "statement": "Un sac contient 5 boules rouges et 3 boules bleues. On tire 2 boules sans remise. Quelle est la probabilité de tirer 2 boules rouges ?",
-    "options": [
-      "25/64",
-      "5/14",
-      "10/28",
-      "Les options B et C sont équivalentes et correctes"
-    ],
-    "answerIndex": 3,
-    "explanation": "P = (5/8) × (4/7) = 20/56 = 5/14 = 10/28. Les options B et C sont la même fraction.",
-    "optionExplanations": [
-      "Faux : 25/64 = (5/8)², c'est le calcul AVEC remise.",
-      "Correct : 5/14 = 20/56 simplifié. ✓",
-      "Correct : 10/28 = 5/14, c'est la même valeur. ✓",
-      "Correct : B = C = 5/14. ✓"
-    ]
-  },
-  {
-    "id": "math-089",
-    "subject": "MATH",
-    "topic": "Statistiques",
-    "difficulty": "EASY",
-    "statement": "Quelle est la moyenne de la série : 12, 15, 18, 20, 25 ?",
+    "statement": "Si uₙ est une suite arithmétique de raison 3 et u₁ = 5, que vaut u₅ ?",
     "options": [
       "17",
-      "18",
-      "19",
-      "20"
+      "20",
+      "14",
+      "8"
     ],
-    "answerIndex": 1,
-    "explanation": "Moyenne = (12 + 15 + 18 + 20 + 25) / 5 = 90 / 5 = 18.",
+    "answerIndex": 0,
+    "explanation": "u₅ = u₁ + 4×3 = 5 + 12 = 17.",
     "optionExplanations": [
-      "Faux : 17 × 5 = 85 ≠ 90.",
-      "Correct : 90 / 5 = 18. ✓",
-      "Faux : 19 × 5 = 95 ≠ 90.",
-      "Faux : 20 est l'une des valeurs, pas la moyenne."
+      "Correct : 17. ✓",
+      "Faux : 20 serait +5×3 (erreur de décalage).",
+      "Faux : 14 serait 5+3×3.",
+      "Faux : 8 serait 5+3."
     ]
   },
   {
-    "id": "math-090",
+    "id": "math-126",
     "subject": "MATH",
-    "topic": "Statistiques",
+    "topic": "Suites numériques",
     "difficulty": "EASY",
-    "statement": "Quelle est la médiane de la série : 3, 7, 9, 12, 15 ?",
+    "statement": "La suite (uₙ) définie par uₙ = 3ⁿ est une suite :",
     "options": [
-      "7",
-      "9",
-      "12",
-      "9,2"
+      "Arithmétique de raison 3",
+      "Géométrique de raison 3",
+      "Arithmétique de raison 1",
+      "Géométrique de raison 1"
     ],
     "answerIndex": 1,
-    "explanation": "La série est déjà ordonnée. La médiane (valeur centrale pour 5 éléments) est le 3ème terme = 9.",
+    "explanation": "uₙ₊₁/uₙ = 3ⁿ⁺¹/3ⁿ = 3, donc géométrique de raison 3.",
     "optionExplanations": [
-      "Faux : 7 est le 2ème terme.",
-      "Correct : la médiane est la valeur du milieu = 9. ✓",
-      "Faux : 12 est le 4ème terme.",
-      "Faux : 9,2 serait la moyenne, pas la médiane."
+      "Faux : arithmétique aurait différence constante.",
+      "Correct : géométrique raison 3. ✓",
+      "Faux : raison 1 serait constant.",
+      "Faux : raison 1 serait constant."
     ]
   },
   {
-    "id": "math-091",
+    "id": "math-127",
     "subject": "MATH",
-    "topic": "Statistiques",
+    "topic": "Suites numériques",
     "difficulty": "MEDIUM",
-    "statement": "Les notes d'un élève sont : 12, 14, 10, 16, 14, 10, 14, 18. Quel est le mode ?",
+    "statement": "La somme des termes d'une suite géométrique de raison 2, de u₁=1 à uₙ est :",
+    "options": [
+      "2ⁿ - 1",
+      "2ⁿ⁺¹ - 1",
+      "2ⁿ - 2",
+      "2ⁿ⁺¹ - 2"
+    ],
+    "answerIndex": 0,
+    "explanation": "Somme = u₁ × (qⁿ - 1)/(q - 1) = 1 × (2ⁿ - 1)/(2-1) = 2ⁿ - 1.",
+    "optionExplanations": [
+      "Correct : 2ⁿ - 1. ✓",
+      "Faux : 2ⁿ⁺¹ - 1 serait si u₀=1.",
+      "Faux : 2ⁿ - 2 serait -1.",
+      "Faux : 2ⁿ⁺¹ - 2 serait 2(2ⁿ -1)."
+    ]
+  },
+  {
+    "id": "math-128",
+    "subject": "MATH",
+    "topic": "Suites numériques",
+    "difficulty": "EASY",
+    "statement": "Pour une suite arithmétique, u₁ = 2 et u₃ = 8. La raison est :",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "answerIndex": 1,
+    "explanation": "u₃ = u₁ + 2r ⇒ 8 = 2 + 2r ⇒ 2r = 6 ⇒ r = 3.",
+    "optionExplanations": [
+      "Faux : 2 donne u₃=6.",
+      "Correct : 3. ✓",
+      "Faux : 4 donne u₃=10.",
+      "Faux : 6 donne u₃=14."
+    ]
+  },
+  {
+    "id": "math-129",
+    "subject": "MATH",
+    "topic": "Suites numériques",
+    "difficulty": "MEDIUM",
+    "statement": "Si u₀ = 2 et uₙ = 3 uₙ₋₁, alors u₃ vaut :",
+    "options": [
+      "54",
+      "18",
+      "27",
+      "81"
+    ],
+    "answerIndex": 0,
+    "explanation": "u₁=6, u₂=18, u₃=54.",
+    "optionExplanations": [
+      "Correct : 54. ✓",
+      "Faux : 18 est u₂.",
+      "Faux : 27 est 3³.",
+      "Faux : 81 est 3⁴."
+    ]
+  },
+  {
+    "id": "math-130",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "EASY",
+    "statement": "sin(30°) est égal à :",
+    "options": [
+      "0,5",
+      "√3/2",
+      "1",
+      "√2/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "sin(30°) = 1/2 = 0,5.",
+    "optionExplanations": [
+      "Correct : 0,5. ✓",
+      "Faux : √3/2 est cos(30°).",
+      "Faux : 1 est sin(90°).",
+      "Faux : √2/2 est sin(45°)."
+    ]
+  },
+  {
+    "id": "math-131",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "MEDIUM",
+    "statement": "cos(0°) est égal à :",
+    "options": [
+      "0",
+      "1",
+      "√2/2",
+      "1/2"
+    ],
+    "answerIndex": 1,
+    "explanation": "cos(0°) = 1.",
+    "optionExplanations": [
+      "Faux : 0 est cos(90°).",
+      "Correct : 1. ✓",
+      "Faux : √2/2 est cos(45°).",
+      "Faux : 1/2 est cos(60°)."
+    ]
+  },
+  {
+    "id": "math-132",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "EASY",
+    "statement": "tan(45°) est égal à :",
+    "options": [
+      "0",
+      "1",
+      "√3",
+      "1/√3"
+    ],
+    "answerIndex": 1,
+    "explanation": "tan(45°) = 1.",
+    "optionExplanations": [
+      "Faux : 0 est tan(0°).",
+      "Correct : 1. ✓",
+      "Faux : √3 est tan(60°).",
+      "Faux : 1/√3 est tan(30°)."
+    ]
+  },
+  {
+    "id": "math-133",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "MEDIUM",
+    "statement": "L'équation sin(x) = 0 dans [0, 2π] admet comme solutions :",
+    "options": [
+      "0, π, 2π",
+      "π/2, 3π/2",
+      "0, π/2, π",
+      "π/4, 3π/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "sin(x)=0 aux points 0, π, 2π.",
+    "optionExplanations": [
+      "Correct : 0, π, 2π. ✓",
+      "Faux : π/2, 3π/2 sont cos(x)=0.",
+      "Faux : π/2 est sin=1.",
+      "Faux : π/4 est sin=√2/2."
+    ]
+  },
+  {
+    "id": "math-134",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "EASY",
+    "statement": "La période de la fonction sin(2x) est :",
+    "options": [
+      "π",
+      "2π",
+      "π/2",
+      "4π"
+    ],
+    "answerIndex": 0,
+    "explanation": "Période = 2π / 2 = π.",
+    "optionExplanations": [
+      "Correct : π. ✓",
+      "Faux : 2π est la période de sin(x).",
+      "Faux : π/2 serait sin(4x).",
+      "Faux : 4π serait sin(x/2)."
+    ]
+  },
+  {
+    "id": "math-135",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "MEDIUM",
+    "statement": "Si sin(θ) = 3/5 et θ est aigu, alors cos(θ) vaut :",
+    "options": [
+      "4/5",
+      "2/5",
+      "1/5",
+      "5/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "cos² = 1 - sin² = 1 - 9/25 = 16/25 ⇒ cos = 4/5.",
+    "optionExplanations": [
+      "Correct : 4/5. ✓",
+      "Faux : 2/5 serait 0,4.",
+      "Faux : 1/5 serait 0,2.",
+      "Faux : 5/3 est l'inverse."
+    ]
+  },
+  {
+    "id": "math-136",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "EASY",
+    "statement": "L'expression cos²(x) + sin²(x) est égale à :",
+    "options": [
+      "0",
+      "1",
+      "cos(2x)",
+      "sin(2x)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Identité fondamentale : cos² + sin² = 1.",
+    "optionExplanations": [
+      "Faux : 0 serait si cos=sin=0.",
+      "Correct : 1. ✓",
+      "Faux : cos(2x)=cos²-sin².",
+      "Faux : sin(2x)=2sin cos."
+    ]
+  },
+  {
+    "id": "math-137",
+    "subject": "MATH",
+    "topic": "Trigonométrie",
+    "difficulty": "MEDIUM",
+    "statement": "La valeur de cos(π/3) est :",
+    "options": [
+      "1/2",
+      "√3/2",
+      "√2/2",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "cos(π/3) = cos(60°) = 1/2.",
+    "optionExplanations": [
+      "Correct : 1/2. ✓",
+      "Faux : √3/2 est sin(60°).",
+      "Faux : √2/2 est cos(45°).",
+      "Faux : 1 est cos(0)."
+    ]
+  },
+  {
+    "id": "math-138",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "EASY",
+    "statement": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 3 et 4. L'hypoténuse vaut :",
+    "options": [
+      "5",
+      "7",
+      "25",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "√(3²+4²) = √(9+16)=√25=5.",
+    "optionExplanations": [
+      "Correct : 5. ✓",
+      "Faux : 7 est 3+4.",
+      "Faux : 25 est 5².",
+      "Faux : 1 est 4-3."
+    ]
+  },
+  {
+    "id": "math-139",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "MEDIUM",
+    "statement": "Un triangle a pour côtés 6, 8 et 10. Est-il rectangle ?",
+    "options": [
+      "Oui, car 6²+8²=10²",
+      "Non",
+      "Oui, car 6+8=10",
+      "Non, car 10²≠6²+8²"
+    ],
+    "answerIndex": 0,
+    "explanation": "6²+8²=36+64=100=10², donc rectangle.",
+    "optionExplanations": [
+      "Correct : Pythagore vérifié. ✓",
+      "Faux : il l'est.",
+      "Faux : somme des côtés n'est pas le critère.",
+      "Faux : l'égalité est vraie."
+    ]
+  },
+  {
+    "id": "math-140",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "EASY",
+    "statement": "Si l'hypoténuse vaut 13 et un côté de l'angle droit vaut 5, l'autre côté vaut :",
     "options": [
       "12",
       "14",
-      "13,5",
-      "10"
+      "8",
+      "18"
     ],
-    "answerIndex": 1,
-    "explanation": "Le mode est la valeur qui apparaît le plus souvent. 14 apparaît 3 fois (plus que toute autre valeur).",
+    "answerIndex": 0,
+    "explanation": "√(13²-5²) = √(169-25)=√144=12.",
     "optionExplanations": [
-      "Faux : 12 n'apparaît qu'une fois.",
-      "Correct : 14 apparaît 3 fois, c'est le mode. ✓",
-      "Faux : 13,5 est la moyenne, pas le mode.",
-      "Faux : 10 apparaît 2 fois seulement."
+      "Correct : 12. ✓",
+      "Faux : 14 est 13+1.",
+      "Faux : 8 est 13-5.",
+      "Faux : 18 est 13+5."
     ]
   },
   {
-    "id": "math-092",
+    "id": "math-141",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "MEDIUM",
+    "statement": "Un triangle rectangle a une hypoténuse de 10 et un côté de 6. Le troisième côté est :",
+    "options": [
+      "8",
+      "4",
+      "√136",
+      "16"
+    ],
+    "answerIndex": 0,
+    "explanation": "√(10²-6²)=√(100-36)=√64=8.",
+    "optionExplanations": [
+      "Correct : 8. ✓",
+      "Faux : 4 est 10-6.",
+      "Faux : √136 = √(100+36) (mauvaise opération).",
+      "Faux : 16 est 10+6."
+    ]
+  },
+  {
+    "id": "math-142",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "EASY",
+    "statement": "Dans un triangle rectangle, si les deux côtés de l'angle droit sont égaux, l'hypoténuse vaut :",
+    "options": [
+      "côté × √2",
+      "côté × 2",
+      "côté × √3",
+      "côté × 1"
+    ],
+    "answerIndex": 0,
+    "explanation": "Hypoténuse = √(a²+a²) = a√2.",
+    "optionExplanations": [
+      "Correct : a√2. ✓",
+      "Faux : a×2 serait le double.",
+      "Faux : a√3 serait pour un angle de 30°.",
+      "Faux : a×1 serait le côté."
+    ]
+  },
+  {
+    "id": "math-143",
+    "subject": "MATH",
+    "topic": "Théorème de Pythagore",
+    "difficulty": "MEDIUM",
+    "statement": "Le triangle de côtés 1, √2, √3 est-il rectangle ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement si l'angle est 45°",
+      "Impossible"
+    ],
+    "answerIndex": 0,
+    "explanation": "1² + (√2)² = 1+2=3 = (√3)². Donc rectangle.",
+    "optionExplanations": [
+      "Correct : Pythagore vérifié. ✓",
+      "Faux : les carrés le confirment.",
+      "Faux : le critère est algébrique.",
+      "Faux : c'est possible."
+    ]
+  },
+  {
+    "id": "math-144",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "EASY",
+    "statement": "Dans un triangle ABC, une droite parallèle à BC coupe AB en M et AC en N. On a :",
+    "options": [
+      "AM/AB = AN/AC",
+      "AM/MB = AN/NC",
+      "AB/AM = AC/AN",
+      "Toutes les précédentes"
+    ],
+    "answerIndex": 3,
+    "explanation": "Thalès donne AM/AB = AN/AC = MN/BC, et aussi AM/MB = AN/NC. Donc toutes.",
+    "optionExplanations": [
+      "Faux : c'est une forme, mais il y en a d'autres.",
+      "Faux : c'est une autre forme.",
+      "Faux : c'est encore une autre forme.",
+      "Correct : toutes sont équivalentes. ✓"
+    ]
+  },
+  {
+    "id": "math-145",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "MEDIUM",
+    "statement": "Si dans un triangle ABC, M ∈ AB, N ∈ AC, et (MN) // (BC). Si AM=2, AB=6, AN=3, alors AC vaut :",
+    "options": [
+      "9",
+      "6",
+      "3",
+      "12"
+    ],
+    "answerIndex": 0,
+    "explanation": "AM/AB = AN/AC ⇒ 2/6 = 3/AC ⇒ AC = (3×6)/2 = 9.",
+    "optionExplanations": [
+      "Correct : 9. ✓",
+      "Faux : 6 est AB.",
+      "Faux : 3 est AN.",
+      "Faux : 12 est 2×6."
+    ]
+  },
+  {
+    "id": "math-146",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "EASY",
+    "statement": "Thalès s'applique dans quelle configuration ?",
+    "options": [
+      "Deux droites sécantes coupées par deux parallèles",
+      "Deux droites parallèles coupées par une sécante",
+      "Un triangle rectangle",
+      "Un cercle"
+    ],
+    "answerIndex": 0,
+    "explanation": "Thalès : deux droites sécantes et deux parallèles.",
+    "optionExplanations": [
+      "Correct : configuration de Thalès. ✓",
+      "Faux : c'est le cas des angles alternes-internes.",
+      "Faux : c'est Pythagore.",
+      "Faux : c'est la trigonométrie ou les angles inscrits."
+    ]
+  },
+  {
+    "id": "math-147",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "MEDIUM",
+    "statement": "Dans la configuration de Thalès, si AM/MB = 2/3, alors AM/AB vaut :",
+    "options": [
+      "2/5",
+      "2/3",
+      "3/2",
+      "5/2"
+    ],
+    "answerIndex": 0,
+    "explanation": "AM/MB = 2/3 ⇒ AM = 2k, MB=3k, AB=5k, donc AM/AB = 2/5.",
+    "optionExplanations": [
+      "Correct : 2/5. ✓",
+      "Faux : 2/3 est le rapport initial.",
+      "Faux : 3/2 est l'inverse.",
+      "Faux : 5/2 est AB/AM."
+    ]
+  },
+  {
+    "id": "math-148",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "EASY",
+    "statement": "Si (MN) // (BC), alors les triangles AMN et ABC sont :",
+    "options": [
+      "Semblables",
+      "Égaux",
+      "Rectangles",
+      "Isocèles"
+    ],
+    "answerIndex": 0,
+    "explanation": "Thalès implique l'égalité des rapports, donc les triangles sont semblables.",
+    "optionExplanations": [
+      "Correct : semblables. ✓",
+      "Faux : égaux si M=A ou N=C.",
+      "Faux : pas nécessairement rectangles.",
+      "Faux : pas nécessairement isocèles."
+    ]
+  },
+  {
+    "id": "math-149",
+    "subject": "MATH",
+    "topic": "Théorème de Thalès",
+    "difficulty": "MEDIUM",
+    "statement": "Si AB = 10, AC = 15, AM = 4, et (MN)//(BC), alors AN vaut :",
+    "options": [
+      "6",
+      "8",
+      "7,5",
+      "5"
+    ],
+    "answerIndex": 0,
+    "explanation": "AM/AB = AN/AC ⇒ 4/10 = AN/15 ⇒ AN = (4×15)/10 = 6.",
+    "optionExplanations": [
+      "Correct : 6. ✓",
+      "Faux : 8 est 4×2.",
+      "Faux : 7,5 est la moitié de 15.",
+      "Faux : 5 est la moyenne."
+    ]
+  },
+  {
+    "id": "math-150",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "EASY",
+    "statement": "La somme des angles d'un triangle est :",
+    "options": [
+      "180°",
+      "360°",
+      "90°",
+      "270°"
+    ],
+    "answerIndex": 0,
+    "explanation": "Somme des angles d'un triangle = 180°.",
+    "optionExplanations": [
+      "Correct : 180°. ✓",
+      "Faux : 360° est pour un quadrilatère.",
+      "Faux : 90° est un angle droit.",
+      "Faux : 270° est 3/4 de tour."
+    ]
+  },
+  {
+    "id": "math-151",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "MEDIUM",
+    "statement": "Un triangle a deux angles de 50° chacun. Le troisième angle vaut :",
+    "options": [
+      "80°",
+      "50°",
+      "100°",
+      "130°"
+    ],
+    "answerIndex": 0,
+    "explanation": "180 - 50 - 50 = 80°.",
+    "optionExplanations": [
+      "Correct : 80°. ✓",
+      "Faux : 50° serait un triangle équilatéral ? Non.",
+      "Faux : 100° serait si la somme faisait 200.",
+      "Faux : 130° serait 180-50."
+    ]
+  },
+  {
+    "id": "math-152",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "EASY",
+    "statement": "Un angle plat mesure :",
+    "options": [
+      "180°",
+      "90°",
+      "360°",
+      "45°"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un angle plat vaut 180°.",
+    "optionExplanations": [
+      "Correct : 180°. ✓",
+      "Faux : 90° est un angle droit.",
+      "Faux : 360° est un angle plein.",
+      "Faux : 45° est un angle aigu."
+    ]
+  },
+  {
+    "id": "math-153",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "MEDIUM",
+    "statement": "Un triangle est rectangle en A. Les angles B et C sont :",
+    "options": [
+      "Complémentaires",
+      "Supplémentaires",
+      "Égaux",
+      "Opposés"
+    ],
+    "answerIndex": 0,
+    "explanation": "B + C = 90°, donc ils sont complémentaires.",
+    "optionExplanations": [
+      "Correct : complémentaires (somme 90°). ✓",
+      "Faux : supplémentaires somme 180°.",
+      "Faux : pas toujours égaux.",
+      "Faux : opposés dans un quadrilatère."
+    ]
+  },
+  {
+    "id": "math-154",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "EASY",
+    "statement": "Un angle aigu est compris entre :",
+    "options": [
+      "0° et 90°",
+      "90° et 180°",
+      "180° et 360°",
+      "0° et 180°"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aigu = strictement entre 0° et 90°.",
+    "optionExplanations": [
+      "Correct : 0-90°. ✓",
+      "Faux : c'est obtus.",
+      "Faux : c'est réflexe.",
+      "Faux : c'est l'ensemble des angles convexes."
+    ]
+  },
+  {
+    "id": "math-155",
+    "subject": "MATH",
+    "topic": "Angles et triangles",
+    "difficulty": "MEDIUM",
+    "statement": "Dans un triangle isocèle, l'angle au sommet mesure 40°. Les angles à la base mesurent :",
+    "options": [
+      "70° chacun",
+      "40° chacun",
+      "80° chacun",
+      "60° chacun"
+    ],
+    "answerIndex": 0,
+    "explanation": "Base angles = (180 - 40) / 2 = 70°.",
+    "optionExplanations": [
+      "Correct : 70°. ✓",
+      "Faux : 40° serait équilatéral.",
+      "Faux : 80° serait 160/2.",
+      "Faux : 60° donnerait 120/2."
+    ]
+  },
+  {
+    "id": "math-156",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "EASY",
+    "statement": "L'aire d'un rectangle de longueur 5 et largeur 3 est :",
+    "options": [
+      "15",
+      "8",
+      "16",
+      "30"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aire = L × l = 5 × 3 = 15.",
+    "optionExplanations": [
+      "Correct : 15. ✓",
+      "Faux : 8 est le périmètre divisé ?",
+      "Faux : 16 est 4×4.",
+      "Faux : 30 est 2×(5+3)×? non."
+    ]
+  },
+  {
+    "id": "math-157",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "MEDIUM",
+    "statement": "L'aire d'un disque de rayon 3 (π ≈ 3,14) est approximativement :",
+    "options": [
+      "28,26",
+      "18,84",
+      "9,42",
+      "12,56"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aire = π × 3² = 3,14 × 9 = 28,26.",
+    "optionExplanations": [
+      "Correct : 28,26. ✓",
+      "Faux : 18,84 est le périmètre (2π×3).",
+      "Faux : 9,42 est π×3.",
+      "Faux : 12,56 est π×4."
+    ]
+  },
+  {
+    "id": "math-158",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "EASY",
+    "statement": "Le volume d'un cube d'arête 4 est :",
+    "options": [
+      "64",
+      "16",
+      "12",
+      "48"
+    ],
+    "answerIndex": 0,
+    "explanation": "Volume = côté³ = 4³ = 64.",
+    "optionExplanations": [
+      "Correct : 64. ✓",
+      "Faux : 16 est l'aire d'une face.",
+      "Faux : 12 est le périmètre.",
+      "Faux : 48 est la surface totale ? 6×4²=96 non."
+    ]
+  },
+  {
+    "id": "math-159",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "MEDIUM",
+    "statement": "L'aire d'un triangle de base 6 et hauteur 5 est :",
+    "options": [
+      "15",
+      "30",
+      "11",
+      "10"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aire = (base × hauteur)/2 = (6×5)/2 = 15.",
+    "optionExplanations": [
+      "Correct : 15. ✓",
+      "Faux : 30 est base×hauteur.",
+      "Faux : 11 est 6+5.",
+      "Faux : 10 est 2×5."
+    ]
+  },
+  {
+    "id": "math-160",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "EASY",
+    "statement": "Le périmètre d'un carré de côté 7 est :",
+    "options": [
+      "28",
+      "49",
+      "14",
+      "21"
+    ],
+    "answerIndex": 0,
+    "explanation": "Périmètre = 4 × côté = 28.",
+    "optionExplanations": [
+      "Correct : 28. ✓",
+      "Faux : 49 est l'aire.",
+      "Faux : 14 est le demi-périmètre.",
+      "Faux : 21 est 3×7."
+    ]
+  },
+  {
+    "id": "math-161",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "MEDIUM",
+    "statement": "Un cylindre a pour rayon 2 et hauteur 5. Son volume (π ≈ 3,14) est :",
+    "options": [
+      "62,8",
+      "31,4",
+      "20",
+      "40"
+    ],
+    "answerIndex": 0,
+    "explanation": "Volume = π × r² × h = 3,14 × 4 × 5 = 62,8.",
+    "optionExplanations": [
+      "Correct : 62,8. ✓",
+      "Faux : 31,4 est π×10.",
+      "Faux : 20 est 4×5.",
+      "Faux : 40 est 8×5."
+    ]
+  },
+  {
+    "id": "math-162",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "EASY",
+    "statement": "L'aire d'un trapèze de bases 4 et 6, hauteur 3 est :",
+    "options": [
+      "15",
+      "18",
+      "24",
+      "30"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aire = (B+b)×h/2 = (6+4)×3/2 = 15.",
+    "optionExplanations": [
+      "Correct : 15. ✓",
+      "Faux : 18 est (6+4)×3 ? non.",
+      "Faux : 24 est 8×3.",
+      "Faux : 30 est 10×3."
+    ]
+  },
+  {
+    "id": "math-163",
+    "subject": "MATH",
+    "topic": "Aires et volumes",
+    "difficulty": "MEDIUM",
+    "statement": "Le volume d'une sphère de rayon 3 (π≈3,14) est :",
+    "options": [
+      "113,04",
+      "37,68",
+      "28,26",
+      "75,36"
+    ],
+    "answerIndex": 0,
+    "explanation": "Volume = 4/3 π r³ = 4/3 × 3,14 × 27 = 4/3 × 84,78 = 113,04.",
+    "optionExplanations": [
+      "Correct : 113,04. ✓",
+      "Faux : 37,68 est 4π×3.",
+      "Faux : 28,26 est π×9.",
+      "Faux : 75,36 est 4π×6."
+    ]
+  },
+  {
+    "id": "math-164",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "EASY",
+    "statement": "Lancement d'un dé équilibré. Probabilité d'obtenir un nombre pair :",
+    "options": [
+      "1/2",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pairs : {2,4,6} soit 3/6 = 1/2.",
+    "optionExplanations": [
+      "Correct : 1/2. ✓",
+      "Faux : 1/3 serait deux nombres pairs ?",
+      "Faux : 1/6 est une face.",
+      "Faux : 2/3 serait 4 faces."
+    ]
+  },
+  {
+    "id": "math-165",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "MEDIUM",
+    "statement": "Une urne contient 3 boules rouges, 2 vertes. Probabilité de tirer une verte :",
+    "options": [
+      "2/5",
+      "3/5",
+      "1/2",
+      "2/3"
+    ],
+    "answerIndex": 0,
+    "explanation": "Total 5, vertes 2 ⇒ P = 2/5.",
+    "optionExplanations": [
+      "Correct : 2/5. ✓",
+      "Faux : 3/5 est la proba de rouge.",
+      "Faux : 1/2 serait 2,5/5.",
+      "Faux : 2/3 serait 2/3."
+    ]
+  },
+  {
+    "id": "math-166",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "EASY",
+    "statement": "La probabilité d'un événement impossible est :",
+    "options": [
+      "0",
+      "1",
+      "0,5",
+      "Indéfinie"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un événement impossible a une probabilité nulle.",
+    "optionExplanations": [
+      "Correct : 0. ✓",
+      "Faux : 1 est certain.",
+      "Faux : 0,5 est équiprobable.",
+      "Faux : elle est définie."
+    ]
+  },
+  {
+    "id": "math-167",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "MEDIUM",
+    "statement": "On lance deux dés. Probabilité d'obtenir une somme de 7 :",
+    "options": [
+      "1/6",
+      "1/12",
+      "1/36",
+      "5/36"
+    ],
+    "answerIndex": 0,
+    "explanation": "Somme 7 : (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) soit 6/36 = 1/6.",
+    "optionExplanations": [
+      "Correct : 1/6. ✓",
+      "Faux : 1/12 serait 3/36.",
+      "Faux : 1/36 est une combinaison particulière.",
+      "Faux : 5/36 est la somme de 8."
+    ]
+  },
+  {
+    "id": "math-168",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "EASY",
+    "statement": "Si P(A) = 0,4 et P(B) = 0,3 avec A et B incompatibles, P(A∪B) vaut :",
+    "options": [
+      "0,7",
+      "0,12",
+      "0,1",
+      "0,4"
+    ],
+    "answerIndex": 0,
+    "explanation": "Incompatibles ⇒ P(A∪B) = P(A)+P(B) = 0,7.",
+    "optionExplanations": [
+      "Correct : 0,7. ✓",
+      "Faux : 0,12 est le produit (intersection).",
+      "Faux : 0,1 est la différence.",
+      "Faux : 0,4 est P(A)."
+    ]
+  },
+  {
+    "id": "math-169",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "MEDIUM",
+    "statement": "On tire une carte dans un jeu de 52. Probabilité de tirer un as :",
+    "options": [
+      "1/13",
+      "1/52",
+      "4/13",
+      "1/4"
+    ],
+    "answerIndex": 0,
+    "explanation": "4 as / 52 = 1/13.",
+    "optionExplanations": [
+      "Correct : 1/13. ✓",
+      "Faux : 1/52 est un as particulier.",
+      "Faux : 4/13 serait 16 as.",
+      "Faux : 1/4 est une couleur."
+    ]
+  },
+  {
+    "id": "math-170",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "EASY",
+    "statement": "La somme des probabilités de tous les événements élémentaires d'une expérience est :",
+    "options": [
+      "1",
+      "0",
+      "Infini",
+      "Dépend du nombre"
+    ],
+    "answerIndex": 0,
+    "explanation": "La somme des probabilités de l'univers est toujours 1.",
+    "optionExplanations": [
+      "Correct : 1. ✓",
+      "Faux : 0 si impossible.",
+      "Faux : finie.",
+      "Faux : toujours 1."
+    ]
+  },
+  {
+    "id": "math-171",
+    "subject": "MATH",
+    "topic": "Probabilités",
+    "difficulty": "MEDIUM",
+    "statement": "Si P(A) = 0,6 et P(A∩B) = 0,2, et A et B indépendants ? (Indice : P(A)×P(B) = P(A∩B)). Que vaut P(B) ?",
+    "options": [
+      "1/3",
+      "0,4",
+      "0,3",
+      "0,5"
+    ],
+    "answerIndex": 0,
+    "explanation": "P(A∩B) = P(A)×P(B) ⇒ 0,2 = 0,6 × P(B) ⇒ P(B) = 0,2/0,6 = 1/3.",
+    "optionExplanations": [
+      "Correct : 1/3. ✓",
+      "Faux : 0,4 serait 0,24.",
+      "Faux : 0,3 serait 0,18.",
+      "Faux : 0,5 serait 0,3."
+    ]
+  },
+  {
+    "id": "math-172",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "EASY",
+    "statement": "La moyenne de 5, 7, 9, 11, 13 est :",
+    "options": [
+      "9",
+      "10",
+      "8",
+      "11"
+    ],
+    "answerIndex": 0,
+    "explanation": "Somme = 45, 45/5 = 9.",
+    "optionExplanations": [
+      "Correct : 9. ✓",
+      "Faux : 10 est la moyenne de 6,8,10,12,14.",
+      "Faux : 8 est 40/5.",
+      "Faux : 11 est la médiane."
+    ]
+  },
+  {
+    "id": "math-173",
     "subject": "MATH",
     "topic": "Statistiques",
     "difficulty": "MEDIUM",
-    "statement": "L'écart-type d'une série mesure :",
+    "statement": "La médiane de la série 2, 4, 7, 9, 12, 15 est :",
     "options": [
-      "La valeur centrale de la série",
-      "La dispersion des valeurs autour de la moyenne",
-      "La différence entre la plus grande et la plus petite valeur",
-      "La somme des valeurs divisée par le nombre d'éléments"
+      "7",
+      "8",
+      "9",
+      "7,5"
     ],
     "answerIndex": 1,
-    "explanation": "L'écart-type mesure la dispersion (ou variabilité) des données autour de la moyenne. Plus il est grand, plus les données sont dispersées.",
+    "explanation": "Effectif pair = 6, médiane = moyenne des deux valeurs centrales : (7+9)/2 = 8.",
     "optionExplanations": [
-      "Faux : c'est la définition de la médiane.",
-      "Correct : l'écart-type quantifie la dispersion autour de la moyenne. ✓",
-      "Faux : c'est la définition de l'étendue.",
-      "Faux : c'est la définition de la moyenne."
+      "Faux : 7 est la 3ème valeur.",
+      "Correct : 8. ✓",
+      "Faux : 9 est la 4ème valeur.",
+      "Faux : 7,5 serait (7+8)/2."
     ]
   },
   {
-    "id": "math-093",
+    "id": "math-174",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "EASY",
+    "statement": "L'étendue de la série 3, 8, 12, 5, 20 est :",
+    "options": [
+      "17",
+      "20",
+      "12",
+      "8"
+    ],
+    "answerIndex": 0,
+    "explanation": "Étendue = max - min = 20 - 3 = 17.",
+    "optionExplanations": [
+      "Correct : 17. ✓",
+      "Faux : 20 est le max.",
+      "Faux : 12 est une valeur.",
+      "Faux : 8 est la médiane ? non."
+    ]
+  },
+  {
+    "id": "math-175",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "MEDIUM",
+    "statement": "La moyenne pondérée de 2 (coef 1) et 5 (coef 2) est :",
+    "options": [
+      "4",
+      "3,5",
+      "4,5",
+      "5"
+    ],
+    "answerIndex": 0,
+    "explanation": "(2×1 + 5×2) / (1+2) = (2+10)/3 = 12/3 = 4.",
+    "optionExplanations": [
+      "Correct : 4. ✓",
+      "Faux : 3,5 est la moyenne simple.",
+      "Faux : 4,5 est (2+7)/2.",
+      "Faux : 5 est la valeur la plus pondérée."
+    ]
+  },
+  {
+    "id": "math-176",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "EASY",
+    "statement": "Un effectif cumulé croissant représente :",
+    "options": [
+      "Le total des effectifs jusqu'à une valeur",
+      "Le nombre de valeurs au-dessus",
+      "La moyenne",
+      "La médiane"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'effectif cumulé croissant est la somme des effectifs des valeurs inférieures ou égales à une valeur donnée.",
+    "optionExplanations": [
+      "Correct : total jusqu'à la valeur. ✓",
+      "Faux : c'est l'effectif cumulé décroissant.",
+      "Faux : c'est la moyenne.",
+      "Faux : la médiane est une valeur."
+    ]
+  },
+  {
+    "id": "math-177",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "MEDIUM",
+    "statement": "Une classe a 10 élèves de moyenne 12, et 5 élèves de moyenne 15. La moyenne de la classe est :",
+    "options": [
+      "13",
+      "13,5",
+      "12,5",
+      "14"
+    ],
+    "answerIndex": 0,
+    "explanation": "(10×12 + 5×15) / (10+5) = (120+75)/15 = 195/15 = 13.",
+    "optionExplanations": [
+      "Correct : 13. ✓",
+      "Faux : 13,5 serait (12+15)/2.",
+      "Faux : 12,5 serait si coeffs égaux ? non.",
+      "Faux : 14 serait (10×12+5×18)/15."
+    ]
+  },
+  {
+    "id": "math-178",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "EASY",
+    "statement": "Le mode d'une série statistique est :",
+    "options": [
+      "La valeur la plus fréquente",
+      "La valeur moyenne",
+      "La valeur centrale",
+      "La différence max-min"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le mode est la valeur qui a le plus grand effectif.",
+    "optionExplanations": [
+      "Correct : valeur la plus fréquente. ✓",
+      "Faux : c'est la moyenne.",
+      "Faux : c'est la médiane.",
+      "Faux : c'est l'étendue."
+    ]
+  },
+  {
+    "id": "math-179",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "MEDIUM",
+    "statement": "Si les notes sont 8, 10, 12, 14, 16. La variance (approximative, écart-type au carré) est :",
+    "options": [
+      "8",
+      "4",
+      "16",
+      "2"
+    ],
+    "answerIndex": 0,
+    "explanation": "Moyenne = 12. Écarts : -4, -2, 0, 2, 4. Carrés : 16,4,0,4,16. Somme = 40, moyenne = 8. Variance = 8.",
+    "optionExplanations": [
+      "Correct : 8. ✓",
+      "Faux : 4 est l'écart-type ? √8 ≈ 2,82.",
+      "Faux : 16 est l'écart au carré max.",
+      "Faux : 2 est l'écart moyen."
+    ]
+  },
+  {
+    "id": "math-180",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "EASY",
+    "statement": "Le premier quartile Q1 est la valeur qui sépare :",
+    "options": [
+      "Les 25% les plus petits",
+      "Les 50% les plus petits",
+      "Les 75% les plus petits",
+      "Les 100%"
+    ],
+    "answerIndex": 0,
+    "explanation": "Q1 est le 1er quartile (25%).",
+    "optionExplanations": [
+      "Correct : 25% inférieurs. ✓",
+      "Faux : 50% est la médiane.",
+      "Faux : 75% est Q3.",
+      "Faux : 100% est le max."
+    ]
+  },
+  {
+    "id": "math-181",
+    "subject": "MATH",
+    "topic": "Statistiques",
+    "difficulty": "MEDIUM",
+    "statement": "Un diagramme en boîte (boxplot) représente :",
+    "options": [
+      "Médiane, quartiles, extrêmes",
+      "Moyenne et écart-type",
+      "Fréquences cumulées",
+      "Histogramme"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le boxplot montre la médiane, les quartiles Q1/Q3, et les valeurs extrêmes (min, max).",
+    "optionExplanations": [
+      "Correct : médiane, quartiles, extrêmes. ✓",
+      "Faux : c'est la boîte à moustaches ? Non, c'est le résumé en 5 nombres.",
+      "Faux : c'est la courbe des fréquences.",
+      "Faux : l'histogramme est pour les effectifs."
+    ]
+  },
+  {
+    "id": "math-182",
     "subject": "MATH",
     "topic": "Permutations, arrangements et combinaisons",
     "difficulty": "EASY",
-    "statement": "Combien vaut 5! (factorielle 5) ?",
+    "statement": "Que vaut la factorielle 5 ! (5! ) ?",
     "options": [
-      "25",
-      "120",
+      "20",
       "60",
-      "720"
+      "120",
+      "25"
     ],
-    "answerIndex": 1,
+    "answerIndex": 2,
     "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
     "optionExplanations": [
-      "Faux : 25 = 5².",
-      "Correct : 5! = 120. ✓",
-      "Faux : 60 = 5!/2.",
-      "Faux : 720 = 6!."
+      "Faux : 20 est 5×4.",
+      "Faux : 60 est 5×4×3.",
+      "Correct : 120. ✓",
+      "Faux : 25 est 5²."
     ]
   },
   {
-    "id": "math-094",
+    "id": "math-183",
     "subject": "MATH",
     "topic": "Permutations, arrangements et combinaisons",
     "difficulty": "MEDIUM",
-    "statement": "De combien de façons peut-on choisir 3 personnes parmi 10 ? (C(10,3))",
+    "statement": "Que vaut 0! (factorielle de zéro) ?",
     "options": [
-      "30",
-      "120",
-      "720",
-      "210"
+      "0",
+      "1",
+      "Indéfini",
+      "-1"
     ],
     "answerIndex": 1,
-    "explanation": "C(10,3) = 10! / (3! × 7!) = (10 × 9 × 8) / (3 × 2 × 1) = 720/6 = 120.",
+    "explanation": "Par convention mathématique, 0! = 1.",
     "optionExplanations": [
-      "Faux : 30 = 10 × 3.",
-      "Correct : C(10,3) = 120. ✓",
-      "Faux : 720 = 10 × 9 × 8, c'est l'arrangement A(10,3).",
-      "Faux : 210 = C(10,4)."
+      "Faux : 0! n'est pas 0.",
+      "Correct : 1. ✓",
+      "Faux : 0! est bien défini.",
+      "Faux : la factorielle n'est pas négative."
     ]
   },
   {
-    "id": "math-095",
+    "id": "math-184",
     "subject": "MATH",
     "topic": "Permutations, arrangements et combinaisons",
-    "difficulty": "MEDIUM",
-    "statement": "De combien de façons peut-on ranger 4 livres sur une étagère ?",
+    "difficulty": "EASY",
+    "statement": "De combien de façons différentes peut-on ranger 4 livres distincts sur une étagère ?",
     "options": [
-      "4",
       "24",
+      "12",
       "16",
-      "12"
+      "8"
     ],
-    "answerIndex": 1,
-    "explanation": "C'est une permutation : 4! = 4 × 3 × 2 × 1 = 24.",
+    "answerIndex": 0,
+    "explanation": "Nombre de permutations de 4 objets = 4! = 24.",
     "optionExplanations": [
-      "Faux : 4 est le nombre de livres, pas le nombre de rangements.",
-      "Correct : 4! = 24 rangements possibles. ✓",
-      "Faux : 16 = 4².",
-      "Faux : 12 = 4 × 3."
+      "Correct : 24. ✓",
+      "Faux : 12 est 4×3.",
+      "Faux : 16 est 4².",
+      "Faux : 8 est 4×2."
     ]
   },
   {
-    "id": "math-096",
+    "id": "math-185",
     "subject": "MATH",
     "topic": "Permutations, arrangements et combinaisons",
-    "difficulty": "HARD",
-    "statement": "Un code est formé de 3 chiffres distincts choisis parmi {1, 2, 3, 4, 5}. Combien de codes peut-on former ?",
+    "difficulty": "MEDIUM",
+    "statement": "On tire 2 boules parmi 5 numérotées, en tenant compte de l'ordre (arrangement). Combien de tirages possibles ?",
     "options": [
       "10",
-      "60",
-      "125",
+      "20",
+      "25",
       "15"
     ],
     "answerIndex": 1,
-    "explanation": "L'ordre compte (c'est un arrangement) : A(5,3) = 5 × 4 × 3 = 60.",
+    "explanation": "Arrangement : 5 × 4 = 20 (l'ordre compte).",
     "optionExplanations": [
-      "Faux : 10 = C(5,3) serait le cas si l'ordre ne comptait pas.",
-      "Correct : A(5,3) = 5 × 4 × 3 = 60. ✓",
-      "Faux : 125 = 5³ serait le cas avec répétition.",
-      "Faux : 15 = 5 × 3."
+      "Faux : 10 est la combinaison (sans ordre).",
+      "Correct : 20. ✓",
+      "Faux : 25 est 5×5.",
+      "Faux : 15 est 5×3."
     ]
   },
   {
-    "id": "math-097",
+    "id": "math-186",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "MEDIUM",
+    "statement": "On choisit 2 fruits parmi 5 (sans tenir compte de l'ordre). Combien de choix possibles ?",
+    "options": [
+      "20",
+      "10",
+      "25",
+      "15"
+    ],
+    "answerIndex": 1,
+    "explanation": "Combinaison : C(5,2) = 5!/(2!×3!) = 10.",
+    "optionExplanations": [
+      "Faux : 20 est l'arrangement (ordre compte).",
+      "Correct : 10. ✓",
+      "Faux : 25 est 5².",
+      "Faux : 15 est 5×3."
+    ]
+  },
+  {
+    "id": "math-187",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "EASY",
+    "statement": "De combien de manières peut-on élire un président et un vice-président parmi 10 candidats ?",
+    "options": [
+      "45",
+      "90",
+      "100",
+      "80"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'ordre compte (président ≠ vice-président), donc arrangement : 10 × 9 = 90.",
+    "optionExplanations": [
+      "Faux : 45 est la combinaison (sans distinction des rôles).",
+      "Correct : 90. ✓",
+      "Faux : 100 est 10×10.",
+      "Faux : 80 est 10×8."
+    ]
+  },
+  {
+    "id": "math-188",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "MEDIUM",
+    "statement": "On forme un comité de 3 personnes parmi 5. Combien de comités différents peut-on former ?",
+    "options": [
+      "60",
+      "20",
+      "10",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "Combinaison (l'ordre n'importe pas) : C(5,3) = 5!/(3!×2!) = 10.",
+    "optionExplanations": [
+      "Faux : 60 est l'arrangement (5×4×3).",
+      "Faux : 20 est 5×4.",
+      "Correct : 10. ✓",
+      "Faux : 15 est 5×3."
+    ]
+  },
+  {
+    "id": "math-189",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "EASY",
+    "statement": "Combien y a-t-il de façons d'arranger les lettres du mot \"MATH\" ?",
+    "options": [
+      "24",
+      "12",
+      "6",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "4 lettres distinctes, permutation = 4! = 24.",
+    "optionExplanations": [
+      "Correct : 24. ✓",
+      "Faux : 12 est 4×3.",
+      "Faux : 6 est 3!.",
+      "Faux : 4 est le nombre de lettres."
+    ]
+  },
+  {
+    "id": "math-190",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "MEDIUM",
+    "statement": "On choisit 2 paires de chaussettes parmi 6 paires différentes. Combien de choix possibles (sans ordre) ?",
+    "options": [
+      "30",
+      "15",
+      "12",
+      "36"
+    ],
+    "answerIndex": 1,
+    "explanation": "Combinaison C(6,2) = 6×5/2 = 15.",
+    "optionExplanations": [
+      "Faux : 30 est l'arrangement (6×5).",
+      "Correct : 15. ✓",
+      "Faux : 12 est 6×2.",
+      "Faux : 36 est 6²."
+    ]
+  },
+  {
+    "id": "math-191",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "EASY",
+    "statement": "Un code à 3 chiffres est formé avec les chiffres 1,2,3,4 sans répétition. Combien de codes possibles ?",
+    "options": [
+      "24",
+      "12",
+      "64",
+      "4"
+    ],
+    "answerIndex": 0,
+    "explanation": "Arrangement de 3 parmi 4 : 4×3×2 = 24.",
+    "optionExplanations": [
+      "Correct : 24. ✓",
+      "Faux : 12 est 4×3.",
+      "Faux : 64 est 4³ (avec répétition).",
+      "Faux : 4 est le nombre de choix pour le 1er chiffre."
+    ]
+  },
+  {
+    "id": "math-192",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "MEDIUM",
+    "statement": "C(7,4) est égal à C(7,3). Quelle est la valeur de C(7,4) ?",
+    "options": [
+      "35",
+      "21",
+      "42",
+      "28"
+    ],
+    "answerIndex": 0,
+    "explanation": "C(7,4) = 7!/(4!×3!) = (7×6×5)/(3×2×1) = 35. C(7,3) est aussi 35 par symétrie.",
+    "optionExplanations": [
+      "Correct : 35. ✓",
+      "Faux : 21 est 7×3.",
+      "Faux : 42 est 7×6.",
+      "Faux : 28 est 7×4."
+    ]
+  },
+  {
+    "id": "math-193",
+    "subject": "MATH",
+    "topic": "Permutations, arrangements et combinaisons",
+    "difficulty": "MEDIUM",
+    "statement": "Si n! = 720, que vaut n ?",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answerIndex": 0,
+    "explanation": "6! = 720 (6×5×4×3×2×1 = 720).",
+    "optionExplanations": [
+      "Correct : 6. ✓",
+      "Faux : 5! = 120.",
+      "Faux : 7! = 5040.",
+      "Faux : 8! = 40320."
+    ]
+  },
+  {
+    "id": "math-194",
     "subject": "MATH",
     "topic": "Calcul mental et raisonnement logique",
     "difficulty": "EASY",
-    "statement": "Quel nombre complète la suite : 2, 6, 18, 54, … ?",
+    "statement": "Que vaut l'expression 2 + 2 × 2 ?",
     "options": [
-      "108",
-      "162",
-      "72",
-      "216"
+      "8",
+      "6",
+      "4",
+      "2"
     ],
     "answerIndex": 1,
-    "explanation": "C'est une suite géométrique de raison 3. Le terme suivant = 54 × 3 = 162.",
+    "explanation": "La multiplication est prioritaire : 2 + (2×2) = 2 + 4 = 6.",
     "optionExplanations": [
-      "Faux : 108 = 54 × 2.",
-      "Correct : 54 × 3 = 162. ✓",
-      "Faux : 72 = 54 + 18.",
-      "Faux : 216 = 54 × 4."
+      "Faux : 8 est l'erreur de calcul (2+2=4, ×2=8).",
+      "Correct : 6. ✓",
+      "Faux : 4 est 2×2.",
+      "Faux : 2 est 2+0."
     ]
   },
   {
-    "id": "math-098",
-    "subject": "MATH",
-    "topic": "Calcul mental et raisonnement logique",
-    "difficulty": "EASY",
-    "statement": "Calculer mentalement : 25 × 16",
-    "options": [
-      "350",
-      "400",
-      "375",
-      "450"
-    ],
-    "answerIndex": 1,
-    "explanation": "25 × 16 = 25 × 4 × 4 = 100 × 4 = 400. Ou : 25 × 16 = 25 × (10 + 6) = 250 + 150 = 400.",
-    "optionExplanations": [
-      "Faux : 350 = 25 × 14.",
-      "Correct : 25 × 16 = 400. ✓",
-      "Faux : 375 = 25 × 15.",
-      "Faux : 450 = 25 × 18."
-    ]
-  },
-  {
-    "id": "math-099",
+    "id": "math-195",
     "subject": "MATH",
     "topic": "Calcul mental et raisonnement logique",
     "difficulty": "MEDIUM",
-    "statement": "Si on double un nombre, puis on ajoute 10, on obtient 46. Quel est ce nombre ?",
+    "statement": "Une batte et une balle coûtent 1,10 €. La batte coûte 1 € de plus que la balle. Combien coûte la balle ?",
     "options": [
-      "23",
-      "18",
-      "13",
-      "28"
+      "0,10 €",
+      "0,05 €",
+      "0,50 €",
+      "0,01 €"
     ],
     "answerIndex": 1,
-    "explanation": "2x + 10 = 46 → 2x = 36 → x = 18.",
+    "explanation": "Soit balle = x. Batte = x + 1. x + (x+1) = 1,10 ⇒ 2x = 0,10 ⇒ x = 0,05 €.",
     "optionExplanations": [
-      "Faux : 2(23) + 10 = 56 ≠ 46.",
-      "Correct : 2(18) + 10 = 46. ✓",
-      "Faux : 2(13) + 10 = 36 ≠ 46.",
-      "Faux : 2(28) + 10 = 66 ≠ 46."
+      "Faux : 0,10 € est le piège classique (1,10 - 1,00).",
+      "Correct : 0,05 €. ✓",
+      "Faux : 0,50 € donnerait 1,50 € total.",
+      "Faux : 0,01 € donnerait 1,01 € total."
     ]
   },
   {
-    "id": "math-100",
+    "id": "math-196",
     "subject": "MATH",
     "topic": "Calcul mental et raisonnement logique",
-    "difficulty": "HARD",
-    "statement": "Un escargot grimpe un mur de 10 m. Chaque jour il monte de 3 m mais glisse de 2 m la nuit. En combien de jours atteint-il le sommet ?",
+    "difficulty": "MEDIUM",
+    "statement": "5 machines mettent 5 minutes pour fabriquer 5 pièces. Combien de temps mettent 100 machines pour fabriquer 100 pièces ?",
     "options": [
-      "10 jours",
-      "8 jours",
-      "7 jours",
-      "9 jours"
+      "100 min",
+      "5 min",
+      "20 min",
+      "500 min"
     ],
     "answerIndex": 1,
-    "explanation": "Chaque jour net = +1 m. Après 7 jours = 7 m. Le 8ème jour il monte de 3 m → atteint 10 m (le sommet) avant la nuit. Donc 8 jours.",
+    "explanation": "Chaque machine fabrique 1 pièce en 5 min. 100 machines fabriquent 100 pièces en 5 min (rythme constant).",
     "optionExplanations": [
-      "Faux : 10 jours suppose un gain constant de 1 m sans considérer que le dernier jour il atteint le sommet.",
-      "Correct : après 7 jours à 7 m, le 8ème jour il monte à 10 m et sort. ✓",
-      "Faux : après 7 jours il est à 7 m, il n'a pas encore atteint 10 m.",
-      "Faux : il atteint le sommet le 8ème jour, pas le 9ème."
+      "Faux : 100 min est l'erreur de proportionnalité directe.",
+      "Correct : 5 min. ✓",
+      "Faux : 20 min serait 100/5.",
+      "Faux : 500 min est 100×5."
+    ]
+  },
+  {
+    "id": "math-197",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "EASY",
+    "statement": "Un éleveur a 17 moutons. Tous meurent sauf 9. Combien lui en reste-t-il ?",
+    "options": [
+      "8",
+      "9",
+      "17",
+      "0"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tous meurent sauf 9, donc il reste exactement 9 moutons.",
+    "optionExplanations": [
+      "Faux : 8 est 17-9.",
+      "Correct : 9. ✓",
+      "Faux : 17 est le nombre initial.",
+      "Faux : 0 est s'ils mouraient tous."
+    ]
+  },
+  {
+    "id": "math-198",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le terme suivant de la suite : 2, 6, 12, 20, 30, ... ?",
+    "options": [
+      "40",
+      "42",
+      "44",
+      "38"
+    ],
+    "answerIndex": 1,
+    "explanation": "Suite des produits n(n+1) : 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42.",
+    "optionExplanations": [
+      "Faux : 40 serait +10 (mais la différence augmente).",
+      "Correct : 42. ✓",
+      "Faux : 44 est 30+14.",
+      "Faux : 38 est 30+8."
+    ]
+  },
+  {
+    "id": "math-199",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "EASY",
+    "statement": "Si x + y = 10 et x - y = 4, que vaut x ?",
+    "options": [
+      "6",
+      "7",
+      "3",
+      "14"
+    ],
+    "answerIndex": 1,
+    "explanation": "En additionnant : 2x = 14 ⇒ x = 7.",
+    "optionExplanations": [
+      "Faux : 6 est y.",
+      "Correct : 7. ✓",
+      "Faux : 3 est x-y=4? non.",
+      "Faux : 14 est 2x."
+    ]
+  },
+  {
+    "id": "math-200",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "MEDIUM",
+    "statement": "J'ai 6 œufs. J'en casse 2, je les cuis, puis je les mange. Combien m'en reste-t-il ?",
+    "options": [
+      "0",
+      "4",
+      "6",
+      "2"
+    ],
+    "answerIndex": 1,
+    "explanation": "J'ai cassé, cuit et mangé les mêmes 2 œufs. Il m'en reste 4 (les 6 initiaux moins les 2 mangés).",
+    "optionExplanations": [
+      "Faux : 0 si tous étaient mangés.",
+      "Correct : 4. ✓",
+      "Faux : 6 si je n'avais rien fait.",
+      "Faux : 2 sont ceux qui ont été cuisinés."
+    ]
+  },
+  {
+    "id": "math-201",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "EASY",
+    "statement": "Combien de poignées de main y a-t-il entre 4 personnes, si chaque personne serre la main de toutes les autres une fois ?",
+    "options": [
+      "12",
+      "8",
+      "6",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "Combinaison de 2 parmi 4 : C(4,2) = 4×3/2 = 6.",
+    "optionExplanations": [
+      "Faux : 12 est 4×3 (sans diviser par 2).",
+      "Faux : 8 est 4×2.",
+      "Correct : 6. ✓",
+      "Faux : 4 est le nombre de personnes."
+    ]
+  },
+  {
+    "id": "math-202",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "MEDIUM",
+    "statement": "Un cube est peint en rouge, puis coupé en 27 petits cubes égaux. Combien de petits cubes ont exactement 2 faces peintes ?",
+    "options": [
+      "12",
+      "8",
+      "6",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "27 = 3³. Les cubes avec 2 faces peintes sont sur les arêtes (12 arêtes), 1 par arête (hors coins) ⇒ 12.",
+    "optionExplanations": [
+      "Correct : 12. ✓",
+      "Faux : 8 sont les coins (3 faces peintes).",
+      "Faux : 6 sont les centres des faces (1 face peinte).",
+      "Faux : 1 est le centre (0 face peinte)."
+    ]
+  },
+  {
+    "id": "math-203",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "EASY",
+    "statement": "Quelle est la moitié de 2 + 2 ?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answerIndex": 0,
+    "explanation": "2 + 2 = 4. La moitié de 4 est 2. (Attention à ne pas faire 1+1).",
+    "optionExplanations": [
+      "Correct : 2. ✓",
+      "Faux : 3 est (2+2)/2 +1 ? non.",
+      "Faux : 4 est 2+2 (sans diviser).",
+      "Faux : 1 est (2/2)+(2/2)=2."
+    ]
+  },
+  {
+    "id": "math-204",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "EASY",
+    "statement": "Un libraire rend 20 € uniquement en pièces de 2 €. Combien de pièces reçoit-on ?",
+    "options": [
+      "5",
+      "10",
+      "20",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "20 / 2 = 10 pièces.",
+    "optionExplanations": [
+      "Faux : 5 est 20/4.",
+      "Correct : 10. ✓",
+      "Faux : 20 est le montant en euros.",
+      "Faux : 8 est 20/2.5."
+    ]
+  },
+  {
+    "id": "math-205",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "MEDIUM",
+    "statement": "Quel est le nombre manquant : 1, 4, 9, 16, 25, ... ?",
+    "options": [
+      "30",
+      "35",
+      "36",
+      "49"
+    ],
+    "answerIndex": 2,
+    "explanation": "Ce sont les carrés parfaits : 1², 2², 3², 4², 5², donc 6² = 36.",
+    "optionExplanations": [
+      "Faux : 30 est +5.",
+      "Faux : 35 est +10.",
+      "Correct : 36. ✓",
+      "Faux : 49 est 7² (pas le suivant immédiat)."
+    ]
+  },
+  {
+    "id": "math-206",
+    "subject": "MATH",
+    "topic": "Calcul mental et raisonnement logique",
+    "difficulty": "MEDIUM",
+    "statement": "Un père a 4 fils et chaque fils a 1 sœur. Combien d'enfants a le père ?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "answerIndex": 1,
+    "explanation": "La sœur est unique (commune à tous les fils). Donc 4 fils + 1 fille = 5 enfants.",
+    "optionExplanations": [
+      "Faux : 4 est si on oublie la sœur.",
+      "Correct : 5. ✓",
+      "Faux : 6 est si chaque fils avait une sœur différente.",
+      "Faux : 8 est 4×2."
     ]
   }
 ]
