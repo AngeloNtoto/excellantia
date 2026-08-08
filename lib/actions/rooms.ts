@@ -34,6 +34,9 @@ async function requireAuth() {
   return session;
 }
 
+// ─── Durée de vie maximale d'une salle : 5 heures après la création ────────────
+const ROOM_MAX_DURATION_MS = 5 * 60 * 60 * 1000; // 5h en millisecondes
+
 // ─── Créer une salle ──────────────────────────────────────────────────────────
 
 export async function createRoomAction(formData: FormData) {
@@ -88,22 +91,37 @@ export async function createRoomAction(formData: FormData) {
   }
 
   // Dates
+  const createdAt = new Date();
+  // Hard limit : la salle expire au plus tard 5h après sa création
+  const hardDeadline = new Date(createdAt.getTime() + ROOM_MAX_DURATION_MS);
+
   let startsAt: Date | null = null;
   let endsAt: Date | null = null;
   let status: "WAITING" | "SCHEDULED" | "RUNNING" = "WAITING";
 
   if (d.startNow) {
-    startsAt = new Date();
+    startsAt = createdAt;
     status = "RUNNING";
     if (d.timeMode === "ABSOLUTE") {
-      endsAt = new Date(startsAt.getTime() + d.durationMin * 60_000);
+      // Prendre le plus tôt entre la durée configurée et le hard limit
+      const calculated = new Date(startsAt.getTime() + d.durationMin * 60_000);
+      endsAt = calculated < hardDeadline ? calculated : hardDeadline;
+    } else {
+      // Mode relatif : imposer quand même la limite absolue de 5h
+      endsAt = hardDeadline;
     }
   } else if (d.scheduledAt) {
     startsAt = new Date(d.scheduledAt);
     status = "SCHEDULED";
     if (d.timeMode === "ABSOLUTE") {
-      endsAt = new Date(startsAt.getTime() + d.durationMin * 60_000);
+      const calculated = new Date(startsAt.getTime() + d.durationMin * 60_000);
+      endsAt = calculated < hardDeadline ? calculated : hardDeadline;
+    } else {
+      endsAt = hardDeadline;
     }
+  } else {
+    // Salle en attente sans date de démarrage : hard limit quand même
+    endsAt = hardDeadline;
   }
 
   const room = await prisma.room.create({
@@ -143,9 +161,16 @@ export async function startRoomNowAction(roomId: string) {
   if (room.status === "CLOSED" || room.status === "CANCELLED") return { error: "Salle terminée ou annulée." };
 
   const startsAt = new Date();
-  const endsAt = room.timeMode === "ABSOLUTE"
-    ? new Date(startsAt.getTime() + room.durationMin * 60_000)
-    : null;
+  // Hard limit : 5h après la création originale de la salle
+  const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
+  let endsAt: Date;
+  if (room.timeMode === "ABSOLUTE") {
+    const calculated = new Date(startsAt.getTime() + room.durationMin * 60_000);
+    endsAt = calculated < hardDeadline ? calculated : hardDeadline;
+  } else {
+    // Mode relatif : imposer le hard limit de 5h
+    endsAt = hardDeadline;
+  }
 
   await prisma.room.update({
     where: { id: roomId },
@@ -155,7 +180,7 @@ export async function startRoomNowAction(roomId: string) {
   revalidatePath("/admin");
   revalidatePath(`/admin/salles/${roomId}`);
   revalidatePath("/rooms");
-  return { ok: true };
+  return { ok: true, endsAt };
 }
 
 // ─── Fermer / annuler une salle ───────────────────────────────────────────────
@@ -193,9 +218,17 @@ export async function checkRoomStatuses() {
   });
 
   for (const room of scheduled) {
-    const endsAt = room.timeMode === "ABSOLUTE" && room.startsAt
-      ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
-      : null;
+    // Hard limit : 5h après création
+    const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
+    let endsAt: Date | null = null;
+
+    if (room.timeMode === "ABSOLUTE" && room.startsAt) {
+      const calculated = new Date(room.startsAt.getTime() + room.durationMin * 60_000);
+      endsAt = calculated < hardDeadline ? calculated : hardDeadline;
+    } else {
+      // Mode relatif : imposer le hard limit
+      endsAt = hardDeadline;
+    }
 
     await prisma.room.update({
       where: { id: room.id },
@@ -209,33 +242,44 @@ export async function checkRoomStatuses() {
   });
 
   for (const room of runningRooms) {
+    // Hard limit : 5h après création (s'applique à tous les modes)
+    const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
+
     const effectiveEndAt = room.endsAt
       ? new Date(room.endsAt)
       : room.timeMode === "ABSOLUTE" && room.startsAt
         ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
         : null;
 
+    // La vraie date de fin = la plus proche entre l'endsAt calculé et le hard limit
+    const resolvedEndAt = effectiveEndAt
+      ? (effectiveEndAt < hardDeadline ? effectiveEndAt : hardDeadline)
+      : hardDeadline;
+
     const attempts = await prisma.attempt.findMany({
       where: { roomId: room.id },
       select: { status: true },
     });
 
-    const allAttemptsSubmitted = attempts.length > 0 && attempts.every((attempt) =>
-      attempt.status === "SUBMITTED" || attempt.status === "AUTO_SUBMITTED_TIME_EXPIRED" || attempt.status === "AUTO_SUBMITTED_DISCONNECTED"
-    );
+    const allAttemptsSubmitted =
+      attempts.length > 0 &&
+      attempts.every((a) =>
+        a.status === "SUBMITTED" ||
+        a.status === "AUTO_SUBMITTED_TIME_EXPIRED" ||
+        a.status === "AUTO_SUBMITTED_DISCONNECTED"
+      );
 
-    const shouldClose = (room.timeMode === "ABSOLUTE" && effectiveEndAt && effectiveEndAt <= now)
-      || (room.timeMode === "RELATIVE" && allAttemptsSubmitted);
+    // Fermer si : durée écoulée (toute mode), hard limit atteint, ou tous soumis (mode relatif)
+    const timeExpired = resolvedEndAt <= now;
+    const shouldClose = timeExpired || (room.timeMode === "RELATIVE" && allAttemptsSubmitted);
 
     if (shouldClose) {
       await prisma.room.update({
         where: { id: room.id },
-        data: { status: "CLOSED", endsAt: effectiveEndAt ?? now },
+        data: { status: "CLOSED", endsAt: resolvedEndAt },
       });
-
-      if (room.timeMode === "ABSOLUTE" && effectiveEndAt && effectiveEndAt <= now) {
-        await autoSubmitExpiredAttempts(room.id);
-      }
+      // Auto-soumettre les tentatives encore en cours
+      await autoSubmitExpiredAttempts(room.id);
     }
   }
 }
@@ -262,23 +306,19 @@ export async function grantRoomAccessAction(formData: FormData) {
   return { ok: true };
 }
 
-// ─── Suppression salle ────────────────────────────────────────────────────────
+// ─── Suppression d'une salle ──────────────────────────────────────────────────
 
 export async function deleteRoomAction(roomId: string) {
   const session = await requireAuth();
-  if (session.role !== "ADMIN") {
-    return { error: "Non autorisé" };
-  }
+  if (session.role !== "ADMIN") return { error: "Non autorisé" };
 
   try {
-    // Delete room and cascade delete its attempts due to Prisma relations
-    // Ensure you have onDelete: Cascade in prisma schema for related attempts/accesses or manually delete them
-    // Assuming attempts and roomAccess have onDelete: Cascade. Let's delete manually to be safe if not configured.
+    // Suppression en cascade manuelle (sécurité si Prisma n'a pas onDelete: Cascade)
     await prisma.$transaction([
       prisma.answer.deleteMany({ where: { attempt: { roomId } } }),
       prisma.attempt.deleteMany({ where: { roomId } }),
       prisma.roomAccess.deleteMany({ where: { roomId } }),
-      prisma.room.delete({ where: { id: roomId } })
+      prisma.room.delete({ where: { id: roomId } }),
     ]);
 
     revalidatePath("/admin/salles");
@@ -288,5 +328,31 @@ export async function deleteRoomAction(roomId: string) {
   } catch (error: any) {
     console.error("Error deleting room:", error);
     return { error: "Erreur lors de la suppression de la salle." };
+  }
+}
+
+// ─── Suppression de plusieurs salles (lot) ────────────────────────────────────
+
+export async function deleteManyRoomsAction(roomIds: string[]) {
+  const session = await requireAuth();
+  if (session.role !== "ADMIN") return { error: "Non autorisé" };
+  if (!roomIds || roomIds.length === 0) return { error: "Aucune salle sélectionnée." };
+
+  try {
+    // Supprimer toutes les données liées pour chaque salle en une transaction
+    await prisma.$transaction([
+      prisma.answer.deleteMany({ where: { attempt: { roomId: { in: roomIds } } } }),
+      prisma.attempt.deleteMany({ where: { roomId: { in: roomIds } } }),
+      prisma.roomAccess.deleteMany({ where: { roomId: { in: roomIds } } }),
+      prisma.room.deleteMany({ where: { id: { in: roomIds } } }),
+    ]);
+
+    revalidatePath("/admin/salles");
+    revalidatePath("/rooms");
+    revalidatePath("/dashboard");
+    return { ok: true, deleted: roomIds.length };
+  } catch (error: any) {
+    console.error("Error deleting rooms:", error);
+    return { error: "Erreur lors de la suppression des salles." };
   }
 }
