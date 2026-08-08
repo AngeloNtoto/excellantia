@@ -1,53 +1,5 @@
 [
   {
-    "id": "en-passage-001-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-001",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "MEDIUM",
-    "statement": "What does the narrator mean by 'it was the best of times, it was the worst of times'?",
-    "options": [
-      "The period was full of contradictions and extremes.",
-      "The weather was constantly changing from good to bad.",
-      "Some people were very rich while others were very poor.",
-      "The authorities could not decide what to do."
-    ],
-    "answerIndex": 0,
-    "explanation": "The series of paradoxes (best/worst, wisdom/foolishness, light/darkness) highlights that the era was defined by extreme contradictions.",
-    "optionExplanations": [
-      "Correct: the opening lines emphasize the paradoxical and extreme nature of the era. ✓",
-      "Wrong: this refers to societal conditions, not weather.",
-      "Wrong: while true, the quote refers to the general spirit of the age, not just wealth.",
-      "Wrong: this is not what the opening paradoxes describe."
-    ]
-  },
-  {
-    "id": "en-passage-002-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-002",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "EASY",
-    "statement": "What made Alice suddenly jump to her feet?",
-    "options": [
-      "She felt too hot and wanted to move.",
-      "Her sister told her to stand up.",
-      "She saw a rabbit take a watch out of its pocket.",
-      "She wanted to pick daisies."
-    ],
-    "answerIndex": 2,
-    "explanation": "The text states: '...but when the Rabbit actually took a watch out of its waistcoat-pocket... Alice started to her feet...'",
-    "optionExplanations": [
-      "Wrong: the heat made her sleepy, it didn't make her jump up.",
-      "Wrong: her sister was just reading.",
-      "Correct: seeing a rabbit with a watch and pocket made her jump up in curiosity. ✓",
-      "Wrong: she was considering making a daisy-chain, but hadn't gotten up for it."
-    ]
-  },
-  {
     "id": "en-001",
     "subject": "ENGLISH",
     "topic": "Grammar",
@@ -930,270 +882,6 @@
   {
     "id": "en-041",
     "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-001",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "MEDIUM",
-    "statement": "What is the main point of the opening sentence from 'Pride and Prejudice'?",
-    "options": [
-      "That all rich men want to get married.",
-      "That society assumes a wealthy bachelor must be looking for a wife.",
-      "That women should seek wealthy husbands.",
-      "That marriage is a financial transaction."
-    ],
-    "answerIndex": 1,
-    "explanation": "The ironic opening line states a universal truth, satirizing the societal expectation that a wealthy single man must be in search of a wife.",
-    "optionExplanations": [
-      "Wrong: it's an assumption, not a fact.",
-      "Correct: it reflects the societal view. ✓",
-      "Wrong: the sentence is about the man, not women directly.",
-      "Wrong: it's satirical, not literal."
-    ]
-  },
-  {
-    "id": "en-042",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-001",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "EASY",
-    "statement": "In the phrase 'in possession of a good fortune', 'fortune' means:",
-    "options": [
-      "luck",
-      "wealth",
-      "future",
-      "destiny"
-    ],
-    "answerIndex": 1,
-    "explanation": "Here 'fortune' refers to a large amount of money, wealth.",
-    "optionExplanations": [
-      "Wrong: not luck.",
-      "Correct: fortune = wealth. ✓",
-      "Wrong: not future.",
-      "Wrong: not destiny."
-    ]
-  },
-  {
-    "id": "en-043",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-001",
-    "topic": "Reading",
-    "subtopic": "Tone",
-    "difficulty": "MEDIUM",
-    "statement": "The tone of the opening line can best be described as:",
-    "options": [
-      "tragic",
-      "ironic",
-      "sentimental",
-      "aggressive"
-    ],
-    "answerIndex": 1,
-    "explanation": "Jane Austen uses irony to mock societal attitudes toward marriage and wealth.",
-    "optionExplanations": [
-      "Wrong: not tragic.",
-      "Correct: ironic tone. ✓",
-      "Wrong: not overly sentimental.",
-      "Wrong: not aggressive."
-    ]
-  },
-  {
-    "id": "en-044",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-002",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "EASY",
-    "statement": "What did Alice see the Rabbit do that made her follow it?",
-    "options": [
-      "It spoke to her.",
-      "It took a watch out of its waistcoat-pocket.",
-      "It ran past her very fast.",
-      "It disappeared into a hole."
-    ],
-    "answerIndex": 1,
-    "explanation": "Alice saw the Rabbit take a watch out of its waistcoat pocket and heard it mutter 'Oh dear! Oh dear! I shall be late!', which sparked her curiosity.",
-    "optionExplanations": [
-      "Wrong: it didn't speak directly to her.",
-      "Correct: the watch and the waistcoat were unusual. ✓",
-      "Wrong: it was running, but the specific action was the watch.",
-      "Wrong: she saw it go down a hole later."
-    ]
-  },
-  {
-    "id": "en-045",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-002",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "MEDIUM",
-    "statement": "Why was Alice 'burning with curiosity'?",
-    "options": [
-      "Because it was a hot day.",
-      "Because she had never seen a rabbit with a waistcoat-pocket or a watch before.",
-      "Because her sister told her an interesting story.",
-      "Because she wanted to pick daisies."
-    ],
-    "answerIndex": 1,
-    "explanation": "The unusual sight of a rabbit dressed and talking to itself was so strange that Alice felt intense curiosity.",
-    "optionExplanations": [
-      "Wrong: the heat made her sleepy.",
-      "Correct: the extraordinary rabbit sparked curiosity. ✓",
-      "Wrong: her sister was silent.",
-      "Wrong: she was thinking about daisies but that didn't cause curiosity."
-    ]
-  },
-  {
-    "id": "en-046",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-003",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "MEDIUM",
-    "statement": "Why was Tom Sawyer punished on Saturday morning?",
-    "options": [
-      "He skipped school.",
-      "He stole jam.",
-      "He was caught fighting.",
-      "He got into a fight and his clothes were dirty."
-    ],
-    "answerIndex": 3,
-    "explanation": "The text says Aunt Polly decided to punish him for 'that whipping Saturday' because he had gotten into a fight and his clothes were torn and dirty.",
-    "optionExplanations": [
-      "Wrong: it was Saturday, not a school day.",
-      "Wrong: the jam was Friday.",
-      "Wrong: he was not caught fighting at that moment.",
-      "Correct: his clothes showed evidence of a fight. ✓"
-    ]
-  },
-  {
-    "id": "en-047",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-003",
-    "topic": "Reading",
-    "subtopic": "Character",
-    "difficulty": "EASY",
-    "statement": "Based on the passage, Tom Sawyer can be described as:",
-    "options": [
-      "hardworking and obedient",
-      "mischievous and clever",
-      "shy and timid",
-      "cruel and mean"
-    ],
-    "answerIndex": 1,
-    "explanation": "Tom is a playful boy who gets into trouble and uses tricks to get out of work, showing he is mischievous but also clever.",
-    "optionExplanations": [
-      "Wrong: he hates work.",
-      "Correct: he is mischievous and clever. ✓",
-      "Wrong: he is not shy.",
-      "Wrong: not cruel."
-    ]
-  },
-  {
-    "id": "en-048",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-004",
-    "topic": "Reading",
-    "subtopic": "Mood",
-    "difficulty": "MEDIUM",
-    "statement": "What is the dominant mood in this extract from 'Frankenstein'?",
-    "options": [
-      "joyful and bright",
-      "gloomy and ominous",
-      "peaceful and calm",
-      "humorous and light"
-    ],
-    "answerIndex": 1,
-    "explanation": "The description emphasizes darkness, rain, and a 'dreary night', creating a gloomy, ominous atmosphere.",
-    "optionExplanations": [
-      "Wrong: the night is dreary.",
-      "Correct: gloomy, dark, and ominous. ✓",
-      "Wrong: not peaceful.",
-      "Wrong: no humor."
-    ]
-  },
-  {
-    "id": "en-049",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-004",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "EASY",
-    "statement": "At what time did the creature come to life?",
-    "options": [
-      "at dawn",
-      "at one in the morning",
-      "at midnight",
-      "in the afternoon"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage states: 'It was already one in the morning; the rain pattered dismally...' when the creature opened its eye.",
-    "optionExplanations": [
-      "Wrong: not dawn.",
-      "Correct: one in the morning. ✓",
-      "Wrong: not midnight.",
-      "Wrong: not afternoon."
-    ]
-  },
-  {
-    "id": "en-050",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-005",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "HARD",
-    "statement": "In the passage from 'Jane Eyre', what can we infer about Jane's feelings toward Rochester?",
-    "options": [
-      "She feels indifferent.",
-      "She feels a deep, passionate connection.",
-      "She is afraid of him.",
-      "She despises him."
-    ],
-    "answerIndex": 1,
-    "explanation": "Jane's impassioned speech about equality and her heart and spirit speaking to his suggests a profound emotional and spiritual bond, despite social differences.",
-    "optionExplanations": [
-      "Wrong: she is passionate.",
-      "Correct: she feels a deep connection. ✓",
-      "Wrong: she is not afraid.",
-      "Wrong: she does not despise him."
-    ]
-  },
-  {
-    "id": "en-051",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-005",
-    "topic": "Reading",
-    "subtopic": "Theme",
-    "difficulty": "MEDIUM",
-    "statement": "What theme is highlighted when Jane says 'I am not talking to you now through the medium of custom, conventionalities, nor even of mortal flesh'?",
-    "options": [
-      "The importance of social status.",
-      "The equality of souls beyond social roles.",
-      "The need for physical beauty.",
-      "The power of money."
-    ],
-    "answerIndex": 1,
-    "explanation": "Jane insists that her spirit and Rochester's are equal, transcending social conventions and physical form.",
-    "optionExplanations": [
-      "Wrong: she rejects social status.",
-      "Correct: equality of the soul. ✓",
-      "Wrong: not about beauty.",
-      "Wrong: not about money."
-    ]
-  },
-  {
-    "id": "en-052",
-    "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Future perfect",
     "difficulty": "HARD",
@@ -1214,7 +902,7 @@
     ]
   },
   {
-    "id": "en-053",
+    "id": "en-042",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Prefixes",
@@ -1236,7 +924,7 @@
     ]
   },
   {
-    "id": "en-054",
+    "id": "en-043",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Used to",
@@ -1258,7 +946,7 @@
     ]
   },
   {
-    "id": "en-055",
+    "id": "en-044",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Compound adjectives",
@@ -1280,7 +968,7 @@
     ]
   },
   {
-    "id": "en-056",
+    "id": "en-045",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Zero conditional",
@@ -1302,7 +990,7 @@
     ]
   },
   {
-    "id": "en-057",
+    "id": "en-046",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms advanced",
@@ -1324,7 +1012,7 @@
     ]
   },
   {
-    "id": "en-058",
+    "id": "en-047",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Adverbs of manner",
@@ -1346,7 +1034,7 @@
     ]
   },
   {
-    "id": "en-059",
+    "id": "en-048",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Word pairs",
@@ -1368,7 +1056,7 @@
     ]
   },
   {
-    "id": "en-060",
+    "id": "en-049",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Indirect questions",
@@ -1390,7 +1078,7 @@
     ]
   },
   {
-    "id": "en-061",
+    "id": "en-050",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms with colors",
@@ -1412,7 +1100,7 @@
     ]
   },
   {
-    "id": "en-062",
+    "id": "en-051",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Uncountable nouns quantifiers",
@@ -1434,7 +1122,7 @@
     ]
   },
   {
-    "id": "en-063",
+    "id": "en-052",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Foreign words in English",
@@ -1456,7 +1144,7 @@
     ]
   },
   {
-    "id": "en-064",
+    "id": "en-053",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Causative form",
@@ -1478,7 +1166,7 @@
     ]
   },
   {
-    "id": "en-065",
+    "id": "en-054",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms",
@@ -1500,7 +1188,7 @@
     ]
   },
   {
-    "id": "en-066",
+    "id": "en-055",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Double comparatives",
@@ -1522,7 +1210,7 @@
     ]
   },
   {
-    "id": "en-067",
+    "id": "en-056",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Easily confused words",
@@ -1544,7 +1232,7 @@
     ]
   },
   {
-    "id": "en-068",
+    "id": "en-057",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Emphatic 'do'",
@@ -1566,7 +1254,7 @@
     ]
   },
   {
-    "id": "en-069",
+    "id": "en-058",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Word meaning",
@@ -1588,7 +1276,7 @@
     ]
   },
   {
-    "id": "en-070",
+    "id": "en-059",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Reflexive pronouns",
@@ -1610,7 +1298,7 @@
     ]
   },
   {
-    "id": "en-071",
+    "id": "en-060",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Phrasal verbs with 'take'",
@@ -1632,7 +1320,7 @@
     ]
   },
   {
-    "id": "en-072",
+    "id": "en-061",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Mixed conditionals",
@@ -1654,7 +1342,7 @@
     ]
   },
   {
-    "id": "en-073",
+    "id": "en-062",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms",
@@ -1676,7 +1364,7 @@
     ]
   },
   {
-    "id": "en-074",
+    "id": "en-063",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Few vs. Little",
@@ -1698,7 +1386,7 @@
     ]
   },
   {
-    "id": "en-075",
+    "id": "en-064",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Suffixes",
@@ -1720,7 +1408,7 @@
     ]
   },
   {
-    "id": "en-076",
+    "id": "en-065",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Subjunctive mood",
@@ -1742,7 +1430,7 @@
     ]
   },
   {
-    "id": "en-077",
+    "id": "en-066",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Homonyms",
@@ -1764,7 +1452,7 @@
     ]
   },
   {
-    "id": "en-078",
+    "id": "en-067",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Inversion after negative adverbs",
@@ -1786,7 +1474,7 @@
     ]
   },
   {
-    "id": "en-079",
+    "id": "en-068",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Colloquial expressions",
@@ -1808,7 +1496,7 @@
     ]
   },
   {
-    "id": "en-080",
+    "id": "en-069",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Plural nouns",
@@ -1830,7 +1518,7 @@
     ]
   },
   {
-    "id": "en-081",
+    "id": "en-070",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "False friends",
@@ -1852,7 +1540,7 @@
     ]
   },
   {
-    "id": "en-082",
+    "id": "en-071",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Cleft sentences",
@@ -1874,7 +1562,7 @@
     ]
   },
   {
-    "id": "en-083",
+    "id": "en-072",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Prefixes",
@@ -1896,7 +1584,7 @@
     ]
   },
   {
-    "id": "en-084",
+    "id": "en-073",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Defining vs non-defining relative clauses",
@@ -1918,7 +1606,7 @@
     ]
   },
   {
-    "id": "en-085",
+    "id": "en-074",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Oxymoron",
@@ -1940,7 +1628,7 @@
     ]
   },
   {
-    "id": "en-086",
+    "id": "en-075",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Modal verbs deduction",
@@ -1962,7 +1650,7 @@
     ]
   },
   {
-    "id": "en-087",
+    "id": "en-076",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms with animals",
@@ -1984,7 +1672,7 @@
     ]
   },
   {
-    "id": "en-088",
+    "id": "en-077",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Determiners",
@@ -2006,7 +1694,7 @@
     ]
   },
   {
-    "id": "en-089",
+    "id": "en-078",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Euphemisms",
@@ -2028,7 +1716,7 @@
     ]
   },
   {
-    "id": "en-090",
+    "id": "en-079",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Wish clauses",
@@ -2050,7 +1738,7 @@
     ]
   },
   {
-    "id": "en-091",
+    "id": "en-080",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Confusing words",
@@ -2072,7 +1760,7 @@
     ]
   },
   {
-    "id": "en-092",
+    "id": "en-081",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Tag questions advanced",
@@ -2094,7 +1782,7 @@
     ]
   },
   {
-    "id": "en-093",
+    "id": "en-082",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Proverbs",
@@ -2116,7 +1804,7 @@
     ]
   },
   {
-    "id": "en-094",
+    "id": "en-083",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Reduced relative clauses",
@@ -2138,7 +1826,7 @@
     ]
   },
   {
-    "id": "en-095",
+    "id": "en-084",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Acronyms",
@@ -2160,7 +1848,7 @@
     ]
   },
   {
-    "id": "en-096",
+    "id": "en-085",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Parallelism",
@@ -2182,7 +1870,7 @@
     ]
   },
   {
-    "id": "en-097",
+    "id": "en-086",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Formal vocabulary",
@@ -2204,7 +1892,7 @@
     ]
   },
   {
-    "id": "en-098",
+    "id": "en-087",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Gerund as subject",
@@ -2226,7 +1914,7 @@
     ]
   },
   {
-    "id": "en-099",
+    "id": "en-088",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Antonyms",
@@ -2248,7 +1936,7 @@
     ]
   },
   {
-    "id": "en-100",
+    "id": "en-089",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Future continuous",
@@ -2270,775 +1958,7 @@
     ]
   },
   {
-    "id": "en-passage-006-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-006",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "What does IoT allow users to do?",
-    "options": [
-      "Only control household items",
-      "Remotely monitor and control devices",
-      "Replace all human workers",
-      "Eliminate internet usage"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage states that IoT 'allows for the remote monitoring and control of devices'.",
-    "optionExplanations": [
-      "Wrong: IoT goes beyond household items to industrial tools.",
-      "Correct: directly from the text. ✓",
-      "Wrong: not mentioned.",
-      "Wrong: IoT relies on the internet."
-    ]
-  },
-  {
-    "id": "en-passage-006-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-006",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What is one major concern regarding the IoT mentioned in the passage?",
-    "options": [
-      "High cost of smart devices",
-      "Lack of internet access",
-      "Data privacy and security",
-      "Unreliable weather prediction"
-    ],
-    "answerIndex": 2,
-    "explanation": "The passage raises 'serious concerns about data privacy and security'.",
-    "optionExplanations": [
-      "Wrong: not mentioned.",
-      "Wrong: not the focus.",
-      "Correct: privacy and security. ✓",
-      "Wrong: weather prediction is an example of use, not a concern."
-    ]
-  },
-  {
-    "id": "en-passage-006-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-006",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "In the text, the word 'embedded' is closest in meaning to:",
-    "options": [
-      "removed",
-      "inserted",
-      "displayed",
-      "hidden"
-    ],
-    "answerIndex": 1,
-    "explanation": "'Embedded' means fixed firmly and deeply in a surrounding mass; in this context, sensors are inserted into objects.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: inserted, built in. ✓",
-      "Wrong: not displayed.",
-      "Wrong: not necessarily hidden, but integrated."
-    ]
-  },
-  {
-    "id": "en-passage-006-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-006",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "HARD",
-    "statement": "What can be inferred about the future of IoT from the passage?",
-    "options": [
-      "It will only be used in industry.",
-      "It will disappear soon.",
-      "A balance between innovation and protection will be important.",
-      "Governments will ban IoT devices."
-    ],
-    "answerIndex": 2,
-    "explanation": "The passage concludes that 'finding a balance between innovation and user protection will be crucial'.",
-    "optionExplanations": [
-      "Wrong: it's already in homes.",
-      "Wrong: it's expanding.",
-      "Correct: balance needed. ✓",
-      "Wrong: not suggested."
-    ]
-  },
-  {
-    "id": "en-passage-007-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-007",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "Who is mentioned as a key figure in the development of the steam engine?",
-    "options": [
-      "Thomas Edison",
-      "Nikola Tesla",
-      "James Watt",
-      "Isaac Newton"
-    ],
-    "answerIndex": 2,
-    "explanation": "The text states 'its development in the 18th century, notably by James Watt'.",
-    "optionExplanations": [
-      "Wrong: Edison was later, electricity.",
-      "Wrong: Tesla was later, electricity.",
-      "Correct: James Watt. ✓",
-      "Wrong: Newton was physics, not steam engines."
-    ]
-  },
-  {
-    "id": "en-passage-007-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-007",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "Before steam power, factories primarily relied on:",
-    "options": [
-      "coal and oil",
-      "water wheels and wind",
-      "electricity",
-      "manual labour only"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage says 'factories relied on water wheels and wind'.",
-    "optionExplanations": [
-      "Wrong: coal became prominent with steam.",
-      "Correct: water wheels and wind. ✓",
-      "Wrong: electricity came later.",
-      "Wrong: manual labour wasn't the only source; water and wind were used."
-    ]
-  },
-  {
-    "id": "en-passage-007-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-007",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "The word 'profoundly' in 'Few inventions have altered the course of history as profoundly as the steam engine' means:",
-    "options": [
-      "superficially",
-      "deeply",
-      "slightly",
-      "quickly"
-    ],
-    "answerIndex": 1,
-    "explanation": "'Profoundly' means to a great depth or intensity; deeply.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: deeply. ✓",
-      "Wrong: not slightly.",
-      "Wrong: not about speed."
-    ]
-  },
-  {
-    "id": "en-passage-007-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-007",
-    "topic": "Reading",
-    "subtopic": "Author's tone",
-    "difficulty": "MEDIUM",
-    "statement": "The author's tone towards the steam engine can best be described as:",
-    "options": [
-      "completely negative",
-      "balanced, acknowledging both benefits and drawbacks",
-      "enthusiastically positive",
-      "indifferent"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage highlights both transformative benefits and negative consequences like pollution.",
-    "optionExplanations": [
-      "Wrong: not entirely negative.",
-      "Correct: balanced view. ✓",
-      "Wrong: not entirely positive.",
-      "Wrong: the author is clearly engaged."
-    ]
-  },
-  {
-    "id": "en-passage-008-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-008",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "What is the primary mission of the Perseverance rover?",
-    "options": [
-      "To test new rocket technology",
-      "To search for signs of ancient microbial life",
-      "To build a human colony",
-      "To map the entire planet of Mars"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage states it has 'a mission to search for signs of ancient microbial life'.",
-    "optionExplanations": [
-      "Wrong: not the primary mission.",
-      "Correct: search for ancient life. ✓",
-      "Wrong: not yet.",
-      "Wrong: not the goal."
-    ]
-  },
-  {
-    "id": "en-passage-008-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-008",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What is MOXIE designed to do?",
-    "options": [
-      "Take photographs of the Martian surface",
-      "Collect soil samples",
-      "Produce oxygen from the Martian atmosphere",
-      "Communicate directly with Earth"
-    ],
-    "answerIndex": 2,
-    "explanation": "The text says MOXIE 'produces small amounts of oxygen from the Martian atmosphere'.",
-    "optionExplanations": [
-      "Wrong: cameras do that.",
-      "Wrong: the rover collects samples.",
-      "Correct: oxygen production. ✓",
-      "Wrong: not its function."
-    ]
-  },
-  {
-    "id": "en-passage-008-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-008",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "HARD",
-    "statement": "Why is the MOXIE experiment considered 'crucial for future human missions'?",
-    "options": [
-      "Because it provides entertainment for astronauts.",
-      "Because it could supply breathable air and rocket fuel.",
-      "Because it sends signals back to Earth faster.",
-      "Because it maps the safest landing sites."
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage says it 'could be crucial for future human missions, providing breathable air and rocket fuel'.",
-    "optionExplanations": [
-      "Wrong: not entertainment.",
-      "Correct: air and fuel. ✓",
-      "Wrong: unrelated to communication.",
-      "Wrong: unrelated to mapping."
-    ]
-  },
-  {
-    "id": "en-passage-008-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-008",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "The word 'atmosphere' in the passage refers to:",
-    "options": [
-      "the mood of a place",
-      "the layer of gases surrounding a planet",
-      "the pressure inside a machine",
-      "the sky's colour"
-    ],
-    "answerIndex": 1,
-    "explanation": "In this context, atmosphere means the gases around Mars.",
-    "optionExplanations": [
-      "Wrong: that's a different meaning.",
-      "Correct: planetary gases. ✓",
-      "Wrong: not mechanical.",
-      "Wrong: not colour."
-    ]
-  },
-  {
-    "id": "en-passage-009-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-009",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "Which of the following is an example of AI in daily life mentioned in the passage?",
-    "options": [
-      "Using a smart speaker to get the weather",
-      "Writing a letter by hand",
-      "Riding a bicycle",
-      "Cooking on a gas stove"
-    ],
-    "answerIndex": 0,
-    "explanation": "The passage mentions 'When you ask a smart speaker for the weather... you are interacting with AI.'",
-    "optionExplanations": [
-      "Correct: smart speaker. ✓",
-      "Wrong: not AI.",
-      "Wrong: not mentioned.",
-      "Wrong: not mentioned."
-    ]
-  },
-  {
-    "id": "en-passage-009-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-009",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What is modern AI mainly based on, according to the passage?",
-    "options": [
-      "Manual programming of rules",
-      "Machine learning and data analysis",
-      "Electric motors",
-      "Solar energy"
-    ],
-    "answerIndex": 1,
-    "explanation": "The text says 'Modern AI relies heavily on machine learning, where algorithms analyze vast amounts of data'.",
-    "optionExplanations": [
-      "Wrong: old approach.",
-      "Correct: machine learning. ✓",
-      "Wrong: not about motors.",
-      "Wrong: not about energy."
-    ]
-  },
-  {
-    "id": "en-passage-009-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-009",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "MEDIUM",
-    "statement": "What can be inferred about the author's view on AI regulation?",
-    "options": [
-      "Regulation is unnecessary.",
-      "Regulation should ensure AI benefits everyone and doesn't increase inequality.",
-      "All AI should be banned.",
-      "Only large companies should control AI."
-    ],
-    "answerIndex": 1,
-    "explanation": "The author states that 'society must grapple with regulations that ensure AI serves the common good without reinforcing inequalities'.",
-    "optionExplanations": [
-      "Wrong: they see need for regulation.",
-      "Correct: fair regulation. ✓",
-      "Wrong: too extreme.",
-      "Wrong: not suggested."
-    ]
-  },
-  {
-    "id": "en-passage-009-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-009",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "The word 'displacement' in 'job displacement' most likely means:",
-    "options": [
-      "creation of new jobs",
-      "movement of workers to different locations",
-      "loss of jobs due to replacement",
-      "improvement of working conditions"
-    ],
-    "answerIndex": 2,
-    "explanation": "In this context, displacement refers to workers losing their jobs because machines take over those tasks.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Wrong: relocation is different.",
-      "Correct: job loss. ✓",
-      "Wrong: not about improvement."
-    ]
-  },
-  {
-    "id": "en-passage-010-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-010",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "How do wind turbines generate electricity?",
-    "options": [
-      "By burning natural gas",
-      "By converting kinetic energy of wind into electricity",
-      "By using solar panels",
-      "By extracting energy from water"
-    ],
-    "answerIndex": 1,
-    "explanation": "The text says 'convert the kinetic energy of moving air into electricity'.",
-    "optionExplanations": [
-      "Wrong: no burning.",
-      "Correct: kinetic energy. ✓",
-      "Wrong: not solar.",
-      "Wrong: not water."
-    ]
-  },
-  {
-    "id": "en-passage-010-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-010",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What is one disadvantage of wind power mentioned in the passage?",
-    "options": [
-      "It produces greenhouse gases.",
-      "It is too expensive to build.",
-      "It is intermittent because the wind doesn't always blow.",
-      "It cannot generate enough power for homes."
-    ],
-    "answerIndex": 2,
-    "explanation": "The passage states 'it is also intermittent—the wind doesn't always blow'.",
-    "optionExplanations": [
-      "Wrong: it's clean.",
-      "Wrong: cost not mentioned.",
-      "Correct: intermittency. ✓",
-      "Wrong: it can power thousands of homes."
-    ]
-  },
-  {
-    "id": "en-passage-010-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-010",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "MEDIUM",
-    "statement": "Why are engineers working on better energy storage for wind power?",
-    "options": [
-      "To make turbines spin faster",
-      "To store excess energy when the wind is strong and release it when wind is weak",
-      "To reduce the weight of the blades",
-      "To make wind turbines quieter"
-    ],
-    "answerIndex": 1,
-    "explanation": "Because wind is variable, storage smooths out supply.",
-    "optionExplanations": [
-      "Wrong: not about speed.",
-      "Correct: supply management. ✓",
-      "Wrong: not about blade weight.",
-      "Wrong: noise not mentioned."
-    ]
-  },
-  {
-    "id": "en-passage-010-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-010",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "EASY",
-    "statement": "The word 'abundant' means:",
-    "options": [
-      "rare",
-      "plentiful",
-      "expensive",
-      "polluting"
-    ],
-    "answerIndex": 1,
-    "explanation": "'Abundant' means existing in large quantities; plentiful.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: plentiful. ✓",
-      "Wrong: not about cost.",
-      "Wrong: not about pollution."
-    ]
-  },
-  {
-    "id": "en-passage-011-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-011",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "What was Ada Lovelace known for?",
-    "options": [
-      "Building the first computer",
-      "Pioneering work on algorithms",
-      "Inventing the transistor",
-      "Creating the internet"
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage mentions 'Ada Lovelace's pioneering work on algorithms'.",
-    "optionExplanations": [
-      "Wrong: Babbage designed the machine.",
-      "Correct: algorithms. ✓",
-      "Wrong: transistor came later.",
-      "Wrong: internet came later."
-    ]
-  },
-  {
-    "id": "en-passage-011-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-011",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What impact did the transistor have on computers?",
-    "options": [
-      "Made them larger and slower",
-      "Made them smaller, more reliable and more energy-efficient",
-      "Increased their use of vacuum tubes",
-      "Made them only useful for military purposes"
-    ],
-    "answerIndex": 1,
-    "explanation": "The text states the transistor made devices 'smaller, more reliable and more energy-efficient'.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: miniaturization and efficiency. ✓",
-      "Wrong: replaced vacuum tubes.",
-      "Wrong: broadened use."
-    ]
-  },
-  {
-    "id": "en-passage-011-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-011",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "MEDIUM",
-    "statement": "What can be inferred about early computers like ENIAC?",
-    "options": [
-      "They were small and portable.",
-      "They were less powerful than a modern calculator.",
-      "They were used for entertainment.",
-      "They were invented in the 1970s."
-    ],
-    "answerIndex": 1,
-    "explanation": "The last sentence says 'room-sized machines with less power than a modern calculator'.",
-    "optionExplanations": [
-      "Wrong: they were huge.",
-      "Correct: less powerful than calculators. ✓",
-      "Wrong: used for calculations and code-breaking.",
-      "Wrong: 1940s."
-    ]
-  },
-  {
-    "id": "en-passage-011-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-011",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "The phrase 'a testament to human creativity' means:",
-    "options": [
-      "a proof of human imagination",
-      "a test of human patience",
-      "a question about human intelligence",
-      "a criticism of technology"
-    ],
-    "answerIndex": 0,
-    "explanation": "'Testament' here means something that serves as proof or evidence.",
-    "optionExplanations": [
-      "Correct: proof. ✓",
-      "Wrong: not about patience.",
-      "Wrong: not a question.",
-      "Wrong: not criticism."
-    ]
-  },
-  {
-    "id": "en-passage-012-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-012",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "How does 3D printing differ from traditional manufacturing?",
-    "options": [
-      "It uses more material.",
-      "It builds objects layer by layer, producing less waste.",
-      "It can only create flat shapes.",
-      "It is always faster for mass production."
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage says it 'builds objects layer by layer... produces far less waste'.",
-    "optionExplanations": [
-      "Wrong: less waste.",
-      "Correct: additive process, less waste. ✓",
-      "Wrong: can create complex shapes.",
-      "Wrong: slow for mass production."
-    ]
-  },
-  {
-    "id": "en-passage-012-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-012",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "Which sector is NOT mentioned as benefiting from 3D printing?",
-    "options": [
-      "Medicine",
-      "Automotive",
-      "Aerospace",
-      "Textile"
-    ],
-    "answerIndex": 3,
-    "explanation": "The text mentions aerospace, medicine, automotive. Textile is not mentioned.",
-    "optionExplanations": [
-      "Wrong: mentioned (custom prosthetics).",
-      "Wrong: mentioned (lightweight parts).",
-      "Wrong: mentioned.",
-      "Correct: not mentioned. ✓"
-    ]
-  },
-  {
-    "id": "en-passage-012-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-012",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "MEDIUM",
-    "statement": "Why is 3D printing considered beneficial for small businesses?",
-    "options": [
-      "It allows them to hire more workers.",
-      "They can quickly prototype products without large factories.",
-      "It eliminates the need for any design software.",
-      "It reduces the cost of raw materials to zero."
-    ],
-    "answerIndex": 1,
-    "explanation": "The text says 'small businesses can prototype products quickly without large factories'.",
-    "optionExplanations": [
-      "Wrong: not mentioned.",
-      "Correct: rapid prototyping. ✓",
-      "Wrong: design still needed.",
-      "Wrong: materials still cost."
-    ]
-  },
-  {
-    "id": "en-passage-012-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-012",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "MEDIUM",
-    "statement": "The word 'hurdles' in '3D printing is not without hurdles' means:",
-    "options": [
-      "advantages",
-      "obstacles",
-      "goals",
-      "materials"
-    ],
-    "answerIndex": 1,
-    "explanation": "'Hurdles' means difficulties or obstacles.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: obstacles. ✓",
-      "Wrong: not goals.",
-      "Wrong: not materials."
-    ]
-  },
-  {
-    "id": "en-passage-013-q1",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-013",
-    "topic": "Reading",
-    "subtopic": "Comprehension",
-    "difficulty": "EASY",
-    "statement": "What is a major advantage of electric vehicles mentioned in the passage?",
-    "options": [
-      "They are cheaper to buy than traditional cars.",
-      "They produce zero tailpipe emissions.",
-      "They have unlimited driving range.",
-      "They do not require any maintenance."
-    ],
-    "answerIndex": 1,
-    "explanation": "The text says 'producing zero tailpipe emissions'.",
-    "optionExplanations": [
-      "Wrong: cost not stated as advantage.",
-      "Correct: zero tailpipe emissions. ✓",
-      "Wrong: range is improving but not unlimited.",
-      "Wrong: not mentioned."
-    ]
-  },
-  {
-    "id": "en-passage-013-q2",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-013",
-    "topic": "Reading",
-    "subtopic": "Detail",
-    "difficulty": "MEDIUM",
-    "statement": "What are two concerns about electric vehicles according to the passage?",
-    "options": [
-      "High speed and noise",
-      "Battery range and charging time",
-      "Mining of lithium and cobalt, and sparse charging networks",
-      "Lack of colours and high insurance"
-    ],
-    "answerIndex": 2,
-    "explanation": "The passage mentions 'environmental impact of mining lithium and cobalt' and 'charging networks are still sparse'.",
-    "optionExplanations": [
-      "Wrong: not mentioned.",
-      "Wrong: battery range and charging time were earlier concerns now addressed.",
-      "Correct: mining impact and sparse network. ✓",
-      "Wrong: not mentioned."
-    ]
-  },
-  {
-    "id": "en-passage-013-q3",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-013",
-    "topic": "Reading",
-    "subtopic": "Inference",
-    "difficulty": "HARD",
-    "statement": "What can be inferred about the future of petrol and diesel cars from the passage?",
-    "options": [
-      "They will always dominate the market.",
-      "They are likely to be phased out in many places.",
-      "They will become electric automatically.",
-      "They will only be sold in developing countries."
-    ],
-    "answerIndex": 1,
-    "explanation": "The passage states some countries plan to ban sale of new petrol/diesel cars within two decades.",
-    "optionExplanations": [
-      "Wrong: not according to bans.",
-      "Correct: phasing out. ✓",
-      "Wrong: not automatic conversion.",
-      "Wrong: not suggested."
-    ]
-  },
-  {
-    "id": "en-passage-013-q4",
-    "subject": "ENGLISH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "en-passage-013",
-    "topic": "Reading",
-    "subtopic": "Vocabulary",
-    "difficulty": "EASY",
-    "statement": "The phrase 'accelerating' in 'the shift to electric mobility is accelerating' means:",
-    "options": [
-      "slowing down",
-      "speeding up",
-      "remaining stable",
-      "reversing"
-    ],
-    "answerIndex": 1,
-    "explanation": "'Accelerating' means increasing speed, becoming faster.",
-    "optionExplanations": [
-      "Wrong: opposite.",
-      "Correct: speeding up. ✓",
-      "Wrong: not stable.",
-      "Wrong: not reversing."
-    ]
-  },
-  {
-    "id": "en-101",
+    "id": "en-090",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Tenses",
@@ -3060,7 +1980,7 @@
     ]
   },
   {
-    "id": "en-102",
+    "id": "en-091",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Collocations",
@@ -3082,7 +2002,7 @@
     ]
   },
   {
-    "id": "en-103",
+    "id": "en-092",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Conditionals",
@@ -3104,7 +2024,7 @@
     ]
   },
   {
-    "id": "en-104",
+    "id": "en-093",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms",
@@ -3126,7 +2046,7 @@
     ]
   },
   {
-    "id": "en-105",
+    "id": "en-094",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Articles",
@@ -3148,7 +2068,7 @@
     ]
   },
   {
-    "id": "en-106",
+    "id": "en-095",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Phrasal verbs",
@@ -3170,7 +2090,7 @@
     ]
   },
   {
-    "id": "en-107",
+    "id": "en-096",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Passive voice",
@@ -3192,7 +2112,7 @@
     ]
   },
   {
-    "id": "en-108",
+    "id": "en-097",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms",
@@ -3214,7 +2134,7 @@
     ]
   },
   {
-    "id": "en-109",
+    "id": "en-098",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Prepositions of time",
@@ -3236,7 +2156,7 @@
     ]
   },
   {
-    "id": "en-110",
+    "id": "en-099",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Word formation",
@@ -3258,7 +2178,7 @@
     ]
   },
   {
-    "id": "en-111",
+    "id": "en-100",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Reported speech",
@@ -3280,7 +2200,7 @@
     ]
   },
   {
-    "id": "en-112",
+    "id": "en-101",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Confusing words",
@@ -3302,7 +2222,7 @@
     ]
   },
   {
-    "id": "en-113",
+    "id": "en-102",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Comparatives and superlatives",
@@ -3324,7 +2244,7 @@
     ]
   },
   {
-    "id": "en-114",
+    "id": "en-103",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms with parts of the body",
@@ -3346,7 +2266,7 @@
     ]
   },
   {
-    "id": "en-115",
+    "id": "en-104",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Modals of ability",
@@ -3368,7 +2288,7 @@
     ]
   },
   {
-    "id": "en-116",
+    "id": "en-105",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Compound nouns",
@@ -3390,7 +2310,7 @@
     ]
   },
   {
-    "id": "en-117",
+    "id": "en-106",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Quantifiers",
@@ -3412,7 +2332,7 @@
     ]
   },
   {
-    "id": "en-118",
+    "id": "en-107",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Antonyms",
@@ -3434,7 +2354,7 @@
     ]
   },
   {
-    "id": "en-119",
+    "id": "en-108",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Gerunds vs infinitives",
@@ -3456,7 +2376,7 @@
     ]
   },
   {
-    "id": "en-120",
+    "id": "en-109",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Formal vs informal",
@@ -3478,7 +2398,7 @@
     ]
   },
   {
-    "id": "en-121",
+    "id": "en-110",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Relative clauses",
@@ -3500,7 +2420,7 @@
     ]
   },
   {
-    "id": "en-122",
+    "id": "en-111",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Suffixes for professions",
@@ -3522,7 +2442,7 @@
     ]
   },
   {
-    "id": "en-123",
+    "id": "en-112",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Tag questions",
@@ -3544,7 +2464,7 @@
     ]
   },
   {
-    "id": "en-124",
+    "id": "en-113",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Collocations with take",
@@ -3566,7 +2486,7 @@
     ]
   },
   {
-    "id": "en-125",
+    "id": "en-114",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Subject-verb agreement",
@@ -3588,7 +2508,7 @@
     ]
   },
   {
-    "id": "en-126",
+    "id": "en-115",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Homophones",
@@ -3610,7 +2530,7 @@
     ]
   },
   {
-    "id": "en-127",
+    "id": "en-116",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Future time clauses",
@@ -3632,7 +2552,7 @@
     ]
   },
   {
-    "id": "en-128",
+    "id": "en-117",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Proverbs",
@@ -3654,7 +2574,7 @@
     ]
   },
   {
-    "id": "en-129",
+    "id": "en-118",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Wish / If only",
@@ -3676,7 +2596,7 @@
     ]
   },
   {
-    "id": "en-130",
+    "id": "en-119",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Phrasal verbs with 'get'",
@@ -3698,7 +2618,7 @@
     ]
   },
   {
-    "id": "en-131",
+    "id": "en-120",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Adverbs of frequency",
@@ -3720,7 +2640,7 @@
     ]
   },
   {
-    "id": "en-132",
+    "id": "en-121",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms for 'big'",
@@ -3742,7 +2662,7 @@
     ]
   },
   {
-    "id": "en-133",
+    "id": "en-122",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Mixed tenses",
@@ -3764,7 +2684,7 @@
     ]
   },
   {
-    "id": "en-134",
+    "id": "en-123",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms with food",
@@ -3786,7 +2706,7 @@
     ]
   },
   {
-    "id": "en-135",
+    "id": "en-124",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Passive with modals",
@@ -3808,7 +2728,7 @@
     ]
   },
   {
-    "id": "en-136",
+    "id": "en-125",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Prefixes",
@@ -3830,7 +2750,7 @@
     ]
   },
   {
-    "id": "en-137",
+    "id": "en-126",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Indirect objects",
@@ -3852,7 +2772,7 @@
     ]
   },
   {
-    "id": "en-138",
+    "id": "en-127",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "False friends",
@@ -3874,7 +2794,7 @@
     ]
   },
   {
-    "id": "en-139",
+    "id": "en-128",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Neither/Either",
@@ -3896,7 +2816,7 @@
     ]
   },
   {
-    "id": "en-140",
+    "id": "en-129",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms for 'important'",
@@ -3918,7 +2838,7 @@
     ]
   },
   {
-    "id": "en-141",
+    "id": "en-130",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Omission of 'if'",
@@ -3940,7 +2860,7 @@
     ]
   },
   {
-    "id": "en-142",
+    "id": "en-131",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Acronyms",
@@ -3962,7 +2882,7 @@
     ]
   },
   {
-    "id": "en-143",
+    "id": "en-132",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "So / Such",
@@ -3984,7 +2904,7 @@
     ]
   },
   {
-    "id": "en-144",
+    "id": "en-133",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Idioms with time",
@@ -4006,7 +2926,7 @@
     ]
   },
   {
-    "id": "en-145",
+    "id": "en-134",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Double genitive",
@@ -4028,7 +2948,7 @@
     ]
   },
   {
-    "id": "en-146",
+    "id": "en-135",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Suffix -ful",
@@ -4050,7 +2970,7 @@
     ]
   },
   {
-    "id": "en-147",
+    "id": "en-136",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Adjective order",
@@ -4072,7 +2992,7 @@
     ]
   },
   {
-    "id": "en-148",
+    "id": "en-137",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Words for groups",
@@ -4094,7 +3014,7 @@
     ]
   },
   {
-    "id": "en-149",
+    "id": "en-138",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Determiners with superlatives",
@@ -4116,7 +3036,7 @@
     ]
   },
   {
-    "id": "en-150",
+    "id": "en-139",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Confusing words",
@@ -4138,7 +3058,7 @@
     ]
   },
   {
-    "id": "en-151",
+    "id": "en-140",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Conjunctions",
@@ -4160,7 +3080,7 @@
     ]
   },
   {
-    "id": "en-152",
+    "id": "en-141",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Emotions",
@@ -4182,7 +3102,7 @@
     ]
   },
   {
-    "id": "en-153",
+    "id": "en-142",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Inversion in conditional",
@@ -4204,7 +3124,7 @@
     ]
   },
   {
-    "id": "en-154",
+    "id": "en-143",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Phrasal verbs with 'put'",
@@ -4226,7 +3146,7 @@
     ]
   },
   {
-    "id": "en-155",
+    "id": "en-144",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Both, either, neither",
@@ -4248,7 +3168,7 @@
     ]
   },
   {
-    "id": "en-156",
+    "id": "en-145",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Words of French origin",
@@ -4270,7 +3190,7 @@
     ]
   },
   {
-    "id": "en-157",
+    "id": "en-146",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Emphatic 'do'",
@@ -4292,7 +3212,7 @@
     ]
   },
   {
-    "id": "en-158",
+    "id": "en-147",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Synonyms for 'happy'",
@@ -4314,7 +3234,7 @@
     ]
   },
   {
-    "id": "en-159",
+    "id": "en-148",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Countable/Uncountable",
@@ -4336,7 +3256,7 @@
     ]
   },
   {
-    "id": "en-160",
+    "id": "en-149",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Euphemisms",
@@ -4358,7 +3278,7 @@
     ]
   },
   {
-    "id": "en-161",
+    "id": "en-150",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Future perfect continuous",
@@ -4380,7 +3300,7 @@
     ]
   },
   {
-    "id": "en-162",
+    "id": "en-151",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Antonyms",
@@ -4402,7 +3322,7 @@
     ]
   },
   {
-    "id": "en-163",
+    "id": "en-152",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Prepositions after adjectives",
@@ -4424,7 +3344,7 @@
     ]
   },
   {
-    "id": "en-164",
+    "id": "en-153",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Word meaning",
@@ -4446,7 +3366,7 @@
     ]
   },
   {
-    "id": "en-165",
+    "id": "en-154",
     "subject": "ENGLISH",
     "topic": "Grammar",
     "subtopic": "Causative 'have'",
@@ -4468,7 +3388,7 @@
     ]
   },
   {
-    "id": "en-166",
+    "id": "en-155",
     "subject": "ENGLISH",
     "topic": "Vocabulary",
     "subtopic": "Collocations with 'do' and 'make'",

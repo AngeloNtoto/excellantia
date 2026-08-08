@@ -2,414 +2,6 @@
   {
     "id": "fr-1",
     "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-001",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Selon le texte, pourquoi M. Seguin a-t-il pris une septième chèvre toute jeune ?",
-    "options": [
-      "Parce qu'elle coûtait moins cher.",
-      "Pour qu'elle s'habitue mieux à demeurer chez lui.",
-      "Pour qu'elle puisse se battre contre le loup.",
-      "Parce qu'il trouvait les jeunes chèvres plus jolies."
-    ],
-    "answerIndex": 1,
-    "explanation": "Le texte indique : « il eut soin de la prendre toute jeune, pour qu'elle s'habituât mieux à demeurer chez lui. »",
-    "optionExplanations": [
-      "Faux : le prix n'est pas mentionné dans ce passage.",
-      "Correct : c'est exactement la raison donnée par le narrateur. ✓",
-      "Faux : M. Seguin veut la garder chez lui, pas qu'elle affronte le loup.",
-      "Faux : bien qu'il la trouve jolie ensuite, ce n'est pas la raison de son choix initial."
-    ]
-  },
-  {
-    "id": "fr-2",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-001",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Quelle est l'attitude de M. Seguin face à la nature de ses chèvres ?",
-    "options": [
-      "Il les comprend parfaitement mais ne peut rien faire.",
-      "Il est consterné et ne comprend pas leur besoin de liberté.",
-      "Il est indifférent à leur sort une fois qu'elles partent.",
-      "Il les encourage secrètement à partir dans la montagne."
-    ],
-    "answerIndex": 1,
-    "explanation": "Le texte dit : « Le brave M. Seguin, qui ne comprenait rien au caractère de ses bêtes, était consterné. » Il ne saisit pas leur désir de liberté.",
-    "optionExplanations": [
-      "Faux : le texte dit explicitement qu'il « ne comprenait rien ».",
-      "Correct : il est consterné face à des « chèvres indépendantes, voulant à tout prix le grand air ». ✓",
-      "Faux : il est affecté par leur perte (« C'est fini... je n'en garderai pas une »).",
-      "Faux : il essaie au contraire de les retenir."
-    ]
-  },
-  {
-    "id": "fr-3",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-002",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Dans le texte du Petit Prince, que représentait le dessin numéro 1 selon le narrateur ?",
-    "options": [
-      "Un chapeau",
-      "Un serpent boa digérant un éléphant",
-      "Un boa fermé",
-      "Une forêt vierge"
-    ],
-    "answerIndex": 1,
-    "explanation": "Le narrateur explique que son dessin représentait un serpent boa qui digérait un éléphant, mais les adultes l'ont pris pour un chapeau."
-  },
-  {
-    "id": "fr-4",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-002",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Pourquoi le narrateur abandonne-t-il sa carrière de peintre ?",
-    "options": [
-      "Parce qu'il n'avait plus de crayons de couleur.",
-      "Parce que les grandes personnes ne comprenaient pas ses dessins.",
-      "Parce qu'il préférait la géographie.",
-      "Parce que son dessin numéro 2 était raté."
-    ],
-    "answerIndex": 1,
-    "explanation": "Il dit avoir été découragé par l'insuccès de ses dessins auprès des adultes qui ne comprenaient jamais rien toutes seules."
-  },
-  {
-    "id": "fr-5",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-003",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Dans la fable 'Le Corbeau et le Renard', que laisse tomber le corbeau ?",
-    "options": [
-      "Un fruit",
-      "Un fromage",
-      "Un ver de terre",
-      "Une noix"
-    ],
-    "answerIndex": 1,
-    "explanation": "Le corbeau tenait en son bec un fromage, qu'il laisse tomber quand il ouvre le bec pour chanter."
-  },
-  {
-    "id": "fr-6",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-003",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Quel est le défaut du corbeau exploité par le renard ?",
-    "options": [
-      "La paresse",
-      "La gourmandise",
-      "La vanité",
-      "La curiosité"
-    ],
-    "answerIndex": 2,
-    "explanation": "Le renard flatte le corbeau sur sa beauté et sa voix, le corbeau veut montrer qu'il chante bien, par vanité il ouvre le bec."
-  },
-  {
-    "id": "fr-7",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-004",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Pourquoi la Cigale va-t-elle chez la Fourmi ?",
-    "options": [
-      "Pour chanter",
-      "Pour emprunter de la nourriture",
-      "Pour se vanter",
-      "Pour se plaindre du froid"
-    ],
-    "answerIndex": 1,
-    "explanation": "La Cigale se trouve dépourvue et va crier famine chez la Fourmi pour lui emprunter de quoi manger."
-  },
-  {
-    "id": "fr-8",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-004",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Que peut-on déduire de la réponse de la Fourmi ?",
-    "options": [
-      "Elle est généreuse.",
-      "Elle refuse de prêter car la Cigale n'a pas travaillé.",
-      "Elle n'a pas de grains en réserve.",
-      "Elle propose un échange."
-    ],
-    "answerIndex": 1,
-    "explanation": "La Fourmi, n'étant pas prêteuse, refuse d'aider la Cigale qui a chanté au lieu de faire des provisions."
-  },
-  {
-    "id": "fr-9",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-005",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "MEDIUM",
-    "statement": "Dans le début de Candide, pourquoi la mère de Candide n'a-t-elle pas épousé son père ?",
-    "options": [
-      "Il était trop pauvre.",
-      "Il ne pouvait prouver que soixante et onze quartiers de noblesse.",
-      "Il était étranger.",
-      "Il n'était pas aimé de la famille."
-    ],
-    "answerIndex": 1,
-    "explanation": "Le texte dit : « parce qu'il n'avait pu prouver que soixante et onze quartiers »."
-  },
-  {
-    "id": "fr-10",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-005",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Quelle est la tonalité de la description du baron de Thunder-ten-tronckh ?",
-    "options": [
-      "Épique",
-      "Ironique",
-      "Tragique",
-      "Lyrique"
-    ],
-    "answerIndex": 1,
-    "explanation": "Voltaire se moque du baron en soulignant la prétention de sa noblesse avec des détails ridicules (château avec une porte et des fenêtres)."
-  },
-  {
-    "id": "fr-11",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-006",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Pourquoi Jean Valjean a-t-il été condamné au bagne ?",
-    "options": [
-      "Pour meurtre",
-      "Pour vol de pain",
-      "Pour évasion",
-      "Pour vagabondage"
-    ],
-    "answerIndex": 1,
-    "explanation": "Le texte précise : « condamné à cinq ans de galères pour avoir volé un pain »."
-  },
-  {
-    "id": "fr-12",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-006",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "HARD",
-    "statement": "Quel est l'acte décisif de Monseigneur Bienvenu qui transforme Jean Valjean ?",
-    "options": [
-      "Lui offrir un repas",
-      "Lui donner les couverts et les chandeliers en déclarant l'avoir acheté au bien",
-      "Le cacher des gendarmes",
-      "Le conduire à l'église"
-    ],
-    "answerIndex": 1,
-    "explanation": "L'évêque lui donne l'argenterie et ajoute les chandeliers en disant acheter son âme pour le bien, ce qui provoque le changement de Jean Valjean."
-  },
-  {
-    "id": "fr-13",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-007",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Où se rend le poète dans 'Demain, dès l'aube...' ?",
-    "options": [
-      "À la montagne",
-      "Au bord de la mer",
-      "Sur la tombe d'un être cher",
-      "À Harfleur"
-    ],
-    "answerIndex": 2,
-    "explanation": "Le dernier vers dit : « je mettrai sur ta tombe un bouquet de houx vert et de bruyère en fleur. » Il va se recueillir sur une tombe."
-  },
-  {
-    "id": "fr-14",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-007",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Quel sentiment domine dans ce poème de Victor Hugo ?",
-    "options": [
-      "La colère",
-      "L'indifférence",
-      "La tristesse et le recueillement",
-      "La joie"
-    ],
-    "answerIndex": 2,
-    "explanation": "Le poème exprime le deuil et la douleur d'un père (pour sa fille Léopoldine). Le ton est grave, triste et résolu."
-  },
-  {
-    "id": "fr-15",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-008",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Quel sentiment ressort principalement du refrain du poème « Le Pont Mirabeau » ?",
-    "options": [
-      "La joie débordante",
-      "L'indifférence au temps",
-      "La nostalgie et la fuite du temps",
-      "La colère contre l'amour perdu"
-    ],
-    "answerIndex": 2,
-    "explanation": "Le refrain « Les jours s'en vont je demeure » insiste sur le passage irréversible du temps et la permanence du souvenir douloureux."
-  },
-  {
-    "id": "fr-16",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-008",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Pourquoi le poète compare-t-il l'amour à l'eau de la Seine ?",
-    "options": [
-      "Parce que l'eau est pure comme l'amour.",
-      "Parce que l'amour, comme l'eau, s'écoule et ne revient pas.",
-      "Parce que la Seine est un symbole de Paris.",
-      "Parce que les ponts rapprochent les amoureux."
-    ],
-    "answerIndex": 1,
-    "explanation": "Le vers « L'amour s'en va comme cette eau courante » établit une comparaison entre l'amour fugace et le fleuve qui s'écoule sans retour."
-  },
-  {
-    "id": "fr-17",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-008",
-    "topic": "Vocabulaire",
-    "subtopic": "Mots en contexte",
-    "difficulty": "EASY",
-    "statement": "Dans le vers « Faut-il qu'il m'en souvienne », le pronom « en » reprend :",
-    "options": [
-      "le pont Mirabeau",
-      "la Seine",
-      "nos amours",
-      "la peine"
-    ],
-    "answerIndex": 2,
-    "explanation": "« S'en souvenir » signifie se souvenir de nos amours. « en » renvoie à l'amour passé mentionné juste avant."
-  },
-  {
-    "id": "fr-18",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-009",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "MEDIUM",
-    "statement": "Quelle atmosphère domine le début de « La Mort du loup » ?",
-    "options": [
-      "Une atmosphère joyeuse et légère",
-      "Une atmosphère tendue et silencieuse",
-      "Une atmosphère chaotique et bruyante",
-      "Une atmosphère printanière"
-    ],
-    "answerIndex": 1,
-    "explanation": "Le silence, la marche sans parler, l'écoute attentive créent une tension solennelle avant la traque."
-  },
-  {
-    "id": "fr-19",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-009",
-    "topic": "Vocabulaire",
-    "subtopic": "Sens figuré",
-    "difficulty": "MEDIUM",
-    "statement": "Que signifie l'expression « la girouette en deuil » ?",
-    "options": [
-      "Une girouette peinte en noir",
-      "Une girouette qui grince tristement",
-      "Un orage violent",
-      "Une girouette immobile"
-    ],
-    "answerIndex": 1,
-    "explanation": "La girouette « criait au firmament » et est dite « en deuil », personnifiant l'objet pour renforcer l'ambiance funèbre."
-  },
-  {
-    "id": "fr-20",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-009",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "HARD",
-    "statement": "Quel est l'objectif du groupe dans cet extrait ?",
-    "options": [
-      "Admirer la pleine lune",
-      "Chasser les loups",
-      "Se promener dans la forêt",
-      "Échapper à une attaque"
-    ],
-    "answerIndex": 1,
-    "explanation": "Les marques d'ongles, les couteaux préparés, et la traque indiquent clairement une chasse aux loups."
-  },
-  {
-    "id": "fr-21",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-010",
-    "topic": "Lecture",
-    "subtopic": "Compréhension",
-    "difficulty": "EASY",
-    "statement": "Que représente le père Merlier dans cet extrait ?",
-    "options": [
-      "Un meunier couard",
-      "Un maire résolu à défendre sa propriété",
-      "Un marchand de farines pacifiste",
-      "Un soldat prussien"
-    ],
-    "answerIndex": 1,
-    "explanation": "Il est maire et meunier, il décroche son fusil et se poste pour défendre son moulin, montrant sa détermination."
-  },
-  {
-    "id": "fr-22",
-    "subject": "FRENCH",
-    "type": "PASSAGE_QUESTION",
-    "passageId": "fr-passage-010",
-    "topic": "Lecture",
-    "subtopic": "Inférence",
-    "difficulty": "MEDIUM",
-    "statement": "Quel événement historique sert de toile de fond à cette scène ?",
-    "options": [
-      "La Révolution française",
-      "La guerre franco-prussienne de 1870",
-      "La Première Guerre mondiale",
-      "La Commune de Paris"
-    ],
-    "answerIndex": 1,
-    "explanation": "L'arrivée des « Prussiens » et la mention de Rocreuse situent l'action pendant la guerre de 1870."
-  },
-  {
-    "id": "fr-23",
-    "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Présent de l'indicatif – verbes irréguliers",
     "difficulty": "EASY",
@@ -430,7 +22,7 @@
     ]
   },
   {
-    "id": "fr-24",
+    "id": "fr-2",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Présent – verbes en -eler/-eter",
@@ -452,7 +44,7 @@
     ]
   },
   {
-    "id": "fr-25",
+    "id": "fr-3",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur simple – verbes en -re",
@@ -474,7 +66,7 @@
     ]
   },
   {
-    "id": "fr-26",
+    "id": "fr-4",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel présent – usage",
@@ -484,7 +76,7 @@
       "viendrais",
       "viendrai",
       "viens",
-      "viendrais"
+      "serais venu"
     ],
     "answerIndex": 0,
     "explanation": "Dans une condition irréelle, le verbe de la principale se met au conditionnel présent.",
@@ -492,11 +84,11 @@
       "Correct : viendrais. ✓",
       "Faux : futur simple (conditionnel requis).",
       "Faux : présent.",
-      "Faux : doublon, la bonne réponse est viendrais."
+      "Faux : conditionnel passé (présent requis)."
     ]
   },
   {
-    "id": "fr-27",
+    "id": "fr-5",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif présent – verbes pronominaux",
@@ -518,7 +110,7 @@
     ]
   },
   {
-    "id": "fr-28",
+    "id": "fr-6",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé composé – auxiliaire être",
@@ -540,7 +132,7 @@
     ]
   },
   {
-    "id": "fr-29",
+    "id": "fr-7",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Présent – verbe 'valoir'",
@@ -562,7 +154,7 @@
     ]
   },
   {
-    "id": "fr-30",
+    "id": "fr-8",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Imparfait – verbes en -ger",
@@ -584,7 +176,7 @@
     ]
   },
   {
-    "id": "fr-31",
+    "id": "fr-9",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé – COD avant",
@@ -606,7 +198,7 @@
     ]
   },
   {
-    "id": "fr-32",
+    "id": "fr-10",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif présent – nécessité",
@@ -628,7 +220,7 @@
     ]
   },
   {
-    "id": "fr-33",
+    "id": "fr-11",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur antérieur",
@@ -650,7 +242,7 @@
     ]
   },
   {
-    "id": "fr-34",
+    "id": "fr-12",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel passé",
@@ -672,7 +264,7 @@
     ]
   },
   {
-    "id": "fr-35",
+    "id": "fr-13",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Plus-que-parfait du subjonctif",
@@ -694,7 +286,7 @@
     ]
   },
   {
-    "id": "fr-36",
+    "id": "fr-14",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé – verbes pronominaux réciproques",
@@ -716,7 +308,7 @@
     ]
   },
   {
-    "id": "fr-37",
+    "id": "fr-15",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif passé",
@@ -738,7 +330,7 @@
     ]
   },
   {
-    "id": "fr-38",
+    "id": "fr-16",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbes en -ir",
@@ -760,7 +352,7 @@
     ]
   },
   {
-    "id": "fr-39",
+    "id": "fr-17",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif imparfait – usage",
@@ -782,7 +374,7 @@
     ]
   },
   {
-    "id": "fr-40",
+    "id": "fr-18",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur proche vs futur simple",
@@ -804,7 +396,7 @@
     ]
   },
   {
-    "id": "fr-41",
+    "id": "fr-19",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord avec 'avoir' – COD quantitatif",
@@ -826,7 +418,7 @@
     ]
   },
   {
-    "id": "fr-42",
+    "id": "fr-20",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe présent ou gérondif",
@@ -848,7 +440,7 @@
     ]
   },
   {
-    "id": "fr-43",
+    "id": "fr-21",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Plus-que-parfait – formation",
@@ -870,7 +462,7 @@
     ]
   },
   {
-    "id": "fr-44",
+    "id": "fr-22",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel présent – politesse",
@@ -892,7 +484,7 @@
     ]
   },
   {
-    "id": "fr-45",
+    "id": "fr-23",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbes en -endre",
@@ -902,7 +494,7 @@
       "ils peignirent",
       "ils peindirent",
       "ils peignaient",
-      "ils peignirent"
+      "ils ont peint"
     ],
     "answerIndex": 0,
     "explanation": "Passé simple : je peignis, tu peignis, il peignit, nous peignîmes, vous peignîtes, ils peignirent.",
@@ -910,11 +502,11 @@
       "Correct : peignirent. ✓",
       "Faux : faute d'orthographe.",
       "Faux : imparfait.",
-      "Faux : doublon."
+      "Faux : passé composé (passé simple requis)."
     ]
   },
   {
-    "id": "fr-46",
+    "id": "fr-24",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif passé – accord",
@@ -936,7 +528,7 @@
     ]
   },
   {
-    "id": "fr-47",
+    "id": "fr-25",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Verbes impersonnels – temps composés",
@@ -958,7 +550,7 @@
     ]
   },
   {
-    "id": "fr-48",
+    "id": "fr-26",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé – pronom réfléchi COD",
@@ -980,7 +572,7 @@
     ]
   },
   {
-    "id": "fr-49",
+    "id": "fr-27",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbes en -oir",
@@ -1002,7 +594,7 @@
     ]
   },
   {
-    "id": "fr-50",
+    "id": "fr-28",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur simple – verbes en -ayer",
@@ -1024,7 +616,7 @@
     ]
   },
   {
-    "id": "fr-51",
+    "id": "fr-29",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Concordance des temps – après que",
@@ -1046,7 +638,7 @@
     ]
   },
   {
-    "id": "fr-52",
+    "id": "fr-30",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif négatif",
@@ -1068,7 +660,7 @@
     ]
   },
   {
-    "id": "fr-53",
+    "id": "fr-31",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbes en -oudre",
@@ -1090,7 +682,7 @@
     ]
   },
   {
-    "id": "fr-54",
+    "id": "fr-32",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif imparfait – verbes irréguliers",
@@ -1112,7 +704,7 @@
     ]
   },
   {
-    "id": "fr-55",
+    "id": "fr-33",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé antérieur – emploi",
@@ -1134,7 +726,7 @@
     ]
   },
   {
-    "id": "fr-56",
+    "id": "fr-34",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel passé 2e forme – expression du regret",
@@ -1156,7 +748,7 @@
     ]
   },
   {
-    "id": "fr-57",
+    "id": "fr-35",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe passé avec 'en' – cas particulier",
@@ -1178,7 +770,7 @@
     ]
   },
   {
-    "id": "fr-58",
+    "id": "fr-36",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbes défectifs",
@@ -1200,7 +792,7 @@
     ]
   },
   {
-    "id": "fr-59",
+    "id": "fr-37",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé avec un infinitif sous-entendu",
@@ -1222,7 +814,7 @@
     ]
   },
   {
-    "id": "fr-60",
+    "id": "fr-38",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur simple – verbe 'échoir' (défectif)",
@@ -1244,7 +836,7 @@
     ]
   },
   {
-    "id": "fr-61",
+    "id": "fr-39",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif plus-que-parfait – concordance littéraire",
@@ -1266,7 +858,7 @@
     ]
   },
   {
-    "id": "fr-62",
+    "id": "fr-40",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif des verbes avoir/être",
@@ -1288,7 +880,7 @@
     ]
   },
   {
-    "id": "fr-63",
+    "id": "fr-41",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe passé adjectivé – accord",
@@ -1310,7 +902,7 @@
     ]
   },
   {
-    "id": "fr-64",
+    "id": "fr-42",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé – COD multiple",
@@ -1332,7 +924,7 @@
     ]
   },
   {
-    "id": "fr-65",
+    "id": "fr-43",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Présent du conditionnel – valeurs modales",
@@ -1354,7 +946,7 @@
     ]
   },
   {
-    "id": "fr-66",
+    "id": "fr-44",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur antérieur – emploi modal",
@@ -1376,7 +968,7 @@
     ]
   },
   {
-    "id": "fr-67",
+    "id": "fr-45",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé des verbes de perception",
@@ -1398,7 +990,7 @@
     ]
   },
   {
-    "id": "fr-68",
+    "id": "fr-46",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple – verbe 'moudre'",
@@ -1420,7 +1012,7 @@
     ]
   },
   {
-    "id": "fr-69",
+    "id": "fr-47",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe passé des verbes coûtant",
@@ -1442,7 +1034,7 @@
     ]
   },
   {
-    "id": "fr-70",
+    "id": "fr-48",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Concordance des temps – 'avant que'",
@@ -1464,7 +1056,7 @@
     ]
   },
   {
-    "id": "fr-71",
+    "id": "fr-49",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur simple – verbe 'sourdre' (défectif)",
@@ -1486,7 +1078,7 @@
     ]
   },
   {
-    "id": "fr-72",
+    "id": "fr-50",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif – verbes en -ir (2e groupe) et pronoms",
@@ -1508,7 +1100,7 @@
     ]
   },
   {
-    "id": "fr-73",
+    "id": "fr-51",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Articles définis et indéfinis",
@@ -1530,7 +1122,7 @@
     ]
   },
   {
-    "id": "fr-74",
+    "id": "fr-52",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif qualificatif",
@@ -1552,7 +1144,7 @@
     ]
   },
   {
-    "id": "fr-75",
+    "id": "fr-53",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms personnels",
@@ -1574,7 +1166,7 @@
     ]
   },
   {
-    "id": "fr-76",
+    "id": "fr-54",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Formation de l'adverbe en -ment",
@@ -1596,7 +1188,7 @@
     ]
   },
   {
-    "id": "fr-77",
+    "id": "fr-55",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Déterminants démonstratifs",
@@ -1618,7 +1210,7 @@
     ]
   },
   {
-    "id": "fr-78",
+    "id": "fr-56",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Prépositions de lieu",
@@ -1640,7 +1232,7 @@
     ]
   },
   {
-    "id": "fr-79",
+    "id": "fr-57",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Articles partitifs",
@@ -1662,7 +1254,7 @@
     ]
   },
   {
-    "id": "fr-80",
+    "id": "fr-58",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms relatifs simples",
@@ -1684,7 +1276,7 @@
     ]
   },
   {
-    "id": "fr-81",
+    "id": "fr-59",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Négation simple",
@@ -1706,7 +1298,7 @@
     ]
   },
   {
-    "id": "fr-82",
+    "id": "fr-60",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Adjectifs possessifs",
@@ -1728,7 +1320,7 @@
     ]
   },
   {
-    "id": "fr-83",
+    "id": "fr-61",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un sujet simple",
@@ -1738,7 +1330,7 @@
       "est",
       "sont",
       "étions",
-      "sont"
+      "était"
     ],
     "answerIndex": 0,
     "explanation": "Le sujet est « la foule », singulier, donc « est ».",
@@ -1746,11 +1338,11 @@
       "Correct : est. ✓",
       "Faux : pluriel.",
       "Faux : 1re personne.",
-      "Faux : pluriel."
+      "Faux : imparfait (présent requis)."
     ]
   },
   {
-    "id": "fr-84",
+    "id": "fr-62",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom « en »",
@@ -1772,7 +1364,7 @@
     ]
   },
   {
-    "id": "fr-85",
+    "id": "fr-63",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pluriel des noms",
@@ -1794,7 +1386,7 @@
     ]
   },
   {
-    "id": "fr-86",
+    "id": "fr-64",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Emploi de « c’est » et « il est »",
@@ -1816,7 +1408,7 @@
     ]
   },
   {
-    "id": "fr-87",
+    "id": "fr-65",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Conjonctions de coordination",
@@ -1838,7 +1430,7 @@
     ]
   },
   {
-    "id": "fr-88",
+    "id": "fr-66",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Interrogation avec inversion",
@@ -1860,7 +1452,7 @@
     ]
   },
   {
-    "id": "fr-89",
+    "id": "fr-67",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif possessif",
@@ -1882,7 +1474,7 @@
     ]
   },
   {
-    "id": "fr-90",
+    "id": "fr-68",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Déterminants indéfinis",
@@ -1904,7 +1496,7 @@
     ]
   },
   {
-    "id": "fr-91",
+    "id": "fr-69",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom relatif « dont »",
@@ -1926,7 +1518,7 @@
     ]
   },
   {
-    "id": "fr-92",
+    "id": "fr-70",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Place de la négation avec un infinitif",
@@ -1948,7 +1540,7 @@
     ]
   },
   {
-    "id": "fr-93",
+    "id": "fr-71",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec être",
@@ -1970,7 +1562,7 @@
     ]
   },
   {
-    "id": "fr-94",
+    "id": "fr-72",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif de couleur composé",
@@ -1992,7 +1584,7 @@
     ]
   },
   {
-    "id": "fr-95",
+    "id": "fr-73",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms relatifs composés",
@@ -2014,7 +1606,7 @@
     ]
   },
   {
-    "id": "fr-96",
+    "id": "fr-74",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Subjonctif ou indicatif après conjonction",
@@ -2036,7 +1628,7 @@
     ]
   },
   {
-    "id": "fr-97",
+    "id": "fr-75",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec avoir (COD antéposé)",
@@ -2058,7 +1650,7 @@
     ]
   },
   {
-    "id": "fr-98",
+    "id": "fr-76",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms personnels doubles",
@@ -2080,7 +1672,7 @@
     ]
   },
   {
-    "id": "fr-99",
+    "id": "fr-77",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé des verbes pronominaux",
@@ -2102,7 +1694,7 @@
     ]
   },
   {
-    "id": "fr-100",
+    "id": "fr-78",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif « même »",
@@ -2124,7 +1716,7 @@
     ]
   },
   {
-    "id": "fr-101",
+    "id": "fr-79",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Discours indirect – concordance des temps",
@@ -2146,7 +1738,7 @@
     ]
   },
   {
-    "id": "fr-102",
+    "id": "fr-80",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif numéral",
@@ -2168,7 +1760,7 @@
     ]
   },
   {
-    "id": "fr-103",
+    "id": "fr-81",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Négation restrictive « ne… que »",
@@ -2190,7 +1782,7 @@
     ]
   },
   {
-    "id": "fr-104",
+    "id": "fr-82",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec plusieurs sujets",
@@ -2212,7 +1804,7 @@
     ]
   },
   {
-    "id": "fr-105",
+    "id": "fr-83",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom relatif « ce qui / ce que »",
@@ -2234,7 +1826,7 @@
     ]
   },
   {
-    "id": "fr-106",
+    "id": "fr-84",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « en » COD",
@@ -2256,7 +1848,7 @@
     ]
   },
   {
-    "id": "fr-107",
+    "id": "fr-85",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pluriel des noms composés",
@@ -2278,7 +1870,7 @@
     ]
   },
   {
-    "id": "fr-108",
+    "id": "fr-86",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Adjectifs de couleur avec nom",
@@ -2300,7 +1892,7 @@
     ]
   },
   {
-    "id": "fr-109",
+    "id": "fr-87",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif après un verbe d'état",
@@ -2322,7 +1914,7 @@
     ]
   },
   {
-    "id": "fr-110",
+    "id": "fr-88",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « beaucoup de »",
@@ -2344,7 +1936,7 @@
     ]
   },
   {
-    "id": "fr-111",
+    "id": "fr-89",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Conjonction « bien que » et subjonctif",
@@ -2366,7 +1958,7 @@
     ]
   },
   {
-    "id": "fr-112",
+    "id": "fr-90",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « avoir » dans une phrase interrogative",
@@ -2388,7 +1980,7 @@
     ]
   },
   {
-    "id": "fr-113",
+    "id": "fr-91",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Déterminant « quel » exclamatif",
@@ -2410,7 +2002,7 @@
     ]
   },
   {
-    "id": "fr-114",
+    "id": "fr-92",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un collectif suivi d'un complément",
@@ -2432,7 +2024,7 @@
     ]
   },
   {
-    "id": "fr-115",
+    "id": "fr-93",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom relatif « auquel »",
@@ -2454,7 +2046,7 @@
     ]
   },
   {
-    "id": "fr-116",
+    "id": "fr-94",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adverbe « tout »",
@@ -2476,7 +2068,7 @@
     ]
   },
   {
-    "id": "fr-117",
+    "id": "fr-95",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Emploi de « c'est » et « il est »",
@@ -2498,7 +2090,7 @@
     ]
   },
   {
-    "id": "fr-118",
+    "id": "fr-96",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un sujet singulier de sens pluriel",
@@ -2520,7 +2112,7 @@
     ]
   },
   {
-    "id": "fr-119",
+    "id": "fr-97",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un COD de mesure",
@@ -2542,7 +2134,7 @@
     ]
   },
   {
-    "id": "fr-120",
+    "id": "fr-98",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un verbe de perception",
@@ -2564,7 +2156,7 @@
     ]
   },
   {
-    "id": "fr-121",
+    "id": "fr-99",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un verbe impersonnel",
@@ -2586,7 +2178,7 @@
     ]
   },
   {
-    "id": "fr-122",
+    "id": "fr-100",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « laisser » + infinitif",
@@ -2608,7 +2200,7 @@
     ]
   },
   {
-    "id": "fr-123",
+    "id": "fr-101",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « demi »",
@@ -2630,7 +2222,7 @@
     ]
   },
   {
-    "id": "fr-124",
+    "id": "fr-102",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « possible »",
@@ -2652,7 +2244,7 @@
     ]
   },
   {
-    "id": "fr-125",
+    "id": "fr-103",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms personnels après impératif",
@@ -2674,7 +2266,7 @@
     ]
   },
   {
-    "id": "fr-126",
+    "id": "fr-104",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « plus d'un »",
@@ -2696,7 +2288,7 @@
     ]
   },
   {
-    "id": "fr-127",
+    "id": "fr-105",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec « moins de »",
@@ -2718,7 +2310,7 @@
     ]
   },
   {
-    "id": "fr-128",
+    "id": "fr-106",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « se » + infinitif",
@@ -2740,7 +2332,7 @@
     ]
   },
   {
-    "id": "fr-129",
+    "id": "fr-107",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom « soi »",
@@ -2762,7 +2354,7 @@
     ]
   },
   {
-    "id": "fr-130",
+    "id": "fr-108",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « ci-joint »",
@@ -2784,7 +2376,7 @@
     ]
   },
   {
-    "id": "fr-131",
+    "id": "fr-109",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un pourcentage",
@@ -2806,7 +2398,7 @@
     ]
   },
   {
-    "id": "fr-132",
+    "id": "fr-110",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « coûter »",
@@ -2828,7 +2420,7 @@
     ]
   },
   {
-    "id": "fr-133",
+    "id": "fr-111",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après un pourcentage",
@@ -2850,7 +2442,7 @@
     ]
   },
   {
-    "id": "fr-134",
+    "id": "fr-112",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « avoir » et un COD placé après",
@@ -2872,7 +2464,7 @@
     ]
   },
   {
-    "id": "fr-135",
+    "id": "fr-113",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un complément de durée",
@@ -2894,7 +2486,7 @@
     ]
   },
   {
-    "id": "fr-136",
+    "id": "fr-114",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « nul »",
@@ -2916,7 +2508,7 @@
     ]
   },
   {
-    "id": "fr-137",
+    "id": "fr-115",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un sujet en apparence singulier",
@@ -2938,7 +2530,7 @@
     ]
   },
   {
-    "id": "fr-138",
+    "id": "fr-116",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « faire » + infinitif",
@@ -2960,7 +2552,7 @@
     ]
   },
   {
-    "id": "fr-139",
+    "id": "fr-117",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « ou »",
@@ -2982,7 +2574,7 @@
     ]
   },
   {
-    "id": "fr-140",
+    "id": "fr-118",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un COD antéposé et « quel »",
@@ -3004,7 +2596,7 @@
     ]
   },
   {
-    "id": "fr-141",
+    "id": "fr-119",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Subjonctif après « de peur que »",
@@ -3026,7 +2618,7 @@
     ]
   },
   {
-    "id": "fr-142",
+    "id": "fr-120",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « se » + attribut",
@@ -3048,7 +2640,7 @@
     ]
   },
   {
-    "id": "fr-143",
+    "id": "fr-121",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un complément d'agent",
@@ -3070,7 +2662,7 @@
     ]
   },
   {
-    "id": "fr-144",
+    "id": "fr-122",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « ni l'un ni l'autre »",
@@ -3092,7 +2684,7 @@
     ]
   },
   {
-    "id": "fr-145",
+    "id": "fr-123",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom relatif « quiconque »",
@@ -3114,7 +2706,7 @@
     ]
   },
   {
-    "id": "fr-146",
+    "id": "fr-124",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l'adjectif « plein »",
@@ -3136,7 +2728,7 @@
     ]
   },
   {
-    "id": "fr-147",
+    "id": "fr-125",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « valoir »",
@@ -3158,7 +2750,7 @@
     ]
   },
   {
-    "id": "fr-148",
+    "id": "fr-126",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après un sujet fractionnaire",
@@ -3180,7 +2772,7 @@
     ]
   },
   {
-    "id": "fr-149",
+    "id": "fr-127",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un infinitif sous-entendu",
@@ -3202,7 +2794,7 @@
     ]
   },
   {
-    "id": "fr-150",
+    "id": "fr-128",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un sujet composé de noms coordonnés par « et »",
@@ -3224,7 +2816,7 @@
     ]
   },
   {
-    "id": "fr-151",
+    "id": "fr-129",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Adjectifs possessifs singuliers",
@@ -3246,7 +2838,7 @@
     ]
   },
   {
-    "id": "fr-152",
+    "id": "fr-130",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Formation des adverbes en -ment",
@@ -3268,7 +2860,7 @@
     ]
   },
   {
-    "id": "fr-153",
+    "id": "fr-131",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Accent circonflexe",
@@ -3290,7 +2882,7 @@
     ]
   },
   {
-    "id": "fr-154",
+    "id": "fr-132",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes",
@@ -3312,7 +2904,7 @@
     ]
   },
   {
-    "id": "fr-155",
+    "id": "fr-133",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots en -eur",
@@ -3334,7 +2926,7 @@
     ]
   },
   {
-    "id": "fr-156",
+    "id": "fr-134",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -ou",
@@ -3356,7 +2948,7 @@
     ]
   },
   {
-    "id": "fr-157",
+    "id": "fr-135",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes",
@@ -3378,7 +2970,7 @@
     ]
   },
   {
-    "id": "fr-158",
+    "id": "fr-136",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Lettres muettes",
@@ -3400,7 +2992,7 @@
     ]
   },
   {
-    "id": "fr-159",
+    "id": "fr-137",
     "subject": "FRENCH",
     "topic": "Famille de mots",
     "subtopic": "Radical commun",
@@ -3422,7 +3014,7 @@
     ]
   },
   {
-    "id": "fr-160",
+    "id": "fr-138",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Origine grecque",
@@ -3444,7 +3036,7 @@
     ]
   },
   {
-    "id": "fr-161",
+    "id": "fr-139",
     "subject": "FRENCH",
     "topic": "Homonymes",
     "subtopic": "Confusion courante",
@@ -3466,7 +3058,7 @@
     ]
   },
   {
-    "id": "fr-162",
+    "id": "fr-140",
     "subject": "FRENCH",
     "topic": "Pluriel des noms composés",
     "subtopic": "Cas simples",
@@ -3488,7 +3080,7 @@
     ]
   },
   {
-    "id": "fr-163",
+    "id": "fr-141",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Registres de langue",
@@ -3510,7 +3102,7 @@
     ]
   },
   {
-    "id": "fr-164",
+    "id": "fr-142",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots épicènes",
@@ -3532,7 +3124,7 @@
     ]
   },
   {
-    "id": "fr-165",
+    "id": "fr-143",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Double consonne",
@@ -3554,7 +3146,7 @@
     ]
   },
   {
-    "id": "fr-166",
+    "id": "fr-144",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Sens figuré",
@@ -3576,7 +3168,7 @@
     ]
   },
   {
-    "id": "fr-167",
+    "id": "fr-145",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -ail",
@@ -3598,7 +3190,7 @@
     ]
   },
   {
-    "id": "fr-168",
+    "id": "fr-146",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Paronymes",
@@ -3620,7 +3212,7 @@
     ]
   },
   {
-    "id": "fr-169",
+    "id": "fr-147",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots d'origine étrangère",
@@ -3642,7 +3234,7 @@
     ]
   },
   {
-    "id": "fr-170",
+    "id": "fr-148",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Accord de l'adjectif composé",
@@ -3664,7 +3256,7 @@
     ]
   },
   {
-    "id": "fr-171",
+    "id": "fr-149",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Étymologie",
@@ -3686,7 +3278,7 @@
     ]
   },
   {
-    "id": "fr-172",
+    "id": "fr-150",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Le son [s]",
@@ -3708,7 +3300,7 @@
     ]
   },
   {
-    "id": "fr-173",
+    "id": "fr-151",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Homonymes",
@@ -3730,7 +3322,7 @@
     ]
   },
   {
-    "id": "fr-174",
+    "id": "fr-152",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots ambigus",
@@ -3752,7 +3344,7 @@
     ]
   },
   {
-    "id": "fr-175",
+    "id": "fr-153",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Adverbes en -ment",
@@ -3774,7 +3366,7 @@
     ]
   },
   {
-    "id": "fr-176",
+    "id": "fr-154",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes contextuels",
@@ -3796,7 +3388,7 @@
     ]
   },
   {
-    "id": "fr-177",
+    "id": "fr-155",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Cas particuliers",
@@ -3818,7 +3410,7 @@
     ]
   },
   {
-    "id": "fr-178",
+    "id": "fr-156",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes",
@@ -3840,7 +3432,7 @@
     ]
   },
   {
-    "id": "fr-179",
+    "id": "fr-157",
     "subject": "FRENCH",
     "topic": "Famille de mots",
     "subtopic": "Mots de la même famille",
@@ -3862,7 +3454,7 @@
     ]
   },
   {
-    "id": "fr-180",
+    "id": "fr-158",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Trait d'union",
@@ -3884,7 +3476,7 @@
     ]
   },
   {
-    "id": "fr-181",
+    "id": "fr-159",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Polysémie",
@@ -3906,7 +3498,7 @@
     ]
   },
   {
-    "id": "fr-182",
+    "id": "fr-160",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Noms féminins en -té",
@@ -3928,7 +3520,7 @@
     ]
   },
   {
-    "id": "fr-183",
+    "id": "fr-161",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Pluriel des noms composés avec trait d'union",
@@ -3950,7 +3542,7 @@
     ]
   },
   {
-    "id": "fr-184",
+    "id": "fr-162",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Expressions idiomatiques",
@@ -3972,7 +3564,7 @@
     ]
   },
   {
-    "id": "fr-185",
+    "id": "fr-163",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Mots d'origine arabe",
@@ -3994,7 +3586,7 @@
     ]
   },
   {
-    "id": "fr-186",
+    "id": "fr-164",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Confusion a/à",
@@ -4016,7 +3608,7 @@
     ]
   },
   {
-    "id": "fr-187",
+    "id": "fr-165",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes",
@@ -4038,7 +3630,7 @@
     ]
   },
   {
-    "id": "fr-188",
+    "id": "fr-166",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms propres",
@@ -4060,7 +3652,7 @@
     ]
   },
   {
-    "id": "fr-189",
+    "id": "fr-167",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Noms de pays",
@@ -4082,7 +3674,7 @@
     ]
   },
   {
-    "id": "fr-190",
+    "id": "fr-168",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots-valises",
@@ -4104,7 +3696,7 @@
     ]
   },
   {
-    "id": "fr-191",
+    "id": "fr-169",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Accord de l'adjectif composé avec couleur",
@@ -4126,7 +3718,7 @@
     ]
   },
   {
-    "id": "fr-192",
+    "id": "fr-170",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Préfixes",
@@ -4148,7 +3740,7 @@
     ]
   },
   {
-    "id": "fr-193",
+    "id": "fr-171",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -al",
@@ -4170,7 +3762,7 @@
     ]
   },
   {
-    "id": "fr-194",
+    "id": "fr-172",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Suffixes",
@@ -4192,7 +3784,7 @@
     ]
   },
   {
-    "id": "fr-195",
+    "id": "fr-173",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des noms de métiers",
@@ -4214,7 +3806,7 @@
     ]
   },
   {
-    "id": "fr-196",
+    "id": "fr-174",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots invariables",
@@ -4236,7 +3828,7 @@
     ]
   },
   {
-    "id": "fr-197",
+    "id": "fr-175",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes",
@@ -4258,7 +3850,7 @@
     ]
   },
   {
-    "id": "fr-198",
+    "id": "fr-176",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Origine latine",
@@ -4280,7 +3872,7 @@
     ]
   },
   {
-    "id": "fr-199",
+    "id": "fr-177",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -au, -eau, -eu",
@@ -4302,7 +3894,7 @@
     ]
   },
   {
-    "id": "fr-200",
+    "id": "fr-178",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes",
@@ -4324,7 +3916,7 @@
     ]
   },
   {
-    "id": "fr-201",
+    "id": "fr-179",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots commençant par une voyelle",
@@ -4346,7 +3938,7 @@
     ]
   },
   {
-    "id": "fr-202",
+    "id": "fr-180",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Le son [j]",
@@ -4368,7 +3960,7 @@
     ]
   },
   {
-    "id": "fr-203",
+    "id": "fr-181",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Figures de style",
@@ -4390,7 +3982,7 @@
     ]
   },
   {
-    "id": "fr-204",
+    "id": "fr-182",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms composés avec verbe",
@@ -4412,7 +4004,7 @@
     ]
   },
   {
-    "id": "fr-205",
+    "id": "fr-183",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Néologismes",
@@ -4434,7 +4026,7 @@
     ]
   },
   {
-    "id": "fr-206",
+    "id": "fr-184",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Confusion ce/se",
@@ -4456,7 +4048,7 @@
     ]
   },
   {
-    "id": "fr-207",
+    "id": "fr-185",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des noms en -eur",
@@ -4478,7 +4070,7 @@
     ]
   },
   {
-    "id": "fr-208",
+    "id": "fr-186",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Homonymes",
@@ -4500,7 +4092,7 @@
     ]
   },
   {
-    "id": "fr-209",
+    "id": "fr-187",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Mots d'origine italienne",
@@ -4522,7 +4114,7 @@
     ]
   },
   {
-    "id": "fr-210",
+    "id": "fr-188",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms empruntés à l'anglais",
@@ -4544,7 +4136,7 @@
     ]
   },
   {
-    "id": "fr-211",
+    "id": "fr-189",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes",
@@ -4566,7 +4158,7 @@
     ]
   },
   {
-    "id": "fr-212",
+    "id": "fr-190",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Le son [k]",
@@ -4588,7 +4180,7 @@
     ]
   },
   {
-    "id": "fr-213",
+    "id": "fr-191",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des adjectifs en -eur",
@@ -4610,7 +4202,7 @@
     ]
   },
   {
-    "id": "fr-214",
+    "id": "fr-192",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes rares",
@@ -4632,7 +4224,7 @@
     ]
   },
   {
-    "id": "fr-215",
+    "id": "fr-193",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots composés avec garde-",
@@ -4654,7 +4246,7 @@
     ]
   },
   {
-    "id": "fr-216",
+    "id": "fr-194",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -s, -x, -z au singulier",
@@ -4676,7 +4268,7 @@
     ]
   },
   {
-    "id": "fr-217",
+    "id": "fr-195",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots rares",
@@ -4698,7 +4290,7 @@
     ]
   },
   {
-    "id": "fr-218",
+    "id": "fr-196",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots en -ème",
@@ -4720,7 +4312,7 @@
     ]
   },
   {
-    "id": "fr-219",
+    "id": "fr-197",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie des mots en -èle/-elle",
@@ -4742,7 +4334,7 @@
     ]
   },
   {
-    "id": "fr-220",
+    "id": "fr-198",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Étymologie grecque",
@@ -4764,7 +4356,7 @@
     ]
   },
   {
-    "id": "fr-221",
+    "id": "fr-199",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms composés avec adjectif",
@@ -4786,7 +4378,7 @@
     ]
   },
   {
-    "id": "fr-222",
+    "id": "fr-200",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Mots épicènes problématiques",
@@ -4808,7 +4400,7 @@
     ]
   },
   {
-    "id": "fr-223",
+    "id": "fr-201",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Paronymes",
@@ -4830,7 +4422,7 @@
     ]
   },
   {
-    "id": "fr-224",
+    "id": "fr-202",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Accord de demi",
@@ -4852,7 +4444,7 @@
     ]
   },
   {
-    "id": "fr-225",
+    "id": "fr-203",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots d'origine latine",
@@ -4874,7 +4466,7 @@
     ]
   },
   {
-    "id": "fr-226",
+    "id": "fr-204",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms étrangers",
@@ -4896,7 +4488,7 @@
     ]
   },
   {
-    "id": "fr-227",
+    "id": "fr-205",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des noms d'animaux",
@@ -4918,7 +4510,7 @@
     ]
   },
   {
-    "id": "fr-228",
+    "id": "fr-206",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Néologismes",
@@ -4940,7 +4532,7 @@
     ]
   },
   {
-    "id": "fr-229",
+    "id": "fr-207",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie de mots en -ot/-otte",
@@ -4962,7 +4554,7 @@
     ]
   },
   {
-    "id": "fr-230",
+    "id": "fr-208",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes littéraires",
@@ -4984,7 +4576,7 @@
     ]
   },
   {
-    "id": "fr-231",
+    "id": "fr-209",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms en -ail exceptions",
@@ -5006,7 +4598,7 @@
     ]
   },
   {
-    "id": "fr-232",
+    "id": "fr-210",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Noms de villes",
@@ -5028,7 +4620,7 @@
     ]
   },
   {
-    "id": "fr-233",
+    "id": "fr-211",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Expressions latines",
@@ -5050,7 +4642,7 @@
     ]
   },
   {
-    "id": "fr-234",
+    "id": "fr-212",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots en -oir/-oire",
@@ -5072,7 +4664,7 @@
     ]
   },
   {
-    "id": "fr-235",
+    "id": "fr-213",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots rares ou désuets",
@@ -5094,7 +4686,7 @@
     ]
   },
   {
-    "id": "fr-236",
+    "id": "fr-214",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms d'origine latine en -um",
@@ -5116,7 +4708,7 @@
     ]
   },
   {
-    "id": "fr-237",
+    "id": "fr-215",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des noms en -e",
@@ -5138,7 +4730,7 @@
     ]
   },
   {
-    "id": "fr-238",
+    "id": "fr-216",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes rares",
@@ -5160,7 +4752,7 @@
     ]
   },
   {
-    "id": "fr-239",
+    "id": "fr-217",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie des sons [s] et [k]",
@@ -5182,7 +4774,7 @@
     ]
   },
   {
-    "id": "fr-240",
+    "id": "fr-218",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Famille de mots",
@@ -5204,7 +4796,7 @@
     ]
   },
   {
-    "id": "fr-241",
+    "id": "fr-219",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms propres de familles",
@@ -5226,7 +4818,7 @@
     ]
   },
   {
-    "id": "fr-242",
+    "id": "fr-220",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Noms de couleurs",
@@ -5248,7 +4840,7 @@
     ]
   },
   {
-    "id": "fr-243",
+    "id": "fr-221",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Étymologie surprenante",
@@ -5270,7 +4862,7 @@
     ]
   },
   {
-    "id": "fr-244",
+    "id": "fr-222",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Confusion « quelque » / « quel que »",
@@ -5292,7 +4884,7 @@
     ]
   },
   {
-    "id": "fr-245",
+    "id": "fr-223",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes précis",
@@ -5314,7 +4906,7 @@
     ]
   },
   {
-    "id": "fr-246",
+    "id": "fr-224",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Cas très particuliers",
@@ -5336,7 +4928,7 @@
     ]
   },
   {
-    "id": "fr-247",
+    "id": "fr-225",
     "subject": "FRENCH",
     "topic": "Genre des noms",
     "subtopic": "Féminin des noms de métiers en -eur",
@@ -5358,7 +4950,7 @@
     ]
   },
   {
-    "id": "fr-248",
+    "id": "fr-226",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots désuets",
@@ -5380,7 +4972,7 @@
     ]
   },
   {
-    "id": "fr-249",
+    "id": "fr-227",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots avec « œ »",
@@ -5389,20 +4981,20 @@
     "options": [
       "mettre en exergue",
       "mettre en exèrgue",
-      "mettre en exergue (sans accent)",
-      "mettre en exergue"
+      "mettre en ézèrgue",
+      "mettre en exerg"
     ],
     "answerIndex": 0,
     "explanation": "Exergue s'écrit avec un 'e' sans accent, mais le 'x' peut être suivi de 'e'. L'orthographe est exergue.",
     "optionExplanations": [
-      "Correct : exergue. ✓",
-      "Faux : accent grave.",
-      "Faux : même graphie.",
-      "Faux : doublon."
+      "Correct : exergue s'écrit sans accent. ✓",
+      "Faux : pas d'accent grave.",
+      "Faux : orthographe erronée.",
+      "Faux : il manque le suffixe -ue."
     ]
   },
   {
-    "id": "fr-250",
+    "id": "fr-228",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes soutenus",
@@ -5424,7 +5016,7 @@
     ]
   },
   {
-    "id": "fr-251",
+    "id": "fr-229",
     "subject": "FRENCH",
     "topic": "Pluriel des noms",
     "subtopic": "Noms composés avec préposition",
@@ -5446,7 +5038,7 @@
     ]
   },
   {
-    "id": "fr-252",
+    "id": "fr-230",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots d'origine néerlandaise",
@@ -5468,7 +5060,7 @@
     ]
   },
   {
-    "id": "fr-253",
+    "id": "fr-231",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Connecteurs logiques",
@@ -5490,7 +5082,7 @@
     ]
   },
   {
-    "id": "fr-254",
+    "id": "fr-232",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Comparaison et métaphore",
@@ -5512,7 +5104,7 @@
     ]
   },
   {
-    "id": "fr-255",
+    "id": "fr-233",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Registres de langue",
@@ -5534,7 +5126,7 @@
     ]
   },
   {
-    "id": "fr-256",
+    "id": "fr-234",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Focalisation",
@@ -5556,7 +5148,7 @@
     ]
   },
   {
-    "id": "fr-257",
+    "id": "fr-235",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Structure du paragraphe",
@@ -5578,7 +5170,7 @@
     ]
   },
   {
-    "id": "fr-258",
+    "id": "fr-236",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Personnification",
@@ -5600,7 +5192,7 @@
     ]
   },
   {
-    "id": "fr-259",
+    "id": "fr-237",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Types de plans",
@@ -5622,7 +5214,7 @@
     ]
   },
   {
-    "id": "fr-260",
+    "id": "fr-238",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Champs lexicaux",
@@ -5644,7 +5236,7 @@
     ]
   },
   {
-    "id": "fr-261",
+    "id": "fr-239",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Types de textes",
@@ -5666,7 +5258,7 @@
     ]
   },
   {
-    "id": "fr-262",
+    "id": "fr-240",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Hyperbole",
@@ -5688,7 +5280,7 @@
     ]
   },
   {
-    "id": "fr-263",
+    "id": "fr-241",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Connecteurs d'opposition",
@@ -5710,7 +5302,7 @@
     ]
   },
   {
-    "id": "fr-264",
+    "id": "fr-242",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Type de narrateur",
@@ -5732,7 +5324,7 @@
     ]
   },
   {
-    "id": "fr-265",
+    "id": "fr-243",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Litote",
@@ -5754,7 +5346,7 @@
     ]
   },
   {
-    "id": "fr-266",
+    "id": "fr-244",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Argumentation",
@@ -5776,7 +5368,7 @@
     ]
   },
   {
-    "id": "fr-267",
+    "id": "fr-245",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Tonalité",
@@ -5798,7 +5390,7 @@
     ]
   },
   {
-    "id": "fr-268",
+    "id": "fr-246",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Cohérence textuelle",
@@ -5820,7 +5412,7 @@
     ]
   },
   {
-    "id": "fr-269",
+    "id": "fr-247",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Métonymie",
@@ -5842,7 +5434,7 @@
     ]
   },
   {
-    "id": "fr-270",
+    "id": "fr-248",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Introduction de dissertation",
@@ -5864,7 +5456,7 @@
     ]
   },
   {
-    "id": "fr-271",
+    "id": "fr-249",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Genres littéraires",
@@ -5886,7 +5478,7 @@
     ]
   },
   {
-    "id": "fr-272",
+    "id": "fr-250",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Ponctuation",
@@ -5908,7 +5500,7 @@
     ]
   },
   {
-    "id": "fr-273",
+    "id": "fr-251",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Antithèse",
@@ -5930,7 +5522,7 @@
     ]
   },
   {
-    "id": "fr-274",
+    "id": "fr-252",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Reformulation",
@@ -5952,7 +5544,7 @@
     ]
   },
   {
-    "id": "fr-275",
+    "id": "fr-253",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Point de vue",
@@ -5974,7 +5566,7 @@
     ]
   },
   {
-    "id": "fr-276",
+    "id": "fr-254",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Types de raisonnement",
@@ -5996,7 +5588,7 @@
     ]
   },
   {
-    "id": "fr-277",
+    "id": "fr-255",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Anaphore",
@@ -6018,7 +5610,7 @@
     ]
   },
   {
-    "id": "fr-278",
+    "id": "fr-256",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Objectivité / subjectivité",
@@ -6040,7 +5632,7 @@
     ]
   },
   {
-    "id": "fr-279",
+    "id": "fr-257",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Vocabulaire du théâtre",
@@ -6062,7 +5654,7 @@
     ]
   },
   {
-    "id": "fr-280",
+    "id": "fr-258",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Types d'arguments",
@@ -6084,7 +5676,7 @@
     ]
   },
   {
-    "id": "fr-281",
+    "id": "fr-259",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Gradation",
@@ -6106,7 +5698,7 @@
     ]
   },
   {
-    "id": "fr-282",
+    "id": "fr-260",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Révision de texte",
@@ -6128,7 +5720,7 @@
     ]
   },
   {
-    "id": "fr-283",
+    "id": "fr-261",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Procédés d'écriture",
@@ -6150,7 +5742,7 @@
     ]
   },
   {
-    "id": "fr-284",
+    "id": "fr-262",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Enchaînement des idées",
@@ -6172,7 +5764,7 @@
     ]
   },
   {
-    "id": "fr-285",
+    "id": "fr-263",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Euphémisme",
@@ -6194,7 +5786,7 @@
     ]
   },
   {
-    "id": "fr-286",
+    "id": "fr-264",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Développement d'un paragraphe",
@@ -6216,7 +5808,7 @@
     ]
   },
   {
-    "id": "fr-287",
+    "id": "fr-265",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Types de héros",
@@ -6238,7 +5830,7 @@
     ]
   },
   {
-    "id": "fr-288",
+    "id": "fr-266",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Modalisation",
@@ -6260,7 +5852,7 @@
     ]
   },
   {
-    "id": "fr-289",
+    "id": "fr-267",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Oxymore",
@@ -6282,7 +5874,7 @@
     ]
   },
   {
-    "id": "fr-290",
+    "id": "fr-268",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Rédaction d'une conclusion",
@@ -6304,7 +5896,7 @@
     ]
   },
   {
-    "id": "fr-291",
+    "id": "fr-269",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Énonciation",
@@ -6326,7 +5918,7 @@
     ]
   },
   {
-    "id": "fr-292",
+    "id": "fr-270",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Connecteurs spatiaux",
@@ -6348,7 +5940,7 @@
     ]
   },
   {
-    "id": "fr-293",
+    "id": "fr-271",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Allégorie",
@@ -6370,7 +5962,7 @@
     ]
   },
   {
-    "id": "fr-294",
+    "id": "fr-272",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Écriture inclusive",
@@ -6392,7 +5984,7 @@
     ]
   },
   {
-    "id": "fr-295",
+    "id": "fr-273",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Intertextualité",
@@ -6414,7 +6006,7 @@
     ]
   },
   {
-    "id": "fr-296",
+    "id": "fr-274",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Rédaction d'une thèse",
@@ -6436,7 +6028,7 @@
     ]
   },
   {
-    "id": "fr-297",
+    "id": "fr-275",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Paradoxe",
@@ -6458,7 +6050,7 @@
     ]
   },
   {
-    "id": "fr-298",
+    "id": "fr-276",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Style et clarté",
@@ -6480,7 +6072,7 @@
     ]
   },
   {
-    "id": "fr-299",
+    "id": "fr-277",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Rythme du texte",
@@ -6502,7 +6094,7 @@
     ]
   },
   {
-    "id": "fr-300",
+    "id": "fr-278",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Chiasme",
@@ -6524,7 +6116,7 @@
     ]
   },
   {
-    "id": "fr-301",
+    "id": "fr-279",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Éviter les répétitions",
@@ -6546,7 +6138,7 @@
     ]
   },
   {
-    "id": "fr-302",
+    "id": "fr-280",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Fonctions de la description",
@@ -6568,7 +6160,7 @@
     ]
   },
   {
-    "id": "fr-303",
+    "id": "fr-281",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Ponctuation et sens",
@@ -6590,7 +6182,7 @@
     ]
   },
   {
-    "id": "fr-304",
+    "id": "fr-282",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Périphrase",
@@ -6612,7 +6204,7 @@
     ]
   },
   {
-    "id": "fr-305",
+    "id": "fr-283",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Rédaction d'un résumé",
@@ -6634,7 +6226,7 @@
     ]
   },
   {
-    "id": "fr-306",
+    "id": "fr-284",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Registre comique",
@@ -6656,7 +6248,7 @@
     ]
   },
   {
-    "id": "fr-307",
+    "id": "fr-285",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Connecteurs logiques (suite)",
@@ -6678,7 +6270,7 @@
     ]
   },
   {
-    "id": "fr-308",
+    "id": "fr-286",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Antiphrase",
@@ -6700,7 +6292,7 @@
     ]
   },
   {
-    "id": "fr-309",
+    "id": "fr-287",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Transitions",
@@ -6722,7 +6314,7 @@
     ]
   },
   {
-    "id": "fr-310",
+    "id": "fr-288",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Polyphonie",
@@ -6744,7 +6336,7 @@
     ]
   },
   {
-    "id": "fr-311",
+    "id": "fr-289",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Modalisation (avancé)",
@@ -6766,7 +6358,7 @@
     ]
   },
   {
-    "id": "fr-312",
+    "id": "fr-290",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Assonance et allitération",
@@ -6788,7 +6380,7 @@
     ]
   },
   {
-    "id": "fr-313",
+    "id": "fr-291",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Écriture d'une lettre formelle",
@@ -6810,7 +6402,7 @@
     ]
   },
   {
-    "id": "fr-314",
+    "id": "fr-292",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Vision du monde",
@@ -6832,7 +6424,7 @@
     ]
   },
   {
-    "id": "fr-315",
+    "id": "fr-293",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Prise de notes",
@@ -6854,7 +6446,7 @@
     ]
   },
   {
-    "id": "fr-316",
+    "id": "fr-294",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Hypallage",
@@ -6876,7 +6468,7 @@
     ]
   },
   {
-    "id": "fr-317",
+    "id": "fr-295",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Choix du registre",
@@ -6898,7 +6490,7 @@
     ]
   },
   {
-    "id": "fr-318",
+    "id": "fr-296",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Cohérence narrative",
@@ -6920,7 +6512,7 @@
     ]
   },
   {
-    "id": "fr-319",
+    "id": "fr-297",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Construction d'un plan argumentatif",
@@ -6942,7 +6534,7 @@
     ]
   },
   {
-    "id": "fr-320",
+    "id": "fr-298",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Prétérition",
@@ -6964,7 +6556,7 @@
     ]
   },
   {
-    "id": "fr-321",
+    "id": "fr-299",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Ponctuation et rythme",
@@ -6986,7 +6578,7 @@
     ]
   },
   {
-    "id": "fr-322",
+    "id": "fr-300",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Procédés rhétoriques",
@@ -7008,7 +6600,7 @@
     ]
   },
   {
-    "id": "fr-323",
+    "id": "fr-301",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Syntaxe et clarté",
@@ -7030,7 +6622,7 @@
     ]
   },
   {
-    "id": "fr-324",
+    "id": "fr-302",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Accumulation",
@@ -7052,7 +6644,7 @@
     ]
   },
   {
-    "id": "fr-325",
+    "id": "fr-303",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Écriture et révision",
@@ -7074,7 +6666,7 @@
     ]
   },
   {
-    "id": "fr-326",
+    "id": "fr-304",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Thèmes et motifs",
@@ -7096,7 +6688,7 @@
     ]
   },
   {
-    "id": "fr-327",
+    "id": "fr-305",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Ton et intention",
@@ -7118,7 +6710,7 @@
     ]
   },
   {
-    "id": "fr-328",
+    "id": "fr-306",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Anacoluthe",
@@ -7140,7 +6732,7 @@
     ]
   },
   {
-    "id": "fr-329",
+    "id": "fr-307",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Rédaction d'un texte argumentatif",
@@ -7162,7 +6754,7 @@
     ]
   },
   {
-    "id": "fr-330",
+    "id": "fr-308",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Écriture poétique",
@@ -7184,7 +6776,7 @@
     ]
   },
   {
-    "id": "fr-331",
+    "id": "fr-309",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Reformulation et résumé",
@@ -7206,7 +6798,7 @@
     ]
   },
   {
-    "id": "fr-332",
+    "id": "fr-310",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Comparaison (rappel)",
@@ -7228,7 +6820,7 @@
     ]
   },
   {
-    "id": "fr-333",
+    "id": "fr-311",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Erreurs fréquentes",
@@ -7250,7 +6842,7 @@
     ]
   },
   {
-    "id": "fr-334",
+    "id": "fr-312",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Tonalité lyrique",
@@ -7272,7 +6864,7 @@
     ]
   },
   {
-    "id": "fr-335",
+    "id": "fr-313",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Variété du vocabulaire",
@@ -7294,7 +6886,7 @@
     ]
   },
   {
-    "id": "fr-336",
+    "id": "fr-314",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Zeugma",
@@ -7316,7 +6908,7 @@
     ]
   },
   {
-    "id": "fr-337",
+    "id": "fr-315",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Dialogue dans un récit",
@@ -7338,7 +6930,7 @@
     ]
   },
   {
-    "id": "fr-338",
+    "id": "fr-316",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Narrateur fiable / non fiable",
@@ -7360,7 +6952,7 @@
     ]
   },
   {
-    "id": "fr-339",
+    "id": "fr-317",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Emploi des temps du récit",
@@ -7382,7 +6974,7 @@
     ]
   },
   {
-    "id": "fr-340",
+    "id": "fr-318",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Pléonasme",
@@ -7404,7 +6996,7 @@
     ]
   },
   {
-    "id": "fr-341",
+    "id": "fr-319",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Accroche d'introduction",
@@ -7426,7 +7018,7 @@
     ]
   },
   {
-    "id": "fr-342",
+    "id": "fr-320",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Discours rapporté",
@@ -7448,7 +7040,7 @@
     ]
   },
   {
-    "id": "fr-343",
+    "id": "fr-321",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Écriture et clichés",
@@ -7470,7 +7062,7 @@
     ]
   },
   {
-    "id": "fr-344",
+    "id": "fr-322",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Métaphore filée",
@@ -7492,7 +7084,7 @@
     ]
   },
   {
-    "id": "fr-345",
+    "id": "fr-323",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Correction d'une phrase",
@@ -7514,7 +7106,7 @@
     ]
   },
   {
-    "id": "fr-346",
+    "id": "fr-324",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Poésie : versification",
@@ -7536,7 +7128,7 @@
     ]
   },
   {
-    "id": "fr-347",
+    "id": "fr-325",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Révision de texte : concision",
@@ -7558,7 +7150,7 @@
     ]
   },
   {
-    "id": "fr-348",
+    "id": "fr-326",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Récapitulatif",
@@ -7580,7 +7172,7 @@
     ]
   },
   {
-    "id": "fr-349",
+    "id": "fr-327",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Construction d'un récit",
@@ -7602,7 +7194,7 @@
     ]
   },
   {
-    "id": "fr-350",
+    "id": "fr-328",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Tonalité épique",
@@ -7624,7 +7216,7 @@
     ]
   },
   {
-    "id": "fr-351",
+    "id": "fr-329",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Emploi du « on »",
@@ -7646,7 +7238,7 @@
     ]
   },
   {
-    "id": "fr-352",
+    "id": "fr-330",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Présence de la litote",
@@ -7668,7 +7260,7 @@
     ]
   },
   {
-    "id": "fr-353",
+    "id": "fr-331",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Conclusion d'un texte argumentatif",
@@ -7690,7 +7282,7 @@
     ]
   },
   {
-    "id": "fr-354",
+    "id": "fr-332",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Dénouement",
@@ -7712,7 +7304,7 @@
     ]
   },
   {
-    "id": "fr-355",
+    "id": "fr-333",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Rédaction d'une lettre de motivation",
@@ -7734,7 +7326,7 @@
     ]
   },
   {
-    "id": "fr-356",
+    "id": "fr-334",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Métaphore et personnification",
@@ -7756,7 +7348,7 @@
     ]
   },
   {
-    "id": "fr-357",
+    "id": "fr-335",
     "subject": "FRENCH",
     "topic": "Expression écrite",
     "subtopic": "Éviter les lourdeurs",
@@ -7778,7 +7370,7 @@
     ]
   },
   {
-    "id": "fr-358",
+    "id": "fr-336",
     "subject": "FRENCH",
     "topic": "Analyse littéraire",
     "subtopic": "Registre pathétique",
@@ -7800,7 +7392,7 @@
     ]
   },
   {
-    "id": "fr-359",
+    "id": "fr-337",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé",
@@ -7822,7 +7414,7 @@
     ]
   },
   {
-    "id": "fr-360",
+    "id": "fr-338",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Imparfait du subjonctif",
@@ -7844,7 +7436,7 @@
     ]
   },
   {
-    "id": "fr-361",
+    "id": "fr-339",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots rares",
@@ -7866,7 +7458,7 @@
     ]
   },
   {
-    "id": "fr-362",
+    "id": "fr-340",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Rectifications de 1990",
@@ -7888,7 +7480,7 @@
     ]
   },
   {
-    "id": "fr-363",
+    "id": "fr-341",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms relatifs complexes",
@@ -7910,7 +7502,7 @@
     ]
   },
   {
-    "id": "fr-364",
+    "id": "fr-342",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Doublets populaires",
@@ -7932,7 +7524,7 @@
     ]
   },
   {
-    "id": "fr-365",
+    "id": "fr-343",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Hypallage",
@@ -7954,7 +7546,7 @@
     ]
   },
   {
-    "id": "fr-366",
+    "id": "fr-344",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple irrégulier",
@@ -7976,7 +7568,7 @@
     ]
   },
   {
-    "id": "fr-367",
+    "id": "fr-345",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Paronymes",
@@ -7998,7 +7590,7 @@
     ]
   },
   {
-    "id": "fr-368",
+    "id": "fr-346",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Noms féminins en -té",
@@ -8020,7 +7612,7 @@
     ]
   },
   {
-    "id": "fr-369",
+    "id": "fr-347",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après un pourcentage",
@@ -8042,7 +7634,7 @@
     ]
   },
   {
-    "id": "fr-370",
+    "id": "fr-348",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes",
@@ -8064,7 +7656,7 @@
     ]
   },
   {
-    "id": "fr-371",
+    "id": "fr-349",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Allitération",
@@ -8086,7 +7678,7 @@
     ]
   },
   {
-    "id": "fr-372",
+    "id": "fr-350",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots composés avec trait d’union",
@@ -8108,7 +7700,7 @@
     ]
   },
   {
-    "id": "fr-373",
+    "id": "fr-351",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel passé 2e forme",
@@ -8130,7 +7722,7 @@
     ]
   },
   {
-    "id": "fr-374",
+    "id": "fr-352",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Subjonctif après un superlatif",
@@ -8152,7 +7744,7 @@
     ]
   },
   {
-    "id": "fr-375",
+    "id": "fr-353",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Étymologie",
@@ -8174,7 +7766,7 @@
     ]
   },
   {
-    "id": "fr-376",
+    "id": "fr-354",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie des sons",
@@ -8196,7 +7788,7 @@
     ]
   },
   {
-    "id": "fr-377",
+    "id": "fr-355",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Oxymore",
@@ -8218,7 +7810,7 @@
     ]
   },
   {
-    "id": "fr-378",
+    "id": "fr-356",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé antérieur",
@@ -8240,7 +7832,7 @@
     ]
   },
   {
-    "id": "fr-379",
+    "id": "fr-357",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de l’adjectif « demi »",
@@ -8262,7 +7854,7 @@
     ]
   },
   {
-    "id": "fr-380",
+    "id": "fr-358",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Synonymes soutenus",
@@ -8284,7 +7876,7 @@
     ]
   },
   {
-    "id": "fr-381",
+    "id": "fr-359",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Pluriel des noms en -al",
@@ -8306,7 +7898,7 @@
     ]
   },
   {
-    "id": "fr-382",
+    "id": "fr-360",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Négation restrictive",
@@ -8328,7 +7920,7 @@
     ]
   },
   {
-    "id": "fr-383",
+    "id": "fr-361",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Chiasme",
@@ -8350,7 +7942,7 @@
     ]
   },
   {
-    "id": "fr-384",
+    "id": "fr-362",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe présent",
@@ -8372,7 +7964,7 @@
     ]
   },
   {
-    "id": "fr-385",
+    "id": "fr-363",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots d’origine italienne",
@@ -8394,7 +7986,7 @@
     ]
   },
   {
-    "id": "fr-386",
+    "id": "fr-364",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Accent circonflexe",
@@ -8416,7 +8008,7 @@
     ]
   },
   {
-    "id": "fr-387",
+    "id": "fr-365",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec « plus d’un »",
@@ -8438,7 +8030,7 @@
     ]
   },
   {
-    "id": "fr-388",
+    "id": "fr-366",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Prétérition",
@@ -8460,7 +8052,7 @@
     ]
   },
   {
-    "id": "fr-389",
+    "id": "fr-367",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Futur antérieur",
@@ -8482,7 +8074,7 @@
     ]
   },
   {
-    "id": "fr-390",
+    "id": "fr-368",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Paronymes subtils",
@@ -8504,7 +8096,7 @@
     ]
   },
   {
-    "id": "fr-391",
+    "id": "fr-369",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un verbe pronominal",
@@ -8526,7 +8118,7 @@
     ]
   },
   {
-    "id": "fr-392",
+    "id": "fr-370",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Noms en -ou",
@@ -8548,7 +8140,7 @@
     ]
   },
   {
-    "id": "fr-393",
+    "id": "fr-371",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Mots issus de l’arabe",
@@ -8570,7 +8162,7 @@
     ]
   },
   {
-    "id": "fr-394",
+    "id": "fr-372",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Synecdoque",
@@ -8592,7 +8184,7 @@
     ]
   },
   {
-    "id": "fr-395",
+    "id": "fr-373",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple des verbes en -oudre",
@@ -8614,7 +8206,7 @@
     ]
   },
   {
-    "id": "fr-396",
+    "id": "fr-374",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots désuets",
@@ -8636,7 +8228,7 @@
     ]
   },
   {
-    "id": "fr-397",
+    "id": "fr-375",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Subjonctif imparfait",
@@ -8658,7 +8250,7 @@
     ]
   },
   {
-    "id": "fr-398",
+    "id": "fr-376",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie des mots en -èle/-elle",
@@ -8680,7 +8272,7 @@
     ]
   },
   {
-    "id": "fr-399",
+    "id": "fr-377",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Gradation",
@@ -8702,7 +8294,7 @@
     ]
   },
   {
-    "id": "fr-400",
+    "id": "fr-378",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel passé 2e forme",
@@ -8724,7 +8316,7 @@
     ]
   },
   {
-    "id": "fr-401",
+    "id": "fr-379",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Sens figuré",
@@ -8746,7 +8338,7 @@
     ]
   },
   {
-    "id": "fr-402",
+    "id": "fr-380",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronom « en » et accord du participe",
@@ -8768,7 +8360,7 @@
     ]
   },
   {
-    "id": "fr-403",
+    "id": "fr-381",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots invariables",
@@ -8790,7 +8382,7 @@
     ]
   },
   {
-    "id": "fr-404",
+    "id": "fr-382",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Origine grecque",
@@ -8812,7 +8404,7 @@
     ]
   },
   {
-    "id": "fr-405",
+    "id": "fr-383",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Anacoluthe",
@@ -8834,7 +8426,7 @@
     ]
   },
   {
-    "id": "fr-406",
+    "id": "fr-384",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Verbes défectifs",
@@ -8856,7 +8448,7 @@
     ]
   },
   {
-    "id": "fr-407",
+    "id": "fr-385",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Homonymes",
@@ -8878,7 +8470,7 @@
     ]
   },
   {
-    "id": "fr-408",
+    "id": "fr-386",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « tel »",
@@ -8900,7 +8492,7 @@
     ]
   },
   {
-    "id": "fr-409",
+    "id": "fr-387",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Confusion « quelque » / « quel que »",
@@ -8922,7 +8514,7 @@
     ]
   },
   {
-    "id": "fr-410",
+    "id": "fr-388",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Paradoxe",
@@ -8944,7 +8536,7 @@
     ]
   },
   {
-    "id": "fr-411",
+    "id": "fr-389",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif plus-que-parfait",
@@ -8966,7 +8558,7 @@
     ]
   },
   {
-    "id": "fr-412",
+    "id": "fr-390",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Expressions latines",
@@ -8988,7 +8580,7 @@
     ]
   },
   {
-    "id": "fr-413",
+    "id": "fr-391",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord de « ci-joint »",
@@ -9010,7 +8602,7 @@
     ]
   },
   {
-    "id": "fr-414",
+    "id": "fr-392",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Le son [s] avec cédille",
@@ -9032,7 +8624,7 @@
     ]
   },
   {
-    "id": "fr-415",
+    "id": "fr-393",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Doublets savants/populaires",
@@ -9054,7 +8646,7 @@
     ]
   },
   {
-    "id": "fr-416",
+    "id": "fr-394",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Zeugma",
@@ -9076,7 +8668,7 @@
     ]
   },
   {
-    "id": "fr-417",
+    "id": "fr-395",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé surcomposé",
@@ -9098,7 +8690,7 @@
     ]
   },
   {
-    "id": "fr-418",
+    "id": "fr-396",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Néologismes",
@@ -9120,7 +8712,7 @@
     ]
   },
   {
-    "id": "fr-419",
+    "id": "fr-397",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « la plupart »",
@@ -9142,7 +8734,7 @@
     ]
   },
   {
-    "id": "fr-420",
+    "id": "fr-398",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Noms féminins en -té",
@@ -9164,7 +8756,7 @@
     ]
   },
   {
-    "id": "fr-421",
+    "id": "fr-399",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Allégorie",
@@ -9186,7 +8778,7 @@
     ]
   },
   {
-    "id": "fr-422",
+    "id": "fr-400",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Participe passé avec « faire » + infinitif",
@@ -9208,7 +8800,7 @@
     ]
   },
   {
-    "id": "fr-423",
+    "id": "fr-401",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots très rares",
@@ -9230,7 +8822,7 @@
     ]
   },
   {
-    "id": "fr-424",
+    "id": "fr-402",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un COD de mesure",
@@ -9252,7 +8844,7 @@
     ]
   },
   {
-    "id": "fr-425",
+    "id": "fr-403",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots composés avec « garde »",
@@ -9274,7 +8866,7 @@
     ]
   },
   {
-    "id": "fr-426",
+    "id": "fr-404",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Origine scandinave",
@@ -9296,7 +8888,7 @@
     ]
   },
   {
-    "id": "fr-427",
+    "id": "fr-405",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Hypotypose",
@@ -9318,7 +8910,7 @@
     ]
   },
   {
-    "id": "fr-428",
+    "id": "fr-406",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple de « traire »",
@@ -9340,7 +8932,7 @@
     ]
   },
   {
-    "id": "fr-429",
+    "id": "fr-407",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Antonymes rares",
@@ -9362,7 +8954,7 @@
     ]
   },
   {
-    "id": "fr-430",
+    "id": "fr-408",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe avec un sujet singulier collectif",
@@ -9384,7 +8976,7 @@
     ]
   },
   {
-    "id": "fr-431",
+    "id": "fr-409",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Rectifications de 1990",
@@ -9406,7 +8998,7 @@
     ]
   },
   {
-    "id": "fr-432",
+    "id": "fr-410",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Anaphore vs épiphore",
@@ -9428,7 +9020,7 @@
     ]
   },
   {
-    "id": "fr-433",
+    "id": "fr-411",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Subjonctif présent des verbes en -ier",
@@ -9437,7 +9029,7 @@
     "options": [
       "que nous appréciions",
       "que nous apprécions",
-      "que nous appréciions",
+      "que nous apprécierions",
       "que nous apprécissons"
     ],
     "answerIndex": 0,
@@ -9445,12 +9037,12 @@
     "optionExplanations": [
       "Correct : appréciions. ✓",
       "Faux : indicatif présent.",
-      "Faux : doublon.",
+      "Faux : conditionnel présent (subjonctif requis).",
       "Faux : indicatif."
     ]
   },
   {
-    "id": "fr-434",
+    "id": "fr-412",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots d’origine turque",
@@ -9472,7 +9064,7 @@
     ]
   },
   {
-    "id": "fr-435",
+    "id": "fr-413",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « se » et un attribut",
@@ -9494,7 +9086,7 @@
     ]
   },
   {
-    "id": "fr-436",
+    "id": "fr-414",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Mots en -ole/-olle",
@@ -9516,7 +9108,7 @@
     ]
   },
   {
-    "id": "fr-437",
+    "id": "fr-415",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Origine gauloise",
@@ -9538,7 +9130,7 @@
     ]
   },
   {
-    "id": "fr-438",
+    "id": "fr-416",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Métonymie vs synecdoque",
@@ -9560,7 +9152,7 @@
     ]
   },
   {
-    "id": "fr-439",
+    "id": "fr-417",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Conditionnel passé 2e forme avec un verbe pronominal",
@@ -9582,7 +9174,7 @@
     ]
   },
   {
-    "id": "fr-440",
+    "id": "fr-418",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Homonymes parfaits",
@@ -9604,7 +9196,7 @@
     ]
   },
   {
-    "id": "fr-441",
+    "id": "fr-419",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du verbe après « ni l’un ni l’autre »",
@@ -9626,7 +9218,7 @@
     ]
   },
   {
-    "id": "fr-442",
+    "id": "fr-420",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Lettres muettes finales",
@@ -9648,7 +9240,7 @@
     ]
   },
   {
-    "id": "fr-443",
+    "id": "fr-421",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Litote",
@@ -9670,7 +9262,7 @@
     ]
   },
   {
-    "id": "fr-444",
+    "id": "fr-422",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Impératif passé",
@@ -9692,7 +9284,7 @@
     ]
   },
   {
-    "id": "fr-445",
+    "id": "fr-423",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Paronymes subtils",
@@ -9714,7 +9306,7 @@
     ]
   },
   {
-    "id": "fr-446",
+    "id": "fr-424",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec « avoir » et un COD antéposé pronominal",
@@ -9736,7 +9328,7 @@
     ]
   },
   {
-    "id": "fr-447",
+    "id": "fr-425",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Graphie des sons [k]",
@@ -9758,7 +9350,7 @@
     ]
   },
   {
-    "id": "fr-448",
+    "id": "fr-426",
     "subject": "FRENCH",
     "topic": "Étymologie",
     "subtopic": "Mots d’origine amérindienne",
@@ -9780,7 +9372,7 @@
     ]
   },
   {
-    "id": "fr-449",
+    "id": "fr-427",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Paronomase",
@@ -9802,7 +9394,7 @@
     ]
   },
   {
-    "id": "fr-450",
+    "id": "fr-428",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Passé simple de « seoir » (défectif)",
@@ -9824,7 +9416,7 @@
     ]
   },
   {
-    "id": "fr-451",
+    "id": "fr-429",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Expressions idiomatiques",
@@ -9846,7 +9438,7 @@
     ]
   },
   {
-    "id": "fr-452",
+    "id": "fr-430",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Accord du participe passé avec un verbe de perception",
@@ -9868,7 +9460,7 @@
     ]
   },
   {
-    "id": "fr-453",
+    "id": "fr-431",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Rectifications de 1990 : tréma",
@@ -9890,7 +9482,7 @@
     ]
   },
   {
-    "id": "fr-454",
+    "id": "fr-432",
     "subject": "FRENCH",
     "topic": "Figures de style",
     "subtopic": "Epanorthose",
@@ -9912,7 +9504,7 @@
     ]
   },
   {
-    "id": "fr-455",
+    "id": "fr-433",
     "subject": "FRENCH",
     "topic": "Conjugaison",
     "subtopic": "Accord du participe passé des verbes pronominaux avec un COD postposé",
@@ -9934,7 +9526,7 @@
     ]
   },
   {
-    "id": "fr-456",
+    "id": "fr-434",
     "subject": "FRENCH",
     "topic": "Vocabulaire",
     "subtopic": "Mots d’origine persane",
@@ -9956,7 +9548,7 @@
     ]
   },
   {
-    "id": "fr-457",
+    "id": "fr-435",
     "subject": "FRENCH",
     "topic": "Grammaire",
     "subtopic": "Pronoms relatifs : « où » temporel",
@@ -9978,7 +9570,7 @@
     ]
   },
   {
-    "id": "fr-458",
+    "id": "fr-436",
     "subject": "FRENCH",
     "topic": "Orthographe",
     "subtopic": "Noms de couleurs composés",
