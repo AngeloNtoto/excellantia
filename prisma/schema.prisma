@@ -1,5 +1,7 @@
 // Excellantia - Schéma Prisma
-// Questions stockées en JSON, Prisma gère les données dynamiques
+// Base de données orientée contenu + salles + timing.
+// Les salles utilisent 2 modes principaux : TRAINING et SIMULATION.
+// Le mode "salon" est géré comme un cas de simulation avec possibilité d'ajouter des questions d'entraînement.
 
 generator client {
   provider = "prisma-client-js"
@@ -9,44 +11,32 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-  id        String   @id @default(cuid())
-  fullname  String
-  code      String   @unique
-  role      Role     @default(CANDIDATE)
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  attempts    Attempt[]
-  roomAccess  RoomAccess[]
-  createdRooms Room[]
-}
-
 enum Role {
   ADMIN
   CANDIDATE
 }
 
-model Room {
-  id          String         @id @default(cuid())
-  title       String
-  status      RoomStatus     @default(WAITING)
-  visibility  RoomVisibility @default(PUBLIC)
-  accessCode  String?
-  timeMode    TimeMode       @default(ABSOLUTE)
-  durationMin Int            @default(100)
-  startsAt    DateTime?
-  endsAt      DateTime?
-  questionIds Json           // JSON array of question IDs
-  config      Json           // JSON config object
-  createdById String
-  createdAt   DateTime       @default(now())
-  updatedAt   DateTime       @updatedAt
+enum Subject {
+  MATH
+  FRENCH
+  ENGLISH
+  GENERAL_CULTURE
+}
 
-  createdBy  User        @relation(fields: [createdById], references: [id])
-  attempts   Attempt[]
-  roomAccess RoomAccess[]
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum Language {
+  FR
+  EN
+}
+
+enum RoomMode {
+  TRAINING
+  SIMULATION
 }
 
 enum RoomStatus {
@@ -67,23 +57,15 @@ enum TimeMode {
   RELATIVE
 }
 
-model Attempt {
-  id          String        @id @default(cuid())
-  userId      String
-  roomId      String
-  startedAt   DateTime      @default(now())
-  submittedAt DateTime?
-  status      AttemptStatus @default(IN_PROGRESS)
-  score       Int?
-  percentage  Float?
-  scoreBySubject Json?     // {MATH: 20, FRENCH: 18, ...}
-  timeUsedSec Int?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
+enum QuestionType {
+  MULTIPLE_CHOICE
+  PASSAGE_BASED
+}
 
-  user    User     @relation(fields: [userId], references: [id])
-  room    Room     @relation(fields: [roomId], references: [id])
-  answers Answer[]
+enum QuestionSource {
+  USER_CREATED
+  ROOM_GENERATED
+  TRAINING_POOL
 }
 
 enum AttemptStatus {
@@ -91,6 +73,113 @@ enum AttemptStatus {
   SUBMITTED
   AUTO_SUBMITTED_TIME_EXPIRED
   AUTO_SUBMITTED_DISCONNECTED
+}
+
+enum AttemptLockReason {
+  NONE
+  TIME_EXPIRED
+}
+
+model User {
+  id        String   @id @default(cuid())
+  fullname  String
+  code      String   @unique
+  role      Role     @default(CANDIDATE)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  attempts       Attempt[]
+  roomAccess     RoomAccess[]
+  createdRooms   Room[]
+  createdTexts   TextContent[]
+  createdQuestions Question[]
+}
+
+model TextContent {
+  id        String   @id @default(cuid())
+  title     String
+  language  Language @default(FR)
+  content   String
+  source    String?
+  isActive  Boolean  @default(true)
+  createdById String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  createdBy User? @relation(fields: [createdById], references: [id])
+  questions Question[]
+}
+
+model Question {
+  id            String        @id @default(cuid())
+  textContentId String?
+  subject       Subject
+  topic         String?
+  subtopic      String?
+  difficulty    Difficulty
+  language      Language      @default(FR)
+  statement     String
+  options       Json
+  answerIndex   Int
+  explanation   String?
+  optionExplanations Json?
+  passageId     String?
+  scope         String?
+  type          QuestionType  @default(MULTIPLE_CHOICE)
+  source        QuestionSource @default(USER_CREATED)
+  mode          RoomMode?
+  createdById   String?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  textContent TextContent? @relation(fields: [textContentId], references: [id])
+  createdBy   User? @relation(fields: [createdById], references: [id])
+}
+
+model Room {
+  id                     String         @id @default(cuid())
+  title                  String
+  status                 RoomStatus     @default(WAITING)
+  visibility             RoomVisibility @default(PUBLIC)
+  mode                   RoomMode       @default(SIMULATION)
+  includeTrainingQuestions Boolean       @default(false)
+  accessCode             String?
+  timeMode               TimeMode       @default(ABSOLUTE)
+  durationMin            Int            @default(100)
+  startsAt               DateTime?
+  endsAt                 DateTime?
+  questionIds            Json?          // Legacy: IDs de questions générées par les fichiers JSON
+  config                 Json?          // Legacy: config de salle
+  timingConfig           Json?          // Nouveau: config de timing par matière / pause / attente
+  createdById            String
+  createdAt              DateTime       @default(now())
+  updatedAt              DateTime       @updatedAt
+
+  createdBy  User        @relation(fields: [createdById], references: [id])
+  attempts   Attempt[]
+  roomAccess RoomAccess[]
+}
+
+model Attempt {
+  id              String            @id @default(cuid())
+  userId          String
+  roomId          String
+  startedAt       DateTime          @default(now())
+  submittedAt     DateTime?
+  status          AttemptStatus     @default(IN_PROGRESS)
+  score           Int?
+  percentage      Float?
+  scoreBySubject  Json?
+  timeUsedSec     Int?
+  isLocked        Boolean           @default(false)
+  lockReason      AttemptLockReason @default(NONE)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id])
+  room    Room     @relation(fields: [roomId], references: [id])
+  answers Answer[]
 }
 
 model Answer {

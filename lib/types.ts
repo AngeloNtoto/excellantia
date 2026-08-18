@@ -1,6 +1,13 @@
 // ─── Sujets / Rubriques ──────────────────────────────────────────────────────
 
 export type Subject = "MATH" | "FRENCH" | "ENGLISH" | "GENERAL_CULTURE";
+export type Difficulty = "EASY" | "MEDIUM" | "HARD";
+export type Scope = "DRC" | "INTERNATIONAL";
+export type Language = "FR" | "EN";
+export type RoomMode = "TRAINING" | "SIMULATION";
+export type QuestionType = "MULTIPLE_CHOICE" | "PASSAGE_BASED";
+export type QuestionSource = "USER_CREATED" | "ROOM_GENERATED" | "TRAINING_POOL";
+export type AttemptLockReason = "NONE" | "TIME_EXPIRED";
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
   MATH: "Mathématiques",
@@ -16,8 +23,16 @@ export const SUBJECT_COLORS: Record<Subject, string> = {
   GENERAL_CULTURE: "#10b981", // emerald
 };
 
-export type Difficulty = "EASY" | "MEDIUM" | "HARD";
-export type Scope = "DRC" | "INTERNATIONAL";
+export const ROOM_MODE_LABELS: Record<RoomMode, string> = {
+  TRAINING: "Entraînement",
+  SIMULATION: "Simulation",
+};
+
+export const QUESTION_SOURCE_LABELS: Record<QuestionSource, string> = {
+  USER_CREATED: "Créée par l'utilisateur",
+  ROOM_GENERATED: "Générée par la salle",
+  TRAINING_POOL: "Pool d'entraînement",
+};
 
 // ─── Questions (JSON) ────────────────────────────────────────────────────────
 
