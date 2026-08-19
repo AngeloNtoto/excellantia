@@ -33,6 +33,48 @@ const STATUS_CLASSES: Record<string, string> = {
   CANCELLED: "badge-muted",
 };
 
+/**
+ * Renvoie le badge de complétion d'une salle terminée :
+ * - Verte  → au moins une copie soumise
+ * - Orange → personne n'a soumis
+ * Retourne null si la salle n'est pas encore CLOSED.
+ */
+function CompletionBadge({ status, submittedAttempts, totalAttempts }: {
+  status: string;
+  submittedAttempts: number;
+  totalAttempts: number;
+}) {
+  if (status !== "CLOSED") return null;
+
+  const hasSubmissions = submittedAttempts > 0;
+  return (
+    <span
+      style={{
+        display: "inline-block",
+        marginTop: 4,
+        padding: "2px 8px",
+        borderRadius: 20,
+        fontSize: "0.72rem",
+        fontWeight: 700,
+        letterSpacing: "0.01em",
+        background: hasSubmissions ? "rgba(34,197,94,0.12)" : "rgba(245,158,11,0.12)",
+        color: hasSubmissions ? "#16a34a" : "#d97706",
+        border: hasSubmissions
+          ? "1px solid rgba(34,197,94,0.3)"
+          : "1px solid rgba(245,158,11,0.3)",
+        whiteSpace: "nowrap",
+      }}
+      title={
+        hasSubmissions
+          ? `${submittedAttempts} copie(s) soumise(s) sur ${totalAttempts} participant(s)`
+          : "Salle terminée sans aucune soumission"
+      }
+    >
+      {hasSubmissions ? `Complétée` : "Sans soumission"}
+    </span>
+  );
+}
+
 // ─── Composant principal ──────────────────────────────────────────────────────
 export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
   const router = useRouter();
@@ -276,7 +318,7 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                   <td>
                     {room.visibility === "PRIVATE" ? (
                       <span style={{ display: "inline-flex", alignItems: "center", gap: 4, color: "var(--warning)", fontSize: "0.875rem", fontWeight: 500, whiteSpace: "nowrap" }}>
-                        🔒 Privée
+                        Privée
                         {room.accessCode && (
                           <span style={{ fontFamily: "var(--font-mono)", color: "var(--text-secondary)", fontSize: "0.8rem" }}>
                             ({room.accessCode})
@@ -284,7 +326,7 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                         )}
                       </span>
                     ) : (
-                      <span style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>🌍 Publique</span>
+                      <span style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>Publique</span>
                     )}
                   </td>
 
@@ -293,10 +335,10 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                     <div style={{ fontWeight: 600 }}>{room.durationMin} min</div>
                     <div style={{ fontSize: "0.72rem", display: "flex", gap: 4, alignItems: "center", marginTop: 2 }}>
                       <span style={{ color: room.timingRegime === "TESLA" ? "#06b6d4" : room.timingRegime === "NEWTON" ? "#f59e0b" : "#6366f1", fontWeight: 700 }}>
-                        {room.timingRegime === "TESLA" ? "⚡ Tesla" : room.timingRegime === "NEWTON" ? "⚙️ Newton" : "🌌 Einstein"}
+                        {room.timingRegime === "TESLA" ? "Tesla" : room.timingRegime === "NEWTON" ? "Newton" : "Einstein"}
                       </span>
                       {room.chronoMode === "SCHRODINGER" ? (
-                        <span style={{ color: "#8b5cf6", fontWeight: 600 }}>• Sch.</span>
+                        <span style={{ color: "#8b5cf6", fontWeight: 600 }}>• Schr.</span>
                       ) : room.chronoMode === "HEISENBERG" ? (
                         <span style={{ color: "#f59e0b", fontWeight: 600 }}>• Heis.</span>
                       ) : null}
@@ -328,7 +370,7 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                     )}
                   </td>
 
-                  {/* Participations : X terminées / Y total */}
+                  {/* Participations : X soumises / Y total + badge complétion */}
                   <td style={{ textAlign: "center" }}>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
                       <span style={{ fontWeight: 700, fontSize: "0.9rem" }}>
@@ -337,7 +379,7 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                           /{room.totalAttempts}
                         </span>
                       </span>
-                      {/* Barre de progression */}
+                      {/* Barre de progression (uniquement si des participants) */}
                       {room.totalAttempts > 0 && (
                         <div
                           style={{
@@ -352,13 +394,22 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                             style={{
                               height: "100%",
                               width: `${Math.round((room.submittedAttempts / room.totalAttempts) * 100)}%`,
-                              background: "linear-gradient(90deg, #6366f1, #8b5cf6)",
+                              background: "#6366f1",
                               borderRadius: 2,
                               transition: "width 0.4s ease",
                             }}
                           />
                         </div>
                       )}
+                      {/*
+                        Badge de complétion : visible uniquement sur les salles CLOSED.
+                        Vert = au moins 1 soumission, Orange = personne n'a soumis.
+                      */}
+                      <CompletionBadge
+                        status={room.status}
+                        submittedAttempts={room.submittedAttempts}
+                        totalAttempts={room.totalAttempts}
+                      />
                     </div>
                   </td>
 

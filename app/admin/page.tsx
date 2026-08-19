@@ -49,78 +49,45 @@ export default async function AdminDashboardPage() {
   // Vérifier et mettre à jour les statuts des salles programmées et expirées
   await checkRoomStatuses();
 
-  // ─── Requêtes de données simultanées pour un chargement instantané ───────────
+  // ─── Requêtes optimisées (6 requêtes groupées au lieu de 17) ─────────────────
+  const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+
   const [
-    usersCount,
-    newUsersThisWeek,
-    roomsCount,
-    activeRooms,
-    scheduledRooms,
-    closedRoomsCount,
-    submittedAttemptsCount,
-    allAttempts,
-    questionsCount,
+    candidates,
+    rooms,
+    submittedAttempts,
+    questionsGroup,
     passagesCount,
-    mathCount,
-    frenchCount,
-    englishCount,
-    cultureCount,
     recentAttempts,
-    regimesStats,
-    chronoStats,
   ] = await Promise.all([
-    // Candidats inscrits
-    prisma.user.count({ where: { role: "CANDIDATE" } }),
-    prisma.user.count({
-      where: {
-        role: "CANDIDATE",
-        createdAt: { gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) },
-      },
+    // Candidats
+    prisma.user.findMany({
+      where: { role: "CANDIDATE" },
+      select: { id: true, createdAt: true },
     }),
-    // Salles créées
-    prisma.room.count(),
-    // Salles en cours d'exécution
+    // Salles avec créateur et compteurs
     prisma.room.findMany({
-      where: { status: "RUNNING" },
-      orderBy: { startsAt: "desc" },
-      take: 6,
+      orderBy: { createdAt: "desc" },
       include: {
         createdBy: { select: { fullname: true } },
         _count: { select: { attempts: true } },
       },
     }),
-    // Salles programmées
-    prisma.room.findMany({
-      where: { status: "SCHEDULED" },
-      orderBy: { startsAt: "asc" },
-      take: 4,
-      include: {
-        createdBy: { select: { fullname: true } },
-        _count: { select: { attempts: true } },
-      },
-    }),
-    // Salles terminées
-    prisma.room.count({ where: { status: "CLOSED" } }),
-    // Copies terminées / soumises
-    prisma.attempt.count({
-      where: { status: { in: ["SUBMITTED", "AUTO_SUBMITTED_TIME_EXPIRED", "AUTO_SUBMITTED_DISCONNECTED"] } },
-    }),
-    // Calcul de la moyenne globale
+    // Copies terminées / soumises pour calculs statistiques
     prisma.attempt.findMany({
       where: {
         status: { in: ["SUBMITTED", "AUTO_SUBMITTED_TIME_EXPIRED", "AUTO_SUBMITTED_DISCONNECTED"] },
-        percentage: { not: null },
       },
       select: { percentage: true, score: true, timeUsedSec: true },
     }),
-    // Questions et Textes
-    prisma.question.count(),
+    // Questions groupées par matière
+    prisma.question.groupBy({
+      by: ["subject"],
+      _count: { _all: true },
+    }),
+    // Textes de lecture
     prisma.textContent.count(),
-    prisma.question.count({ where: { subject: "MATH" } }),
-    prisma.question.count({ where: { subject: "FRENCH" } }),
-    prisma.question.count({ where: { subject: "ENGLISH" } }),
-    prisma.question.count({ where: { subject: "GENERAL_CULTURE" } }),
-    // Dernières soumissions
+    // Dernières soumissions récentes
     prisma.attempt.findMany({
       where: { status: { in: ["SUBMITTED", "AUTO_SUBMITTED_TIME_EXPIRED"] } },
       orderBy: { updatedAt: "desc" },
@@ -130,17 +97,41 @@ export default async function AdminDashboardPage() {
         room: { select: { id: true, title: true, timingRegime: true, durationMin: true } },
       },
     }),
-    // Répartition des régimes temporels
-    prisma.room.groupBy({
-      by: ["timingRegime"],
-      _count: { _all: true },
-    }),
-    // Répartition des modes chrono
-    prisma.room.groupBy({
-      by: ["chronoMode"],
-      _count: { _all: true },
-    }),
   ]);
+
+  // Dérivation des statistiques en mémoire
+  const usersCount = candidates.length;
+  const newUsersThisWeek = candidates.filter((c) => c.createdAt >= weekAgo).length;
+
+  const roomsCount = rooms.length;
+  const activeRooms = rooms.filter((r) => r.status === "RUNNING").slice(0, 6);
+  const scheduledRooms = rooms.filter((r) => r.status === "SCHEDULED").slice(0, 4);
+  const closedRoomsCount = rooms.filter((r) => r.status === "CLOSED").length;
+
+  const submittedAttemptsCount = submittedAttempts.length;
+  const allAttempts = submittedAttempts;
+
+  const questionsCount = questionsGroup.reduce((acc, g) => acc + g._count._all, 0);
+  const mathCount = questionsGroup.find((g) => g.subject === "MATH")?._count._all ?? 0;
+  const frenchCount = questionsGroup.find((g) => g.subject === "FRENCH")?._count._all ?? 0;
+  const englishCount = questionsGroup.find((g) => g.subject === "ENGLISH")?._count._all ?? 0;
+  const cultureCount = questionsGroup.find((g) => g.subject === "GENERAL_CULTURE")?._count._all ?? 0;
+
+  // Répartition des régimes et modes chrono calculée en mémoire depuis rooms
+  const regimesMap = new Map<string, number>();
+  const chronoMap = new Map<string, number>();
+  for (const r of rooms) {
+    if (r.timingRegime) regimesMap.set(r.timingRegime, (regimesMap.get(r.timingRegime) ?? 0) + 1);
+    if (r.chronoMode) chronoMap.set(r.chronoMode, (chronoMap.get(r.chronoMode) ?? 0) + 1);
+  }
+  const regimesStats = Array.from(regimesMap.entries()).map(([timingRegime, count]) => ({
+    timingRegime,
+    _count: { _all: count },
+  }));
+  const chronoStats = Array.from(chronoMap.entries()).map(([chronoMode, count]) => ({
+    chronoMode,
+    _count: { _all: count },
+  }));
 
   // Calcul des métriques statistiques avancées
   const validPercentages = allAttempts
