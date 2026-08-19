@@ -268,77 +268,81 @@ export async function cancelRoomAction(roomId: string) {
 // et fermer celles dont le temps est écoulé
 
 export async function checkRoomStatuses() {
-  const now = new Date();
-  
-  // 1. Démarrer les salles programmées
-  const scheduled = await prisma.room.findMany({
-    where: { status: "SCHEDULED", startsAt: { lte: now } },
-  });
+  try {
+    const now = new Date();
 
-  for (const room of scheduled) {
-    // Hard limit : 5h après création
-    const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
-    let endsAt: Date | null = null;
-
-    if (room.clockMode === "ABSOLUTE" && room.startsAt) {
-      const calculated = new Date(room.startsAt.getTime() + room.durationMin * 60_000);
-      endsAt = calculated < hardDeadline ? calculated : hardDeadline;
-    } else {
-      // Mode relatif : imposer le hard limit
-      endsAt = hardDeadline;
-    }
-
-    await prisma.room.update({
-      where: { id: room.id },
-      data: { status: "RUNNING", endsAt },
-    });
-  }
-
-  // 2. Fermer les salles terminées
-  const runningRooms = await prisma.room.findMany({
-    where: { status: "RUNNING" },
-  });
-
-  for (const room of runningRooms) {
-    // Hard limit : 5h après création (s'applique à tous les modes)
-    const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
-
-    const effectiveEndAt = room.endsAt
-      ? new Date(room.endsAt)
-      : room.clockMode === "ABSOLUTE" && room.startsAt
-        ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
-        : null;
-
-    // La vraie date de fin = la plus proche entre l'endsAt calculé et le hard limit
-    const resolvedEndAt = effectiveEndAt
-      ? (effectiveEndAt < hardDeadline ? effectiveEndAt : hardDeadline)
-      : hardDeadline;
-
-    const attempts = await prisma.attempt.findMany({
-      where: { roomId: room.id },
-      select: { status: true },
+    // 1. Démarrer les salles programmées
+    const scheduled = await prisma.room.findMany({
+      where: { status: "SCHEDULED", startsAt: { lte: now } },
     });
 
-    const allAttemptsSubmitted =
-      attempts.length > 0 &&
-      attempts.every((a) =>
-        a.status === "SUBMITTED" ||
-        a.status === "AUTO_SUBMITTED_TIME_EXPIRED" ||
-        a.status === "AUTO_SUBMITTED_DISCONNECTED"
-      );
+    for (const room of scheduled) {
+      // Hard limit : 5h après création
+      const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
+      let endsAt: Date | null = null;
 
-    // Fermer si : durée écoulée (toute mode), hard limit atteint, ou tous soumis (mode relatif)
-    const timeExpired = resolvedEndAt <= now;
-    const shouldClose = timeExpired || (room.clockMode === "RELATIVE" && allAttemptsSubmitted);
+      if (room.clockMode === "ABSOLUTE" && room.startsAt) {
+        const calculated = new Date(room.startsAt.getTime() + room.durationMin * 60_000);
+        endsAt = calculated < hardDeadline ? calculated : hardDeadline;
+      } else {
+        // Mode relatif : imposer le hard limit
+        endsAt = hardDeadline;
+      }
 
-    if (shouldClose) {
       await prisma.room.update({
         where: { id: room.id },
-        data: { status: "CLOSED", endsAt: resolvedEndAt },
+        data: { status: "RUNNING", endsAt },
       });
-      // Auto-soumettre les tentatives encore en cours
-      await autoSubmitExpiredAttempts(room.id);
     }
+
+    // 2. Fermer les salles terminées
+    const runningRooms = await prisma.room.findMany({
+      where: { status: "RUNNING" },
+    });
+
+    for (const room of runningRooms) {
+      // Hard limit : 5h après création (s'applique à tous les modes)
+      const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
+
+      const effectiveEndAt = room.endsAt
+        ? new Date(room.endsAt)
+        : room.clockMode === "ABSOLUTE" && room.startsAt
+          ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
+          : null;
+
+      // La vraie date de fin = la plus proche entre l'endsAt calculé et le hard limit
+      const resolvedEndAt = effectiveEndAt
+        ? (effectiveEndAt < hardDeadline ? effectiveEndAt : hardDeadline)
+        : hardDeadline;
+
+      const attempts = await prisma.attempt.findMany({
+        where: { roomId: room.id },
+        select: { status: true },
+      });
+
+      const allAttemptsSubmitted =
+        attempts.length > 0 &&
+        attempts.every((a) =>
+          a.status === "SUBMITTED" ||
+          a.status === "AUTO_SUBMITTED_TIME_EXPIRED" ||
+          a.status === "AUTO_SUBMITTED_DISCONNECTED"
+        );
+
+      // Fermer si : durée écoulée (toute mode), hard limit atteint, ou tous soumis (mode relatif)
+      const timeExpired = resolvedEndAt <= now;
+      const shouldClose = timeExpired || (room.clockMode === "RELATIVE" && allAttemptsSubmitted);
+
+      if (shouldClose) {
+        await prisma.room.update({
+          where: { id: room.id },
+          data: { status: "CLOSED", endsAt: resolvedEndAt },
+        });
+        // Auto-soumettre les tentatives encore en cours
+        await autoSubmitExpiredAttempts(room.id);
+      }
+    }
+  } catch (error) {
+    console.error("Erreur lors de checkRoomStatuses:", error);
   }
 }
 

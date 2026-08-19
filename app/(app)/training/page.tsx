@@ -52,7 +52,7 @@ const DIFFICULTIES = [
   { value: "HARD",  label: "Difficile", desc: "Questions complexes et avancées",    icon: TrendingUp,   color: "text-rose-600 dark:text-rose-400",       bg: "bg-rose-50 dark:bg-rose-500/10",       border: "border-rose-600" },
 ];
 
-const DURATIONS = [30, 45, 60, 90, 120];
+const DURATIONS = [30, 60, 90, 100, 120];
 
 /* ── TopicPicker ──────────────────────────────────────────────────────────── */
 function TopicPicker({ subjectKey, chipColor, selectedTopics, onChange }: {
@@ -142,10 +142,10 @@ export default function TrainingPage() {
   const [isPending, startTransition] = useTransition();
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(SUBJECTS.map((s) => s.id));
   const [subjectCounts, setSubjectCounts] = useState<Record<string, number>>({
-    subject_0: 10, subject_1: 10, subject_2: 10, subject_3: 10,
+    subject_0: 25, subject_1: 25, subject_2: 25, subject_3: 25,
   });
   const [difficulty, setDifficulty] = useState("MIXED");
-  const [duration, setDuration] = useState(60);
+  const [duration, setDuration] = useState<number | string>(100);
   const [pausableTimer, setPausableTimer] = useState(false);
   const [error, setError] = useState("");
   const [selectedTopics, setSelectedTopics] = useState<Record<SubjectKey, string[]>>({
@@ -162,7 +162,7 @@ export default function TrainingPage() {
     setError("");
     setSelectedSubjects((prev) => {
       if (prev.includes(id)) return prev.filter((s) => s !== id);
-      if (!subjectCounts[id]) setSubjectCounts((c) => ({ ...c, [id]: 10 }));
+      if (!subjectCounts[id]) setSubjectCounts((c) => ({ ...c, [id]: 25 }));
       return [...prev, id];
     });
   }
@@ -180,13 +180,15 @@ export default function TrainingPage() {
       setError("Veuillez sélectionner au moins une matière avec des questions.");
       return;
     }
+    const finalDuration = duration === "" || Number(duration) < 1 ? 100 : Number(duration);
+
     const fd = new FormData();
     SUBJECTS.forEach((subj) => {
       const key = subj.id.replace("subject_", "subject_count_");
       fd.append(key, selectedSubjects.includes(subj.id) ? String(subjectCounts[subj.id] || 0) : "0");
     });
     fd.append("difficulty", difficulty);
-    fd.append("duration", duration.toString());
+    fd.append("duration", finalDuration.toString());
     fd.append("pausableTimer", pausableTimer.toString());
     fd.append("selectedTopics", JSON.stringify(selectedTopics));
     startTransition(async () => {
@@ -367,10 +369,28 @@ export default function TrainingPage() {
             <Clock className="w-4 h-4 text-slate-400" />
             <div className="relative">
               <input
-                type="number" name="duration" value={duration}
-                onChange={(e) => setDuration(Math.max(1, Math.min(240, parseInt(e.target.value) || 60)))}
+                type="number"
+                name="duration"
+                value={duration}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (val === "") {
+                    setDuration("");
+                  } else {
+                    const num = parseInt(val, 10);
+                    if (!isNaN(num)) setDuration(num);
+                  }
+                }}
+                onBlur={() => {
+                  if (duration === "" || Number(duration) < 1) {
+                    setDuration(100);
+                  } else if (Number(duration) > 240) {
+                    setDuration(240);
+                  }
+                }}
                 className="w-24 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-sm font-bold text-center text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
-                min="1" max="240"
+                min="1"
+                max="240"
               />
               <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400">min</span>
             </div>
