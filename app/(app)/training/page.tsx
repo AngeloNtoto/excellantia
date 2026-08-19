@@ -418,7 +418,7 @@ export default function TrainingPage() {
                 <Timer className="w-4 h-4" />
               </div>
               <div>
-                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Strict (Temps réel)</p>
+                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Absolue (Temps réel)</p>
                 <p className="text-[11px] text-slate-500 mt-0.5">Le temps continue de s'écouler si vous fermez la page.</p>
               </div>
             </label>
@@ -435,7 +435,7 @@ export default function TrainingPage() {
                 <PauseCircle className="w-4 h-4" />
               </div>
               <div>
-                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Flexible (Pause active)</p>
+                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Relatif (Pause active)</p>
                 <p className="text-[11px] text-slate-500 mt-0.5">Le chronomètre se fige si vous quittez la session.</p>
               </div>
             </label>
