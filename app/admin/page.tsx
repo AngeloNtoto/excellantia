@@ -2,7 +2,7 @@ import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { checkRoomStatuses } from "@/lib/actions/rooms";
-import { Users, Building2, CheckCircle2, ShieldAlert, ArrowRight, PlayCircle, PlusCircle, BarChart3, Lock, Globe } from "lucide-react";
+import { Users, Building2, CheckCircle2, ShieldAlert, ArrowRight, PlayCircle, PlusCircle, BarChart3, Lock, Globe, BookOpen } from "lucide-react";
 
 export const metadata = { title: "Admin Dashboard | PreExcellantia" };
 
@@ -142,6 +142,14 @@ export default async function AdminDashboardPage() {
             >
               <PlusCircle className="w-5 h-5" />
               Créer une salle
+            </Link>
+            
+            <Link 
+              href="/admin/contenus" 
+              className="flex items-center gap-3 p-4 rounded-2xl bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 border border-gray-100 dark:border-white/5 font-semibold text-gray-700 dark:text-gray-200 transition-all"
+            >
+              <BookOpen className="w-5 h-5 text-gray-400 dark:text-gray-500" />
+              Gérer les contenus
             </Link>
             
             <Link 

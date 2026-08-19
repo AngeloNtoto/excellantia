@@ -6,35 +6,36 @@ Refondre le cœur de la plateforme autour d'une base de données centralisée, e
 ## TODO global
 
 ### 1) Modèle de données et migration
-- [ ] Créer les tables de contenu : `TextContent`, `Question`, `QuestionTag`, `RoomQuestionPool`.
-- [ ] Ajouter les enums suivants : `Language`, `QuestionType`, `ContentScope`, `RoomMode`, `TimingMode`, `QuestionSource`.
-- [ ] Ne garder que 2 modes principaux : `TRAINING` et `SIMULATION`.
-- [ ] Considérer `salon` et `simulation` comme la même logique métier : une salle est un mode de simulation, avec ou sans questions d'entraînement.
-- [ ] Séparer les questions créées par un utilisateur de celles ajoutées dans un contexte de salle / simulation.
-- [ ] Stocker le texte et les questions associées en base, avec relation explicite entre `TextContent` et `Question`.
+- [x] Créer les tables de contenu : `TextContent`, `Question` (avec liaison optionnelle ou directe).
+- [x] Ajouter les enums suivants : `Language`, `QuestionType`, `RoomMode`, `TimeMode`, `QuestionSource`.
+- [x] Ne garder que 2 modes principaux : `TRAINING` et `SIMULATION`.
+- [x] Considérer `salon` et `simulation` comme la même logique métier : une salle de simulation peut recevoir des questions d'entraînement supplémentaires, mais le candidat ne crée jamais de salon ni de question.
+- [x] L'utilisateur standard ne peut pas créer de salon ni de question. Seul l’admin peut créer les contenus de base de simulation.
+- [x] Stocker le texte et les questions associées en base, avec relation explicite entre `TextContent` et `Question`.
 - [ ] Supprimer la dépendance actuelle aux fichiers JSON comme source principale de vérité.
 - [ ] Préparer une migration des données existantes vers le schéma Prisma sans casser les écrans existants.
 
 ### 2) Gestion admin des textes et des questions
-- [ ] Créer un écran admin pour ajouter un texte avec : titre, langue, type, contexte, statut actif.
-- [ ] Permettre l'ajout de questions associées au texte depuis l'interface admin.
-- [ ] Supporter deux modes de saisie :
-  - [ ] formulaire standard
-  - [ ] import JSON
-- [ ] Ajouter la possibilité de choisir le domaine / matière au moment de la question.
-- [ ] Ajouter la distinction entre :
-  - [ ] entraînement personnel
-  - [ ] simulation / salon
-- [ ] Ajouter un contrôle de validation pour les champs obligatoires : texte, réponse, explication, difficulté, sujet, type.
-- [ ] Prévoir un système de recherche / filtrage des textes et questions en base.
+- [x] Créer un écran admin pour ajouter un texte avec : titre, langue, type, contexte, statut actif.
+- [x] Permettre l'ajout de questions associées au texte depuis l'interface admin.
+- [x] Supporter deux modes de saisie :
+  - [x] formulaire standard (questions autonomes ou liées à un texte)
+  - [x] import JSON (upload de fichier .json et zone de collage de texte JSON)
+- [x] Ajouter la possibilité de choisir le domaine / matière au moment de la question.
+- [x] Ajouter la distinction entre :
+  - [x] entraînement autorisé pour l'utilisateur
+  - [x] simulation / salon administré
+- [x] L'utilisateur normal ne doit jamais avoir d'accès aux écrans de création de contenu ou de salon.
+- [x] Ajouter un contrôle de validation pour les champs obligatoires : texte, réponse, difficulté et sujet.
+- [x] Prévoir un système de recherche / filtrage des textes et questions en base.
 
 ### 3) Refactor du moteur de génération de salle
-- [ ] Ajouter dans la création de salle une option : "Inclure des questions d'entraînement".
-- [ ] Permettre à l'admin de choisir si la salle est en mode `TRAINING` ou `SIMULATION`.
-- [ ] Faire en sorte qu'un salon admin soit simplement une salle de simulation, avec possibilité d'ajouter un pool d'entraînement supplémentaire.
-- [ ] Générer les questions directement depuis la base plutôt qu'à partir des fichiers JSON.
-- [ ] Séparer la logique de sélection : pool de base / pool d'entraînement / pool de simulation.
-- [ ] Gérer les sujets et thèmes sélectionnés à partir des données DB.
+- [x] Ajouter dans la création de salle une option : "Inclure des questions d'entraînement".
+- [x] Permettre à l'admin de choisir si la salle est en mode `TRAINING` ou `SIMULATION`.
+- [x] Faire en sorte qu'un salon admin soit simplement une salle de simulation, avec possibilité d'ajouter un pool d'entraînement supplémentaire.
+- [x] Générer les questions directement depuis la base plutôt qu'à partir des fichiers JSON.
+- [x] Séparer la logique de sélection : pool de base / pool d'entraînement / pool de simulation.
+- [x] Gérer les sujets et thèmes sélectionnés à partir des données DB.
 
 ### 4) Réforme du système de timing
 - [ ] Introduire un niveau de timing supplémentaire basé sur le temps attribué par sujet / matière.
@@ -46,39 +47,40 @@ Refondre le cœur de la plateforme autour d'une base de données centralisée, e
 - [ ] Enregistrer la politique de timing dans la base pour chaque salle.
 
 ### 5) Logique métier des salles et des tentatives
-- [ ] Adapter le flux de création de salle pour prendre en compte le nouveau modèle de questions et de timing.
+- [x] Adapter le flux de création de salle pour prendre en compte le nouveau modèle de questions et de timing.
 - [ ] Modifier les tentatives pour tenir compte du temps de pause / temps d'attente.
-- [ ] Gérer le statut de salle selon : attente, planifiée, en cours, fermée, annulée.
+- [x] Gérer le statut de salle selon : attente, planifiée, en cours, fermée, annulée.
 - [ ] Ajouter le calcul d'un temps de fin effectif par matière et par candidat.
 - [ ] Prévoir le cas où plusieurs candidats terminent à des moments différents.
-- [ ] S'assurer qu'une tentative soumise après expiration du temps n'est plus modifiable.
-- [ ] Bloquer toute modification d'une réponse dès que la tentative est déjà soumise et que le temps est écoulé.
+- [x] S'assurer qu'une tentative soumise après expiration du temps n'est plus modifiable.
+- [x] Bloquer toute modification d'une réponse dès que la tentative est déjà soumise et que le temps est écoulé.
 
 ### 6) Frontend et interface d'administration
-- [ ] Créer les écrans admin pour :
-  - ajout de textes
-  - ajout de questions
-  - import JSON
-  - gestion des salles
-  - paramétrage du timing
+- [x] Créer les écrans admin pour :
+  - [x] ajout de textes
+  - [x] ajout de questions (autonomes et avec texte)
+  - [x] import JSON (upload et collage)
+  - [x] gestion des salles
+  - [ ] paramétrage du timing
+- [x] Masquer ou restreindre les écrans de création de contenu et de salle pour les candidats standard.
 - [ ] Mettre à jour les écrans de salle pour afficher la nouvelle configuration de temps.
-- [ ] Ajouter des états visuels pour les questions d'entraînement vs simulation.
-- [ ] Consolider les composants de formulaire existants pour le nouveau schéma.
+- [x] Ajouter des états visuels pour les questions d'entraînement vs simulation.
+- [x] Consolider les composants de formulaire existants pour le nouveau schéma.
 
 ### 7) Sécurité, validation et QA
-- [ ] Vérifier les permissions d'accès admin.
-- [ ] Valider les imports JSON et les formulaires côté serveur.
+- [x] Vérifier les permissions d'accès admin.
+- [x] Valider les imports JSON et les formulaires côté serveur.
 - [ ] Ajouter des tests de logique de génération, timing et relation texte-question.
 - [ ] Vérifier les migrations Prisma et les cas limite.
 - [ ] Faire une passe de regression sur les pages salles, dashboard et exam.
-- [ ] Tester le cas "soumission expirée => lecture seule".
+- [x] Tester le cas "soumission expirée => lecture seule".
 
 ## Plan d'implémentation recommandé
 
 ### Phase 1 - Modèle et fondations
 1. Modifier le schéma Prisma avec les tables et enums nécessaires.
 2. Ajouter les relations entre `User`, `Room`, `TextContent`, `Question`, `Attempt` et `RoomAccess`.
-3. Valider le design avec un schéma de données réaliste pour le cas d'usage : `TRAINING` vs `SIMULATION`, timing par matière.
+3. Valider le design avec un schéma de données réaliste pour le cas d'usage : `TRAINING` vs `SIMULATION`, timing par matière, et rôle admin vs candidat.
 4. Préparer la migration SQL / Prisma et les seed de base.
 
 ### Phase 2 - Administration du contenu
@@ -86,6 +88,7 @@ Refondre le cœur de la plateforme autour d'une base de données centralisée, e
 2. Développer le formulaire d'ajout de questions liées.
 3. Ajouter le mode import JSON pour les textes et questions.
 4. Implémenter les filtres par langue, sujet, type et source.
+5. Restreindre ces écrans au rôle `ADMIN` uniquement.
 
 ### Phase 3 - Salles et génération dynamique
 1. Adapter la création de salle à la nouvelle logique DB.
@@ -112,14 +115,16 @@ Refondre le cœur de la plateforme autour d'une base de données centralisée, e
 ### Structure cible recommandée
 - `TextContent` : stocke le texte pédagogique / passage / support.
 - `Question` : stocke une question reliée à un texte, à un sujet et à une source.
-- `QuestionSource` : distingue `USER_CREATED`, `ROOM_GENERATED`, `TRAINING`, `SIMULATION`.
+- `QuestionSource` : distingue `USER_CREATED`, `ROOM_GENERATED`, `TRAINING_POOL`.
 - `Room` : stocke l'option d'inclusion d'un pool d'entraînement dans une salle de simulation.
 - `RoomTimingConfig` : stocke la politique de timing par matière et la logique de pause.
+- `Role` : `ADMIN` ou `CANDIDATE`; seul l’admin a les permissions de création de contenu et de salle.
 
 ### Ce qu'il faut enlever
 - Les dépendances directes à `lib/questions.ts` comme source de vérité.
 - Les chargements basés sur les fichiers JSON dans les flux de génération.
 - Les logiques métier qui supposent qu'une question est uniquement issue d'un fichier local.
+- Toute possibilité pour un candidat normal de créer un salon ou des questions.
 
 ## Recommandation de livraison
 Livrer la refonte par étapes, dans l'ordre suivant :
@@ -129,7 +134,7 @@ Livrer la refonte par étapes, dans l'ordre suivant :
 4. Timing avancé
 5. UI + tests de régression
 
-Cela évite de casser les flux existants pendant la transition, tout en respectant le fait que le salon et la simulation sont un seul et même mode principal.
+Cela évite de casser les flux existants pendant la transition, tout en respectant le modèle de rôle : admin gère les contenus et les salles ; candidat n’a que l’entraînement autorisé.
 
 ## Prochaine action concrète
 Commencer par la Phase 1 uniquement : schéma Prisma, modèles, enums, puis migration minimale. Une fois validée, passer à l'administration des textes et questions, puis au timing avancé.

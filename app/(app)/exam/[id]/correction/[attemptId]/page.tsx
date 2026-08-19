@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { getQuestionsByIds, getAllPassages } from "@/lib/questions";
+import { getAllPassages } from "@/lib/questions";
+import { getQuestionsByIdsFromDb } from "@/lib/questions-db";
 import { SUBJECT_LABELS } from "@/lib/types";
 import { CollapsibleSection } from "./collapsible-section";
 
@@ -40,7 +41,7 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
     );
   }
 
-  const questions = getQuestionsByIds(room.questionIds as string[]);
+  const questions = await getQuestionsByIdsFromDb(room.questionIds as string[]);
   const passages = getAllPassages();
   const answersMap = new Map<string, number | null>(
     attempt.answers.map((answer: any) => [answer.questionId, answer.selectedIndex])

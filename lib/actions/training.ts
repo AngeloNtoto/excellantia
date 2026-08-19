@@ -2,7 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/session";
-import { generateRoomQuestions } from "@/lib/questions";
+import { generateRoomQuestionsFromDb } from "@/lib/questions-db";
 import { redirect } from "next/navigation";
 import { startAttemptAction } from "@/lib/actions/attempts";
 import type { RoomConfig, Subject } from "@/lib/types";
@@ -66,7 +66,7 @@ export async function startTrainingAction(formData: FormData) {
     selectedTopics,
   };
 
-  const gen = generateRoomQuestions(config);
+  const gen = await generateRoomQuestionsFromDb(config, "TRAINING");
   if (!gen.ok) return { error: "Pas assez de questions pour cet entraînement. " + gen.errors?.join(" ") };
 
   const accessCode = Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -85,6 +85,7 @@ export async function startTrainingAction(formData: FormData) {
           })
           .replace(",", " à"),
       status: "RUNNING",
+      mode: "TRAINING",
       visibility: "PRIVATE",
       timeMode: "RELATIVE",
       durationMin,

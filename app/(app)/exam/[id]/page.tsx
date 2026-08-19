@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { getQuestionsByIds, getPassageById } from "@/lib/questions";
+import { getPassageById } from "@/lib/questions";
+import { getQuestionsByIdsFromDb } from "@/lib/questions-db";
 import { ExamClient } from "./client";
 
 export default async function ExamPage({ params }: { params: Promise<{ id: string }> }) {
@@ -29,7 +30,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
      // Si la salle n'est plus en cours, forcer la soumission de l'examen au chargement (fait côté client ou check de cron)
   }
 
-  const questions = getQuestionsByIds(room.questionIds as string[]);
+  const questions = await getQuestionsByIdsFromDb(room.questionIds as string[]);
   
   // Extraire les passages nécessaires
   const passagesMap = new Map();

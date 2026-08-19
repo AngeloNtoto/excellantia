@@ -247,6 +247,19 @@ export function CreateRoomForm() {
           </p>
         </div>
         <div style={{ display: "grid", gap: 16 }}>
+          <div>
+            <label style={labelStyle}>Mode de la salle</label>
+            <select name="mode" style={inputStyle} defaultValue="SIMULATION" required>
+              <option value="SIMULATION">Simulation / salon</option>
+              <option value="TRAINING">Entraînement</option>
+            </select>
+          </div>
+
+          <label style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.875rem", fontWeight: 600 }}>
+            <input type="checkbox" name="includeTrainingQuestions" value="true" />
+            Inclure des questions d&apos;entraînement
+          </label>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 16 }}>
             <div>
               <label style={labelStyle}>Durée (minutes)</label>

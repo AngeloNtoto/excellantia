@@ -2,7 +2,8 @@
 
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/session";
-import { getQuestionsByIds } from "@/lib/questions";
+// Utiliser les questions de la base de données pour la correction et le calcul des scores
+import { getQuestionsByIdsFromDb } from "@/lib/questions-db";
 import { computeScore, toPercentage } from "@/lib/scoring";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -129,7 +130,7 @@ export async function submitAttemptAction(attemptId: string) {
   if (attempt.status !== "IN_PROGRESS") return { error: "Déjà soumise." };
 
   const questionIds = attempt.room.questionIds as string[];
-  const questions = getQuestionsByIds(questionIds);
+  const questions = await getQuestionsByIdsFromDb(questionIds);
   const answersMap = new Map<string, number | null>(
     attempt.answers.map((answer: any) => [answer.questionId, answer.selectedIndex])
   );
@@ -178,7 +179,7 @@ export async function autoSubmitExpiredAttempts(roomId: string) {
   });
 
   const questionIds = room.questionIds as string[];
-  const questions = getQuestionsByIds(questionIds);
+  const questions = await getQuestionsByIdsFromDb(questionIds);
 
   for (const attempt of expiredAttempts) {
     const answersMap = new Map<string, number | null>(

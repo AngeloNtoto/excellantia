@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useTransition, useEffect, useState } from "react";
 import { logoutAction } from "@/lib/actions/auth";
 import type { SessionUser } from "@/lib/types";
-import { useTheme } from "next-themes";
+import { useTheme } from "./theme-provider";
 import { LogOut, Sun, Moon, LayoutDashboard, Building2, BookOpen, GraduationCap, Users, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,6 +22,7 @@ const CANDIDATE_LINKS = [
 const ADMIN_LINKS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/salles", label: "Salles", icon: Building2 },
+  { href: "/admin/contenus", label: "Contenus", icon: BookOpen },
   { href: "/admin/candidats", label: "Candidats", icon: Users },
 ];
 
