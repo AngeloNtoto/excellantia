@@ -606,83 +606,148 @@ export default async function AdminDashboardPage() {
             Aucune tentative enregistrée pour le moment.
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead>
-                <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 font-semibold uppercase tracking-wider">
-                  <th className="pb-3 pl-2">Candidat</th>
-                  <th className="pb-3">Salle / Concours</th>
-                  <th className="pb-3">Score &amp; %</th>
-                  <th className="pb-3">Temps Utilisé</th>
-                  <th className="pb-3">Mention</th>
-                  <th className="pb-3 pr-2 text-right">Action</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
-                {recentAttempts.map((att) => {
-                  const pct = att.percentage ?? 0;
-                  const isAdmissible = pct >= 50;
-                  const isLaureat = pct >= 80;
+          <>
+            {/* ─── VUE MOBILE (Cartes tactiles riches < 640px) ─── */}
+            <div className="grid grid-cols-1 gap-3 sm:hidden">
+              {recentAttempts.map((att) => {
+                const pct = att.percentage ?? 0;
+                const isAdmissible = pct >= 50;
+                const isLaureat = pct >= 80;
 
-                  return (
-                    <tr key={att.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
-                      <td className="py-3.5 pl-2">
-                        <div className="font-bold text-slate-900 dark:text-white">
+                return (
+                  <div
+                    key={att.id}
+                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 space-y-3"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <div className="font-bold text-sm text-slate-900 dark:text-white">
                           {att.user.fullname}
                         </div>
-                        <div className="text-[11px] text-slate-400 font-mono">Code: {att.user.code}</div>
-                      </td>
+                        <div className="text-xs text-slate-400 font-mono">Code: {att.user.code}</div>
+                      </div>
 
-                      <td className="py-3.5">
-                        <div className="font-medium text-slate-800 dark:text-slate-200 line-clamp-1">
-                          {att.room.title}
-                        </div>
-                        <div className="text-[10px] font-bold text-indigo-500 mt-0.5">
-                          {att.room.timingRegime}
-                        </div>
-                      </td>
+                      {isLaureat ? (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">
+                          🌟 Lauréat
+                        </span>
+                      ) : isAdmissible ? (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">
+                          ✓ Admissible
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                          Non retenu
+                        </span>
+                      )}
+                    </div>
 
-                      <td className="py-3.5 font-mono">
-                        <div className="font-extrabold text-sm text-slate-900 dark:text-white">
-                          {att.score ?? 0} pts
-                        </div>
-                        <div className="text-[11px] text-slate-500">{pct}% de réussite</div>
-                      </td>
+                    <div className="text-xs text-slate-600 dark:text-slate-300 line-clamp-1">
+                      <span className="text-slate-400">Salle :</span> {att.room.title}
+                    </div>
 
-                      <td className="py-3.5 font-mono text-slate-600 dark:text-slate-300">
-                        {Math.floor((att.timeUsedSec || 0) / 60)} min {((att.timeUsedSec || 0) % 60)}s
-                      </td>
+                    <div className="flex items-center justify-between pt-2.5 border-t border-slate-200/60 dark:border-slate-700/40 text-xs">
+                      <div className="flex items-center gap-3 font-mono">
+                        <span className="font-extrabold text-slate-900 dark:text-white">
+                          {att.score ?? 0} pts ({pct}%)
+                        </span>
+                        <span className="text-slate-400">•</span>
+                        <span className="text-slate-500">
+                          {Math.floor((att.timeUsedSec || 0) / 60)}m {((att.timeUsedSec || 0) % 60)}s
+                        </span>
+                      </div>
 
-                      <td className="py-3.5">
-                        {isLaureat ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">
-                            🌟 Lauréat
-                          </span>
-                        ) : isAdmissible ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">
-                            ✓ Admissible
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
-                            Non retenu
-                          </span>
-                        )}
-                      </td>
+                      <Link
+                        href={`/exam/${att.room.id}/correction/${att.id}`}
+                        className="px-3 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold text-xs hover:bg-indigo-100"
+                      >
+                        Revue
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
 
-                      <td className="py-3.5 pr-2 text-right">
-                        <Link
-                          href={`/exam/${att.room.id}/correction/${att.id}`}
-                          className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
-                        >
-                          Revue
-                        </Link>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+            {/* ─── VUE DESKTOP / TABLETTE (Tableau complet >= 640px) ─── */}
+            <div className="hidden sm:block overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead>
+                  <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 font-semibold uppercase tracking-wider">
+                    <th className="pb-3 pl-2">Candidat</th>
+                    <th className="pb-3">Salle / Concours</th>
+                    <th className="pb-3">Score &amp; %</th>
+                    <th className="pb-3">Temps Utilisé</th>
+                    <th className="pb-3">Mention</th>
+                    <th className="pb-3 pr-2 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
+                  {recentAttempts.map((att) => {
+                    const pct = att.percentage ?? 0;
+                    const isAdmissible = pct >= 50;
+                    const isLaureat = pct >= 80;
+
+                    return (
+                      <tr key={att.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition-colors">
+                        <td className="py-3.5 pl-2">
+                          <div className="font-bold text-slate-900 dark:text-white">
+                            {att.user.fullname}
+                          </div>
+                          <div className="text-[11px] text-slate-400 font-mono">Code: {att.user.code}</div>
+                        </td>
+
+                        <td className="py-3.5">
+                          <div className="font-medium text-slate-800 dark:text-slate-200 line-clamp-1">
+                            {att.room.title}
+                          </div>
+                          <div className="text-[10px] font-bold text-indigo-500 mt-0.5">
+                            {att.room.timingRegime}
+                          </div>
+                        </td>
+
+                        <td className="py-3.5 font-mono">
+                          <div className="font-extrabold text-sm text-slate-900 dark:text-white">
+                            {att.score ?? 0} pts
+                          </div>
+                          <div className="text-[11px] text-slate-500">{pct}% de réussite</div>
+                        </td>
+
+                        <td className="py-3.5 font-mono text-slate-600 dark:text-slate-300">
+                          {Math.floor((att.timeUsedSec || 0) / 60)} min {((att.timeUsedSec || 0) % 60)}s
+                        </td>
+
+                        <td className="py-3.5">
+                          {isLaureat ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">
+                              🌟 Lauréat
+                            </span>
+                          ) : isAdmissible ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">
+                              ✓ Admissible
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                              Non retenu
+                            </span>
+                          )}
+                        </td>
+
+                        <td className="py-3.5 pr-2 text-right">
+                          <Link
+                            href={`/exam/${att.room.id}/correction/${att.id}`}
+                            className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+                          >
+                            Revue
+                          </Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </>
         )}
       </div>
     </main>
