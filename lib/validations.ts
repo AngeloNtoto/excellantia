@@ -34,22 +34,31 @@ export const createTextContentSchema = z.object({
 });
 
 export const createQuestionSchema = z.object({
-  textContentId: z.string().cuid().nullable().optional(),
-  subject: z.enum(["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"]),
+  textContentId: z.string().nullable().optional(),
+  subject: z.preprocess(
+    (val) => (typeof val === "string" ? val.toUpperCase().trim() : val),
+    z.enum(["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"])
+  ),
   topic: z.string().optional(),
   subtopic: z.string().optional(),
-  difficulty: z.enum(["EASY", "MEDIUM", "HARD"]),
-  language: z.enum(["FR", "EN"]).default("FR"),
+  difficulty: z.preprocess(
+    (val) => (typeof val === "string" ? val.toUpperCase().trim() : val),
+    z.enum(["EASY", "MEDIUM", "HARD"]).default("MEDIUM")
+  ),
+  language: z.preprocess(
+    (val) => (typeof val === "string" ? val.toUpperCase().trim() : val),
+    z.enum(["FR", "EN"]).default("FR")
+  ),
   statement: z.string().min(2, "L'énoncé doit comporter au moins 2 caractères"),
   options: z.array(z.string().min(1, "Chaque option est obligatoire")).length(4, "Il faut exactement 4 options"),
   answerIndex: z.coerce.number().int().min(0).max(3),
   explanation: z.string().optional(),
   optionExplanations: z.array(z.string().optional()).max(4).optional(),
+  passageId: z.string().optional(),
+  scope: z.enum(["DRC", "INTERNATIONAL"]).optional(),
   type: z.enum(["MULTIPLE_CHOICE", "PASSAGE_BASED"]).default("MULTIPLE_CHOICE"),
   source: z.enum(["USER_CREATED", "ROOM_GENERATED", "TRAINING_POOL"]).default("USER_CREATED"),
   mode: z.enum(["TRAINING", "SIMULATION"]).optional(),
-  scope: z.enum(["DRC", "INTERNATIONAL"]).optional(),
-  passageId: z.string().optional(),
 });
 
 // ─── Validation création salle ────────────────────────────────────────────────

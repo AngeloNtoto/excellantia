@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { importContentBundleAction } from "@/lib/actions/content";
-import { Upload, FileCode, CheckCircle2, AlertCircle, Sparkles, Copy, FileText } from "lucide-react";
+import { Upload, FileCode, CheckCircle2, AlertCircle, Sparkles, FileText, Loader2, Info } from "lucide-react";
 
 export function ImportJsonForm() {
   const [isPending, startTransition] = useTransition();
@@ -65,7 +65,7 @@ export function ImportJsonForm() {
     reader.readAsText(file);
   }
 
-  // Exemple type de JSON pour faciliter la vie de l'utilisateur
+  // Exemple type de JSON pour faciliter la vie de l'administrateur
   function loadExample(type: "questions" | "texts") {
     if (type === "questions") {
       const exampleQuestions = [
@@ -78,6 +78,7 @@ export function ImportJsonForm() {
           options: ["x = 2", "x = 3", "x = 4", "x = 5"],
           answerIndex: 1,
           explanation: "2x = 10 - 4 = 6 => x = 3.",
+          // optionExplanations est 100% optionnel
         },
         {
           subject: "GENERAL_CULTURE",
@@ -88,6 +89,12 @@ export function ImportJsonForm() {
           options: ["1958", "1960", "1965", "1971"],
           answerIndex: 1,
           explanation: "L'indépendance a été proclamée le 30 juin 1960.",
+          optionExplanations: [
+            "1958 : Congrès d'Accra",
+            "1960 : Proclamation officielle à Léopoldville (Kinshasa)",
+            "1965 : Prise de pouvoir de Mobutu",
+            "1971 : Changement de nom en Zaïre",
+          ],
         },
       ];
       handleTextChange(JSON.stringify(exampleQuestions, null, 2));
@@ -129,154 +136,162 @@ export function ImportJsonForm() {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-      {/* Header & Quick actions */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+    <div className="space-y-5">
+      {/* En-tête & Boutons d'exemples */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h3 style={{ fontSize: "1.05rem", fontWeight: 700, margin: 0 }}>Importateur universel JSON</h3>
-          <p style={{ margin: "2px 0 0", fontSize: "0.8125rem", color: "var(--text-muted)" }}>
-            Uploadez un fichier <code style={{ color: "var(--accent)" }}>.json</code> ou collez directement votre tableau de questions/textes.
+          <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white">
+            Importateur universel JSON
+          </h3>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            Uploadez un fichier <code className="text-indigo-600 dark:text-indigo-400 font-mono">.json</code> ou collez votre structure directement.
           </p>
         </div>
 
-        <div style={{ display: "flex", gap: 8 }}>
+        <div className="flex items-center gap-2 flex-wrap">
           <button
             type="button"
             onClick={() => loadExample("questions")}
-            className="btn btn-ghost"
-            style={{ fontSize: "0.75rem", padding: "6px 10px" }}
+            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold border border-indigo-200/60 dark:border-indigo-500/20 transition-all active:scale-95"
           >
-            <Sparkles className="w-3.5 h-3.5 mr-1" />
-            Exemple Questions
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Exemple QCM</span>
           </button>
           <button
             type="button"
             onClick={() => loadExample("texts")}
-            className="btn btn-ghost"
-            style={{ fontSize: "0.75rem", padding: "6px 10px" }}
+            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-50 dark:bg-purple-500/10 hover:bg-purple-100 dark:hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 text-xs font-semibold border border-purple-200/60 dark:border-purple-500/20 transition-all active:scale-95"
           >
-            <FileText className="w-3.5 h-3.5 mr-1" />
-            Exemple Texte + QCM
+            <FileText className="w-3.5 h-3.5" />
+            <span>Exemple Texte + QCM</span>
           </button>
         </div>
       </div>
 
-      {/* Upload Zone */}
-      <div
-        style={{
-          border: "2px dashed var(--border)",
-          borderRadius: 16,
-          padding: 20,
-          textAlign: "center",
-          background: "var(--bg-muted)",
-          cursor: "pointer",
-          position: "relative",
-        }}
-      >
+      {/* Note d'information format */}
+      <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
+        <Info className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
+        <div>
+          <span className="font-semibold text-slate-900 dark:text-white">Note sur les explications :</span> Les champs <code className="font-mono text-indigo-600 dark:text-indigo-400">explanation</code> et <code className="font-mono text-indigo-600 dark:text-indigo-400">optionExplanations</code> (explication pour chaque option) sont <strong className="underline">optionnels</strong>.
+        </div>
+      </div>
+
+      {/* Zone de Drag & Drop */}
+      <div className="relative border-2 border-dashed border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 rounded-2xl p-5 text-center bg-slate-50/50 dark:bg-slate-800/20 transition-all cursor-pointer group">
         <input
           type="file"
           accept=".json,application/json"
           onChange={handleFileUpload}
-          style={{
-            position: "absolute",
-            inset: 0,
-            opacity: 0,
-            cursor: "pointer",
-            width: "100%",
-            height: "100%",
-          }}
+          className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
         />
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-          <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(99, 102, 241, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--accent)" }}>
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
             <Upload className="w-5 h-5" />
           </div>
-          <div style={{ fontSize: "0.875rem", fontWeight: 600 }}>
+          <div className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
             {fileName ? `Fichier chargé : ${fileName}` : "Cliquez ou glissez un fichier .json ici"}
           </div>
-          <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-            Prend en charge maths.json, francais.json, anglais.json, culture-generale.json...
+          <div className="text-[11px] text-slate-400">
+            Compatible avec mathématiques, français, anglais, culture générale et textes
           </div>
         </div>
       </div>
 
-      {/* Paste Textarea */}
-      <div>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, alignItems: "center" }}>
-          <label style={{ fontWeight: 600, fontSize: "0.875rem", display: "flex", alignItems: "center", gap: 6 }}>
+      {/* Zone de Texte JSON avec placeholder explicatif */}
+      <div className="space-y-1.5">
+        <div className="flex items-center justify-between">
+          <label className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
             <FileCode className="w-4 h-4 text-indigo-500" />
-            Ou collez votre code JSON ci-dessous :
+            Ou collez votre code JSON :
           </label>
           {previewInfo && (
-            <span style={{ fontSize: "0.75rem", color: "var(--success)", fontWeight: 600, background: "rgba(34,197,94,0.1)", padding: "2px 8px", borderRadius: 10 }}>
-              ✓ Détecté : {previewInfo.count} {previewInfo.type}
+            <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+              ✓ {previewInfo.count} {previewInfo.type}
             </span>
           )}
         </div>
 
         <textarea
-          rows={10}
+          rows={9}
           value={jsonText}
           onChange={(e) => handleTextChange(e.target.value)}
-          placeholder={`[\n  {\n    "subject": "MATH",\n    "topic": "Analyse",\n    "difficulty": "EASY",\n    "statement": "2 + 2 = ?",\n    "options": ["3", "4", "5", "6"],\n    "answerIndex": 1,\n    "explanation": "2 + 2 font 4."\n  }\n]`}
-          className="input"
-          style={{
-            fontFamily: "var(--font-mono, monospace)",
-            fontSize: "0.8125rem",
-            lineHeight: 1.5,
-            resize: "vertical",
-            background: "var(--bg-card)",
-          }}
+          placeholder={`[
+  {
+    "subject": "MATH",
+    "topic": "Analyse",
+    "difficulty": "EASY",
+    "statement": "Quelle est la dérivée de f(x) = x² ?",
+    "options": ["2x", "x", "x²", "2"],
+    "answerIndex": 0,
+    "explanation": "(x²)' = 2x (Optionnel)",
+    "optionExplanations": [
+      "2x est la dérivée correcte",
+      "x est incorrect",
+      "x² est la fonction initiale",
+      "2 est une constante"
+    ]
+  }
+]`}
+          className="w-full p-3 text-xs sm:text-sm font-mono rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all resize-y"
         />
 
         {parseError && (
-          <div style={{ color: "var(--error)", fontSize: "0.8125rem", marginTop: 6, display: "flex", alignItems: "center", gap: 6 }}>
+          <div className="flex items-center gap-1.5 text-xs text-red-500 font-semibold p-2.5 rounded-xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20">
             <AlertCircle className="w-4 h-4 shrink-0" />
-            {parseError}
+            <span>{parseError}</span>
           </div>
         )}
       </div>
 
-      {/* Result feedback */}
-      {result && (
-        <div
-          style={{
-            padding: 16,
-            borderRadius: 14,
-            background: result.createdQuestions > 0 || result.createdTexts > 0 ? "rgba(34, 197, 94, 0.08)" : "rgba(239, 68, 68, 0.08)",
-            border: `1px solid ${result.createdQuestions > 0 || result.createdTexts > 0 ? "rgba(34, 197, 94, 0.25)" : "rgba(239, 68, 68, 0.25)"}`,
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: "0.95rem", color: result.createdQuestions > 0 || result.createdTexts > 0 ? "var(--success)" : "var(--error)" }}>
-            {result.createdQuestions > 0 || result.createdTexts > 0 ? <CheckCircle2 className="w-5 h-5" /> : <AlertCircle className="w-5 h-5" />}
-            Rapport d'importation :
-          </div>
-
-          <div style={{ margin: "8px 0", fontSize: "0.875rem", display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <span><strong>{result.createdQuestions}</strong> question(s) enregistrée(s)</span>
-            <span><strong>{result.createdTexts}</strong> texte(s) enregistré(s)</span>
-            {result.errors.length > 0 && <span style={{ color: "var(--error)" }}><strong>{result.errors.length}</strong> erreur(s)</span>}
-          </div>
-
-          {result.errors.length > 0 && (
-            <div style={{ marginTop: 8, maxHeight: 150, overflowY: "auto", fontSize: "0.75rem", color: "var(--text-secondary)", background: "var(--bg-muted)", padding: 8, borderRadius: 8 }}>
-              {result.errors.map((err, idx) => (
-                <div key={idx} style={{ color: "var(--error)", marginBottom: 2 }}>• {err}</div>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* Import Button */}
+      {/* Bouton d'action */}
       <button
         type="button"
         onClick={handleImport}
         disabled={isPending || !jsonText.trim() || !!parseError}
-        className="btn btn-primary"
-        style={{ padding: 14, fontSize: "0.95rem", fontWeight: 700 }}
+        className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white text-xs sm:text-sm font-bold shadow-md shadow-indigo-600/20 transition-all active:scale-[0.99]"
       >
-        {isPending ? "Importation en cours..." : "Lancer l'importation en base de données"}
+        {isPending ? (
+          <>
+            <Loader2 className="w-4 h-4 animate-spin" />
+            <span>Traitement et validation de la base...</span>
+          </>
+        ) : (
+          <>
+            <Upload className="w-4 h-4" />
+            <span>Importer les contenus dans la banque</span>
+          </>
+        )}
       </button>
+
+      {/* Rapport d'importation */}
+      {result && (
+        <div
+          className={`p-4 rounded-2xl border text-xs sm:text-sm space-y-2 ${
+            result.errors.length > 0
+              ? "bg-red-50 dark:bg-red-500/10 border-red-200 dark:border-red-500/20 text-red-700 dark:text-red-300"
+              : "bg-emerald-50 dark:bg-emerald-500/10 border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300"
+          }`}
+        >
+          <div className="flex items-center gap-2 font-bold">
+            {result.errors.length > 0 ? (
+              <AlertCircle className="w-4 h-4 text-red-500 shrink-0" />
+            ) : (
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+            )}
+            <span>
+              {result.createdQuestions} question{result.createdQuestions > 1 ? "s" : ""} et {result.createdTexts} texte{result.createdTexts > 1 ? "s" : ""} importé{result.createdQuestions + result.createdTexts > 1 ? "s" : ""} avec succès !
+            </span>
+          </div>
+
+          {result.errors.length > 0 && (
+            <ul className="list-disc list-inside space-y-1 text-xs text-red-600 dark:text-red-400">
+              {result.errors.map((err, idx) => (
+                <li key={idx}>{err}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -6,14 +6,15 @@ import {
   Infinity,
   Layers,
   Zap,
-  EyeOff,
   Eye,
-  Clock,
-  CheckCircle2,
   X,
   Timer,
   Sparkles,
+  ChevronRight,
+  ShieldAlert,
+  HelpCircle,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function RegimesInfoModal({
   isOpen,
@@ -33,66 +34,25 @@ export function RegimesInfoModal({
 
   return (
     <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        backgroundColor: "rgba(15, 23, 42, 0.75)",
-        backdropFilter: "blur(6px)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 9999,
-        padding: "16px",
-      }}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto bg-slate-950/80 backdrop-blur-md transition-all"
       onClick={onClose}
     >
       <div
-        style={{
-          background: "var(--bg-card, #ffffff)",
-          border: "1px solid var(--border, #e2e8f0)",
-          borderRadius: 20,
-          width: "100%",
-          maxWidth: 780,
-          maxHeight: "90vh",
-          overflowY: "auto",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-          color: "var(--text-primary, #0f172a)",
-          display: "flex",
-          flexDirection: "column",
-        }}
+        className="relative w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] sm:max-h-[85vh] my-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Header */}
-        <div
-          style={{
-            padding: "20px 24px",
-            borderBottom: "1px solid var(--border, #e2e8f0)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div
-              style={{
-                width: 36,
-                height: 36,
-                borderRadius: 10,
-                background: "linear-gradient(135deg, #6366f1, #3b82f6)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#ffffff",
-              }}
-            >
+        {/* ─── EN-TÊTE MODAL ─── */}
+        <div className="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3 bg-slate-50/50 dark:bg-slate-900/50 shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
               <Timer className="w-5 h-5" />
             </div>
             <div>
-              <h2 style={{ margin: 0, fontSize: "1.15rem", fontWeight: 700 }}>
-                Régimes Temporels &amp; Modes d'Affichage
+              <h2 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                Régimes Temporels &amp; Chronomètres
               </h2>
-              <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--text-muted, #64748b)" }}>
-                Guide officiel des règles de chronométrage et de progression d'Excellantia
+              <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">
+                Guide des dynamiques d'épreuve et de gestion du temps
               </p>
             </div>
           </div>
@@ -100,216 +60,156 @@ export function RegimesInfoModal({
           <button
             type="button"
             onClick={onClose}
-            style={{
-              background: "transparent",
-              border: "none",
-              cursor: "pointer",
-              padding: 6,
-              borderRadius: 8,
-              color: "var(--text-muted, #64748b)",
-            }}
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:scale-95"
+            aria-label="Fermer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Navigation Tabs */}
-        <div
-          style={{
-            display: "flex",
-            gap: 6,
-            padding: "12px 20px 0",
-            borderBottom: "1px solid var(--border, #e2e8f0)",
-            background: "var(--bg-muted, #f8fafc)",
-            overflowX: "auto",
-          }}
-        >
-          {/* Section 1 : Régimes Temporels */}
-          {regimesList.map((rKey) => {
-            const meta = TIMING_REGIMES[rKey];
-            const isActive = activeTab === rKey;
-            return (
-              <button
-                key={rKey}
-                type="button"
-                onClick={() => setActiveTab(rKey)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "8px 14px",
-                  fontSize: "0.825rem",
-                  fontWeight: isActive ? 700 : 500,
-                  border: "none",
-                  borderBottom: `2px solid ${isActive ? meta.color : "transparent"}`,
-                  background: "transparent",
-                  color: isActive ? meta.color : "var(--text-secondary, #475569)",
-                  cursor: "pointer",
-                  whiteSpace: "nowrap",
-                  transition: "all 0.15s ease",
-                }}
-              >
-                {rKey === "EINSTEIN" && <Infinity className="w-3.5 h-3.5" />}
-                {rKey === "NEWTON" && <Layers className="w-3.5 h-3.5" />}
-                {rKey === "TESLA" && <Zap className="w-3.5 h-3.5" />}
-                <span>{meta.name}</span>
-              </button>
-            );
-          })}
-
-          <div style={{ width: 1, height: 20, background: "var(--border)", alignSelf: "center", margin: "0 4px" }} />
-
-          {/* Section 2 : Modes Chronomètre */}
-          {chronoModesList.map((cKey) => {
-            const meta = CHRONO_MODES[cKey];
-            const isActive = activeTab === cKey;
-            return (
-              <button
-                key={cKey}
-                type="button"
-                onClick={() => setActiveTab(cKey)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "8px 14px",
-                  fontSize: "0.825rem",
-                  fontWeight: isActive ? 700 : 500,
-                  border: "none",
-                  borderBottom: `2px solid ${isActive ? meta.color : "transparent"}`,
-                  background: "transparent",
-                  color: isActive ? meta.color : "var(--text-secondary, #475569)",
-                  cursor: "pointer",
-                  whiteSpace: "nowrap",
-                  transition: "all 0.15s ease",
-                }}
-              >
-                {cKey === "GALILEE" && <Clock className="w-3.5 h-3.5" />}
-                {cKey === "HEISENBERG" && <Eye className="w-3.5 h-3.5" />}
-                {cKey === "SCHRODINGER" && <EyeOff className="w-3.5 h-3.5" />}
-                <span>{meta.name}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Content Body */}
-        <div style={{ padding: 24, display: "flex", flexDirection: "column", gap: 20 }}>
-          {(() => {
-            const isRegime = regimesList.includes(activeTab as TimingRegime);
-            const meta = isRegime
-              ? TIMING_REGIMES[activeTab as TimingRegime]
-              : CHRONO_MODES[activeTab as ChronoMode];
-
-            return (
-              <>
-                {/* Hero Card */}
-                <div
-                  style={{
-                    background: meta.bgLight,
-                    border: `1px solid ${meta.borderLight}`,
-                    borderRadius: 16,
-                    padding: 20,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 8,
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                      <div
-                        style={{
-                          width: 32,
-                          height: 32,
-                          borderRadius: 8,
-                          background: meta.color,
-                          color: "#ffffff",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        {activeTab === "EINSTEIN" && <Infinity className="w-4 h-4" />}
-                        {activeTab === "NEWTON" && <Layers className="w-4 h-4" />}
-                        {activeTab === "TESLA" && <Zap className="w-4 h-4" />}
-                        {activeTab === "GALILEE" && <Clock className="w-4 h-4" />}
-                        {activeTab === "HEISENBERG" && <Eye className="w-4 h-4" />}
-                        {activeTab === "SCHRODINGER" && <EyeOff className="w-4 h-4" />}
-                      </div>
-                      <div>
-                        <h3 style={{ margin: 0, fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)" }}>
-                          {meta.name} — <span style={{ color: meta.color }}>{meta.subtitle}</span>
-                        </h3>
-                      </div>
-                    </div>
-
-                    <span
-                      style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        padding: "3px 10px",
-                        borderRadius: 20,
-                        background: meta.color,
-                        color: "#ffffff",
-                      }}
+        {/* ─── CORPS DU MODAL (SCROLLABLE) ─── */}
+        <div className="p-4 sm:p-6 overflow-y-auto space-y-6 text-xs sm:text-sm">
+          {/* SÉLECTEUR DE TABS */}
+          <div className="space-y-3">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                1. Régimes Temporels (Découpage de l'épreuve)
+              </span>
+              <div className="grid grid-cols-3 gap-2 mt-1.5">
+                {regimesList.map((r) => {
+                  const cfg = TIMING_REGIMES[r];
+                  const isSelected = activeTab === r;
+                  return (
+                    <button
+                      key={r}
+                      type="button"
+                      onClick={() => setActiveTab(r)}
+                      className={`p-2.5 sm:p-3 rounded-2xl border text-center font-bold transition-all active:scale-95 flex flex-col items-center gap-1 ${
+                        isSelected
+                          ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-600/20"
+                          : "bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      }`}
                     >
-                      {isRegime ? "Régime Temporel" : "Mode Chronomètre"}
-                    </span>
+                      <span className="text-xs sm:text-sm">{cfg.badge}</span>
+                      <span className={`text-[10px] font-medium truncate max-w-full ${isSelected ? "text-indigo-100" : "text-slate-400"}`}>
+                        {r === "EINSTEIN" ? "Libre" : r === "NEWTON" ? "Paliers" : "Sprint"}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                2. Modes d'Affichage du Chrono (Visibilité du cadran)
+              </span>
+              <div className="grid grid-cols-3 gap-2 mt-1.5">
+                {chronoModesList.map((m) => {
+                  const cfg = CHRONO_MODES[m];
+                  const isSelected = activeTab === m;
+                  return (
+                    <button
+                      key={m}
+                      type="button"
+                      onClick={() => setActiveTab(m)}
+                      className={`p-2.5 sm:p-3 rounded-2xl border text-center font-bold transition-all active:scale-95 flex flex-col items-center gap-1 ${
+                        isSelected
+                          ? "bg-purple-600 text-white border-purple-600 shadow-md shadow-purple-600/20"
+                          : "bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      }`}
+                    >
+                      <span className="text-xs sm:text-sm">{cfg.badge}</span>
+                      <span className={`text-[10px] font-medium truncate max-w-full ${isSelected ? "text-purple-100" : "text-slate-400"}`}>
+                        {m === "GALILEE" ? "Continu" : m === "HEISENBERG" ? "Incertitude" : "Quantique"}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* FICHE DÉTAILLÉE DE L'OPTION ACTIVE */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-700/60 space-y-4">
+            {/* Si c'est un régime temporel */}
+            {regimesList.includes(activeTab as TimingRegime) && (() => {
+              const r = activeTab as TimingRegime;
+              const cfg = TIMING_REGIMES[r];
+              return (
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <h3 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                      <span>{cfg.name}</span>
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20">
+                        {cfg.subtitle}
+                      </span>
+                    </h3>
                   </div>
 
-                  <p style={{ margin: "6px 0 0", fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
-                    {meta.description}
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {cfg.description}
                   </p>
-                </div>
 
-                {/* Rules list */}
-                <div>
-                  <h4 style={{ fontSize: "0.85rem", fontWeight: 700, margin: "0 0 12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--text-muted)" }}>
-                    Règles &amp; Spécificités d'application
-                  </h4>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {meta.rules.map((rule, idx) => (
-                      <div
-                        key={idx}
-                        style={{
-                          display: "flex",
-                          alignItems: "flex-start",
-                          gap: 10,
-                          padding: "10px 14px",
-                          background: "var(--bg-muted, #f8fafc)",
-                          border: "1px solid var(--border, #e2e8f0)",
-                          borderRadius: 10,
-                          fontSize: "0.85rem",
-                        }}
-                      >
-                        <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: meta.color, marginTop: 2 }} />
-                        <span style={{ color: "var(--text-primary)" }}>{rule}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-2 pt-2 border-t border-slate-200/60 dark:border-slate-700/40">
+                    <span className="text-xs font-bold text-slate-900 dark:text-white block">Règles fondamentales :</span>
+                    <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                      {cfg.rules.map((rule, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <ChevronRight className="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5" />
+                          <span>{rule}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </>
-            );
-          })()}
+              );
+            })()}
+
+            {/* Si c'est un mode d'affichage de chrono */}
+            {chronoModesList.includes(activeTab as ChronoMode) && (() => {
+              const m = activeTab as ChronoMode;
+              const cfg = CHRONO_MODES[m];
+              return (
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <h3 className="font-extrabold text-base sm:text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                      <span>{cfg.name}</span>
+                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-500/20">
+                        {cfg.subtitle}
+                      </span>
+                    </h3>
+                  </div>
+
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                    {cfg.description}
+                  </p>
+
+                  <div className="space-y-2 pt-2 border-t border-slate-200/60 dark:border-slate-700/40">
+                    <span className="text-xs font-bold text-slate-900 dark:text-white block">Fonctionnement du cadran :</span>
+                    <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                      {cfg.rules.map((rule, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <ChevronRight className="w-3.5 h-3.5 text-purple-500 shrink-0 mt-0.5" />
+                          <span>{rule}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
         </div>
 
-        {/* Modal Footer */}
-        <div
-          style={{
-            padding: "16px 24px",
-            borderTop: "1px solid var(--border, #e2e8f0)",
-            display: "flex",
-            justifyContent: "flex-end",
-            background: "var(--bg-muted, #f8fafc)",
-          }}
-        >
+        {/* ─── PIED DE MODAL ─── */}
+        <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 flex justify-end shrink-0">
           <button
             type="button"
             onClick={onClose}
-            className="btn btn-primary"
-            style={{ padding: "8px 20px", fontSize: "0.875rem", borderRadius: 10 }}
+            className="px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold transition-all active:scale-95"
           >
-            Fermer
+            Fermer le guide
           </button>
         </div>
       </div>

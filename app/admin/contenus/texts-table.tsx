@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { deleteTextContentAction } from "@/lib/actions/content";
-import { Trash2, BookOpen, Layers, Eye, Globe } from "lucide-react";
+import { deleteTextContentAction, createQuestionAction, deleteQuestionAction } from "@/lib/actions/content";
+import { Trash2, BookOpen, PlusCircle, ChevronDown, ChevronUp, CheckCircle2, AlertCircle, Loader2, HelpCircle } from "lucide-react";
 
 type TextItem = {
   id: string;
@@ -16,7 +16,10 @@ type TextItem = {
 
 export function TextsTable({ texts }: { texts: TextItem[] }) {
   const [isPending, startTransition] = useTransition();
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [readingId, setReadingId] = useState<string | null>(null);
+  const [addingQuestionForId, setAddingQuestionForId] = useState<string | null>(null);
+  const [formError, setFormError] = useState("");
+  const [formSuccess, setFormSuccess] = useState("");
 
   function handleDelete(id: string, title: string) {
     if (!confirm(`Supprimer le texte "${title}" ? Les questions associées deviendront autonomes.`)) return;
@@ -25,96 +28,270 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
     });
   }
 
+  function handleCreateQuestionForText(e: React.FormEvent<HTMLFormElement>, textId: string, language: string) {
+    e.preventDefault();
+    setFormError("");
+    setFormSuccess("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.set("textContentId", textId);
+    formData.set("subject", language === "EN" ? "ENGLISH" : "FRENCH");
+    formData.set("type", "PASSAGE_BASED");
+
+    startTransition(async () => {
+      const res = await createQuestionAction(formData);
+      if (res?.error) {
+        setFormError(res.error);
+        return;
+      }
+
+      setFormSuccess("Question liée au texte ajoutée avec succès !");
+      form.reset();
+    });
+  }
+
   if (texts.length === 0) {
     return (
-      <div style={{ padding: 32, textAlign: "center", color: "var(--text-muted)", background: "var(--bg-muted)", borderRadius: 14 }}>
+      <div className="p-8 text-center text-slate-400 bg-slate-50 dark:bg-slate-800/40 border border-slate-200/80 dark:border-slate-800 rounded-3xl text-xs sm:text-sm">
         Aucun texte de lecture enregistré en base pour le moment.
       </div>
     );
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+    <div className="space-y-4">
       {texts.map((text) => {
-        const isExpanded = expandedId === text.id;
+        const isReading = readingId === text.id;
+        const isAddingQ = addingQuestionForId === text.id;
 
         return (
           <div
             key={text.id}
-            style={{
-              border: "1px solid var(--border)",
-              borderRadius: 14,
-              padding: 16,
-              background: "var(--bg-card)",
-              display: "flex",
-              flexDirection: "column",
-              gap: 8,
-            }}
+            className="p-4 sm:p-5 rounded-3xl bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4 transition-all"
           >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            {/* Header du texte */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span
-                    style={{
-                      fontSize: "0.7rem",
-                      fontWeight: 700,
-                      padding: "2px 8px",
-                      borderRadius: 6,
-                      background: text.language === "FR" ? "#3b82f6" : "#10b981",
-                      color: "#fff",
-                    }}
+                    className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                      text.language === "FR"
+                        ? "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20"
+                        : "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20"
+                    }`}
                   >
                     {text.language}
                   </span>
-                  <h4 style={{ margin: 0, fontSize: "1rem", fontWeight: 700 }}>{text.title}</h4>
-                  {text.source && (
-                    <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-                      Source : {text.source}
-                    </span>
-                  )}
+                  <h4 className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">
+                    {text.title}
+                  </h4>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20">
+                    {text._count.questions} question{text._count.questions > 1 ? "s" : ""} liée{text._count.questions > 1 ? "s" : ""}
+                  </span>
                 </div>
+                {text.source && (
+                  <p className="text-xs text-slate-400">
+                    Source : {text.source}
+                  </p>
+                )}
               </div>
 
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span
-                  style={{
-                    fontSize: "0.75rem",
-                    padding: "3px 8px",
-                    borderRadius: 12,
-                    background: "var(--bg-muted)",
-                    border: "1px solid var(--border)",
-                    color: "var(--text-secondary)",
-                    fontWeight: 600,
-                  }}
+              {/* Actions rapides */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onClick={() => setReadingId(isReading ? null : text.id)}
+                  className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5"
                 >
-                  {text._count.questions} question(s)
-                </span>
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>{isReading ? "Masquer" : "Lire"}</span>
+                </button>
 
                 <button
                   type="button"
-                  onClick={() => setExpandedId(isExpanded ? null : text.id)}
-                  className="btn btn-ghost"
-                  style={{ padding: "4px 8px", fontSize: "0.8rem" }}
+                  onClick={() => {
+                    setAddingQuestionForId(isAddingQ ? null : text.id);
+                    setFormError("");
+                    setFormSuccess("");
+                  }}
+                  className="px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-bold border border-indigo-200/60 dark:border-indigo-500/20 transition-all active:scale-95 flex items-center gap-1.5"
                 >
-                  {isExpanded ? "Fermer" : "Lire"}
+                  <PlusCircle className="w-3.5 h-3.5" />
+                  <span>{isAddingQ ? "Fermer" : "+ Ajouter une question"}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => handleDelete(text.id, text.title)}
-                  disabled={isPending}
-                  className="btn btn-ghost"
-                  style={{ color: "var(--error)", padding: "4px 8px" }}
-                  title="Supprimer le texte"
+                  className="p-1.5 rounded-xl text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all"
+                  title="Supprimer ce texte"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
-            <p style={{ margin: 0, fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
-              {isExpanded ? text.content : `${text.content.slice(0, 140)}${text.content.length > 140 ? "..." : ""}`}
-            </p>
+            {/* Extrait / Lecture complète */}
+            {isReading && (
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-700/40 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-serif whitespace-pre-line animate-in fade-in duration-200">
+                {text.content}
+              </div>
+            )}
+
+            {/* Formulaire d'ajout de question directement rattachée à ce texte */}
+            {isAddingQ && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-200/60 dark:border-indigo-500/30 space-y-4 animate-in fade-in duration-200">
+                <div className="flex items-center justify-between">
+                  <h5 className="text-xs sm:text-sm font-extrabold text-indigo-900 dark:text-indigo-200 flex items-center gap-2">
+                    <PlusCircle className="w-4 h-4 text-indigo-500" />
+                    Ajouter une question pour : "{text.title}"
+                  </h5>
+                  <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400">
+                    Matière : {text.language === "EN" ? "Anglais" : "Français"}
+                  </span>
+                </div>
+
+                {formError && (
+                  <div className="p-2.5 rounded-xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 text-xs font-semibold">
+                    {formError}
+                  </div>
+                )}
+
+                {formSuccess && (
+                  <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+                    {formSuccess}
+                  </div>
+                )}
+
+                <form
+                  onSubmit={(e) => handleCreateQuestionForText(e, text.id, text.language)}
+                  className="space-y-3 text-xs sm:text-sm"
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Difficulté *</label>
+                      <select
+                        name="difficulty"
+                        defaultValue="MEDIUM"
+                        required
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      >
+                        <option value="EASY">Facile</option>
+                        <option value="MEDIUM">Moyenne</option>
+                        <option value="HARD">Difficile</option>
+                      </select>
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Notion / Chapitre</label>
+                      <input
+                        name="topic"
+                        type="text"
+                        placeholder="Ex: Compréhension, Vocabulaire, Déduction..."
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="font-bold text-slate-900 dark:text-white block">Énoncé de la question *</label>
+                    <textarea
+                      name="statement"
+                      rows={2}
+                      placeholder="Selon le texte, que signifie..."
+                      required
+                      className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                    />
+                  </div>
+
+                  {/* 4 Options */}
+                  <div className="space-y-1.5">
+                    <label className="font-bold text-slate-900 dark:text-white block">
+                      Options de réponse (4 choix) *
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <input
+                        name="option1"
+                        type="text"
+                        placeholder="Option 1 (Index 0)"
+                        required
+                        className="w-full p-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                      <input
+                        name="option2"
+                        type="text"
+                        placeholder="Option 2 (Index 1)"
+                        required
+                        className="w-full p-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                      <input
+                        name="option3"
+                        type="text"
+                        placeholder="Option 3 (Index 2)"
+                        required
+                        className="w-full p-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                      <input
+                        name="option4"
+                        type="text"
+                        placeholder="Option 4 (Index 3)"
+                        required
+                        className="w-full p-2 text-xs rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Bonne réponse & Explication */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Bonne réponse *</label>
+                      <select
+                        name="answerIndex"
+                        defaultValue="0"
+                        required
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold"
+                      >
+                        <option value="0">Option 1</option>
+                        <option value="1">Option 2</option>
+                        <option value="2">Option 3</option>
+                        <option value="3">Option 4</option>
+                      </select>
+                    </div>
+
+                    <div className="sm:col-span-2 space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">
+                        Explication pédagogique <span className="text-slate-400 font-normal">(Optionnel)</span>
+                      </label>
+                      <input
+                        name="explanation"
+                        type="text"
+                        placeholder="Justification tirée du passage..."
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex justify-end gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setAddingQuestionForId(null)}
+                      className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800"
+                    >
+                      Annuler
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={isPending}
+                      className="px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-600/20 transition-all active:scale-95 flex items-center gap-1.5"
+                    >
+                      {isPending ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <PlusCircle className="w-3.5 h-3.5" />}
+                      <span>Enregistrer la question</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
           </div>
         );
       })}

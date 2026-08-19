@@ -135,14 +135,18 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
 
                     {/* Badge Mode Chronomètre */}
                     {room.chronoMode === "SCHRODINGER" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400">
-                        Schrödinger
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400 border border-purple-200 dark:border-purple-500/20">
+                        📦 Schrödinger
                       </span>
                     ) : room.chronoMode === "HEISENBERG" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400">
-                        Heisenberg
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20">
+                        🌫️ Heisenberg
                       </span>
-                    ) : null}
+                    ) : (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                        🔭 Galilée
+                      </span>
+                    )}
                   </div>
                   <div className="flex items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
                     <span className="flex items-center gap-1.5">
