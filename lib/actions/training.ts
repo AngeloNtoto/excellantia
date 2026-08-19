@@ -97,6 +97,14 @@ export async function startTrainingAction(formData: FormData) {
     },
   });
 
+  // Incrémenter le nombre d'apparitions des questions tirées
+  if (gen.questionIds && gen.questionIds.length > 0) {
+    await prisma.question.updateMany({
+      where: { id: { in: gen.questionIds } },
+      data: { timesAppeared: { increment: 1 } },
+    });
+  }
+
   // Donner l'accès au candidat
   await prisma.roomAccess.create({
     data: { roomId: room.id, userId: session.id },

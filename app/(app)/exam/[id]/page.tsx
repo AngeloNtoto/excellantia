@@ -1,8 +1,7 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { getPassageById } from "@/lib/questions";
-import { getQuestionsByIdsFromDb } from "@/lib/questions-db";
+import { getQuestionsByIdsFromDb, getPassagesForQuestions } from "@/lib/questions-db";
 import { ExamClient } from "./client";
 
 export default async function ExamPage({ params }: { params: Promise<{ id: string }> }) {
@@ -32,14 +31,8 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
 
   const questions = await getQuestionsByIdsFromDb(room.questionIds as string[]);
   
-  // Extraire les passages nécessaires
-  const passagesMap = new Map();
-  for (const q of questions) {
-    if (q.passageId && !passagesMap.has(q.passageId)) {
-      const p = getPassageById(q.passageId);
-      if (p) passagesMap.set(q.passageId, p);
-    }
-  }
+  // Extraire les passages nécessaires de façon unifiée (DB TextContent + fallback JSON)
+  const passages = await getPassagesForQuestions(questions);
 
   // Préparer les données pour le client
   const clientQuestions = questions.map(q => ({
@@ -62,7 +55,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
         roomId={room.id}
         accessCode={room.accessCode}
         questions={clientQuestions}
-        passages={Array.from(passagesMap.values())}
+        passages={passages}
         initialAnswers={initialAnswers}
         endsAt={room.endsAt?.getTime() ?? null}
         durationMin={room.durationMin}

@@ -130,6 +130,8 @@ model Question {
   source        QuestionSource @default(USER_CREATED)
   mode          RoomMode?
   createdById   String?
+  timesAppeared Int           @default(0) // Nombre de fois tirée dans une épreuve ou entraînement
+  timesAnswered Int           @default(0) // Nombre de fois où un candidat y a répondu
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
 

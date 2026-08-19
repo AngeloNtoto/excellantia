@@ -3,7 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import { createRoomSchema, accessCodeSchema } from "@/lib/validations";
 import { getSession } from "@/lib/session";
-import { generateRoomQuestions } from "@/lib/questions";
+import { generateRoomQuestionsFromDb } from "@/lib/questions-db";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { autoSubmitExpiredAttempts } from "./attempts";
@@ -84,8 +84,8 @@ export async function createRoomAction(formData: FormData) {
     selectedTopics: d.selectedTopics ? JSON.parse(d.selectedTopics) : undefined,
   };
 
-  // Générer les questions
-  const gen = generateRoomQuestions(config);
+  // Générer les questions depuis la base de données
+  const gen = await generateRoomQuestionsFromDb(config, d.mode, d.includeTrainingQuestions);
   if (!gen.ok) {
     return { error: gen.errors?.join("\n") ?? "Génération impossible." };
   }
@@ -140,7 +140,16 @@ export async function createRoomAction(formData: FormData) {
     },
   });
 
+  // Incrémenter le nombre d'apparitions des questions tirées
+  if (gen.questionIds && gen.questionIds.length > 0) {
+    await prisma.question.updateMany({
+      where: { id: { in: gen.questionIds } },
+      data: { timesAppeared: { increment: 1 } },
+    });
+  }
+
   revalidatePath("/admin");
+  revalidatePath("/admin/contenus");
   revalidatePath("/rooms");
   redirect(`/admin/salles/${room.id}`);
 }

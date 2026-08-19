@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { getTopicsBySubject } from "@/lib/questions";
 import type { Subject } from "@/lib/types";
 
 // ─── GET /api/topics?subject=MATH ────────────────────────────────────────────
@@ -17,19 +16,16 @@ export async function GET(req: NextRequest) {
     );
   }
 
-  // 1. Récupération des topics en base de données
+  // Récupération des topics uniquement depuis la base de données
   const dbQuestions = await prisma.question.findMany({
     where: { subject, topic: { not: null } },
     select: { topic: true },
     distinct: ["topic"],
   });
-  const dbTopics = dbQuestions.map((q) => q.topic).filter((t): t is string => Boolean(t));
+  const topics = dbQuestions
+    .map((q) => q.topic)
+    .filter((t): t is string => Boolean(t))
+    .sort();
 
-  // 2. Récupération des topics des fichiers JSON en fallback / complément
-  const jsonTopics = getTopicsBySubject(subject);
-
-  // 3. Fusion et déduplication
-  const combinedTopics = Array.from(new Set([...dbTopics, ...jsonTopics])).sort();
-
-  return NextResponse.json({ subject, topics: combinedTopics });
+  return NextResponse.json({ subject, topics });
 }

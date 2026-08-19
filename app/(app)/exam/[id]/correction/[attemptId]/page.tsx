@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
-import { getAllPassages } from "@/lib/questions";
-import { getQuestionsByIdsFromDb } from "@/lib/questions-db";
+import { getQuestionsByIdsFromDb, getPassagesForQuestions } from "@/lib/questions-db";
 import { SUBJECT_LABELS } from "@/lib/types";
 import { CollapsibleSection } from "./collapsible-section";
+import { WaitingRoom } from "./waiting-room";
 
 export default async function CorrectionPage({ params }: { params: Promise<{ id: string, attemptId: string }> }) {
   const { attemptId } = await params;
@@ -22,27 +22,25 @@ export default async function CorrectionPage({ params }: { params: Promise<{ id:
 
   const room = attempt.room;
   
-  const isTraining = room.visibility === "PRIVATE" && room.createdById === attempt.userId;
+  // Entraînement individuel : correction immédiate autorisée
+  const isTraining = room.mode === "TRAINING" || (room.visibility === "PRIVATE" && room.createdById === attempt.userId);
   const isClosed = room.status === "CLOSED";
   const now = new Date();
   const isTimeUp = room.endsAt ? room.endsAt <= now : false;
   
+  // Pour une simulation collective, verrouiller les résultats tant que le temps n'est pas écoulé
   if (!isTraining && !isClosed && !isTimeUp) {
     return (
-      <main className="page" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "60vh", textAlign: "center" }}>
-        <div style={{ background: "var(--bg-muted)", padding: 40, borderRadius: "var(--radius-lg)", maxWidth: 500 }}>
-          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 16 }}>Correction indisponible</h1>
-          <p style={{ color: "var(--text-secondary)", marginBottom: 24 }}>
-            Votre copie a bien été soumise. La correction et votre score seront disponibles dès que l&apos;épreuve sera clôturée pour l&apos;ensemble des candidats ou à la fin du temps réglementaire.
-          </p>
-          <a href="/dashboard" className="btn btn-primary">Retour à l&apos;accueil</a>
-        </div>
-      </main>
+      <WaitingRoom 
+        roomTitle={room.title}
+        endsAt={room.endsAt?.toISOString() ?? null}
+        durationMin={room.durationMin}
+      />
     );
   }
 
   const questions = await getQuestionsByIdsFromDb(room.questionIds as string[]);
-  const passages = getAllPassages();
+  const passages = await getPassagesForQuestions(questions);
   const answersMap = new Map<string, number | null>(
     attempt.answers.map((answer: any) => [answer.questionId, answer.selectedIndex])
   );

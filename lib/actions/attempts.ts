@@ -160,6 +160,18 @@ export async function submitAttemptAction(attemptId: string) {
     },
   });
 
+  // Incrémenter le nombre de fois que chaque question a été répondue
+  const answeredQuestionIds = attempt.answers
+    .filter((ans: any) => ans.selectedIndex !== null && ans.selectedIndex !== undefined)
+    .map((ans: any) => ans.questionId);
+
+  if (answeredQuestionIds.length > 0) {
+    await prisma.question.updateMany({
+      where: { id: { in: answeredQuestionIds } },
+      data: { timesAnswered: { increment: 1 } },
+    });
+  }
+
   revalidatePath(`/exam/${attempt.roomId}/correction`);
   return { ok: true, score, percentage, total };
 }
@@ -206,5 +218,17 @@ export async function autoSubmitExpiredAttempts(roomId: string) {
         timeUsedSec,
       },
     });
+
+    // Incrémenter le nombre de fois que chaque question a été répondue
+    const answeredQuestionIds = attempt.answers
+      .filter((ans: any) => ans.selectedIndex !== null && ans.selectedIndex !== undefined)
+      .map((ans: any) => ans.questionId);
+
+    if (answeredQuestionIds.length > 0) {
+      await prisma.question.updateMany({
+        where: { id: { in: answeredQuestionIds } },
+        data: { timesAnswered: { increment: 1 } },
+      });
+    }
   }
 }

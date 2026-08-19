@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { deleteQuestionAction, deleteManyQuestionsAction } from "@/lib/actions/content";
-import { Trash2, Search, Filter, Eye, Check, X, BookOpen, Layers, Sparkles } from "lucide-react";
+import { Trash2, Search, Check, BookOpen, Target, CheckCircle2, ArrowUpDown } from "lucide-react";
 
 type QuestionItem = {
   id: string;
@@ -18,6 +18,8 @@ type QuestionItem = {
   type: string;
   mode: string | null;
   scope: string | null;
+  timesAppeared?: number;
+  timesAnswered?: number;
   textContent?: { id: string; title: string } | null;
 };
 
@@ -40,7 +42,7 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
   const [selectedSubject, setSelectedSubject] = useState<string>("ALL");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("ALL");
   const [selectedTextOnly, setSelectedTextOnly] = useState<string>("ALL");
-  const [previewQuestion, setPreviewQuestion] = useState<QuestionItem | null>(null);
+  const [sortBy, setSortBy] = useState<"RECENT" | "MOST_APPEARED" | "MOST_ANSWERED" | "LEAST_APPEARED">("RECENT");
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
   // Filtrage local en temps réel
@@ -61,12 +63,25 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
     return true;
   });
 
+  // Tri
+  const sorted = [...filtered].sort((a, b) => {
+    if (sortBy === "MOST_APPEARED") {
+      return (b.timesAppeared ?? 0) - (a.timesAppeared ?? 0);
+    }
+    if (sortBy === "MOST_ANSWERED") {
+      return (b.timesAnswered ?? 0) - (a.timesAnswered ?? 0);
+    }
+    if (sortBy === "LEAST_APPEARED") {
+      return (a.timesAppeared ?? 0) - (b.timesAppeared ?? 0);
+    }
+    return 0; // Par défaut (Plus récentes selon l'ordre de la requête DB)
+  });
+
   function handleDelete(id: string) {
     if (!confirm("Voulez-vous vraiment supprimer cette question ?")) return;
     startTransition(async () => {
       await deleteQuestionAction(id);
       setSelectedIds((prev) => prev.filter((item) => item !== id));
-      if (previewQuestion?.id === id) setPreviewQuestion(null);
     });
   }
 
@@ -76,7 +91,6 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
     startTransition(async () => {
       await deleteManyQuestionsAction(selectedIds);
       setSelectedIds([]);
-      setPreviewQuestion(null);
     });
   }
 
@@ -87,10 +101,10 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
   }
 
   function toggleSelectAll() {
-    if (selectedIds.length === filtered.length) {
+    if (selectedIds.length === sorted.length) {
       setSelectedIds([]);
     } else {
-      setSelectedIds(filtered.map((q) => q.id));
+      setSelectedIds(sorted.map((q) => q.id));
     }
   }
 
@@ -146,6 +160,19 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
             <option value="WITHOUT_TEXT">Questions autonomes</option>
             <option value="WITH_TEXT">Liées à un texte</option>
           </select>
+
+          {/* Tri par usage / apparitions */}
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as any)}
+            className="input"
+            style={{ fontSize: "0.8125rem", padding: "6px 12px", width: "auto", fontWeight: 600, color: "var(--accent)" }}
+          >
+            <option value="RECENT">⏱️ Plus récentes</option>
+            <option value="MOST_APPEARED">🎯 Plus souvent appelées</option>
+            <option value="MOST_ANSWERED">✍️ Plus souvent répondues</option>
+            <option value="LEAST_APPEARED">⏳ Jamais / Moins appelées</option>
+          </select>
         </div>
       </div>
 
@@ -185,12 +212,12 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <input
               type="checkbox"
-              checked={filtered.length > 0 && selectedIds.length === filtered.length}
+              checked={sorted.length > 0 && selectedIds.length === sorted.length}
               onChange={toggleSelectAll}
               style={{ cursor: "pointer" }}
             />
             <span style={{ fontSize: "0.875rem", fontWeight: 600 }}>
-              {filtered.length} question(s) trouvée(s)
+              {sorted.length} question(s) trouvée(s)
             </span>
           </div>
           <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
@@ -198,15 +225,17 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
           </span>
         </div>
 
-        {filtered.length === 0 ? (
+        {sorted.length === 0 ? (
           <div style={{ padding: 40, textAlign: "center", color: "var(--text-muted)" }}>
             Aucune question ne correspond à vos filtres.
           </div>
         ) : (
-          <div style={{ maxHeight: 600, overflowY: "auto" }}>
-            {filtered.map((q) => {
+          <div style={{ maxHeight: 650, overflowY: "auto" }}>
+            {sorted.map((q) => {
               const options = Array.isArray(q.options) ? q.options : [];
               const isSelected = selectedIds.includes(q.id);
+              const appeared = q.timesAppeared ?? 0;
+              const answered = q.timesAnswered ?? 0;
 
               return (
                 <div
@@ -254,6 +283,43 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
                         }}
                       >
                         {DIFFICULTY_LABELS[q.difficulty]?.label || q.difficulty}
+                      </span>
+
+                      {/* STATS BADGES : APPELÉE & RÉPONDUE */}
+                      <span
+                        style={{
+                          fontSize: "0.7rem",
+                          fontWeight: 600,
+                          padding: "2px 8px",
+                          borderRadius: 6,
+                          background: appeared > 0 ? "rgba(99, 102, 241, 0.1)" : "var(--bg-muted)",
+                          border: `1px solid ${appeared > 0 ? "rgba(99, 102, 241, 0.25)" : "var(--border)"}`,
+                          color: appeared > 0 ? "var(--accent, #6366f1)" : "var(--text-muted)",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 4,
+                        }}
+                        title="Nombre de fois que cette question a été tirée dans une salle ou un entraînement"
+                      >
+                        🎯 <strong>{appeared}</strong> {appeared > 1 ? "appels" : "appel"}
+                      </span>
+
+                      <span
+                        style={{
+                          fontSize: "0.7rem",
+                          fontWeight: 600,
+                          padding: "2px 8px",
+                          borderRadius: 6,
+                          background: answered > 0 ? "rgba(16, 185, 129, 0.1)" : "var(--bg-muted)",
+                          border: `1px solid ${answered > 0 ? "rgba(16, 185, 129, 0.25)" : "var(--border)"}`,
+                          color: answered > 0 ? "var(--success, #10b981)" : "var(--text-muted)",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 4,
+                        }}
+                        title="Nombre de fois où un candidat a soumis une réponse à cette question"
+                      >
+                        ✍️ <strong>{answered}</strong> {answered > 1 ? "réponses" : "réponse"}
                       </span>
 
                       {q.topic && (
