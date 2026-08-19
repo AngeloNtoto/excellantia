@@ -354,6 +354,23 @@ export async function clearAllQuestionsAction() {
 }
 
 /**
+ * Supprimer toutes les questions d'une matière / domaine spécifique.
+ */
+export async function deleteQuestionsBySubjectAction(subject: "MATH" | "FRENCH" | "ENGLISH" | "GENERAL_CULTURE") {
+  await requireAdmin();
+
+  try {
+    const res = await prisma.question.deleteMany({
+      where: { subject },
+    });
+    revalidatePath("/admin/contenus");
+    return { ok: true, deleted: res.count };
+  } catch (error: any) {
+    return { error: error?.message || `Erreur lors de la suppression des questions de ${subject}.` };
+  }
+}
+
+/**
  * Vider tout le contenu pédagogique (Questions et Textes).
  */
 export async function clearAllContentAction() {

@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, useTransition, useMemo } from "react";
-import { deleteQuestionAction, deleteManyQuestionsAction, clearAllQuestionsAction } from "@/lib/actions/content";
+import {
+  deleteQuestionAction,
+  deleteManyQuestionsAction,
+  clearAllQuestionsAction,
+  deleteQuestionsBySubjectAction,
+} from "@/lib/actions/content";
 import {
   Trash2,
   Search,
@@ -181,6 +186,23 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
 
     startTransition(async () => {
       await clearAllQuestionsAction();
+      setSelectedIds([]);
+    });
+  }
+
+  function handleClearSubject() {
+    if (selectedSubject === "ALL") return;
+    const subjectLabel = SUBJECT_CONFIG[selectedSubject]?.label || selectedSubject;
+    const countInSubject = questions.filter((q) => q.subject === selectedSubject).length;
+    if (countInSubject === 0) return;
+
+    const code = prompt(
+      `ATTENTION : Vous êtes sur le point de supprimer TOUTES les ${countInSubject} questions du domaine "${subjectLabel}".\n\nTapez "SUPPRIMER" pour confirmer :`
+    );
+    if (code !== "SUPPRIMER") return;
+
+    startTransition(async () => {
+      await deleteQuestionsBySubjectAction(selectedSubject as any);
       setSelectedIds([]);
     });
   }
@@ -380,11 +402,27 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Total base : {questions.length}
             </span>
-            {questions.length > 0 && (
+
+            {/* Bouton pour vider spécifiquement la matière sélectionnée */}
+            {selectedSubject !== "ALL" && (
+              <button
+                type="button"
+                onClick={handleClearSubject}
+                disabled={isPending}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/10 hover:bg-amber-100 dark:hover:bg-amber-500/20 border border-amber-200 dark:border-amber-500/20 transition-all active:scale-95 disabled:opacity-50"
+                title={`Vider uniquement les questions de ${SUBJECT_CONFIG[selectedSubject]?.label || selectedSubject}`}
+              >
+                <Trash2 className="w-3 h-3" />
+                <span>Vider {SUBJECT_CONFIG[selectedSubject]?.label || selectedSubject}</span>
+              </button>
+            )}
+
+            {/* Bouton pour vider toute la banque */}
+            {questions.length > 0 && selectedSubject === "ALL" && (
               <button
                 type="button"
                 onClick={handleClearAll}
@@ -393,7 +431,7 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
                 title="Vider entièrement la table des questions"
               >
                 <Trash2 className="w-3 h-3" />
-                <span>Vider la banque</span>
+                <span>Vider toute la banque</span>
               </button>
             )}
           </div>
