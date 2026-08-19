@@ -113,9 +113,10 @@ export async function generateRoomQuestionsFromDb(
         subject,
         OR: [
           { mode },
-          ...(mode === "SIMULATION" ? [{ source: "USER_CREATED" as const }] : []),
+          { source: "USER_CREATED" as const },
+          { source: "TRAINING_POOL" as const },
           ...(mode === "SIMULATION" && includeTrainingQuestions ? [{ mode: "TRAINING" as const }] : []),
-          ...(mode === "TRAINING" ? [{ source: "TRAINING_POOL" as const }] : []),
+          ...(mode === "TRAINING" ? [{ mode: "TRAINING" as const }, { mode: null }] : []),
         ],
       },
     });

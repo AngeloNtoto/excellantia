@@ -1,10 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Clock, Lock, Unlock, PlayCircle, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+import {
+  Building2, Clock, Lock, Unlock, PlayCircle, ArrowRight,
+  CheckCircle2, AlertCircle, ChevronRight, CalendarDays,
+  Zap, Cog, Infinity as InfinityIcon, Eye, EyeOff, Box, Telescope,
+  DoorOpen
+} from "lucide-react";
 import Link from "next/link";
 import { ROOM_STATUS_LABELS } from "@/lib/types";
 
+/* ── Types ────────────────────────────────────────────────────────────────── */
 interface RoomData {
   id: string;
   title: string;
@@ -23,217 +29,248 @@ interface RoomsClientProps {
   pastRooms: RoomData[];
 }
 
-const containerVariants: any = {
+/* ── Animation variants ───────────────────────────────────────────────────── */
+const container: any = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
+  show: { opacity: 1, transition: { staggerChildren: 0.05 } },
+};
+const itemV: any = {
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 25 } },
 };
 
-const itemVariants: any = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
-};
+/* ── Badge Régime (Icônes Lucide pures, sans emoji ni dégradé) ───────────── */
+function RegimeBadge({ regime }: { regime?: string }) {
+  if (regime === "TESLA") {
+    return (
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-50 text-cyan-700 dark:bg-cyan-950/40 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800">
+        <Zap className="w-3 h-3" /> Tesla
+      </span>
+    );
+  }
+  if (regime === "NEWTON") {
+    return (
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
+        <Cog className="w-3 h-3" /> Newton
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 dark:bg-indigo-950/40 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+      <InfinityIcon className="w-3 h-3" /> Einstein
+    </span>
+  );
+}
+
+/* ── Badge Chrono (Icônes Lucide pures, sans emoji ni dégradé) ───────────── */
+function ChronoBadge({ chrono }: { chrono?: string }) {
+  if (chrono === "SCHRODINGER") {
+    return (
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-700 dark:bg-purple-950/40 dark:text-purple-400 border border-purple-200 dark:border-purple-800">
+        <Box className="w-3 h-3" /> Schrödinger
+      </span>
+    );
+  }
+  if (chrono === "HEISENBERG") {
+    return (
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-400 border border-amber-200 dark:border-amber-800">
+        <EyeOff className="w-3 h-3" /> Heisenberg
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+      <Telescope className="w-3 h-3" /> Galilée
+    </span>
+  );
+}
 
 export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
   const now = new Date();
 
   return (
-    <motion.main 
-      variants={containerVariants}
+    <motion.main
+      variants={container}
       initial="hidden"
       animate="show"
-      className="max-w-5xl mx-auto px-4 sm:px-6 py-8"
+      className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8"
     >
-      <motion.div variants={itemVariants} className="mb-10 flex items-center gap-4">
-        <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-          <Building2 className="w-7 h-7" />
+      {/* ── EN-TÊTE PRO SANS DÉGRADÉ ────────────────────────────────────────── */}
+      <motion.div variants={itemV} className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shrink-0">
+          <Building2 className="w-5 h-5" />
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-1">
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
             Salles d'examen
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 font-medium">
-            Rejoignez une session en cours ou consultez l'historique.
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            Participez aux épreuves officielles programmées ou consultez vos archives.
           </p>
         </div>
       </motion.div>
 
-      <motion.h2 variants={itemVariants} className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-        <ActivityIcon className="w-5 h-5 text-blue-500" />
-        Salles disponibles
-      </motion.h2>
-
-      {availableRooms.length === 0 ? (
-        <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl p-10 text-center shadow-sm dark:shadow-none mb-12">
-          <div className="w-16 h-16 bg-blue-50 dark:bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Clock className="w-8 h-8 text-blue-300 dark:text-blue-500/50" />
+      {/* ── SALLES DISPONIBLES ──────────────────────────────────────────────── */}
+      <motion.section variants={itemV} className="space-y-3">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+              Salles ouvertes
+            </h2>
           </div>
-          <p className="text-gray-500 dark:text-gray-400 font-medium">Aucune salle n'est ouverte pour le moment.</p>
-        </motion.div>
-      ) : (
-        <motion.div variants={containerVariants} className="grid gap-4 mb-12">
-          {availableRooms.map((room) => {
-            const isPrivate = room.visibility === "PRIVATE";
-            const calculatedEndAt = room.endsAt
-              ? new Date(room.endsAt)
-              : room.clockMode === "ABSOLUTE" && room.startsAt
-                ? new Date(new Date(room.startsAt).getTime() + room.durationMin * 60_000)
-                : null;
-            const isExpired = !!calculatedEndAt && calculatedEndAt <= now;
-            const isRunning = room.status === "RUNNING" && !isExpired;
-            const isScheduled = room.status === "SCHEDULED" && !isExpired;
-            
-            let timeInfo = "";
-            if (isRunning && calculatedEndAt) {
-              const remaining = Math.max(0, Math.floor((calculatedEndAt.getTime() - now.getTime()) / 60000));
-              timeInfo = `Reste : ${remaining} min`;
-            } else if (isScheduled && room.startsAt) {
-              timeInfo = `Débute le ${new Date(room.startsAt).toLocaleDateString()} à ${new Date(room.startsAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
-            }
+          <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">
+            {availableRooms.length} disponible(s)
+          </span>
+        </div>
 
-            return (
-              <motion.div 
-                variants={itemVariants}
-                key={room.id} 
-                className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-2xl p-5 sm:p-6 shadow-sm dark:shadow-none hover:shadow-md hover:border-blue-200 dark:hover:border-blue-500/30 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
-              >
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{room.title}</h3>
-                    {isPrivate ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-gray-100 text-gray-600 dark:bg-white/10 dark:text-gray-400">
-                        <Lock className="w-3 h-3" /> Privée
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400">
-                        <Unlock className="w-3 h-3" /> Publique
-                      </span>
-                    )}
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${
-                      isRunning ? "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400" : 
-                      isScheduled ? "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400" : "bg-gray-100 text-gray-600 dark:bg-white/10 dark:text-gray-400"
-                    }`}>
-                      {isExpired ? "Terminé" : ROOM_STATUS_LABELS[room.status as keyof typeof ROOM_STATUS_LABELS]}
-                    </span>
+        {availableRooms.length === 0 ? (
+          <div className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center space-y-2 shadow-sm">
+            <Clock className="w-8 h-8 text-slate-400 mx-auto" />
+            <p className="font-bold text-sm text-slate-700 dark:text-slate-300">Aucune salle ouverte actuellement</p>
+            <p className="text-xs text-slate-400">Les épreuves apparaissent dès que l'administrateur lance la session.</p>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {availableRooms.map((room) => {
+              const isPrivate = room.visibility === "PRIVATE";
+              const calculatedEndAt = room.endsAt
+                ? new Date(room.endsAt)
+                : room.clockMode === "ABSOLUTE" && room.startsAt
+                  ? new Date(new Date(room.startsAt).getTime() + room.durationMin * 60_000)
+                  : null;
+              const isExpired = !!calculatedEndAt && calculatedEndAt <= now;
+              const isRunning = room.status === "RUNNING" && !isExpired;
+              const isScheduled = room.status === "SCHEDULED" && !isExpired;
 
-                    {/* Badge Régime Temporel */}
-                    {room.timingRegime === "TESLA" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400">
-                        ⚡ Tesla
-                      </span>
-                    ) : room.timingRegime === "NEWTON" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400">
-                        ⚙️ Newton
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
-                        🌌 Einstein
-                      </span>
-                    )}
+              let timeInfo = "";
+              if (isRunning && calculatedEndAt) {
+                const remaining = Math.max(0, Math.floor((calculatedEndAt.getTime() - now.getTime()) / 60000));
+                timeInfo = `${remaining} min restantes`;
+              } else if (isScheduled && room.startsAt) {
+                timeInfo = `Débute le ${new Date(room.startsAt).toLocaleDateString("fr-FR")} à ${new Date(room.startsAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}`;
+              }
 
-                    {/* Badge Mode Chronomètre */}
-                    {room.chronoMode === "SCHRODINGER" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400 border border-purple-200 dark:border-purple-500/20">
-                        📦 Schrödinger
-                      </span>
-                    ) : room.chronoMode === "HEISENBERG" ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20">
-                        🌫️ Heisenberg
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                        🔭 Galilée
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-4 h-4" /> {room.durationMin} min
-                    </span>
-                    {timeInfo && (
-                      <>
-                        <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600" />
-                        <span className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
-                          {isRunning ? <PlayCircle className="w-4 h-4 animate-pulse" /> : <Clock className="w-4 h-4" />} 
-                          {timeInfo}
-                        </span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                
-                <Link 
-                  href={`/rooms/${room.id}`} 
-                  className={`shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-                    isRunning 
-                      ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20"
-                      : "bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-900 dark:text-white"
+              return (
+                <motion.div
+                  variants={itemV}
+                  key={room.id}
+                  className={`bg-white dark:bg-slate-900 border rounded-2xl p-4 sm:p-5 shadow-sm transition-all ${
+                    isRunning
+                      ? "border-emerald-500/60 dark:border-emerald-500/40"
+                      : "border-slate-200 dark:border-slate-800 hover:border-slate-300"
                   }`}
                 >
-                  {isRunning ? "Entrer" : isExpired ? "Voir" : "Détails"}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      )}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="space-y-2 flex-1 min-w-0">
+                      {/* Badges */}
+                      <div className="flex flex-wrap items-center gap-2">
+                        {/* Statut */}
+                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider ${
+                          isRunning
+                            ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800"
+                            : isScheduled
+                              ? "bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400 border border-blue-200 dark:border-blue-800"
+                              : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400"
+                        }`}>
+                          {isRunning && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />}
+                          {isExpired ? "Terminée" : ROOM_STATUS_LABELS[room.status as keyof typeof ROOM_STATUS_LABELS] ?? room.status}
+                        </span>
 
-      <motion.h2 variants={itemVariants} className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-        <CheckCircle2 className="w-5 h-5 text-gray-400" />
-        Anciennes salles
-      </motion.h2>
-      
-      {pastRooms.length === 0 ? (
-        <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl p-10 text-center shadow-sm dark:shadow-none">
-          <p className="text-gray-500 dark:text-gray-400 font-medium">Aucun historique de salle.</p>
-        </motion.div>
-      ) : (
-        <motion.div variants={containerVariants} className="grid gap-3">
-          {pastRooms.map((room) => (
-            <motion.div 
-              variants={itemVariants}
-              key={room.id} 
-              className="group bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-2xl p-4 sm:p-5 shadow-sm dark:shadow-none hover:shadow-md flex items-center justify-between transition-all"
-            >
-              <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{room.title}</h3>
-                <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-gray-100 text-gray-500 dark:bg-white/5 dark:text-gray-400">
-                  Terminée
-                </span>
-              </div>
-              <Link 
-                href={`/rooms/${room.id}`} 
-                className="inline-flex items-center justify-center p-2 rounded-xl text-gray-400 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-500/10 dark:hover:text-blue-400 transition-all"
-                title="Consulter"
+                        {/* Visibilité */}
+                        {isPrivate ? (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                            <Lock className="w-3 h-3" /> Privée
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+                            <Unlock className="w-3 h-3" /> Publique
+                          </span>
+                        )}
+
+                        {/* Régime & Chrono */}
+                        <RegimeBadge regime={room.timingRegime} />
+                        <ChronoBadge chrono={room.chronoMode} />
+                      </div>
+
+                      {/* Titre */}
+                      <h3 className="text-base font-bold text-slate-900 dark:text-white truncate">
+                        {room.title}
+                      </h3>
+
+                      {/* Infos */}
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 font-medium">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {room.durationMin} min
+                        </span>
+                        {timeInfo && (
+                          <>
+                            <span>•</span>
+                            <span className={`font-semibold ${isRunning ? "text-emerald-600 dark:text-emerald-400" : "text-blue-600 dark:text-blue-400"}`}>
+                              {timeInfo}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Action */}
+                    <Link
+                      href={`/rooms/${room.id}`}
+                      className={`inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all active:scale-95 shrink-0 ${
+                        isRunning
+                          ? "bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm"
+                          : isExpired
+                            ? "bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300"
+                            : "bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm"
+                      }`}
+                    >
+                      {isRunning ? "Entrer dans la salle" : isExpired ? "Consulter" : "Détails"}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        )}
+      </motion.section>
+
+      {/* ── HISTORIQUE ──────────────────────────────────────────────────────── */}
+      {pastRooms.length > 0 && (
+        <motion.section variants={itemV} className="space-y-3">
+          <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+              Anciennes salles
+            </h2>
+            <span className="text-xs text-slate-400 font-semibold">{pastRooms.length} salle(s)</span>
+          </div>
+
+          <div className="space-y-2">
+            {pastRooms.map((room) => (
+              <div
+                key={room.id}
+                className="flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm"
               >
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                <div className="min-w-0">
+                  <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white truncate">
+                    {room.title}
+                  </p>
+                  <span className="text-[10px] font-semibold text-slate-400 uppercase">Session terminée</span>
+                </div>
+                <Link
+                  href={`/rooms/${room.id}`}
+                  className="p-2 rounded-lg text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shrink-0"
+                  title="Voir les détails"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </motion.section>
       )}
     </motion.main>
   );
-}
-
-function ActivityIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-    </svg>
-  )
 }

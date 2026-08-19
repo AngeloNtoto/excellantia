@@ -4,208 +4,128 @@ import { useState, useTransition, useEffect, useCallback } from "react";
 import { startTrainingAction } from "@/lib/actions/training";
 import {
   Calculator, BookA, Globe, BookOpen,
-  Target, Rocket, Clock, PlayCircle, Loader2,
-  TrendingUp, TrendingDown, Gauge, AlertCircle, Plus, Minus, ChevronDown, ChevronUp
+  Target, PlayCircle, Loader2,
+  TrendingUp, TrendingDown, Gauge, AlertCircle,
+  Plus, Minus, ChevronDown, ChevronUp,
+  Clock, CheckCircle2, BookMarked, Timer, PauseCircle
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// ─── Types ─────────────────────────────────────────────────────────────────────
+/* ── Types ────────────────────────────────────────────────────────────────── */
 type SubjectKey = "MATH" | "FRENCH" | "ENGLISH" | "GENERAL_CULTURE";
 
-// ─── Static config ─────────────────────────────────────────────────────────────
+/* ── Config matières ──────────────────────────────────────────────────────── */
 const SUBJECTS = [
   {
-    id: "subject_0",
-    key: "MATH" as SubjectKey,
-    name: "Mathématiques",
-    icon: Calculator,
-    color: "text-indigo-500",
+    id: "subject_0", key: "MATH" as SubjectKey, name: "Mathématiques", icon: Calculator,
+    color: "text-indigo-600 dark:text-indigo-400",
     bg: "bg-indigo-50 dark:bg-indigo-500/10",
-    border: "border-indigo-200 dark:border-indigo-500/30",
-    activeBg: "bg-indigo-500",
-    activeBorder: "border-indigo-600 dark:border-indigo-500",
-    chipColor: "#6366f1",
+    activeBg: "bg-indigo-600", activeBorder: "border-indigo-600 dark:border-indigo-500",
+    chipColor: "#4f46e5",
   },
   {
-    id: "subject_1",
-    key: "FRENCH" as SubjectKey,
-    name: "Français",
-    icon: BookA,
-    color: "text-pink-500",
-    bg: "bg-pink-50 dark:bg-pink-500/10",
-    border: "border-pink-200 dark:border-pink-500/30",
-    activeBg: "bg-pink-500",
-    activeBorder: "border-pink-600 dark:border-pink-500",
-    chipColor: "#ec4899",
+    id: "subject_1", key: "FRENCH" as SubjectKey, name: "Français", icon: BookA,
+    color: "text-blue-600 dark:text-blue-400",
+    bg: "bg-blue-50 dark:bg-blue-500/10",
+    activeBg: "bg-blue-600", activeBorder: "border-blue-600 dark:border-blue-500",
+    chipColor: "#2563eb",
   },
   {
-    id: "subject_2",
-    key: "ENGLISH" as SubjectKey,
-    name: "Anglais",
-    icon: Globe,
-    color: "text-amber-500",
+    id: "subject_2", key: "ENGLISH" as SubjectKey, name: "Anglais", icon: Globe,
+    color: "text-amber-600 dark:text-amber-400",
     bg: "bg-amber-50 dark:bg-amber-500/10",
-    border: "border-amber-200 dark:border-amber-500/30",
-    activeBg: "bg-amber-500",
-    activeBorder: "border-amber-600 dark:border-amber-500",
-    chipColor: "#f59e0b",
+    activeBg: "bg-amber-600", activeBorder: "border-amber-600 dark:border-amber-500",
+    chipColor: "#d97706",
   },
   {
-    id: "subject_3",
-    key: "GENERAL_CULTURE" as SubjectKey,
-    name: "Culture Générale",
-    icon: BookOpen,
-    color: "text-emerald-500",
+    id: "subject_3", key: "GENERAL_CULTURE" as SubjectKey, name: "Culture Générale", icon: BookOpen,
+    color: "text-emerald-600 dark:text-emerald-400",
     bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    border: "border-emerald-200 dark:border-emerald-500/30",
-    activeBg: "bg-emerald-500",
-    activeBorder: "border-emerald-600 dark:border-emerald-500",
-    chipColor: "#10b981",
+    activeBg: "bg-emerald-600", activeBorder: "border-emerald-600 dark:border-emerald-500",
+    chipColor: "#059669",
   },
 ];
 
 const DIFFICULTIES = [
-  {
-    value: "EASY",
-    label: "Facile",
-    desc: "70% faciles, 30% moyennes",
-    icon: TrendingDown,
-    color: "text-emerald-500",
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    border: "border-emerald-200 dark:border-emerald-500/30",
-  },
-  {
-    value: "MIXED",
-    label: "Mixte",
-    desc: "Équilibré (Standard)",
-    icon: Gauge,
-    color: "text-indigo-500",
-    bg: "bg-indigo-50 dark:bg-indigo-500/10",
-    border: "border-indigo-200 dark:border-indigo-500/30",
-  },
-  {
-    value: "HARD",
-    label: "Difficile",
-    desc: "50% moyennes, 50% difficiles",
-    icon: TrendingUp,
-    color: "text-red-500",
-    bg: "bg-red-50 dark:bg-red-500/10",
-    border: "border-red-200 dark:border-red-500/30",
-  },
+  { value: "EASY",  label: "Facile",    desc: "Majorité de questions fondamentales", icon: TrendingDown, color: "text-emerald-600 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-500/10", border: "border-emerald-600" },
+  { value: "MIXED", label: "Mixte",     desc: "Mélange équilibré (standard)",       icon: Gauge,        color: "text-indigo-600 dark:text-indigo-400",   bg: "bg-indigo-50 dark:bg-indigo-500/10",   border: "border-indigo-600" },
+  { value: "HARD",  label: "Difficile", desc: "Questions complexes et avancées",    icon: TrendingUp,   color: "text-rose-600 dark:text-rose-400",       bg: "bg-rose-50 dark:bg-rose-500/10",       border: "border-rose-600" },
 ];
 
-const containerVariants: any = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.1 } },
-};
-const itemVariants: any = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
-};
+const DURATIONS = [30, 45, 60, 90, 120];
 
-// ─── TopicPicker ────────────────────────────────────────────────────────────────
-function TopicPicker({
-  subjectKey,
-  chipColor,
-  selectedTopics,
-  onChange,
-}: {
-  subjectKey: SubjectKey;
-  chipColor: string;
-  selectedTopics: string[];
-  onChange: (topics: string[]) => void;
+/* ── TopicPicker ──────────────────────────────────────────────────────────── */
+function TopicPicker({ subjectKey, chipColor, selectedTopics, onChange }: {
+  subjectKey: SubjectKey; chipColor: string; selectedTopics: string[]; onChange: (t: string[]) => void;
 }) {
   const [topics, setTopics] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Load available topics from the API
     fetch(`/api/topics?subject=${subjectKey}`)
       .then((r) => r.json())
-      .then((data) => { setTopics(data.topics ?? []); setLoading(false); })
+      .then((d) => { setTopics(d.topics ?? []); setLoading(false); })
       .catch(() => setLoading(false));
   }, [subjectKey]);
 
-  const toggle = (topic: string) => {
-    onChange(
-      selectedTopics.includes(topic)
-        ? selectedTopics.filter((t) => t !== topic)
-        : [...selectedTopics, topic]
-    );
-  };
+  const hint = selectedTopics.length === 0
+    ? "Tous les chapitres"
+    : `${selectedTopics.length} chapitre(s)`;
 
-  const hint =
-    selectedTopics.length === 0
-      ? "Tous les chapitres"
-      : `${selectedTopics.length} chapitre(s) sélectionné(s)`;
+  if (topics.length === 0 && !loading) return null;
 
   return (
-    <div className="pt-2 border-t border-gray-100 dark:border-white/5">
-      {/* Toggle row */}
+    <div className="mt-2 pt-2 border-t border-slate-200 dark:border-slate-800">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-2 w-full text-left py-1"
-        style={{ background: "none", border: "none", cursor: "pointer" }}
+        className="flex items-center gap-2 w-full text-left"
       >
-        <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Chapitres :</span>
+        <BookMarked className="w-3 h-3 text-slate-400" />
+        <span className="text-xs text-slate-500 font-medium">Chapitres :</span>
         <span className="text-xs font-bold" style={{ color: chipColor }}>{hint}</span>
-        <span className="ml-auto text-gray-400">
-          {open ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        <span className="ml-auto text-slate-400">
+          {open ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
         </span>
       </button>
 
-      {/* Expandable chip grid */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
+            initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }} className="overflow-hidden"
           >
-            <div className="pt-3 pb-1">
-              {/* Quick actions */}
-              <div className="flex gap-2 mb-3">
-                <button
-                  type="button"
-                  onClick={() => onChange([...topics])}
-                  className="text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors font-semibold"
-                >
+            <div className="pt-2.5 pb-1">
+              <div className="flex gap-2 mb-2.5">
+                <button type="button" onClick={() => onChange([...topics])}
+                  className="text-[11px] px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
                   Tout sélectionner
                 </button>
-                <button
-                  type="button"
-                  onClick={() => onChange([])}
-                  className="text-xs px-3 py-1 rounded-lg bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
-                >
-                  Effacer
+                <button type="button" onClick={() => onChange([])}
+                  className="text-[11px] px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                  Réinitialiser
                 </button>
               </div>
-
               {loading ? (
-                <p className="text-xs text-gray-400">Chargement…</p>
+                <p className="text-xs text-slate-400">Chargement des chapitres…</p>
               ) : (
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {topics.map((topic) => {
                     const active = selectedTopics.includes(topic);
                     return (
-                      <motion.button
-                        key={topic}
-                        type="button"
-                        whileHover={{ scale: 1.04 }}
-                        whileTap={{ scale: 0.96 }}
-                        onClick={() => toggle(topic)}
-                        className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
+                      <button
+                        key={topic} type="button"
+                        onClick={() => onChange(active ? selectedTopics.filter((t) => t !== topic) : [...selectedTopics, topic])}
+                        className="text-[11px] font-semibold px-2.5 py-1 rounded-full transition-all"
                         style={{
                           border: `1.5px solid ${active ? chipColor : "transparent"}`,
-                          background: active ? chipColor : "rgba(0,0,0,0.06)",
+                          background: active ? chipColor : "rgba(0,0,0,0.05)",
                           color: active ? "#fff" : undefined,
                         }}
                       >
                         {topic}
-                      </motion.button>
+                      </button>
                     );
                   })}
                 </div>
@@ -218,27 +138,18 @@ function TopicPicker({
   );
 }
 
-// ─── Main page ──────────────────────────────────────────────────────────────────
 export default function TrainingPage() {
   const [isPending, startTransition] = useTransition();
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(SUBJECTS.map((s) => s.id));
   const [subjectCounts, setSubjectCounts] = useState<Record<string, number>>({
-    subject_0: 10,
-    subject_1: 10,
-    subject_2: 10,
-    subject_3: 10,
+    subject_0: 10, subject_1: 10, subject_2: 10, subject_3: 10,
   });
   const [difficulty, setDifficulty] = useState("MIXED");
   const [duration, setDuration] = useState(60);
   const [pausableTimer, setPausableTimer] = useState(false);
   const [error, setError] = useState("");
-
-  // Topic selections per subject (empty = all)
   const [selectedTopics, setSelectedTopics] = useState<Record<SubjectKey, string[]>>({
-    MATH: [],
-    FRENCH: [],
-    ENGLISH: [],
-    GENERAL_CULTURE: [],
+    MATH: [], FRENCH: [], ENGLISH: [], GENERAL_CULTURE: [],
   });
 
   const updateTopics = useCallback((key: SubjectKey, topics: string[]) => {
@@ -257,11 +168,10 @@ export default function TrainingPage() {
   }
 
   function updateCount(id: string, delta: number) {
-    setSubjectCounts((prev) => {
-      const current = prev[id] || 0;
-      const newCount = Math.max(1, Math.min(50, current + delta));
-      return { ...prev, [id]: newCount };
-    });
+    setSubjectCounts((prev) => ({
+      ...prev,
+      [id]: Math.max(1, Math.min(50, (prev[id] || 0) + delta)),
+    }));
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -270,19 +180,15 @@ export default function TrainingPage() {
       setError("Veuillez sélectionner au moins une matière avec des questions.");
       return;
     }
-
     const fd = new FormData();
-    // Subject question counts (unselected subjects send 0)
     SUBJECTS.forEach((subj) => {
-      const countKey = subj.id.replace("subject_", "subject_count_");
-      fd.append(countKey, selectedSubjects.includes(subj.id) ? String(subjectCounts[subj.id] || 0) : "0");
+      const key = subj.id.replace("subject_", "subject_count_");
+      fd.append(key, selectedSubjects.includes(subj.id) ? String(subjectCounts[subj.id] || 0) : "0");
     });
     fd.append("difficulty", difficulty);
     fd.append("duration", duration.toString());
     fd.append("pausableTimer", pausableTimer.toString());
-    // Serialize topic selections as JSON
     fd.append("selectedTopics", JSON.stringify(selectedTopics));
-
     startTransition(async () => {
       const res = await startTrainingAction(fd);
       if (res?.error) setError(res.error);
@@ -290,268 +196,259 @@ export default function TrainingPage() {
   }
 
   return (
-    <motion.main
-      variants={containerVariants}
-      initial="hidden"
-      animate="show"
-      className="max-w-4xl mx-auto px-4 sm:px-6 py-8"
-    >
-      {/* Header */}
-      <motion.div variants={itemVariants} className="mb-10 flex items-center gap-4">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
-          <Target className="w-7 h-7" />
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+      {/* En-tête sobre */}
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl bg-indigo-600 flex items-center justify-center text-white shrink-0">
+          <Target className="w-5 h-5" />
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-1">
-            Entraînement personnel
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+            Entraînement personnalisé
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 font-medium">
-            Configurez une session sur mesure pour tester vos connaissances.
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            Configurez les paramètres de votre épreuve d'entraînement.
           </p>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={itemVariants}
-        className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-3xl p-6 sm:p-10 shadow-[0_4px_20px_rgba(0,0,0,0.03)] dark:shadow-none"
-      >
-        <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+      <form onSubmit={handleSubmit} className="space-y-5">
 
-          {/* ── ÉTAPE 1 : Matières & chapitres ── */}
-          <motion.section variants={itemVariants}>
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-3">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">1</span>
-                <div>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Matières et chapitres</h3>
-                  <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Sélectionnez les matières et affinez les chapitres</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="px-3 py-1 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 rounded-lg text-sm font-bold">
-                  {totalQuestions} questions au total
-                </span>
-              </div>
+        {/* ── ÉTAPE 1 : Matières ─────────────────────────────────────────────── */}
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+            <div className="flex items-center gap-2.5">
+              <span className="w-6 h-6 rounded-md bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">1</span>
+              <h2 className="text-sm font-bold text-slate-900 dark:text-white">Matières et chapitres</h2>
             </div>
+            <span className="px-2.5 py-1 rounded-md bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 text-xs font-bold">
+              {totalQuestions} question(s) au total
+            </span>
+          </div>
 
-            <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {SUBJECTS.map((subj) => {
-                const isSelected = selectedSubjects.includes(subj.id);
-                const count = subjectCounts[subj.id] || 0;
-                const Icon = subj.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {SUBJECTS.map((subj) => {
+              const isSelected = selectedSubjects.includes(subj.id);
+              const count = subjectCounts[subj.id] || 0;
+              const Icon = subj.icon;
 
-                return (
-                  <motion.div
-                    variants={itemVariants}
-                    key={subj.id}
-                    className={`relative flex flex-col gap-4 p-4 rounded-2xl border-2 transition-all duration-300 text-left overflow-hidden group ${
-                      isSelected
-                        ? `${subj.activeBorder} bg-white dark:bg-white/5 shadow-md`
-                        : `border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10`
-                    }`}
+              return (
+                <div
+                  key={subj.id}
+                  className={`rounded-xl border-2 transition-all overflow-hidden ${
+                    isSelected
+                      ? `${subj.activeBorder} bg-white dark:bg-slate-900`
+                      : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 hover:bg-slate-100 dark:hover:bg-slate-800"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleSubject(subj.id)}
+                    className="w-full flex items-center gap-3 p-3.5 text-left"
                   >
-                    {/* Subject header row */}
-                    <div className="flex items-center gap-4 cursor-pointer" onClick={() => toggleSubject(subj.id)}>
-                      <div
-                        className={`flex items-center justify-center w-12 h-12 rounded-xl transition-colors duration-300 ${
-                          isSelected ? subj.activeBg : subj.bg
-                        } ${isSelected ? "text-white shadow-inner" : subj.color}`}
-                      >
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      <div className="flex-1">
-                        <p className={`font-semibold text-base transition-colors ${isSelected ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300"}`}>
-                          {subj.name}
-                        </p>
-                      </div>
-                      <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${isSelected ? "border-indigo-500 bg-indigo-500" : "border-gray-300 dark:border-gray-600"}`}>
-                        {isSelected && <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-2 h-2 bg-white rounded-full" />}
-                      </div>
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${isSelected ? subj.activeBg : subj.bg} ${isSelected ? "text-white" : subj.color}`}>
+                      <Icon className="w-4 h-4" />
                     </div>
+                    <span className="flex-1 font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                      {subj.name}
+                    </span>
+                    <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${isSelected ? "border-indigo-600 bg-indigo-600" : "border-slate-300 dark:border-slate-600"}`}>
+                      {isSelected && <div className="w-1.5 h-1.5 bg-white rounded-full" />}
+                    </div>
+                  </button>
 
-                    {/* Expanded panel when selected */}
-                    <AnimatePresence>
-                      {isSelected && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
-                        >
-                          {/* Question count stepper */}
-                          <div className="pt-2 flex items-center justify-between">
-                            <span className="text-sm font-medium text-gray-500 dark:text-gray-400">Questions</span>
-                            <div className="flex items-center gap-3">
+                  <AnimatePresence>
+                    {isSelected && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-3.5 pb-3.5 space-y-2 border-t border-slate-100 dark:border-slate-800/80 pt-2.5">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs text-slate-500 font-medium">Nombre de questions</span>
+                            <div className="flex items-center gap-2">
                               <button
                                 type="button"
                                 onClick={(e) => { e.stopPropagation(); updateCount(subj.id, -1); }}
-                                className="w-7 h-7 rounded-lg bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+                                className="w-6 h-6 rounded-md bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200"
                               >
-                                <Minus className="w-4 h-4" />
+                                <Minus className="w-3 h-3" />
                               </button>
-                              <span className="w-6 text-center font-bold text-gray-900 dark:text-white">{count}</span>
+                              <span className="w-6 text-center font-bold text-xs text-slate-900 dark:text-white">{count}</span>
                               <button
                                 type="button"
                                 onClick={(e) => { e.stopPropagation(); updateCount(subj.id, 1); }}
-                                className="w-7 h-7 rounded-lg bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
+                                className="w-6 h-6 rounded-md bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200"
                               >
-                                <Plus className="w-4 h-4" />
+                                <Plus className="w-3 h-3" />
                               </button>
                             </div>
                           </div>
 
-                          {/* Topic picker for this subject */}
                           <TopicPicker
                             subjectKey={subj.key}
                             chipColor={subj.chipColor}
                             selectedTopics={selectedTopics[subj.key]}
                             onChange={(topics) => updateTopics(subj.key, topics)}
                           />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </motion.section>
-
-          {/* ── ÉTAPE 2 : Difficulté ── */}
-          <motion.section variants={itemVariants}>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">2</span>
-              <div>
-                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Niveau de difficulté</h3>
-                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Choisissez le niveau des questions générées</p>
-              </div>
-            </div>
-
-            <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {DIFFICULTIES.map((diff) => {
-                const isSelected = difficulty === diff.value;
-                const Icon = diff.icon;
-                return (
-                  <motion.button
-                    variants={itemVariants}
-                    key={diff.value}
-                    type="button"
-                    onClick={() => setDifficulty(diff.value)}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`relative flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-300 ${
-                      isSelected
-                        ? `border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md`
-                        : `border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10`
-                    }`}
-                  >
-                    <div className={`p-3 rounded-full mb-3 ${isSelected ? diff.color : "text-gray-400 dark:text-gray-500"} ${diff.bg} ${isSelected ? "shadow-sm" : ""}`}>
-                      <Icon className="w-6 h-6" />
-                    </div>
-                    <p className={`font-bold mb-1 ${isSelected ? "text-indigo-900 dark:text-indigo-100" : "text-gray-700 dark:text-gray-300"}`}>{diff.label}</p>
-                    <p className={`text-xs font-medium ${isSelected ? "text-indigo-600/70 dark:text-indigo-300/70" : "text-gray-500 dark:text-gray-500"}`}>{diff.desc}</p>
-                    {isSelected && (
-                      <motion.div layoutId="diff-outline" className="absolute inset-0 rounded-2xl border-2 border-indigo-500" transition={{ type: "spring", stiffness: 300, damping: 25 }} />
+                        </div>
+                      </motion.div>
                     )}
-                  </motion.button>
-                );
-              })}
-            </motion.div>
-          </motion.section>
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+        </div>
 
-          {/* ── ÉTAPE 3 : Chronomètre ── */}
-          <motion.section variants={itemVariants}>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">3</span>
-              <div>
-                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Mode du chronomètre</h3>
-                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Strict pour un examen réel, flexible pour réviser à son rythme</p>
-              </div>
-            </div>
+        {/* ── ÉTAPE 2 : Difficulté ───────────────────────────────────────────── */}
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="flex items-center gap-2.5 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <span className="w-6 h-6 rounded-md bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">2</span>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white">Niveau de difficulté</h2>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <label className={`cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 transition-all duration-300 ${!pausableTimer ? "border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md" : "border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10"}`}>
-                <input type="radio" name="pausableTimer" value="false" checked={!pausableTimer} onChange={() => setPausableTimer(false)} className="sr-only" />
-                <span className="font-bold mb-1 text-gray-900 dark:text-white">Strict (Temps réel)</span>
-                <span className="text-xs font-medium text-gray-500">Le temps s'écoule même si vous quittez la page. Idéal pour simuler l'examen réel.</span>
-              </label>
-              <label className={`cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 transition-all duration-300 ${pausableTimer ? "border-indigo-500 bg-indigo-50/50 dark:bg-indigo-500/10 shadow-md" : "border-transparent bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10"}`}>
-                <input type="radio" name="pausableTimer" value="true" checked={pausableTimer} onChange={() => setPausableTimer(true)} className="sr-only" />
-                <span className="font-bold mb-1 text-gray-900 dark:text-white">Flexible (Pause active)</span>
-                <span className="text-xs font-medium text-gray-500">Le chronomètre se fige si vous vous déconnectez ou quittez la page. Idéal pour un entraînement fragmenté.</span>
-              </label>
-            </div>
-          </motion.section>
+          <div className="grid grid-cols-3 gap-3">
+            {DIFFICULTIES.map((diff) => {
+              const isActive = difficulty === diff.value;
+              const Icon = diff.icon;
+              return (
+                <button
+                  key={diff.value}
+                  type="button"
+                  onClick={() => setDifficulty(diff.value)}
+                  className={`flex flex-col items-center text-center p-3.5 rounded-xl border-2 transition-all ${
+                    isActive
+                      ? "border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/20"
+                      : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 hover:bg-slate-100"
+                  }`}
+                >
+                  <div className={`p-2 rounded-lg mb-2 ${diff.bg} ${diff.color}`}>
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white mb-0.5">
+                    {diff.label}
+                  </p>
+                  <p className="text-[10px] text-slate-400 leading-tight hidden sm:block">{diff.desc}</p>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-          {/* ── ÉTAPE 4 : Durée ── */}
-          <motion.section variants={itemVariants}>
-            <div className="flex items-center gap-3 mb-6">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500 text-white text-sm font-bold shadow-sm">4</span>
-              <div>
-                <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight">Durée de l'épreuve</h3>
-                <p className="text-xs text-gray-400 dark:text-gray-500 font-medium">Définissez le temps imparti en minutes</p>
-              </div>
-            </div>
+        {/* ── ÉTAPE 3 : Durée ────────────────────────────────────────────────── */}
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="flex items-center gap-2.5 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <span className="w-6 h-6 rounded-md bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">3</span>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white">Durée de l'épreuve</h2>
+          </div>
 
-            <div className="flex items-center gap-6">
-              <div className="relative">
-                <input
-                  type="number"
-                  name="duration"
-                  value={duration}
-                  onChange={(e) => setDuration(Math.max(1, Math.min(240, parseInt(e.target.value) || 60)))}
-                  className="w-32 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-2xl font-bold text-center text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
-                  min="1"
-                  max="240"
-                  step="1"
-                />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">min</span>
-              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                Vous pouvez définir la durée librement pour votre entraînement.
-              </p>
-            </div>
-          </motion.section>
-
-          {/* Error */}
-          <AnimatePresence mode="wait">
-            {error && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                className="flex items-center gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-sm font-medium"
+          {/* Raccourcis */}
+          <div className="flex flex-wrap gap-2">
+            {DURATIONS.map((d) => (
+              <button
+                key={d} type="button"
+                onClick={() => setDuration(d)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  duration === d
+                    ? "bg-indigo-600 text-white"
+                    : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200"
+                }`}
               >
-                <AlertCircle className="w-5 h-5 shrink-0" />
-                {error}
-              </motion.div>
-            )}
-          </AnimatePresence>
+                {d} min
+              </button>
+            ))}
+          </div>
 
-          {/* Submit */}
-          <motion.button
-            variants={itemVariants}
-            whileHover={!isPending && selectedSubjects.length > 0 ? { scale: 1.01 } : {}}
-            whileTap={!isPending && selectedSubjects.length > 0 ? { scale: 0.98 } : {}}
-            type="submit"
-            disabled={isPending || selectedSubjects.length === 0}
-            className="group relative flex items-center justify-center gap-3 w-full py-5 rounded-2xl text-lg font-bold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl shadow-indigo-500/20 overflow-hidden"
-          >
-            {isPending ? (
-              <>
-                <Loader2 className="w-6 h-6 animate-spin" />
-                <span>Génération de l'épreuve...</span>
-              </>
-            ) : (
-              <>
-                <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
-                <span>Démarrer l'entraînement ({totalQuestions} q.)</span>
-              </>
-            )}
-            {/* Glossy overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-          </motion.button>
-        </form>
-      </motion.div>
-    </motion.main>
+          {/* Saisie */}
+          <div className="flex items-center gap-3">
+            <Clock className="w-4 h-4 text-slate-400" />
+            <div className="relative">
+              <input
+                type="number" name="duration" value={duration}
+                onChange={(e) => setDuration(Math.max(1, Math.min(240, parseInt(e.target.value) || 60)))}
+                className="w-24 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-sm font-bold text-center text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                min="1" max="240"
+              />
+              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-400">min</span>
+            </div>
+            <p className="text-xs text-slate-400">Durée libre (1 à 240 minutes)</p>
+          </div>
+        </div>
+
+        {/* ── ÉTAPE 4 : Chronomètre ──────────────────────────────────────────── */}
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="flex items-center gap-2.5 border-b border-slate-100 dark:border-slate-800 pb-3">
+            <span className="w-6 h-6 rounded-md bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">4</span>
+            <h2 className="text-sm font-bold text-slate-900 dark:text-white">Mode du chronomètre</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label
+              className={`cursor-pointer flex items-start gap-3 p-3.5 rounded-xl border-2 transition-all ${
+                !pausableTimer
+                  ? "border-indigo-600 bg-indigo-50/40 dark:bg-indigo-950/20"
+                  : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 hover:bg-slate-100"
+              }`}
+            >
+              <input type="radio" name="pausableTimer" checked={!pausableTimer} onChange={() => setPausableTimer(false)} className="sr-only" />
+              <div className="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 shrink-0">
+                <Timer className="w-4 h-4" />
+              </div>
+              <div>
+                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Strict (Temps réel)</p>
+                <p className="text-[11px] text-slate-500 mt-0.5">Le temps continue de s'écouler si vous fermez la page.</p>
+              </div>
+            </label>
+
+            <label
+              className={`cursor-pointer flex items-start gap-3 p-3.5 rounded-xl border-2 transition-all ${
+                pausableTimer
+                  ? "border-indigo-600 bg-indigo-50/40 dark:bg-indigo-950/20"
+                  : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 hover:bg-slate-100"
+              }`}
+            >
+              <input type="radio" name="pausableTimer" checked={pausableTimer} onChange={() => setPausableTimer(true)} className="sr-only" />
+              <div className="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 shrink-0">
+                <PauseCircle className="w-4 h-4" />
+              </div>
+              <div>
+                <p className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Flexible (Pause active)</p>
+                <p className="text-[11px] text-slate-500 mt-0.5">Le chronomètre se fige si vous quittez la session.</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        {/* ── ERREUR ─────────────────────────────────────────────────────────── */}
+        {error && (
+          <div className="flex items-center gap-2.5 p-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400 text-xs font-semibold">
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            {error}
+          </div>
+        )}
+
+        {/* ── SOUMISSION ─────────────────────────────────────────────────────── */}
+        <button
+          type="submit"
+          disabled={isPending || selectedSubjects.length === 0}
+          className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm active:scale-95"
+        >
+          {isPending ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span>Génération de la session d'entraînement…</span>
+            </>
+          ) : (
+            <>
+              <PlayCircle className="w-4 h-4" />
+              <span>Lancer l'entraînement ({totalQuestions} questions • {duration} min)</span>
+            </>
+          )}
+        </button>
+      </form>
+    </div>
   );
 }
