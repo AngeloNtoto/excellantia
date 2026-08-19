@@ -1,130 +1,16 @@
 "use client";
 
-import { useState, useTransition, useEffect, useCallback } from "react";
+import { useState, useTransition } from "react";
 import { createRoomAction } from "@/lib/actions/rooms";
 
-// ─── Subject config ───────────────────────────────────────────────────────────
 type Subject = "MATH" | "FRENCH" | "ENGLISH" | "GENERAL_CULTURE";
-
 const SUBJECT_LABELS: Record<Subject, string> = {
   MATH: "Mathématiques",
   FRENCH: "Français",
   ENGLISH: "Anglais",
-  GENERAL_CULTURE: "Culture Générale",
+  GENERAL_CULTURE: "Culture générale",
 };
-
-// ─── TopicPicker component (per subject) ─────────────────────────────────────
-function TopicPicker({
-  subject,
-  selectedTopics,
-  onChange,
-}: {
-  subject: Subject;
-  selectedTopics: string[];
-  onChange: (topics: string[]) => void;
-}) {
-  const [availableTopics, setAvailableTopics] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch topics for this subject from the API
-    setLoading(true);
-    fetch(`/api/topics?subject=${subject}`)
-      .then((r) => r.json())
-      .then((data) => {
-        setAvailableTopics(data.topics ?? []);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, [subject]);
-
-  const toggleTopic = useCallback(
-    (topic: string) => {
-      onChange(
-        selectedTopics.includes(topic)
-          ? selectedTopics.filter((t) => t !== topic)
-          : [...selectedTopics, topic]
-      );
-    },
-    [selectedTopics, onChange]
-  );
-
-  const selectAll = () => onChange([...availableTopics]);
-  const clearAll = () => onChange([]);
-
-  if (loading) return <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Chargement des sous-branches…</p>;
-  if (availableTopics.length === 0) return <p style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Aucune sous-branche disponible.</p>;
-
-  return (
-    <div style={{ marginTop: 8 }}>
-      {/* Select all / clear all controls */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
-        <button
-          type="button"
-          onClick={selectAll}
-          style={{
-            fontSize: "0.75rem",
-            padding: "4px 10px",
-            borderRadius: 8,
-            border: "1px solid var(--border)",
-            background: "var(--bg-muted)",
-            color: "var(--text-primary)",
-            cursor: "pointer",
-          }}
-        >
-          Tout sélectionner
-        </button>
-        <button
-          type="button"
-          onClick={clearAll}
-          style={{
-            fontSize: "0.75rem",
-            padding: "4px 10px",
-            borderRadius: 8,
-            border: "1px solid var(--border)",
-            background: "var(--bg-muted)",
-            color: "var(--text-muted)",
-            cursor: "pointer",
-          }}
-        >
-          Effacer
-        </button>
-        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", alignSelf: "center" }}>
-          {selectedTopics.length === 0
-            ? "Toutes les sous-branches (par défaut)"
-            : `${selectedTopics.length} / ${availableTopics.length} sélectionnée(s)`}
-        </span>
-      </div>
-
-      {/* Topic chips grid */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        {availableTopics.map((topic) => {
-          const active = selectedTopics.includes(topic);
-          return (
-            <button
-              key={topic}
-              type="button"
-              onClick={() => toggleTopic(topic)}
-              style={{
-                padding: "5px 12px",
-                borderRadius: 20,
-                border: `1.5px solid ${active ? "var(--accent)" : "var(--border)"}`,
-                background: active ? "var(--accent)" : "var(--bg-muted)",
-                color: active ? "#fff" : "var(--text-primary)",
-                fontSize: "0.78rem",
-                fontWeight: 600,
-                cursor: "pointer",
-                transition: "all 0.15s ease",
-              }}
-            >
-              {topic}
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
+const DEFAULT_SUBJECT_ORDER: Subject[] = ["FRENCH", "ENGLISH", "MATH", "GENERAL_CULTURE"];
 
 // ─── Main form component ──────────────────────────────────────────────────────
 export function CreateRoomForm() {
@@ -132,26 +18,16 @@ export function CreateRoomForm() {
   const [error, setError] = useState("");
   const [isPrivate, setIsPrivate] = useState(false);
   const [isScheduled, setIsScheduled] = useState(false);
-
-  // Track selected topics per subject (empty = all topics allowed)
-  const [selectedTopics, setSelectedTopics] = useState<Record<Subject, string[]>>({
-    MATH: [],
-    FRENCH: [],
-    ENGLISH: [],
-    GENERAL_CULTURE: [],
-  });
-
-  const updateTopics = useCallback((subject: Subject, topics: string[]) => {
-    setSelectedTopics((prev) => ({ ...prev, [subject]: topics }));
-  }, []);
+  const [timingRegime, setTimingRegime] = useState<"EINSTEIN" | "NEWTON" | "TESLA">("EINSTEIN");
+  const [clockMode, setClockMode] = useState<"ABSOLUTE" | "RELATIVE">("ABSOLUTE");
+  const [durationMin, setDurationMin] = useState(100);
+  const [questionCounts, setQuestionCounts] = useState({ math: 25, french: 25, english: 25, culture: 25 });
+  const [subjectOrder, setSubjectOrder] = useState<Subject[]>(DEFAULT_SUBJECT_ORDER);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
     const fd = new FormData(e.currentTarget);
-    // Serialize selectedTopics as JSON string
-    fd.set("selectedTopics", JSON.stringify(selectedTopics));
-
     startTransition(async () => {
       const res = await createRoomAction(fd);
       if (res?.error) setError(res.error);
@@ -184,8 +60,48 @@ export function CreateRoomForm() {
     marginBottom: 6,
   };
 
+  const totalQuestions = Object.values(questionCounts).reduce((total, count) => total + count, 0);
+  const displayedDuration = timingRegime === "TESLA" ? totalQuestions : durationMin;
+
+  function handleTimingRegimeChange(regime: "EINSTEIN" | "NEWTON" | "TESLA") {
+    setTimingRegime(regime);
+    if (regime === "NEWTON") setClockMode("ABSOLUTE");
+    if (regime === "TESLA") setClockMode("RELATIVE");
+  }
+
+  function moveSubject(subject: Subject, direction: -1 | 1) {
+    setSubjectOrder((current) => {
+      const index = current.indexOf(subject);
+      const target = index + direction;
+      if (target < 0 || target >= current.length) return current;
+      const next = [...current];
+      [next[index], next[target]] = [next[target], next[index]];
+      return next;
+    });
+  }
+
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+      <header
+        style={{
+          padding: "22px 24px",
+          borderRadius: 20,
+          color: "#fff",
+          background: "linear-gradient(120deg, #312e81, #4f46e5 55%, #0891b2)",
+          boxShadow: "0 16px 34px rgba(49, 46, 129, 0.2)",
+        }}
+      >
+        <div style={{ fontSize: "0.72rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", opacity: 0.75 }}>
+          Configuration de salle
+        </div>
+        <h1 style={{ margin: "6px 0 4px", fontSize: "1.45rem", fontWeight: 800 }}>Construire une épreuve cohérente</h1>
+        <p style={{ margin: 0, color: "rgba(255,255,255,0.78)", fontSize: "0.875rem" }}>
+          Réglez le contexte, le rythme et la composition. Les questions seront sélectionnées automatiquement dans le stock disponible.
+        </p>
+        <div style={{ display: "inline-flex", marginTop: 16, padding: "7px 11px", borderRadius: 10, background: "rgba(255,255,255,0.14)", fontSize: "0.8rem", fontWeight: 700 }}>
+          {totalQuestions} questions configurées
+        </div>
+      </header>
       {/* Error banner */}
       {error && (
         <div
@@ -203,7 +119,7 @@ export function CreateRoomForm() {
       )}
 
       {/* ── SECTION 1 : Informations générales ── */}
-      <section style={sectionStyle}>
+      <section style={{ ...sectionStyle, borderTop: "3px solid #6366f1" }}>
         <div style={{ marginBottom: 16 }}>
           <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Informations générales</h2>
           <p style={{ margin: "4px 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>
@@ -239,7 +155,7 @@ export function CreateRoomForm() {
       </section>
 
       {/* ── SECTION 2 : Temps & Planification ── */}
-      <section style={sectionStyle}>
+      <section style={{ ...sectionStyle, borderTop: "3px solid #06b6d4" }}>
         <div style={{ marginBottom: 16 }}>
           <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Temps &amp; Planification</h2>
           <p style={{ margin: "4px 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>
@@ -280,7 +196,7 @@ export function CreateRoomForm() {
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <input type="radio" name="timingRegime" value="EINSTEIN" defaultChecked />
+                    <input type="radio" name="timingRegime" value="EINSTEIN" checked={timingRegime === "EINSTEIN"} onChange={() => handleTimingRegimeChange("EINSTEIN")} />
                     <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Einstein</strong>
                   </div>
                   <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(99, 102, 241, 0.15)", color: "#6366f1" }}>
@@ -308,7 +224,7 @@ export function CreateRoomForm() {
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <input type="radio" name="timingRegime" value="NEWTON" />
+                    <input type="radio" name="timingRegime" value="NEWTON" checked={timingRegime === "NEWTON"} onChange={() => handleTimingRegimeChange("NEWTON")} />
                     <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Newton</strong>
                   </div>
                   <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(245, 158, 11, 0.15)", color: "#f59e0b" }}>
@@ -316,7 +232,7 @@ export function CreateRoomForm() {
                   </span>
                 </div>
                 <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
-                  Temps segmenté par matière. Écran de repos pour les finisseurs précoces.
+                  Une phase par domaine, avec 1 minute par question disponible pour toute la phase. Horloge absolue obligatoire.
                 </p>
               </label>
 
@@ -336,7 +252,7 @@ export function CreateRoomForm() {
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <input type="radio" name="timingRegime" value="TESLA" />
+                    <input type="radio" name="timingRegime" value="TESLA" checked={timingRegime === "TESLA"} onChange={() => handleTimingRegimeChange("TESLA")} />
                     <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Tesla</strong>
                   </div>
                   <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(6, 182, 212, 0.15)", color: "#06b6d4" }}>
@@ -344,7 +260,7 @@ export function CreateRoomForm() {
                   </span>
                 </div>
                 <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
-                  1 min = 1 question. Passage auto, sans retour en arrière possible.
+                  1 question = 1 minute. Le total de minutes suit automatiquement le nombre de questions, en horloge relative.
                 </p>
               </label>
             </div>
@@ -443,14 +359,19 @@ export function CreateRoomForm() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 16 }}>
             <div>
               <label style={labelStyle}>Durée globale (minutes)</label>
-              <input type="number" name="durationMin" style={inputStyle} defaultValue="100" min="1" required />
+              <input type="number" name="durationMin" style={inputStyle} value={displayedDuration} onChange={(e) => setDurationMin(Number(e.target.value) || 1)} min="1" required disabled={timingRegime === "TESLA"} />
+              {timingRegime === "TESLA" && <p style={{ margin: "5px 0 0", color: "#0891b2", fontSize: "0.72rem", fontWeight: 700 }}>Tesla : {totalQuestions} questions = {totalQuestions} minutes.</p>}
             </div>
             <div>
               <label style={labelStyle}>Mode d'horloge</label>
-              <select name="clockMode" style={inputStyle} defaultValue="ABSOLUTE" required>
+              <select name="clockMode" style={inputStyle} value={clockMode} onChange={(e) => setClockMode(e.target.value as "ABSOLUTE" | "RELATIVE")} disabled={timingRegime !== "EINSTEIN"} required>
                 <option value="ABSOLUTE">Absolu (heure fixe pour tous)</option>
                 <option value="RELATIVE">Relatif (chronomètre individuel)</option>
               </select>
+              {timingRegime !== "EINSTEIN" && <input type="hidden" name="clockMode" value={clockMode} />}
+              <p style={{ margin: "5px 0 0", color: "var(--text-muted)", fontSize: "0.72rem" }}>
+                {timingRegime === "EINSTEIN" ? "Choisissez l'horloge adaptée à votre épreuve." : `${timingRegime === "TESLA" ? "Tesla impose l'horloge relative." : "Newton impose l'horloge absolue."}`}
+              </p>
             </div>
           </div>
 
@@ -490,7 +411,7 @@ export function CreateRoomForm() {
       </section>
 
       {/* ── SECTION 3 : Répartition des questions ── */}
-      <section style={sectionStyle}>
+      <section style={{ ...sectionStyle, borderTop: "3px solid #10b981" }}>
         <div style={{ marginBottom: 16 }}>
           <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Répartition des questions</h2>
           <p style={{ margin: "4px 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>
@@ -500,57 +421,45 @@ export function CreateRoomForm() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 16 }}>
           <div>
             <label style={labelStyle}>Mathématiques</label>
-            <input type="number" name="mathCount" style={inputStyle} defaultValue="25" min="0" max="100" required />
+            <input type="number" name="mathCount" style={inputStyle} value={questionCounts.math} onChange={(e) => setQuestionCounts((current) => ({ ...current, math: Number(e.target.value) || 0 }))} min="0" max="100" required />
           </div>
           <div>
             <label style={labelStyle}>Français</label>
-            <input type="number" name="frenchCount" style={inputStyle} defaultValue="25" min="0" max="100" required />
+            <input type="number" name="frenchCount" style={inputStyle} value={questionCounts.french} onChange={(e) => setQuestionCounts((current) => ({ ...current, french: Number(e.target.value) || 0 }))} min="0" max="100" required />
           </div>
           <div>
             <label style={labelStyle}>Anglais</label>
-            <input type="number" name="englishCount" style={inputStyle} defaultValue="25" min="0" max="100" required />
+            <input type="number" name="englishCount" style={inputStyle} value={questionCounts.english} onChange={(e) => setQuestionCounts((current) => ({ ...current, english: Number(e.target.value) || 0 }))} min="0" max="100" required />
           </div>
           <div>
             <label style={labelStyle}>Culture Générale</label>
-            <input type="number" name="cultureCount" style={inputStyle} defaultValue="25" min="0" max="100" required />
+            <input type="number" name="cultureCount" style={inputStyle} value={questionCounts.culture} onChange={(e) => setQuestionCounts((current) => ({ ...current, culture: Number(e.target.value) || 0 }))} min="0" max="100" required />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 4 : Sous-branches (Topics) ── */}
-      <section style={sectionStyle}>
-        <div style={{ marginBottom: 20 }}>
-          <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Sous-branches</h2>
+      <section style={{ ...sectionStyle, borderTop: "3px solid #8b5cf6" }}>
+        <div style={{ marginBottom: 16 }}>
+          <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Ordre des domaines</h2>
           <p style={{ margin: "4px 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>
-            Sélectionnez les chapitres à inclure par matière. Par défaut, tous les chapitres sont inclus.
+            Cet ordre sera utilisé par Newton. Par défaut : Français, Anglais, Mathématiques, Culture générale.
           </p>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          {(["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"] as Subject[]).map((subject) => (
-            <div
-              key={subject}
-              style={{
-                padding: 16,
-                borderRadius: 14,
-                border: "1px solid var(--border)",
-                background: "var(--bg-muted)",
-              }}
-            >
-              <h3 style={{ fontSize: "0.95rem", fontWeight: 700, margin: "0 0 4px" }}>
-                {SUBJECT_LABELS[subject]}
-              </h3>
-              <TopicPicker
-                subject={subject}
-                selectedTopics={selectedTopics[subject]}
-                onChange={(topics) => updateTopics(subject, topics)}
-              />
+        <input type="hidden" name="subjectOrder" value={JSON.stringify(subjectOrder)} />
+        <div style={{ display: "grid", gap: 8 }}>
+          {subjectOrder.map((subject, index) => (
+            <div key={subject} style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 12px", border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-muted)" }}>
+              <span style={{ width: 24, height: 24, display: "grid", placeItems: "center", borderRadius: 8, background: "#8b5cf6", color: "#fff", fontSize: "0.75rem", fontWeight: 800 }}>{index + 1}</span>
+              <strong style={{ flex: 1, fontSize: "0.875rem" }}>{SUBJECT_LABELS[subject]}</strong>
+              <button type="button" onClick={() => moveSubject(subject, -1)} disabled={index === 0} className="btn btn-ghost" style={{ padding: "5px 9px" }} title="Monter ce domaine">↑</button>
+              <button type="button" onClick={() => moveSubject(subject, 1)} disabled={index === subjectOrder.length - 1} className="btn btn-ghost" style={{ padding: "5px 9px" }} title="Descendre ce domaine">↓</button>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── SECTION 5 : Contraintes de difficulté ── */}
-      <section style={sectionStyle}>
+      {/* ── SECTION 4 : Contraintes de difficulté ── */}
+      <section style={{ ...sectionStyle, borderTop: "3px solid #f59e0b" }}>
         <div style={{ marginBottom: 16 }}>
           <h2 style={{ fontSize: "1.125rem", fontWeight: 700, margin: 0 }}>Difficulté</h2>
           <p style={{ margin: "4px 0 0", color: "var(--text-muted)", fontSize: "0.875rem" }}>
@@ -566,10 +475,6 @@ export function CreateRoomForm() {
             <label style={labelStyle}>% Questions Moyennes</label>
             <input type="number" name="mediumPct" style={inputStyle} defaultValue="40" min="0" max="100" required />
             <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: 4 }}>Le reste sera difficile.</p>
-          </div>
-          <div>
-            <label style={labelStyle}>Questions Culture (RDC)</label>
-            <input type="number" name="cultureDrc" style={inputStyle} defaultValue="15" min="0" />
           </div>
         </div>
       </section>

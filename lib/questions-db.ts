@@ -205,7 +205,15 @@ export async function generateRoomQuestionsFromDb(
     }
   }
 
-  return errors.length > 0
-    ? { ok: false, errors }
-    : { ok: true, questionIds: pickRandom(selected, selected.length).map((question) => question.id) };
+  if (errors.length > 0) return { ok: false, errors };
+
+  // Les questions rattachees a un texte ouvrent toujours l'epreuve.
+  const textQuestions = selected.filter((question) => Boolean(question.passageId));
+  const standaloneQuestions = selected.filter((question) => !question.passageId);
+
+  return {
+    ok: true,
+    questionIds: [...pickRandom(textQuestions, textQuestions.length), ...pickRandom(standaloneQuestions, standaloneQuestions.length)]
+      .map((question) => question.id),
+  };
 }

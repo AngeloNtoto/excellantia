@@ -7,7 +7,7 @@ import {
   Target, PlayCircle, Loader2,
   TrendingUp, TrendingDown, Gauge, AlertCircle,
   Plus, Minus, ChevronDown, ChevronUp,
-  Clock, CheckCircle2, BookMarked, Timer, PauseCircle
+  Clock, CheckCircle2, BookMarked, Timer, PauseCircle, Eye, EyeOff
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -147,6 +147,7 @@ export default function TrainingPage() {
   const [difficulty, setDifficulty] = useState("MIXED");
   const [duration, setDuration] = useState<number | string>(100);
   const [pausableTimer, setPausableTimer] = useState(false);
+  const [chronoMode, setChronoMode] = useState<"GALILEE" | "HEISENBERG" | "SCHRODINGER">("GALILEE");
   const [error, setError] = useState("");
   const [selectedTopics, setSelectedTopics] = useState<Record<SubjectKey, string[]>>({
     MATH: [], FRENCH: [], ENGLISH: [], GENERAL_CULTURE: [],
@@ -190,6 +191,7 @@ export default function TrainingPage() {
     fd.append("difficulty", difficulty);
     fd.append("duration", finalDuration.toString());
     fd.append("pausableTimer", pausableTimer.toString());
+    fd.append("chronoMode", chronoMode);
     fd.append("selectedTopics", JSON.stringify(selectedTopics));
     startTransition(async () => {
       const res = await startTrainingAction(fd);
@@ -302,6 +304,27 @@ export default function TrainingPage() {
                 </div>
               );
             })}
+          </div>
+
+          <div className="space-y-2">
+            <p className="text-xs font-bold text-slate-700 dark:text-slate-300">Affichage du chronomètre</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {[
+                { value: "GALILEE", label: "Galilée", description: "Toujours visible", icon: Clock },
+                { value: "HEISENBERG", label: "Heisenberg", description: "Visible par fenêtres", icon: Eye },
+                { value: "SCHRODINGER", label: "Schrödinger", description: "Masqué avec 2 ouvertures", icon: EyeOff },
+              ].map((mode) => {
+                const Icon = mode.icon;
+                const selected = chronoMode === mode.value;
+                return (
+                  <label key={mode.value} className={`cursor-pointer flex items-start gap-2.5 p-3 rounded-xl border-2 transition-all ${selected ? "border-indigo-600 bg-indigo-50/50 dark:bg-indigo-950/20" : "border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 hover:bg-slate-100"}`}>
+                    <input type="radio" name="chronoModeChoice" value={mode.value} checked={selected} onChange={() => setChronoMode(mode.value as typeof chronoMode)} className="sr-only" />
+                    <Icon className={`w-4 h-4 mt-0.5 shrink-0 ${selected ? "text-indigo-600" : "text-slate-400"}`} />
+                    <span><span className="block text-xs font-bold text-slate-900 dark:text-white">{mode.label}</span><span className="block text-[10px] text-slate-500 mt-0.5">{mode.description}</span></span>
+                  </label>
+                );
+              })}
+            </div>
           </div>
         </div>
 

@@ -236,6 +236,7 @@ export interface RoomConfig {
   timingRegime?: TimingRegime;
   clockMode?: ClockMode;
   chronoMode?: ChronoMode;
+  subjectOrder?: Subject[];
 }
 
 export interface NewtonPhaseConfig {

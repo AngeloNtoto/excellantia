@@ -93,10 +93,13 @@ export const createRoomSchema = z.object({
   // Difficultés (pourcentages 0-100)
   easyPct: z.coerce.number().min(0).max(100).default(50),
   mediumPct: z.coerce.number().min(0).max(100).default(25),
-  // Culture générale
-  cultureDrc: z.coerce.number().int().min(0).default(0),
-  // Sélection des sous-branches (JSON string)
-  selectedTopics: z.string().optional().default("{}"),
+  subjectOrder: z.preprocess(
+    (value) => {
+      if (typeof value !== "string") return value;
+      try { return JSON.parse(value); } catch { return value; }
+    },
+    z.array(z.enum(["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"])).length(4).default(["FRENCH", "ENGLISH", "MATH", "GENERAL_CULTURE"])
+  ),
 });
 
 export type CreateRoomInput = z.infer<typeof createRoomSchema>;

@@ -63,6 +63,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
         pausableTimer={(room.config as any)?.pausableTimer === true}
         previousTimeUsedSec={attempt.timeUsedSec ?? 0}
         bySubject={(room.config as any)?.bySubject}
+        subjectOrder={(room.config as any)?.subjectOrder}
       />
     </div>
   );

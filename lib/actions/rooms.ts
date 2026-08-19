@@ -45,6 +45,7 @@ export async function createRoomAction(formData: FormData) {
   const raw = Object.fromEntries(formData.entries());
   const result = createRoomSchema.safeParse({
     ...raw,
+    includeTrainingQuestions: raw.includeTrainingQuestions === "true",
     startNow: raw.startNow === "true",
   });
 
@@ -78,10 +79,10 @@ export async function createRoomAction(formData: FormData) {
       ENGLISH: makeSubjectDiff(d.englishCount),
       GENERAL_CULTURE: makeSubjectDiff(d.cultureCount),
     },
-    generalCulture: d.cultureDrc > 0
-      ? { drc: d.cultureDrc, international: d.cultureCount - d.cultureDrc }
-      : undefined,
-    selectedTopics: d.selectedTopics ? JSON.parse(d.selectedTopics) : undefined,
+    // La répartition de culture générale reste globale, sans quota géographique.
+    generalCulture: undefined,
+    selectedTopics: undefined,
+    subjectOrder: d.subjectOrder as Subject[],
   };
 
   // Générer les questions depuis la base de données
@@ -98,32 +99,61 @@ export async function createRoomAction(formData: FormData) {
 
   // Règles strictes par régime :
   if (timingRegime === "NEWTON") {
-    // Newton : toujours en temps absolu restreint
+    // Newton : une minute par question, mais le temps est consommé par phase,
+    // jamais par question individuelle.
     clockMode = "ABSOLUTE";
+    durationMin = Math.max(1, totalQuestions);
   } else if (timingRegime === "TESLA") {
     // Tesla : 1 question = 1 minute, temps relatif par candidat (avec hard limit de salle à 5h)
     clockMode = "RELATIVE";
     durationMin = Math.max(1, totalQuestions); // 1 minute par question
   }
 
+  // Tesla parcourt les questions dans l'ordre des domaines choisi par l'admin.
+  // Les questions liées à un texte restent prioritaires dans chaque domaine.
+  if ((timingRegime === "TESLA" || timingRegime === "NEWTON") && gen.questionIds) {
+    const questionsMeta = await prisma.question.findMany({
+      where: { id: { in: gen.questionIds } },
+      select: { id: true, subject: true, textContentId: true, passageId: true },
+    });
+    const orderIndex = new Map(d.subjectOrder.map((subject, index) => [subject, index]));
+    const originalIndex = new Map(gen.questionIds.map((id, index) => [id, index]));
+    const metaById = new Map(questionsMeta.map((question) => [question.id, question]));
+    gen.questionIds = [...gen.questionIds].sort((leftId, rightId) => {
+      const left = metaById.get(leftId);
+      const right = metaById.get(rightId);
+      const leftText = Boolean(left?.textContentId || left?.passageId);
+      const rightText = Boolean(right?.textContentId || right?.passageId);
+      if (leftText !== rightText) return leftText ? -1 : 1;
+      const subjectDifference = (orderIndex.get(left?.subject as Subject) ?? 99) - (orderIndex.get(right?.subject as Subject) ?? 99);
+      return subjectDifference || (originalIndex.get(leftId) ?? 0) - (originalIndex.get(rightId) ?? 0);
+    });
+  }
+
   // Configuration spécifique pour le Régime Newton (segmentation par phase)
   let timingConfig: any = null;
   if (timingRegime === "NEWTON" && gen.questionIds) {
-    const totalSec = durationMin * 60;
+    const totalSec = totalQuestions * 60;
     const questionsFromDb = await prisma.question.findMany({
       where: { id: { in: gen.questionIds } },
       select: { id: true, subject: true },
     });
     
-    const subjectsOrder: Subject[] = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
+    const subjectsOrder = (d.subjectOrder as Subject[]).filter((subject) => (config.bySubject[subject] ?? 0) > 0);
     const phases = subjectsOrder
-      .filter((sub) => (config.bySubject[sub] ?? 0) > 0)
       .map((sub) => {
         const count = config.bySubject[sub] ?? 0;
         const subQuestionIds = questionsFromDb
           .filter((q) => q.subject === sub)
           .map((q) => q.id);
-        const durationSec = Math.max(60, Math.round((count / totalQuestions) * totalSec));
+        const phaseIndex = subjectsOrder.indexOf(sub);
+        const allocatedBefore = subjectsOrder.slice(0, phaseIndex).reduce(
+          (total, previousSubject) => total + Math.round(((config.bySubject[previousSubject] ?? 0) / totalQuestions) * totalSec),
+          0,
+        );
+        const durationSec = phaseIndex === subjectsOrder.length - 1
+          ? totalSec - allocatedBefore
+          : Math.round((count / totalQuestions) * totalSec);
         return {
           subject: sub,
           label: sub === "MATH" ? "Mathématiques" : sub === "FRENCH" ? "Français" : sub === "ENGLISH" ? "Anglais" : "Culture générale",

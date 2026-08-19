@@ -22,6 +22,10 @@ export async function startTrainingAction(formData: FormData) {
 
   // ── Durée et difficulté ──
   const durationMin = parseInt(formData.get("duration") as string) || 60;
+  const requestedChronoMode = formData.get("chronoMode");
+  const chronoMode = requestedChronoMode === "HEISENBERG" || requestedChronoMode === "SCHRODINGER"
+    ? requestedChronoMode
+    : "GALILEE";
   const diffMode = formData.get("difficulty") as string;
   let easyPct = 40, mediumPct = 40;
 
@@ -89,7 +93,7 @@ export async function startTrainingAction(formData: FormData) {
       visibility: "PRIVATE",
       timingRegime: "EINSTEIN",
       clockMode: "RELATIVE",
-      chronoMode: "GALILEE",
+      chronoMode,
       durationMin,
       accessCode,
       questionIds: gen.questionIds as any,

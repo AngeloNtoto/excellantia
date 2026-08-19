@@ -23,6 +23,7 @@ export function ExamRunner({
   pausableTimer,
   previousTimeUsedSec,
   bySubject,
+  subjectOrder,
 }: {
   attemptId: string;
   roomId: string;
@@ -52,6 +53,7 @@ export function ExamRunner({
   pausableTimer?: boolean;
   previousTimeUsedSec: number;
   bySubject?: Record<Subject, number>;
+  subjectOrder?: Subject[];
 }) {
   // Le briefing est affiché au début si aucune réponse n'a été saisie encore
   const hasAlreadyStarted = Object.keys(initialAnswers).length > 0;
@@ -88,6 +90,7 @@ export function ExamRunner({
       timingConfig={timingConfig}
       pausableTimer={pausableTimer}
       previousTimeUsedSec={previousTimeUsedSec}
+      subjectOrder={subjectOrder}
     />
   );
 }

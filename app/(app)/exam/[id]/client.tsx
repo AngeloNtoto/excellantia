@@ -39,6 +39,8 @@ import {
   Star,
   ShieldAlert,
   Sparkles,
+  BookOpen,
+  X,
 } from "lucide-react";
 
 /**
@@ -80,6 +82,7 @@ export function ExamClient({
   timingConfig,
   pausableTimer,
   previousTimeUsedSec,
+  subjectOrder,
 }: {
   attemptId: string;
   roomId: string;
@@ -107,12 +110,14 @@ export function ExamClient({
   timingConfig?: NewtonTimingConfig | null;
   pausableTimer?: boolean;
   previousTimeUsedSec: number;
+  subjectOrder?: Subject[];
 }) {
   const [answers, setAnswers] = useState(initialAnswers);
   const [isPending, startTransition] = useTransition();
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [centiseconds, setCentiseconds] = useState<number>(0);
   const [infoModalOpen, setInfoModalOpen] = useState(false);
+  const [selectedPassage, setSelectedPassage] = useState<(typeof passages)[number] | null>(null);
 
   // Einstein display mode preference: "SCROLL" (toutes les questions) ou "PAGINATED" (une question à la fois)
   const [einsteinLayout, setEinsteinLayout] = useState<"SCROLL" | "PAGINATED">("SCROLL");
@@ -133,7 +138,9 @@ export function ExamClient({
 
   const regimeMeta = TIMING_REGIMES[timingRegime] || TIMING_REGIMES.EINSTEIN;
   const chronoMeta = CHRONO_MODES[chronoMode] || CHRONO_MODES.GALILEE;
-  const subjects: Subject[] = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
+  const subjects: Subject[] = subjectOrder?.length === 4
+    ? subjectOrder
+    : ["FRENCH", "ENGLISH", "MATH", "GENERAL_CULTURE"];
 
   // ─── 1. PROTECTION & CONFIRMATION SUR VOL / RECHARGE (TESLA) ───────────────
   useEffect(() => {
@@ -214,6 +221,17 @@ export function ExamClient({
       return () => clearInterval(msInterval);
     }
   }, [timeLeft]);
+
+  useEffect(() => {
+    if (!selectedPassage) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedPassage(null);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [selectedPassage]);
 
   // ─── 3. CHRONOMÈTRE TESLA (60s / question avec État critique <= 20s) ────────
   useEffect(() => {
@@ -681,16 +699,21 @@ export function ExamClient({
                     <div
                       style={{
                         background: "var(--bg-muted)",
-                        padding: 20,
+                        padding: "14px 16px",
                         borderRadius: 14,
                         borderLeft: "4px solid var(--accent)",
-                        fontSize: "0.9rem",
-                        lineHeight: 1.6,
                         marginBottom: 20,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: 16,
                       }}
                     >
-                      <h4 style={{ margin: "0 0 8px 0", fontWeight: 700, fontSize: "1.05rem" }}>{passage.title}</h4>
-                      <div style={{ whiteSpace: "pre-wrap", color: "var(--text-secondary)" }}>{passage.content}</div>
+                      <h4 style={{ margin: 0, fontWeight: 700, fontSize: "1.05rem" }}>{passage.title}</h4>
+                      <button type="button" className="btn btn-primary" onClick={() => setSelectedPassage(passage)} style={{ padding: "8px 14px", flexShrink: 0 }}>
+                        <BookOpen className="w-4 h-4" />
+                        Lire le texte
+                      </button>
                     </div>
                   );
                 })()}
@@ -711,32 +734,9 @@ export function ExamClient({
                       Précédente
                     </button>
 
-                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap", maxWidth: 400, justifyContent: "center" }}>
-                      {activeQuestions.map((q, idx) => {
-                        const isAns = answers[q.id]?.selectedIndex !== null && answers[q.id]?.selectedIndex !== undefined;
-                        const isCurrent = idx === currentIndex;
-                        return (
-                          <button
-                            key={q.id}
-                            type="button"
-                            onClick={() => setCurrentIndex(idx)}
-                            style={{
-                              width: 32,
-                              height: 32,
-                              borderRadius: 8,
-                              fontSize: "0.75rem",
-                              fontWeight: 700,
-                              border: isCurrent ? `2px solid ${regimeMeta.color}` : "1px solid var(--border)",
-                              background: isCurrent ? regimeMeta.color : isAns ? "rgba(16, 185, 129, 0.15)" : "var(--bg-card)",
-                              color: isCurrent ? "#ffffff" : isAns ? "var(--success)" : "var(--text-secondary)",
-                              cursor: "pointer",
-                            }}
-                          >
-                            {idx + 1}
-                          </button>
-                        );
-                      })}
-                    </div>
+                    <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", textAlign: "center" }}>
+                      Navigation séquentielle
+                    </span>
 
                     <button
                       type="button"
@@ -799,6 +799,40 @@ export function ExamClient({
         onClose={() => setInfoModalOpen(false)}
         initialRegime={timingRegime}
       />
+
+      <AnimatePresence>
+        {selectedPassage && (
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="passage-modal-title"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedPassage(null)}
+            style={{ position: "fixed", inset: 0, zIndex: 1100, display: "flex", alignItems: "center", justifyContent: "center", padding: 20, background: "rgba(15, 17, 23, 0.68)", backdropFilter: "blur(5px)" }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 12, scale: 0.98 }}
+              onClick={(event) => event.stopPropagation()}
+              style={{ width: "min(760px, 100%)", maxHeight: "min(760px, calc(100dvh - 40px))", overflowY: "auto", padding: "24px clamp(20px, 4vw, 40px) 32px", borderRadius: 22, background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "0 28px 90px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.2)" }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16, marginBottom: 20 }}>
+                <div>
+                  <div style={{ color: "var(--accent)", fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>Texte de comprehension</div>
+                  <h3 id="passage-modal-title" style={{ margin: 0, fontSize: "1.35rem" }}>{selectedPassage.title}</h3>
+                </div>
+                <button type="button" onClick={() => setSelectedPassage(null)} aria-label="Fermer le texte" title="Fermer" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)", borderRadius: 10, padding: 8, color: "var(--text-secondary)", cursor: "pointer", flexShrink: 0 }}>
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div style={{ whiteSpace: "pre-wrap", color: "var(--text-secondary)", fontSize: "1rem", lineHeight: 1.8 }}>{selectedPassage.content}</div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 
