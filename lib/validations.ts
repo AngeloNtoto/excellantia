@@ -58,7 +58,10 @@ export const createQuestionSchema = z.object({
   scope: z.enum(["DRC", "INTERNATIONAL"]).optional(),
   type: z.enum(["MULTIPLE_CHOICE", "PASSAGE_BASED"]).default("MULTIPLE_CHOICE"),
   source: z.enum(["USER_CREATED", "ROOM_GENERATED", "TRAINING_POOL"]).default("USER_CREATED"),
-  mode: z.enum(["TRAINING", "SIMULATION"]).optional(),
+  mode: z.preprocess(
+    (val) => (typeof val === "string" ? val.toUpperCase().trim() : val),
+    z.enum(["TRAINING", "SIMULATION"]).optional()
+  ),
 });
 
 // ─── Validation création salle ────────────────────────────────────────────────

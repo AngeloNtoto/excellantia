@@ -343,7 +343,7 @@ export async function deleteManyQuestionsAction(questionIds: string[]) {
  */
 export async function importContentBundleAction(
   json: unknown,
-  importMode: "SIMULATION" | "TRAINING" = "TRAINING",
+  importMode: "SIMULATION" | "TRAINING" = "SIMULATION",
 ) {
   const admin = await requireAdmin();
 
@@ -402,14 +402,10 @@ export async function importContentBundleAction(
         if (Array.isArray(item.questions)) {
           for (let qIdx = 0; qIdx < item.questions.length; qIdx += 1) {
             const q = item.questions[qIdx];
-            const parsedMode = typeof q.mode === "string" && ["TRAINING", "SIMULATION"].includes(q.mode.toUpperCase().trim())
-              ? q.mode.toUpperCase().trim()
-              : importMode;
-
             const parsed = createQuestionSchema.safeParse({
               textContentId: text.id,
               ...q,
-              mode: parsedMode,
+              mode: q.mode || importMode,
               subject: q.subject || (item.language === "EN" ? "ENGLISH" : "FRENCH"),
               difficulty: q.difficulty || "MEDIUM",
               options: Array.isArray(q.options) ? q.options : [],
@@ -456,13 +452,9 @@ export async function importContentBundleAction(
 
     // Cas 2 : L'élément est une Question autonome ou avec passageId
     if (typeof item.statement === "string" || item.options) {
-      const parsedItemMode = typeof item.mode === "string" && ["TRAINING", "SIMULATION"].includes(item.mode.toUpperCase().trim())
-        ? item.mode.toUpperCase().trim()
-        : importMode;
-
       const parsed = createQuestionSchema.safeParse({
         ...item,
-        mode: parsedItemMode,
+        mode: item.mode || importMode,
         subject: item.subject,
         difficulty: item.difficulty || "MEDIUM",
         options: Array.isArray(item.options) ? item.options : [],

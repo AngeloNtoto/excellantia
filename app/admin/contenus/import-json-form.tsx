@@ -170,25 +170,11 @@ export function ImportJsonForm() {
       </div>
 
       {/* Note d'information format */}
-      <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300 space-y-1.5">
-        <div className="flex items-center gap-2 font-semibold text-slate-900 dark:text-white">
-          <Info className="w-4 h-4 text-indigo-500 shrink-0" />
-          <span>Guide de formatage JSON :</span>
+      <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/80 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300">
+        <Info className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
+        <div>
+          <span className="font-semibold text-slate-900 dark:text-white">Note sur les explications :</span> Les champs <code className="font-mono text-indigo-600 dark:text-indigo-400">explanation</code> et <code className="font-mono text-indigo-600 dark:text-indigo-400">optionExplanations</code> (explication pour chaque option) sont <strong className="underline">optionnels</strong>.
         </div>
-        <ul className="list-disc list-inside space-y-1 pl-1 text-[11.5px] leading-relaxed">
-          <li>
-            <strong className="text-slate-800 dark:text-slate-200">Options (A, B, C, D) :</strong> Renseignez 4 options dans le tableau <code className="font-mono text-indigo-600 dark:text-indigo-400">"options"</code>. L'application préfixe automatiquement par <strong>A.</strong> (index 0), <strong>B.</strong> (index 1), <strong>C.</strong> (index 2) et <strong>D.</strong> (index 3).
-          </li>
-          <li>
-            <strong className="text-slate-800 dark:text-slate-200">Réponse correcte :</strong> <code className="font-mono text-indigo-600 dark:text-indigo-400">"answerIndex"</code> doit valoir <code className="font-mono font-bold">0</code> (pour A), <code className="font-mono font-bold">1</code> (pour B), <code className="font-mono font-bold">2</code> (pour C) ou <code className="font-mono font-bold">3</code> (pour D).
-          </li>
-          <li>
-            <strong className="text-slate-800 dark:text-slate-200">Destination / Mode :</strong> Ajoutez <code className="font-mono text-indigo-600 dark:text-indigo-400">"mode": "TRAINING"</code> (entraînement uniquement) ou <code className="font-mono text-indigo-600 dark:text-indigo-400">"mode": "SIMULATION"</code> (salons / concours). Si non renseigné, le sélecteur de destination ci-dessous sera utilisé par défaut.
-          </li>
-          <li>
-            <strong className="text-slate-800 dark:text-slate-200">Explications (Optionnelles) :</strong> Les champs <code className="font-mono text-indigo-600 dark:text-indigo-400">explanation</code> et <code className="font-mono text-indigo-600 dark:text-indigo-400">optionExplanations</code> sont facultatifs.
-          </li>
-        </ul>
       </div>
 
       {/* Zone de Drag & Drop */}
@@ -212,10 +198,10 @@ export function ImportJsonForm() {
         </div>
       </div>
 
-      {/* Le mode choisi s'applique à toutes les questions du fichier importé si non spécifié dans le JSON. */}
+      {/* Le mode choisi s'applique à toutes les questions du fichier importé. */}
       <div className="space-y-1.5">
         <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">
-          Destination par défaut des questions
+          Destination des questions
         </span>
         <div className="grid grid-cols-2 gap-1 p-1 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
           <button
@@ -260,7 +246,7 @@ export function ImportJsonForm() {
         </div>
 
         <textarea
-          rows={11}
+          rows={9}
           value={jsonText}
           onChange={(e) => handleTextChange(e.target.value)}
           placeholder={`[
@@ -268,20 +254,15 @@ export function ImportJsonForm() {
     "subject": "MATH",
     "topic": "Analyse",
     "difficulty": "EASY",
-    "mode": "SIMULATION",
+    "mode": "TRAINING", // ou "SIMULATION" (optionnel, hérite du bouton par défaut)
     "statement": "Quelle est la dérivée de f(x) = x² ?",
-    "options": [
-      "2x",     // -> S'affichera: A. 2x (index 0)
-      "x",      // -> S'affichera: B. x  (index 1)
-      "x²",     // -> S'affichera: C. x² (index 2)
-      "2"       // -> S'affichera: D. 2  (index 3)
-    ],
+    "options": ["2x", "x", "x²", "2"],
     "answerIndex": 0,
-    "explanation": "(x²)' = 2x",
+    "explanation": "(x²)' = 2x (Optionnel)",
     "optionExplanations": [
       "2x est la dérivée correcte",
       "x est incorrect",
-      "x² est la fonction de départ",
+      "x² est la fonction initiale",
       "2 est une constante"
     ]
   }
