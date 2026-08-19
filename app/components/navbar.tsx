@@ -20,7 +20,6 @@ import {
   X,
   Timer,
   ChevronRight,
-  ShieldCheck,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -30,14 +29,14 @@ interface NavbarProps {
 
 const CANDIDATE_LINKS = [
   { href: "/dashboard", label: "Tableau de bord", icon: LayoutDashboard },
-  { href: "/rooms", label: "Salles d'évaluation", icon: Building2 },
+  { href: "/rooms", label: "Salles", icon: Building2 },
   { href: "/training", label: "Entraînement", icon: BookOpen },
 ];
 
 const ADMIN_LINKS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/salles", label: "Salles", icon: Building2 },
-  { href: "/admin/contenus", label: "Contenus & Questions", icon: BookOpen },
+  { href: "/admin/contenus", label: "Contenus", icon: BookOpen },
   { href: "/admin/candidats", label: "Candidats", icon: Users },
 ];
 
@@ -58,12 +57,13 @@ export function Navbar({ user }: NavbarProps) {
   }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200/80 dark:border-white/10 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md transition-all">
-      <div className="flex h-16 items-center justify-between px-3 sm:px-6 max-w-7xl mx-auto">
-        {/* Logo & Mobile Menu Toggle */}
-        <div className="flex items-center gap-2 sm:gap-4">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        {/* ─── 1. GAUCHE : LOGO + HAMBURGER MOBILE ─── */}
+        <div className="flex items-center gap-3">
           <button
-            className="md:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 active:scale-95 transition-all"
+            type="button"
+            className="md:hidden p-2 -ml-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 active:scale-95 transition-all"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu de navigation"
           >
@@ -72,35 +72,30 @@ export function Navbar({ user }: NavbarProps) {
 
           <Link
             href={user.role === "ADMIN" ? "/admin" : "/dashboard"}
-            className="flex items-center gap-2.5 sm:gap-3 group select-none"
+            className="flex items-center gap-2.5 sm:gap-3 group shrink-0 select-none"
           >
-            <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-500/25 group-hover:shadow-indigo-500/40 transition-all duration-300 group-hover:scale-105">
+            <div className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-600 text-white shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/35 transition-all duration-300 group-hover:scale-105">
               <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
-                PreExcellantia
-              </span>
-              {user.role === "ADMIN" && (
-                <span className="text-[10px] font-extrabold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-                  Admin
-                </span>
-              )}
-            </div>
+            <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
+              PreExcellantia
+            </span>
           </Link>
         </div>
 
-        {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-1 bg-slate-100/70 dark:bg-slate-900/70 p-1 rounded-2xl border border-slate-200/60 dark:border-slate-800 absolute left-1/2 -translate-x-1/2">
+        {/* ─── 2. CENTRE : LIENS DESKTOP (PARFAITEMENT CENTRÉS ET ÉQUILIBRÉS) ─── */}
+        <nav className="hidden md:flex items-center gap-1 bg-slate-100/80 dark:bg-slate-900/80 p-1 rounded-2xl border border-slate-200/60 dark:border-slate-800">
           {links.map((link) => {
-            const isActive = pathname === link.href || (link.href !== "/admin" && link.href !== "/dashboard" && pathname.startsWith(link.href));
+            const isActive =
+              pathname === link.href ||
+              (link.href !== "/admin" && link.href !== "/dashboard" && pathname.startsWith(link.href));
             const Icon = link.icon;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-colors duration-200 ${
+                className={`relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-colors duration-200 whitespace-nowrap ${
                   isActive
                     ? "text-indigo-600 dark:text-indigo-400"
                     : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
@@ -120,22 +115,20 @@ export function Navbar({ user }: NavbarProps) {
               </Link>
             );
           })}
-        </div>
+        </nav>
 
-        {/* Right Section : Régimes Modal Trigger, Theme Toggle & User Info */}
+        {/* ─── 3. DROITE : RÉGIMES, THÈME & PROFIL ─── */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Bouton Guide des Régimes Temporels */}
           <button
             type="button"
             onClick={() => setRegimesModalOpen(true)}
-            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 border border-indigo-200/60 dark:border-indigo-500/20 transition-all active:scale-95"
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 border border-indigo-200/60 dark:border-indigo-500/20 transition-all active:scale-95 whitespace-nowrap"
             title="Consulter les règles des Régimes et Modes Chrono"
           >
             <Timer className="w-3.5 h-3.5 text-indigo-500" />
             <span className="hidden sm:inline">Régimes &amp; Chrono</span>
           </button>
 
-          {/* Theme Toggle */}
           {mounted && (
             <button
               type="button"
@@ -148,18 +141,13 @@ export function Navbar({ user }: NavbarProps) {
             </button>
           )}
 
-          <div className="w-[1px] h-6 bg-slate-200 dark:bg-slate-800 mx-0.5 hidden sm:block" />
+          <div className="w-[1px] h-6 bg-slate-200 dark:bg-slate-800 hidden sm:block" />
 
-          {/* User Profile Pill */}
+          {/* Profil Avatar & Logout */}
           <div className="flex items-center gap-2">
-            <div className="hidden lg:flex flex-col items-end text-right">
-              <span className="text-xs font-bold text-slate-900 dark:text-white truncate max-w-[140px]">
-                {user.fullname}
-              </span>
-              <span className="text-[10px] font-mono text-slate-400">
-                {user.role === "ADMIN" ? "Superviseur" : user.code}
-              </span>
-            </div>
+            <span className="hidden lg:block text-xs font-bold text-slate-800 dark:text-slate-200 truncate max-w-[130px]">
+              {user.fullname}
+            </span>
 
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-extrabold text-xs shadow-sm">
               {user.fullname.charAt(0).toUpperCase()}
@@ -179,7 +167,7 @@ export function Navbar({ user }: NavbarProps) {
         </div>
       </div>
 
-      {/* ─── MOBILE DRAWER COMPLET & TOUCH-FRIENDLY ─── */}
+      {/* ─── MENU MOBILE DÉROULANT COMPLET ─── */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -189,7 +177,6 @@ export function Navbar({ user }: NavbarProps) {
             className="md:hidden overflow-hidden border-t border-slate-200/80 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl shadow-xl"
           >
             <div className="px-4 py-4 space-y-4">
-              {/* Carte Utilisateur Mobile */}
               <div className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-extrabold text-sm">
@@ -208,10 +195,11 @@ export function Navbar({ user }: NavbarProps) {
                 </span>
               </div>
 
-              {/* Navigation Links */}
               <div className="space-y-1">
                 {links.map((link) => {
-                  const isActive = pathname === link.href || (link.href !== "/admin" && link.href !== "/dashboard" && pathname.startsWith(link.href));
+                  const isActive =
+                    pathname === link.href ||
+                    (link.href !== "/admin" && link.href !== "/dashboard" && pathname.startsWith(link.href));
                   const Icon = link.icon;
                   return (
                     <Link
@@ -233,7 +221,6 @@ export function Navbar({ user }: NavbarProps) {
                 })}
               </div>
 
-              {/* Bouton Guide Régimes Temporels Mobile */}
               <button
                 type="button"
                 onClick={() => {
@@ -249,7 +236,6 @@ export function Navbar({ user }: NavbarProps) {
                 <ChevronRight className="w-4 h-4 text-purple-400" />
               </button>
 
-              {/* Action Déconnexion Mobile */}
               <button
                 type="button"
                 onClick={() => startTransition(() => logoutAction())}
@@ -268,6 +254,6 @@ export function Navbar({ user }: NavbarProps) {
         isOpen={regimesModalOpen}
         onClose={() => setRegimesModalOpen(false)}
       />
-    </nav>
+    </header>
   );
 }

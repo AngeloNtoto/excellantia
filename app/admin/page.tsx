@@ -168,58 +168,53 @@ export default async function AdminDashboardPage() {
   ];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-      {/* ─── BANDEAU SUPÉRIEUR : ÉTAT DU SYSTÈME & ACTIONS DIRECTES ─── */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl border border-indigo-500/20 shadow-xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none" />
-        
-        <div className="relative z-10 space-y-2">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 border border-emerald-500/30 text-emerald-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              Système Opérationnel
-            </span>
-            <span className="text-xs text-indigo-200/60 font-mono">
-              PostgreSQL • v2.0
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8">
+      {/* ─── EN-TÊTE PROFESSIONNEL ÉPURÉ ─── */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200/80 dark:border-slate-800">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+              PostgreSQL v2.0
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Tableau de Bord Exécutif
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Tableau de Bord
           </h1>
-          <p className="text-sm text-indigo-200/80 max-w-2xl">
-            Supervision en temps réel des épreuves, monitoring des candidats, gestion des régimes temporels et flux de correction.
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-2xl">
+            Supervision en direct des épreuves, monitoring des candidats et analyse des résultats.
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-wrap items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
           <Link
             href="/admin/salles/create"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-indigo-500 hover:bg-indigo-600 text-white transition-all shadow-lg shadow-indigo-500/30 active:scale-95"
+            className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white transition-all shadow-md shadow-indigo-600/20"
           >
             <PlusCircle className="w-4 h-4" />
-            Nouvelle Salle
+            <span>Nouvelle Salle</span>
           </Link>
           <Link
             href="/admin/contenus"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-all backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 active:scale-95 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-all"
           >
-            <Database className="w-4 h-4 text-indigo-300" />
-            Banque ({questionsCount})
+            <Database className="w-4 h-4 text-indigo-500" />
+            <span>Banque ({questionsCount})</span>
           </Link>
         </div>
       </div>
 
       {/* ─── 4 CARTES KPI PRINCIPALES ─── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {/* KPI 1 : Candidats */}
         <div className="bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
               Candidats Inscrits
             </span>
-            <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
-              <Users className="w-5 h-5" />
+            <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+              <Users className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-4">
@@ -237,10 +232,10 @@ export default async function AdminDashboardPage() {
         <div className="bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-              Salles & Concours
+              Salles &amp; Concours
             </span>
-            <div className="p-2.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform">
-              <Building2 className="w-5 h-5" />
+            <div className="p-2 rounded-xl bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform">
+              <Building2 className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-4">
@@ -252,7 +247,7 @@ export default async function AdminDashboardPage() {
                 {activeRooms.length} en cours
               </span>
               <span>•</span>
-              <span>{scheduledRooms.length} programmées</span>
+              <span>{scheduledRooms.length} prog.</span>
             </div>
           </div>
         </div>
@@ -263,8 +258,8 @@ export default async function AdminDashboardPage() {
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
               Copies Soumises
             </span>
-            <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
-              <CheckCircle2 className="w-5 h-5" />
+            <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+              <CheckCircle2 className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-4">
@@ -285,8 +280,8 @@ export default async function AdminDashboardPage() {
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
               Banque Pédagogique
             </span>
-            <div className="p-2.5 rounded-xl bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
-              <BookOpen className="w-5 h-5" />
+            <div className="p-2 rounded-xl bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+              <BookOpen className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-4">
@@ -294,7 +289,7 @@ export default async function AdminDashboardPage() {
               {questionsCount}
             </div>
             <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">
-              <span>{passagesCount} textes de lecture</span>
+              <span>{passagesCount} textes</span>
               <span>•</span>
               <span>4 matières</span>
             </div>
