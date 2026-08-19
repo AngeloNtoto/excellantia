@@ -46,6 +46,9 @@ export async function createTextContentAction(formData: FormData) {
     return { error: result.error.issues[0].message };
   }
 
+  const questionsJsonRaw = formData.get("questionsJson") as string;
+  let attachedCount = 0;
+
   const text = await prisma.textContent.create({
     data: {
       title: result.data.title,
@@ -57,8 +60,141 @@ export async function createTextContentAction(formData: FormData) {
     },
   });
 
+  // Importer les questions JSON associées si fournies lors de la création
+  if (questionsJsonRaw && questionsJsonRaw.trim() !== "") {
+    try {
+      const parsedQuestions = JSON.parse(questionsJsonRaw);
+      const list = Array.isArray(parsedQuestions) ? parsedQuestions : [parsedQuestions];
+      for (const q of list) {
+        if (!q || typeof q !== "object") continue;
+        const parsed = createQuestionSchema.safeParse({
+          ...q,
+          textContentId: text.id,
+          subject: result.data.language === "EN" ? "ENGLISH" : "FRENCH",
+          difficulty: q.difficulty || "MEDIUM",
+          options: Array.isArray(q.options) ? q.options : [],
+          answerIndex: q.answerIndex ?? 0,
+          type: "PASSAGE_BASED",
+          source: q.source || "USER_CREATED",
+        });
+
+        if (parsed.success) {
+          await prisma.question.create({
+            data: {
+              textContentId: text.id,
+              subject: parsed.data.subject,
+              topic: parsed.data.topic ?? null,
+              subtopic: parsed.data.subtopic ?? null,
+              difficulty: parsed.data.difficulty,
+              language: parsed.data.language,
+              statement: parsed.data.statement,
+              options: parsed.data.options,
+              answerIndex: parsed.data.answerIndex,
+              explanation: parsed.data.explanation ?? null,
+              optionExplanations: parsed.data.optionExplanations
+                ? parsed.data.optionExplanations.filter((v): v is string => Boolean(v))
+                : undefined,
+              type: "PASSAGE_BASED",
+              source: parsed.data.source,
+              createdById: admin.id,
+            },
+          });
+          attachedCount++;
+        }
+      }
+    } catch {
+      // JSON questions ignored if malformed, text remains created
+    }
+  }
+
   revalidatePath("/admin/contenus");
-  return { ok: true, textId: text.id };
+  return { ok: true, textId: text.id, attachedCount };
+}
+
+/**
+ * Importation directe d'un lot de questions JSON pour un texte existant.
+ */
+export async function importQuestionsForTextAction(textId: string, questionsJson: unknown) {
+  const admin = await requireAdmin();
+
+  const text = await prisma.textContent.findUnique({
+    where: { id: textId },
+  });
+
+  if (!text) {
+    return { ok: false, createdQuestions: 0, errors: ["Texte introuvable."] };
+  }
+
+  let items: unknown[] = [];
+  if (Array.isArray(questionsJson)) {
+    items = questionsJson;
+  } else if (questionsJson && typeof questionsJson === "object") {
+    const obj = questionsJson as Record<string, unknown>;
+    items = Array.isArray(obj.questions) ? (obj.questions as unknown[]) : [obj];
+  } else {
+    return { ok: false, createdQuestions: 0, errors: ["Format JSON invalide. Doit être un tableau de questions."] };
+  }
+
+  let createdQuestions = 0;
+  const errors: string[] = [];
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    if (!item || typeof item !== "object") {
+      errors.push(`Question #${i + 1} : Format invalide.`);
+      continue;
+    }
+
+    const q = item as Record<string, unknown>;
+    const parsed = createQuestionSchema.safeParse({
+      ...q,
+      textContentId: text.id,
+      subject: text.language === "EN" ? "ENGLISH" : "FRENCH",
+      difficulty: q.difficulty || "MEDIUM",
+      options: Array.isArray(q.options) ? q.options : [],
+      answerIndex: q.answerIndex ?? 0,
+      type: "PASSAGE_BASED",
+      source: q.source || "USER_CREATED",
+    });
+
+    if (!parsed.success) {
+      errors.push(`Question #${i + 1} invalide : ${parsed.error.issues[0]?.message}`);
+      continue;
+    }
+
+    try {
+      await prisma.question.create({
+        data: {
+          textContentId: text.id,
+          subject: parsed.data.subject,
+          topic: parsed.data.topic ?? null,
+          subtopic: parsed.data.subtopic ?? null,
+          difficulty: parsed.data.difficulty,
+          language: parsed.data.language,
+          statement: parsed.data.statement,
+          options: parsed.data.options,
+          answerIndex: parsed.data.answerIndex,
+          explanation: parsed.data.explanation ?? null,
+          optionExplanations: parsed.data.optionExplanations
+            ? parsed.data.optionExplanations.filter((v): v is string => Boolean(v))
+            : undefined,
+          type: "PASSAGE_BASED",
+          source: parsed.data.source,
+          createdById: admin.id,
+        },
+      });
+      createdQuestions++;
+    } catch (err: any) {
+      errors.push(`Question #${i + 1} : ${err?.message || "Erreur base de données"}`);
+    }
+  }
+
+  revalidatePath("/admin/contenus");
+  return {
+    ok: errors.length === 0,
+    createdQuestions,
+    errors,
+  };
 }
 
 /**
