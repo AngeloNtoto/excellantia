@@ -22,6 +22,7 @@ export type RoomRow = {
   totalQuestions: number;
   submittedAttempts: number;
   totalAttempts: number;
+  creatorPercentage?: number | null;
 };
 
 // ─── Styles constants ─────────────────────────────────────────────────────────
@@ -304,6 +305,23 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                       <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: 130 }}>
                         {room.creatorName}
                       </span>
+                      {room.creatorPercentage !== undefined && room.creatorPercentage !== null && (
+                        <span
+                          style={{
+                            fontSize: "0.72rem",
+                            fontWeight: 700,
+                            color: "var(--accent, #6366f1)",
+                            background: "rgba(99,102,241,0.1)",
+                            padding: "1px 6px",
+                            borderRadius: 6,
+                            marginLeft: 4,
+                            whiteSpace: "nowrap",
+                          }}
+                          title="Score obtenu par le créateur de cette salle"
+                        >
+                          {Math.round(room.creatorPercentage)}%
+                        </span>
+                      )}
                     </div>
                   </td>
 

@@ -17,7 +17,7 @@ export default async function AdminRoomsPage() {
   const rooms = await prisma.room.findMany({
     orderBy: { createdAt: "desc" },
     include: {
-      createdBy: { select: { fullname: true } },
+      createdBy: { select: { id: true, fullname: true } },
       _count: {
         select: {
           attempts: true,
@@ -25,7 +25,14 @@ export default async function AdminRoomsPage() {
       },
       attempts: {
         select: {
+          userId: true,
           status: true,
+          percentage: true,
+          _count: {
+            select: {
+              answers: true,
+            },
+          },
         },
       },
     },
@@ -33,8 +40,12 @@ export default async function AdminRoomsPage() {
 
   // Mapper en RoomRow sérialisable
   const rows: RoomRow[] = rooms.map((room) => {
+    // Une tentative compte s'il y a eu soumission manuelle OU s'il y a des réponses saisies
     const submittedAttempts = room.attempts.filter((a) =>
-      ["SUBMITTED", "AUTO_SUBMITTED_TIME_EXPIRED", "AUTO_SUBMITTED_DISCONNECTED"].includes(a.status)
+      a.status === "SUBMITTED" || (
+        ["AUTO_SUBMITTED_TIME_EXPIRED", "AUTO_SUBMITTED_DISCONNECTED"].includes(a.status) &&
+        a._count.answers > 0
+      )
     ).length;
 
     const totalQuestions = Array.isArray(room.questionIds)
@@ -42,6 +53,12 @@ export default async function AdminRoomsPage() {
       : typeof room.questionIds === "string"
         ? (() => { try { return JSON.parse(room.questionIds as string).length; } catch { return 0; } })()
         : 0;
+
+    // Trouver le pourcentage réalisé par le créateur de la salle/classe
+    const creatorAttempt = room.attempts.find((a) => a.userId === room.createdById);
+    const creatorPercentage = creatorAttempt && creatorAttempt.percentage !== null
+      ? creatorAttempt.percentage
+      : null;
 
     return {
       id: room.id,
@@ -62,6 +79,7 @@ export default async function AdminRoomsPage() {
       totalQuestions,
       submittedAttempts,
       totalAttempts: room._count.attempts,
+      creatorPercentage,
     };
   });
 
