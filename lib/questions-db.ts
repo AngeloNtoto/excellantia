@@ -132,9 +132,17 @@ export async function generateRoomQuestionsFromDb(
     if (subject === "FRENCH" || subject === "ENGLISH") {
       const lang = subject === "ENGLISH" ? "EN" : "FR";
       
-      // Trouver tous les textes disponibles pour cette langue ayant des questions
+      // Trouver tous les textes disponibles pour cette langue compatibles avec le mode
       const textsWithQuestions = await prisma.textContent.findMany({
-        where: { language: lang, isActive: true },
+        where: {
+          language: lang,
+          isActive: true,
+          OR: [
+            { mode },
+            { mode: null },
+            ...(mode === "SIMULATION" && includeTrainingQuestions ? [{ mode: "TRAINING" as const }] : []),
+          ],
+        },
         include: { questions: { select: { id: true } } },
       });
 

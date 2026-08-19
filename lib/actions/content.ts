@@ -38,6 +38,7 @@ export async function createTextContentAction(formData: FormData) {
     language: (formData.get("language") as string) || "FR",
     content: formData.get("content") as string,
     source: (formData.get("source") as string) || undefined,
+    mode: (formData.get("mode") as string) || undefined,
     isActive: formData.get("isActive") === "on" || formData.get("isActive") === "true",
   };
 
@@ -55,6 +56,7 @@ export async function createTextContentAction(formData: FormData) {
       language: result.data.language,
       content: result.data.content,
       source: result.data.source ?? null,
+      mode: result.data.mode ?? null,
       isActive: result.data.isActive,
       createdById: admin.id,
     },
@@ -70,6 +72,7 @@ export async function createTextContentAction(formData: FormData) {
         const parsed = createQuestionSchema.safeParse({
           ...q,
           textContentId: text.id,
+          mode: q.mode || result.data.mode || undefined,
           subject: result.data.language === "EN" ? "ENGLISH" : "FRENCH",
           difficulty: q.difficulty || "MEDIUM",
           options: Array.isArray(q.options) ? q.options : [],
@@ -96,6 +99,7 @@ export async function createTextContentAction(formData: FormData) {
                 : undefined,
               type: "PASSAGE_BASED",
               source: parsed.data.source,
+              mode: parsed.data.mode ?? null,
               createdById: admin.id,
             },
           });
@@ -386,12 +390,20 @@ export async function importContentBundleAction(
     // Cas 1 : L'élément est un Texte (avec ou sans questions imbriquées)
     if (typeof item.title === "string" && typeof item.content === "string" && !item.statement) {
       try {
+        const rawTextMode = typeof item.mode === "string" ? item.mode.toUpperCase().trim() : undefined;
+        const textMode = (rawTextMode === "TRAINING" || rawTextMode === "SIMULATION")
+          ? rawTextMode
+          : rawTextMode === "UNIVERSAL" || rawTextMode === "ALL"
+            ? null
+            : (importMode === "TRAINING" || importMode === "SIMULATION") ? importMode : null;
+
         const text = await prisma.textContent.create({
           data: {
             title: item.title,
             language: (item.language === "EN" ? "EN" : "FR") as "FR" | "EN",
             content: item.content,
             source: typeof item.source === "string" ? item.source : null,
+            mode: textMode,
             isActive: item.isActive !== false,
             createdById: admin.id,
           },
@@ -405,7 +417,7 @@ export async function importContentBundleAction(
             const parsed = createQuestionSchema.safeParse({
               textContentId: text.id,
               ...q,
-              mode: q.mode || importMode,
+              mode: q.mode || textMode || importMode,
               subject: q.subject || (item.language === "EN" ? "ENGLISH" : "FRENCH"),
               difficulty: q.difficulty || "MEDIUM",
               options: Array.isArray(q.options) ? q.options : [],

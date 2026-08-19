@@ -30,6 +30,13 @@ export const createTextContentSchema = z.object({
   language: z.enum(["FR", "EN"]).default("FR"),
   content: z.string().min(20, "Le contenu doit contenir au moins 20 caractères"),
   source: z.string().optional(),
+  mode: z.preprocess(
+    (val) => {
+      if (!val || val === "UNIVERSAL" || val === "ALL") return null;
+      return typeof val === "string" ? val.toUpperCase().trim() : val;
+    },
+    z.enum(["TRAINING", "SIMULATION"]).optional().nullable()
+  ),
   isActive: z.boolean().default(true),
 });
 

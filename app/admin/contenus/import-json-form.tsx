@@ -104,6 +104,7 @@ export function ImportJsonForm() {
         {
           title: "Extrait : L'arbre à palabres",
           language: "FR",
+          mode: "UNIVERSAL", // "UNIVERSAL" (ou omit), "TRAINING", "SIMULATION"
           source: "Littérature africaine",
           content: "Sous le grand baobab au centre du village, les anciens se réunissaient chaque soir pour écouter et arbitrer les différends...",
           questions: [
@@ -112,7 +113,16 @@ export function ImportJsonForm() {
               options: ["Au bord du fleuve", "Sous le baobab", "Dans la case du chef", "Sur la colline"],
               answerIndex: 1,
               difficulty: "EASY",
+              mode: "TRAINING", // Question réservée aux entraînements
               explanation: "Le texte précise explicitement 'Sous le grand baobab au centre du village'.",
+            },
+            {
+              statement: "Quelle était la fonction principale de cette assemblée du soir ?",
+              options: ["Célébrer les récoltes", "Arbitrer les différends", "Enseigner la chasse", "Organiser la guerre"],
+              answerIndex: 1,
+              difficulty: "MEDIUM",
+              mode: "SIMULATION", // Question réservée aux simulations d'examen
+              explanation: "Le texte mentionne 'écouter et arbitrer les différends'.",
             },
           ],
         },

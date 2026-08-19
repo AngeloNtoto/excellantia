@@ -56,8 +56,8 @@ export function CreateTextContentForm() {
         />
       </div>
 
-      {/* Langue & Source (1 col mobile -> 2 cols tablette/desktop) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      {/* Langue, Mode & Source (1 col mobile -> 3 cols desktop) */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <div className="space-y-1">
           <label className="font-bold text-slate-900 dark:text-white block">Langue</label>
           <select
@@ -71,11 +71,24 @@ export function CreateTextContentForm() {
         </div>
 
         <div className="space-y-1">
+          <label className="font-bold text-slate-900 dark:text-white block">Mode d'usage</label>
+          <select
+            name="mode"
+            defaultValue="UNIVERSAL"
+            className="w-full p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 font-medium"
+          >
+            <option value="UNIVERSAL">Universel (Tous)</option>
+            <option value="TRAINING">Entraînement uniquement</option>
+            <option value="SIMULATION">Simulation / Salon</option>
+          </select>
+        </div>
+
+        <div className="space-y-1">
           <label className="font-bold text-slate-900 dark:text-white block">Source ou Auteur <span className="text-slate-400 font-normal">(Optionnel)</span></label>
           <input
             name="source"
             type="text"
-            placeholder="Ex: Extrait d'examen d'État, Le Monde..."
+            placeholder="Ex: Examen d'État, Le Monde..."
             className="w-full p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
           />
         </div>
