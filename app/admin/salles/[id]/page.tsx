@@ -94,8 +94,14 @@ export default async function AdminRoomDetailsPage({ params }: { params: Promise
                 <span style={{ fontWeight: 500 }}>{room.durationMin} minutes</span>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span style={{ color: "var(--text-secondary)" }}>Mode :</span>
-                <span style={{ fontWeight: 500 }}>{room.timeMode === "ABSOLUTE" ? "Absolu" : "Relatif"}</span>
+                <span style={{ color: "var(--text-secondary)" }}>Régime :</span>
+                <span style={{ fontWeight: 600, color: "var(--accent)" }}>
+                  {room.timingRegime === "TESLA" ? "⚡ Tesla" : room.timingRegime === "NEWTON" ? "⚙️ Newton" : "🌌 Einstein"}
+                </span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span style={{ color: "var(--text-secondary)" }}>Horloge :</span>
+                <span style={{ fontWeight: 500 }}>{room.clockMode === "ABSOLUTE" ? "Absolu" : "Relatif"}</span>
               </div>
               {room.accessCode && (
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 12px", background: "var(--warning-light)", borderRadius: "var(--radius-sm)", marginTop: 8 }}>

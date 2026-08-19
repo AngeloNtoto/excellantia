@@ -52,9 +52,17 @@ enum RoomVisibility {
   PRIVATE
 }
 
-enum TimeMode {
-  ABSOLUTE
-  RELATIVE
+// Régime Temporel — comment le temps s'écoule dans la salle
+enum TimingRegime {
+  EINSTEIN    // Le Continuum : temps global fluide, navigation libre entre matières
+  NEWTON      // La Mécanique : temps segmenté par matière, phase par phase
+  TESLA       // L'Éclair : 1 question = 1 minute, aucun retour possible
+}
+
+// Mode d'Horloge — quand le chronomètre commence
+enum ClockMode {
+  ABSOLUTE    // Tout le monde commence et finit en même temps (startsAt → endsAt)
+  RELATIVE    // Chacun son chrono individuel (démarre au clic, durée = durationMin)
 }
 
 enum QuestionType {
@@ -140,23 +148,25 @@ model Question {
 }
 
 model Room {
-  id                     String         @id @default(cuid())
-  title                  String
-  status                 RoomStatus     @default(WAITING)
-  visibility             RoomVisibility @default(PUBLIC)
-  mode                   RoomMode       @default(SIMULATION)
-  includeTrainingQuestions Boolean       @default(false)
-  accessCode             String?
-  timeMode               TimeMode       @default(ABSOLUTE)
-  durationMin            Int            @default(100)
-  startsAt               DateTime?
-  endsAt                 DateTime?
-  questionIds            Json?          // Legacy: IDs de questions générées par les fichiers JSON
-  config                 Json?          // Legacy: config de salle
-  timingConfig           Json?          // Nouveau: config de timing par matière / pause / attente
-  createdById            String
-  createdAt              DateTime       @default(now())
-  updatedAt              DateTime       @updatedAt
+  id                       String         @id @default(cuid())
+  title                    String
+  status                   RoomStatus     @default(WAITING)
+  visibility               RoomVisibility @default(PUBLIC)
+  mode                     RoomMode       @default(SIMULATION)
+  includeTrainingQuestions Boolean        @default(false)
+  accessCode               String?
+  timingRegime             TimingRegime   @default(EINSTEIN)  // Régime temporel de la salle
+  clockMode                ClockMode      @default(ABSOLUTE)  // Mode d'horloge
+  schrodingerMode          Boolean        @default(false)     // 🐱 Chrono caché si true
+  durationMin              Int            @default(100)
+  startsAt                 DateTime?
+  endsAt                   DateTime?
+  questionIds              Json?          // IDs des questions tirées pour cette salle
+  config                   Json?          // Config de génération (répartition, difficulté, etc.)
+  timingConfig             Json?          // Config de timing par matière (Newton) ou par question (Tesla)
+  createdById              String
+  createdAt                DateTime       @default(now())
+  updatedAt                DateTime       @updatedAt
 
   createdBy  User        @relation(fields: [createdById], references: [id])
   attempts   Attempt[]

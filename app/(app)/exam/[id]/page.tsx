@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import { getQuestionsByIdsFromDb, getPassagesForQuestions } from "@/lib/questions-db";
-import { ExamClient } from "./client";
+import { ExamRunner } from "./exam-runner";
 
 export default async function ExamPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -24,14 +24,9 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
   }
 
   const room = attempt.room;
-  
-  if (room.status !== "RUNNING") {
-     // Si la salle n'est plus en cours, forcer la soumission de l'examen au chargement (fait côté client ou check de cron)
-  }
-
   const questions = await getQuestionsByIdsFromDb(room.questionIds as string[]);
   
-  // Extraire les passages nécessaires de façon unifiée (DB TextContent + fallback JSON)
+  // Extraire les passages nécessaires de façon unifiée
   const passages = await getPassagesForQuestions(questions);
 
   // Préparer les données pour le client
@@ -50,9 +45,10 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
 
   return (
     <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
-      <ExamClient 
+      <ExamRunner 
         attemptId={attempt.id}
         roomId={room.id}
+        roomTitle={room.title}
         accessCode={room.accessCode}
         questions={clientQuestions}
         passages={passages}
@@ -60,9 +56,13 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
         endsAt={room.endsAt?.getTime() ?? null}
         durationMin={room.durationMin}
         startedAt={attempt.startedAt.getTime()}
-        timeMode={room.timeMode}
+        timingRegime={room.timingRegime}
+        clockMode={room.clockMode}
+        schrodingerMode={room.schrodingerMode}
+        timingConfig={room.timingConfig as any}
         pausableTimer={(room.config as any)?.pausableTimer === true}
         previousTimeUsedSec={attempt.timeUsedSec ?? 0}
+        bySubject={(room.config as any)?.bySubject}
       />
     </div>
   );

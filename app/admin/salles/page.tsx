@@ -54,7 +54,9 @@ export default async function AdminRoomsPage() {
       visibility: room.visibility as "PUBLIC" | "PRIVATE",
       accessCode: room.accessCode,
       durationMin: room.durationMin,
-      timeMode: room.timeMode,
+      timingRegime: room.timingRegime,
+      clockMode: room.clockMode,
+      schrodingerMode: room.schrodingerMode,
       startsAt: room.startsAt
         ? room.startsAt.toLocaleDateString("fr-FR") + " " +
           room.startsAt.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })

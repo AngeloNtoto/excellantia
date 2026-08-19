@@ -66,8 +66,14 @@ export default async function RoomDetailsPage({ params }: { params: Promise<{ id
             <span style={{ fontWeight: 500 }}>{room.durationMin} minutes</span>
           </div>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <span style={{ color: "var(--text-secondary)" }}>Mode de temps :</span>
-            <span style={{ fontWeight: 500 }}>{room.timeMode === "ABSOLUTE" ? "Absolu (Même heure de fin pour tous)" : "Relatif (Individuel)"}</span>
+            <span style={{ color: "var(--text-secondary)" }}>Régime temporel :</span>
+            <span style={{ fontWeight: 600, color: "var(--accent)" }}>
+              {room.timingRegime === "TESLA" ? "⚡ Tesla (L'Éclair)" : room.timingRegime === "NEWTON" ? "⚙️ Newton (La Mécanique)" : "🌌 Einstein (Le Continuum)"}
+            </span>
+          </div>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <span style={{ color: "var(--text-secondary)" }}>Mode d'horloge :</span>
+            <span style={{ fontWeight: 500 }}>{room.clockMode === "ABSOLUTE" ? "Absolu (Heure fixe pour tous)" : "Relatif (Individuel)"}</span>
           </div>
           {room.startsAt && (
             <div style={{ display: "flex", justifyContent: "space-between" }}>

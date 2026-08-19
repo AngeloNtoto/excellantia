@@ -10,7 +10,9 @@ interface RoomData {
   title: string;
   visibility: string;
   status: string;
-  timeMode?: string;
+  timingRegime?: string;
+  clockMode?: string;
+  schrodingerMode?: boolean;
   durationMin: number;
   startsAt: Date | null;
   endsAt: Date | null;
@@ -76,7 +78,7 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
             const isPrivate = room.visibility === "PRIVATE";
             const calculatedEndAt = room.endsAt
               ? new Date(room.endsAt)
-              : room.timeMode === "ABSOLUTE" && room.startsAt
+              : room.clockMode === "ABSOLUTE" && room.startsAt
                 ? new Date(new Date(room.startsAt).getTime() + room.durationMin * 60_000)
                 : null;
             const isExpired = !!calculatedEndAt && calculatedEndAt <= now;
@@ -115,6 +117,27 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
                     }`}>
                       {isExpired ? "Terminé" : ROOM_STATUS_LABELS[room.status as keyof typeof ROOM_STATUS_LABELS]}
                     </span>
+
+                    {/* Badge Régime Temporel */}
+                    {room.timingRegime === "TESLA" ? (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-400">
+                        ⚡ Tesla
+                      </span>
+                    ) : room.timingRegime === "NEWTON" ? (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400">
+                        ⚙️ Newton
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+                        🌌 Einstein
+                      </span>
+                    )}
+
+                    {room.schrodingerMode && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400">
+                        Schrödinger
+                      </span>
+                    )}
                   </div>
                   <div className="flex items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
                     <span className="flex items-center gap-1.5">

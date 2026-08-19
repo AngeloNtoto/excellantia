@@ -90,6 +90,55 @@ export async function createRoomAction(formData: FormData) {
     return { error: gen.errors?.join("\n") ?? "Génération impossible." };
   }
 
+  // Régime et mode d'horloge
+  let timingRegime = d.timingRegime || "EINSTEIN";
+  let clockMode = d.clockMode || "ABSOLUTE";
+  let durationMin = d.durationMin;
+  const totalQuestions = d.mathCount + d.frenchCount + d.englishCount + d.cultureCount;
+
+  // Règles strictes par régime :
+  if (timingRegime === "NEWTON") {
+    // Newton : toujours en temps absolu restreint
+    clockMode = "ABSOLUTE";
+  } else if (timingRegime === "TESLA") {
+    // Tesla : 1 question = 1 minute, temps relatif par candidat (avec hard limit de salle à 5h)
+    clockMode = "RELATIVE";
+    durationMin = Math.max(1, totalQuestions); // 1 minute par question
+  }
+
+  // Configuration spécifique pour le Régime Newton (segmentation par phase)
+  let timingConfig: any = null;
+  if (timingRegime === "NEWTON" && gen.questionIds) {
+    const totalSec = durationMin * 60;
+    const questionsFromDb = await prisma.question.findMany({
+      where: { id: { in: gen.questionIds } },
+      select: { id: true, subject: true },
+    });
+    
+    const subjectsOrder: Subject[] = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
+    const phases = subjectsOrder
+      .filter((sub) => (config.bySubject[sub] ?? 0) > 0)
+      .map((sub) => {
+        const count = config.bySubject[sub] ?? 0;
+        const subQuestionIds = questionsFromDb
+          .filter((q) => q.subject === sub)
+          .map((q) => q.id);
+        const durationSec = Math.max(60, Math.round((count / totalQuestions) * totalSec));
+        return {
+          subject: sub,
+          label: sub === "MATH" ? "Mathématiques" : sub === "FRENCH" ? "Français" : sub === "ENGLISH" ? "Anglais" : "Culture générale",
+          durationSec,
+          questionCount: count,
+          questionIds: subQuestionIds,
+        };
+      });
+
+    timingConfig = {
+      totalSec,
+      phases,
+    };
+  }
+
   // Dates
   const createdAt = new Date();
   // Hard limit : la salle expire au plus tard 5h après sa création
@@ -102,25 +151,22 @@ export async function createRoomAction(formData: FormData) {
   if (d.startNow) {
     startsAt = createdAt;
     status = "RUNNING";
-    if (d.timeMode === "ABSOLUTE") {
-      // Prendre le plus tôt entre la durée configurée et le hard limit
-      const calculated = new Date(startsAt.getTime() + d.durationMin * 60_000);
+    if (clockMode === "ABSOLUTE") {
+      const calculated = new Date(startsAt.getTime() + durationMin * 60_000);
       endsAt = calculated < hardDeadline ? calculated : hardDeadline;
     } else {
-      // Mode relatif : imposer quand même la limite absolue de 5h
       endsAt = hardDeadline;
     }
   } else if (d.scheduledAt) {
     startsAt = new Date(d.scheduledAt);
     status = "SCHEDULED";
-    if (d.timeMode === "ABSOLUTE") {
-      const calculated = new Date(startsAt.getTime() + d.durationMin * 60_000);
+    if (clockMode === "ABSOLUTE") {
+      const calculated = new Date(startsAt.getTime() + durationMin * 60_000);
       endsAt = calculated < hardDeadline ? calculated : hardDeadline;
     } else {
       endsAt = hardDeadline;
     }
   } else {
-    // Salle en attente sans date de démarrage : hard limit quand même
     endsAt = hardDeadline;
   }
 
@@ -130,12 +176,15 @@ export async function createRoomAction(formData: FormData) {
       status,
       visibility: d.visibility,
       accessCode: d.visibility === "PRIVATE" ? (d.accessCode || generateAccessCode()) : null,
-      timeMode: d.timeMode,
-      durationMin: d.durationMin,
+      timingRegime,
+      clockMode,
+      schrodingerMode: d.schrodingerMode ?? false,
+      durationMin,
       startsAt,
       endsAt,
       questionIds: gen.questionIds as any,
       config: config as any,
+      timingConfig: timingConfig as any,
       createdById: admin.id,
     },
   });
@@ -173,7 +222,7 @@ export async function startRoomNowAction(roomId: string) {
   // Hard limit : 5h après la création originale de la salle
   const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
   let endsAt: Date;
-  if (room.timeMode === "ABSOLUTE") {
+  if (room.clockMode === "ABSOLUTE") {
     const calculated = new Date(startsAt.getTime() + room.durationMin * 60_000);
     endsAt = calculated < hardDeadline ? calculated : hardDeadline;
   } else {
@@ -231,7 +280,7 @@ export async function checkRoomStatuses() {
     const hardDeadline = new Date(room.createdAt.getTime() + ROOM_MAX_DURATION_MS);
     let endsAt: Date | null = null;
 
-    if (room.timeMode === "ABSOLUTE" && room.startsAt) {
+    if (room.clockMode === "ABSOLUTE" && room.startsAt) {
       const calculated = new Date(room.startsAt.getTime() + room.durationMin * 60_000);
       endsAt = calculated < hardDeadline ? calculated : hardDeadline;
     } else {
@@ -256,7 +305,7 @@ export async function checkRoomStatuses() {
 
     const effectiveEndAt = room.endsAt
       ? new Date(room.endsAt)
-      : room.timeMode === "ABSOLUTE" && room.startsAt
+      : room.clockMode === "ABSOLUTE" && room.startsAt
         ? new Date(room.startsAt.getTime() + room.durationMin * 60_000)
         : null;
 
@@ -280,7 +329,7 @@ export async function checkRoomStatuses() {
 
     // Fermer si : durée écoulée (toute mode), hard limit atteint, ou tous soumis (mode relatif)
     const timeExpired = resolvedEndAt <= now;
-    const shouldClose = timeExpired || (room.timeMode === "RELATIVE" && allAttemptsSubmitted);
+    const shouldClose = timeExpired || (room.clockMode === "RELATIVE" && allAttemptsSubmitted);
 
     if (shouldClose) {
       await prisma.room.update({

@@ -6,7 +6,8 @@ import { useTransition, useEffect, useState } from "react";
 import { logoutAction } from "@/lib/actions/auth";
 import type { SessionUser } from "@/lib/types";
 import { useTheme } from "./theme-provider";
-import { LogOut, Sun, Moon, LayoutDashboard, Building2, BookOpen, GraduationCap, Users, Menu, X } from "lucide-react";
+import { RegimesInfoModal } from "./regimes-info-modal";
+import { LogOut, Sun, Moon, LayoutDashboard, Building2, BookOpen, GraduationCap, Users, Menu, X, Timer } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
@@ -32,6 +33,7 @@ export function Navbar({ user }: NavbarProps) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [regimesModalOpen, setRegimesModalOpen] = useState(false);
   const links = user.role === "ADMIN" ? ADMIN_LINKS : CANDIDATE_LINKS;
 
   useEffect(() => setMounted(true), []);
@@ -96,6 +98,16 @@ export function Navbar({ user }: NavbarProps) {
 
         {/* Right Section */}
         <div className="flex items-center gap-2 sm:gap-4">
+          {/* Bouton Guide des Régimes Temporels */}
+          <button
+            onClick={() => setRegimesModalOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 border border-indigo-200/50 dark:border-indigo-500/20 transition-all"
+            title="Consulter les règles des Régimes Temporels (Einstein, Newton, Tesla, Schrödinger)"
+          >
+            <Timer className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Régimes Temporels</span>
+          </button>
+
           {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -167,6 +179,11 @@ export function Navbar({ user }: NavbarProps) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <RegimesInfoModal
+        isOpen={regimesModalOpen}
+        onClose={() => setRegimesModalOpen(false)}
+      />
     </nav>
   );
 }

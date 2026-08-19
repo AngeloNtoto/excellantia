@@ -260,15 +260,129 @@ export function CreateRoomForm() {
             Inclure des questions d&apos;entraînement
           </label>
 
+          {/* SÉLECTEUR DE RÉGIME TEMPOREL */}
+          <div>
+            <label style={labelStyle}>Régime Temporel de l'Épreuve</label>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, marginBottom: 8 }}>
+              {/* Einstein */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="timingRegime" value="EINSTEIN" defaultChecked />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Einstein</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(99, 102, 241, 0.15)", color: "#6366f1" }}>
+                    Continuum
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  Temps global fluide. Toutes les questions sont accessibles en continu.
+                </p>
+              </label>
+
+              {/* Newton */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="timingRegime" value="NEWTON" />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Newton</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(245, 158, 11, 0.15)", color: "#f59e0b" }}>
+                    Mécanique
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  Temps segmenté par matière. Écran de repos pour les finisseurs précoces.
+                </p>
+              </label>
+
+              {/* Tesla */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="timingRegime" value="TESLA" />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Tesla</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(6, 182, 212, 0.15)", color: "#06b6d4" }}>
+                    Éclair
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  1 min = 1 question. Passage auto, sans retour en arrière possible.
+                </p>
+              </label>
+            </div>
+          </div>
+
+          {/* OPTION SCHRÖDINGER */}
+          <label
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              gap: 12,
+              padding: "14px 16px",
+              borderRadius: 14,
+              border: "1px solid rgba(139, 92, 246, 0.3)",
+              background: "rgba(139, 92, 246, 0.05)",
+              cursor: "pointer",
+            }}
+          >
+            <input type="checkbox" name="schrodingerMode" value="true" style={{ marginTop: 3 }} />
+            <div>
+              <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#8b5cf6" }}>
+                Option Schrödinger (Compte à rebours quantique)
+              </div>
+              <div style={{ fontSize: "0.78rem", color: "var(--text-secondary)", marginTop: 2 }}>
+                Chronomètre masqué avec alertes de passage (50%, 25%) et activation du décompte d'urgence aux tierces (centièmes) à 60s de la fin.
+              </div>
+            </div>
+          </label>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 16 }}>
             <div>
-              <label style={labelStyle}>Durée (minutes)</label>
-              <input type="number" name="durationMin" style={inputStyle} defaultValue="100" min="10" required />
+              <label style={labelStyle}>Durée globale (minutes)</label>
+              <input type="number" name="durationMin" style={inputStyle} defaultValue="100" min="1" required />
             </div>
             <div>
-              <label style={labelStyle}>Mode de temps</label>
-              <select name="timeMode" style={inputStyle} defaultValue="ABSOLUTE" required>
-                <option value="ABSOLUTE">Absolu (fin à heure fixe)</option>
+              <label style={labelStyle}>Mode d'horloge</label>
+              <select name="clockMode" style={inputStyle} defaultValue="ABSOLUTE" required>
+                <option value="ABSOLUTE">Absolu (heure fixe pour tous)</option>
                 <option value="RELATIVE">Relatif (chronomètre individuel)</option>
               </select>
             </div>

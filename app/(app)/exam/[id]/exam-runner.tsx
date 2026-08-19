@@ -1,0 +1,93 @@
+"use client";
+
+import { useState } from "react";
+import { BriefingScreen } from "./briefing-screen";
+import { ExamClient } from "./client";
+import { TimingRegime, ClockMode, NewtonTimingConfig, Subject } from "@/lib/types";
+
+export function ExamRunner({
+  attemptId,
+  roomId,
+  roomTitle,
+  accessCode,
+  questions,
+  passages,
+  initialAnswers,
+  endsAt,
+  durationMin,
+  startedAt,
+  timingRegime = "EINSTEIN",
+  clockMode = "ABSOLUTE",
+  schrodingerMode = false,
+  timingConfig,
+  pausableTimer,
+  previousTimeUsedSec,
+  bySubject,
+}: {
+  attemptId: string;
+  roomId: string;
+  roomTitle: string;
+  accessCode?: string | null;
+  questions: Array<{
+    id: string;
+    subject: Subject;
+    statement: string;
+    options: [string, string, string, string];
+    passageId?: string;
+  }>;
+  passages: Array<{
+    id: string;
+    title: string;
+    language: string;
+    content: string;
+  }>;
+  initialAnswers: Record<string, { selectedIndex: number | null; flagged: boolean }>;
+  endsAt: number | null;
+  durationMin: number;
+  startedAt: number;
+  timingRegime?: TimingRegime;
+  clockMode?: ClockMode;
+  schrodingerMode?: boolean;
+  timingConfig?: NewtonTimingConfig | null;
+  pausableTimer?: boolean;
+  previousTimeUsedSec: number;
+  bySubject?: Record<Subject, number>;
+}) {
+  // Le briefing est affiché au début si aucune réponse n'a été saisie encore
+  const hasAlreadyStarted = Object.keys(initialAnswers).length > 0;
+  const [hasConfirmedBriefing, setHasConfirmedBriefing] = useState<boolean>(hasAlreadyStarted);
+
+  if (!hasConfirmedBriefing) {
+    return (
+      <BriefingScreen
+        roomTitle={roomTitle}
+        timingRegime={timingRegime}
+        schrodingerMode={schrodingerMode}
+        durationMin={durationMin}
+        totalQuestions={questions.length}
+        bySubject={bySubject}
+        onStartExam={() => setHasConfirmedBriefing(true)}
+      />
+    );
+  }
+
+  return (
+    <ExamClient
+      attemptId={attemptId}
+      roomId={roomId}
+      accessCode={accessCode}
+      questions={questions}
+      passages={passages}
+      initialAnswers={initialAnswers}
+      endsAt={endsAt}
+      durationMin={durationMin}
+      startedAt={startedAt}
+      timingRegime={timingRegime}
+      clockMode={clockMode}
+      schrodingerMode={schrodingerMode}
+      timingConfig={timingConfig}
+      pausableTimer={pausableTimer}
+      previousTimeUsedSec={previousTimeUsedSec}
+    />
+  );
+}

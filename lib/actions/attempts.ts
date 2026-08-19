@@ -51,6 +51,41 @@ export async function startAttemptAction(roomId: string) {
   return { ok: true, attemptId: attempt.id };
 }
 
+// ─── Réinitialiser une tentative Tesla sur rafraîchissement ──────────────────
+
+export async function resetTeslaAttemptAction(attemptId: string) {
+  const session = await requireAuth();
+
+  const attempt = await prisma.attempt.findUnique({
+    where: { id: attemptId },
+    include: { room: true },
+  });
+
+  if (!attempt || attempt.userId !== session.id) {
+    return { error: "Tentative non autorisée." };
+  }
+
+  if (attempt.room.timingRegime !== "TESLA") {
+    return { error: "La réinitialisation est réservée au mode Tesla." };
+  }
+
+  // Supprimer toutes les réponses saisies
+  await prisma.answer.deleteMany({
+    where: { attemptId },
+  });
+
+  // Remettre à zéro le chrono et la tentative
+  await prisma.attempt.update({
+    where: { id: attemptId },
+    data: {
+      startedAt: new Date(),
+      timeUsedSec: 0,
+    },
+  });
+
+  return { ok: true };
+}
+
 // ─── Sauvegarder une réponse ──────────────────────────────────────────────────
 
 export async function saveAnswerAction(
