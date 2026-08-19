@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TIMING_REGIMES, CHRONO_MODES, TimingRegime, ChronoMode } from "@/lib/types";
 import {
   Infinity,
@@ -15,6 +15,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { createPortal } from "react-dom";
 
 export function RegimesInfoModal({
   isOpen,
@@ -26,13 +27,19 @@ export function RegimesInfoModal({
   initialRegime?: TimingRegime;
 }) {
   const [activeTab, setActiveTab] = useState<TimingRegime | ChronoMode>(initialRegime);
+  // Monté côté client uniquement pour éviter les erreurs SSR avec createPortal
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
 
   const regimesList: TimingRegime[] = ["EINSTEIN", "NEWTON", "TESLA"];
   const chronoModesList: ChronoMode[] = ["GALILEE", "HEISENBERG", "SCHRODINGER"];
 
-  return (
+  // On utilise createPortal pour téléporter le modal dans document.body,
+  // ce qui lui permet d'échapper au contexte de stacking du header (z-50)
+  // et d'être toujours affiché au-dessus de tous les autres éléments.
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto bg-slate-950/80 backdrop-blur-md transition-all"
       onClick={onClose}
@@ -213,6 +220,7 @@ export function RegimesInfoModal({
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
