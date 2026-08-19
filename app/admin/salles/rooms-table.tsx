@@ -16,7 +16,7 @@ export type RoomRow = {
   durationMin: number;
   timingRegime?: string;
   clockMode?: string;
-  schrodingerMode?: boolean;
+  chronoMode?: string;
   startsAt: string | null;
   creatorName: string;
   totalQuestions: number;
@@ -295,9 +295,11 @@ export function RoomsTable({ rooms }: { rooms: RoomRow[] }) {
                       <span style={{ color: room.timingRegime === "TESLA" ? "#06b6d4" : room.timingRegime === "NEWTON" ? "#f59e0b" : "#6366f1", fontWeight: 700 }}>
                         {room.timingRegime === "TESLA" ? "⚡ Tesla" : room.timingRegime === "NEWTON" ? "⚙️ Newton" : "🌌 Einstein"}
                       </span>
-                      {room.schrodingerMode && (
-                        <span style={{ color: "#8b5cf6", fontWeight: 600 }}>+ Sch.</span>
-                      )}
+                      {room.chronoMode === "SCHRODINGER" ? (
+                        <span style={{ color: "#8b5cf6", fontWeight: 600 }}>• Sch.</span>
+                      ) : room.chronoMode === "HEISENBERG" ? (
+                        <span style={{ color: "#f59e0b", fontWeight: 600 }}>• Heis.</span>
+                      ) : null}
                     </div>
                   </td>
 

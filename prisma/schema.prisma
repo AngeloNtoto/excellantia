@@ -61,8 +61,15 @@ enum TimingRegime {
 
 // Mode d'Horloge — quand le chronomètre commence
 enum ClockMode {
-  ABSOLUTE    // Tout le monde commence et finit en même temps (startsAt → endsAt)
-  RELATIVE    // Chacun son chrono individuel (démarre au clic, durée = durationMin)
+  ABSOLUTE    // Temps Absolu : heure de début et fin fixe pour tous (startsAt → endsAt)
+  RELATIVE    // Temps Relatif : chronomètre individuel (démarre au clic, durée = durationMin)
+}
+
+// Mode d'Affichage du Chronomètre — visibilité et dynamique du cadran
+enum ChronoMode {
+  GALILEE       // Galilée : Chronomètre visible en continu de A à Z
+  HEISENBERG    // Heisenberg : Fenêtres clés (100-95%, 75-70%, 55-50%, 25-20%, <=60s)
+  SCHRODINGER   // Schrödinger : Masqué à 100%, 2 ouvertures de boîte autorisées, urgence <=60s
 }
 
 enum QuestionType {
@@ -156,8 +163,8 @@ model Room {
   includeTrainingQuestions Boolean        @default(false)
   accessCode               String?
   timingRegime             TimingRegime   @default(EINSTEIN)  // Régime temporel de la salle
-  clockMode                ClockMode      @default(ABSOLUTE)  // Mode d'horloge
-  schrodingerMode          Boolean        @default(false)     // 🐱 Chrono caché si true
+  clockMode                ClockMode      @default(ABSOLUTE)  // Temps Absolu ou Temps Relatif
+  chronoMode               ChronoMode     @default(GALILEE)   // Mode d'affichage du chrono (GALILEE, HEISENBERG, SCHRODINGER)
   durationMin              Int            @default(100)
   startsAt                 DateTime?
   endsAt                   DateTime?

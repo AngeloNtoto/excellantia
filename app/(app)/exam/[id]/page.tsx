@@ -58,7 +58,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
         startedAt={attempt.startedAt.getTime()}
         timingRegime={room.timingRegime}
         clockMode={room.clockMode}
-        schrodingerMode={room.schrodingerMode}
+        chronoMode={room.chronoMode}
         timingConfig={room.timingConfig as any}
         pausableTimer={(room.config as any)?.pausableTimer === true}
         previousTimeUsedSec={attempt.timeUsedSec ?? 0}

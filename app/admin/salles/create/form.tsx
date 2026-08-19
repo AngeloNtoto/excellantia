@@ -350,29 +350,95 @@ export function CreateRoomForm() {
             </div>
           </div>
 
-          {/* OPTION SCHRÖDINGER */}
-          <label
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              gap: 12,
-              padding: "14px 16px",
-              borderRadius: 14,
-              border: "1px solid rgba(139, 92, 246, 0.3)",
-              background: "rgba(139, 92, 246, 0.05)",
-              cursor: "pointer",
-            }}
-          >
-            <input type="checkbox" name="schrodingerMode" value="true" style={{ marginTop: 3 }} />
-            <div>
-              <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#8b5cf6" }}>
-                Option Schrödinger (Compte à rebours quantique)
-              </div>
-              <div style={{ fontSize: "0.78rem", color: "var(--text-secondary)", marginTop: 2 }}>
-                Chronomètre masqué avec alertes de passage (50%, 25%) et activation du décompte d'urgence aux tierces (centièmes) à 60s de la fin.
-              </div>
+          {/* SÉLECTEUR DU MODE D'AFFICHAGE DU CHRONOMÈTRE */}
+          <div>
+            <label style={labelStyle}>Mode d'Affichage du Chronomètre</label>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, marginBottom: 8 }}>
+              {/* Galilée */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="chronoMode" value="GALILEE" defaultChecked />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Galilée</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(99, 102, 241, 0.15)", color: "#6366f1" }}>
+                    Continu
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  Chronomètre visible en permanence de la 1ère à la dernière seconde.
+                </p>
+              </label>
+
+              {/* Heisenberg */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="chronoMode" value="HEISENBERG" />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Heisenberg</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(245, 158, 11, 0.15)", color: "#f59e0b" }}>
+                    Incertitude
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  Visible par fenêtres (100-95%, 75-70%, 55-50%, 25-20%) et sous 60s.
+                </p>
+              </label>
+
+              {/* Schrödinger */}
+              <label
+                style={{
+                  border: "1.5px solid var(--border)",
+                  borderRadius: 14,
+                  padding: "14px 16px",
+                  cursor: "pointer",
+                  background: "var(--bg-muted)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 6,
+                  transition: "all 0.15s ease",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <input type="radio" name="chronoMode" value="SCHRODINGER" />
+                    <strong style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>Schrödinger</strong>
+                  </div>
+                  <span style={{ fontSize: "0.7rem", fontWeight: 700, padding: "2px 8px", borderRadius: 6, background: "rgba(139, 92, 246, 0.15)", color: "#8b5cf6" }}>
+                    Boîte Noire
+                  </span>
+                </div>
+                <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.4 }}>
+                  Chrono masqué, 2 ouvertures de boîte (5s) et révélation sous 60s.
+                </p>
+              </label>
             </div>
-          </label>
+          </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 16 }}>
             <div>

@@ -56,7 +56,7 @@ export default async function AdminRoomsPage() {
       durationMin: room.durationMin,
       timingRegime: room.timingRegime,
       clockMode: room.clockMode,
-      schrodingerMode: room.schrodingerMode,
+      chronoMode: room.chronoMode,
       startsAt: room.startsAt
         ? room.startsAt.toLocaleDateString("fr-FR") + " " +
           room.startsAt.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })

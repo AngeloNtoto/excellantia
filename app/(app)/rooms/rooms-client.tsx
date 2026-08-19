@@ -12,7 +12,7 @@ interface RoomData {
   status: string;
   timingRegime?: string;
   clockMode?: string;
-  schrodingerMode?: boolean;
+  chronoMode?: string;
   durationMin: number;
   startsAt: Date | null;
   endsAt: Date | null;
@@ -133,11 +133,16 @@ export function RoomsClient({ availableRooms, pastRooms }: RoomsClientProps) {
                       </span>
                     )}
 
-                    {room.schrodingerMode && (
+                    {/* Badge Mode Chronomètre */}
+                    {room.chronoMode === "SCHRODINGER" ? (
                       <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 dark:bg-purple-500/10 dark:text-purple-400">
                         Schrödinger
                       </span>
-                    )}
+                    ) : room.chronoMode === "HEISENBERG" ? (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400">
+                        Heisenberg
+                      </span>
+                    ) : null}
                   </div>
                   <div className="flex items-center gap-4 text-sm font-medium text-gray-500 dark:text-gray-400">
                     <span className="flex items-center gap-1.5">

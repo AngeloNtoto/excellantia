@@ -6,7 +6,7 @@ import { RoomsClient } from "./rooms-client";
 
 function getEffectiveEndAt(room: any) {
   if (room.endsAt) return new Date(room.endsAt);
-  if (room.timeMode === "ABSOLUTE" && room.startsAt) {
+  if (room.clockMode === "ABSOLUTE" && room.startsAt) {
     return new Date(new Date(room.startsAt).getTime() + room.durationMin * 60_000);
   }
   return null;
@@ -21,7 +21,7 @@ function isRoomExpired(room: any, now: Date, attempts: Array<{ status: string }>
     attempt.status === "SUBMITTED" || attempt.status === "AUTO_SUBMITTED_TIME_EXPIRED" || attempt.status === "AUTO_SUBMITTED_DISCONNECTED"
   );
 
-  return byStatus || byTime || (room.timeMode === "RELATIVE" && allAttemptsSubmitted);
+  return byStatus || byTime || (room.clockMode === "RELATIVE" && allAttemptsSubmitted);
 }
 
 export const metadata = { title: "Salles disponibles" };

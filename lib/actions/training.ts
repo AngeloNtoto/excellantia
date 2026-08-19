@@ -89,7 +89,7 @@ export async function startTrainingAction(formData: FormData) {
       visibility: "PRIVATE",
       timingRegime: "EINSTEIN",
       clockMode: "RELATIVE",
-      schrodingerMode: false,
+      chronoMode: "GALILEE",
       durationMin,
       accessCode,
       questionIds: gen.questionIds as any,

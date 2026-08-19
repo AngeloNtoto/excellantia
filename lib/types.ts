@@ -86,23 +86,81 @@ export const TIMING_REGIMES: Record<TimingRegime, TimingRegimeMeta> = {
   },
 };
 
-export const SCHRODINGER_CONFIG = {
-  name: "Option Schrödinger",
-  subtitle: "Compte à rebours quantique & Zénon",
-  badge: "Schrödinger",
-  color: "#8b5cf6",
-  bgLight: "rgba(139, 92, 246, 0.08)",
-  borderLight: "rgba(139, 92, 246, 0.25)",
-  summary: "Chronomètre discret avec alertes de point médian (50%, 25%, 12.5%...) et décompte haute précision aux tierces sous les 60 secondes.",
-  description:
-    "Comme le célèbre paradoxe quantique, le temps exact reste masqué à l'état latent. Des notifications de passage vous informent à mi-parcours (50%), puis au quart (25%) et ainsi de suite. À exactement 59 secondes de la fin, le chronomètre s'illumine et égrène les secondes et les tierces (centièmes) pour un sprint final.",
-  rules: [
-    "Le chronomètre numérique permanent reste invisible pendant l'épreuve.",
-    "Notifications automatiques aux jalons logarithmiques : 50%, 25%, 12.5% du temps.",
-    "Activation d'un compte à rebours d'urgence avec tierces (centièmes de seconde) dès 59s.",
-    "Combinable avec tous les régimes (Einstein, Newton, Tesla).",
-  ],
+// ─── Modes d'Affichage du Chronomètre ─────────────────────────────────────────
+
+export type ChronoMode = "GALILEE" | "HEISENBERG" | "SCHRODINGER";
+
+export interface ChronoModeMeta {
+  key: ChronoMode;
+  name: string;
+  subtitle: string;
+  badge: string;
+  color: string;
+  bgLight: string;
+  borderLight: string;
+  summary: string;
+  description: string;
+  rules: string[];
+}
+
+export const CHRONO_MODES: Record<ChronoMode, ChronoModeMeta> = {
+  GALILEE: {
+    key: "GALILEE",
+    name: "Mode Galilée",
+    subtitle: "L'Observation Continue",
+    badge: "Galilée",
+    color: "#6366f1",
+    bgLight: "rgba(99, 102, 241, 0.08)",
+    borderLight: "rgba(99, 102, 241, 0.25)",
+    summary: "Affichage permanent et continu du chronomètre de la première à la dernière seconde.",
+    description:
+      "Inspiré du principe d'observation galiléenne et de l'isochronisme du pendule, le temps est mesurable et observable à chaque instant. Idéal pour une gestion temporelle classique et méthodique.",
+    rules: [
+      "Chronomètre affiché en permanence à l'écran.",
+      "Décompte continu et fluide de 100% jusqu'à l'échéance.",
+      "Passage en état critique visuel et sonore sous les 60 secondes.",
+    ],
+  },
+  HEISENBERG: {
+    key: "HEISENBERG",
+    name: "Mode Heisenberg",
+    subtitle: "Les Fenêtres d'Incertitude",
+    badge: "Heisenberg",
+    color: "#f59e0b",
+    bgLight: "rgba(245, 158, 11, 0.08)",
+    borderLight: "rgba(245, 158, 11, 0.25)",
+    summary: "Chronomètre intermittent visible uniquement lors de fenêtres clés : 100-95%, 75-70%, 55-50%, 25-20% et sous 60s.",
+    description:
+      "Inspiré du principe d'incertitude quantique, le chronomètre ne s'impose pas en continu. Il apparaît ponctuellement lors de fenêtres de repérage stratégiques, puis s'efface pour favoriser votre concentration.",
+    rules: [
+      "Visible au départ : de 100% à 95% du temps total.",
+      "Fenêtre du 1er quart : visible entre 75% et 70% du temps restant.",
+      "Fenêtre médiane : visible entre 55% et 50% du temps restant.",
+      "Fenêtre du dernier quart : visible entre 25% et 20% du temps restant.",
+      "Révélation complète sous les 60 secondes (avec tierces et bips d'adrénaline).",
+    ],
+  },
+  SCHRODINGER: {
+    key: "SCHRODINGER",
+    name: "Mode Schrödinger",
+    subtitle: "La Boîte Noire & Mesure Quantique",
+    badge: "Schrödinger",
+    color: "#8b5cf6",
+    bgLight: "rgba(139, 92, 246, 0.08)",
+    borderLight: "rgba(139, 92, 246, 0.25)",
+    summary: "Chronomètre masqué avec 2 ouvertures de boîte autorisées (flash de 5s) et révélation d'urgence à 60s.",
+    description:
+      "L'effet boîte noire absolu. Le temps s'écoule à l'état latent sans indication visuelle. Le candidat dispose d'exactement 2 'Mesures Quantiques' pour ouvrir la boîte et observer le chrono pendant 5 secondes. À 60 secondes de la fin, la boîte s'ouvre définitivement pour le rush final.",
+    rules: [
+      "Chronomètre 100% masqué par défaut.",
+      "Le candidat dispose de 2 jokers 'Ouvrir la boîte' (5 secondes de visibilité par utilisation).",
+      "Révélation d'urgence automatique sous les 60 secondes (avec tierces/centièmes et bips audio).",
+    ],
+  },
 };
+
+// ─── Legacy compatibility ───────────────────────────────────────────────────
+export const SCHRODINGER_CONFIG = CHRONO_MODES.SCHRODINGER;
 
 export const SUBJECT_LABELS: Record<Subject, string> = {
   MATH: "Mathématiques",
@@ -177,7 +235,7 @@ export interface RoomConfig {
   selectedTopics?: Record<Subject, string[]>;
   timingRegime?: TimingRegime;
   clockMode?: ClockMode;
-  schrodingerMode?: boolean;
+  chronoMode?: ChronoMode;
 }
 
 export interface NewtonPhaseConfig {

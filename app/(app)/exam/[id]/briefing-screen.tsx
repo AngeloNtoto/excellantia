@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { TIMING_REGIMES, SCHRODINGER_CONFIG, TimingRegime, Subject, SUBJECT_LABELS } from "@/lib/types";
+import {
+  TIMING_REGIMES,
+  CHRONO_MODES,
+  TimingRegime,
+  ChronoMode,
+  Subject,
+  SUBJECT_LABELS,
+} from "@/lib/types";
 import { RegimesInfoModal } from "@/app/components/regimes-info-modal";
 import {
   Infinity,
   Layers,
   Zap,
   EyeOff,
+  Eye,
   Clock,
   CheckCircle2,
   AlertTriangle,
@@ -15,22 +23,22 @@ import {
   Info,
   Shield,
   FileQuestion,
-  HelpCircle,
+  Sparkles,
   Timer,
 } from "lucide-react";
 
 export function BriefingScreen({
   roomTitle,
-  timingRegime,
-  schrodingerMode,
+  timingRegime = "EINSTEIN",
+  chronoMode = "GALILEE",
   durationMin,
   totalQuestions,
   bySubject,
   onStartExam,
 }: {
   roomTitle: string;
-  timingRegime: TimingRegime;
-  schrodingerMode: boolean;
+  timingRegime?: TimingRegime;
+  chronoMode?: ChronoMode;
   durationMin: number;
   totalQuestions: number;
   bySubject?: Record<Subject, number>;
@@ -38,6 +46,7 @@ export function BriefingScreen({
 }) {
   const [infoModalOpen, setInfoModalOpen] = useState(false);
   const regimeMeta = TIMING_REGIMES[timingRegime] || TIMING_REGIMES.EINSTEIN;
+  const chronoMeta = CHRONO_MODES[chronoMode] || CHRONO_MODES.GALILEE;
 
   return (
     <div
@@ -153,7 +162,7 @@ export function BriefingScreen({
               }}
             >
               <Info className="w-3.5 h-3.5" />
-              Détails du régime
+              Détails complets
             </button>
           </div>
 
@@ -162,12 +171,12 @@ export function BriefingScreen({
           </p>
         </div>
 
-        {/* Optional Schrödinger Banner */}
-        {schrodingerMode && (
+        {/* Chrono Display Mode Banner */}
+        {chronoMode !== "GALILEE" && (
           <div
             style={{
-              background: SCHRODINGER_CONFIG.bgLight,
-              border: `1.5px solid ${SCHRODINGER_CONFIG.borderLight}`,
+              background: chronoMeta.bgLight,
+              border: `1.5px solid ${chronoMeta.borderLight}`,
               borderRadius: 16,
               padding: "14px 18px",
               display: "flex",
@@ -180,7 +189,7 @@ export function BriefingScreen({
                 width: 32,
                 height: 32,
                 borderRadius: 8,
-                background: SCHRODINGER_CONFIG.color,
+                background: chronoMeta.color,
                 color: "#ffffff",
                 display: "flex",
                 alignItems: "center",
@@ -188,14 +197,16 @@ export function BriefingScreen({
                 flexShrink: 0,
               }}
             >
-              <EyeOff className="w-4 h-4" />
+              {chronoMode === "HEISENBERG" ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
             </div>
             <div>
-              <div style={{ fontSize: "0.85rem", fontWeight: 700, color: SCHRODINGER_CONFIG.color }}>
-                {SCHRODINGER_CONFIG.name} activé ({SCHRODINGER_CONFIG.subtitle})
+              <div style={{ fontSize: "0.85rem", fontWeight: 700, color: chronoMeta.color }}>
+                {chronoMeta.name} ({chronoMeta.subtitle})
               </div>
               <div style={{ fontSize: "0.8rem", color: "var(--text-secondary)", marginTop: 2 }}>
-                Le chronomètre chiffré est masqué. Vous recevrez des alertes à 50% et 25% du temps. À 59 secondes de la fin, le compte à rebours précis aux centièmes s'activera automatiquement.
+                {chronoMode === "HEISENBERG"
+                  ? "Le chronomètre apparaît uniquement lors des fenêtres clés (100-95%, 75-70%, 55-50%, 25-20%) puis en continu sous 60s."
+                  : "Le chronomètre est 100% masqué. Vous disposez de 2 jokers 'Ouvrir la boîte' (5s de visibilité). Révélation d'urgence automatique sous les 60 secondes."}
               </div>
             </div>
           </div>

@@ -178,7 +178,7 @@ export async function createRoomAction(formData: FormData) {
       accessCode: d.visibility === "PRIVATE" ? (d.accessCode || generateAccessCode()) : null,
       timingRegime,
       clockMode,
-      schrodingerMode: d.schrodingerMode ?? false,
+      chronoMode: d.chronoMode ?? "GALILEE",
       durationMin,
       startsAt,
       endsAt,

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { BriefingScreen } from "./briefing-screen";
 import { ExamClient } from "./client";
-import { TimingRegime, ClockMode, NewtonTimingConfig, Subject } from "@/lib/types";
+import { TimingRegime, ClockMode, ChronoMode, NewtonTimingConfig, Subject } from "@/lib/types";
 
 export function ExamRunner({
   attemptId,
@@ -18,7 +18,7 @@ export function ExamRunner({
   startedAt,
   timingRegime = "EINSTEIN",
   clockMode = "ABSOLUTE",
-  schrodingerMode = false,
+  chronoMode = "GALILEE",
   timingConfig,
   pausableTimer,
   previousTimeUsedSec,
@@ -47,7 +47,7 @@ export function ExamRunner({
   startedAt: number;
   timingRegime?: TimingRegime;
   clockMode?: ClockMode;
-  schrodingerMode?: boolean;
+  chronoMode?: ChronoMode;
   timingConfig?: NewtonTimingConfig | null;
   pausableTimer?: boolean;
   previousTimeUsedSec: number;
@@ -62,7 +62,7 @@ export function ExamRunner({
       <BriefingScreen
         roomTitle={roomTitle}
         timingRegime={timingRegime}
-        schrodingerMode={schrodingerMode}
+        chronoMode={chronoMode}
         durationMin={durationMin}
         totalQuestions={questions.length}
         bySubject={bySubject}
@@ -84,7 +84,7 @@ export function ExamRunner({
       startedAt={startedAt}
       timingRegime={timingRegime}
       clockMode={clockMode}
-      schrodingerMode={schrodingerMode}
+      chronoMode={chronoMode}
       timingConfig={timingConfig}
       pausableTimer={pausableTimer}
       previousTimeUsedSec={previousTimeUsedSec}

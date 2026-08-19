@@ -15,8 +15,9 @@ import {
   SUBJECT_COLORS,
   TimingRegime,
   ClockMode,
+  ChronoMode,
   TIMING_REGIMES,
-  SCHRODINGER_CONFIG,
+  CHRONO_MODES,
   NewtonTimingConfig,
 } from "@/lib/types";
 import { PhaseRestScreen } from "./phase-rest-screen";
@@ -27,6 +28,7 @@ import {
   Layers,
   Zap,
   EyeOff,
+  Eye,
   AlertTriangle,
   ChevronLeft,
   ChevronRight,
@@ -36,7 +38,7 @@ import {
   Check,
   Star,
   ShieldAlert,
-  Volume2,
+  Sparkles,
 } from "lucide-react";
 
 /**
@@ -74,7 +76,7 @@ export function ExamClient({
   startedAt,
   timingRegime = "EINSTEIN",
   clockMode = "ABSOLUTE",
-  schrodingerMode = false,
+  chronoMode = "GALILEE",
   timingConfig,
   pausableTimer,
   previousTimeUsedSec,
@@ -101,7 +103,7 @@ export function ExamClient({
   startedAt: number;
   timingRegime?: TimingRegime;
   clockMode?: ClockMode;
-  schrodingerMode?: boolean;
+  chronoMode?: ChronoMode;
   timingConfig?: NewtonTimingConfig | null;
   pausableTimer?: boolean;
   previousTimeUsedSec: number;
@@ -116,9 +118,9 @@ export function ExamClient({
   const [einsteinLayout, setEinsteinLayout] = useState<"SCROLL" | "PAGINATED">("SCROLL");
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Schrödinger toast notifications
-  const [schrodingerAlert, setSchrodingerAlert] = useState<string | null>(null);
-  const notifiedMilestones = useRef<Set<number>>(new Set());
+  // Schrödinger : 2 Mesures quantiques / Ouvertures de boîte autorisées (flash 5 secondes)
+  const [schrodingerPeeksLeft, setSchrodingerPeeksLeft] = useState<number>(2);
+  const [isSchrodingerPeeking, setIsSchrodingerPeeking] = useState<boolean>(false);
 
   // Tesla: 60s per-question timer
   const [teslaQuestionTimeLeft, setTeslaQuestionTimeLeft] = useState<number>(60);
@@ -130,6 +132,7 @@ export function ExamClient({
   const [isNewtonResting, setIsNewtonResting] = useState(false);
 
   const regimeMeta = TIMING_REGIMES[timingRegime] || TIMING_REGIMES.EINSTEIN;
+  const chronoMeta = CHRONO_MODES[chronoMode] || CHRONO_MODES.GALILEE;
   const subjects: Subject[] = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
 
   // ─── 1. PROTECTION & CONFIRMATION SUR VOL / RECHARGE (TESLA) ───────────────
@@ -164,7 +167,7 @@ export function ExamClient({
     }
   }, [timingRegime, attemptId]);
 
-  // ─── 2. CHRONOMÈTRE PRINCIPAL & GESTION SCHRÖDINGER ─────────────────────────
+  // ─── 2. CHRONOMÈTRE PRINCIPAL & GESTION DES MODES VISUELS ──────────────────
   useEffect(() => {
     const totalSec = Math.min(durationMin * 60, 5 * 60 * 60);
     const pageOpenedAt = Date.now();
@@ -193,23 +196,6 @@ export function ExamClient({
         }
       }
 
-      // Schrödinger Checkpoints (100%->97%, 50%, 25%, <=60s)
-      if (schrodingerMode && totalSec > 0) {
-        const pctRemaining = (remaining / totalSec) * 100;
-
-        if (pctRemaining <= 50 && !notifiedMilestones.current.has(50)) {
-          notifiedMilestones.current.add(50);
-          setSchrodingerAlert("Point médian atteint : 50% du temps total écoulé.");
-          playCriticalBeep(660, 0.15);
-          setTimeout(() => setSchrodingerAlert(null), 7000);
-        } else if (pctRemaining <= 25 && !notifiedMilestones.current.has(25)) {
-          notifiedMilestones.current.add(25);
-          setSchrodingerAlert("Dernier quart : 75% du temps écoulé (25% restant).");
-          playCriticalBeep(770, 0.15);
-          setTimeout(() => setSchrodingerAlert(null), 7000);
-        }
-      }
-
       if (remaining <= 0) {
         clearInterval(interval);
         handleSubmit(true);
@@ -217,7 +203,7 @@ export function ExamClient({
     }, 250);
 
     return () => clearInterval(interval);
-  }, [endsAt, startedAt, durationMin, clockMode, pausableTimer, previousTimeUsedSec, schrodingerMode, timingRegime]);
+  }, [endsAt, startedAt, durationMin, clockMode, pausableTimer, previousTimeUsedSec, timingRegime]);
 
   // Centièmes pour l'état critique (<= 60s)
   useEffect(() => {
@@ -261,7 +247,19 @@ export function ExamClient({
     return () => clearInterval(teslaInterval);
   }, [currentIndex, timingRegime, questions.length]);
 
-  // ─── 4. ACTIONS DU CANDIDAT ────────────────────────────────────────────────
+  // ─── 4. MESURE QUANTIQUE SCHRÖDINGER (OUVRIR LA BOÎTE) ──────────────────────
+  const handleSchrodingerPeek = () => {
+    if (schrodingerPeeksLeft <= 0 || isSchrodingerPeeking) return;
+    setSchrodingerPeeksLeft((prev) => prev - 1);
+    setIsSchrodingerPeeking(true);
+    playCriticalBeep(587, 0.12);
+
+    setTimeout(() => {
+      setIsSchrodingerPeeking(false);
+    }, 5000); // Reste visible 5 secondes puis se referme
+  };
+
+  // ─── 5. ACTIONS DU CANDIDAT ────────────────────────────────────────────────
   const handleSelect = (qId: string, index: number) => {
     const current = answers[qId]?.selectedIndex;
     const nextIndex = current === index ? null : index;
@@ -285,7 +283,6 @@ export function ExamClient({
         }).length;
 
         if (phaseAnsweredCount === activePhase.questionIds.length) {
-          // Toutes les questions de la phase sont répondues -> repos
           setIsNewtonResting(true);
         }
       }
@@ -321,7 +318,7 @@ export function ExamClient({
     });
   };
 
-  // ─── FORMATTAGE DU TEMPS ───────────────────────────────────────────────────
+  // ─── FORMATTAGE & RÈGLES DE VISIBILITÉ DU TEMPS ────────────────────────────
   const formatTime = (secs: number) => {
     const h = Math.floor(secs / 3600);
     const m = Math.floor((secs % 3600) / 60);
@@ -330,11 +327,27 @@ export function ExamClient({
     return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
   };
 
-  // Visibilité Schrödinger
   const totalSec = Math.min(durationMin * 60, 5 * 60 * 60);
-  const isSchrodingerInitial = timeLeft !== null && timeLeft >= totalSec * 0.97;
+  const pctRemaining = totalSec > 0 && timeLeft !== null ? (timeLeft / totalSec) * 100 : 0;
   const isCriticalFinalSprint = timeLeft !== null && timeLeft <= 60;
-  const isTimerVisible = !schrodingerMode || isSchrodingerInitial || isCriticalFinalSprint;
+
+  // Calcul dynamique de la visibilité selon ChronoMode :
+  let isTimerVisible = true;
+
+  if (chronoMode === "GALILEE") {
+    // Galilée : Toujours visible
+    isTimerVisible = true;
+  } else if (chronoMode === "HEISENBERG") {
+    // Heisenberg : Fenêtres précises (100-95%, 75-70%, 55-50%, 25-20%, <=60s)
+    const inWindow100_95 = pctRemaining >= 95 && pctRemaining <= 100;
+    const inWindow75_70 = pctRemaining >= 70 && pctRemaining <= 75;
+    const inWindow55_50 = pctRemaining >= 50 && pctRemaining <= 55;
+    const inWindow25_20 = pctRemaining >= 20 && pctRemaining <= 25;
+    isTimerVisible = inWindow100_95 || inWindow75_70 || inWindow55_50 || inWindow25_20 || isCriticalFinalSprint;
+  } else if (chronoMode === "SCHRODINGER") {
+    // Schrödinger : Masqué à 100% sauf pendant les 5s d'une ouverture de boîte OU sous les 60s
+    isTimerVisible = isSchrodingerPeeking || isCriticalFinalSprint;
+  }
 
   // Filtrage des questions actives selon le régime
   let activeQuestions = questions;
@@ -404,7 +417,7 @@ export function ExamClient({
               fontWeight: 700,
               cursor: "pointer",
             }}
-            title="Consulter les règles des régimes"
+            title="Consulter les règles des régimes et modes"
           >
             {timingRegime === "EINSTEIN" && <Infinity className="w-3.5 h-3.5" />}
             {timingRegime === "NEWTON" && <Layers className="w-3.5 h-3.5" />}
@@ -413,25 +426,52 @@ export function ExamClient({
             <Info className="w-3 h-3 opacity-60 ml-0.5" />
           </button>
 
-          {/* BADGE SCHRÖDINGER */}
-          {schrodingerMode && (
-            <span
+          {/* BADGE DU MODE CHRONOMÈTRE */}
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 5,
+              padding: "4px 10px",
+              borderRadius: 20,
+              background: chronoMeta.bgLight,
+              border: `1px solid ${chronoMeta.borderLight}`,
+              color: chronoMeta.color,
+              fontSize: "0.72rem",
+              fontWeight: 700,
+            }}
+          >
+            {chronoMode === "GALILEE" && <Clock className="w-3 h-3" />}
+            {chronoMode === "HEISENBERG" && <Eye className="w-3 h-3" />}
+            {chronoMode === "SCHRODINGER" && <EyeOff className="w-3 h-3" />}
+            {chronoMeta.name}
+          </span>
+
+          {/* JOKER SCHRÖDINGER : OUVRIR LA BOÎTE */}
+          {chronoMode === "SCHRODINGER" && !isCriticalFinalSprint && (
+            <button
+              type="button"
+              onClick={handleSchrodingerPeek}
+              disabled={schrodingerPeeksLeft <= 0 || isSchrodingerPeeking}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: 5,
-                padding: "4px 10px",
+                gap: 6,
+                padding: "4px 12px",
                 borderRadius: 20,
-                background: SCHRODINGER_CONFIG.bgLight,
-                border: `1px solid ${SCHRODINGER_CONFIG.borderLight}`,
-                color: SCHRODINGER_CONFIG.color,
-                fontSize: "0.72rem",
+                background: schrodingerPeeksLeft > 0 ? "rgba(139, 92, 246, 0.15)" : "var(--bg-muted)",
+                border: `1.5px solid ${schrodingerPeeksLeft > 0 ? "#8b5cf6" : "var(--border)"}`,
+                color: schrodingerPeeksLeft > 0 ? "#8b5cf6" : "var(--text-muted)",
+                fontSize: "0.75rem",
                 fontWeight: 700,
+                cursor: schrodingerPeeksLeft > 0 ? "pointer" : "not-allowed",
+                transition: "all 0.15s ease",
               }}
+              title="Permet d'observer le chronomètre pendant 5 secondes (2 utilisations max)"
             >
-              <EyeOff className="w-3 h-3" />
-              Schrödinger
-            </span>
+              <Sparkles className="w-3.5 h-3.5" />
+              {isSchrodingerPeeking ? "Observation en cours (5s)..." : `Ouvrir la boîte (${schrodingerPeeksLeft} rest.)`}
+            </button>
           )}
 
           {/* PROGRESSION RÉPONSES */}
@@ -496,37 +536,6 @@ export function ExamClient({
           </button>
         </div>
       </div>
-
-      {/* ─── TOAST ALERTE SCHRÖDINGER (50%, 25%) ─── */}
-      <AnimatePresence>
-        {schrodingerAlert && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            style={{
-              position: "fixed",
-              top: 70,
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 999,
-              background: "#8b5cf6",
-              color: "#ffffff",
-              padding: "12px 24px",
-              borderRadius: 16,
-              boxShadow: "0 12px 30px rgba(139, 92, 246, 0.4)",
-              display: "flex",
-              alignItems: "center",
-              gap: 10,
-              fontWeight: 700,
-              fontSize: "0.9rem",
-            }}
-          >
-            <EyeOff className="w-4 h-4" />
-            <span>{schrodingerAlert}</span>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* ─── AVERTISSEMENT RELOAD TESLA ─── */}
       {teslaReloadWarning && (
@@ -778,7 +787,7 @@ export function ExamClient({
             <span className="font-bold text-xl font-mono tracking-tight">{formatTime(timeLeft)}</span>
           ) : (
             <span className="text-xs font-semibold uppercase tracking-wider text-purple-300">
-              Chrono discret (Schrödinger)
+              {chronoMode === "HEISENBERG" ? "Heisenberg (Chrono discret)" : "Schrödinger (Boîte fermée)"}
             </span>
           )}
         </div>

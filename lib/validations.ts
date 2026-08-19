@@ -62,7 +62,7 @@ export const createRoomSchema = z.object({
   accessCode: z.string().optional(),
   timingRegime: z.enum(["EINSTEIN", "NEWTON", "TESLA"]).default("EINSTEIN"),
   clockMode: z.enum(["ABSOLUTE", "RELATIVE"]).default("ABSOLUTE"),
-  schrodingerMode: z.boolean().default(false),
+  chronoMode: z.enum(["GALILEE", "HEISENBERG", "SCHRODINGER"]).default("GALILEE"),
   durationMin: z.coerce.number().int().min(1).max(600).default(100),
   scheduledAt: z.string().optional().refine(val => !val || !isNaN(Date.parse(val)), "Date invalide"),
   startNow: z.boolean().default(false),
