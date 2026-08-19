@@ -341,7 +341,10 @@ export async function deleteManyQuestionsAction(questionIds: string[]) {
  * 2. Un tableau de textes avec questions (ex: passages avec questions associées)
  * 3. Un objet enveloppant { questions: [...] } ou { texts: [...] }
  */
-export async function importContentBundleAction(json: unknown) {
+export async function importContentBundleAction(
+  json: unknown,
+  importMode: "SIMULATION" | "TRAINING" = "TRAINING",
+) {
   const admin = await requireAdmin();
 
   // Déterminer le format du JSON
@@ -399,9 +402,14 @@ export async function importContentBundleAction(json: unknown) {
         if (Array.isArray(item.questions)) {
           for (let qIdx = 0; qIdx < item.questions.length; qIdx += 1) {
             const q = item.questions[qIdx];
+            const parsedMode = typeof q.mode === "string" && ["TRAINING", "SIMULATION"].includes(q.mode.toUpperCase().trim())
+              ? q.mode.toUpperCase().trim()
+              : importMode;
+
             const parsed = createQuestionSchema.safeParse({
               textContentId: text.id,
               ...q,
+              mode: parsedMode,
               subject: q.subject || (item.language === "EN" ? "ENGLISH" : "FRENCH"),
               difficulty: q.difficulty || "MEDIUM",
               options: Array.isArray(q.options) ? q.options : [],
@@ -448,8 +456,13 @@ export async function importContentBundleAction(json: unknown) {
 
     // Cas 2 : L'élément est une Question autonome ou avec passageId
     if (typeof item.statement === "string" || item.options) {
+      const parsedItemMode = typeof item.mode === "string" && ["TRAINING", "SIMULATION"].includes(item.mode.toUpperCase().trim())
+        ? item.mode.toUpperCase().trim()
+        : importMode;
+
       const parsed = createQuestionSchema.safeParse({
         ...item,
+        mode: parsedItemMode,
         subject: item.subject,
         difficulty: item.difficulty || "MEDIUM",
         options: Array.isArray(item.options) ? item.options : [],
