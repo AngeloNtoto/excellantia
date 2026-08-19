@@ -339,6 +339,37 @@ export async function deleteManyQuestionsAction(questionIds: string[]) {
 }
 
 /**
+ * Vider toutes les questions de la base de données.
+ */
+export async function clearAllQuestionsAction() {
+  await requireAdmin();
+
+  try {
+    const res = await prisma.question.deleteMany({});
+    revalidatePath("/admin/contenus");
+    return { ok: true, deleted: res.count };
+  } catch (error: any) {
+    return { error: error?.message || "Erreur lors de la suppression de toutes les questions." };
+  }
+}
+
+/**
+ * Vider tout le contenu pédagogique (Questions et Textes).
+ */
+export async function clearAllContentAction() {
+  await requireAdmin();
+
+  try {
+    const questionsRes = await prisma.question.deleteMany({});
+    const textsRes = await prisma.textContent.deleteMany({});
+    revalidatePath("/admin/contenus");
+    return { ok: true, deletedQuestions: questionsRes.count, deletedTexts: textsRes.count };
+  } catch (error: any) {
+    return { error: error?.message || "Erreur lors du nettoyage complet des contenus." };
+  }
+}
+
+/**
  * Import universel de contenu JSON (Fichier uploadé ou texte collé).
  * Supporte :
  * 1. Un tableau direct de questions (ex: maths.json, culture-generale.json)

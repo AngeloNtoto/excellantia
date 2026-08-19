@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition, useMemo } from "react";
-import { deleteQuestionAction, deleteManyQuestionsAction } from "@/lib/actions/content";
+import { deleteQuestionAction, deleteManyQuestionsAction, clearAllQuestionsAction } from "@/lib/actions/content";
 import {
   Trash2,
   Search,
@@ -168,6 +168,19 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
     if (!confirm(`Supprimer définitivement ${selectedIds.length} question(s) sélectionnée(s) ?`)) return;
     startTransition(async () => {
       await deleteManyQuestionsAction(selectedIds);
+      setSelectedIds([]);
+    });
+  }
+
+  function handleClearAll() {
+    if (questions.length === 0) return;
+    const code = prompt(
+      `ATTENTION : Vous êtes sur le point de supprimer TOUTES les ${questions.length} questions de la base de données.\n\nTapez "SUPPRIMER" pour confirmer cette action irréversible :`
+    );
+    if (code !== "SUPPRIMER") return;
+
+    startTransition(async () => {
+      await clearAllQuestionsAction();
       setSelectedIds([]);
     });
   }
@@ -366,9 +379,24 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
               {sorted.length} question{sorted.length > 1 ? "s" : ""} affichée{sorted.length > 1 ? "s" : ""}
             </span>
           </div>
-          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-            Total base : {questions.length}
-          </span>
+
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+              Total base : {questions.length}
+            </span>
+            {questions.length > 0 && (
+              <button
+                type="button"
+                onClick={handleClearAll}
+                disabled={isPending}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[11px] font-bold text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/10 border border-rose-200 dark:border-rose-500/20 transition-all active:scale-95 disabled:opacity-50"
+                title="Vider entièrement la table des questions"
+              >
+                <Trash2 className="w-3 h-3" />
+                <span>Vider la banque</span>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Corps de liste */}
