@@ -108,9 +108,8 @@ export async function createRoomAction(formData: FormData) {
     durationMin = Math.max(1, totalQuestions); // 1 minute par question
   }
 
-  // Tesla parcourt les questions dans l'ordre des domaines choisi par l'admin.
-  // Les questions liées à un texte restent prioritaires dans chaque domaine.
-  if ((timingRegime === "TESLA" || timingRegime === "NEWTON") && gen.questionIds) {
+  // Ordonner les questions selon l'ordre des matières choisi, et placer les questions de texte en tête au sein de chaque matière
+  if (gen.questionIds && gen.questionIds.length > 0) {
     const questionsMeta = await prisma.question.findMany({
       where: { id: { in: gen.questionIds } },
       select: { id: true, subject: true, textContentId: true, passageId: true },
@@ -121,11 +120,15 @@ export async function createRoomAction(formData: FormData) {
     gen.questionIds = [...gen.questionIds].sort((leftId, rightId) => {
       const left = metaById.get(leftId);
       const right = metaById.get(rightId);
+      // 1. Ordre des matières défini par l'administrateur
+      const subjectDifference = (orderIndex.get(left?.subject as Subject) ?? 99) - (orderIndex.get(right?.subject as Subject) ?? 99);
+      if (subjectDifference !== 0) return subjectDifference;
+      // 2. Au sein d'une même matière, les questions rattachées à un texte passent en premier
       const leftText = Boolean(left?.textContentId || left?.passageId);
       const rightText = Boolean(right?.textContentId || right?.passageId);
       if (leftText !== rightText) return leftText ? -1 : 1;
-      const subjectDifference = (orderIndex.get(left?.subject as Subject) ?? 99) - (orderIndex.get(right?.subject as Subject) ?? 99);
-      return subjectDifference || (originalIndex.get(leftId) ?? 0) - (originalIndex.get(rightId) ?? 0);
+      // 3. Préserver l'ordre naturel 1..N
+      return (originalIndex.get(leftId) ?? 0) - (originalIndex.get(rightId) ?? 0);
     });
   }
 

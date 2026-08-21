@@ -104,7 +104,10 @@ export async function generateRoomQuestionsFromDb(
   includeTrainingQuestions = false,
 ): Promise<{ ok: boolean; questionIds?: string[]; errors?: string[] }> {
   const errors: string[] = [];
-  const subjects: Subject[] = ["MATH", "FRENCH", "ENGLISH", "GENERAL_CULTURE"];
+  // Respecter l'ordre des matières si spécifié, sinon ordre par défaut
+  const subjects: Subject[] = config.subjectOrder && config.subjectOrder.length === 4
+    ? config.subjectOrder
+    : ["FRENCH", "ENGLISH", "MATH", "GENERAL_CULTURE"];
   const selected: Question[] = [];
 
   for (const subject of subjects) {
@@ -122,6 +125,7 @@ export async function generateRoomQuestionsFromDb(
           ...(mode === "TRAINING" ? [{ mode: "TRAINING" as const }, { mode: null }] : []),
         ],
       },
+      orderBy: { createdAt: "asc" },
     });
     
     let available = questions.map((question) => toQuestion(question as DatabaseQuestion)).filter((question): question is Question => question !== null);
@@ -153,7 +157,7 @@ export async function generateRoomQuestionsFromDb(
         const chosenText = eligibleTexts[Math.floor(Math.random() * eligibleTexts.length)];
         const textQuestionIds = new Set(chosenText.questions.map((q) => q.id));
 
-        // Questions liées à CE texte uniquement
+        // Questions liées à CE texte uniquement (dans leur ordre chronologique d'origine 1..N)
         const textQuestions = available.filter((q) => textQuestionIds.has(q.id));
         // Questions strictement autonomes (aucun texte associé)
         const standaloneQuestions = available.filter((q) => !q.passageId);
@@ -164,7 +168,8 @@ export async function generateRoomQuestionsFromDb(
           Math.min(targetCount, Math.max(1, Math.round(targetCount * (10 / 25))))
         );
 
-        const chosenFromText = pickRandom(textQuestions, targetTextQCount);
+        // Conserver l'ordre naturel des questions du texte (1, 2, 3, ...) au lieu de les mélanger
+        const chosenFromText = textQuestions.slice(0, targetTextQCount);
         const neededStandalone = targetCount - chosenFromText.length;
         const chosenStandalone = pickRandom(standaloneQuestions, neededStandalone);
 
@@ -172,7 +177,7 @@ export async function generateRoomQuestionsFromDb(
         if (chosenStandalone.length < neededStandalone) {
           const remainingFromThisText = textQuestions.filter((q) => !chosenFromText.some((c) => c.id === q.id));
           const stillNeeded = neededStandalone - chosenStandalone.length;
-          const additionalFromText = pickRandom(remainingFromThisText, stillNeeded);
+          const additionalFromText = remainingFromThisText.slice(0, stillNeeded);
           chosenFromText.push(...additionalFromText);
         }
 
@@ -225,13 +230,9 @@ export async function generateRoomQuestionsFromDb(
 
   if (errors.length > 0) return { ok: false, errors };
 
-  // Les questions rattachees a un texte ouvrent toujours l'epreuve.
-  const textQuestions = selected.filter((question) => Boolean(question.passageId));
-  const standaloneQuestions = selected.filter((question) => !question.passageId);
-
+  // Les questions sont renvoyées dans l'ordre structuré par matière (avec questions de texte au début dans l'ordre 1..N)
   return {
     ok: true,
-    questionIds: [...pickRandom(textQuestions, textQuestions.length), ...pickRandom(standaloneQuestions, standaloneQuestions.length)]
-      .map((question) => question.id),
+    questionIds: selected.map((question) => question.id),
   };
 }
