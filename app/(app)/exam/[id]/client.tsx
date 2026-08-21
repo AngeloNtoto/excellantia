@@ -135,25 +135,151 @@ export function ExamClient({
   const [teslaQuestionTimeLeft, setTeslaQuestionTimeLeft] = useState<number>(60);
   const [teslaReloadWarning, setTeslaReloadWarning] = useState<boolean>(false);
 
-  // Newton: phase tracking
+  // Newton: phase tracking & persistence cross-refresh
   const newtonPhases = useMemo(() => timingConfig?.phases ?? [], [timingConfig?.phases]);
   const getNewtonPhaseStart = useCallback((phaseIndex: number) =>
     startedAt + newtonPhases.slice(0, phaseIndex).reduce((total, phase) => total + phase.durationSec, 0) * 1000,
   [newtonPhases, startedAt]);
-  const getInitialNewtonPhaseIndex = () => {
-    if (timingRegime !== "NEWTON" || clockMode === "RELATIVE" || newtonPhases.length === 0) return 0;
+
+  // Initialisation intelligente de l'état Newton (résiste au rafraîchissement F5)
+  const getInitialNewtonState = () => {
+    if (timingRegime !== "NEWTON" || newtonPhases.length === 0) {
+      return { phaseIdx: 0, isResting: false, restUntil: null as number | null, phaseStartedAt: Date.now() };
+    }
+
     const now = Date.now();
-    const activeIndex = newtonPhases.findIndex((phase, index) => {
-      const phaseEnd = getNewtonPhaseStart(index) + phase.durationSec * 1000;
-      return now < phaseEnd;
-    });
-    return activeIndex === -1 ? newtonPhases.length - 1 : activeIndex;
+
+    // 1. Lire d'abord l'état sauvegardé dans sessionStorage s'il existe
+    let savedState: { phaseIdx: number; isResting: boolean; restUntil: number | null; phaseStartedAt: number } | null = null;
+    if (typeof window !== "undefined") {
+      try {
+        const raw = window.sessionStorage.getItem(`newton_state_${attemptId}`);
+        if (raw) savedState = JSON.parse(raw);
+      } catch {
+        // Ignorer les erreurs de parsing
+      }
+    }
+
+    if (clockMode === "ABSOLUTE") {
+      const activeIndex = newtonPhases.findIndex((phase, index) => {
+        const phaseEnd = getNewtonPhaseStart(index) + phase.durationSec * 1000;
+        return now < phaseEnd;
+      });
+      const resolvedIndex = activeIndex === -1 ? newtonPhases.length - 1 : activeIndex;
+      const phaseStart = getNewtonPhaseStart(resolvedIndex);
+      const activePhase = newtonPhases[resolvedIndex];
+      const phaseEnd = phaseStart + (activePhase?.durationSec ?? 0) * 1000;
+
+      // Vérifier si toutes les questions de cette phase sont déjà répondues ou si l'utilisateur était en salle d'attente
+      const allPhaseQuestionsAnswered = Boolean(
+        activePhase &&
+        activePhase.questionIds.length > 0 &&
+        activePhase.questionIds.every(
+          (id) => initialAnswers[id]?.selectedIndex !== null && initialAnswers[id]?.selectedIndex !== undefined
+        )
+      );
+
+      const wasResting = Boolean(savedState && savedState.phaseIdx === resolvedIndex && savedState.isResting);
+      const isResting = (allPhaseQuestionsAnswered || wasResting) && resolvedIndex < newtonPhases.length - 1 && now < phaseEnd;
+
+      return {
+        phaseIdx: resolvedIndex,
+        isResting,
+        restUntil: isResting ? phaseEnd : null,
+        phaseStartedAt: phaseStart,
+      };
+    } else {
+      // Horloge RELATIVE
+      if (savedState) {
+        let phaseIdx = savedState.phaseIdx;
+        let isResting = savedState.isResting;
+        let restUntil = savedState.restUntil;
+        let phaseStartedAt = savedState.phaseStartedAt || now;
+
+        if (isResting && restUntil && now >= restUntil) {
+          // La période de repos est expirée pendant le rechargement
+          if (phaseIdx < newtonPhases.length - 1) {
+            phaseIdx += 1;
+            isResting = false;
+            restUntil = null;
+            phaseStartedAt = now;
+          }
+        }
+
+        const currentPhase = newtonPhases[phaseIdx];
+        const allAnswered = Boolean(
+          currentPhase &&
+          currentPhase.questionIds.length > 0 &&
+          currentPhase.questionIds.every(
+            (id) => initialAnswers[id]?.selectedIndex !== null && initialAnswers[id]?.selectedIndex !== undefined
+          )
+        );
+
+        if (allAnswered && phaseIdx < newtonPhases.length - 1 && !isResting) {
+          isResting = true;
+          restUntil = now + 10_000;
+        }
+
+        return { phaseIdx, isResting, restUntil, phaseStartedAt };
+      }
+
+      // Pas de session sauvegardée : déterminer la phase selon les réponses
+      let firstUnfinishedIdx = 0;
+      for (let i = 0; i < newtonPhases.length; i++) {
+        const phase = newtonPhases[i];
+        const allAnswered = phase.questionIds.length > 0 &&
+          phase.questionIds.every((id) => initialAnswers[id]?.selectedIndex !== null && initialAnswers[id]?.selectedIndex !== undefined);
+        if (!allAnswered) {
+          firstUnfinishedIdx = i;
+          break;
+        }
+        firstUnfinishedIdx = i;
+      }
+
+      const activePhase = newtonPhases[firstUnfinishedIdx];
+      const allAnswered = Boolean(
+        activePhase &&
+        activePhase.questionIds.length > 0 &&
+        activePhase.questionIds.every(
+          (id) => initialAnswers[id]?.selectedIndex !== null && initialAnswers[id]?.selectedIndex !== undefined
+        )
+      );
+      const isResting = allAnswered && firstUnfinishedIdx < newtonPhases.length - 1;
+
+      return {
+        phaseIdx: firstUnfinishedIdx,
+        isResting,
+        restUntil: isResting ? now + 10_000 : null,
+        phaseStartedAt: now,
+      };
+    }
   };
-  const [currentNewtonPhaseIdx, setCurrentNewtonPhaseIdx] = useState(getInitialNewtonPhaseIndex);
-  const [isNewtonResting, setIsNewtonResting] = useState(false);
-  const [newtonPhaseStartedAt, setNewtonPhaseStartedAt] = useState(() => Date.now());
-  const [newtonRestUntil, setNewtonRestUntil] = useState<number | null>(null);
+
+  const initialNewtonState = useMemo(() => getInitialNewtonState(), []);
+  const [currentNewtonPhaseIdx, setCurrentNewtonPhaseIdx] = useState(initialNewtonState.phaseIdx);
+  const [isNewtonResting, setIsNewtonResting] = useState(initialNewtonState.isResting);
+  const [newtonPhaseStartedAt, setNewtonPhaseStartedAt] = useState(initialNewtonState.phaseStartedAt);
+  const [newtonRestUntil, setNewtonRestUntil] = useState<number | null>(initialNewtonState.restUntil);
   const handleSubmitRef = useRef<(auto?: boolean) => void>(() => undefined);
+
+  // Synchronisation en temps réel de l'état Newton dans sessionStorage pour résister à F5
+  useEffect(() => {
+    if (timingRegime === "NEWTON" && typeof window !== "undefined") {
+      try {
+        window.sessionStorage.setItem(
+          `newton_state_${attemptId}`,
+          JSON.stringify({
+            phaseIdx: currentNewtonPhaseIdx,
+            isResting: isNewtonResting,
+            restUntil: newtonRestUntil,
+            phaseStartedAt: newtonPhaseStartedAt,
+          })
+        );
+      } catch {
+        // Ignorer les erreurs d'écriture sessionStorage
+      }
+    }
+  }, [timingRegime, attemptId, currentNewtonPhaseIdx, isNewtonResting, newtonRestUntil, newtonPhaseStartedAt]);
 
   const regimeMeta = TIMING_REGIMES[timingRegime] || TIMING_REGIMES.EINSTEIN;
   const chronoMeta = CHRONO_MODES[chronoMode] || CHRONO_MODES.GALILEE;
@@ -406,7 +532,10 @@ export function ExamClient({
         }).length;
 
         if (phaseAnsweredCount === activePhase.questionIds.length) {
-          if (clockMode === "RELATIVE") setNewtonRestUntil(Date.now() + 10_000);
+          const restUntil = clockMode === "RELATIVE"
+            ? Date.now() + 10_000
+            : getNewtonPhaseStart(currentNewtonPhaseIdx) + activePhase.durationSec * 1000;
+          setNewtonRestUntil(restUntil);
           setIsNewtonResting(true);
         }
       }
@@ -445,6 +574,7 @@ export function ExamClient({
     }
     if (typeof window !== "undefined") {
       window.sessionStorage.removeItem(`tesla_active_${attemptId}`);
+      window.sessionStorage.removeItem(`newton_state_${attemptId}`);
     }
     startTransition(async () => {
       const res = await submitAttemptAction(attemptId);
