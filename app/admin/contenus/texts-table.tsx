@@ -1,11 +1,19 @@
 "use client";
 
 import { useState, useTransition, useMemo } from "react";
-import { deleteTextContentAction, createQuestionAction, importQuestionsForTextAction } from "@/lib/actions/content";
+import {
+  deleteTextContentAction,
+  createQuestionAction,
+  importQuestionsForTextAction,
+  updateTextContentAction,
+} from "@/lib/actions/content";
 import {
   Trash2,
   BookOpen,
   PlusCircle,
+  Pencil,
+  Save,
+  X,
   FileCode,
   CheckCircle2,
   AlertCircle,
@@ -35,11 +43,14 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
   const [selectedLanguage, setSelectedLanguage] = useState<string>("ALL");
   const [selectedMode, setSelectedMode] = useState<"ALL" | "TRAINING" | "SIMULATION" | "UNIVERSAL">("ALL");
   const [readingId, setReadingId] = useState<string | null>(null);
+  const [editingTextId, setEditingTextId] = useState<string | null>(null);
   const [addingQuestionForId, setAddingQuestionForId] = useState<string | null>(null);
   const [questionMode, setQuestionMode] = useState<"form" | "json">("form");
   const [jsonText, setJsonText] = useState("");
   const [formError, setFormError] = useState("");
   const [formSuccess, setFormSuccess] = useState("");
+  const [editError, setEditError] = useState("");
+  const [editSuccess, setEditSuccess] = useState("");
 
   // Compteurs par mode pour les textes
   const countsByMode = useMemo(() => {
@@ -75,6 +86,30 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
     if (!confirm(`Supprimer le texte "${title}" ? Les questions associées deviendront autonomes.`)) return;
     startTransition(async () => {
       await deleteTextContentAction(id);
+    });
+  }
+
+  // Mise à jour des détails d'un texte (titre, langue, source, contenu, mode, statut)
+  function handleUpdateText(e: React.FormEvent<HTMLFormElement>, textId: string) {
+    e.preventDefault();
+    setEditError("");
+    setEditSuccess("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.set("id", textId);
+
+    startTransition(async () => {
+      const res = await updateTextContentAction(formData);
+      if (res?.error) {
+        setEditError(res.error);
+        return;
+      }
+      setEditSuccess("Détails du texte mis à jour avec succès !");
+      setTimeout(() => {
+        setEditingTextId(null);
+        setEditSuccess("");
+      }, 1000);
     });
   }
 
@@ -270,6 +305,7 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
       ) : (
         filteredTexts.map((text) => {
           const isReading = readingId === text.id;
+          const isEditing = editingTextId === text.id;
           const isAddingQ = addingQuestionForId === text.id;
 
           return (
@@ -328,7 +364,10 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
                 <div className="flex items-center gap-2 flex-wrap">
                   <button
                     type="button"
-                    onClick={() => setReadingId(isReading ? null : text.id)}
+                    onClick={() => {
+                      setReadingId(isReading ? null : text.id);
+                      if (!isReading) setEditingTextId(null);
+                    }}
                     className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5"
                   >
                     <BookOpen className="w-3.5 h-3.5" />
@@ -338,9 +377,27 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
                   <button
                     type="button"
                     onClick={() => {
+                      setEditingTextId(isEditing ? null : text.id);
+                      setEditError("");
+                      setEditSuccess("");
+                      if (!isEditing) {
+                        setReadingId(null);
+                        setAddingQuestionForId(null);
+                      }
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-500/10 hover:bg-amber-100 dark:hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-bold border border-amber-200/60 dark:border-amber-500/20 transition-all active:scale-95 flex items-center gap-1.5"
+                  >
+                    <Pencil className="w-3.5 h-3.5" />
+                    <span>{isEditing ? "Fermer" : "Modifier"}</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
                       setAddingQuestionForId(isAddingQ ? null : text.id);
                       setFormError("");
                       setFormSuccess("");
+                      if (!isAddingQ) setEditingTextId(null);
                     }}
                     className="px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-bold border border-indigo-200/60 dark:border-indigo-500/20 transition-all active:scale-95 flex items-center gap-1.5"
                   >
@@ -358,6 +415,146 @@ export function TextsTable({ texts }: { texts: TextItem[] }) {
                   </button>
                 </div>
               </div>
+
+              {/* ─── MODULE D'ÉDITION DES DÉTAILS DU TEXTE (TITRE, LANGUE, SOURCE, CONTENU, MODE) ─── */}
+              {isEditing && (
+                <form
+                  onSubmit={(e) => handleUpdateText(e, text.id)}
+                  className="p-4 sm:p-5 rounded-2xl bg-amber-50/40 dark:bg-amber-950/20 border border-amber-200/60 dark:border-amber-500/30 space-y-4 animate-in fade-in duration-200"
+                >
+                  <div className="flex items-center justify-between border-b border-amber-200/60 dark:border-amber-500/20 pb-3">
+                    <h5 className="text-xs sm:text-sm font-extrabold text-amber-900 dark:text-amber-200 flex items-center gap-2">
+                      <Pencil className="w-4 h-4 text-amber-500" />
+                      Modifier les détails du texte
+                    </h5>
+                    <button
+                      type="button"
+                      onClick={() => setEditingTextId(null)}
+                      className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-lg"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  {editError && (
+                    <div className="p-2.5 rounded-xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 text-xs font-semibold">
+                      {editError}
+                    </div>
+                  )}
+
+                  {editSuccess && (
+                    <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+                      {editSuccess}
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+                    {/* Titre du texte */}
+                    <div className="sm:col-span-2 space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Titre du texte *</label>
+                      <input
+                        name="title"
+                        defaultValue={text.title}
+                        required
+                        placeholder="Titre de l'extrait ou du document..."
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-semibold focus:ring-2 focus:ring-amber-500/20 outline-none"
+                      />
+                    </div>
+
+                    {/* Langue du texte */}
+                    <div className="space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Langue *</label>
+                      <select
+                        name="language"
+                        defaultValue={text.language}
+                        required
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold outline-none"
+                      >
+                        <option value="FR">Français (FR)</option>
+                        <option value="EN">Anglais (EN)</option>
+                      </select>
+                    </div>
+
+                    {/* Source */}
+                    <div className="sm:col-span-2 space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Source / Auteur / Ouvrage</label>
+                      <input
+                        name="source"
+                        defaultValue={text.source || ""}
+                        placeholder="ex: Victor Hugo, Les Misérables (1862)"
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white outline-none"
+                      />
+                    </div>
+
+                    {/* Mode */}
+                    <div className="space-y-1">
+                      <label className="font-bold text-slate-900 dark:text-white block">Mode d'épreuve</label>
+                      <select
+                        name="mode"
+                        defaultValue={text.mode || ""}
+                        className="w-full p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-medium outline-none"
+                      >
+                        <option value="">Universel (Simulation & Entraînement)</option>
+                        <option value="TRAINING">Entraînement uniquement</option>
+                        <option value="SIMULATION">Simulation / Concours uniquement</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Contenu du texte */}
+                  <div className="space-y-1 text-xs sm:text-sm">
+                    <label className="font-bold text-slate-900 dark:text-white block">Contenu / Passage complet *</label>
+                    <textarea
+                      name="content"
+                      defaultValue={text.content}
+                      required
+                      rows={7}
+                      placeholder="Collez ou modifiez le texte complet ici..."
+                      className="w-full p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-serif leading-relaxed text-xs sm:text-sm focus:ring-2 focus:ring-amber-500/20 outline-none"
+                    />
+                  </div>
+
+                  {/* Boutons d'action */}
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
+                    <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-slate-700 dark:text-slate-300">
+                      <input
+                        type="checkbox"
+                        name="isActive"
+                        defaultChecked={text.isActive}
+                        className="w-4 h-4 rounded text-amber-600 focus:ring-amber-500"
+                      />
+                      <span>Actif pour la sélection aléatoire</span>
+                    </label>
+
+                    <div className="flex items-center justify-end gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setEditingTextId(null)}
+                        className="px-4 py-2 text-xs font-bold rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all"
+                      >
+                        Annuler
+                      </button>
+                      <button
+                        type="submit"
+                        disabled={isPending}
+                        className="px-4 py-2 text-xs font-bold rounded-xl bg-amber-600 hover:bg-amber-700 text-white shadow-sm flex items-center justify-center gap-1.5 transition-all disabled:opacity-50 active:scale-95"
+                      >
+                        {isPending ? (
+                          <>
+                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                            <span>Enregistrement...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Save className="w-3.5 h-3.5" />
+                            <span>Enregistrer les modifications</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              )}
 
               {/* Extrait / Lecture complète */}
               {isReading && (

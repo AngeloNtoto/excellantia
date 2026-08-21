@@ -25,7 +25,9 @@ import {
   FileQuestion,
   Sparkles,
   Timer,
+  MoveHorizontal,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function BriefingScreen({
   roomTitle,
@@ -212,6 +214,32 @@ export function BriefingScreen({
           </div>
         )}
 
+        {timingRegime !== "EINSTEIN" && (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              padding: "11px 14px",
+              borderRadius: 12,
+              background: "var(--bg-muted, #f8fafc)",
+              border: "1px solid var(--border, #e2e8f0)",
+              color: "var(--text-secondary)",
+              fontSize: "0.8rem",
+              fontWeight: 600,
+            }}
+          >
+            <motion.span
+              animate={{ x: [-4, 4, -4] }}
+              transition={{ duration: 1.4, repeat: 2, ease: "easeInOut" }}
+              style={{ display: "inline-flex", color: regimeMeta.color }}
+            >
+              <MoveHorizontal className="w-4 h-4" />
+            </motion.span>
+            Vous pouvez glisser horizontalement pour passer à la question suivante ou précédente.
+          </div>
+        )}
+
         {/* Summary Stats Grid */}
         <div
           style={{
@@ -311,7 +339,7 @@ export function BriefingScreen({
               alignItems: "center",
               justifyContent: "center",
               gap: 10,
-              background: `linear-gradient(135deg, ${regimeMeta.color}, var(--accent, #6366f1))`,
+              background: regimeMeta.color,
               boxShadow: `0 10px 25px -5px ${regimeMeta.color}55`,
             }}
           >

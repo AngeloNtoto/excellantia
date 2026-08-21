@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/session";
-import { createTextContentSchema, createQuestionSchema } from "@/lib/validations";
+import { createTextContentSchema, updateTextContentSchema, createQuestionSchema } from "@/lib/validations";
 
 /**
  * Vérifie que l'utilisateur est administrateur avant toute opération de gestion de contenu.
@@ -113,6 +113,57 @@ export async function createTextContentAction(formData: FormData) {
 
   revalidatePath("/admin/contenus");
   return { ok: true, textId: text.id, attachedCount };
+}
+
+/**
+ * Modification des détails d'un texte de lecture (titre, langue, source, contenu, mode, statut).
+ * Met également à jour la matière et la langue des questions qui lui sont associées si la langue change.
+ */
+export async function updateTextContentAction(formData: FormData) {
+  await requireAdmin();
+
+  const raw = {
+    id: formData.get("id") as string,
+    title: formData.get("title") as string,
+    language: (formData.get("language") as string) || "FR",
+    content: formData.get("content") as string,
+    source: (formData.get("source") as string) || undefined,
+    mode: (formData.get("mode") as string) || undefined,
+    isActive: formData.get("isActive") === "on" || formData.get("isActive") === "true",
+  };
+
+  const result = updateTextContentSchema.safeParse(raw);
+  if (!result.success) {
+    return { error: result.error.issues[0]?.message ?? "Données de modification invalides." };
+  }
+
+  try {
+    const updatedText = await prisma.textContent.update({
+      where: { id: result.data.id },
+      data: {
+        title: result.data.title,
+        language: result.data.language,
+        content: result.data.content,
+        source: result.data.source ?? null,
+        mode: result.data.mode ?? null,
+        isActive: result.data.isActive,
+      },
+    });
+
+    // Mettre à jour la langue et la matière des questions liées pour rester synchrone
+    await prisma.question.updateMany({
+      where: { textContentId: result.data.id },
+      data: {
+        language: result.data.language,
+        subject: result.data.language === "EN" ? "ENGLISH" : "FRENCH",
+      },
+    });
+
+    revalidatePath("/admin/contenus");
+    return { ok: true, text: updatedText };
+  } catch (error: any) {
+    return { error: error?.message || "Erreur lors de la mise à jour du texte." };
+  }
 }
 
 /**

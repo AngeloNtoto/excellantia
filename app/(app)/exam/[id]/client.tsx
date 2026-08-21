@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useTransition, useRef } from "react";
+import { useState, useEffect, useTransition, useRef, useMemo, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   saveAnswerAction,
@@ -41,6 +41,7 @@ import {
   Sparkles,
   BookOpen,
   X,
+  MoveHorizontal,
 } from "lucide-react";
 
 /**
@@ -118,6 +119,9 @@ export function ExamClient({
   const [centiseconds, setCentiseconds] = useState<number>(0);
   const [infoModalOpen, setInfoModalOpen] = useState(false);
   const [selectedPassage, setSelectedPassage] = useState<(typeof passages)[number] | null>(null);
+  const [timerPosition, setTimerPosition] = useState<{ left: number; top: number } | null>(null);
+  const timerDragRef = useRef<{ offsetX: number; offsetY: number } | null>(null);
+  const swipeStartRef = useRef<{ x: number; y: number } | null>(null);
 
   // Einstein display mode preference: "SCROLL" (toutes les questions) ou "PAGINATED" (une question à la fois)
   const [einsteinLayout, setEinsteinLayout] = useState<"SCROLL" | "PAGINATED">("SCROLL");
@@ -132,9 +136,24 @@ export function ExamClient({
   const [teslaReloadWarning, setTeslaReloadWarning] = useState<boolean>(false);
 
   // Newton: phase tracking
-  const newtonPhases = timingConfig?.phases || [];
-  const [currentNewtonPhaseIdx, setCurrentNewtonPhaseIdx] = useState(0);
+  const newtonPhases = useMemo(() => timingConfig?.phases ?? [], [timingConfig?.phases]);
+  const getNewtonPhaseStart = useCallback((phaseIndex: number) =>
+    startedAt + newtonPhases.slice(0, phaseIndex).reduce((total, phase) => total + phase.durationSec, 0) * 1000,
+  [newtonPhases, startedAt]);
+  const getInitialNewtonPhaseIndex = () => {
+    if (timingRegime !== "NEWTON" || clockMode === "RELATIVE" || newtonPhases.length === 0) return 0;
+    const now = Date.now();
+    const activeIndex = newtonPhases.findIndex((phase, index) => {
+      const phaseEnd = getNewtonPhaseStart(index) + phase.durationSec * 1000;
+      return now < phaseEnd;
+    });
+    return activeIndex === -1 ? newtonPhases.length - 1 : activeIndex;
+  };
+  const [currentNewtonPhaseIdx, setCurrentNewtonPhaseIdx] = useState(getInitialNewtonPhaseIndex);
   const [isNewtonResting, setIsNewtonResting] = useState(false);
+  const [newtonPhaseStartedAt, setNewtonPhaseStartedAt] = useState(() => Date.now());
+  const [newtonRestUntil, setNewtonRestUntil] = useState<number | null>(null);
+  const handleSubmitRef = useRef<(auto?: boolean) => void>(() => undefined);
 
   const regimeMeta = TIMING_REGIMES[timingRegime] || TIMING_REGIMES.EINSTEIN;
   const chronoMeta = CHRONO_MODES[chronoMode] || CHRONO_MODES.GALILEE;
@@ -179,6 +198,37 @@ export function ExamClient({
     const totalSec = Math.min(durationMin * 60, 5 * 60 * 60);
     const pageOpenedAt = Date.now();
 
+    if (timingRegime === "NEWTON" && newtonPhases.length > 0) {
+      if (isNewtonResting) return;
+
+      const updateNewtonTimer = () => {
+        const activePhase = newtonPhases[currentNewtonPhaseIdx];
+        if (!activePhase) return;
+
+        const phaseStart = clockMode === "RELATIVE"
+          ? newtonPhaseStartedAt
+          : startedAt + newtonPhases
+              .slice(0, currentNewtonPhaseIdx)
+              .reduce((total, phase) => total + phase.durationSec, 0) * 1000;
+        const phaseEnd = phaseStart + activePhase.durationSec * 1000;
+        const remaining = Math.max(0, Math.floor((phaseEnd - Date.now()) / 1000));
+        setTimeLeft(remaining);
+
+        if (remaining <= 0) {
+          if (currentNewtonPhaseIdx < newtonPhases.length - 1) {
+            setNewtonRestUntil((current) => current ?? (clockMode === "RELATIVE" ? Date.now() + 10_000 : phaseEnd));
+            setIsNewtonResting(true);
+          } else {
+            handleSubmitRef.current(true);
+          }
+        }
+      };
+
+      updateNewtonTimer();
+      const interval = setInterval(updateNewtonTimer, 250);
+      return () => clearInterval(interval);
+    }
+
     const interval = setInterval(() => {
       const now = Date.now();
       let remaining = 0;
@@ -205,12 +255,12 @@ export function ExamClient({
 
       if (remaining <= 0) {
         clearInterval(interval);
-        handleSubmit(true);
+        handleSubmitRef.current(true);
       }
     }, 250);
 
     return () => clearInterval(interval);
-  }, [endsAt, startedAt, durationMin, clockMode, pausableTimer, previousTimeUsedSec, timingRegime]);
+  }, [endsAt, startedAt, durationMin, clockMode, pausableTimer, previousTimeUsedSec, timingRegime, currentNewtonPhaseIdx, isNewtonResting, newtonPhases, newtonPhaseStartedAt]);
 
   // Centièmes pour l'état critique (<= 60s)
   useEffect(() => {
@@ -233,6 +283,61 @@ export function ExamClient({
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [selectedPassage]);
 
+  useEffect(() => {
+    const moveTimer = (event: PointerEvent) => {
+      if (!timerDragRef.current) return;
+      const left = Math.max(8, Math.min(window.innerWidth - 220, event.clientX - timerDragRef.current.offsetX));
+      const top = Math.max(8, Math.min(window.innerHeight - 70, event.clientY - timerDragRef.current.offsetY));
+      setTimerPosition({ left, top });
+    };
+
+    const stopDraggingTimer = () => {
+      timerDragRef.current = null;
+    };
+
+    window.addEventListener("pointermove", moveTimer);
+    window.addEventListener("pointerup", stopDraggingTimer);
+    return () => {
+      window.removeEventListener("pointermove", moveTimer);
+      window.removeEventListener("pointerup", stopDraggingTimer);
+    };
+  }, []);
+
+  const startDraggingTimer = (event: React.PointerEvent<HTMLDivElement>) => {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    timerDragRef.current = {
+      offsetX: event.clientX - bounds.left,
+      offsetY: event.clientY - bounds.top,
+    };
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+  };
+
+  const handleQuestionTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    swipeStartRef.current = {
+      x: event.touches[0]?.clientX ?? 0,
+      y: event.touches[0]?.clientY ?? 0,
+    };
+  };
+
+  const handleQuestionTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    const start = swipeStartRef.current;
+    swipeStartRef.current = null;
+    if (!start) return;
+
+    const end = event.changedTouches[0];
+    if (!end) return;
+    const deltaX = end.clientX - start.x;
+    const deltaY = end.clientY - start.y;
+    const isHorizontalSwipe = Math.abs(deltaX) >= 60 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
+    if (!isHorizontalSwipe || timingRegime === "TESLA") return;
+
+    if (deltaX < 0) {
+      setCurrentIndex((index) => Math.min(activeQuestions.length - 1, index + 1));
+    } else {
+      setCurrentIndex((index) => Math.max(0, index - 1));
+    }
+  };
+
   // ─── 3. CHRONOMÈTRE TESLA (60s / question avec État critique <= 20s) ────────
   useEffect(() => {
     if (timingRegime !== "TESLA") return;
@@ -254,7 +359,7 @@ export function ExamClient({
             return 60;
           } else {
             clearInterval(teslaInterval);
-            handleSubmit(true);
+            handleSubmitRef.current(true);
             return 0;
           }
         }
@@ -301,6 +406,7 @@ export function ExamClient({
         }).length;
 
         if (phaseAnsweredCount === activePhase.questionIds.length) {
+          if (clockMode === "RELATIVE") setNewtonRestUntil(Date.now() + 10_000);
           setIsNewtonResting(true);
         }
       }
@@ -319,7 +425,18 @@ export function ExamClient({
     });
   };
 
-  const handleSubmit = (auto = false) => {
+  const handleSubmit = useCallback((auto = false) => {
+    if (timingRegime === "NEWTON" && newtonPhases.length > 0 && currentNewtonPhaseIdx < newtonPhases.length - 1) {
+      const activePhase = newtonPhases[currentNewtonPhaseIdx];
+      const phaseEnd = clockMode === "RELATIVE"
+        ? Date.now() + 10_000
+        : getNewtonPhaseStart(currentNewtonPhaseIdx) + activePhase.durationSec * 1000;
+
+      setNewtonRestUntil(phaseEnd);
+      setIsNewtonResting(true);
+      return;
+    }
+
     if (!auto) {
       const confirm = window.confirm(
         "Êtes-vous sûr de vouloir soumettre votre copie définitivement ?"
@@ -334,7 +451,11 @@ export function ExamClient({
       if (res?.error) alert(res.error);
       else window.location.href = `/exam/${roomId}/correction/${attemptId}`;
     });
-  };
+  }, [attemptId, clockMode, currentNewtonPhaseIdx, getNewtonPhaseStart, newtonPhases, roomId, startTransition, timingRegime]);
+
+  useEffect(() => {
+    handleSubmitRef.current = handleSubmit;
+  }, [handleSubmit]);
 
   // ─── FORMATTAGE & RÈGLES DE VISIBILITÉ DU TEMPS ────────────────────────────
   const formatTime = (secs: number) => {
@@ -346,7 +467,11 @@ export function ExamClient({
   };
 
   const totalSec = Math.min(durationMin * 60, 5 * 60 * 60);
-  const pctRemaining = totalSec > 0 && timeLeft !== null ? (timeLeft / totalSec) * 100 : 0;
+  const activeNewtonPhase = newtonPhases[currentNewtonPhaseIdx];
+  const timerTotalSec = timingRegime === "NEWTON" && activeNewtonPhase
+    ? activeNewtonPhase.durationSec
+    : totalSec;
+  const pctRemaining = timerTotalSec > 0 && timeLeft !== null ? (timeLeft / timerTotalSec) * 100 : 0;
   const isCriticalFinalSprint = timeLeft !== null && timeLeft <= 60;
 
   // Calcul dynamique de la visibilité selon ChronoMode :
@@ -384,7 +509,9 @@ export function ExamClient({
   if (timingRegime === "NEWTON" && isNewtonResting && newtonPhases[currentNewtonPhaseIdx]) {
     const currentPhase = newtonPhases[currentNewtonPhaseIdx];
     const nextPhase = newtonPhases[currentNewtonPhaseIdx + 1];
-    const nextPhaseTime = (startedAt || Date.now()) + currentPhase.durationSec * 1000;
+    const nextPhaseTime = clockMode === "RELATIVE"
+      ? (newtonRestUntil ?? newtonPhaseStartedAt + 10_000)
+      : getNewtonPhaseStart(currentNewtonPhaseIdx) + currentPhase.durationSec * 1000;
 
     return (
       <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
@@ -398,6 +525,11 @@ export function ExamClient({
             setIsNewtonResting(false);
             if (currentNewtonPhaseIdx < newtonPhases.length - 1) {
               setCurrentNewtonPhaseIdx((i) => i + 1);
+              setCurrentIndex(0);
+              setNewtonPhaseStartedAt(Date.now());
+              setNewtonRestUntil(null);
+              setSchrodingerPeeksLeft(2);
+              setIsSchrodingerPeeking(false);
             } else {
               handleSubmit(true);
             }
@@ -550,7 +682,11 @@ export function ExamClient({
             onClick={() => handleSubmit(false)}
             disabled={isPending}
           >
-            {isPending ? "Soumission..." : "Soumettre la copie"}
+            {isPending
+              ? "Soumission..."
+              : timingRegime === "NEWTON" && currentNewtonPhaseIdx < newtonPhases.length - 1
+                ? "Valider la matière"
+                : "Soumettre la copie"}
           </button>
         </div>
       </div>
@@ -689,7 +825,23 @@ export function ExamClient({
 
             {/* Question unique */}
             {activeQuestions[currentIndex] && (
-              <div>
+              <div onTouchStart={handleQuestionTouchStart} onTouchEnd={handleQuestionTouchEnd} style={{ touchAction: "pan-y" }}>
+                {timingRegime !== "TESLA" || currentIndex === 0 ? (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 12, color: "var(--text-muted)", fontSize: "0.75rem", fontWeight: 600 }}
+                  >
+                    <motion.span
+                      animate={{ x: [-5, 5, -5] }}
+                      transition={{ duration: 1.4, repeat: 2, ease: "easeInOut" }}
+                      style={{ display: "inline-flex" }}
+                    >
+                      <MoveHorizontal className="w-4 h-4" />
+                    </motion.span>
+                    Glissez horizontalement pour changer de question
+                  </motion.div>
+                ) : null}
                 {/* Passage associé si présent */}
                 {(() => {
                   const q = activeQuestions[currentIndex];
@@ -759,6 +911,8 @@ export function ExamClient({
       {/* ─── FLOATING TIMER PROFESSIONNEL (ÉTAT CRITIQUE AVEC TIERCE & BIPS) ─── */}
       {timeLeft !== null && (
         <div
+          onPointerDown={startDraggingTimer}
+          title="Faire glisser le chronomètre"
           className={`fixed bottom-6 right-6 z-[999] flex items-center gap-3 px-5 py-3 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.15)] border backdrop-blur-md transition-all ${
             isCriticalFinalSprint || (timingRegime === "TESLA" && teslaQuestionTimeLeft <= 20)
               ? "bg-red-600 text-white border-red-400 animate-pulse scale-105 shadow-red-500/40"
@@ -768,6 +922,14 @@ export function ExamClient({
                 : "bg-white/95 dark:bg-gray-800/95 border-gray-200 dark:border-white/10 text-gray-900 dark:text-white"
               : "bg-purple-950/90 border-purple-500/30 text-purple-200"
           }`}
+          style={timerPosition ? {
+            left: timerPosition.left,
+            top: timerPosition.top,
+            right: "auto",
+            bottom: "auto",
+            cursor: "grabbing",
+            touchAction: "none",
+          } : { cursor: "grab", touchAction: "none" }}
         >
           {isCriticalFinalSprint || (timingRegime === "TESLA" && teslaQuestionTimeLeft <= 20) ? (
             <Zap className="w-5 h-5 text-yellow-300 animate-bounce" />

@@ -101,7 +101,6 @@ export async function createRoomAction(formData: FormData) {
   if (timingRegime === "NEWTON") {
     // Newton : une minute par question, mais le temps est consommé par phase,
     // jamais par question individuelle.
-    clockMode = "ABSOLUTE";
     durationMin = Math.max(1, totalQuestions);
   } else if (timingRegime === "TESLA") {
     // Tesla : 1 question = 1 minute, temps relatif par candidat (avec hard limit de salle à 5h)

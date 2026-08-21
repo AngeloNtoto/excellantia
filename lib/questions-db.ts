@@ -128,7 +128,7 @@ export async function generateRoomQuestionsFromDb(
     const topics = config.selectedTopics?.[subject] ?? [];
     if (topics.length > 0) available = available.filter((question) => question.topic && topics.includes(question.topic));
 
-    // ── RÈGLE POUR LES LANGUES (FRANÇAIS & ANGLAIS) : 1 TEXTE DE COMPRÉHENSION DÉDIÉ ──
+    // ── RÈGLE POUR LES LANGUES (FRANÇAIS & ANGLAIS) : 1 SEUL TEXTE DE COMPRÉHENSION DÉDIÉ ──
     if (subject === "FRENCH" || subject === "ENGLISH") {
       const lang = subject === "ENGLISH" ? "EN" : "FR";
       
@@ -149,14 +149,14 @@ export async function generateRoomQuestionsFromDb(
       const eligibleTexts = textsWithQuestions.filter((t) => t.questions.length > 0);
       
       if (eligibleTexts.length > 0) {
-        // Sélectionner 1 texte aléatoirement
+        // Sélectionner 1 seul texte aléatoirement
         const chosenText = eligibleTexts[Math.floor(Math.random() * eligibleTexts.length)];
         const textQuestionIds = new Set(chosenText.questions.map((q) => q.id));
 
-        // Questions du texte
+        // Questions liées à CE texte uniquement
         const textQuestions = available.filter((q) => textQuestionIds.has(q.id));
-        // Questions autonomes (sans texte ou autre texte)
-        const standaloneQuestions = available.filter((q) => !textQuestionIds.has(q.id));
+        // Questions strictement autonomes (aucun texte associé)
+        const standaloneQuestions = available.filter((q) => !q.passageId);
 
         // Déterminer le quota de questions de texte (proportionnel : 10 sur 25, ou max disponible)
         const targetTextQCount = Math.min(
@@ -168,10 +168,28 @@ export async function generateRoomQuestionsFromDb(
         const neededStandalone = targetCount - chosenFromText.length;
         const chosenStandalone = pickRandom(standaloneQuestions, neededStandalone);
 
-        selected.push(...chosenFromText, ...chosenStandalone);
+        // Si le stock de questions autonomes est insuffisant, compléter avec les questions restantes de CE texte (jamais d'un autre texte)
+        if (chosenStandalone.length < neededStandalone) {
+          const remainingFromThisText = textQuestions.filter((q) => !chosenFromText.some((c) => c.id === q.id));
+          const stillNeeded = neededStandalone - chosenStandalone.length;
+          const additionalFromText = pickRandom(remainingFromThisText, stillNeeded);
+          chosenFromText.push(...additionalFromText);
+        }
 
-        // Si on a atteint le compte désiré, passer à la matière suivante
-        if (chosenFromText.length + chosenStandalone.length >= targetCount) {
+        const totalChosen = [...chosenFromText, ...chosenStandalone];
+        if (totalChosen.length >= targetCount) {
+          selected.push(...totalChosen.slice(0, targetCount));
+          continue;
+        } else if (totalChosen.length > 0) {
+          // Si le stock total disponible (ce texte + questions autonomes) ne suffit pas tout à fait
+          selected.push(...totalChosen);
+          continue;
+        }
+      } else {
+        // Aucun texte éligible : utiliser exclusivement des questions autonomes (sans texte)
+        const standaloneOnly = available.filter((q) => !q.passageId);
+        if (standaloneOnly.length >= targetCount) {
+          selected.push(...pickRandom(standaloneOnly, targetCount));
           continue;
         }
       }

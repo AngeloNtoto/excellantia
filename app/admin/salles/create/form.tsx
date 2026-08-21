@@ -87,7 +87,7 @@ export function CreateRoomForm() {
           padding: "22px 24px",
           borderRadius: 20,
           color: "#fff",
-          background: "linear-gradient(120deg, #312e81, #4f46e5 55%, #0891b2)",
+          background: "#4f46e5",
           boxShadow: "0 16px 34px rgba(49, 46, 129, 0.2)",
         }}
       >
@@ -364,13 +364,17 @@ export function CreateRoomForm() {
             </div>
             <div>
               <label style={labelStyle}>Mode d'horloge</label>
-              <select name="clockMode" style={inputStyle} value={clockMode} onChange={(e) => setClockMode(e.target.value as "ABSOLUTE" | "RELATIVE")} disabled={timingRegime !== "EINSTEIN"} required>
+              <select name="clockMode" style={inputStyle} value={clockMode} onChange={(e) => setClockMode(e.target.value as "ABSOLUTE" | "RELATIVE")} disabled={timingRegime === "TESLA"} required>
                 <option value="ABSOLUTE">Absolu (heure fixe pour tous)</option>
                 <option value="RELATIVE">Relatif (chronomètre individuel)</option>
               </select>
-              {timingRegime !== "EINSTEIN" && <input type="hidden" name="clockMode" value={clockMode} />}
+              {timingRegime === "TESLA" && <input type="hidden" name="clockMode" value={clockMode} />}
               <p style={{ margin: "5px 0 0", color: "var(--text-muted)", fontSize: "0.72rem" }}>
-                {timingRegime === "EINSTEIN" ? "Choisissez l'horloge adaptée à votre épreuve." : `${timingRegime === "TESLA" ? "Tesla impose l'horloge relative." : "Newton impose l'horloge absolue."}`}
+                {timingRegime === "TESLA"
+                  ? "Tesla impose l'horloge relative."
+                  : timingRegime === "NEWTON"
+                    ? "Newton relatif donne 10 secondes de repos entre les matières; le temps non utilisé est perdu."
+                    : "Choisissez l'horloge adaptée à votre épreuve."}
               </p>
             </div>
           </div>

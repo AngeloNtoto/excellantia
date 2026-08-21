@@ -40,6 +40,25 @@ export const createTextContentSchema = z.object({
   isActive: z.boolean().default(true),
 });
 
+/**
+ * Schéma de validation pour la mise à jour des détails d'un texte existant.
+ */
+export const updateTextContentSchema = z.object({
+  id: z.string().min(1, "Identifiant du texte obligatoire"),
+  title: z.string().min(1, "Le titre du texte est obligatoire"),
+  language: z.enum(["FR", "EN"]).default("FR"),
+  content: z.string().min(20, "Le contenu doit contenir au moins 20 caractères"),
+  source: z.string().optional().nullable(),
+  mode: z.preprocess(
+    (val) => {
+      if (!val || val === "UNIVERSAL" || val === "ALL") return null;
+      return typeof val === "string" ? val.toUpperCase().trim() : val;
+    },
+    z.enum(["TRAINING", "SIMULATION"]).optional().nullable()
+  ),
+  isActive: z.boolean().default(true),
+});
+
 export const createQuestionSchema = z.object({
   textContentId: z.string().nullable().optional(),
   subject: z.preprocess(
