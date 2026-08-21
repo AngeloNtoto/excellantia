@@ -4,44 +4,13 @@ import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/session";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import {
+  TrainingAccessConfig,
+  DEFAULT_TRAINING_MESSAGE,
+} from "@/lib/system-config";
 
-export interface TrainingAccessConfig {
-  enabled: boolean;
-  message: string;
-  reason?: string;
-  updatedAt?: string;
-}
-
-export const DEFAULT_TRAINING_LOCK_PRESETS = [
-  {
-    id: "SIMULATION_LIVE",
-    title: "Simulation collective en cours",
-    description: "Concentrer tous les candidats sur l'épreuve officielle",
-    message:
-      "Une session de simulation collective officielle est actuellement en ligne. La création d'entraînements individuels est temporairement suspendue afin de mobiliser l'attention et les ressources sur l'épreuve.",
-  },
-  {
-    id: "MAINTENANCE",
-    title: "Maintenance technique",
-    description: "Mise à jour de la base pédagogique ou du serveur",
-    message:
-      "La création d'entraînements est momentanément indisponible en raison d'une maintenance technique et d'une mise à jour de la banque de questions. Veuillez réessayer dans quelques instants.",
-  },
-  {
-    id: "PREPARATION",
-    title: "Préparation des épreuves",
-    description: "Restrictions administratives préalables",
-    message:
-      "L'accès aux entraînements libres est temporairement restreint par l'administration dans le cadre de la préparation des prochaines sessions d'évaluation.",
-  },
-];
-
-const DEFAULT_CONFIG: TrainingAccessConfig = {
-  enabled: true,
-  message:
-    "La création d'entraînements individuels est temporairement suspendue par l'administration.",
-  reason: "MAINTENANCE",
-};
+// Ré-exporter pour éviter les imports multiples dans les pages serveur
+export type { TrainingAccessConfig };
 
 /**
  * Récupère l'état actuel de la permission de créer des entraînements.
@@ -52,17 +21,21 @@ export async function getTrainingAccessStatus(): Promise<TrainingAccessConfig> {
       where: { key: "TRAINING_ACCESS" },
     });
 
-    if (!setting) return DEFAULT_CONFIG;
+    if (!setting) {
+      // Aucun paramètre enregistré : les entraînements sont autorisés par défaut
+      return { enabled: true, message: DEFAULT_TRAINING_MESSAGE };
+    }
 
     const parsed = JSON.parse(setting.value);
     return {
       enabled: parsed.enabled ?? true,
-      message: parsed.message || DEFAULT_CONFIG.message,
+      message: parsed.message || DEFAULT_TRAINING_MESSAGE,
       reason: parsed.reason || "CUSTOM",
       updatedAt: setting.updatedAt.toISOString(),
     };
   } catch {
-    return DEFAULT_CONFIG;
+    // En cas d'erreur, on laisse les entraînements actifs pour ne pas bloquer par accident
+    return { enabled: true, message: DEFAULT_TRAINING_MESSAGE };
   }
 }
 
@@ -79,24 +52,16 @@ export async function updateTrainingAccessAction(
     redirect("/");
   }
 
-  const cleanMessage = message.trim() || DEFAULT_CONFIG.message;
+  const cleanMessage = message.trim() || DEFAULT_TRAINING_MESSAGE;
 
   await prisma.systemSetting.upsert({
     where: { key: "TRAINING_ACCESS" },
     create: {
       key: "TRAINING_ACCESS",
-      value: JSON.stringify({
-        enabled,
-        message: cleanMessage,
-        reason,
-      }),
+      value: JSON.stringify({ enabled, message: cleanMessage, reason }),
     },
     update: {
-      value: JSON.stringify({
-        enabled,
-        message: cleanMessage,
-        reason,
-      }),
+      value: JSON.stringify({ enabled, message: cleanMessage, reason }),
     },
   });
 

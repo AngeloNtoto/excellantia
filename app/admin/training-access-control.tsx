@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { updateTrainingAccessAction } from "@/lib/actions/system";
 import {
-  updateTrainingAccessAction,
   TrainingAccessConfig,
   DEFAULT_TRAINING_LOCK_PRESETS,
-} from "@/lib/actions/system";
+} from "@/lib/system-config";
 import {
   ShieldAlert,
   ShieldCheck,
