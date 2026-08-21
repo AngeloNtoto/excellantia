@@ -2,6 +2,8 @@ import { getSession } from "@/lib/session";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 import { checkRoomStatuses } from "@/lib/actions/rooms";
+import { getTrainingAccessStatus } from "@/lib/actions/system";
+import { TrainingAccessControl } from "./training-access-control";
 import {
   Users,
   Building2,
@@ -59,6 +61,7 @@ export default async function AdminDashboardPage() {
     questionsGroup,
     passagesCount,
     recentAttempts,
+    trainingAccess,
   ] = await Promise.all([
     // Candidats
     prisma.user.findMany({
@@ -97,6 +100,8 @@ export default async function AdminDashboardPage() {
         room: { select: { id: true, title: true, timingRegime: true, durationMin: true } },
       },
     }),
+    // Statut du verrou d'entraînement
+    getTrainingAccessStatus(),
   ]);
 
   // Dérivation des statistiques en mémoire
@@ -195,6 +200,9 @@ export default async function AdminDashboardPage() {
           </Link>
         </div>
       </div>
+
+      {/* ─── CONTRÔLE D'ACCÈS AUX ENTRAÎNEMENTS (VERROUILLAGE / MAINTENANCE) ─── */}
+      <TrainingAccessControl initialConfig={trainingAccess} />
 
       {/* ─── 4 CARTES KPI PRINCIPALES ─── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">

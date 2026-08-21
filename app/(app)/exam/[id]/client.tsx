@@ -894,8 +894,9 @@ export function ExamClient({
                           )}
 
                           {pQuestions.map((q) => {
-                            const overallIndex = questions.findIndex((orig) => orig.id === q.id);
-                            return renderQuestionCard(q, overallIndex);
+                            const subjectQuestions = questions.filter((orig) => orig.subject === subject);
+                            const subjectLocalIndex = subjectQuestions.findIndex((orig) => orig.id === q.id);
+                            return renderQuestionCard(q, subjectLocalIndex >= 0 ? subjectLocalIndex : 0);
                           })}
                         </div>
                       );
@@ -914,44 +915,75 @@ export function ExamClient({
           timingRegime === "TESLA" ||
           timingRegime === "NEWTON") && (
           <div>
-            {/* Barre de progression Tesla / Newton */}
-            <div style={{ marginBottom: 20 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--text-primary)" }}>
-                  Question {currentIndex + 1} sur {activeQuestions.length}
-                </span>
-                {timingRegime === "TESLA" && (
-                  <span
-                    style={{
-                      fontSize: "0.85rem",
-                      fontWeight: 800,
-                      color: teslaQuestionTimeLeft <= 20 ? "#ef4444" : "#06b6d4",
-                      fontFamily: "monospace",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 4,
-                    }}
-                    className={teslaQuestionTimeLeft <= 20 ? "animate-pulse" : ""}
-                  >
-                    <Zap className="w-3.5 h-3.5" />
-                    {teslaQuestionTimeLeft <= 20 ? "ÉTAT CRITIQUE : " : ""}
-                    {teslaQuestionTimeLeft}s
-                  </span>
-                )}
-              </div>
+            {/* Barre de progression Tesla / Newton / Paginated indexée par matière */}
+            {(() => {
+              const currentQ = activeQuestions[currentIndex];
+              const sameSubjectQuestions = currentQ
+                ? activeQuestions.filter((q) => q.subject === currentQ.subject)
+                : [];
+              const subjectIndex = currentQ
+                ? sameSubjectQuestions.findIndex((q) => q.id === currentQ.id)
+                : currentIndex;
+              const localIndex = subjectIndex >= 0 ? subjectIndex : currentIndex;
+              const totalSubjectQ = sameSubjectQuestions.length || activeQuestions.length;
 
-              {/* Progress bar */}
-              <div style={{ height: 6, background: "var(--border)", borderRadius: 3, overflow: "hidden" }}>
-                <div
-                  style={{
-                    height: "100%",
-                    width: `${((currentIndex + 1) / activeQuestions.length) * 100}%`,
-                    background: timingRegime === "TESLA" && teslaQuestionTimeLeft <= 20 ? "#ef4444" : regimeMeta.color,
-                    transition: "width 0.2s ease, background 0.3s ease",
-                  }}
-                />
-              </div>
-            </div>
+              return (
+                <div style={{ marginBottom: 20 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                      {currentQ && (
+                        <span
+                          style={{
+                            fontSize: "0.75rem",
+                            fontWeight: 800,
+                            padding: "2px 8px",
+                            borderRadius: 6,
+                            background: (SUBJECT_COLORS[currentQ.subject] || "#6366f1") + "18",
+                            color: SUBJECT_COLORS[currentQ.subject] || "#6366f1",
+                          }}
+                        >
+                          {SUBJECT_LABELS[currentQ.subject]}
+                        </span>
+                      )}
+                      <span style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                        Question {localIndex + 1} sur {totalSubjectQ}
+                      </span>
+                    </div>
+
+                    {timingRegime === "TESLA" && (
+                      <span
+                        style={{
+                          fontSize: "0.85rem",
+                          fontWeight: 800,
+                          color: teslaQuestionTimeLeft <= 20 ? "#ef4444" : "#06b6d4",
+                          fontFamily: "monospace",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 4,
+                        }}
+                        className={teslaQuestionTimeLeft <= 20 ? "animate-pulse" : ""}
+                      >
+                        <Zap className="w-3.5 h-3.5" />
+                        {teslaQuestionTimeLeft <= 20 ? "ÉTAT CRITIQUE : " : ""}
+                        {teslaQuestionTimeLeft}s
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Progress bar */}
+                  <div style={{ height: 6, background: "var(--border)", borderRadius: 3, overflow: "hidden" }}>
+                    <div
+                      style={{
+                        height: "100%",
+                        width: `${((localIndex + 1) / totalSubjectQ) * 100}%`,
+                        background: timingRegime === "TESLA" && teslaQuestionTimeLeft <= 20 ? "#ef4444" : regimeMeta.color,
+                        transition: "width 0.2s ease, background 0.3s ease",
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* Question unique */}
             {activeQuestions[currentIndex] && (
@@ -1000,7 +1032,13 @@ export function ExamClient({
                   );
                 })()}
 
-                {renderQuestionCard(activeQuestions[currentIndex], currentIndex)}
+                {(() => {
+                  const currentQ = activeQuestions[currentIndex];
+                  const sameSubjectQuestions = activeQuestions.filter((q) => q.subject === currentQ.subject);
+                  const subjectIndex = sameSubjectQuestions.findIndex((q) => q.id === currentQ.id);
+                  const localIndex = subjectIndex >= 0 ? subjectIndex : currentIndex;
+                  return renderQuestionCard(currentQ, localIndex);
+                })()}
 
                 {/* Navigation Buttons (Einstein / Newton) */}
                 {timingRegime !== "TESLA" && (

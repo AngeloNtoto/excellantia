@@ -5,11 +5,18 @@ import { getSession } from "@/lib/session";
 import { generateRoomQuestionsFromDb } from "@/lib/questions-db";
 import { redirect } from "next/navigation";
 import { startAttemptAction } from "@/lib/actions/attempts";
+import { getTrainingAccessStatus } from "@/lib/actions/system";
 import type { RoomConfig, Subject } from "@/lib/types";
 
 export async function startTrainingAction(formData: FormData) {
   const session = await getSession();
   if (!session || session.role !== "CANDIDATE") redirect("/");
+
+  // Vérifier si la création d'entraînements est autorisée par l'administration
+  const access = await getTrainingAccessStatus();
+  if (!access.enabled) {
+    return { error: access.message || "La création d'entraînements est temporairement bloquée par l'administration." };
+  }
 
   // ── Question counts per subject ──
   const countMath = parseInt(formData.get("subject_count_0") as string) || 0;

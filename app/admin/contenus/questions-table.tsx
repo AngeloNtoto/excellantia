@@ -23,6 +23,8 @@ import {
   Filter,
   CheckCircle2,
   HelpCircle,
+  Download,
+  Loader2,
 } from "lucide-react";
 
 type QuestionItem = {
@@ -211,6 +213,43 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
     setSelectedIds((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
+  }
+
+  const [exportLoading, setExportLoading] = useState(false);
+
+  /**
+   * Déclenche l'export JSON côté client en respectant les filtres actifs.
+   * L'URL est construite dynamiquement avec les paramètres de filtre courants.
+   */
+  async function handleExport() {
+    setExportLoading(true);
+    try {
+      const params = new URLSearchParams();
+      if (selectedSubject !== "ALL") params.set("subject", selectedSubject);
+      if (selectedDifficulty !== "ALL") params.set("difficulty", selectedDifficulty);
+      if (selectedMode !== "ALL") params.set("mode", selectedMode);
+      if (selectedTextOnly !== "ALL") params.set("textOnly", selectedTextOnly);
+      params.set("sortBy", sortBy);
+
+      const res = await fetch(`/api/admin/questions/export?${params.toString()}`);
+      if (!res.ok) throw new Error("Erreur export");
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      const today = new Date().toISOString().slice(0, 10);
+      const subjectSuffix = selectedSubject !== "ALL" ? `_${selectedSubject.toLowerCase()}` : "";
+      link.download = `questions${subjectSuffix}_${today}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      alert("Erreur lors de l'export JSON. Vérifiez votre connexion.");
+    } finally {
+      setExportLoading(false);
+    }
   }
 
   function toggleSelectAll() {
@@ -406,6 +445,24 @@ export function QuestionsTable({ questions }: { questions: QuestionItem[] }) {
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
               Total base : {questions.length}
             </span>
+
+            {/* Bouton d'export JSON (respecte les filtres actifs) */}
+            {sorted.length > 0 && (
+              <button
+                type="button"
+                onClick={handleExport}
+                disabled={exportLoading}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-500/10 hover:bg-indigo-100 dark:hover:bg-indigo-500/20 border border-indigo-200 dark:border-indigo-500/20 transition-all active:scale-95 disabled:opacity-50"
+                title={`Exporter ${sorted.length} question(s) en JSON`}
+              >
+                {exportLoading ? (
+                  <Loader2 className="w-3 h-3 animate-spin" />
+                ) : (
+                  <Download className="w-3 h-3" />
+                )}
+                <span>Exporter JSON ({sorted.length})</span>
+              </button>
+            )}
 
             {/* Bouton pour vider spécifiquement la matière sélectionnée */}
             {selectedSubject !== "ALL" && (
