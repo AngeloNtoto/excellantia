@@ -113,8 +113,43 @@ export function ExamClient({
   previousTimeUsedSec: number;
   subjectOrder?: Subject[];
 }) {
-  const [answers, setAnswers] = useState(initialAnswers);
+  // ─── CLÉ DE CACHE LOCAL (FILET DE SÉCURITÉ ANTI-CRASH / DÉCONNEXION) ────────
+  // Les réponses sont écrites dans localStorage à chaque clic ET sauvegardées en BDD.
+  // Au montage, on fusionne la BDD (initialAnswers) avec le cache local (plus récent).
+  const LOCAL_KEY = `exam_answers_${attemptId}`;
+
+  /**
+   * Lecture du cache local et fusion avec les données de la BDD.
+   * Le localStorage est prioritaire car il reflète le dernier état côté client,
+   * même si la requête réseau n'avait pas encore abouti avant le crash.
+   */
+  const mergeWithLocalCache = (
+    serverAnswers: Record<string, { selectedIndex: number | null; flagged: boolean }>
+  ) => {
+    if (typeof window === "undefined") return serverAnswers;
+    try {
+      const raw = window.localStorage.getItem(LOCAL_KEY);
+      if (!raw) return serverAnswers;
+      const cached: Record<string, { selectedIndex: number | null; flagged: boolean }> = JSON.parse(raw);
+      // Fusionner : pour chaque question, prendre l'état local si selectedIndex != null (réponse déjà cochée)
+      const merged = { ...serverAnswers };
+      for (const [qId, val] of Object.entries(cached)) {
+        if (val.selectedIndex !== null && val.selectedIndex !== undefined) {
+          merged[qId] = val;
+        } else if (!merged[qId]) {
+          merged[qId] = val;
+        }
+      }
+      return merged;
+    } catch {
+      return serverAnswers;
+    }
+  };
+
+  const [answers, setAnswers] = useState(() => mergeWithLocalCache(initialAnswers));
   const [isPending, startTransition] = useTransition();
+  // Réf pour suivre les réponses locales non encore confirmées par la BDD
+  const pendingFlushRef = useRef<Record<string, number | null>>({});
   const [timeLeft, setTimeLeft] = useState<number | null>(null);
   const [centiseconds, setCentiseconds] = useState<number>(0);
   const [infoModalOpen, setInfoModalOpen] = useState(false);
@@ -319,6 +354,26 @@ export function ExamClient({
     }
   }, [timingRegime, attemptId]);
 
+  // ─── 1b. PROTECTION UNIVERSELLE FERMETURE ONGLET / DÉCONNEXION ─────────────
+  // Pour tous les régimes (sauf Tesla qui a son propre système) :
+  // on met à jour le localStorage au dernier moment avec les réponses actuelles.
+  // Le localStorage est le filet de sécurité : relu au prochain chargement.
+  useEffect(() => {
+    if (timingRegime === "TESLA") return; // Tesla gère sa propre logique
+
+    const handleUnload = () => {
+      // Persister l'état final des réponses dans localStorage avant de quitter
+      try {
+        window.localStorage.setItem(LOCAL_KEY, JSON.stringify(answers));
+      } catch {
+        // Ignorer les erreurs (quota, mode privé)
+      }
+    };
+
+    window.addEventListener("beforeunload", handleUnload);
+    return () => window.removeEventListener("beforeunload", handleUnload);
+  }, [timingRegime, answers, LOCAL_KEY]);
+
   // ─── 2. CHRONOMÈTRE PRINCIPAL & GESTION DES MODES VISUELS ──────────────────
   useEffect(() => {
     const totalSec = Math.min(durationMin * 60, 5 * 60 * 60);
@@ -509,15 +564,50 @@ export function ExamClient({
   };
 
   // ─── 5. ACTIONS DU CANDIDAT ────────────────────────────────────────────────
+
+  /**
+   * Écrit instantanément les réponses dans localStorage.
+   * Appelé après chaque clic pour garantir la persistance même en cas de crash.
+   */
+  const persistAnswersLocally = (
+    updatedAnswers: Record<string, { selectedIndex: number | null; flagged: boolean }>
+  ) => {
+    try {
+      window.localStorage.setItem(LOCAL_KEY, JSON.stringify(updatedAnswers));
+    } catch {
+      // Ignorer les erreurs de quota ou mode privé
+    }
+  };
+
+  /**
+   * Flush d'urgence : envoie en BDD toutes les réponses stockées en local
+   * qui n'ont pas encore été confirmées (utile sur beforeunload ou déconnexion).
+   */
+  const flushPendingAnswers = async (
+    currentAnswers: Record<string, { selectedIndex: number | null; flagged: boolean }>
+  ) => {
+    const entries = Object.entries(currentAnswers).filter(
+      ([, v]) => v.selectedIndex !== null && v.selectedIndex !== undefined
+    );
+    // Envoyer en parallèle (fire-and-forget)
+    await Promise.allSettled(
+      entries.map(([qId, v]) => saveAnswerAction(attemptId, qId, v.selectedIndex))
+    );
+  };
+
   const handleSelect = (qId: string, index: number) => {
     const current = answers[qId]?.selectedIndex;
     const nextIndex = current === index ? null : index;
 
-    setAnswers({
+    const updated = {
       ...answers,
       [qId]: { ...answers[qId], selectedIndex: nextIndex, flagged: answers[qId]?.flagged || false },
-    });
+    };
 
+    setAnswers(updated);
+    // 1. Écrire immédiatement dans localStorage (protection crash)
+    persistAnswersLocally(updated);
+    // 2. Sauvegarder en BDD via Server Action
     startTransition(() => {
       saveAnswerAction(attemptId, qId, nextIndex);
     });
@@ -572,14 +662,32 @@ export function ExamClient({
       );
       if (!confirm) return;
     }
+
     if (typeof window !== "undefined") {
       window.sessionStorage.removeItem(`tesla_active_${attemptId}`);
       window.sessionStorage.removeItem(`newton_state_${attemptId}`);
     }
+
     startTransition(async () => {
+      // Flush de sécurité : s'assurer que toutes les réponses locales sont en BDD avant soumission
+      const localRaw = typeof window !== "undefined" ? window.localStorage.getItem(LOCAL_KEY) : null;
+      if (localRaw) {
+        try {
+          const localAnswers: Record<string, { selectedIndex: number | null; flagged: boolean }> = JSON.parse(localRaw);
+          await flushPendingAnswers(localAnswers);
+        } catch {
+          // Continuer même si le flush échoue
+        }
+      }
+
       const res = await submitAttemptAction(attemptId);
-      if (res?.error) alert(res.error);
-      else window.location.href = `/exam/${roomId}/correction/${attemptId}`;
+      if (res?.error) {
+        alert(res.error);
+      } else {
+        // Nettoyer le cache local après soumission réussie
+        try { window.localStorage.removeItem(LOCAL_KEY); } catch {}
+        window.location.href = `/exam/${roomId}/correction/${attemptId}`;
+      }
     });
   }, [attemptId, clockMode, currentNewtonPhaseIdx, getNewtonPhaseStart, newtonPhases, roomId, startTransition, timingRegime]);
 
