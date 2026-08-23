@@ -41,8 +41,13 @@ export async function getSession(): Promise<SessionUser | null> {
     });
 
     if (!dbUser || !dbUser.isActive) {
-      // Compte supprimé ou désactivé : purge du cookie obsolète
-      cookieStore.delete(SESSION_COOKIE);
+      // Si l'utilisateur est supprimé ou désactivé, on tente de purger le cookie.
+      // Dans un Server Component (GET rendering), cookieStore.delete() lève une exception autorisée à être ignorée.
+      try {
+        cookieStore.delete(SESSION_COOKIE);
+      } catch {
+        // Ignorer l'erreur d'écriture de cookie en Server Component
+      }
       return null;
     }
 
@@ -54,8 +59,8 @@ export async function getSession(): Promise<SessionUser | null> {
       isActive: dbUser.isActive,
     };
   } catch (error) {
-    // En cas d'erreur ponctuelle de connexion, retourner la session décodée temporairement
-    return session;
+    console.error("Erreur vérification session utilisateur:", error);
+    return null;
   }
 }
 
