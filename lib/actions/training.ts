@@ -82,52 +82,60 @@ export async function startTrainingAction(formData: FormData) {
 
   const accessCode = Math.random().toString(36).substring(2, 8).toUpperCase();
 
-  const room = await prisma.room.create({
-    data: {
-      title:
-        "Duel / Entraînement - " +
-        new Date()
-          .toLocaleDateString("fr-FR", {
-            day: "2-digit",
-            month: "2-digit",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-          })
-          .replace(",", " à"),
-      status: "RUNNING",
-      mode: "TRAINING",
-      visibility: "PRIVATE",
-      timingRegime: "EINSTEIN",
-      clockMode: "RELATIVE",
-      chronoMode,
-      durationMin,
-      accessCode,
-      questionIds: gen.questionIds as any,
-      config: config as any,
-      createdById: session.id,
-      startsAt: new Date(),
-    },
-  });
-
-  // Incrémenter le nombre d'apparitions des questions tirées
-  if (gen.questionIds && gen.questionIds.length > 0) {
-    await prisma.question.updateMany({
-      where: { id: { in: gen.questionIds } },
-      data: { timesAppeared: { increment: 1 } },
+  try {
+    const room = await prisma.room.create({
+      data: {
+        title:
+          "Duel / Entraînement - " +
+          new Date()
+            .toLocaleDateString("fr-FR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })
+            .replace(",", " à"),
+        status: "RUNNING",
+        mode: "TRAINING",
+        visibility: "PRIVATE",
+        timingRegime: "EINSTEIN",
+        clockMode: "RELATIVE",
+        chronoMode,
+        durationMin,
+        accessCode,
+        questionIds: gen.questionIds as any,
+        config: config as any,
+        createdById: session.id,
+        startsAt: new Date(),
+      },
     });
-  }
 
-  // Donner l'accès au candidat
-  await prisma.roomAccess.create({
-    data: { roomId: room.id, userId: session.id },
-  });
+    // Incrémenter le nombre d'apparitions des questions tirées
+    if (gen.questionIds && gen.questionIds.length > 0) {
+      await prisma.question.updateMany({
+        where: { id: { in: gen.questionIds } },
+        data: { timesAppeared: { increment: 1 } },
+      });
+    }
 
-  // Démarrer la tentative
-  const res = await startAttemptAction(room.id);
+    // Donner l'accès au candidat
+    await prisma.roomAccess.create({
+      data: { roomId: room.id, userId: session.id },
+    });
 
-  if (res.ok) {
-    redirect(`/exam/${res.attemptId}`);
+    // Démarrer la tentative
+    const res = await startAttemptAction(room.id);
+
+    if (res.ok) {
+      redirect(`/exam/${res.attemptId}`);
+    } else {
+      return { error: res.error || "Impossible de démarrer l'épreuve." };
+    }
+  } catch (err: any) {
+    if (err?.digest?.startsWith("NEXT_REDIRECT")) throw err; // Laisser passer le redirect Next.js
+    console.error("Erreur création entraînement:", err);
+    return { error: "Votre session a expiré ou le compte n'existe plus. Veuillez vous re-connecter." };
   }
 
   return { error: res.error || "Erreur de démarrage." };
