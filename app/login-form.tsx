@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { loginAction } from "@/lib/actions/auth";
 import { motion, AnimatePresence } from "framer-motion";
-import { KeyRound, ArrowRight, Loader2, AlertCircle } from "lucide-react";
+import { KeyRound, ArrowRight, Loader2, AlertCircle, AlertTriangle } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 const CODE_LENGTH = 14;
 
@@ -12,6 +13,10 @@ function normalizeCandidateCode(value: string) {
 }
 
 export function LoginForm() {
+  const searchParams = useSearchParams();
+  const reason = searchParams.get("reason");
+  const isSessionExpired = reason === "session_expired";
+
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -68,6 +73,22 @@ export function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+      {/* Toast Notification : Session expirée ou compte réinitialisé */}
+      {isSessionExpired && (
+        <motion.div
+          initial={{ opacity: 0, y: -12, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="flex items-start gap-3.5 p-4 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-200 text-sm font-medium shadow-xl backdrop-blur-md"
+        >
+          <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5 animate-pulse" />
+          <div className="flex-1">
+            <span className="font-semibold block text-amber-300 mb-0.5">Session expirée</span>
+            <span>Votre session a expiré ou votre compte a été réinitialisé. Veuillez vous re-connecter avec votre identifiant.</span>
+          </div>
+        </motion.div>
+      )}
+
       <div className="relative">
         <label
           htmlFor="code-input"

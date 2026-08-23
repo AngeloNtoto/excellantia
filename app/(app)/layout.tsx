@@ -4,7 +4,7 @@ import { Navbar } from "@/app/components/navbar";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await getSession();
-  if (!session) redirect("/");
+  if (!session) redirect("/?reason=session_expired");
 
   return (
     <div className="min-h-[100dvh] flex flex-col">

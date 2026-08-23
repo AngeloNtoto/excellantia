@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { getSession } from "@/lib/session";
 import { LoginForm } from "./login-form";
@@ -24,7 +25,7 @@ export default async function HomePage() {
       
       {/* Decorative Grid */}
       <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none" style={{ backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')" }}></div>
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
       <div className="relative z-10 w-full max-w-[440px] px-6 py-12">
         <div className="text-center mb-10">
@@ -48,7 +49,10 @@ export default async function HomePage() {
           <p className="text-sm text-indigo-200/60 mb-8">
             Saisissez votre identifiant unique à 14 chiffres.
           </p>
-          <LoginForm />
+          {/* Formulaire de connexion avec Suspense pour charger les searchParams sans bloquer */}
+          <Suspense fallback={<div className="h-12 w-full animate-pulse bg-white/5 rounded-xl" />}>
+            <LoginForm />
+          </Suspense>
         </div>
         
         <p className="text-center mt-10 text-[11px] text-white/40 font-medium tracking-[0.15em] uppercase">
