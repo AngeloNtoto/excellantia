@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import "dotenv/config"; // Charge les variables d'environnement depuis le fichier .env
+import { prisma } from "../lib/prisma"; // Utilise l'instance Prisma singleton configurée avec l'adaptateur PG
 
-const prisma = new PrismaClient();
 
 async function main() {
   console.log("🌱 Seed Excellantia...");

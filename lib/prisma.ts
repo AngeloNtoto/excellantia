@@ -10,20 +10,16 @@ const globalForPrisma = globalThis as unknown as {
   pgPool?: Pool;
 };
 
-const rawConnectionString = process.env.DATABASE_URL || "postgresql://localhost:5432/excellantia";
-const connectionUrl = new URL(rawConnectionString);
-
-if (["prefer", "require", "verify-ca"].includes(connectionUrl.searchParams.get("sslmode") ?? "")) {
-  connectionUrl.searchParams.set("sslmode", "verify-full");
-}
-
-const connectionString = connectionUrl.toString();
+// Utilisation directe de la chaîne de connexion du fichier d'environnement
+const connectionString = process.env.DATABASE_URL || "postgresql://localhost:5432/excellantia";
 
 if (!globalForPrisma.pgPool) {
+  // Configuration du pool PG avec timeout de connexion pour les environnements serverless/Neon
   globalForPrisma.pgPool = new Pool({
     connectionString,
     max: 10,
     idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 15000, // Evite de bloquer indéfiniment lors du réveil de Neon
   });
 }
 
